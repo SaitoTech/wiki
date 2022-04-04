@@ -2,7 +2,7 @@
 title: Saito and Community Projects
 description: All details related to saito and community projects can be found here
 published: true
-date: 2022-04-04T13:05:18.793Z
+date: 2022-04-04T13:10:24.593Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-25T00:44:11.924Z
@@ -12,7 +12,7 @@ dateCreated: 2022-02-25T00:44:11.924Z
 
 This page provides an overview of community-led projects that could use help from volunteers. If you're interested in lending a hand, please reach out to community@saito.io and we'll put you in touch with the project liaison.
 
-Alternately, please consider contributing to this Saito Wiki! All pages in this repository are stored in markdown content in our [Saito Wiki Github Repository](https://github.com/saitotech/wiki). To submit an edit, just edit the relevant file(s) and open a push request. If you prefer to make suggestions by email, leave a comment on any page or email us at community@saito.io.
+Please also consider contributing to this wiki! All of the pages in this repository are stored in markdown in our [Saito Wiki Github Repository](https://github.com/saitotech/wiki). To submit an edit, just open a push request with your proposed changes. Non-developers are welcome to leave a comment on any page or email us at community@saito.io.
 
 
 ## 1. Saito Arcade
