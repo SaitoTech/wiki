@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2022-03-25T10:15:04.550Z
+date: 2022-04-05T03:40:35.654Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -71,7 +71,7 @@ Possible adding requirements for block producers to provide stake (making tokens
 
 **Powspit:** a variable between 0 and 1 that determines the target percentage of blocks solved through golden tickets.
 
-**Golden icket:** a transaction from a miner containing a valid solution to the computational lottery puzzle embodied in the previous block hash.
+**Golden Ticket:** a transaction from a miner containing a valid solution to the computational lottery puzzle embodied in the previous block hash.
 
 **Genesis Period:** the length of the epoch in number of blocks.
 
