@@ -19,7 +19,6 @@ Please also consider contributing to this wiki! All of the pages in this reposit
 
 Status: Ongoing Development
 Category: Saito Team Project
-Adviser: Richard Parris
 Project Owner: Karl Nabong
 Production: https://saito.io/arcade/ 
 Page Link: [Saito Arcade Details](/community/projects/arcade)
@@ -30,9 +29,8 @@ Summary: The Saito Arcade is a game website built on top of a blockchain. All th
 
 Status: Hiring Resources
 Category: Saito Community Project
-Adviser: Karl Nabong
 Project Owner: Guy Ng
 Page link: [Saito Web 3.0 Forum Details](/community/projects/forum)
 
-Summary: members of our community are working to build an on-chain Community Forum so that Saito (and other blockchain projects) have a place to connect, engage and manage development plans. This team could use help from anyone with HTML / JS / CSS experience.
+Summary: Members of our community are working to build an on-chain Community Forum so that Saito (and other blockchain projects) have a place to connect, engage and manage development plans. This team could use help from anyone with HTML / JS / CSS experience.
 
