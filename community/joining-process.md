@@ -32,7 +32,7 @@ Official project Perks
 
 ## Assessment Process for Official Projects
 
-1. Community Project Owner submits ideas based on the project category via email
+1. Community Project Owner submits ideas based on the project category via community@saito.tech
 1. Saito team assessed the feasibility of the project
 1. Project Adviser provide feedback and guidance for next step
 
