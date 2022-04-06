@@ -2,7 +2,7 @@
 title: Saito and Community Projects
 description: All details related to saito and community projects can be found here
 published: true
-date: 2022-04-04T13:10:24.593Z
+date: 2022-04-06T08:05:25.783Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-25T00:44:11.924Z
@@ -17,19 +17,18 @@ Please also consider contributing to this wiki! All of the pages in this reposit
 
 ## 1. Saito Arcade
 
-Status: Ongoing Development
-Category: Saito Team Project
-Project Owner: Karl Nabong
-Production: https://saito.io/arcade/ 
-Page Link: [Saito Arcade Details](/community/projects/arcade)
+**Status**: Ongoing Development
+**Contact Person for Suggestions and Volunteering**: Karl Nabong (karl@saito.tech)
+**Project Board**: [KANBAN BOARD](https://github.com/orgs/SaitoTech/projects/7)
+**Page Link**: [Saito Arcade Details](/community/projects/arcade)
 
 Summary: The Saito Arcade is a game website built on top of a blockchain. All the games run directly from the browser through a peer-to-peer communication. Join this project and help us build new games and improve the ones that already exist. Programmers, graphic-designers and game developers all welcome!
 
 ## 2. Community Forum
 
-Status: Hiring Resources
-Category: Saito Community Project
-Project Owner: Guy Ng
+**Status**: Hiring Resources
+**Contact Person for Suggestions and Volunteering**: Guy Ng (add email)
+**Project Board**: add github board
 Page link: [Saito Web 3.0 Forum Details](/community/projects/forum)
 
 Summary: Members of our community are working to build an on-chain Community Forum so that Saito (and other blockchain projects) have a place to connect, engage and manage development plans. This team could use help from anyone with HTML / JS / CSS experience.
