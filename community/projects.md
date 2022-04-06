@@ -2,7 +2,7 @@
 title: Saito and Community Projects
 description: All details related to saito and community projects can be found here
 published: true
-date: 2022-04-06T08:45:18.294Z
+date: 2022-04-06T08:57:19.511Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-25T00:44:11.924Z
@@ -33,3 +33,11 @@ Page link: [Saito Web 3.0 Forum Details](/community/projects/forum)
 
 Summary: Members of our community are working to build an on-chain Community Forum so that Saito (and other blockchain projects) have a place to connect, engage and manage development plans. This team could use help from anyone with HTML / JS / CSS experience.
 
+## 3. Saito Arcade Games Tutorial
+
+**Status**: Hiring Resources
+**Contact Person for Suggestions and Volunteering**: Karl Nabong (karl@saito.tech)
+**Project Board**: add github board
+Page link: [Saito Web 3.0 Forum Details](/community/projects/forum)
+
+Summary: Members of our community are working to build bite-size video tutorials for the games
