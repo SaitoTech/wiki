@@ -2,7 +2,7 @@
 title: How to edit and contribute in wiki pages
 description: Process in updating and contributing in Saito Wiki
 published: true
-date: 2022-04-06T09:01:43.909Z
+date: 2022-04-06T09:36:21.265Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-06T08:28:26.977Z
@@ -12,13 +12,16 @@ dateCreated: 2022-04-06T08:28:26.977Z
 
 ## Via Email/Comment on the Page
 
-For non-developers, you may leave a comment on any page or email us at community@saito.io.
+Leave a comment on any page or email us at community@saito.io.
 
 ## Via Github
 
-This is the standard git workflow. To know more, here's the process.
+**TL;DR** 
+Send a pull request to https://github.com/SaitoTech/wiki. 
 
-### Forking and Cloning the Wiki Repository
+### Full Instructions
+
+**Forking and Cloning the Wiki Repository**
 1. Visit https://github.com/SaitoTech/wiki
 1. Fork the Saito repository. This creates a copy of the repository under your github user account. ([How to Fork a Repository in Github](https://docs.github.com/en/get-started/quickstart/fork-a-repo))
 1. After succesfully forking to your github account, clone the forked repository on your local device by running the following code in the IDE (Integrated development environment) of your choice (e.g. [Visual Studio](https://visualstudio.microsoft.com/downloads/))
@@ -29,7 +32,7 @@ This is the standard git workflow. To know more, here's the process.
 ```git remote add upstream https://github.com/SaitoTech/wiki.git```
 ***Note***: this line of code ensures that the original repository is in sync with the forked repository 
 
-### Requesting for Pull Request on changes and approval
+**Requesting for Pull Request on changes and approval** 
 1. Execute the following line of codes
 ``` git add name_of_file or git add ``` 
 ```git commit -m "add commit message here```
