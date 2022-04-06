@@ -2,19 +2,21 @@
 title: Saito and Community Projects
 description: All details related to saito and community projects can be found here
 published: true
-date: 2022-04-06T10:19:35.511Z
+date: 2022-04-06T10:30:56.470Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-25T00:44:11.924Z
 ---
 
-# Saito and Community Projects
+# Community Projects
 
-This page provides an overview of community-led projects that could use help from volunteers. If you're interested in lending a hand, please browse the list of available projects and get in touch with them.
+This page provides an overview of community-led projects that could use help from volunteers.
 
-If you're interested on working on a community project, and would like it to be officially listed here, please contact us at community@saito.io.
+If you are starting or working on a community project and would like it listed here contact community@saito.io.
 
-Please also consider contributing to this wiki! All of the pages in this repository are stored in markdown in our [Saito Wiki Github Repository](https://github.com/saitotech/wiki). To submit an edit, just open a [push request]( https://github.com/SaitoTech/wiki.git) with your proposed changes. Non-developers are welcome to leave a comment on any page or email us at community@saito.io.
+Please also consider contributing to this wiki! 
+**Repository**: https://github.com/saitotech/wiki
+**Volunteer**: community@saito.io.
 
 ## Awesome Saito
 
