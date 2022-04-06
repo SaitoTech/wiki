@@ -2,7 +2,7 @@
 title: How to edit and contribute in wiki pages
 description: Process in updating and contributing in Saito Wiki
 published: true
-date: 2022-04-06T08:59:41.033Z
+date: 2022-04-06T09:00:31.722Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-06T08:28:26.977Z
@@ -20,7 +20,7 @@ You may leave a comment on any page or email us at community@saito.io.
 1. Visit https://github.com/SaitoTech/wiki
 1. Fork the Saito repository. This creates a copy of the repository under your github user account. ([How to Fork a Repository in Github](https://docs.github.com/en/get-started/quickstart/fork-a-repo))
 1. After succesfully forking to your github account, clone the forked repository on your local device by running the following code in the IDE (Integrated development environment) of your choice (e.g. [Visual Studio](https://visualstudio.microsoft.com/downloads/))
-```git clone https://github.com/< YourUserName >/demo```
+```git clone https://github.com/<YourUserName>/demo```
 4. Create a new branch on your forked repository
 ```git checkout -b branch_name```
 5. Create a new remote for the upstream repository with the command
