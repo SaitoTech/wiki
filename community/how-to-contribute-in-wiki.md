@@ -2,17 +2,19 @@
 title: How to edit wiki pages
 description: Process in updating and contributing in Saito Wiki
 published: true
-date: 2022-04-06T08:28:26.977Z
+date: 2022-04-06T08:30:32.738Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-06T08:28:26.977Z
 ---
 
-# Submitting edits
+# Wiki Page Edit and Suggestions
 
-## Through email
+## Via Email/Comment on the Page
 
-## Through Github
+You may leave a comment on any page or email us at community@saito.io.
+
+## Via Github
 
 ### Forking and Cloning the Wiki Repository
 1. Visit https://github.com/SaitoTech/wiki
