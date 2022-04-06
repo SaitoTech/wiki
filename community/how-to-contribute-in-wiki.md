@@ -1,8 +1,8 @@
 ---
-title: How to edit wiki pages
+title: How to edit and contribute in wiki pages
 description: Process in updating and contributing in Saito Wiki
 published: true
-date: 2022-04-06T08:30:32.738Z
+date: 2022-04-06T08:30:48.640Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-06T08:28:26.977Z
