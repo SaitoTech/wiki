@@ -2,7 +2,7 @@
 title: How to edit and contribute in wiki pages
 description: Process in updating and contributing in Saito Wiki
 published: true
-date: 2022-04-06T09:00:52.762Z
+date: 2022-04-06T09:01:43.909Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-06T08:28:26.977Z
@@ -15,6 +15,8 @@ dateCreated: 2022-04-06T08:28:26.977Z
 For non-developers, you may leave a comment on any page or email us at community@saito.io.
 
 ## Via Github
+
+This is the standard git workflow. To know more, here's the process.
 
 ### Forking and Cloning the Wiki Repository
 1. Visit https://github.com/SaitoTech/wiki
