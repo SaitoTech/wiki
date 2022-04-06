@@ -2,7 +2,7 @@
 title: How to edit and contribute in wiki pages
 description: Process in updating and contributing in Saito Wiki
 published: true
-date: 2022-04-06T09:00:31.722Z
+date: 2022-04-06T09:00:52.762Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-06T08:28:26.977Z
@@ -12,7 +12,7 @@ dateCreated: 2022-04-06T08:28:26.977Z
 
 ## Via Email/Comment on the Page
 
-You may leave a comment on any page or email us at community@saito.io.
+For non-developers, you may leave a comment on any page or email us at community@saito.io.
 
 ## Via Github
 
