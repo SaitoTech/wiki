@@ -2,7 +2,7 @@
 title: How to edit and contribute in wiki pages
 description: Process in updating and contributing in Saito Wiki
 published: true
-date: 2022-04-06T08:30:48.640Z
+date: 2022-04-06T08:31:38.644Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-06T08:28:26.977Z
@@ -27,7 +27,7 @@ You may leave a comment on any page or email us at community@saito.io.
 >git remote add upstream https://github.com/SaitoTech/wiki.git
 ***Note***: this line of code ensures that the original repository is in sync with the forked repository 
 
-### Requesting for Pull Request on changes
+### Requesting for Pull Request on changes and approval
 1. Execute the following line of codes
 > git add name_of_file or git add . 
 > git commit -m "add commit message here"
