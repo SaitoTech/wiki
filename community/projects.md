@@ -2,7 +2,7 @@
 title: Saito and Community Projects
 description: All details related to saito and community projects can be found here
 published: true
-date: 2022-04-06T09:16:55.941Z
+date: 2022-04-06T09:21:06.340Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-25T00:44:11.924Z
@@ -43,7 +43,16 @@ Page link:
 
 Summary: Members of our community are working to build bite-size video tutorials for the games
 
-## Richard to add luminous stuff
+## P2P Twitter
+
+**Status**: 
+**How to get involved**: 
+**Project Board**: add github board
+Page link: 
+
+Summary: 
+
+## TBA Document Translation
 
 **Status**: 
 **How to get involved**: 
