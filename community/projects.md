@@ -2,7 +2,7 @@
 title: Saito and Community Projects
 description: All details related to saito and community projects can be found here
 published: true
-date: 2022-04-06T09:02:25.014Z
+date: 2022-04-06T09:13:52.679Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-25T00:44:11.924Z
@@ -10,7 +10,9 @@ dateCreated: 2022-02-25T00:44:11.924Z
 
 # Saito and Community Projects
 
-This page provides an overview of community-led projects that could use help from volunteers. If you're interested in lending a hand, **please email the contact person of the project and cc: community@saito.io**.
+This page provides an overview of community-led projects that could use help from volunteers. If you're interested in lending a hand, please browse the list of available projects and get in touch with them.
+
+If you're interested on working on a community project, and would like it to be officially listed here, please contact us at community@saito.io.
 
 Please also consider contributing to this wiki! All of the pages in this repository are stored in markdown in our [Saito Wiki Github Repository](https://github.com/saitotech/wiki). To submit an edit, just open a [push request]( https://github.com/SaitoTech/wiki.git) with your proposed changes. Non-developers are welcome to leave a comment on any page or email us at community@saito.io.
 
@@ -18,7 +20,7 @@ Please also consider contributing to this wiki! All of the pages in this reposit
 ## 1. Saito Arcade
 
 **Status**: Ongoing Development
-**Contact Person for Suggestions and Volunteering**: Karl Nabong (karl@saito.tech)
+**How to get involved**: Contact Karl Nabong via karl@saito.tech
 **Project Board**: [KANBAN BOARD](https://github.com/orgs/SaitoTech/projects/7)
 **Page Link**: [Saito Arcade Details](/community/projects/arcade)
 
@@ -26,8 +28,8 @@ Summary: The Saito Arcade is a game website built on top of a blockchain. All th
 
 ## 2. Community Forum
 
-**Status**: Hiring Resources
-**Contact Person for Suggestions and Volunteering**: Guy Ng (add email)
+**Status**: Ideation
+**How to get involved**: Contact Guy Ng via
 **Project Board**: add github board
 Page link: [Saito Web 3.0 Forum Details](/community/projects/forum)
 
@@ -36,8 +38,8 @@ Summary: Members of our community are working to build an on-chain Community For
 ## 3. Saito Arcade Games Tutorial
 
 **Status**: Hiring Resources
-**Contact Person for Suggestions and Volunteering**: Karl Nabong (karl@saito.tech)
+**How to get involved**: Contact Tucho via DiscordID XXXX
 **Project Board**: add github board
-Page link: [Saito Web 3.0 Forum Details](/community/projects/forum)
+Page link:
 
 Summary: Members of our community are working to build bite-size video tutorials for the games
