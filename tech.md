@@ -18,7 +18,7 @@ Things you can find in the tech section of our Wiki:
     
  - Applications
      - [api and overview](/tech/applications)
-     - [tutorials](/tutorials)
+     - [tutorials](/tech/tutorials)
      
  - Network Architecture
      - [how the network functions](/tech/core)
