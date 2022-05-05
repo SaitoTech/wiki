@@ -14,7 +14,7 @@ Start by downloading this [ZIP file](http://org.saito.tech/wp-content/uploads/20
 
 ![tutorial1uploadasset.png](/tutorial1uploadasset.png)
 
-Visit your [Saito Wallet](https://saito.io/wallet) and click on “AppStore” in the application sidebar. We want to upload our new application, so drag that zipfile onto the drag-and-drop upload panel. This transfers the file into your browser and wraps it in a Saito transaction. A submit button will appear when this process is done. Click it.
+Visit your [Saito Wallet](https://saito.io/dev/) and click on “AppStore” in the application sidebar. We want to upload our new application, so drag that zipfile onto the drag-and-drop upload panel. This transfers the file into your browser and wraps it in a Saito transaction. A submit button will appear when this process is done. Click it.
 
 Congratulations! You’ve just published your application. Technically, you’ve just sent that transaction (containing your app) out into the network along with metadata requesting that the AppStores on the network index and host your application. You’ll be shown a short message that tells you this. Skip it and go back to your Inbox.
 
