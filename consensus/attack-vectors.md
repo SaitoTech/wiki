@@ -2,14 +2,14 @@
 title: Attack Vectors
 description: how Saito is secure against common and uncommon attack vectors
 published: true
-date: 2022-03-22T10:29:32.187Z
+date: 2022-04-26T13:44:06.368Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-22T10:08:41.187Z
 ---
 
 # Attack Vectors 
-Saito is secure against classes of attack which have no defense mechanisms in other chains. This page explains how these defense mechanisms work. Those interested in a mathematical overview of security may be interested in our [optimal attack reward](https://github.com/SaitoTech/saito-lite-rust/blob/master/docs/consensus/maths.md) calculations.
+Saito is secure against classes of attack which have no defense mechanisms in other chains. This page explains how these defense mechanisms work. Those interested in a mathematical overview of security may be interested in our [optimal attack reward](/consensus/math) calculations.
 
 ## 1. SYBIL ATTACKS
 A sybil attack involves using a cheap or free form of work to reduce the income of a network participant who is performing a more expensive form of income-earning work. Saito is secure against sybil attacks as the network's paid form of work involves fee collection. The only way to get paid more money (i.e. extract wealth) is to contribute more value to the network, and collect only a portion of it. Attackers must by definition transfer funds to other network participants in order to attack the chain.

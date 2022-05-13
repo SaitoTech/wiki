@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2022-04-04T12:25:59.190Z
+date: 2022-05-04T09:48:57.587Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -17,7 +17,9 @@ dateCreated: 2021-11-09T07:50:58.627Z
 
 Saito is a layer-1 blockchain that scales by fixing incentive misalignments in the consensus layers of all other blockchains. You can use Saito today to run web3 applications [directly in your browser](https://saito.io/arcade). If you are new to Saito you can also check out our [development roadmap](https://org.saito.tech/saito-roadmap-update/), or start down the Saito rabbit-hole with the [Saito whitepaper](https://saito.io/saito-whitepaper.pdf).
 
-This wiki is intended as a community-editable resource and knowledge repository. Please feel welcome to contribute by flagging problems or editing pages to include more information that you think might be helpful. In order to help organize the site, we've divided the content into three main categories: 
+This wiki is intended as a community-editable resource and knowledge repository. Please feel welcome to contribute by flagging problems or editing pages to include more information that you think might be helpful. 
+
+All pages are stored in markdown in our [Saito Wiki Github Repository](https://github.com/saitotech/wiki). Submit edits by making a push request with your proposed changes or emailing us at community@saito.tech. In order to help organize the site, we've divided the content into three main categories: 
 
 ## [Saito Consensus](/consensus)
   Saito Consensus includes details on the consensus mechanism that Saito uses to power its blockchain network. It includes discussions of the incentive problems that Saito fixes and explains why solving them requires paying for fee-collection rather than other gameable forms of work like mining and staking. 
@@ -29,3 +31,10 @@ This wiki is intended as a community-editable resource and knowledge repository.
   This section is for developers. It includes instructions on installing Saito, API guides and reference materials for those interested in building applications on the network, as well as more detailed explanations of the network architecture.
   
   ---
+  
+## Links
+
+[Saito whitepaper](https://saito.io/saito-whitepaper.pdf)
+[Saito Arcade](https://saito.io/arcade/)
+[Get SAITO](https://wiki.saito.io/en/tokenomics#where-to-buy-saito)
+

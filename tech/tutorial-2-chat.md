@@ -2,7 +2,7 @@
 title: Tutorial 2 Receive and Process Transaction
 description: Tutorial on Receiving and Processing Transaction using chat
 published: true
-date: 2022-03-22T07:13:08.346Z
+date: 2022-05-08T13:16:23.083Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-22T07:13:05.526Z
