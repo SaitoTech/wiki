@@ -2,7 +2,7 @@
 title: Saito and Community Projects
 description: All details related to saito and community projects can be found here
 published: true
-date: 2022-04-06T10:30:56.470Z
+date: 2022-05-13T06:44:53.688Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-25T00:44:11.924Z
@@ -10,13 +10,7 @@ dateCreated: 2022-02-25T00:44:11.924Z
 
 # Community Projects
 
-This page provides an overview of community-led projects that could use help from volunteers.
-
-If you are starting or working on a community project and would like it listed here contact community@saito.io.
-
-Please also consider contributing to this wiki! 
-**Repository**: https://github.com/saitotech/wiki
-**Volunteer**: community@saito.io.
+This page provides an overview of community-led projects that could use help from volunteers. If you have the time to help, one of the easiest ways to join the community is finding a project that interests you and helping us improve it. If you have a project you would like to see listed here, please write us at community@saito.io.
 
 ## Awesome Saito
 
@@ -62,9 +56,9 @@ Page link:
 
 Summary: Members of our community are working to build bite-size video tutorials for the games
 
-## P2P "Twitter"
+## P2P "Twitter"<a name="p2pTwitter"></a>
 
-**Status**: Suggestion
+**Status**: Suggestion, team building.
 **Participate**: Contact community@saito.io
 
 Summary: Build a peer to peer twitter like application on the Saito network.
@@ -73,3 +67,8 @@ Summary: Build a peer to peer twitter like application on the Saito network.
 
 **Status**: TBD
 **Participate**: Discord Channels 
+
+
+---
+
+
