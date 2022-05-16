@@ -2,7 +2,7 @@
 title: Tutorial 1 Deploy and Install Application
 description: Deploying and Installing Application in Saito
 published: true
-date: 2022-03-30T16:34:59.840Z
+date: 2022-05-16T03:01:52.408Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-22T07:07:49.922Z
@@ -10,23 +10,21 @@ dateCreated: 2022-03-22T07:07:49.922Z
 
 # Tutorial 1 – Deploy and Install a Saito Application
 
-Start by downloading this [ZIP file](http://org.saito.tech/wp-content/uploads/2020/12/tutorial01.zip) ***Note**: need to change since org will be deprecated, which contains a very simple application*. You can find an annotated copy of the source code online, and may want to take a quick look. For now let’s move on to uploading and installing it.
+Start by downloading this [ZIP file](/tutorial01_(2).zip). 
 
-![tutorial1uploadasset.png](/tutorial1uploadasset.png)
+***Note**: need to change since org will be deprecated, which contains a very simple application*. You can find an annotated copy of the source code online, and may want to take a quick look. For now let’s move on to uploading and installing it.
 
-Visit your [Saito Wallet](https://saito.io/dev/) and click on “AppStore” in the application sidebar. We want to upload our new application, so drag that zipfile onto the drag-and-drop upload panel. This transfers the file into your browser and wraps it in a Saito transaction. A submit button will appear when this process is done. Click it.
+![appstore_screenshot.png](/appstore_screenshot.png)
 
-Congratulations! You’ve just published your application. Technically, you’ve just sent that transaction (containing your app) out into the network along with metadata requesting that the AppStores on the network index and host your application. You’ll be shown a short message that tells you this. Skip it and go back to your Inbox.
+Visit your [Saito Settings](https://saito.io/dev/#email-nav-AppStore) and click on “AppStore” in the application sidebar. We want to upload our new application, so drag that zipfile onto the drag-and-drop upload panel. This transfers the file into your browser and wraps it in a Saito transaction. A submit button will appear when this process is done. Click it.
 
-![tutorial1transactionasset.png](/tutorial1transactionasset.png)
+Congratulations! You’ve just published your application. Technically, you’ve just sent that transaction (containing your app) out into the network along with metadata requesting that the AppStores on the network index and host your application. 
 
 Surprise! If your browser sent the transaction properly, you’ll have received an email confirming your submission. Open this email and you’ll find your unique APP-ID along with a link you can click on to install the application. Anyone can use that link or your APP-ID to find your application. If you ever need to search manually, go back to the AppStore, click to launch the Saito Appstore and search for your APP-ID manually (note: if your application is not found right away, wait a minute until it is finished indexing). You should see this:
 
-![tutorial1uploadedapplication.png](/tutorial1uploadedapplication.png)
+Click to view your app details and then click INSTALL. Upgrading your browser takes about 45 seconds. Watch the countdown and wait for your installation to complete. You’ll be asked to confirm you want to upgrade your client before the process is over. Click “CONFIRM”.
 
-Click to view your app details and then click INSTALL. Upgrading your browser takes about 45 seconds. Watch the countdown and wait for your installation to complete. You’ll be asked to confirm you want to upgrade your client before the process is over. Click “CONFIRM” and your browser will reload and take you back to your [Saito Wallet](https://saito.io/wallet).
-
-![tutorial1appstore.png](/tutorial1appstore.png)
+![tutorial1appstore.png](/installconfirm.png)
 
 Look at the sidebar and you’ll see the application you just installed. Click on it and click on the button. Looks like this application creates a simple HTML interface and sends a transaction (with data) onto the network s, and then take a look at the [annotated source code](https://github.com/SaitoTech/saito-lite/blob/master/mods/tutorial01/tutorial01.js) to see how easy it was to build.
 
