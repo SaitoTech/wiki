@@ -2,7 +2,7 @@
 title: Saito Tech
 description: navigating the Saito Tech wiki
 published: true
-date: 2022-03-29T03:48:19.305Z
+date: 2022-05-16T03:23:11.524Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T03:22:55.201Z
@@ -13,15 +13,15 @@ dateCreated: 2022-03-25T03:22:55.201Z
 Things you can find in the tech section of our Wiki:
 
  - Installation Instructions
-    - [javascript client](/tech/installation)
-    - [rust client](/tech/installation-rust)
+    - [JavaScript Client](/tech/installation)
+    - [Rust Client](/tech/installation-rust)
     
  - Applications
-     - [api and overview](/tech/applications)
-     - [tutorials](/tech/tutorials)
+     - [API and Overview](/tech/applications)
+     - [Tutorials](/tech/tutorials)
      
  - Network Architecture
-     - [how the network functions](/tech/core)
+     - [How the Network Functions](/tech/core)
  
  - External Resources
-     - [a list of external resources for developers](/tech/resources)
+     - [List of Exrernal Resources for Developers](/tech/resources)
