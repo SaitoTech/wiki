@@ -2,13 +2,13 @@
 title: Tasks
 description: this would all be incredibly helpful...
 published: true
-date: 2022-05-18T07:20:12.231Z
+date: 2022-05-18T07:20:25.456Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-25T10:02:25.251Z
 ---
 
-# Curiouser and Curiouser Tasks
+# Stuff People Can Help With
 If you're not interested in joining or leading an application-development project, we have a list of standalone tasks that are more challenging. These are areas we are interested in exploring that could push us forward significantly, but that are not immediate priorities. If you can help us push forward that can change quickly.
 
 ## Compression of Routing Sigs
