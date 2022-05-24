@@ -2,7 +2,7 @@
 title: Saito Tutorials
 description: tutorials on how to build applications for the Saito Network
 published: true
-date: 2022-03-25T03:19:16.004Z
+date: 2022-05-24T04:51:18.933Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T03:17:50.240Z
@@ -16,10 +16,10 @@ Our first tutorial takes about five minutes to complete. It explains how to buil
 
 ### Tutorials
 
- - **[Tutorial #1: Build an Application](https://org.saito.tech/tutorial-1-deploy-a-new-application/)**
+ - **[Tutorial #1: Build an Application](/tech/tutorial-1-deploy-install-application)**
    build an application that sends a transaction onto the network when the user clicks a button. this tutorial teaches what an application looks like and explains how to publish it to the network.
    
- - **[Tutorial #2: Chat Notification on TX Receipt](https://org.saito.tech/tutorial-2-chat-notification-application/)**
+ - **[Tutorial #2: Chat Notification on TX Receipt](/tech/tutorial-2-chat)**
    build an application that listens for transactions / messages that are sent to you and adds a message to the chatbox once your wallet receives them.
 
  
