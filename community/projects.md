@@ -2,7 +2,7 @@
 title: Saito and Community Projects
 description: All details related to saito and community projects can be found here
 published: true
-date: 2022-05-13T12:20:21.589Z
+date: 2022-05-25T04:13:14.068Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-25T00:44:11.924Z
@@ -10,7 +10,7 @@ dateCreated: 2022-02-25T00:44:11.924Z
 
 # Community Projects
 
-This page provides an overview of community-led projects that could use help from volunteers. If you have the time to help, one of the easiest ways to join the community is finding a project that interests you and helping us improve it. If you have a project you would like to see listed here, please write us at community@saito.io.
+This page provides an overview of community-led projects that could use help from volunteers. If you have the time to help, one of the easiest ways to join the community is finding a project that interests you and helping us improve it. If you have a project you would like to see listed here, please write us at community@saito.io. If you are interested in core theoretical development tasks, we have a page on more [research-oriented work](/community/tasks) we could use help with.
 
 ## Awesome Saito
 
