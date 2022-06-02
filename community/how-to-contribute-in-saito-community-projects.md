@@ -2,7 +2,7 @@
 title: How to contribute in Saito Community Projects
 description: How to contribute in Saito Community Projects
 published: true
-date: 2022-06-02T07:22:35.389Z
+date: 2022-06-02T07:23:30.485Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-02T07:22:35.389Z
@@ -18,7 +18,7 @@ We have a list of random bugs and requests on [Github](https://github.com/orgs/S
 
 ### **2. Build a new module or game**
 
-We will help you build that module 
+We will help you build that module.
 
 As a starter, we highly recommend you to follow this [tutorial series](/tech/tutorials) designed to accelerate your knowledge in developing a module. You may also use the existing modules in our [Github](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) as a reference for your development and/or to understand how existing modules work. As you advance on your development, we recommend that you check the various [APIs](/tech/applications) available for your module.
 
