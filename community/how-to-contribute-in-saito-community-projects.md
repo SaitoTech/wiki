@@ -2,7 +2,7 @@
 title: How to contribute in Saito Community Projects
 description: How to contribute in Saito Community Projects
 published: true
-date: 2022-06-02T07:23:30.485Z
+date: 2022-06-02T07:24:16.510Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-02T07:22:35.389Z
@@ -22,7 +22,7 @@ We will help you build that module.
 
 As a starter, we highly recommend you to follow this [tutorial series](/tech/tutorials) designed to accelerate your knowledge in developing a module. You may also use the existing modules in our [Github](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) as a reference for your development and/or to understand how existing modules work. As you advance on your development, we recommend that you check the various [APIs](/tech/applications) available for your module.
 
-Some general questions that would help you on general matters pertaining to module development, we suggest you go through the following:
+Some general questions that would help you kick-off your module development:
 1. Is it going to be hosted on your own node or on the existing Saito Node (arcade)?
 2. What are the features of the module or application?
 3. Which modules from the current [Saito stack](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) do you want to run on your application?
