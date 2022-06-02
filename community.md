@@ -2,7 +2,7 @@
 title: Community Chat Groups and Resources
 description: Community Chat Groups and Resources
 published: true
-date: 2022-05-24T09:15:45.870Z
+date: 2022-06-02T06:54:36.002Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-23T08:16:57.540Z
@@ -10,7 +10,7 @@ dateCreated: 2022-03-23T08:16:57.540Z
 
 # Community Resources
 
-This page contains links to our many official and unofficial chat groups, as well as community-run websites and resources. If you know of anything that should be on this page submit an edit via our [Saito Wiki Github Repository](https://github.com/saitotech/wiki) or email us at community@saito.tech:
+This page contains links to our many official and unofficial chat groups, as well as community-run websites and resources. If you know of anything that should be on this page submit an edit via our [Saito Wiki Github Repository](https://github.com/saitotech/wiki) or email us at community@saito.tech. To those who are new to github, we have created a [step-by-step guide](/community/how-to-contribute-in-wiki) in submitting and getting your request approved.
 
 **CHAT GROUPS:**
 
