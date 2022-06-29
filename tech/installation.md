@@ -25,7 +25,7 @@ If you do not have these dependencies installed on your machine, we have instruc
 
 ```
 sudo apt-get update
-sudo apt-get install g++ make git python
+sudo apt-get install g++ make git python node-typescript
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash
 sudo apt-get install -y nodejs
 ```
