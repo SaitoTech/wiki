@@ -2,7 +2,7 @@
 title: Saito CSS and UI Components
 description: An introduction to Saito UI Components and CSS Structure
 published: true
-date: 2022-06-29T02:53:42.767Z
+date: 2022-06-29T03:15:00.087Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T02:39:03.187Z
@@ -10,20 +10,20 @@ dateCreated: 2022-06-29T02:39:03.187Z
 
 # Saito UI Components
 
-To use Saito UI components in your application, include them at the top of your module file. A number of UI Components are included by default in the ```/lib/saito/new-ui``` directory. Additional module-specific components can be created in the ```/lib``` directory of your module.
+Saito comes with UI Components like the Saito Header and the Saito Chatbox which you will see in many applications. You can include these components in any applications that you want to write.
+
+To use a Saito UI component in your application, start by including the component at the top of your module file. A number of UI Components are included by default in the ```/lib/saito/new-ui``` directory. You can build your own module-specific components and include them in the ```/lib``` directory of your module as well.
 
 ```
 const ModTemplate = require('../../lib/templates/modtemplate');
 const SaitoHeader = require('../../lib/saito/new-ui/saito-header/saito-header');
-const SaitoCalendar = require('../../lib/saito/new-ui/saito-calendar/saito-calendar');
 const RedSquareMain = require('./lib/main/redsquare-main');
 const RedSquareMenu = require('./lib/menu');
 const RedSquareChatBox = require('./lib/chatbox');
-const RedSquareSidebar = require('./lib/left-sidebar');
-const RedSquareSidebar = require('./lib/right-sidebar');
+const RedSquareSidebar = require('./lib/sidebar');
 ```
 
-Once your module is aware of these components, modify your render(app, mod) function to load them into your module, as in the code below. Calling ```super(app, this);``` will render all of the components that have been created and added to the module in the order they have been added, as below:
+Whenever a module or component is displayed on-screen, it will have its ```render(app, mod);``` function called. To display these components once your application loads, simply modify your module's ```render(app, mod);``` function to load them into view. The standard way of doing this is to call ```addComponent()``` to add the individual components to each other than then your module, and then finally Calling ```super.render(app, this);``` to trigger them all being written to the DOM.
 
 ```
  render(app, mod) {
@@ -59,16 +59,4 @@ Once your module is aware of these components, modify your render(app, mod) func
   }
 ```
 
-Using Saito's default UI Components will avoid the need for you to manage CSS -- default styling will be added to components as they are rendered. If you wish to understand how these components are programmed and styled in  order to modify them , here is a separate list of the critical CSS containers and properties that form the core CSS of our application design. 
-
-- saito-container
-- saito-header
-- saito-main
-- saito-sidebar \[left \| right\]
-- saito-list
-	- saito-list-user
-	- saito-list-game
-- saito-identicon
-- saito-menu
-- saito-overlay
-- saito-backdrop
+If you update a component, you can call ```render(app, mod);``` on the component to update it directly. For updates that happen frequently and affect only minor subcomponents (like chat messages) we recommend using Saito's built-in event system rather than re-writing the DOM to update hte interface with every change.
