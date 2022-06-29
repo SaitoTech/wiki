@@ -2,7 +2,7 @@
 title: Saito CSS
 description: Saito CSS Design
 published: true
-date: 2022-06-29T03:16:40.968Z
+date: 2022-06-29T08:03:37.438Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T02:53:29.274Z
@@ -19,8 +19,6 @@ It is possible to build applications without using Saito default UI Components. 
 - [saito-sidebar  \[ left \| right \]](/tech/applications/saito-css/saito-sidebar)
 - saito-main
 - saito-list
-	- saito-list-user
-	- saito-list-game
 - saito-identicon
 - saito-menu
 - saito-overlay
