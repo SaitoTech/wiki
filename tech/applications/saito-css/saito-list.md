@@ -2,7 +2,7 @@
 title: Saito-list
 description: 
 published: true
-date: 2022-06-29T08:37:10.362Z
+date: 2022-06-29T08:37:36.039Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T08:29:10.675Z
@@ -24,11 +24,11 @@ Each List type can be placed inside the saito-list container
     <div class="saito-list">
         <div class="saito-list-user">
             <div class="saito-idenitcon">
-                <img  />
+                <img/>
             </div>
             <div class="saito-userinfo">
-                <div class="saito-username"></div>
-                <div class="saito-user"></div>
+                <div></div>
+                <div></div>
             </div>
             <div class="saito-usercontrol">
             </div>
