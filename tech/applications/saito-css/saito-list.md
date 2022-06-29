@@ -2,7 +2,7 @@
 title: Saito-list
 description: 
 published: true
-date: 2022-06-29T08:37:36.039Z
+date: 2022-06-29T08:47:10.617Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T08:29:10.675Z
@@ -20,8 +20,10 @@ There are 3 major list types:
 
 
 Each List type can be placed inside the saito-list container 
-````
-    <div class="saito-list">
+
+```saito-list-user```
+```
+  <div class="saito-list">
         <div class="saito-list-user">
             <div class="saito-idenitcon">
                 <img/>
@@ -33,24 +35,41 @@ Each List type can be placed inside the saito-list container
             <div class="saito-usercontrol">
             </div>
         </div>
+  </div>
+````
+
+Developers may also choose to omit the interior class declarations if they desire.
+````
+    <div class="saito-list">
+        <div class="saito-list-user">
+            <div>
+                <img/>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+            </div>
+        </div>
     </div>
 ````
 
 
-Developers may also choose to omit the interior class declarations if they desire.
-````
-<div class=”saito-list”>
-	<div class="saito-list-user">
-     <div class="saito-list-user">
-        <div>
-        <img class="saito-idenitcon"/>
+
+```saito-list-module```
+```
+    <div class="saito-list">
+        <div class="saito-list-module">
+            <div class="saito-modulepicture">
+                <img />
+            </div>
+            <div class="saito-moduleinfo">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="saito-modulecontrol">
+            </div>
         </div>
-      <div class="saito-userinfo">
-        <div class="saito-username"></div>
-        <div class="saito-user"></div>
-      </div>
-      <div class="saito-usercontrol">
-      </div>
-   </div>
-</div>
+    </div>
 ````
