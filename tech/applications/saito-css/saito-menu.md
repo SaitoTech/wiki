@@ -2,7 +2,7 @@
 title: Saito-Menu
 description: 
 published: true
-date: 2022-06-29T20:31:39.031Z
+date: 2022-06-29T20:32:09.892Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T20:19:05.022Z
@@ -41,7 +41,7 @@ The ```saito-menu```  class is used to create menu lists,
 
 
 
-**ICONS:** Certain times, descriptive icons are necessary on menu list items, the ```saito-menu``` class already supports this out of the box. Simply insert the icon required inside the ```<li> </li>```  :
+**ICONS:** Certain times, descriptive icons are necessary on menu list items, the ```saito-menu``` class already supports this out of the box. Simply insert the icon required inside the ```<li> </li>``` of the menu list item:
 
 
 
