@@ -2,7 +2,7 @@
 title: Saito-list
 description: 
 published: true
-date: 2022-06-29T14:31:37.640Z
+date: 2022-06-29T14:32:06.979Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T08:29:10.675Z
@@ -143,7 +143,7 @@ Developers might need a smaller or larger variant of a list type, with smaller o
             </div>
             <div>
                 <div></div>
-                <div></div>
+                <p></p>
             </div>
             <div>
             </div>
@@ -158,7 +158,7 @@ Developers might need a smaller or larger variant of a list type, with smaller o
             </div>
             <div>
                 <div></div>
-                <div></div>
+                <p></p>
             </div>
             <div>
             </div>
