@@ -2,7 +2,7 @@
 title: Saito-list
 description: 
 published: true
-date: 2022-06-29T09:00:57.281Z
+date: 2022-06-29T09:02:05.574Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T08:29:10.675Z
@@ -10,7 +10,7 @@ dateCreated: 2022-06-29T08:29:10.675Z
 
 # Saito-List
 
-The ```saito-list``` class acts as a container for list components that share a similar structure but with important differences
+The ```saito-list``` class acts as a container for list components/types that share a similar structure but with important differences
 
 There are 3 major list types:
 - saito-list-user
