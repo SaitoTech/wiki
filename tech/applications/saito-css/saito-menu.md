@@ -2,7 +2,7 @@
 title: Saito-Menu
 description: 
 published: true
-date: 2022-06-29T20:30:08.400Z
+date: 2022-06-29T20:30:38.205Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T20:19:05.022Z
@@ -17,7 +17,6 @@ The ```saito-menu```  class is used to create menu lists,
                    <div class="saito-menu">
                         <ul>
                             <li>
-
                                 <span> BlackJack </span>
                             </li>
                             <li>
