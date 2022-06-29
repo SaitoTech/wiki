@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2022-06-29T02:25:49.925Z
+date: 2022-06-29T02:50:35.978Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -17,7 +17,10 @@ If you are getting started programming on Saito, a good place to start is our [t
 The following documentation may be useful for those doing more advanced development. The **Module API** explains what functions you can include in your module. The **Events API** explain how to listen and respond when system-wide events occur (like a new block being found). The **Services API*** explains how peers can inform other peers of value-added services they are running.
 
 ### [UI Components](/tech/applications/ui-components)
-* Saito comes with an extensive set of UIComponents and CSS classes that can be used to create pre-styled components that will fit in well in any Saito applications. This section of the wiki covers these components along with important CSS classes that are useful in building the different types of elements that you can see in most Saito apps.
+* Saito comes with an extensive set of UIComponents that can be used to create applications with headers, sidebars, lists of users and games and much more. This section explains how to use existing components build new components for use in your and other applications.
+
+### [CSS Design](/tech/applications/saito-css)
+* Saito comes with a default set of CSS classes that creates the colorful and dynamic design aesthetic behind the core applications on the site. While developers can always create their own CSS designs, this section covers the main classes used in the Saito CSS design for those interested in exploring and remixing our approach to visual design.
 
 
 ### [Module API](/tech/applications/module-api)
