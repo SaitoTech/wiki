@@ -2,7 +2,7 @@
 title: Saito-list
 description: 
 published: true
-date: 2022-06-29T08:50:36.757Z
+date: 2022-06-29T08:51:55.177Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T08:29:10.675Z
@@ -73,7 +73,7 @@ Developers may also choose to omit the interior class declarations if they desir
         </div>
     </div>
 ````
-As usual, developers may also choose to omit the interior class declarations if they desire.
+Developers may also choose to omit the interior class declarations if they desire.
 
 ```
     <div class="saito-list">
@@ -95,11 +95,11 @@ As usual, developers may also choose to omit the interior class declarations if 
 
 
 
-
+```3: saito-list-chat```
 ````
     <div class="saito-list">
         <div class="saito-list-chat">
-            <div class="saito-modulepicture">
+            <div class="saito-chatpicture">
                 <img />
             </div>
             <div class="saito-chatinfo">
@@ -107,6 +107,23 @@ As usual, developers may also choose to omit the interior class declarations if 
                 <div></div>
             </div>
             <div class="saito-chatcontrol">
+            </div>
+        </div>
+    </div>
+````
+
+As usual, developers may also choose to omit the interior class declarations if they desire.
+````
+    <div class="saito-list">
+        <div class="saito-list-chat">
+            <div>
+                <img />
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
             </div>
         </div>
     </div>
