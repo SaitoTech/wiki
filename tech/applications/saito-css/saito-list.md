@@ -2,7 +2,7 @@
 title: Saito-list
 description: 
 published: true
-date: 2022-06-29T08:52:09.125Z
+date: 2022-06-29T08:58:23.647Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T08:29:10.675Z
@@ -128,3 +128,49 @@ As usual, developers may also choose to omit the interior class declarations if 
         </div>
     </div>
 ````
+
+
+
+
+Developers might need a smaller or larger version of a list type, this can be easily managed by adding specific classes to the list type:
+ 
+- small  : for a smaller list type
+- large  : for a larger list type
+
+
+
+``````
+    <div class="saito-list">
+        <div class="saito-list-chat small">
+            <div>
+                <img />
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+    
+    
+        <div class="saito-list">
+        <div class="saito-list-chat large">
+            <div>
+                <img />
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+``````
