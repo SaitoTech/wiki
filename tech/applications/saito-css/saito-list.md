@@ -2,7 +2,7 @@
 title: Saito-list
 description: 
 published: true
-date: 2022-06-29T08:49:19.144Z
+date: 2022-06-29T08:49:41.240Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T08:29:10.675Z
@@ -21,7 +21,7 @@ There are 3 major list types:
 
 Each List type can be placed inside the saito-list container:
 
-```saito-list-user```
+```1: saito-list-user```
 ```
   <div class="saito-list">
         <div class="saito-list-user">
@@ -57,7 +57,7 @@ Developers may also choose to omit the interior class declarations if they desir
 
 
 
-```saito-list-module```
+```2: saito-list-module```
 ```
     <div class="saito-list">
         <div class="saito-list-module">
