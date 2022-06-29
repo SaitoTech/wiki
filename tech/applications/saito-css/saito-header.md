@@ -2,7 +2,7 @@
 title: saito-header
 description: saito-header
 published: true
-date: 2022-06-29T04:25:21.074Z
+date: 2022-06-29T04:25:29.717Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T03:55:14.489Z
@@ -157,8 +157,3 @@ The default HTML for ```saito-header``` looks like this:
       
     </nav>
   </header>````
-Developers may also omit the interior class declarations entirely:
-````
-<div class=”saito-header”>
-</div>
-````
