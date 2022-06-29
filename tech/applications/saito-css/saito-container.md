@@ -2,7 +2,7 @@
 title: saito-container
 description: saito-container
 published: true
-date: 2022-06-29T03:47:24.475Z
+date: 2022-06-29T05:29:02.690Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T03:20:34.640Z
@@ -29,6 +29,14 @@ Developers may also omit the interior class declarations entirely:
   <div></div>
 </div>
 ````
+
+The CSS contains definitions for both the element in the hierarchy and the style name:
+
+```
+.saito-cointainer div:first-child, .saito-sidebar.left {
+  /* css */
+}
+```
 
 PlEASE NOTE: as the base-layer component in the Saito CSS design, this DIV element will be added *automatically* by any module that inherits from Saito's ```/lib/templates/modtemplate.js``` class when the ```render(app, mod)``` function in the parent class is called. You should call ```super.render(app, mod)``` before you begin manipulating the DOM.
 
