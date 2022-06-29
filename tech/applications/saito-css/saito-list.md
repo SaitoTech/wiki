@@ -2,7 +2,7 @@
 title: Saito-list
 description: 
 published: true
-date: 2022-06-29T14:26:48.818Z
+date: 2022-06-29T14:31:37.640Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T08:29:10.675Z
@@ -14,8 +14,8 @@ The ```saito-list``` class acts as a container for list components/types that sh
 
 There are 3 major list types:
 - saito-list-user
-- saito-list-module
-- saito-list-chat
+- saito-list-game
+- saito-list-chatbox
 
 
 
@@ -45,28 +45,26 @@ Developers may also choose to omit the interior class declarations if they desir
             </div>
             <div>
                 <div></div>
-                <div></div>
-            </div>
-            <div>
-            </div>
+                <p></p>
+            </div> 
         </div>
     </div>
 ````
 
 
 
-```2: saito-list-module```
+```2: saito-list-game```
 ```
-    <div class="saito-list">
-        <div class="saito-list-module">
-            <div class="saito-modulepicture">
-                <img />
+     <div class="saito-list">
+        <div class="saito-list-game">
+            <div class="saito-list-app-image-box">
+                <img class="saito-app-image" />
             </div>
-            <div class="saito-moduleinfo">
-                <div></div>
-                <div></div>
+            <div class="saito-list-app-content-box">
+                <div class="saito-app-name"></div>
+                <p></p>
             </div>
-            <div class="saito-modulecontrol">
+            <div class="saito-list-game-controls">
             </div>
         </div>
     </div>
@@ -81,7 +79,7 @@ Developers may also choose to omit the interior class declarations if they desir
             </div>
             <div>
                 <div></div>
-                <div></div>
+                <p></p>
             </div>
             <div>
             </div>
@@ -95,16 +93,16 @@ Developers may also choose to omit the interior class declarations if they desir
 
 ```3: saito-list-chat```
 ````
-    <div class="saito-list">
-        <div class="saito-list-chat">
-            <div class="saito-chatpicture">
-                <img />
+       <div class="saito-list">
+        <div class="saito-list-chatbox">
+            <div class="saito-list-user-image-box">
+                <img class="saito-identicon" />
             </div>
-            <div class="saito-chatinfo">
-                <div></div>
-                <div></div>
+            <div class="saito-list-user-content-box">
+                <div class="saito-username"></div>
+                <p></p>
             </div>
-            <div class="saito-chatcontrol">
+            <div class="saito-list-user-timestamp">
             </div>
         </div>
     </div>
@@ -119,7 +117,7 @@ As usual, developers may also choose to omit the interior class declarations if 
             </div>
             <div>
                 <div></div>
-                <div></div>
+                <p></p>
             </div>
             <div>
             </div>
