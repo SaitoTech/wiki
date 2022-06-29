@@ -2,7 +2,7 @@
 title: Saito-list
 description: 
 published: true
-date: 2022-06-29T09:02:21.960Z
+date: 2022-06-29T14:26:48.818Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T08:29:10.675Z
@@ -23,19 +23,17 @@ Each List type can be placed inside the saito-list container:
 
 ```1: saito-list-user```
 ```
-  <div class="saito-list">
+    <div class="saito-list">
         <div class="saito-list-user">
-            <div class="saito-idenitcon">
-                <img/>
+            <div class="saito-list-user-image-box">
+                <img class="saito-idenitcon" />
             </div>
-            <div class="saito-userinfo">
-                <div></div>
-                <div></div>
-            </div>
-            <div class="saito-usercontrol">
+            <div class="saito-list-user-content-box">
+                <div class="saito-username"></div>
+                <p></p>
             </div>
         </div>
-  </div>
+    </div>
 ````
 
 Developers may also choose to omit the interior class declarations if they desire.
