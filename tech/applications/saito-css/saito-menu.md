@@ -2,7 +2,7 @@
 title: Saito-Menu
 description: 
 published: true
-date: 2022-06-29T20:32:09.892Z
+date: 2022-06-29T20:32:16.945Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T20:19:05.022Z
@@ -76,7 +76,7 @@ The ```saito-menu```  class is used to create menu lists,
 
 
 
-**ALIGNMENT:** By default,  ```saito-menu``` is left aligned, for right alignment, it should be updated with the ```right``` class
+**ALIGNMENT:** By default,  ```saito-menu``` is left aligned, for right alignment, it should be updated with the ```right``` class:
 
 
 ```
