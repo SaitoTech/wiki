@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2022-03-25T05:08:35.763Z
+date: 2022-06-29T02:25:49.925Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -15,6 +15,10 @@ A Saito application is a module that installs into the user wallet that is runni
 If you are getting started programming on Saito, a good place to start is our [tutorial series](/tech/tutorials) for new developers, which goes over the basics of how to build a simple application. Our Github repository also has a directory full of [reference modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) you can modify or consult if you are curious how the existing applications work.
 
 The following documentation may be useful for those doing more advanced development. The **Module API** explains what functions you can include in your module. The **Events API** explain how to listen and respond when system-wide events occur (like a new block being found). The **Services API*** explains how peers can inform other peers of value-added services they are running.
+
+### [UI Components](/tech/applications/ui-components)
+* Saito comes with an extensive set of UIComponents and CSS classes that can be used to create pre-styled components that will fit in well in any Saito applications. This section of the wiki covers these components along with important CSS classes that are useful in building the different types of elements that you can see in most Saito apps.
+
 
 ### [Module API](/tech/applications/module-api)
 * Saito Modules inherit from the ```/lib/templates/modtemplate.js``` file. This template file defines a number of default functions that create the default behavior for the module. If you overwrite these functions you can customize the behavior of your module, such as specifying what actions it should when it receives a transaction or off-chain message. This API outlines these basic functions.
