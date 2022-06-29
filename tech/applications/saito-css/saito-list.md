@@ -2,7 +2,7 @@
 title: Saito-list
 description: 
 published: true
-date: 2022-06-29T08:58:23.647Z
+date: 2022-06-29T09:00:57.281Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T08:29:10.675Z
@@ -132,10 +132,10 @@ As usual, developers may also choose to omit the interior class declarations if 
 
 
 
-Developers might need a smaller or larger version of a list type, this can be easily managed by adding specific classes to the list type:
+Developers might need a smaller or larger variant of a list type, with smaller or larger identicon or font-size as the case may be. This can be easily managed by adding specific classes to the list type:
  
-- small  : for a smaller list type
-- large  : for a larger list type
+- small  : for a smaller list variant
+- large  : for a larger list variant
 
 
 
