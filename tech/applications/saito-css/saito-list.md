@@ -2,7 +2,7 @@
 title: Saito-list
 description: 
 published: true
-date: 2022-06-29T08:49:41.240Z
+date: 2022-06-29T08:50:36.757Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T08:29:10.675Z
@@ -86,6 +86,27 @@ As usual, developers may also choose to omit the interior class declarations if 
                 <div></div>
             </div>
             <div>
+            </div>
+        </div>
+    </div>
+````
+
+
+
+
+
+
+````
+    <div class="saito-list">
+        <div class="saito-list-chat">
+            <div class="saito-modulepicture">
+                <img />
+            </div>
+            <div class="saito-chatinfo">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="saito-chatcontrol">
             </div>
         </div>
     </div>
