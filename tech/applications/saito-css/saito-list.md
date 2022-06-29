@@ -2,7 +2,7 @@
 title: Saito-list
 description: 
 published: true
-date: 2022-06-29T14:34:57.245Z
+date: 2022-06-29T14:38:21.459Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T08:29:10.675Z
@@ -73,7 +73,7 @@ Developers may also choose to omit the interior class declarations if they desir
 
 ```
     <div class="saito-list">
-        <div class="saito-list-module">
+        <div class="saito-list-game">
             <div>
                 <img />
             </div>
@@ -91,7 +91,7 @@ Developers may also choose to omit the interior class declarations if they desir
 
 
 
-```3: saito-list-chat```
+```3: saito-list-chatbox```
 ````
        <div class="saito-list">
         <div class="saito-list-chatbox">
@@ -111,7 +111,7 @@ Developers may also choose to omit the interior class declarations if they desir
 As usual, developers may also choose to omit the interior class declarations if they desire.
 ````
     <div class="saito-list">
-        <div class="saito-list-chat">
+        <div class="saito-list-chatbox">
             <div>
                 <img />
             </div>
@@ -137,7 +137,7 @@ Developers might need a smaller or larger variant of a list type, with smaller o
 
 ``````
     <div class="saito-list">
-        <div class="saito-list-chat small">
+        <div class="saito-list-chatbox small">
             <div>
                 <img />
             </div>
@@ -152,7 +152,7 @@ Developers might need a smaller or larger variant of a list type, with smaller o
     
     
         <div class="saito-list">
-        <div class="saito-list-chat large">
+        <div class="saito-list-chatbox large">
             <div>
                 <img />
             </div>
