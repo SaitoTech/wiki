@@ -2,7 +2,7 @@
 title: Saito-Menu
 description: 
 published: true
-date: 2022-06-29T20:26:15.142Z
+date: 2022-06-29T20:29:36.345Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T20:19:05.022Z
@@ -12,7 +12,7 @@ dateCreated: 2022-06-29T20:19:05.022Z
 
 The ```saito-menu```  class is used to create menu lists, 
 
-```saito-menu```:
+**saito-menu:**:
 ```
                    <div class="saito-menu">
                         <ul>
@@ -42,7 +42,11 @@ The ```saito-menu```  class is used to create menu lists,
 
 
 
-Certain times, descriptive icons are necessary on menu list items, the ```saito-menu``` class already supports this out of the box. Simply insert the icon required inside the required ```<li> </li>``` :
+**ICONS:** Certain times, descriptive icons are necessary on menu list items, the ```saito-menu``` class already supports this out of the box. Simply insert the icon required inside the required ```<li> </li>``` :
+
+
+
+
 
 
 ```
@@ -53,7 +57,6 @@ Certain times, descriptive icons are necessary on menu list items, the ```saito-
                                 <span> BlackJack </span>
                             </li>
                             <li>
-
                                 <span> Chess</span>
                             </li>
                             <li>
@@ -71,3 +74,10 @@ Certain times, descriptive icons are necessary on menu list items, the ```saito-
                         </ul>
                     </div>
 ````
+
+
+
+**ALIGNMENT:** By default,  ```saito-menu``` is left aligned, for right alignment, it should be 
+
+
+
