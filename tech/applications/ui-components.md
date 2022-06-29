@@ -2,13 +2,13 @@
 title: Saito CSS and UI Components
 description: An introduction to Saito UI Components and CSS Structure
 published: true
-date: 2022-06-29T02:39:03.188Z
+date: 2022-06-29T02:53:42.767Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T02:39:03.187Z
 ---
 
-# Saito CSS and UI Components
+# Saito UI Components
 
 To use Saito UI components in your application, include them at the top of your module file. A number of UI Components are included by default in the ```/lib/saito/new-ui``` directory. Additional module-specific components can be created in the ```/lib``` directory of your module.
 
