@@ -2,7 +2,7 @@
 title: saito-container
 description: saito-container
 published: true
-date: 2022-06-29T05:29:02.690Z
+date: 2022-06-30T10:17:03.248Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T03:20:34.640Z
@@ -10,7 +10,7 @@ dateCreated: 2022-06-29T03:20:34.640Z
 
 # Saito-Container
 
-Our ```saito-container``` class should be the outermost DIV in our application heirarchy. It is responsive to various display sized and designed to contain up to three elements: a left sidebar, a main panel, and a right sidebar.
+The ```saito-container``` class should be the outermost DIV in the dom heirarchy. It is responsive and contains a main panel and optional left and right sidebars.
 
 If any components are removed, the application will resize appropriately. If there are only two components they will be treated as a left-sidebar and a main-panel. A single component will be treated as a main panel.
 
@@ -21,7 +21,8 @@ If any components are removed, the application will resize appropriately. If the
   <div class="saito-sidebar right"></div>
 </div>
 ````
-Developers may also omit the interior class declarations entirely:
+
+Interior class declarations may be ommitted:
 ````
 <div class=”saito-container”>
   <div></div>
