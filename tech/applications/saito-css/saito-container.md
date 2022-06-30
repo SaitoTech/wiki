@@ -2,7 +2,7 @@
 title: saito-container
 description: saito-container
 published: true
-date: 2022-06-30T10:17:03.248Z
+date: 2022-06-30T10:21:29.804Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T03:20:34.640Z
@@ -41,5 +41,5 @@ The CSS contains definitions for both the element in the hierarchy and the style
 
 PlEASE NOTE: as the base-layer component in the Saito CSS design, this DIV element will be added *automatically* by any module that inherits from Saito's ```/lib/templates/modtemplate.js``` class when the ```render(app, mod)``` function in the parent class is called. You should call ```super.render(app, mod)``` before you begin manipulating the DOM.
 
-If you wish to skip ```saito-container``` being added to the DOM, you should avoid calling ```super.render(app, mod)``` within your module.
+To skip ```saito-container``` being added to the DOM, do not call ```super.render(app, mod)``` within your module.
 
