@@ -2,7 +2,7 @@
 title: Saito Backdrop
 description: 
 published: true
-date: 2022-06-30T07:24:41.086Z
+date: 2022-06-30T08:23:00.092Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-30T07:24:41.086Z
@@ -11,7 +11,7 @@ dateCreated: 2022-06-30T07:24:41.086Z
 # Saito Backdrop
 
 
-The ```saito-backdrop``` class is used in concert with the ``` saito-overlay``` class to display necessary information or act as a prompt to a user of a Saito application.
+The ```saito-backdrop``` class is used with the ``` saito-overlay``` class when used as a modal.
 
 **DEFAULT** :
 
