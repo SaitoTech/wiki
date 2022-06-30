@@ -2,7 +2,7 @@
 title: Saito CSS
 description: Saito CSS Design
 published: true
-date: 2022-06-30T07:22:29.421Z
+date: 2022-06-30T10:14:12.285Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T02:53:29.274Z
@@ -10,7 +10,9 @@ dateCreated: 2022-06-29T02:53:29.274Z
 
 # Saito CSS
 
-It is possible to build applications without using Saito default UI Components. In this case, developers may still be interested in using the existing Saito CSS classes. This page provides information on the core classes and explains their internal / expected structures.
+The Saito Module Development environment proivdes optional pre-build UI commponents and styling.
+
+This page provides information on the core classes and explains their internal / expected structures.
 
 ### Important Classes
 
