@@ -2,7 +2,7 @@
 title: Mac Installation Instructions
 description: Installation Instructions -  Mac
 published: true
-date: 2022-03-28T08:22:16.987Z
+date: 2022-07-08T00:59:58.232Z
 tags: mac saito installation
 editor: markdown
 dateCreated: 2022-03-28T07:51:17.517Z
@@ -16,13 +16,14 @@ This page contains instructions on how to download and install the NodeJS javasc
 
 * OS: macOs 
 * Build tools: git, node
+* Dependencies: pyenv, pre-node-gyp
 
 
 #### 1. Install Dependencies
 
 ```
 brew update
-brew install node git python
+brew install node git python pyenv
 
 ```
 
@@ -37,7 +38,7 @@ sudo npm install -g typescript
 npm install
 ```
 
-
+NOTE: if you run into problems installing the dependencies and particularly if sqlite3 installation fails your base installation may lack ```pyenv``` or ```node-pre-gyp```. Please confirm you have installed the former as above, and try forcing a global installation of node-pre-gyp with ```npm install node-pre-gyp -g```. Then try ```npm install``` again. This [stackoverflow article](https://stackoverflow.com/questions/70098133/npm-error-cant-find-python-executable-in-macos-big-sur) may help.
 
 
 #### 3. Compile and Run Saito
