@@ -2,7 +2,7 @@
 title: Mac Installation Instructions
 description: Installation Instructions -  Mac
 published: true
-date: 2022-07-08T00:59:58.232Z
+date: 2022-07-08T01:06:09.634Z
 tags: mac saito installation
 editor: markdown
 dateCreated: 2022-03-28T07:51:17.517Z
@@ -16,8 +16,6 @@ This page contains instructions on how to download and install the NodeJS javasc
 
 * OS: macOs 
 * Build tools: git, node
-* Dependencies: pyenv, pre-node-gyp
-
 
 #### 1. Install Dependencies
 
