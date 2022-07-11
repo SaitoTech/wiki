@@ -2,7 +2,7 @@
 title: Tokenomics
 description: 
 published: true
-date: 2022-03-24T07:00:11.362Z
+date: 2022-07-11T05:08:39.457Z
 tags: getting started
 editor: markdown
 dateCreated: 2022-02-07T01:51:31.603Z
@@ -33,4 +33,6 @@ Saito is also supported by a growing number of centralized exchanges:
 
  - [BigOne](big.one)
  - [Gate.io](https://gate.io)
+ 
+ <script src="https://crypto.com/price/static/widget/index.js"></script> <div id="crypto-widget-CoinList" data-design="modern" data-coin-ids="4112"></div>
 
