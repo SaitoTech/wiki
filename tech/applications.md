@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2022-06-29T02:50:35.978Z
+date: 2022-07-14T06:53:03.360Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -10,7 +10,7 @@ dateCreated: 2022-01-07T07:06:32.790Z
 
 # Saito Applications
 
-A Saito application is a module that installs into the user wallet that is running in the browser and interacts with the wallet in some capacity. Applications can use on-chain and off-chain messages to communicate and can take control of the interface. They can also plug into other applications and even modify core functionality.
+A Saito application is a module that installs into the user wallet. Applications can use on-chain and off-chain messages to communicate with each other. They can also plug into other applications and even modify core functionality.
 
 If you are getting started programming on Saito, a good place to start is our [tutorial series](/tech/tutorials) for new developers, which goes over the basics of how to build a simple application. Our Github repository also has a directory full of [reference modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) you can modify or consult if you are curious how the existing applications work.
 
