@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2022-07-18T03:28:15.279Z
+date: 2022-07-18T03:29:13.902Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -20,7 +20,7 @@ The following documentation may be useful for those doing more advanced developm
 * Saito comes with an extensive set of UIComponents and Templates that can be used to create applications with headers, sidebars, user-boxes and games and invites and much more. This section explains how to use existing components in your applications.
 
 ### [CSS Design](/tech/applications/saito-css)
-* Saito comes with a default set of CSS classes that creates the colorful and dynamic design aesthetic behind the core applications on the site. While developers can always create their own CSS designs, this section covers the main classes used in the Saito CSS design for those interested in exploring and remixing our approach to visual design.
+* Saito comes with a default set of CSS classes that creates the colorful aesthetic behind our core applications. While developers can always create their own CSS designs, you can extend the core classes in our Saito CSS design for a faster path to having your module look good everywhere.
 
 
 ### [Module API](/tech/applications/module-api)
