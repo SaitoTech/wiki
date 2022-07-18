@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2022-07-14T06:53:03.360Z
+date: 2022-07-18T03:28:15.279Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -10,14 +10,14 @@ dateCreated: 2022-01-07T07:06:32.790Z
 
 # Saito Applications
 
-A Saito application is a module that installs into the user wallet. Applications can use on-chain and off-chain messages to communicate with each other. They can also plug into other applications and even modify core functionality.
+Saito application are modules that get installed into the wallet. Applications use on-chain and off-chain messages to communicate and can plug into other applications.
 
-If you are getting started programming on Saito, a good place to start is our [tutorial series](/tech/tutorials) for new developers, which goes over the basics of how to build a simple application. Our Github repository also has a directory full of [reference modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) you can modify or consult if you are curious how the existing applications work.
+If you are getting started programming on Saito, a good place to start is our [tutorial series](/tech/tutorials) for new developers. Our Github repository also has a directory full of [reference modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) you can modify or consult if you are curious how the existing applications work.
 
 The following documentation may be useful for those doing more advanced development. The **Module API** explains what functions you can include in your module. The **Events API** explain how to listen and respond when system-wide events occur (like a new block being found). The **Services API*** explains how peers can inform other peers of value-added services they are running.
 
-### [UI Components](/tech/applications/ui-components)
-* Saito comes with an extensive set of UIComponents that can be used to create applications with headers, sidebars, lists of users and games and much more. This section explains how to use existing components build new components for use in your and other applications.
+### [UI Components and Templates](/tech/applications/ui-components)
+* Saito comes with an extensive set of UIComponents and Templates that can be used to create applications with headers, sidebars, user-boxes and games and invites and much more. This section explains how to use existing components in your applications.
 
 ### [CSS Design](/tech/applications/saito-css)
 * Saito comes with a default set of CSS classes that creates the colorful and dynamic design aesthetic behind the core applications on the site. While developers can always create their own CSS designs, this section covers the main classes used in the Saito CSS design for those interested in exploring and remixing our approach to visual design.
