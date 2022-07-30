@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2022-07-30T05:38:35.000Z
+date: 2022-07-30T05:44:25.144Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -10,7 +10,7 @@ dateCreated: 2022-02-17T10:09:00.217Z
 
 # Saito Consensus
 
-This page offers a straight-forward description of how Saito Consensus works. We have separate pages explaining how this approach solves various [attack vectors](/consensus/attack-vectors), a brief [math paper](/consensus/math) demonstrating cost-of-attack properties and [open proposals](/consensus/proposals) on technical implementation. You may also be interested in the [economic problems](/consensus/economics) Saito Consensus solves and [critical videos](/consensus/videos) covering the mechanism.
+This page offers a straight-forward description of how Saito Consensus works. We have separate pages explaining how Saito eliminates common [attack vectors](/consensus/attack-vectors), a brief [math paper](/consensus/math) demonstrating cost-of-attack properties and [open proposals](/consensus/proposals) on technical implementation. You may also be interested in the [economic problems](/consensus/economics) Saito Consensus solves and [critical videos](/consensus/videos) covering the mechanism.
 
 ## 1. PRUNING THE BLOCKCHAIN
 
@@ -22,9 +22,11 @@ Block producers rebroadcast UTXO slips by creating special "automatic transactio
 
 ## 2. PRODUCING BLOCKS
 
-Saito adds cryptographic signatures to transactions. When users make a transaction they sign the core data and then add a separate routing signature that specifies the node to which they are forwarding their transaction. When users send their transactions to different nodes they create variant transactions with the same core but with different routing signatures. As nodes receive and forward transactions they add their own signatures to these chains. As a result, each transaction gains an unforgeable record of the path it has taken into the network: the same transaction in different mempools will have the same core but a different set of routing signatures.
+Saito adds cryptographic signatures to transactions. When users make transactions they sign the core data and then add a separate routing signature that specifies the node to which they are forwarding their transaction. Should users send their transactions to two different nodes they thus create variant "transaction-bunles" which have the same core data but different routing paths. As nodes receive and forward transactions they add their own signatures to these chains, giving all transactions an unforgeable record of the path they have taken into the network. This dynamic means that the same transaction in different mempools will have the same core data but a different set of routing signatures.
 
-The blockchain sets a "difficulty" for block production. This difficulty is met by producing a block that contains enough "routing work". The amount of "work" any transaction contributes to this figure is the value of its transaction fee halved with each additional hop beyond the first that the transaction has taken into the network. The usefulness of transactions for producing blocks thus falls as their routing path grows. Transactions provide no "routing work" to nodes that are not contained in their routing paths.
+The blockchain now sets a "difficulty" for block production that can be met by producing a block that contains enough "routing work". The amount of "routing work" in any block is the aggregate of the "routing work" contained in the transactions that the block producer includes in the block. The amount of "routing ork" in any transaction is the value of its transaction fee halved with each additional hop beyond the first that the transaction has taken into the network.
+
+The usefulness of transactions for producing blocks falls as their routing path grows. And transactions provide no "routing work" to nodes that are not contained in their routing paths. Block production difficulty in Saito Consensus consequently reflects the difficulty of collecting fees (efficiently) from network users and sharing them with other peers on the network.
 
 Once the block is produced all of the fees in the block are burned. Honest nodes thus make blocks free-of-charge using transactions which have been routed to them. Attackers must spend (and burn) their own money to produce blocks.
 
