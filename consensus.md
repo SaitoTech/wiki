@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2022-04-05T03:40:35.654Z
+date: 2022-07-30T05:38:35.000Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -10,7 +10,7 @@ dateCreated: 2022-02-17T10:09:00.217Z
 
 # Saito Consensus
 
-This page offers a straight-forward description of how Saito Consensus works on the technical level. We have separate pages explaining how this approach solves various attack vectors as well as some advanced math demonstrating cost-of-attack properties. You may also be interested in our overview of the [economic problems](/consensus/economics) Saito Consensus solves or list of [critical videos](/consensus/videos) covering the mechanism.
+This page offers a straight-forward description of how Saito Consensus works. We have separate pages explaining how this approach solves various [attack vectors](/consensus/attack-vectors), a brief [math paper](/consensus/math) demonstrating cost-of-attack properties and [open proposals](/consensus/proposals) on technical implementation. You may also be interested in the [economic problems](/consensus/economics) Saito Consensus solves and [critical videos](/consensus/videos) covering the mechanism.
 
 ## 1. PRUNING THE BLOCKCHAIN
 
@@ -22,17 +22,17 @@ Block producers rebroadcast UTXO slips by creating special "automatic transactio
 
 ## 2. PRODUCING BLOCKS
 
-Saito adds cryptographic signatures to transactions. When users make a transaction their wallet signs the core transaction and then adds a separate routing signature that specifies which node is the recipient. If users send their transactions to multiple nodes they create variant versions of their transactions with the same core but with different routing information. The nodes in the network add similar routing signatures as they forward their received transactions. This gives each transaction an unforgeable record of the path it has taken into the network. The same transaction in two different mempools will consist of the same core-data but have a different set of routing signatures based on its unique path into that mempool.
+Saito adds cryptographic signatures to transactions. When users make a transaction they sign the core data and then add a separate routing signature that specifies the node to which they are forwarding their transaction. When users send their transactions to different nodes they create variant transactions with the same core but with different routing signatures. As nodes receive and forward transactions they add their own signatures to these chains. As a result, each transaction gains an unforgeable record of the path it has taken into the network: the same transaction in different mempools will have the same core but a different set of routing signatures.
 
-The blockchain now sets a "difficulty" for block production which is derived from a consensus value (burnfee). This difficulty is met by producing a block that contains enough "routing work" in its included transactions to surpass the requirements of the burnfee. The amount of "work" embedded in any transaction in Saito is the value of the transaction fee halved by each additional hop beyond the first that the transaction has taken into the network. This means that the value each transaction provides for producing blocks drops as the routing-path grows: interior nodes must compensate for the reduced value of each individual transaction by combining multiple inbound streams.
+The blockchain sets a "difficulty" for block production. This difficulty is met by producing a block that contains enough "routing work". The amount of "work" any transaction contributes to this figure is the value of its transaction fee halved with each additional hop beyond the first that the transaction has taken into the network. The usefulness of transactions for producing blocks thus falls as their routing path grows. Transactions provide no "routing work" to nodes that are not contained in their routing paths.
 
-Consensus rules specify that nodes cannot use "routing work" from transactions that do not include them on their routing path. And there is no payment for producing a block: when a block is produced all of the fees in the block are immediately burned. Honest nodes make blocks free-of-charge by using transactions which have been routed to them. Attackers must spend (and burn) their own money to produce blocks.
+Once the block is produced all of the fees in the block are burned. Honest nodes thus make blocks free-of-charge using transactions which have been routed to them. Attackers must spend (and burn) their own money to produce blocks.
 
 ## 3. THE PAYMENT LOTTERY
 
-Each block contains a proof-of-work challenge. When a block is produced miners on the network begin to hash to solve it. Should a miner find a solution they broadcast it into the network as part of a normal Saito transaction. We call this solution the "golden ticket". The golden ticket contains cryptographic information that links it to the previous block that it solves as well as the miner who found it.
+Each block contains a proof-of-work challenge. When a block is produced miners try to solve it. Should they find a solution they broadcast it into the network as part of a "golden ticket". The golden ticket is designed so that it cannot be forged or stolen in-transit.
 
-If a valid golden ticket is included in the very next block by its block producer the network will resurrect the burned block reward and distribute it as payments to network participants. Those new to Saito should remember that the payments issued in block N+1 are for the block reward which was burned in block N. The block reward for the new block containing our golden ticket will be burned exactly as the previous one was in turn.
+If a valid golden ticket is included in the next block, Saito will resurrect the burned block reward. The payments in block N+1 are thus for the block reward burned in block N. The block reward for block N+1 is then burned and the process is repeated.
 
 When a block is solved in block N+1, the payment for block N is the block reward from block N split between the miner that found the solution and a routing node selected using the random number associated with the winning hash. That random number is hashed to select a winning transaction in the block, with transactions weighted according to their share of fees in overall block. The random number is then hashed again to select a routing node from the list of nodes in the routing paths in that transaction. The chance that nodes in that path have of winning is weighted according to their individual share of routing work over the aggregate amount generated.\footnote[1]{If a transaction paying a 10 SAITO fee passes through two relay nodes before its inclusion in a block, the first relay node is deemed to have done 10 / 17.5 percent (57\%), the second node is deemed to have done 5 / 17.5 percent (29\%), and the block producer is deemed to have done 2.5 / 17.5 percent (14\%) of the routing work for that transaction. If a transaction is included without a routing path, the originator is assigned all of the work for that transaction.}
 
