@@ -2,7 +2,7 @@
 title: Module Conventions
 description: 
 published: true
-date: 2022-08-01T07:01:10.324Z
+date: 2022-08-01T07:05:41.657Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-01T07:01:10.324Z
@@ -59,7 +59,7 @@ Developers should note that while template files follow our standard of requirin
 
 Saito UI Components are UI Components. The difference is that while template files return HTML directly, UI components are objects which are created and then told to render themselves into the DOM.
 
-const SaitoSidebar = require(‘./lib/saito/new-ui/saito-sidebar/saito-sidebar’);
+```const SaitoSidebar = require(‘./lib/saito/new-ui/saito-sidebar/saito-sidebar’);```
 
 Most UI Components take a query-selector as the third argument to their render function which renders the component into the container specified:
 
