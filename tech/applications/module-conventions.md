@@ -2,7 +2,7 @@
 title: Module Conventions
 description: 
 published: true
-date: 2022-08-01T07:05:41.657Z
+date: 2022-08-01T07:13:05.716Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-01T07:01:10.324Z
@@ -118,16 +118,16 @@ Arcade can respond to requests to insert itself into an “appspace” panel. It
 
 
 ````
-redsquare/lib/main.js			   <---- renders into saito.io/redsquare
+redsquare/lib/main.js			              <---- renders into saito.io/redsquare
 
 
-/redsquare/lib/main.template.js		   <---- template file for main page
+/redsquare/lib/main.template.js		      <---- template file for main page
 
 
-/redsquare/lib/appspace/main.js	       <---- renders into ".appspace" 
-                                        <---- respondTo(“appspace”)
-                                        <---- expects DIV w/class “appspace"
-                                        <---- class “redsquare-appspace"
+/redsquare/lib/appspace/main.js	        <---- renders into ".appspace" 
+                                         <---- respondTo(“appspace”)
+                                         <---- expects DIV w/class “appspace"
+                                         <---- class “redsquare-appspace"
 
              
              
@@ -138,8 +138,8 @@ redsquare/lib/main.js			   <---- renders into saito.io/redsquare
                                            <---- class “redsquare-appspace-sidebar"
 
              
-/redsquare/lib/menu.js			        <---- component, does not render into anything
-					                          <---- class “redsquare-menu”
+/redsquare/lib/menu.js			               <---- component, does not render into anything
+					                                 <---- class “redsquare-menu”
 ````
 
 
