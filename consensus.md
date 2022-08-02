@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2022-08-02T02:50:49.053Z
+date: 2022-08-02T02:58:29.454Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -37,11 +37,11 @@ The "Classic Saito" design targets a difficulty where the network can produce an
 
 ## 3. INCREASING COST-OF-ATTACK
 
-Set mining difficulty to auto-adjust to target 1 golden ticket every 2 blocks. If 2 blocks are ever produced without a golden ticket, difficulty decreases slightly. If 2 blocks are produced with golden tickets in a row, difficulty increases slightly.
+Set mining difficulty to auto-adjust to target 1 golden ticket every 2 blocks. If 2 consecutive blocks are produced without a golden ticket, difficulty decreases slightly. If 2 consecutive blocks are produced with golden tickets, difficulty increases slightly.
 
-Once a golden ticket is included in block N, the payment to the miner and router for the preceding block N-1 is unmodified. If block N-1 did not contain a golden ticket, we recurse to block N-2 and hash our random variable again to select a winning routing node from block N-2. This routing node receives half of the payout from block N-2. The other half is collected by a "staking treasury" maintained by the consensus software. This process can be repeated for all previously unpaid blocks, although an upper limit to backwards recusion may be applied for practical purposes, and it is preferable for routers not to receive payouts beyond the two block point.
+Once a golden ticket is included in block N, the payment to the miner and router for the preceding block N-1 is unmodified. If block N-1 did not contain a golden ticket, we recurse to block N-2 and hash our random variable again to select a winning routing node from block N-2. This routing node receives half of the payout from block N-2. The other half is collected by a "staking treasury" maintained by the consensus software. This process can be repeated for all previously unpaid blocks, although an upper limit to backwards recusion may be applied for practical purposes, and it is preferable for routers not to receive payouts more than two blocks back.
 
-The funds in the stajking table are paid out to UXTO holders in the network during the course of ATR rebroadcasting (see below). Please see the technical document describing Saito's simpolified staking proposal for exact details on how this happens. We recommend readers are familiar with the ATR rebroadcasting mechanism first.
+There is no staking table. The funds in the staking treasury are paid to UXTO holders during the course of ATR processing (see below). We recommend readers become familiar with automatic transaction rebroadcasting before reading our [technical docs](https://github.com/SaitoTech/saito-implementation-proposals/blob/main/proposals/001_simplified_staking.md) covering ATR implementation details.
 
 ## 4. AUTOMATIC TRANSACTION REBROADCASTING (ATR)
 
