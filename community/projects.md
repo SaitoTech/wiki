@@ -2,7 +2,7 @@
 title: Saito and Community Projects
 description: All details related to saito and community projects can be found here
 published: true
-date: 2022-05-25T04:13:14.068Z
+date: 2022-08-08T03:06:18.426Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-25T00:44:11.924Z
@@ -50,7 +50,7 @@ Summary: Members of our community are working to build an on-chain Community For
 ## Saito Arcade Game Tutorials
 
 **Status**: Hiring Resources
-**How to get involved**: Contact Tucho via DiscordID XXXX
+**How to get involved**: Contact Duke via Telegram @The_Duk3 or Discord The1Duke
 **Project Board**: add github board
 Page link:
 
