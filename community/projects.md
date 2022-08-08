@@ -2,7 +2,7 @@
 title: Saito and Community Projects
 description: All details related to saito and community projects can be found here
 published: true
-date: 2022-08-08T03:06:18.426Z
+date: 2022-08-08T03:13:33.808Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-25T00:44:11.924Z
@@ -51,14 +51,14 @@ Summary: Members of our community are working to build an on-chain Community For
 
 **Status**: Hiring Resources
 **How to get involved**: Contact Duke via Telegram @The_Duk3 or Discord The1Duke
-**Project Board**: add github board
-Page link:
 
 Summary: Members of our community are working to build bite-size video tutorials for the games
+**Videos Created:**
 
-## P2P "Twitter"<a name="p2pTwitter"></a>
 
-**Status**: Suggestion, team building.
+## P2P Social Media: Red Square<a name="p2pTwitter"></a>
+
+**Status**: Ongoing development.
 **Participate**: Contact community@saito.io
 
 Summary: Build a peer to peer twitter like application on the Saito network.
