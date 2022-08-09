@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2022-08-02T02:58:29.454Z
+date: 2022-08-09T06:08:06.735Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -24,7 +24,7 @@ Once the block is produced all of the fees in the block are burned.
 
 ## 2. THE PAYMENT LOTTERY
 
-Each block contains a proof-of-work challenge. When a block is produced miners start hashing to find a solution. We call this solution the "golden ticket". The exqct mechanism is designed so that tickets cannot be forged or stolen in-transit.
+Each block contains a proof-of-work challenge. When a block is produced miners start hashing to find a solution. We call this solution the "golden ticket". The exact mechanism is designed so that tickets cannot be forged or stolen in-transit.
 
 If a valid golden ticket for block N is included in block N+1, Saito will resurrect the burned block reward from block N. The payments in block are thus for fees burned in the previous block. The process repeats block by block. Saito charges nodes (in burned fees) for the right to produce a block, and then charges them again (in hash) for the right to unburn the payouts from the previous block.
 
@@ -67,7 +67,7 @@ Possible adding requirements for block producers to provide stake (making tokens
 
 **Paysplit:** a variable between 0 and 1 that determines the percentage of the block reward that is allocated to mining nodes.
 
-**Powspit:** a variable between 0 and 1 that determines the target percentage of blocks solved through golden tickets.
+**Powsplit:** a variable between 0 and 1 that determines the target percentage of blocks solved through golden tickets.
 
 **Golden Ticket:** a transaction from a miner containing a valid solution to the computational lottery puzzle embodied in the previous block hash.
 
