@@ -76,7 +76,7 @@ If the attacker finds a golden ticket that pays one their own node they are paid
 
 $$ f \cdot Ps \cdot p $$ 
 
-But, the attacker is only getting the honest fees back, so for a single golden ticket solution the payout is the portion of fees that go to the routing reward $f\cdotPs& minus the fees the attacker put into the block $f\cdot p$:
+But, the attacker is only getting the honest fees back, so for a single golden ticket solution the payout is the portion of fees that go to the routing reward $f\cdot Ps\cdot p$ minus the fees the attacker put into the block $f\cdot p$:
 
 $$ f \cdot Ps \cdot p - f \cdot p $$ 
 
