@@ -2,7 +2,7 @@
 title: Attack Vectors
 description: how Saito is secure against common and uncommon attack vectors
 published: true
-date: 2022-04-26T13:44:06.368Z
+date: 2022-08-20T15:48:10.375Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-22T10:08:41.187Z
@@ -12,18 +12,18 @@ dateCreated: 2022-03-22T10:08:41.187Z
 Saito is secure against classes of attack which have no defense mechanisms in other chains. This page explains how these defense mechanisms work. Those interested in a mathematical overview of security may be interested in our [optimal attack reward](/consensus/math) calculations.
 
 ## 1. SYBIL ATTACKS
-A sybil attack involves using a cheap or free form of work to reduce the income of a network participant who is performing a more expensive form of income-earning work. Saito is secure against sybil attacks as the network's paid form of work involves fee collection. The only way to get paid more money (i.e. extract wealth) is to contribute more value to the network, and collect only a portion of it. Attackers must by definition transfer funds to other network participants in order to attack the chain.
+A sybil attack involves using a cheap or free form of work to undermine the income of a network participant who is performing a more expensive but essential network operation. Saito is secure against sybil attacks as the network's paid form of work is derived from fee collection and the only way to get paid more money (i.e. extract wealth) is to collect more money for the network and then collect only a portion of it in return.
 
-It is possible to identify network-layer sybils in Saito by examining the transaction-embedded routing paths. This ability to recognize sybils (who occupy intermediate positions in the routing network and consume more in value than they contribute to their peers) and makes Saito distinct from other blockchains, which lack the information to identify which nodes in their routing network are providing real value.
+Fortuitously, the cryptographic signatures Saito introduces to measure fee collection in its distributed network makes it possible to identify network-layer sybils. This can be done by examining the transaction-embedded routing paths and looking for nodes which occupy intermediate positions in the routing network and consume more in value than they contribute to their peers.
 
-As every hop in a routing path lowers the profitability of every single node on that path, there is a strong incentive for all nodes to purge sybils from their routing paths. This is particularly the case for nodes on the inside of a sybil which experience an immediate fifty-percent drop in profitability. Nodes which fail to monitor local routing conditions and get sybilled will be less profitable than their peers, unable to compete effectively, and forced off the network through organic economic competition.
+As every hop in a routing path lowers the profitability of every single node on that path, there is a strong incentive for all nodes to purge sybils from their routing paths. Block producers who permit sybils to form in the routing paths feeding them routing work experience an immediate 50 percent drop in their ability to produce blocks and collect payment. But even exterior notes which direct transaction flow to low-value sybils will be less profitable than their peers, and forced off the network through organic economic competition. Why should their users pay twice the fee to compensate for the extra and unnecessary hop?
 
-Nodes may easily route around sybils by connecting to their remote peers, using the blockchain to communicate with distant peers as necessary.
+Readers who believe that sybils may prevent communications between nodes are reminded that the blockchain can serve as a tool to communicate with distant peers as necessary.
 
 ## 2. TRANSACTION HOARDING
 All blockchains which give transaction fees directly to the nodes that produce blocks are vulnerable to transaction-hoarding attacks.
 
-In these attacks, block producers who pay to collect transactions refuse to share those transactions with their peers lest those peers "free-ride" on their work and gain market share at their expanse. This problem emerges slowly as blockchains scale and the block reward falls. Hoarding creates many secondary problems. XThin-style fast block propagation techniques become unworkable, while users looking for fast confirmations now have incentives to direct their transactions to the largest and more profitable block producers, unleashing self-fullfiling centralization pressures.
+In these attacks, block producers who pay to collect transactions refuse to share those transactions with their peers lest those peers "free-ride" on their work and gain market share at their expense. This problem emerges slowly as blockchains scale and the block reward falls. Hoarding creates many secondary problems. XThin-style fast block propagation techniques become unworkable, while users looking for fast confirmations now have incentives to direct their transactions to the largest and more profitable block producers, unleashing self-fullfiling centralization pressures.
 
 Saito is secure against transaction hoarding attacks. It achieves this by paying the nodes which collect transactions from users the largest share of the routing payment. Access nodes are incentivized to form at user-facing portions of the network - ensuring there will always be nodes willing to offer routing services offering competitive and efficient routing into the network. Those nodes provide topological defense against attackers deeper in the network. And users can always deal with attacks by re-routing their transactions to routing paths which are not complicit in attacks.
 
