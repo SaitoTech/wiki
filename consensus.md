@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2022-09-05T05:58:20.495Z
+date: 2022-09-05T06:01:51.804Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -22,12 +22,11 @@ Once the block is produced all of the fees in the block are burned. The fundamen
 
 ## 2. THE PAYMENT LOTTERY
 
-Each block contains a proof-of-work challenge. When a block is produced miners start hashing to find a solution that meets consensus-level difficulty criteria. This puzzle and its solution is referred to as the "golden ticket mechanism". When a miner finds a solution they submit it to the network in the form of a transaction.
+Each block contains a proof-of-work challenge. When a block is produced miners start hashing to find a solution that meets consensus-level difficulty criteria. When a miner finds a solution they submit it to the network in the form of a "golden ticket" transaction.
 
+If a valid golden ticket for block N is included in block N+1, Saito resurrects the burned fees from block N and distributes them to participants in the network in UTXO attached to block N+1. This process repeats block by block: Saito charges participants (in tokens) for the right to produce a block, and then charges them again (in hash) to unburn those funds.
 
-If a valid golden ticket for block N is included in block N+1, Saito resurrects the burned fees from block N and distributes them to participants in the network. This process repeats block by block: Saito charges participants (in tokens) for the right to produce a block, and then charges them again (in hash) to unburn those funds.
-
-When funds are unburned half of the fees that are unlocked are issued to the miner which found the golden ticket and half are issued to a random routing node sourced from the routing paths in block N. To select a winner a random variable associated with the golden ticket's hash solution is used to select a transaction from block N, with each transaction's chance of winning weighted according to the share of fees it contributed to the previous block. Once a transaction is selected the same random number is then hashed again to select a routing node from the list of nodes in the winning transaction's routing path. These nodes are weighted according to their position in the routing path. If a transaction paying a 10 SAITO fee passes through two relay nodes before its inclusion in a block by the third routing node (i.e. block producer), the first relay node will have a 57\% change of winning (10 / 17.5), the second relay node will have a 29\% (5 / 17.5) chance of winning, while the block producer will have a 14\% (2.5 / 17.5) chance of winning. If a transaction has no routing path, the sender of the transaction is assigned 100\% of the routing work in that transaction.
+When funds are unburned half of the fees that are resurrected are issued to the miner which found the golden ticket and half are issued to a random routing node sourced from the transaction routing paths in block N. A random variable associated with the golden ticket's hash solution is used to select the lucky router, with each transaction's chance of winning weighted according to the share of fees it contributed to block N. Once a transaction is selected the same random number is then hashed again to select a routing node from the list of nodes in the lucky transaction's routing path. These nodes are weighted according to their position in the routing path. If a transaction paying a 10 SAITO fee passes through two relay nodes before its inclusion in a block by the third routing node (i.e. block producer), the first relay node will have a 57\% change of winning (10 / 17.5), the second relay node will have a 29\% (5 / 17.5) chance of winning, while the block producer will have a 14\% (2.5 / 17.5) chance of winning. If a transaction has no routing path, the sender of the transaction is assigned 100\% of the routing work in that transaction.
 
 This mechanism kills majoritarian and other economic attacks against consensus. The "Classic Saito" design targets a difficulty where the network can produce an adequate amount of golden tickets to recapture payments and is secure at the cost of deflation from unsolved blocks.
 
