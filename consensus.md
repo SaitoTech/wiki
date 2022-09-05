@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2022-08-09T06:08:06.735Z
+date: 2022-09-05T06:07:01.577Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -14,13 +14,11 @@ This page offers a straight-forward description of how Saito Consensus works. We
 
 ## 1. PRODUCING BLOCKS
 
-Saito adds cryptographic routing signatures to transactions. When users send their transactions into the network they add a routing signature that specifies the node to which they are sending their transaction. Nodes add similar routing signatures as they receive and forward these transactions. This gives all transactions an unforgeable record of the path the transaction has taken into the network. The same transaction in different mempools will have the same core transaction data but a different set of routing signatures.
+Saito adds cryptographic routing signatures to transactions. When users send transactions into the network they add a routing signature that specifies the first-hop node(s) to which they are sending their transaction(s). Nodes add similar routing signatures as they forward these transactions. The same transaction sitting in different mempools will have the same core transaction data with a different set of routing signatures.
 
-The blockchain now sets a "difficulty" for block production that can be met only by producing a block that contains enough "routing work". The amount of "routing work" in any block is the aggregate of the "routing work" in the transactions in the block. The amount of "routing work" in any transaction is the value of its transaction fee halved with each additional hop beyond the first that the transaction has taken into the network.
+The blockchain now sets a "difficulty" for block production that can be met by producing a block with enough block-level routing work. This is the sum of the "routing work" contained in each individual transaction in the block, which is the value of its transaction fee halved with each additional hop beyond the first that the transaction has taken to reach the block producer. Transactions provide no "routing work" to nodes that are not in their routing path.
 
-Block production difficulty in Saito Consensus consequently reflects the difficulty of collecting fees (efficiently) from network users and sharing them with other peers on the network. In order to prevent nodes from stealing routing work from their peers, we specify that transactions provide no "routing work" to block producers who are not in their routing path.
-
-Once the block is produced all of the fees in the block are burned.
+Once the block is produced all of the fees in the block are burned. The fundamental problem Saito solves is how to resurrect this fee and distribute it to value-producing nodes in the network without enabling circular fee-recycling attacks such as are possible in all proof-of-work and proof-of-stake class consensus mechanisms.
 
 ## 2. THE PAYMENT LOTTERY
 
@@ -32,18 +30,24 @@ When any block contains a golden ticket, the winner of the payout is a routing n
 
 These nodes are weighted according to their individual share of the aggregate amount of routing work generated. If a transaction paying a 10 SAITO fee passes through two relay nodes before its inclusion in a block by the third routing node (i.e. block producer), the first relay node will have 10 / 17.5 percent (57%) of aggregate routing work, the second will have 5 / 17.5 percent (29%) of the aggregate routing work, and the block producer will have 2.5 / 17.5 percent (14%) of the routing work in that transaction. If a transaction has no routing path, the sender of the transaction is assigned 100% of the routing work in that transaction.
 
-In the event that the block reward is seriously in excess of a smoothed average maintained by consensus (current target 1.25), the payment for both miner and router is reduced proportionally and the excess portion is burned for good. This ensures there are no theoretical situations in which attackers can recapture more money from the payments lottery than they are forced to contribute in attacking the network.
+When funds are unburned half of the fees that are resurrected are issued to the miner which found the golden ticket and half are issued to a random routing node sourced from the transaction routing paths in block N. A random variable associated with the golden ticket's hash solution is used to select the lucky router, with each transaction's chance of winning weighted according to the share of fees it contributed to block N. Once a transaction is selected the same random number is then hashed again to select a routing node from the list of nodes in the lucky transaction's routing path. These nodes are weighted according to their position in the routing path. If a transaction paying a 10 SAITO fee passes through two relay nodes before its inclusion in a block by the third routing node (i.e. block producer), the first relay node will have a 57\% change of winning (10 / 17.5), the second relay node will have a 29\% (5 / 17.5) chance of winning, while the block producer will have a 14\% (2.5 / 17.5) chance of winning. If a transaction has no routing path, the sender of the transaction is assigned 100\% of the routing work in that transaction.
 
-The "Classic Saito" design targets a difficulty where the network can produce an adequate amount of golden tickets to recapture payments. The network is secure at the cost of deflation from unsolved blocks.
+This mechanism kills majoritarian and other economic attacks against consensus. The "Classic Saito" design targets a difficulty where the network can produce an adequate amount of golden tickets to recapture payments and is secure at the cost of deflation from unsolved blocks.
 
 
 ## 3. INCREASING COST-OF-ATTACK
 
-Set mining difficulty to auto-adjust to target 1 golden ticket every 2 blocks. If 2 consecutive blocks are produced without a golden ticket, difficulty decreases slightly. If 2 consecutive blocks are produced with golden tickets, difficulty increases slightly.
+It is possible to increase cost-of-attack against Saito Consensus such that the expense of attacking the network is well above 100% of the fee throughput of the network. This is a striking feature of Saito Consensus and differentiates it from other mechanisms where cost-of-attack is capped at 51% of fee throughput and for-profit attacks on consensus are always possible through collusion among participants.
 
-Once a golden ticket is included in block N, the payment to the miner and router for the preceding block N-1 is unmodified. If block N-1 did not contain a golden ticket, we recurse to block N-2 and hash our random variable again to select a winning routing node from block N-2. This routing node receives half of the payout from block N-2. The other half is collected by a "staking treasury" maintained by the consensus software. This process can be repeated for all previously unpaid blocks, although an upper limit to backwards recusion may be applied for practical purposes, and it is preferable for routers not to receive payouts more than two blocks back.
+One way to increase security is to maintain a smoothed average of the fees included in each block. In the event that the block reward is seriously in excess of this smoothed average (current target 1.25) the payment for both miner and router is reduced proportionally and the excess portion is burned for good. This ensures there are no theoretical situations in which attackers can recapture more money from the payments lottery than they are forced to contribute in attacking the network.
 
-There is no staking table. The funds in the staking treasury are paid to UXTO holders during the course of ATR processing (see below). We recommend readers become familiar with automatic transaction rebroadcasting before reading our [technical docs](https://github.com/SaitoTech/saito-implementation-proposals/blob/main/proposals/001_simplified_staking.md) covering ATR implementation details.
+A more sophisticated improvement comes from adjusting mining difficulty to target 1 golden ticket every 2 blocks. If 2 consecutive blocks are produced without a golden ticket, difficulty decreases slightly. If 2 consecutive blocks are produced with golden tickets, difficulty increases slightly. The same effect can also be achieved by permitting multiple golden tickets in blocks although working out the details here is left as an exercise for the reader.
+
+Once a golden ticket is included in block N+1, the process for issuing a payment to the miner and router from the preceding block N is unmodified. If block N did not contain a golden ticket, we now recurse to block N-1 and divide the payment from block N-1 between a random routing node and a "staking treasury" maintained as a consensus-level variable. The process of selecting the winning routing node is the same as that described above. And this process can be repeated for all previously unpaid blocks, although an upper limit to backwards recusion may be applied for practical purposes. It is also preferable for routers not to receive payouts more than two blocks back: if those payments are issued they should be redirected into the staking treasury.
+
+Rather than maintain a staking table (management of which opens symmetrical attacks discouragement on the staking/closure mechanism), Saito distributes the funds in its staking treasury to all UXTO holders in the network during the course of ATR processing (see below). We recommend readers become familiar with automatic transaction rebroadcasting before reading our [technical docs](https://github.com/SaitoTech/saito-implementation-proposals/blob/main/proposals/001_simplified_staking.md) covering ATR implementation details.
+
+These changes drive cost-of-attack well above 100% of fee throughput in all situations except those where attackers control 100% of staking payouts, which is effectively impossible given the fact that every UTXO in the network is staking by default.
 
 ## 4. AUTOMATIC TRANSACTION REBROADCASTING (ATR)
 
