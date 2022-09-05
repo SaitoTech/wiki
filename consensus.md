@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2022-09-05T06:01:51.804Z
+date: 2022-09-05T06:07:01.577Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -39,9 +39,9 @@ One way to increase security is to maintain a smoothed average of the fees inclu
 
 A more sophisticated improvement comes from adjusting mining difficulty to target 1 golden ticket every 2 blocks. If 2 consecutive blocks are produced without a golden ticket, difficulty decreases slightly. If 2 consecutive blocks are produced with golden tickets, difficulty increases slightly. The same effect can also be achieved by permitting multiple golden tickets in blocks although working out the details here is left as an exercise for the reader.
 
-Once a golden ticket is included in block N+1, the process for issuing a payment to the miner and router from the preceding block N is unmodified. If block N did not contain a golden ticket, we now recurse to block N-1 and divide the payment from block N-1 between a random routing node and a "staking treasury" maintained as a consensus-level variable. The process of selecting the winning routing node is the same as that described above. And this process can be repeated for all previously unpaid blocks, although an upper limit to backwards recusion may be applied for practical purposes. It is preferable for routers not to receive payouts more than two blocks back.
+Once a golden ticket is included in block N+1, the process for issuing a payment to the miner and router from the preceding block N is unmodified. If block N did not contain a golden ticket, we now recurse to block N-1 and divide the payment from block N-1 between a random routing node and a "staking treasury" maintained as a consensus-level variable. The process of selecting the winning routing node is the same as that described above. And this process can be repeated for all previously unpaid blocks, although an upper limit to backwards recusion may be applied for practical purposes. It is also preferable for routers not to receive payouts more than two blocks back: if those payments are issued they should be redirected into the staking treasury.
 
-Rather than maintain a staking table (which adds symmetrical attacks on the staking/closure mechanism), Saito distributes the funds in the staking treasury to UXTO holders during the course of ATR processing (see below). We recommend readers become familiar with automatic transaction rebroadcasting before reading our [technical docs](https://github.com/SaitoTech/saito-implementation-proposals/blob/main/proposals/001_simplified_staking.md) covering ATR implementation details.
+Rather than maintain a staking table (management of which opens symmetrical attacks discouragement on the staking/closure mechanism), Saito distributes the funds in its staking treasury to all UXTO holders in the network during the course of ATR processing (see below). We recommend readers become familiar with automatic transaction rebroadcasting before reading our [technical docs](https://github.com/SaitoTech/saito-implementation-proposals/blob/main/proposals/001_simplified_staking.md) covering ATR implementation details.
 
 These changes drive cost-of-attack well above 100% of fee throughput in all situations except those where attackers control 100% of staking payouts, which is effectively impossible given the fact that every UTXO in the network is staking by default.
 
