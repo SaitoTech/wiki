@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2022-09-05T05:50:43.140Z
+date: 2022-09-05T05:58:20.495Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -16,13 +16,14 @@ This page offers a straight-forward description of how Saito Consensus works. We
 
 Saito adds cryptographic routing signatures to transactions. When users send transactions into the network they add a routing signature that specifies the first-hop node(s) to which they are sending their transaction(s). Nodes add similar routing signatures as they forward these transactions. The same transaction sitting in different mempools will have the same core transaction data with a different set of routing signatures.
 
-The blockchain now sets a "difficulty" for block production that can be met by producing a block with enough block-level "routing work". This is the sum of the "routing work" in each individual transaction, which is the value of the transaction fee halved with each additional hop beyond the first that the transaction has taken to reach the block producer. Transactions provide no "routing work" to nodes that are not in their routing path.
+The blockchain now sets a "difficulty" for block production that can be met by producing a block with enough block-level routing work. This is the sum of the "routing work" contained in each individual transaction in the block, which is the value of its transaction fee halved with each additional hop beyond the first that the transaction has taken to reach the block producer. Transactions provide no "routing work" to nodes that are not in their routing path.
 
-Once the block is produced all of the fees in the block are burned.
+Once the block is produced all of the fees in the block are burned. The fundamental problem Saito solves is how to resurrect this fee and distribute it to value-producing nodes in the network without enabling circular fee-recycling attacks such as are possible in all proof-of-work and proof-of-stake class consensus mechanisms.
 
 ## 2. THE PAYMENT LOTTERY
 
-Each block contains a proof-of-work challenge. When a block is produced miners start hashing to find a solution that meets consensus-level difficulty criteria. This puzzle and its solution is referred to as the "golden ticket mechanism". The solution is submitted to the network in the form of a transaction which may be included in a subsequent block.
+Each block contains a proof-of-work challenge. When a block is produced miners start hashing to find a solution that meets consensus-level difficulty criteria. This puzzle and its solution is referred to as the "golden ticket mechanism". When a miner finds a solution they submit it to the network in the form of a transaction.
+
 
 If a valid golden ticket for block N is included in block N+1, Saito resurrects the burned fees from block N and distributes them to participants in the network. This process repeats block by block: Saito charges participants (in tokens) for the right to produce a block, and then charges them again (in hash) to unburn those funds.
 
