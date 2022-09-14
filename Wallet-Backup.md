@@ -2,7 +2,7 @@
 title: How to Backup and Restore your Saito Wallet
 description: A tutorial on how to backup and restore wallets
 published: true
-date: 2022-09-10T04:27:37.493Z
+date: 2022-09-14T00:31:23.224Z
 tags: turorial
 editor: markdown
 dateCreated: 2022-09-10T04:27:37.493Z
@@ -31,3 +31,5 @@ This method has the added benefit of backing up your associated wallets containi
 4) To restore your Wallet using your Private Key just click on the “Import Key” button on the top of the settings page and paste your private key.
 
 ![backup4.png](/backup4.png)
+
+**You should always make sure to store your private keys and backup files in secure locations. Wallets are non-custodial, which means only you have control over them; on the flip side there's no password recover, so make sure to take wallet security seriously.**
