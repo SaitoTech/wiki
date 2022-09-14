@@ -2,7 +2,7 @@
 title: How to Backup and Restore your Saito Wallet
 description: A tutorial on how to backup and restore wallets
 published: true
-date: 2022-09-14T00:31:23.224Z
+date: 2022-09-14T00:40:55.713Z
 tags: turorial
 editor: markdown
 dateCreated: 2022-09-10T04:27:37.493Z
