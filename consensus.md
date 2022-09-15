@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2022-09-15T08:12:32.325Z
+date: 2022-09-15T08:34:30.533Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -22,9 +22,9 @@ Once a block is produced all of the fees in the block are burned. One of the fun
 
 ## 2. THE PAYMENT LOTTERY
 
-Each block contains a proof-of-work challenge. When a block is produced miners start hashing to find a solution. We call this solution the "golden ticket". The exact mechanism is designed so that tickets cannot be forged or stolen in-transit.
+Each block contains a proof-of-work challenge. When a block is produced miners start hashing to find a solution. We call this solution the "golden ticket". The mechanism is designed so that tickets cannot be forged or stolen in-transit.
 
-If a valid golden ticket for block N is included in the next block, N+1, Saito will resurrect the burned block reward from block N as released payments from block N, with one part of the reward going to the miner, and the other to a routing node (chosen by lottery). The process repeats block by block. Saito charges nodes (in burned fees) for the right to produce a block, and then charges them again (in hash) for the right to unburn the payouts from the previous block. Even though an attacker can use their own money to produce the required fees to publish blocks, they cannot recover those funds without mining them in the next block. This prevents attackers from quickly building valid chains to outcompete the network, unless they give up all of the transaction fees in their chain, or they supply enough hashpower to outcompete the nodes building an honest chain.
+If a valid golden ticket for block N is included in the very next block, N+1, Saito resurrects the block reward from block N. These funds are split between the miner that found the solution and a random node in the routing network. This process repeats block by block as Saito charges nodes (in fees) for the right to produce blocks and then again (in hash) for the right to collect payments.
 
 When any block contains a golden ticket, the winner of the payout is a routing node chosen by a random variable from the golden ticket solution. That random number is used to select a winning transaction from the previous block, with all transactions weighted according to their share of fees in the previous block. The same number used to select the winning transaction is then hashed again to select a routing node from the list of nodes in the transaction routing path.
 
