@@ -2,7 +2,7 @@
 title: Community Chat Groups and Resources
 description: Community Chat Groups and Resources
 published: true
-date: 2022-06-02T06:54:36.002Z
+date: 2022-09-27T02:58:04.250Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-23T08:16:57.540Z
@@ -40,6 +40,7 @@ While we cannot take responsibility for the content in community-generated docum
 
 - [French - Saito Whitepaper](https://saito.tech/wp-content/uploads/2022/04/Whitepaper_Saito_FR_V1_2.pdf)
 - [Arabic – Saito Whitepaper](http://org.saito.tech/wp-content/uploads/2021/11/Saito_Arabic_Whitepaper_%D8%A7%D9%84%D9%88%D8%B1%D9%82%D8%A9_%D8%A7%D9%84%D8%A8%D9%8A%D8%B6%D8%A7%D8%A1_%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9_%D9%84_%D8%B3%D8%A7%D9%8A%D8%AA%D9%88.pdf)
+- [Polish - Saito Whitepaper](https://saito.tech/wp-content/uploads/2022/09/Whitepaper_Saito_PL_V1_0.pdf)
 
 
 **HOW TO HELP WITH CODING AND MECHANISM DESIGN:**
