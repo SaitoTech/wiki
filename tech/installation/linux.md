@@ -2,7 +2,7 @@
 title: Linux Install
 description: 
 published: true
-date: 2022-03-29T03:58:15.694Z
+date: 2022-10-07T07:45:25.805Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-28T14:26:56.904Z
@@ -19,11 +19,21 @@ dateCreated: 2022-03-28T14:26:56.904Z
 
 #### 1. Install Dependencies
 
+On Debian-based systems you can install dependencies this way:
+
 ```
 sudo apt-get update
 sudo apt-get install g++ make git python
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash
 sudo apt-get install -y nodejs
+```
+
+On CentOS you can use the following isntead:
+
+```
+curl -fsSL https://rpm.nodesource.com/setup_16.x | sudo bash -
+sudo yum install -y nodejs
+node --version
 ```
 
 #### 2. Download Saito
