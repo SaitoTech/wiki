@@ -66,7 +66,7 @@ The server can then be started by running `npm run dev`.
 
 ## Publishing Modules to the Network
 
-Publishing an application involves compressing it into a .zip file and publishing that zip file the network by attaching it to a special transactions. AppStores listening on the network monitor the blockchain for these types of transactions and when they see new applications elect to index or update  applications as they are published.
+Publishing an application involves compressing it into a .zip file and publishing that zip file the network by attaching it to a special transactions. AppStores listening on the network monitor the blockchain for these types of transactions and elect to index new applications or update existing ones as they are published.
 
 The easiest way to publish an application is to go into the application directory and compress the contents of that directory into a .zip file (`zip -r appname.zip .`). The AppStore module is bundled with most Saito Wallets. It creates a panel in the Dev application that will automatically create a Saito transaction with this format:
 
