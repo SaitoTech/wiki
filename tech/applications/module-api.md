@@ -25,7 +25,7 @@ The following standard describes the expected functionality available to javascr
 
 ## Module Filename Conventions
 
-Applications exist in standalone directories in the `/mods` directory. The name of the directory should be the lowercase, alphanumeric version of the application name without hyphens or spaces. The `Arcade` module should be installed at `/mods/arcade`. The `AppStore` module should be installed at `/mods/appstore`. 
+Applications exist in standalone directories in the `/mods` directory. The name of the directory should be the lowercase, alphanumeric version of the application name without hyphens or spaces. I.e. the `Arcade` module should be installed at `/mods/arcade`, and the `AppStore` module should be installed at `/mods/appstore`. 
 
 Within their directory, all applications share the same basic directory structure:
 
@@ -37,7 +37,7 @@ web/
 README.md.
 ```
 
-The only necessary file is the `appname.js` file, which should share its name with the parent directory. The main class for the `Encrypt` module is thus `/mods/encrypt/encrypt.js`. If additional files are needed they should be included in the `/src` or `lib` or `docs` directories.
+The only necessary file is the `appname.js` file, which should share its name with the parent directory. I.e. the main class for the `Encrypt` module is thus `/mods/encrypt/encrypt.js`. If additional files are needed they should be included in the `/src` or `lib` or `docs` directories.
 
 __lib/__
 Optional directory to place additional javascript files.
@@ -66,7 +66,7 @@ The server can then be started by running `npm run dev`.
 
 ## Publishing Modules to the Network
 
-Publishing an application involves compressing it into a .zip file and publishing that zip file the network by attaching it to a special transactions. AppStores listening on the network monitor the blockchain for these types of transactions and when they see new applications elect to index them applications (or update existing applications) as they are published.
+Publishing an application involves compressing it into a .zip file and publishing that zip file the network by attaching it to a special transactions. AppStores listening on the network monitor the blockchain for these types of transactions and when they see new applications elect to index or update  applications as they are published.
 
 The easiest way to publish an application is to go into the application directory and compress the contents of that directory into a .zip file (`zip -r appname.zip .`). The AppStore module is bundled with most Saito Wallets. It creates a panel in the Dev application that will automatically create a Saito transaction with this format:
 
