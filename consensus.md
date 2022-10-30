@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2022-09-15T08:34:30.533Z
+date: 2022-10-30T02:01:23.960Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -26,11 +26,9 @@ Each block contains a proof-of-work challenge. When a block is produced miners s
 
 If a valid golden ticket for block N is included in the very next block, N+1, Saito resurrects the block reward from block N. These funds are split between the miner that found the solution and a random node in the routing network. This process repeats block by block as Saito charges nodes (in fees) for the right to produce blocks and then again (in hash) for the right to collect payments.
 
-When any block contains a golden ticket, the winner of the payout is a routing node chosen by a random variable from the golden ticket solution. That random number is used to select a winning transaction from the previous block, with all transactions weighted according to their share of fees in the previous block. The same number used to select the winning transaction is then hashed again to select a routing node from the list of nodes in the transaction routing path.
+When any block contains a golden ticket, the winner of the routing payout is a routing node chosen by a random variable from the golden ticket solution. That random number is used to select a winning transaction from the previous block, with all transactions weighted according to their share of fees in the previous block. The same number used to select the winning transaction is then hashed again to select a routing node from the list of nodes in the transaction routing path.
 
 These nodes are weighted according to their individual share of the aggregate amount of routing work generated. If a transaction paying a 10 SAITO fee passes through two relay nodes before its inclusion in a block by the third routing node (i.e. block producer), the first relay node will have 10 / 17.5 percent (57%) of aggregate routing work, the second will have 5 / 17.5 percent (29%) of the aggregate routing work, and the block producer will have 2.5 / 17.5 percent (14%) of the routing work in that transaction. If a transaction has no routing path, the sender of the transaction is assigned 100% of the routing work in that transaction.
-
-When funds are unburned half of the fees that are resurrected are issued to the miner which found the golden ticket and half are issued to a random routing node sourced from the transaction routing paths in block N. A random variable associated with the golden ticket's hash solution is used to select the lucky router, with each transaction's chance of winning weighted according to the share of fees it contributed to block N. Once a transaction is selected the same random number is then hashed again to select a routing node from the list of nodes in the lucky transaction's routing path. These nodes are weighted according to their position in the routing path. If a transaction paying a 10 SAITO fee passes through two relay nodes before its inclusion in a block by the third routing node (i.e. block producer), the first relay node will have a 57\% change of winning (10 / 17.5), the second relay node will have a 29\% (5 / 17.5) chance of winning, while the block producer will have a 14\% (2.5 / 17.5) chance of winning. If a transaction has no routing path, the sender of the transaction is assigned 100\% of the routing work in that transaction.
 
 This mechanism kills majoritarian and other economic attacks against consensus. The "Classic Saito" design targets a difficulty where the network can produce an adequate amount of golden tickets to recapture payments and is secure at the cost of deflation from unsolved blocks.
 
