@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2022-10-30T02:03:15.413Z
+date: 2022-10-30T02:14:46.262Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -24,13 +24,13 @@ Once a block is produced all of the fees in the block are burned. One of the fun
 
 Each block contains a proof-of-work challenge. When a block is produced miners start hashing to find a solution. We call this solution the "golden ticket". The mechanism is designed so that tickets cannot be forged or stolen in-transit.
 
-If a valid golden ticket for block N is included in the very next block, N+1, Saito resurrects the block reward from block N. These funds are split between the miner that found the solution and a random node in the routing network. This process repeats block by block as Saito charges nodes (in fees) for the right to produce blocks and then again (in hash) for the right to collect payments.
+If a valid golden ticket for block N is included in the very next block, N+1, Saito resurrects the burned block reward from block N. These resurrected funds are then split between the miner that found the solution and a random node in the routing network. We repeat this process block by block as Saito charges nodes (in burned fees) for the right to produce blocks and then again (in hash) for the right to unburn and distribute the payments.
 
-When any block contains a golden ticket, the winner of the routing payout is a routing node chosen by a random variable from the golden ticket solution. That random number is used to select a winning transaction from the previous block, with all transactions weighted according to their share of fees in the previous block. The same number used to select the winning transaction is then hashed again to select a routing node from the list of nodes in the transaction routing path.
+Choosing a winning routing node is done using a random number provided by the golden ticket. That random number is hashed first to select a transaction from the previous block with all transactions weighted according to their share of the total fees contributed to the block. The random number is then hashed again to select a routing node from the list of nodes in the winning transaction's routing path, with the chance of each node's success halving with each additional hop.
 
-These nodes are weighted according to their individual share of the aggregate amount of routing work generated. If a transaction paying a 10 SAITO fee passes through two relay nodes before its inclusion in a block by the third routing node (i.e. block producer), the first relay node will have 10 / 17.5 percent (57%) of aggregate routing work, the second will have 5 / 17.5 percent (29%) of the aggregate routing work, and the block producer will have 2.5 / 17.5 percent (14%) of the routing work in that transaction. If a transaction has no routing path, the sender of the transaction is assigned 100% of the routing work in that transaction.
+If a transaction paying a 10 SAITO fee passes through two relay nodes before its inclusion in a block by a third routing node (i.e. block producer), the first relay node will have 10 / 17.5 percent (57%) of aggregate routing work, the second will have 5 / 17.5 percent (29%) of aggregate routing work, and the block producer will havea  2.5 / 17.5 percent (14%) share. If a transaction has no routing path, the sender of the transaction is assigned 100% of the routing work in that transaction.
 
-This mechanism kills majoritarian and other economic attacks against consensus. The "Classic Saito" design targets a difficulty where the network can produce an adequate amount of golden tickets to recapture payments and is secure at the cost of deflation from unsolved blocks.
+This mechanism kills majoritarian and other economic attacks. The "Classic Saito" design targets a difficulty where the network can produce an adequate amount of golden tickets to recapture payments and is secure at the cost of deflation from unsolved blocks.
 
 
 ## 3. INCREASING COST-OF-ATTACK
