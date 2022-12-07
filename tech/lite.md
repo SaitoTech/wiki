@@ -2,7 +2,7 @@
 title: Lite
 description: javascript and nodejs
 published: true
-date: 2022-12-07T07:42:58.514Z
+date: 2022-12-07T07:45:39.860Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-07T07:21:30.841Z
@@ -12,6 +12,6 @@ dateCreated: 2022-12-07T07:21:30.841Z
 
 Formatting and Structure
 
-* [HTML](./html)
-* [css](./css)
+* [HTML](./lite/html)
+* [css](./lite/css)
 * javascript
