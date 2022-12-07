@@ -2,7 +2,7 @@
 title: CSS Guidelines
 description: 
 published: true
-date: 2022-12-07T07:41:32.600Z
+date: 2022-12-07T13:10:38.469Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-07T07:41:32.600Z
@@ -13,6 +13,12 @@ dateCreated: 2022-12-07T07:41:32.600Z
 ## General Format
 
 Follow X standard
+
+* Preference shortand definitions where more than one parameter is set:
+  ```margin: 0 1rem;``` 
+  rather than 
+  ```margin-left: 1rem;```
+  ```margin-right: 1rem;```
 
 ## Saito Specifices
 
