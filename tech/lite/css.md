@@ -2,7 +2,7 @@
 title: CSS Guidelines
 description: 
 published: true
-date: 2022-12-07T13:10:38.469Z
+date: 2022-12-08T05:56:30.213Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-07T07:41:32.600Z
@@ -19,6 +19,8 @@ Follow X standard
   rather than 
   ```margin-left: 1rem;```
   ```margin-right: 1rem;```
+  
+* Use leading zeros on definitions. ```0.5rem``` not ```.5rem``` 
 
 ## Saito Specifices
 
