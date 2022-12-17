@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2022-05-04T09:48:57.587Z
+date: 2022-12-17T04:31:41.056Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -24,8 +24,15 @@ All pages are stored in markdown in our [Saito Wiki Github Repository](https://g
 ## [Saito Consensus](/consensus)
   Saito Consensus includes details on the consensus mechanism that Saito uses to power its blockchain network. It includes discussions of the incentive problems that Saito fixes and explains why solving them requires paying for fee-collection rather than other gameable forms of work like mining and staking. 
  
+## [Attack Vectors](/consensus/attack-vectors) 
+In cybersecurity, an attack vector is a method of achieving unauthorized network access to launch a cyber attack. Attack vectors allow cybercriminals to exploit system vulnerabilities to gain access to sensitive data, personally identifiable information (PII), and other valuable information accessible after a data breach.
+
+Saito is secure against classes of attack which have no defense mechanisms in other chains. This page explains how these mechanisms work
+  
+ 
 ## [Saito Community](/community) 
   Our community section includes links to our Telegram and Discord channels, non-English community resources, and information on community-led projects and ways to help the network. We also have information on some ongoing public development efforts and ways you can help out.
+ 
 
 ## [Saito Documentation](/tech)
   This section is for developers. It includes instructions on installing Saito, API guides and reference materials for those interested in building applications on the network, as well as more detailed explanations of the network architecture.
