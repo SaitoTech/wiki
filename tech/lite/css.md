@@ -2,7 +2,7 @@
 title: CSS Guidelines
 description: 
 published: true
-date: 2022-12-20T01:51:33.839Z
+date: 2022-12-20T02:53:44.079Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-07T07:41:32.600Z
@@ -47,17 +47,60 @@ Follow X standard
 ## Reusable Components
 
 #### Saito Overlay
-The Saito overlay is a container for arbitray content. It:
+Saito overlay is a container for arbitray content. It:
+
+```
+<div class="saito-overlay">
+    Content
+<div class="saito-overlay-backdrop"></div>
+```
+
 * placed the content centered in the page
 * surronds the contend with a dark backdrop (that closes on click)
 * a close "x" at the top right corner of the content.
 
 #### Saito Modal
-The Saito Modal provides a standard backdrop (dreamscape) for a variety of modal forms.
+Saito Modal provides a standard backdrop (dreamscape) for a variety of modal forms.
 
 Example - Saito Modal Menu
+```
+<div class="saito-modal">
+    <h6>Saito Menu</h6>
+    <div class="saito-modal-content">
+        <div id="user_menu_item_0" class="saito-modal-menu-option">
+            <i class="far fa-id-card"></i> (icon)
+            <div>Add Contact</div>         (text)
+        </div>
+        ... (further menu entries)
+    </div>
+</div>
+```
 
+**"saito-modal"** provides the centered div with padding and the dreamscape background.
+**"saito-modal-menu-option"** spaces an icon-text pair and handles cursor look and feel
+
+*TODO: Add further modal types.
 
 #### Saito Module
+Saito Module provides a dynamic (auto responsive) card for showing modules in lists or grids. Examples are game invites or Appstore cards
 
+```
+<div class="saito-module saito-game">
+    <div class="saito-module-titlebar">
+        <span class="saito-module-titlebar-title">Twilight Struggle</span>
+        <div class="saito-module-titlebar-details game-type">CUSTOM GAME</div>
+    </div>
+    <div class="saito-module-details saito-game-identicons">
+        <div class="tip">
+            <img class="saito-module-identicon saito-identicon">
+            <div class="tiptext">
+                <div class="saito-address">kris088Chess@saito</div>
+            </div>
+        </div>
+    </div>
+</div>
+```
 
+**"saito-module"** provides the flexible card
+**"saito-module-titlebar"** provides theming for a stanard Title/Subtitle
+**"saito-module-details"** is flexible space that can house arbitrary HTML. This could be identicons in the invite as per the example but could also be buttons or controls (as in an "intsall" button in appstore).
