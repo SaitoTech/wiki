@@ -2,7 +2,7 @@
 title: CSS Guidelines
 description: 
 published: true
-date: 2022-12-20T03:47:38.179Z
+date: 2022-12-20T04:23:18.531Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-07T07:41:32.600Z
