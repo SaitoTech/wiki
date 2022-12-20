@@ -2,7 +2,7 @@
 title: CSS Guidelines
 description: 
 published: true
-date: 2022-12-20T02:53:44.079Z
+date: 2022-12-20T03:36:08.008Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-07T07:41:32.600Z
@@ -81,8 +81,19 @@ Example - Saito Modal Menu
 
 *TODO: Add further modal types.
 
+#### Saito Table
+Satio Table provides a standard formated table.
+
+Example - Rankings
+
+
+
+
+
 #### Saito Module
 Saito Module provides a dynamic (auto responsive) card for showing modules in lists or grids. Examples are game invites or Appstore cards
+
+Example - Saito Game Invite
 
 ```
 <div class="saito-module saito-game">
