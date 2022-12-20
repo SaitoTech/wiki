@@ -2,7 +2,7 @@
 title: CSS Guidelines
 description: 
 published: true
-date: 2022-12-20T03:41:50.678Z
+date: 2022-12-20T03:47:38.179Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-07T07:41:32.600Z
@@ -25,7 +25,8 @@ Follow X standard
 * Use leading zeros on definitions. ```0.5rem``` not ```.5rem``` 
 * Put spaces after ```:``` in property declarations.
 * Put spaces before ```{``` in rule declarations.
-* Use hex color codes ```#000``` avoid ```rgba()``` and never use color names - i.e. ```whitesmoke```.
+* Use hex color codes ```#000``` avoid ```rgba()``` and never use color names - i.e. ```whitesmoke```. \
+Note use of color varliables below.
 * Use one line per property declaration.
 * Always follow a rule with one line of whitespace.
 
