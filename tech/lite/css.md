@@ -2,7 +2,7 @@
 title: CSS Guidelines
 description: 
 published: true
-date: 2022-12-20T03:36:08.008Z
+date: 2022-12-20T03:41:50.678Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-07T07:41:32.600Z
@@ -85,9 +85,22 @@ Example - Saito Modal Menu
 Satio Table provides a standard formated table.
 
 Example - Rankings
-
-
-
+```
+<div class="saito-table">
+    <div class="saito-table-head"></div> (unused in this case)
+    <div class="saito-table-body">
+	      <div class="saito-table-row league-leaderboard-ranking">
+            <div>Blackjack</div>
+            <div>…</div>
+        </div>
+        ...
+    </div>
+</div>
+```
+**"saito-table"** vertically spaces the rows in a grid with spacing.
+**"saito-table-head"** allows for a header row with titles differently styled.
+**"saito-table-row"** handles basic row theming 
+*NOTE* the grid columns of "saito-table-row" can be over-ridden to create specific layouts (defult is two column).
 
 
 #### Saito Module
