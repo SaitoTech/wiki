@@ -2,7 +2,7 @@
 title: Mathematical Proofs - Cost of Attack
 description: 
 published: true
-date: 2022-03-25T02:01:45.679Z
+date: 2023-02-15T13:59:51.827Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T05:43:22.402Z
@@ -80,7 +80,7 @@ But, the attacker is only getting the honest fees back, so for a single golden t
 
 $$ f \cdot Ps \cdot p - f \cdot p $$ 
 
-Hasing to find n solutions yields an expected outcome of:
+Hashing to find n solutions yields an expected outcome of:
 
 $$ f \cdot Ps \cdot (1-(1-p)^n) - f \cdot p$$
 
