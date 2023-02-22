@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-02-22T04:36:21.460Z
+date: 2023-02-22T04:38:35.392Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -50,10 +50,10 @@ There is a good amount of games running on the Saito platform now, and more to c
 | [Chess](/tech/applications/chess) | Chat |
 | [Saito Realm](/tech/applications/realm) | Encrypt |
 | [Wuziqi](/tech/applications/wuziqi) |     |
-| \##### [Settlers of Saitoa](/tech/applications/settlers) |     |
-| \##### [Red Imperium](/tech/applications/redImperium) |     |
-| \##### [Quake 3](/tech/applications/quake3) |     |
-| \##### [Wordblocks](/tech/applications/wordblocks) |     |
-| \##### [Shogun](/tech/applications/dominion) |     |
-| \##### [Epidemic](/tech/applications/epidemic) |     |
-| \##### [Spider](/tech/applications/spider) |     |
+| [Settlers of Saitoa](/tech/applications/settlers) |     |
+|  [Red Imperium](/tech/applications/redImperium) |     |
+|  [Quake 3](/tech/applications/quake3) |     |
+| [Wordblocks](/tech/applications/wordblocks) |     |
+|  [Shogun](/tech/applications/dominion) |     |
+|  [Epidemic](/tech/applications/epidemic) |     |
+|  [Spider](/tech/applications/spider) |     |
