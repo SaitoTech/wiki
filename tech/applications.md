@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-02-22T04:39:57.649Z
+date: 2023-02-22T04:44:42.296Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -61,8 +61,8 @@ There is a good amount of games running on the Saito platform now, and more to c
 
 ---
 
-| Games | Core Apps    |
-| --- | --- |
+|Games &nbsp; |Core Apps &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :--- | :--- |
 | [Twilight Struggle](/tech/applications/twilightStruggle) | [Saito Arcade](/tech/applications/arcade) |
 | [Poker](/tech/applications/poker) | [Red Square](/tech/applications/RedSquare) |
 | [Chess](/tech/applications/chess) | Chat |
