@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-02-22T04:32:26.970Z
+date: 2023-02-22T04:34:20.017Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -41,18 +41,18 @@ There is a good amount of games running on the Saito platform now, and more to c
 -   [Spider](/tech/applications/spider)
 -   [Blackjack](/tech/applications/blackjack)
 
-| Games | Core Applications |
+| Games  |  Core Applications  |
 | --- | --- |
-| ##### [Twilight Struggle](/tech/applications/twilightStruggle) | ##### [Saito Arcade](/tech/applications/arcade) |
-| ##### [Poker](/tech/applications/poker) | ##### [Red Square](/tech/applications/RedSquare) |
-| ##### [Chess](/tech/applications/chess) | ##### Chat |
-| ##### [Saito Realm](/tech/applications/realm) | ##### Encrypt |
-| ##### [Wuziqi](/tech/applications/wuziqi) |     |
-| ##### [Settlers of Saitoa](/tech/applications/settlers) |     |
-| ##### [Red Imperium](/tech/applications/redImperium) |     |
-| ##### [Quake 3](/tech/applications/quake3) |     |
-| ##### [Wordblocks](/tech/applications/wordblocks) |     |
-| ##### [Shogun](/tech/applications/dominion) |     |
-| ##### [Epidemic](/tech/applications/epidemic) |     |
-| ##### [Spider](/tech/applications/spider) |     |
-| ##### [Blackjack](/tech/applications/blackjack) |     |
+| [Twilight Struggle](/tech/applications/twilightStruggle) |  [Saito Arcade](/tech/applications/arcade) |
+|  [Poker](/tech/applications/poker) |  [Red Square](/tech/applications/RedSquare) |
+|  [Chess](/tech/applications/chess) |  Chat |
+|  [Saito Realm](/tech/applications/realm) |  Encrypt |
+|  [Wuziqi](/tech/applications/wuziqi) |     |
+|  [Settlers of Saitoa](/tech/applications/settlers) |     |
+|  [Red Imperium](/tech/applications/redImperium) |     |
+|  [Quake 3](/tech/applications/quake3) |     |
+|  [Wordblocks](/tech/applications/wordblocks) |     |
+|  [Shogun](/tech/applications/dominion) |     |
+|  [Epidemic](/tech/applications/epidemic) |     |
+|  [Spider](/tech/applications/spider) |     |
+|  [Blackjack](/tech/applications/blackjack) |     |
