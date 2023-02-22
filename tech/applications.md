@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-02-22T03:40:10.821Z
+date: 2023-02-22T03:41:53.082Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -12,10 +12,15 @@ dateCreated: 2022-12-21T01:40:41.364Z
 
 ![](/apps.png)
 
+Saito Applications are modules that plug into the Saito Wallet and use the Saito network to communicate with peers. You can find a list of currently-supported modules at [github mods dir]. We also have [tutorials] covering how to develop a module.
+
+## Core Applications
+
 -   [Saito Arcade](/tech/applications/arcade)
 -   [Red Square](/tech/applications/RedSquare)
 -   Chat
 -   Encrypt
+
 
 ## Games
 
