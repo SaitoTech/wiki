@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-02-22T04:44:42.296Z
+date: 2023-02-22T06:23:59.886Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -41,14 +41,13 @@ There is a good amount of games running on the Saito platform now, and more to c
 -   [Spider](/tech/applications/spider)
 -   [Blackjack](/tech/applications/blackjack)
 
-## Games                     Core Applications
+## Games                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Core Applications
 
-|     |     |
-| --- | --- |
-| [Twilight Struggle](/tech/applications/twilightStruggle) | [Saito Arcade](/tech/applications/arcade) |
-| [Poker](/tech/applications/poker) | [Red Square](/tech/applications/RedSquare) |
-| [Chess](/tech/applications/chess) | Chat |
-| [Saito Realm](/tech/applications/realm) | Encrypt |
+| :--- | :--- |
+| [Twilight Struggle](/tech/applications/twilightStruggle) |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Saito Arcade](/tech/applications/arcade) |
+| [Poker](/tech/applications/poker) | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Red Square](/tech/applications/RedSquare) |
+| [Chess](/tech/applications/chess) | &nbsp;&nbsp;&nbsp;&nbsp; Chat |
+| [Saito Realm](/tech/applications/realm) |&nbsp;&nbsp;&nbsp;&nbsp; Encrypt |
 | [Wuziqi](/tech/applications/wuziqi) |     |
 | [Settlers of Saitoa](/tech/applications/settlers) |     |
 |  [Red Imperium](/tech/applications/redImperium) |     |
