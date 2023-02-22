@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-02-22T04:10:39.781Z
+date: 2023-02-22T04:28:01.404Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -12,7 +12,7 @@ dateCreated: 2022-12-21T01:40:41.364Z
 
 ![](/apps.png)
 
-Saito Applications are modules that plug into the Saito Wallet and use the Saito network to communicate with peers. You can find a list of currently-supported modules at [github mods dir]. We also have [tutorials] covering how to develop a module.
+Saito Applications are modules that plug into the Saito Wallet and use the Saito network to communicate with peers. You can find a list of currently-supported modules at \[github mods dir\]. We also have \[tutorials\] covering how to develop a module.
 
 ## Core Applications
 
@@ -20,7 +20,6 @@ Saito Applications are modules that plug into the Saito Wallet and use the Saito
 -   [Red Square](/tech/applications/RedSquare)
 -   Chat
 -   Encrypt
-
 
 ## Games
 
@@ -42,13 +41,18 @@ There is a good amount of games running on the Saito platform now, and more to c
 -   [Spider](/tech/applications/spider)
 -   [Blackjack](/tech/applications/blackjack)
 
-<table border="0">
- <tr>
-    <td><b style="font-size:30px">Core Applications</b></td>
-    <td><b style="font-size:30px">Games</b></td>
- </tr>
- <tr>
-   <td>Twilight Struggle</td> 
-    <td>Saito Arcade</td>
- </tr>
-</table>
+| ## Games | ## Core Applications |
+| --- | --- |
+| [Twilight Struggle](/tech/applications/twilightStruggle) | [Saito Arcade](/tech/applications/arcade) |
+| [Poker](/tech/applications/poker) | [Red Square](/tech/applications/RedSquare) |
+| [Chess](/tech/applications/chess) | Chat |
+| [Saito Realm](/tech/applications/realm) | Encrypt |
+| [Wuziqi](/tech/applications/wuziqi) |     |
+| [Settlers of Saitoa](/tech/applications/settlers) |
+| [Red Imperium](/tech/applications/redImperium) |
+| [Quake 3](/tech/applications/quake3) |
+| [Wordblocks](/tech/applications/wordblocks) |
+| [Shogun](/tech/applications/dominion) |
+| [Epidemic](/tech/applications/epidemic) |
+| [Spider](/tech/applications/spider) |
+| [Blackjack](/tech/applications/blackjack) |
