@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-02-22T04:08:22.866Z
+date: 2023-02-22T04:10:39.781Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -48,7 +48,7 @@ There is a good amount of games running on the Saito platform now, and more to c
     <td><b style="font-size:30px">Games</b></td>
  </tr>
  <tr>
-    <td>Twilight Struggle</td>
-    <td>Lorem ipsum ...</td>
+   <td>Twilight Struggle</td> 
+    <td>Saito Arcade</td>
  </tr>
 </table>
