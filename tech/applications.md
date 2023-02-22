@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-02-22T06:23:59.886Z
+date: 2023-02-22T06:30:13.965Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -12,7 +12,7 @@ dateCreated: 2022-12-21T01:40:41.364Z
 
 ![](/apps.png)
 
-Saito Applications are modules that plug into the Saito Wallet and use the Saito network to communicate with peers. You can find a list of currently-supported modules at \[github mods dir\]. We also have \[tutorials\] covering how to develop a module.
+Saito Applications are modules that plug into the Saito Wallet and use the Saito network to communicate with peers. You can find a list of currently-supported modules at [modules directory](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods). We also have [tutorials](/tech/tutorials) covering how to develop a module.
 
 ## Core Applications
 
