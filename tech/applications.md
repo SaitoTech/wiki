@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-02-22T04:28:01.404Z
+date: 2023-02-22T04:28:25.430Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -56,3 +56,14 @@ There is a good amount of games running on the Saito platform now, and more to c
 | [Epidemic](/tech/applications/epidemic) |
 | [Spider](/tech/applications/spider) |
 | [Blackjack](/tech/applications/blackjack) |
+
+<table border="0">
+ <tr>
+    <td><b style="font-size:30px">Title</b></td>
+    <td><b style="font-size:30px">Title 2</b></td>
+ </tr>
+ <tr>
+    <td>Lorem ipsum ...</td>
+    <td>Lorem ipsum ...</td>
+ </tr>
+</table>
