@@ -1,8 +1,8 @@
 ---
 title: Deploy Saito Instance
 description: 
-published: false
-date: 2023-02-23T07:15:16.260Z
+published: true
+date: 2023-02-23T07:17:07.301Z
 tags: installation
 editor: markdown
 dateCreated: 2023-02-23T07:15:16.260Z
