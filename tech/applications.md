@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-02-24T04:35:07.487Z
+date: 2023-03-01T03:16:10.931Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -48,25 +48,7 @@ There is a good amount of games running on the Saito platform now, and more to c
   
 </details>
 
-## Games                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Core Applications
 
-| :--- | :--- |
-| [Twilight Struggle](/tech/applications/twilightStruggle) |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Saito Arcade](/tech/applications/arcade) |
-| [Poker](/tech/applications/poker) | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Red Square](/tech/applications/RedSquare) |
-| [Chess](/tech/applications/chess) | &nbsp;&nbsp;&nbsp;&nbsp; Chat |
-| [Saito Realm](/tech/applications/realm) |&nbsp;&nbsp;&nbsp;&nbsp; Encrypt |
-| [Wuziqi](/tech/applications/wuziqi) |     |
-| [Settlers of Saitoa](/tech/applications/settlers) |     |
-|  [Red Imperium](/tech/applications/redImperium) |     |
-|  [Quake 3](/tech/applications/quake3) |     |
-| [Wordblocks](/tech/applications/wordblocks) |     |
-|  [Shogun](/tech/applications/dominion) |     |
-|  [Epidemic](/tech/applications/epidemic) |     |
-|  [Spider](/tech/applications/spider) |     |
-
-
----
-<details>
   
 |Games &nbsp; |Core Apps &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | :--- | :--- |
@@ -83,4 +65,3 @@ There is a good amount of games running on the Saito platform now, and more to c
 |  [Epidemic](/tech/applications/epidemic) |     |
 |  [Spider](/tech/applications/spider) |     |
   
-</details>
