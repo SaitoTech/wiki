@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-03-01T03:22:56.170Z
+date: 2023-03-01T03:25:25.008Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -12,6 +12,7 @@ dateCreated: 2022-12-21T01:40:41.364Z
 
 ![](/apps.png)
 
+## Core Apps
 Saito Applications are modules that plug into the Saito Wallet and use the Saito network to communicate with peers. You can find a list of currently-supported modules at [modules directory](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods). We also have [tutorials](/tech/tutorials) covering how to develop a module.
 
 
@@ -23,7 +24,7 @@ There is a good amount of games running on the Saito platform now, and more to c
 
 
   
-### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Games &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Core Apps &nbsp;  
+###  &nbsp; &nbsp; &nbsp; &nbsp; Games &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Core Apps 
 | :--- | :--- |
 | [Twilight Struggle](/tech/applications/twilightStruggle) | [Saito Arcade](/tech/applications/arcade) |
 | [Poker](/tech/applications/poker) | [Red Square](/tech/applications/RedSquare) |
