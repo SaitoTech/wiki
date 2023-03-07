@@ -2,7 +2,7 @@
 title: Deploy Saito Instance
 description: 
 published: true
-date: 2023-03-07T02:25:52.321Z
+date: 2023-03-07T02:51:13.817Z
 tags: installation
 editor: markdown
 dateCreated: 2023-02-23T07:15:16.260Z
@@ -73,7 +73,7 @@ sudo apt-get install nginx
 ```
 #### Configure NGINX as a reverse proxy
 
-Add the server block config on `/etc/nginx/site-enable/<file_name>`
+Add the server block config on `/etc/nginx/sites-enable/<file_name>`
 Your saito installation will point to localhost:12101 by default
 ```
 server {
