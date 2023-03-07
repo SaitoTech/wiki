@@ -2,7 +2,7 @@
 title: Deploy Saito Instance
 description: 
 published: true
-date: 2023-02-23T07:17:07.301Z
+date: 2023-03-07T02:25:52.321Z
 tags: installation
 editor: markdown
 dateCreated: 2023-02-23T07:15:16.260Z
@@ -21,7 +21,7 @@ Requirements:
 SSH to your VPS and run:
 ```
 sudo apt-get update
-sudo apt-get install g++ make git python
+sudo apt-get install g++ make git python3
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash
 sudo apt-get install -y nodejs
 ```
@@ -32,7 +32,7 @@ git clone https://github.com/saitotech/saito-lite-rust
 cd saito-lite-rust
 npm install
 ```
-> note: in case npm fails to install a module, you might need to `sudo apt-get install python3-is-python`.
+> note: in case npm fails to install a module, you might need to `sudo apt-get install python-is-python3`.
 ## 3) Compile and Run Saito
 ```
 npm run nuke
