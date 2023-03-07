@@ -2,7 +2,7 @@
 title: Deploy Saito Instance
 description: 
 published: true
-date: 2023-03-07T02:51:13.817Z
+date: 2023-03-07T02:59:22.384Z
 tags: installation
 editor: markdown
 dateCreated: 2023-02-23T07:15:16.260Z
@@ -118,7 +118,7 @@ Now that you have a secure connection to your node we need to change the endpoin
 Compile your Saito (`npm run nuke`) and if everything is correct you can visit your Saito with `https://yourdomain.com`
 
 ####  Enable websockets for NGINX
-Add the following config on your server block `/etc/nginx/site-enable/<file_name>` config file with:
+Add the following config on your server block `/etc/nginx/sites-enable/<file_name>` config file with:
 ```
 server {
     server_name yourdomain.com;
@@ -136,7 +136,7 @@ server {
 
 #### Enable Cross-origin Resource sharing (CORS) for NGINX
 
-Add the following config on your server block `/etc/nginx/site-enable/<file_name>` config file with:
+Add the following config on your server block `/etc/nginx/sites-enable/<file_name>` config file with:
 ```
 #
 # Wide-open CORS config for nginx
@@ -172,7 +172,7 @@ location / {
 }
 ```
 #### Enable compression for NGINX
-Add the following config on your server block `/etc/nginx/site-enable/<file_name>` config file with:
+Add the following config on your server block `/etc/nginx/sites-enable/<file_name>` config file with:
 ```
 server {
     ...
