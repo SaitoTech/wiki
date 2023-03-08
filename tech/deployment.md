@@ -2,13 +2,13 @@
 title: Deploy Saito Instance
 description: 
 published: true
-date: 2023-03-07T02:59:22.384Z
+date: 2023-03-08T23:54:15.502Z
 tags: installation
 editor: markdown
 dateCreated: 2023-02-23T07:15:16.260Z
 ---
 
-Deploy your Saito on a VPS or server - Ubuntu 22.04 (LTS) x64
+# Deploy your Saito on a VPS or server - Ubuntu 22.04 (LTS) x64
 ---
 Requirements:
 - Machine with at least 2GB RAM.
