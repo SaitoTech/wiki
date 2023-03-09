@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-03-09T01:26:10.262Z
+date: 2023-03-09T01:26:39.086Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -27,7 +27,7 @@ There is a good amount of games running on the Saito platform now, and more to c
 
 |     | Games |     |     |     |     
 | --- | --- | --- | --- | --- | --- |
-|     | [Twilight Struggle](/tech/applications/twilightStruggle) | [Chess](/tech/applications/chess) |     | [Saito Realm](/tech/applications/realm) |     |
+|     | [Twilight Struggle](/tech/applications/twilightStruggle) |     | [Chess](/tech/applications/chess) |     | [Saito Realm](/tech/applications/realm) |     |
 |     | [Poker](/tech/applications/poker) | [Wuziqi](/tech/applications/wuziqi) |     | [Wordblocks](/tech/applications/wordblocks) |     |
 |     | [Settlers of Saitoa](/tech/applications/settlers) | [Red Imperium](/tech/applications/redImperium) |     | [Quake 3](/tech/applications/quake3) |     |
 |     | [Shogun](/tech/applications/dominion) | [Epidemic](/tech/applications/epidemic) |     | [Spider](/tech/applications/spider) |     |
