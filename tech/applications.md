@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-03-09T04:43:47.830Z
+date: 2023-03-09T04:45:07.048Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -19,7 +19,7 @@ Saito Applications are modules that plug into the Saito Wallet and use the Saito
 |     | Core Apps |     |
 | --- | --- | --- |
 |     | [Saito Arcade](/tech/applications/arcade) | [Red Square](/tech/applications/RedSquare) |
-|     | [Chat](/tech/applications/chat) | Encrypt |
+|     | [Chat](/tech/applications/chat) | [Encrypt](/tech/applications/encrypt) |
 
 ## Games
 
