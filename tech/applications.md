@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-03-09T01:23:44.529Z
+date: 2023-03-09T01:25:21.282Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -31,5 +31,5 @@ There is a good amount of games running on the Saito platform now, and more to c
 |     | [Poker](/tech/applications/poker) | [Wuziqi](/tech/applications/wuziqi) |     | [Wordblocks](/tech/applications/wordblocks) |     |
 |     | [Settlers of Saitoa](/tech/applications/settlers) | [Red Imperium](/tech/applications/redImperium) |     | [Quake 3](/tech/applications/quake3) |     |
 |     | [Shogun](/tech/applications/dominion) | [Epidemic](/tech/applications/epidemic) |     | [Spider](/tech/applications/spider) |     |
-|     | [Saito Mania](/tech/applications/Saito Mania) | [Beleaguered Castle](/tech/applications/Beleaguered Castle) |     | [Mahjong](/tech/applications/Mahjong) |     |
+|     | [Saito Mania](/tech/applications/SaitoMania)| [Beleaguered Castle](/tech/applications/BeleagueredCastle) |     | [Mahjong](/tech/applications/Mahjong) |     |
 |     | [Blackjack](/tech/applications/Blackjack) | [Nintendo 64 (Emulator)](/tech/applications/n64) |     |     |     |
