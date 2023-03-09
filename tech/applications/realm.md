@@ -2,7 +2,7 @@
 title: Saito Realm
 description: 
 published: true
-date: 2023-03-09T05:36:25.739Z
+date: 2023-03-09T05:36:45.159Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-01T04:12:35.542Z
@@ -12,7 +12,7 @@ dateCreated: 2023-02-01T04:12:35.542Z
 
 This is the newest game developed by the Saito community, in an effort to have a card battle game running on the Saito Arcade/Red Square and the Saito's blockchain. A standard game of Realm involves two players engaged in a battle acting as powerful summoners/mages. Each player has their own deck of cards, either one previously constructed or made from a limited pool of cards for the event.
 
-![](/saito_realm/025_unguided_spirit.png)
+![](/saito_realm/025_unguided_spirit.png) ![](/saito_realm/014_leshy_fruit.png)
 
 ![](/saito_realm/001_magic_cube_v3.png)
 
@@ -20,7 +20,7 @@ This is the newest game developed by the Saito community, in an effort to have a
 
 ![](/saito_realm/021_haven_judicator.png)
 
-
+![](/saito_realm/014_leshy_fruit.png)
 
 Cards in Saito Realm have a consistent format, with half of the face of the card showing the card's art, and the other half listing the card's mechanics, often relying on commonly-reused keywords to simplify the card's text. Cards fall into generally two classes: lands and spells. Lands produce Souls or magical energy. Players usually can only play one land card per turn (some cards allow you to play additional lands during a turn, with most land providing a specific color of souls when they are "tapped"; each land can be tapped for mana only once per turn. 
 
