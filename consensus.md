@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2022-10-30T02:14:46.262Z
+date: 2023-03-09T07:50:09.577Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -16,7 +16,7 @@ This page offers a straight-forward description of how Saito Consensus works. We
 
 Saito adds cryptographic routing signatures to transactions. When users send transactions into the network they add a routing signature that specifies the first-hop node(s) to which they are sending their transaction(s). Nodes add similar routing signatures as they forward these transactions. The same transaction sitting in different mempools will have the same core transaction data with a different set of routing signatures unique to the path that version of the transaction has taken to reach its specific mempool.
 
-The blockchain now sets a "difficulty" for block production that can be met by producing a block contain enough routing work. This routing work is the sum of the "routing work" contained in each individual transaction in the block, which is calculated as the value of the transaction fee halved by each additional hop beyond the first that the transaction has taken to reach the block producer. Transactions provide no "routing work" to nodes that are not in their routing path.
+The blockchain now sets a "difficulty" for block production that can be met by producing a block containing a defined amount of routing work. The amount of routing work in a block is the sum of the "routing work" contained in each individual transaction in the block, which is itself calculated as the value of the transaction fee halved by each additional hop beyond the first that the transaction has taken to reach the block producer. Transactions provide no "routing work" in blocks where they do not have a valid routing path that connects the sender to the block producer.
 
 Once a block is produced all of the fees in the block are burned. One of the fundamental problems Saito solves is how to resurrect this fee without enabling circular fee-recycling attacks such as those possible in proof-of-work and proof-of-stake class consensus mechanisms.
 
