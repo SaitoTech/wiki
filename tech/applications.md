@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-03-09T01:25:21.282Z
+date: 2023-03-09T01:26:10.262Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -25,7 +25,7 @@ Saito Applications are modules that plug into the Saito Wallet and use the Saito
 
 There is a good amount of games running on the Saito platform now, and more to come that are currently in development, some of them have been made for members of the community. With Saito being an open-source project that is delighted to receive apps from other developers to run them in the network, this is just the tip of the iceberg for what is to come.
 
-|     | Games |     |     |     |     |
+|     | Games |     |     |     |     
 | --- | --- | --- | --- | --- | --- |
 |     | [Twilight Struggle](/tech/applications/twilightStruggle) | [Chess](/tech/applications/chess) |     | [Saito Realm](/tech/applications/realm) |     |
 |     | [Poker](/tech/applications/poker) | [Wuziqi](/tech/applications/wuziqi) |     | [Wordblocks](/tech/applications/wordblocks) |     |
