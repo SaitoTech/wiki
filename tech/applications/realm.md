@@ -2,7 +2,7 @@
 title: Saito Realm
 description: 
 published: true
-date: 2023-03-09T05:36:03.442Z
+date: 2023-03-09T05:36:25.739Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-01T04:12:35.542Z
@@ -18,7 +18,7 @@ This is the newest game developed by the Saito community, in an effort to have a
 
 ![](/saito_realm/008_leshy.png)
 
-
+![](/saito_realm/021_haven_judicator.png)
 
 
 
@@ -28,9 +28,6 @@ Meanwhile, spells consume souls, typically requiring at least one soul of a spec
 
 
 More powerful spells cost more, and more specifically colored, souls, so as the game progresses, more land will be in play, more souls will be available, and the quantity and relative power of the spells played tends to increase. Spells come in several varieties: non-permanents like "sorceries" and "instants" have a single, one-time effect before they go to the "graveyard" (discard pile); "enchantments" and "artifacts" that  remain in play after being cast to provide a lasting magical effect; and "creature" spells summon creatures that can attack and damage an opponent as well as used to defend from the opponent's creature attacks; spells that summon powerful allies that act similarly to other players. Land, enchantments, artifacts, and creature cards are considered "permanents" as they remain in play until removed by other spells, abilities, or combat effects.  
-
-![](/saito_realm/014_leshy_fruit.png)
-![](/saito_realm/021_haven_judicator.png)
 
 Players begin the game by shuffling their decks and then drawing seven cards. On each player's turn, following a set phase order, they draw a card, tap their lands and other permanents as necessary to gain souls to cast spells, engage their creatures in a single attack round against their opponent who may use their own creatures to block the attack, and then complete other actions with any remaining souls. 
 
