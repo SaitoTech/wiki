@@ -2,13 +2,13 @@
 title: Saito Realm
 description: 
 published: true
-date: 2023-03-09T05:47:57.431Z
+date: 2023-03-09T07:19:58.777Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-01T04:12:35.542Z
 ---
 
-### Saito Realm
+# Saito Realm
 
 This is the newest game developed by the Saito community, in an effort to have a card battle game running on the Saito Arcade/Red Square and the Saito's blockchain. A standard game of Realm involves two players engaged in a battle acting as powerful summoners/mages. Each player has their own deck of cards, either one previously constructed or made from a limited pool of cards for the event.
 
