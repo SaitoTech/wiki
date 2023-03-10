@@ -2,7 +2,7 @@
 title: Saito Leagues
 description: 
 published: true
-date: 2023-03-10T01:48:58.498Z
+date: 2023-03-10T02:53:14.771Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-17T05:39:45.930Z
@@ -10,7 +10,7 @@ dateCreated: 2022-12-17T05:39:45.930Z
 
 # Saito Leagues
 
-The Saito Leagues are community-run recurring events that take place in the Saito Arcade.
+The Saito Leagues are community-run recurring events that take place in the [Saito Arcade](/tech/applications/arcade).
 
 Participants can join at any time. Players are assigned weekly matches but they can also choose to reach out to other participants to play matches and accumulate points. At the end of each season, the players with the most points qualify for the playoffs and play each other, tournament style.
 
