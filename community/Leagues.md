@@ -2,7 +2,7 @@
 title: Saito Leagues
 description: 
 published: true
-date: 2023-03-10T01:46:16.613Z
+date: 2023-03-10T01:48:58.498Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-17T05:39:45.930Z
@@ -16,13 +16,13 @@ Participants can join at any time. Players are assigned weekly matches but they 
 
 Currently, there are 3 Leagues taking place:
 
-![](/chess_club.jpg =600x) ![chess_prizes.png](/chess_prizes.png =600x)
-
+![](/chess_club.jpg =600x) !
 ## Saito Chess League
 
 Already in its second season, the Saito Chess League was the first recurring league to be launched by the Saito Community Leagues Council.You can register by filling this [form](https://docs.google.com/forms/d/e/1FAIpQLSdnLw7ucg3eT-LCONK03I0NJT5UYN1nfVo74diAHJAQu9fvDQ/viewform).
 
 Following the success of the league’s first season, the Saito Chess Club was launched for players to come together and play unscheduled matches against other league participants and further raise their scores.
+
 ![chess_prizes.png](/chess_prizes.png =500x)
 
 ##### First Season Winners:
@@ -49,7 +49,9 @@ Playoffs will be held every 2 months and will last a month between the top score
 
 Players that do qualify for the playoffs will also receive matchups, but they will have extended deadlines.
 
-You can register through this  [*form*](https://docs.google.com/forms/d/e/1FAIpQLSeJmQ-nVC4gveACcLaBtNUsPO3AacrwbgtO1P1-ccUdrwg7dg/viewform)
+You can register through this [form](https://docs.google.com/forms/d/e/1FAIpQLSeJmQ-nVC4gveACcLaBtNUsPO3AacrwbgtO1P1-ccUdrwg7dg/viewform).
+
+![](/poker_prizes.png =500x)
 
 ##### First Season Winners:
 
@@ -59,7 +61,7 @@ Second Place: Nolsrac27
 
 Third Place: Saitodler
 
-![](/poker_prizes.png =500x)
+-----
 
 
 ![](/red_imperium_league.jpg =600x)
