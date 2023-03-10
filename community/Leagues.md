@@ -2,7 +2,7 @@
 title: Saito Leagues
 description: 
 published: true
-date: 2023-03-10T01:39:09.874Z
+date: 2023-03-10T01:39:54.616Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-17T05:39:45.930Z
@@ -18,7 +18,7 @@ Currently, there are 3 Leagues taking place:
 
 |     |     |     |
 | --- | --- | --- |
-| Saito Chess League | Saito Poker League | Red Imperium League |
+### | Saito Chess League | Saito Poker League | Red Imperium League |
 | Register [here](https://docs.google.com/forms/d/e/1FAIpQLSdnLw7ucg3eT-LCONK03I0NJT5UYN1nfVo74diAHJAQu9fvDQ/viewform) | Register [here](https://docs.google.com/forms/d/e/1FAIpQLSeJmQ-nVC4gveACcLaBtNUsPO3AacrwbgtO1P1-ccUdrwg7dg/viewform) | Register [here](https://docs.google.com/forms/d/e/1FAIpQLSdJeMAccT3xDZYMl5CnXS3jzXJ3K-fEqshYEqRhmA92MAPF3Q/viewform) |
 
 ### | Saito Chess League| Saito Poker League | Red Imperium League|
