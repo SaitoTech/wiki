@@ -2,7 +2,7 @@
 title: Saito Leagues
 description: 
 published: true
-date: 2023-03-10T01:43:18.263Z
+date: 2023-03-10T01:44:06.320Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-17T05:39:45.930Z
@@ -16,27 +16,7 @@ Participants can join at any time. Players are assigned weekly matches but they 
 
 Currently, there are 3 Leagues taking place:
 
-| Register [here](https://docs.google.com/forms/d/e/1FAIpQLSdnLw7ucg3eT-LCONK03I0NJT5UYN1nfVo74diAHJAQu9fvDQ/viewform)|
-
-#### \*The Saito Poker League
-
-Register [here](https://docs.google.com/forms/d/e/1FAIpQLSeJmQ-nVC4gveACcLaBtNUsPO3AacrwbgtO1P1-ccUdrwg7dg/viewform)
-
-#### \*The Red Imperium League
-
-Register [here](https://docs.google.com/forms/d/e/1FAIpQLSdJeMAccT3xDZYMl5CnXS3jzXJ3K-fEqshYEqRhmA92MAPF3Q/viewform)
-
-#### League Prizes!
-
-The winners of the playoffs/tournaments in the **Chess** and **Poker** leagues will be awarded prizes! n
-
-**1st Place: 100$**
-
-**2nd Place 50$**
-
-**3rd Place 25$**
-
-![](/chess_club.jpg =600x)
+![](/chess_club.jpg =600x) ![chess_prizes.png](/chess_prizes.png =600x)
 
 ## Saito Chess League
 
