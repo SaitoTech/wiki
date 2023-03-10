@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-03-10T03:42:54.404Z
+date: 2023-03-10T03:43:26.278Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -31,5 +31,5 @@ There is a good amount of games running on the Saito platform now, and more to c
 |     |[Epidemic](/tech/applications/epidemic)  | [Mahjong](/tech/applications/Mahjong)  |     | [Nintendo 64 (Emulator)](/tech/applications/n64)   |     |
 |     | [Poker](/tech/applications/poker) | [Quake 3](/tech/applications/quake3)  |     |[Red Imperium](/tech/applications/redImperium)  |     |
 |     | [Saito Mania](/tech/applications/SaitoMania) | [Saito Realm](/tech/applications/realm)  |     | [Settlers of Saitoa](/tech/applications/settlers) |     |
-|     | [Shogun](/tech/applications/shogun)  | [Spider](/tech/applications/spider)  |    | Solitrio |     |
+|     | [Shogun](/tech/applications/Shogun) | [Spider](/tech/applications/spider)  |    | Solitrio |     |
 |     | [Twilight Struggle](/tech/applications/twilightStruggle) | [Wuziqi](/tech/applications/wuziqi) |     |  [Wordblocks](/tech/applications/wordblocks)   |     |
