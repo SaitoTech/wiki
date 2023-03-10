@@ -2,7 +2,7 @@
 title: Saito Leagues
 description: 
 published: true
-date: 2023-03-10T01:44:06.320Z
+date: 2023-03-10T01:46:16.613Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-17T05:39:45.930Z
@@ -23,6 +23,7 @@ Currently, there are 3 Leagues taking place:
 Already in its second season, the Saito Chess League was the first recurring league to be launched by the Saito Community Leagues Council.You can register by filling this [form](https://docs.google.com/forms/d/e/1FAIpQLSdnLw7ucg3eT-LCONK03I0NJT5UYN1nfVo74diAHJAQu9fvDQ/viewform).
 
 Following the success of the league’s first season, the Saito Chess Club was launched for players to come together and play unscheduled matches against other league participants and further raise their scores.
+![chess_prizes.png](/chess_prizes.png =500x)
 
 ##### First Season Winners:
 
@@ -34,7 +35,7 @@ Third Place: Keruzo
 
 [Join Now!](https://docs.google.com/forms/d/e/1FAIpQLSdnLw7ucg3eT-LCONK03I0NJT5UYN1nfVo74diAHJAQu9fvDQ/viewform) And start playing today.
 
-![chess_prizes.png](/chess_prizes.png =500x)
+---
 
 ![](/poker_league_nights.jpg =600x)
 
