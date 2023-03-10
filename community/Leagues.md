@@ -2,7 +2,7 @@
 title: Saito Leagues
 description: 
 published: true
-date: 2023-03-10T01:39:54.616Z
+date: 2023-03-10T01:43:18.263Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-17T05:39:45.930Z
@@ -16,14 +16,7 @@ Participants can join at any time. Players are assigned weekly matches but they 
 
 Currently, there are 3 Leagues taking place:
 
-|     |     |     |
-| --- | --- | --- |
-### | Saito Chess League | Saito Poker League | Red Imperium League |
-| Register [here](https://docs.google.com/forms/d/e/1FAIpQLSdnLw7ucg3eT-LCONK03I0NJT5UYN1nfVo74diAHJAQu9fvDQ/viewform) | Register [here](https://docs.google.com/forms/d/e/1FAIpQLSeJmQ-nVC4gveACcLaBtNUsPO3AacrwbgtO1P1-ccUdrwg7dg/viewform) | Register [here](https://docs.google.com/forms/d/e/1FAIpQLSdJeMAccT3xDZYMl5CnXS3jzXJ3K-fEqshYEqRhmA92MAPF3Q/viewform) |
-
-### | Saito Chess League| Saito Poker League | Red Imperium League|
-
-| Register [here](https://docs.google.com/forms/d/e/1FAIpQLSdnLw7ucg3eT-LCONK03I0NJT5UYN1nfVo74diAHJAQu9fvDQ/viewform)| Register [here](https://docs.google.com/forms/d/e/1FAIpQLSeJmQ-nVC4gveACcLaBtNUsPO3AacrwbgtO1P1-ccUdrwg7dg/viewform)| Register [here](https://docs.google.com/forms/d/e/1FAIpQLSdJeMAccT3xDZYMl5CnXS3jzXJ3K-fEqshYEqRhmA92MAPF3Q/viewform) |
+| Register [here](https://docs.google.com/forms/d/e/1FAIpQLSdnLw7ucg3eT-LCONK03I0NJT5UYN1nfVo74diAHJAQu9fvDQ/viewform)|
 
 #### \*The Saito Poker League
 
@@ -43,11 +36,11 @@ The winners of the playoffs/tournaments in the **Chess** and **Poker** leagues w
 
 **3rd Place 25$**
 
-![](/chess_club.jpg)
+![](/chess_club.jpg =600x)
 
 ## Saito Chess League
 
-Already in its second season, the Saito Chess League was the first recurring league to be launched by the Saito Community Leagues Council.
+Already in its second season, the Saito Chess League was the first recurring league to be launched by the Saito Community Leagues Council.You can register by filling this [form](https://docs.google.com/forms/d/e/1FAIpQLSdnLw7ucg3eT-LCONK03I0NJT5UYN1nfVo74diAHJAQu9fvDQ/viewform).
 
 Following the success of the league’s first season, the Saito Chess Club was launched for players to come together and play unscheduled matches against other league participants and further raise their scores.
 
@@ -61,7 +54,9 @@ Third Place: Keruzo
 
 [Join Now!](https://docs.google.com/forms/d/e/1FAIpQLSdnLw7ucg3eT-LCONK03I0NJT5UYN1nfVo74diAHJAQu9fvDQ/viewform) And start playing today.
 
-![](/poker_league_nights.jpg)
+![chess_prizes.png](/chess_prizes.png =500x)
+
+![](/poker_league_nights.jpg =600x)
 
 ## Saito Poker League
 
@@ -83,9 +78,10 @@ Second Place: Nolsrac27
 
 Third Place: Saitodler
 
-![](/poker_prizes.png)
+![](/poker_prizes.png =500x)
 
-![](/red_imperium_league.jpg)
+
+![](/red_imperium_league.jpg =600x)
 
 ## Saito Intro Imperium League
 
