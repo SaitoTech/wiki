@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-03-09T04:45:58.320Z
+date: 2023-03-10T00:18:19.491Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -27,9 +27,9 @@ There is a good amount of games running on the Saito platform now, and more to c
 
 |     | Games |     |     |     |     |
 | --- | --- | --- | --- | --- | --- |
-|     | [Twilight Struggle](/tech/applications/twilightStruggle) | [Chess](/tech/applications/chess) |     | [Saito Realm](/tech/applications/realm) |     |
-|     | [Poker](/tech/applications/poker) | [Wuziqi](/tech/applications/wuziqi) |     | [Wordblocks](/tech/applications/wordblocks) |     |
-|     | [Settlers of Saitoa](/tech/applications/settlers) | [Red Imperium](/tech/applications/redImperium) |     | [Quake 3](/tech/applications/quake3) |     |
-|     | [Shogun](/tech/applications/dominion) | [Epidemic](/tech/applications/epidemic) |     | [Spider](/tech/applications/spider) |     |
-|     | [Saito Mania](/tech/applications/SaitoMania) | [Beleaguered Castle](/tech/applications/BeleagueredCastle) |     | [Mahjong](/tech/applications/Mahjong) |     |
-|     | [Blackjack](/tech/applications/Blackjack) | [Nintendo 64 (Emulator)](/tech/applications/n64) |     |     |     |
+|     | [Beleaguered Castle](/tech/applications/BeleagueredCastle)| [Blackjack](/tech/applications/Blackjack)  |     | [Chess](/tech/applications/chess)   |     |
+|     |[Epidemic](/tech/applications/epidemic)  | [Mahjong](/tech/applications/Mahjong)  |     | [Nintendo 64 (Emulator)](/tech/applications/n64)   |     |
+|     | [Poker](/tech/applications/poker) | [Quake 3](/tech/applications/quake3)  |     |[Red Imperium](/tech/applications/redImperium)  |     |
+|     | [Saito Mania](/tech/applications/SaitoMania) | [Saito Realm](/tech/applications/realm)  |     | [Settlers of Saitoa](/tech/applications/settlers) |     |
+|     | [Shogun](/tech/applications/dominion)  | [Spider](/tech/applications/spider)  |    | Solitrio |     |
+|     | [Twilight Struggle](/tech/applications/twilightStruggle) | [Wuziqi](/tech/applications/wuziqi) |     |  [Wordblocks](/tech/applications/wordblocks)   |     |
