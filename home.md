@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2023-03-10T01:22:08.038Z
+date: 2023-03-16T05:54:29.619Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -39,7 +39,7 @@ Saito is secure against classes of attack which have no defense mechanisms in ot
   
 ## Links
 
-[Saito whitepaper](https://saito.io/saito-whitepaper.pdf)
+[Saito Whitepaper](https://saito.io/saito-whitepaper.pdf)
 [Saito Arcade](https://saito.io/arcade/)
 [Get SAITO](https://wiki.saito.io/en/tokenomics#where-to-buy-saito)
 
