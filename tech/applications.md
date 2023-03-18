@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-03-18T05:08:49.651Z
+date: 2023-03-18T05:09:23.651Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -31,5 +31,5 @@ There is a good amount of games running on the Saito platform now, and more to c
 |     |[Epidemic](/tech/applications/epidemic)  | [Mahjong](/tech/applications/Mahjong)  |     | [Nintendo 64 (Emulator)](/tech/applications/n64)   |     |
 |     | [Poker](/tech/applications/poker) | [Quake 3](/tech/applications/quake3)  |     |[Red Imperium](/tech/applications/redImperium)  |     |
 |     |[Solitrio](/tech/applications/solitrio)  | [Saito Realm](/tech/applications/realm)  |     | [Settlers of Saitoa](/tech/applications/settlers) |     |
-|     | [Shogun](/tech/applications/Shogun) | [Spider](/tech/applications/spider)  |    | [Saito Mania](/tech/applications/SaitoMania) |     |
-|     | [Wordblocks](/tech/applications/wordblocks)  | [Wuziqi](/tech/applications/wuziqi) |     |  [Twilight Struggle](/tech/applications/twilightStruggle)   |     |
+|     | [Shogun](/tech/applications/Shogun) | [Wordblocks](/tech/applications/wordblocks)  |    | [Saito Mania](/tech/applications/SaitoMania) |     |
+|     | [Spider](/tech/applications/spider)  | [Wuziqi](/tech/applications/wuziqi) |     |  [Twilight Struggle](/tech/applications/twilightStruggle)   |     |
