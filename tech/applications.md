@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-03-16T05:56:42.729Z
+date: 2023-03-18T05:08:49.651Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -27,9 +27,9 @@ There is a good amount of games running on the Saito platform now, and more to c
 
 
 | --- | --- | --- | --- | --- | --- |
-|     | [Beleaguered Castle](/tech/applications/BeleagueredCastle)| [Blackjack](/tech/applications/Blackjack)  |     | [Chess](/tech/applications/chess)   |     |
+|     | [Chess](/tech/applications/chess)| [Blackjack](/tech/applications/Blackjack)  |     | [Beleaguered Castle](/tech/applications/BeleagueredCastle)[Chess](/tech/applications/chess)   |     |
 |     |[Epidemic](/tech/applications/epidemic)  | [Mahjong](/tech/applications/Mahjong)  |     | [Nintendo 64 (Emulator)](/tech/applications/n64)   |     |
 |     | [Poker](/tech/applications/poker) | [Quake 3](/tech/applications/quake3)  |     |[Red Imperium](/tech/applications/redImperium)  |     |
-|     | [Saito Mania](/tech/applications/SaitoMania) | [Saito Realm](/tech/applications/realm)  |     | [Settlers of Saitoa](/tech/applications/settlers) |     |
-|     | [Shogun](/tech/applications/Shogun) | [Spider](/tech/applications/spider)  |    | [Solitrio](/tech/applications/solitrio) |     |
-|     | [Twilight Struggle](/tech/applications/twilightStruggle) | [Wuziqi](/tech/applications/wuziqi) |     |  [Wordblocks](/tech/applications/wordblocks)   |     |
+|     |[Solitrio](/tech/applications/solitrio)  | [Saito Realm](/tech/applications/realm)  |     | [Settlers of Saitoa](/tech/applications/settlers) |     |
+|     | [Shogun](/tech/applications/Shogun) | [Spider](/tech/applications/spider)  |    | [Saito Mania](/tech/applications/SaitoMania) |     |
+|     | [Wordblocks](/tech/applications/wordblocks)  | [Wuziqi](/tech/applications/wuziqi) |     |  [Twilight Struggle](/tech/applications/twilightStruggle)   |     |
