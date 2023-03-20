@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2023-03-18T04:09:52.644Z
+date: 2023-03-20T00:43:42.028Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -27,9 +27,7 @@ All pages are stored in markdown in our [Saito Wiki Github Repository](https://g
 Saito is a layer-one blockchain that requires its blocks to contain a certain amount of “routing work”. Routing work is derived from transactions fees so in practice this means they need to contain a certain amount of money. How much depends on how long it has been since the last block and how many hops the transactions containing these fees have taken to reach the block producer.
   
  
-In cybersecurity, an [attack vector](/consensus/attack-vectors)  is a method of achieving unauthorized network access to launch a cyber attack. Attack vectors allow cybercriminals to exploit system vulnerabilities to gain access to sensitive data, personally identifiable information (PII), and other valuable information accessible after a data breach.
-
-Saito is secure against classes of attack which have no defense mechanisms in other chains. This page explains how these mechanisms work
+In cybersecurity, an [attack vector](/consensus/attack-vectors)  is a method of achieving unauthorized network access to launch a cyber attack. Attack vectors allow cybercriminals to exploit system vulnerabilities to gain access to sensitive data, personally identifiable information (PII), and other valuable information accessible after a data breach. Saito is secure against classes of attack which have no defense mechanisms in other chains. This page explains how these mechanisms work
   
 ## [Saito Community](/community) 
   Our community section includes links to our Telegram and Discord channels, non-English community resources, and information on community-led projects and ways to help the network. We also have information on some ongoing public development efforts and ways you can help out.
