@@ -2,7 +2,7 @@
 title: Saito Leagues
 description: 
 published: true
-date: 2023-03-10T02:53:14.771Z
+date: 2023-03-20T00:37:55.383Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-17T05:39:45.930Z
@@ -29,7 +29,7 @@ Following the success of the league’s first season, the Saito Chess Club was l
 
 Champion: Juan Carlos Huet
 
-Second Place: steve fomicron
+Second Place: Steve Fomicron
 
 Third Place: Keruzo
 
