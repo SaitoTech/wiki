@@ -2,7 +2,7 @@
 title: Community Chat Groups and Resources
 description: Community Chat Groups and Resources
 published: true
-date: 2022-12-09T01:30:38.999Z
+date: 2023-03-20T00:25:40.908Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-23T08:16:57.540Z
@@ -50,4 +50,4 @@ We maintain a list of active [community-led projects](/community/projects) that 
 
 ### Contact Us
 
-If you know who you want to write you should be able to figure out their email address (hint: we are all on a first name basis). If you're not sure how to get in touch our public address is info@saito.io but you can skip our first-line filter by reaching out to us at community@saito.io.
+If you know who you want to write you should be able to figure out their email address (Hint: we are all on a first name basis). If you're not sure how to get in touch our public address is info@saito.io but you can skip our first-line filter by reaching out to us at community@saito.io.
