@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-03-22T03:34:43.587Z
+date: 2023-03-22T03:35:40.947Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -33,3 +33,8 @@ There is a good amount of games running on the Saito platform now, and more to c
 |     |[Solitrio](/tech/applications/solitrio)  | [Saito Realm](/tech/applications/realm)  |     | [Settlers of Saitoa](/tech/applications/settlers) |     |
 |     | [Shogun](/tech/applications/Shogun) | [Wordblocks](/tech/applications/wordblocks)  |    | [Saito Mania](/tech/applications/SaitoMania) |     |
 |     | [Spider](/tech/applications/spider)  | [Wuziqi](/tech/applications/wuziqi) |     |  [Twilight Struggle](/tech/applications/twilightStruggle)   |     |
+
+
+<style>
+  .v-main .contents table tr td { border-bottom: 0px; }
+</style>
