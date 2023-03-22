@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-03-22T03:35:40.947Z
+date: 2023-03-22T03:36:32.188Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -35,6 +35,6 @@ There is a good amount of games running on the Saito platform now, and more to c
 |     | [Spider](/tech/applications/spider)  | [Wuziqi](/tech/applications/wuziqi) |     |  [Twilight Struggle](/tech/applications/twilightStruggle)   |     |
 
 
-<style>
-  .v-main .contents table tr td { border-bottom: 0px; }
+<style type="text/javascript">
+td { border-bottom: 0px; }
 </style>
