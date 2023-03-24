@@ -2,7 +2,7 @@
 title: Community Chat Groups and Resources
 description: Community Chat Groups and Resources
 published: true
-date: 2023-03-20T00:25:40.908Z
+date: 2023-03-24T00:57:21.526Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-23T08:16:57.540Z
@@ -31,6 +31,14 @@ This page contains links to our many official and unofficial chat groups, as wel
 - [Saito Merch](https://saitomerch.com) - online shop for discerning Saitozens (Mr. Saito)
 - [Saito FAQs](https://saitofaqs.com/) - best compilation of FAQs and answers ([*0xluminous*](https://mobile.twitter.com/0xluminous))
 - [Saito Hodlers](https://saitohodlers.com/) - easy way to see how early we all are.... ([*0xluminous*](https://mobile.twitter.com/0xluminous))
+
+### Saito Memes Telegram
+
+This telegram group is very informal and the best place to have a good laugh, if the memes are your thing, you should Join now!
+
+### Saito meme channel in Discord!
+
+Discord meme channel
 
 
 **TRANSLATIONS:**
