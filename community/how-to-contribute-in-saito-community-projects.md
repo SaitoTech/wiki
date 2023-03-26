@@ -2,7 +2,7 @@
 title: How to contribute in Saito Community Projects
 description: How to contribute in Saito Community Projects
 published: true
-date: 2023-03-26T04:07:31.644Z
+date: 2023-03-26T05:15:30.520Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-02T07:22:35.389Z
@@ -47,3 +47,6 @@ While we cannot take responsibility for the content in community-generated docum
 ### 5. **Do you have any idea that can be a community project that needs guidance from the team?**
 
 Whether it's a programming or non-programming task, you may email us at community@saito.tech or message anyone from our team through telegram. Our telegram IDs can be found on the [about section -- Meet the team](https://saito.tech/about/) of the Saito website.
+
+### Willing to help?
+If you are a member of the community wishing to help and improve the project, you can contact us to this [Telegram](https://t.me/Darkus0) or DM to this [Twitter](https://twitter.com/Darkus0)
