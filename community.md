@@ -2,7 +2,7 @@
 title: Community Chat Groups and Resources
 description: Community Chat Groups and Resources
 published: true
-date: 2023-03-26T06:09:44.358Z
+date: 2023-03-26T20:19:42.971Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-23T08:16:57.540Z
@@ -34,7 +34,7 @@ This page contains links to our many official and unofficial chat groups, as wel
 
 ### Saito Memes Telegram
 
-This telegram group is very informal and the best place to have a good laugh, if the memes are your thing, you should Join now!
+This [Telegram group](https://t.me/SaitoMemes) is very informal and the best place to have a good laugh, if the memes are your thing, you should Join now!
 
 ### Saito meme channel in Discord!
 
