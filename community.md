@@ -2,7 +2,7 @@
 title: Community Chat Groups and Resources
 description: Community Chat Groups and Resources
 published: true
-date: 2023-03-26T04:04:41.724Z
+date: 2023-03-26T06:09:44.358Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-23T08:16:57.540Z
@@ -38,18 +38,7 @@ This telegram group is very informal and the best place to have a good laugh, if
 
 ### Saito meme channel in Discord!
 
-Discord meme channel
-
-
-**TRANSLATIONS:**
-
-Members of our community have done incredible work translating the Saito whitepaper into other languages. Volunteers are also running chat groups where non-native speakers can learn how Saito works in their own language.
-
-While we cannot take responsibility for the content in community-generated documents and chat groups, this is critical work for our success and we’re grateful to everyone who is helping with this mission. We hope that the following resources are useful to non-native speakers. If you are a native speaker in an underserved community and want to help out with this kind of work, please reach out.
-
-- [French - Saito Whitepaper](https://saito.tech/wp-content/uploads/2022/04/Whitepaper_Saito_FR_V1_2.pdf)
-- [Arabic – Saito Whitepaper](http://org.saito.tech/wp-content/uploads/2021/11/Saito_Arabic_Whitepaper_%D8%A7%D9%84%D9%88%D8%B1%D9%82%D8%A9_%D8%A7%D9%84%D8%A8%D9%8A%D8%B6%D8%A7%D8%A1_%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9_%D9%84_%D8%B3%D8%A7%D9%8A%D8%AA%D9%88.pdf)
-- [Polish - Saito Whitepaper](https://saito.tech/wp-content/uploads/2022/09/Whitepaper_Saito_PL_V1_0.pdf)
+[Discord meme channel](https://discord.gg/CTKezA8FKS)
 
 
 **HOW TO HELP WITH CODING AND MECHANISM DESIGN:**
