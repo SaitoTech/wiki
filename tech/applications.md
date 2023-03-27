@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-03-26T20:31:38.450Z
+date: 2023-03-27T03:22:45.324Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -20,7 +20,7 @@ Saito Applications are modules that plug into the Saito Wallet and use the Saito
 | --- | --- | --- |
 |     | [Saito Arcade](/tech/applications/arcade) | [Red Square](/tech/applications/RedSquare) |
 |     | [Chat](/tech/applications/chat) | [Encrypt](/tech/applications/encrypt) |
-|     | [Video Call](/tech/applications/Video Call) | Registry (DNS) |
+|     | [Video Call](/tech/applications/Video Call) | [Registry (DNS)](/tech/applications/Registry (DNS)) |
 
 ## Games
 
@@ -35,4 +35,4 @@ There is a good amount of games running on the Saito platform now, and more to c
 |     | [Shogun](/tech/applications/Shogun) | [Wordblocks](/tech/applications/wordblocks) |     | [Saito Mania](/tech/applications/SaitoMania) |     |
 |     | [Spider](/tech/applications/spider) | [Wuziqi](/tech/applications/wuziqi) |     | [Twilight Struggle](/tech/applications/twilightStruggle) |     |
 
-td { border-bottom: 0px; }
+td
