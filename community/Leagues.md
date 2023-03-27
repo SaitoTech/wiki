@@ -2,12 +2,13 @@
 title: Saito Leagues
 description: 
 published: true
-date: 2023-03-20T00:37:55.383Z
+date: 2023-03-27T00:13:28.832Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-17T05:39:45.930Z
 ---
 
+![league_banner.png](/league_banner.png)
 # Saito Leagues
 
 The Saito Leagues are community-run recurring events that take place in the [Saito Arcade](/tech/applications/arcade).
@@ -16,14 +17,14 @@ Participants can join at any time. Players are assigned weekly matches but they 
 
 Currently, there are 3 Leagues taking place:
 
-![](/chess_club.jpg =600x) !
+
 ## Saito Chess League
 
 Already in its second season, the Saito Chess League was the first recurring league to be launched by the Saito Community Leagues Council.You can register by filling this [form](https://docs.google.com/forms/d/e/1FAIpQLSdnLw7ucg3eT-LCONK03I0NJT5UYN1nfVo74diAHJAQu9fvDQ/viewform).
 
 Following the success of the league’s first season, the Saito Chess Club was launched for players to come together and play unscheduled matches against other league participants and further raise their scores.
 
-![chess_prizes.png](/chess_prizes.png =500x)
+
 
 ##### First Season Winners:
 
@@ -37,7 +38,7 @@ Third Place: Keruzo
 
 ---
 
-![](/poker_league_nights.jpg =600x)
+
 
 ## Saito Poker League
 
@@ -51,7 +52,7 @@ Players that do qualify for the playoffs will also receive matchups, but they wi
 
 You can register through this [form](https://docs.google.com/forms/d/e/1FAIpQLSeJmQ-nVC4gveACcLaBtNUsPO3AacrwbgtO1P1-ccUdrwg7dg/viewform).
 
-![](/poker_prizes.png =500x)
+
 
 ##### First Season Winners:
 
