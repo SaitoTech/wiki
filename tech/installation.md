@@ -2,7 +2,7 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2023-03-08T02:34:56.978Z
+date: 2023-03-31T02:51:30.057Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -17,6 +17,7 @@ This page contains instructions on how to download and install the NodeJS JavaSc
 * Build tools: git, g++, make, python, tsc
 * Stack: node.js (v.16+), npm (v6+)
 * TypeScript
+* https://github.com/saitotech/saito-lite-rust ( JavaScript )
 
 If you do not have these dependencies installed on your machine, we have instructions on how to install the necessary packages for [MacOS](/tech/installation/mac), [Ubuntu Linux](/tech/installation/linux) and [Windows](/tech/installation/windows). If you run into problems please flag so we can keep these pages updated as system requirements change.
 
@@ -81,6 +82,18 @@ Once you have run `npm start` above it will take a few moments for the Saito sof
 https://localhost:12101/arcade
 
 This will load the Saito Arcade - one of our default applications. If everything goes as plans, you now have a working version of Saito for use in local testing or development. Why not get take your next steps by checking out [tutorial one](https://wiki.saito.io/en/tech/tutorial-1-deploy-install-application) which demonstrates how to build a simple application that attaches data to transactions and broadcasts them into the network.
+
+### For more code and documentation please visit our public GitHub repository:
+
+
+https://github.com/saitotech
+
+This repository includes older branches and versions which are not being maintained. If you are interested in developing on the public site, please make sure you are using the latest two live repositories:
+
+https://github.com/saitotech/saito-lite-rust
+( JavaScript )
+https://github.com/saitotech/saito-rust-workspace
+( Rust )
 
 
 
