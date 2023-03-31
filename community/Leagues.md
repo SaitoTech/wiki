@@ -2,7 +2,7 @@
 title: Saito Leagues
 description: 
 published: true
-date: 2023-03-27T00:13:28.832Z
+date: 2023-03-31T02:54:02.779Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-17T05:39:45.930Z
@@ -64,8 +64,6 @@ Third Place: Saitodler
 
 -----
 
-
-![](/red_imperium_league.jpg =600x)
 
 ## Saito Intro Imperium League
 
