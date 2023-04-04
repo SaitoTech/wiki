@@ -2,7 +2,7 @@
 title: Installation Instructions - Rust
 description: Installation instructions for Saito-Rust
 published: true
-date: 2022-03-23T07:20:05.440Z
+date: 2023-04-04T04:46:59.701Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-23T07:18:36.618Z
@@ -18,6 +18,7 @@ This page contains instructions on how to download and install the current Rust 
 * OS: Ubuntu 20.04 (MacOS instructions)
 * Build tools: git, g++, make
 * Stack: cargo rust (v.1.5.7+)
+* https://github.com/saitotech/saito-rust-workspace
 
 
 ## Installing Saito Rust
