@@ -2,7 +2,7 @@
 title: Community Chat Groups and Resources
 description: Community Chat Groups and Resources
 published: true
-date: 2023-03-26T20:19:42.971Z
+date: 2023-04-30T15:40:37.606Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-23T08:16:57.540Z
@@ -21,7 +21,7 @@ This page contains links to our many official and unofficial chat groups, as wel
 - [French – Saito Telegram Group](https://t.me/Saito_France) (*unofficial*)
 
 - [Philippines – Saito Telegram Group](https://t.me/SaitoPH) (*unofficial*)
-- [Dutch – Saito Telegram Group](https://t.me/saitodutch) (*unofficial*)
+- [Dutch – Saito Telegram Group](https://t.me/saitonltg) (*unofficial*)
 - [Polish – Saito Traders Group](https://t.me/SaitoTradersPL) (*unofficial*)
 <p hidden>- [Chinese – Saito Telegram Group](https://t.me/SaitoNetworkCN) (*unofficial*) </p>
 
