@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2023-03-20T00:43:42.028Z
+date: 2023-05-04T13:37:45.085Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -15,11 +15,9 @@ dateCreated: 2021-11-09T07:50:58.627Z
 .cls-1{fill:rgb(247, 31, 61);}
 </style>
 
-Saito is a layer-1 blockchain that scales by fixing incentive misalignments in the consensus layers of all other blockchains. You can use Saito today to run web3 applications [directly in your browser](https://saito.io/arcade). If you are new to Saito you can also check out our [development roadmap](https://org.saito.tech/saito-roadmap-update/), or start down the Saito rabbit-hole with the [Saito whitepaper](https://saito.io/saito-whitepaper.pdf).
+Saito is a layer-1 blockchain that scales by fixing incentive misalignments in the consensus layers of all other blockchains. You can use Saito today to run web3 applications [directly in your browser](https://saito.io/arcade). If you are new to Saito you can read our [one page explanation](https://wiki.saito.io/en/consensus) of how Saito Consensus works, check out our [development roadmap](https://org.saito.tech/saito-roadmap-update/), or start down the Saito rabbit-hole with the [Saito whitepaper](https://saito.io/saito-whitepaper.pdf).
 
-This wiki is intended as a community-editable resource and knowledge repository. Please feel welcome to contribute by flagging problems or editing pages to include more information that you think might be helpful. 
-
-All pages are stored in markdown in our [Saito Wiki Github Repository](https://github.com/saitotech/wiki). Submit edits by making a push request with your proposed changes or emailing us at community@saito.tech. In order to help organize the site, we've divided the content into three main categories: 
+This wiki is intended as a community-editable resource and knowledge repository. If youd like to contribute, you can find all pages stored in markdown in our [Saito Wiki Github Repository](https://github.com/saitotech/wiki). Submit edits by making a push request with your proposed changes or emailing us at community@saito.tech. In order to help organize the site, we've divided the content into three main categories: 
 
 ## [Saito Consensus](/consensus)
   Saito Consensus includes details on the consensus mechanism that Saito uses to power its blockchain network. It includes discussions of the incentive problems that Saito fixes and explains why solving them requires paying for fee-collection rather than other gameable forms of work like mining and staking. 
