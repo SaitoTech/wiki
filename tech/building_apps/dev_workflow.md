@@ -2,7 +2,7 @@
 title: Dev Workflow
 description: 
 published: true
-date: 2023-08-15T05:34:04.097Z
+date: 2023-08-15T05:41:42.746Z
 tags: 
 editor: markdown
 dateCreated: 2023-08-15T05:28:38.425Z
@@ -15,7 +15,7 @@ dateCreated: 2023-08-15T05:28:38.425Z
 
 ```mermaid
 flowchart LR;
-   A(dev branch) -- fork --> B(feature branch);
+   A(dev branch) -- pull/rebase --> B(feature branch);
    B -- PR --> C{tests};
    C -- Fail --> B;
    C -- Pass --> A;
@@ -28,6 +28,12 @@ flowchart LR;
 
 ### Notes
 
+* New development should start with a pull and rebase:
+```
+   git checkout dev
+   git pull
+   git checkout -b new-branch-name
+```
 * Branches can only be merged to the dev branch via Pull Requests
 * The dev branch can only be merged into main via a Pull Request
 * Tests include linting and style checks
