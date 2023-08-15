@@ -2,7 +2,7 @@
 title: Dev Workflow
 description: 
 published: true
-date: 2023-08-15T05:31:11.386Z
+date: 2023-08-15T05:34:04.097Z
 tags: 
 editor: markdown
 dateCreated: 2023-08-15T05:28:38.425Z
@@ -12,17 +12,19 @@ dateCreated: 2023-08-15T05:28:38.425Z
 
 ## General Dev Pattern
 
+
 ```mermaid
 flowchart LR;
-   A[dev branch] -- fork --> B[feature branch];
-   B -- PR --> C(tests);
+   A(dev branch) -- fork --> B(feature branch);
+   B -- PR --> C{tests};
    C -- Fail --> B;
    C -- Pass --> A;
-   A[dev branch] -- PR --> D(tests);
-   D -- Pass --> E[main branch];
+   A -- PR --> D{tests};
+   D -- Pass --> E(main branch);
    D -- Fail --> A;
-   E --> F(Deploy)
+   E --> F[Deploy]
 ```
+
 
 ### Notes
 
