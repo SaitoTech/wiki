@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2023-09-10T06:46:43.188Z
+date: 2023-09-10T06:46:49.908Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -10,7 +10,7 @@ dateCreated: 2022-02-17T10:09:00.217Z
 
 # Saito Consensus
 
-Saito Consensus eliminates the [sybil attacks](https://github.com/SaitoTech/papers/blob/50e5b243eb4d4062654f2751b056b6bb3fc053b5/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf), [majoritarian attacks](/consensus/math), [collective action problems] [economic problems](/consensus/economics) and other [attack vectors](/consensus/attack-vectors) common in proof-of-work and proof-of-stake class of consensus mechanisms. This page provides a succinct description of how the consensus mechanism works.
+Saito Consensus eliminates the [sybil attacks](https://github.com/SaitoTech/papers/blob/50e5b243eb4d4062654f2751b056b6bb3fc053b5/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf), [majoritarian attacks](/consensus/math), [collective action problems] [economic problems](/consensus/economics) and other [attack vectors](/consensus/attack-vectors) common in proof-of-work and proof-of-stake class of consensus mechanisms.
 
 ## 1. PRODUCING BLOCKS
 
