@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2023-09-10T06:08:15.275Z
+date: 2023-09-10T06:38:11.763Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -23,32 +23,25 @@ The blockchain maintains a "difficulty" for block production that is measured in
 
 ## 2. THE PAYMENT LOTTERY
 
-When a block is produced all of the fees in the block are collected into a network treasury rather than paid out to block producers as is common in other designs. The following mechanism describes how to safely recover those fees and distribute them to participants in the network.
+When a block is produced all of the fees in the block are burned. Miners then start hashing to find a golden ticket: a hash puzzle that will allow consensus to issue a payout.
 
-Each block contains a implicit proof-of-work challenge. When a block is produced miners start hashing to find a valid solution ("golden ticket"). This computational puzzle works similarly to that in Bitcoin, save that the mechanism is designed so that solutions cannot be forged or stolen in-transit.
+If a golden ticket for block N is included in block N+1, consensus issues a reward worth the average amount of fees burned per block over the last epoch. Half are paid to the miner that found the golden ticket and half are issued to a routing node.
 
-If a golden ticket for block N is included in block N+1, the network issues two payouts: the first to the miner that found the solution and the second to a random node in the routing network. The amount of the mining payout is 50% of the fees included in the previous block. The amount of the router payout is 50% of the fees included in the previous block.
+The routing node is selected by using the costly hash to pick a random transaction from the previous block (weighted by its share of fees in the block). The costly hash is then hashed again to generate a second random number that is used to select a random node from the routing path of the winning transaction (weighted by its share of the aggregate routing work held by all nodes in that routing path).
 
-This process repeats block by block as Saito charges nodes (in burned fees) for the right to produce blocks and then again (in energy costs) for the right to unburn and distribute the payments.
+This process repeats block by block. Nodes burn money to produce blocks, and then burn energy to release payments, creating a game that is profitable for honest nodes who burn user-paid fees, but costly for attackers who must spend and then burn their own money to outpace the honest nodes and prevent their work being added to the longest-chain.
 
-## 3. SECURE ROUTER SELECTION
+## 3. IMPROVING SECURITY
 
-The winning routing node is selected using the random number provided by the golden ticket which solves the difficulty puzzle. That number is used to select a transaction from the previous block with each transaction's chance of selection being proportional to its share of fees contributed to the block. The random number which selected the transaction is then hashed again to select a random node from the routing path of that transaction. Each node in the routing path has a chance of winning this proportional to its share of the aggregate routing work held by all members of that routing path.
+The "Classic Saito" design produces one golden ticket every two blocks on average and is secure at the cost of deflation from unsolved blocks.
 
-If a transaction paying a 10 SAITO fee passes through two relay nodes before its inclusion in a block by a third routing node (i.e. block producer), the first relay node will have 10 / 17.5 percent (57%) of aggregate routing work, the second will have 5 / 17.5 percent (29%) of aggregate routing work, and the block producer will havea  2.5 / 17.5 percent (14%) share. If consensus permits block producers to include transactions without valid routing paths and in the event the winning transaction has no routing path, the sender of the transaction should be assigned 100% of the routing work in that transaction.
+To avoid deflation we introduce recursive payouts and a ATR payout. Whenever a golden ticket is included in block N we issue the payouts for block N-1 as described above. If block N-1 did not contain a golden ticket, we recurse to block N-2 and repeat the process to issue a router payout for that block.
 
-The "Classic Saito" design targets a difficulty where the network can produce one golden ticket every two blocks on average and is secure at the cost of deflation from unsolved blocks.
+The missing "mining" payout from block N-2 is collected by consensus for eventual distribution to the UTXO holders in the network as part of the ATR mechanism described below.
 
+To increase security further, consensus maintains a smoothed average of the fees included over the last epoch. In the event that the block reward spikes in serious excess of this smoothed average (current target 1.25) the payment for both miner and router is capped at the target and the excess portion is burned for good. This adds a deflationary burn to the network which only kicks in when the network is under attack.
 
-## 4. IMPROVING THE BASE MECHANISM
-
-To prevent attackers gaming the lottery mechanism, we have consensus maintain a smoothed average of the fees included over the last epoch. In the event that the block reward is seriously in excess of this smoothed average (current target 1.25) the payment for both miner and router is capped at the target and the excess portion is burned for good.
-
-To avoid deflation we introduce recursive payouts. Whenever a golden ticket is included in block N+1 we issue the payouts for block N as described above. If block N did not contain a golden ticket, we recurse to block N-1 and use our golden ticket to select a winning routing node for that black. This process can be repeated for all previously unpaid blocks, but it is preferable not to recurse more than two blocks back if difficulty is targeting 1 solution every 2 blocks.
-
-Saito adds a payout to the UXTO holders in the network that is processed during the course of ATR processing (see below). This payout is funded by fees intended for the "mining payout" which is left uncollected in recursive block payouts described above.
-
-## 5. AUTOMATIC TRANSACTION REBROADCASTING (ATR)
+## 4. AUTOMATIC TRANSACTION REBROADCASTING (ATR)
 
 Saito divides the blockchain into "epochs" of N blocks. If the latest block is 500,000 and N is 100,000 blocks, then the current epoch streches from block 400,001 onwards.
 
@@ -58,15 +51,15 @@ The criteria for rebroadcasting is not only that the UTXO is still unspent, but 
 
 The new UTXO may be greater to or less than the value of the previous UTXO, with the exact balance determined by market forces rather than hardcoded by developers. In addition to the economic and security benefits of the ATR payout, we note that permanent data storage becomes possible through this mechanism.
 
-## 6. ADVANCED SAITO
+## 5. ADVANCED SAITO
 
-Additional mechanisms that increase network robustness include: 
+Additional mechanisms which increase network robustness:
 
-Creating wrap-around spam resistance to block flooding attacks by requiring all valid chains to contain N golden tickets over the last M blocks, such that forks are considered invalid unless they meet minimal hashing conditions.
+Saito requires all valid chains to contain N golden tickets over the last M blocks. Forks are considered invalid unless they meet minimal hashing requirements.
 
-Routing and congestion policies which leverage block-level signatures and allow nodes to police their peers to ensure that their peers are following sensible routing policies and not spamming the network or relaying malicious blocks.
+Routing policies at the block level allow nodes to ensure peers are following sensible routing policies and not spamming the network or relaying malicious blocks.
 
-Requirements for block producers to provide stake (making tokens unspendable for X blocks) when producing blocks, increasing the cost of some kinds of work-reuse and spamming attacks. Slashing these locked-up tokens is possible in some situations if the same tokens are staked for blocks within a set depth of each other.
+Block producers can be required to affix tokens (making them unspendable for X blocks) when producing blocks. Slashing these locked tokens is possible in some situations.
 
 
 ### APPENDIX I: SAITO TERMINOLOGY
