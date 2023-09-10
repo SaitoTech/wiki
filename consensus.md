@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2023-06-29T01:14:49.606Z
+date: 2023-09-10T06:08:15.275Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -10,15 +10,16 @@ dateCreated: 2022-02-17T10:09:00.217Z
 
 # Saito Consensus
 
-This page offers a straight-forward description of how Saito Consensus works. Separate pages explaining how Saito eliminates common [attack vectors](/consensus/attack-vectors), a brief [math paper](/consensus/math) on cost-of-attack properties and [open proposals](/consensus/proposals) on technical implementation. You may also be interested in the [economic problems](/consensus/economics) Saito Consensus solves and [critical videos](/consensus/videos) covering the mechanism.
+Saito Consensus eliminates the [sybil attacks](https://github.com/SaitoTech/papers/blob/50e5b243eb4d4062654f2751b056b6bb3fc053b5/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf), [majoritarian attacks](/consensus/math) and other [attack vectors](/consensus/attack-vectors) common in proof-of-work and proof-of-stake class of consensus mechanisms. You may also be interested in the [economic problems](/consensus/economics) Saito Consensus solves and [critical videos](/consensus/videos) covering the mechanism.
 
 ## 1. PRODUCING BLOCKS
 
-When users send transactions into the network they add a cryptographic routing signature that specifies the first-hop node(s) to which they are sending their transaction(s). First-hop nodes add similar routing signatures as they propagate those transactions to their peers. Whichever version of the transaction is included in a block will have a chain of routing signatures unique to the path it took to reach the block producer.
+When users send transactions into the network they add cryptographic routing signatures that specifies the first-hop node(s) to which they are sending their transaction(s). These nodes add similar routing signatures as they propagate these transactions.
 
-The blockchain maintains a "difficulty" for block production that must be met by including a set amount of routing work in the block. Blocks which do not contain this amount of routing work are invalid according to consensus.
+Transactions without a valid routing path contain no routing work. The amount of routing work contained in other transactions depends on the total fee paid by the transaction and the number of nodes in the routing path. For details on how routing work is calculated, please see this page.
 
-The amount of routing work in a block is the aggregate amount of "routing work" available for the block producer in each individual transaction in the block. This is calculated as the value of the transaction fee halved by each subsequent hop beyond the first that the transaction has taken to reach the block producer. Transactions without a valid routing path connecting the sender and block producer provide no routing work. It is also possible to simply specify that block producers may not include transactions that do not contain a valid routing path.
+The blockchain maintains a "difficulty" for block production that is measured in routing work. Blocks which do not contain the required amount of routing work are invalid according to consensus rules.
+
 
 ## 2. THE PAYMENT LOTTERY
 
