@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2023-09-10T06:38:11.763Z
+date: 2023-09-10T06:38:56.038Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -66,7 +66,7 @@ Block producers can be required to affix tokens (making them unspendable for X b
 
 **Paysplit:** a variable between 0 and 1 that determines the percentage of the block reward that is allocated to mining nodes.
 
-**Powsplit:** a variable between 0 and 1 that determines the target percentage of blocks solved through golden tickets.
+**Powsplit:** a variable between 0 and 1 that determines the target percentage of blocks desired to contain golden tickets.
 
 **Golden Ticket:** a transaction from a miner containing a valid solution to the computational lottery puzzle embodied in the previous block hash.
 
