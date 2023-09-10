@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2023-09-10T06:38:56.038Z
+date: 2023-09-10T06:41:05.749Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -14,7 +14,7 @@ Saito Consensus eliminates the [sybil attacks](https://github.com/SaitoTech/pape
 
 ## 1. PRODUCING BLOCKS
 
-When users send transactions into the network they add cryptographic routing signatures that specifies the first-hop node(s) to which they are sending their transaction(s). These nodes add similar routing signatures as they propagate these transactions.
+When users send transactions into the network they add cryptographic routing signatures that specify the first-hop node(s) to which they are sending their transaction(s). These nodes add similar routing signatures as they propagate these transactions.
 
 Transactions without a valid routing path contain no routing work. The amount of routing work contained in other transactions depends on the total fee paid by the transaction and the number of nodes in the routing path. For details on how routing work is calculated, please see this page.
 
