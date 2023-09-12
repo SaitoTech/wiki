@@ -20,6 +20,8 @@ As every hop in a routing path lowers the profitability of every single node on 
 
 Readers who believe that sybils may prevent communications between nodes are reminded that the blockchain can serve as a tool to communicate with distant peers as necessary.
 
+An expanded description and link to formal proof of Saito's *Sybil Proof*ness can be found [here](/consensus/sybil-proof).
+
 ## 2. TRANSACTION HOARDING
 All blockchains which give transaction fees directly to the nodes that produce blocks are vulnerable to transaction-hoarding attacks.
 
