@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2023-09-10T06:47:01.517Z
+date: 2023-09-12T11:38:17.606Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -43,13 +43,11 @@ To increase security further, consensus maintains a smoothed average of the fees
 
 ## 4. AUTOMATIC TRANSACTION REBROADCASTING (ATR)
 
-Saito divides the blockchain into "epochs" of N blocks. If the latest block is 500,000 and N is 100,000 blocks, then the current epoch streches from block 400,001 onwards.
+Saito divides the blockchain into "epochs" of N blocks. Once a block falls out of the current epoch, its unspent transaction outputs (UTXO) become unspendable. But any UTXO which meet rebroadcast criteria must be re-included in the next block in ATR transactions. These transactions include the original transaction as embedded data, but provide new UTXO spendable by the original address.
 
-Once a block falls out of the current epoch, its unspent transaction outputs (UTXO) are invalid by consensus rules. Any UTXO from that block which meet rebroadcast criteria must be re-included by the producer of the next block in the form of an "automatic transaction rebroadcasting" (ATR) transaction. These ATR transactions include the original transaction as embedded data, but provide new UTXO spendable by the original address.
+The criteria for rebroadcasting is that the UTXO is unspent and contains enough tokens to pay a rebroadcasting fee. The rebroadcasting fee is equal to or greater than the average fee per byte paid by new transactions over the previous epoch.
 
-The criteria for rebroadcasting is not only that the UTXO is still unspent, but that the UTXO itself contains enough tokens to pay a rebroadcasting fee. This rebroadcasting fee should be equal to or greater than the average fee per byte paid by new transactions over the previous epoch. The UTXO may also be issued a payout as described in the section above, where the earnings are proportional to the UTXO's share of the unspent tokens circulating around the blockchain.
-
-The new UTXO may be greater to or less than the value of the previous UTXO, with the exact balance determined by market forces rather than hardcoded by developers. In addition to the economic and security benefits of the ATR payout, we note that permanent data storage becomes possible through this mechanism.
+The UTXO may also be issued a staking payout on rebroadcasting. This improves censorship-resistance by ensuring attackers who prevent users from making transactions are transferring them income. In addition to the economic and security benefits of this approach, we note that permissionless and permanent data storage finally becomes possible and economically sustainable through this mechanism.
 
 ## 5. ADVANCED SAITO
 
