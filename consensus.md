@@ -10,7 +10,7 @@ dateCreated: 2022-02-17T10:09:00.217Z
 
 # Saito Consensus
 
-Saito Consensus eliminates the [sybil attacks](https://github.com/SaitoTech/papers/blob/50e5b243eb4d4062654f2751b056b6bb3fc053b5/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf), [majoritarian attacks](/consensus/math), [collective action problems](/consensus/economics) and other [attack vectors](/consensus/attack-vectors) common in proof-of-work and proof-of-stake class of consensus mechanisms.
+Saito Consensus eliminates the [sybil attacks](/consensus/sybil-proof), [majoritarian attacks](/consensus/math), [collective action problems](/consensus/economics) and other [attack vectors](/consensus/attack-vectors) common in proof-of-work and proof-of-stake class of consensus mechanisms.
 
 ## 1. PRODUCING BLOCKS
 
