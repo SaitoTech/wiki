@@ -2,7 +2,7 @@
 title: Tasks
 description: this would all be incredibly helpful...
 published: true
-date: 2022-05-18T07:20:25.456Z
+date: 2023-09-13T07:42:42.015Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-25T10:02:25.251Z
@@ -40,7 +40,7 @@ If you are interested in helping us look into this, please note that any techniq
 ## N > 2 Diffie Hellman Key Exchange
 Our ```encrypt``` module automates the process of creating a shared secret between two browsers. The technique we use is the Diffie-Hellman Key Exchange, which is the same sort of cryptographic exchange that secures online banking in the traditional Internet. The major difference is that doing this on Saito is better as there are no Man-In-The-Middle attacks.
 
-It is possible to do this sort of exchange between more than 2 keys. The number of "transactions" needed to complete the process increases exponentially as the number of participants increase, but there is no reason we can't have groups of arbitrary size protected. This is more hardcore work involving underlying cryptographic, but having this done would be tremendously useful in speeding up group chat and group gaming functions.
+It is possible to do this sort of exchange between more than 2 keys. The number of "transactions" needed to complete the process increases exponentially as the number of participants increase, but there is no reason we can't have groups of arbitrary size protected. This is more hardcore work involving underlying cryptography, but having this done would be tremendously useful in speeding up group chat and group gaming functions.
 
 ## Virtual Machines and Base Scripting
 
