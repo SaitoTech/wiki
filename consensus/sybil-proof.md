@@ -1,3 +1,13 @@
+---
+title: sybil-proof
+description: 
+published: true
+date: 2023-09-13T00:09:02.736Z
+tags: 
+editor: markdown
+dateCreated: 2023-09-12T04:54:16.592Z
+---
+
 ## Proof of *Sybil-Proof*
 
 For complete and formal proof, please read the paper: [*A Simple Proof of Sybil Proof.*](https://github.com/SaitoTech/papers/blob/main/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf)
@@ -8,7 +18,9 @@ Per [Wikipedia](https://en.wikipedia.org/wiki/Sybil_attack): "A Sybil attack is 
 
 As argued in *On Bitcoin and Red Ballons* [[Babaioff et al., 201]](https://arxiv.org/abs/1111.2626) the problem is generally considered unsolvable, since giving other block producers access to transaction fees always gives them an advantage, and allowing arbitrary claims on fees allows Sybils to earn multiple, unwarranted rewards for fake relays.
 
-Saito proves that by reducing the work available to produce blocks with each 'hop' in a transaction's relay path, that Sybil nodes and nodes who otherwise add unnecessary 'hops' on their way to block producers are less profitable and out-compete by nodes who only add hops to reduce propagation time to block producers. The basic mathematics is demonstrated below.
+This poses a problem for blockchain networks which wish to remain open and secure against converging power at scale. If, as argued by experts in the field, Sybilling on transaction propagation is impossible to defend against, blockchain networks are doomed to fall into patterns of hoarding which reward the largest nodes in the network and introduce economic problems as they shelter transactions rather than share them - even if sharing would increase overall efficiency.
+
+Saito proves that by reducing the work available to produce blocks with each 'hop' in a transaction's relay path, that Sybil nodes and nodes who otherwise add unnecessary 'hops' on their way to block producers are less profitable and out-compete by nodes who only add hops to reduce propagation time to block producers. The mechanism and basic mathematics of the proof are demonstrated below.
 
 ### SECURE ROUTER SELECTION
 
@@ -46,19 +58,19 @@ Note that $A$ is free at any time to produce a block with the version of the tra
 
 | Fee | $A$ routing work | $B$ routing work | Total Routing Work
 ---|---|---|---|
-$f$ | $f$ | $f \over 2$ | $3f \over{2}$
+$f$ | $f \longrightarrow$ | $f \over 2$ | $3f \over{2}$
 
 For the block containing just the single transaction in the table above, the total fees equals $F = f$, thus the probability of that transaction being chosen is $f \over{F}$$=1$, and there is only a single term for each sum of probabilities. The routing reward is ${F \over 2} = {f \over 2}$.
 
-The *expected values*, $v(X)$, are as follows:
+The *expected values* in the honest case, $v_h(X)$, are as follows:
 
 For *node* $A$:
 
-$$ v(A) = ({F \over 2}) ({f \over F}) ({f \div {3f \over 2}})  = ({F \over 2})( {2f \over 3f})  = {f \over 3}$$
+$$ v(A)_h = ({F \over 2}) ({f \over F}) ({f \div {3f \over 2}})  = ({F \over 2})( {2f \over 3f})  = {f \over 3}$$
 
 And for *node* $B$:
 
-$$ v(B) = ({F \over 2}) ({f \over F}) ({ {f\over2} \div {3f \over 2}})  = ({F \over 2})( {f \over 3f})  = {f \over 6}$$
+$$ v(B)_h = ({F \over 2}) ({f \over F}) ({ {f\over2} \div {3f \over 2}})  = ({F \over 2})( {f \over 3f})  = {f \over 6}$$
 
 If this behavior is repeated and the parameters do not change, *node* $A$ can expect to earn $f\over3$ while *node* $B$ can expect to earn $f\over 6$.
 
@@ -68,37 +80,49 @@ If *node* $B$ decides to Sybil the transaction sent to him by *node* $A$, the re
 
 | Fee | $A$ routing work | $B$ routing work | $B_2$ routing work | Total Routing Work
 ---|---|---|---|---|
-$f$ | $f$ | $f \over 2$ | $f \over 4$ | $7f \over{4}$
+$f$ | $f \longrightarrow$ | ${f \over 2} \longrightarrow$ | ${f \over 4}$ | $7f \over{4}$
 
 Crucially, *node* $B$ has also diminished his block production ability from $f \over 2$ to $f \over 4$. If $B$ wants to include  this Sybilled transaction which pays him more, he must supplement his block with the routing work he destroyed when adding a hop ($f \over 4$) - that block looks like this:
 
 | Fee | $A$ routing work | $B$ routing work | $B_2$ routing work | Total Routing Work
 ---|---|---|---|---|
-$f$ | $f$ | $f \over 2$ | $f \over 4$ | $7f \over{4}$
+$f$ | $f \longrightarrow$ | ${f \over 2} \longrightarrow$ | ${f \over 4}$ | $7f \over{4}$
 $f \over 4$ | 0 | $f \over 4$ | 0 | $f \over 4$
 
-The total block reward is now $F = f + {f\over 4} = {5f \over 4}$ and the routing reward is ${F \over 2} = {5f \over 8}$. The expected value for *node* $A$ is now:
+The total block reward is now $F = f + {f\over 4} = {5f \over 4}$ and so the routing reward is ${F \over 2} = {5f \over 8}$. In the *Sybil* case, the expected values $v_s(X)$ are:
 
 $$
-\begin{align}
-v(A) &= ({F \over 2}) \ \ [ \ (f \div {5f \over 4} ) (f \div {7f \over 4}) + ({f \over 4} \div {5f \over 4 }) ({0 \div {f \over 2} })\ ]\\
-% & = ({5f \over 8}) \  [ \ (f \div {5f \over 4} ) (f \div {7f \over 4}) + 0 \ ]\\
-& = ({5f \over 8}) \  [ \ ({4f \over 5f} ) ( {4f \over 7f}) + 0 \ ]\\
- v(A) &= ({5f \over 8}) ({4 \over 5} ) ({4 \over 7})  = {2f \over 7}\\
-\end{align}
+v_s(A) = ({F \over 2}) ( (f \div {5f \over 4} ) (f \div {7f \over 4}) + ({f \over 4} \div {5f \over 4 }) ({0 \div {f \over 2} }) )
 $$
 
-*Node* $B$'s expected value must take into account $B$'s unique cost in the form of the fee *node* $B$ supplemented to remain competitive with block work $-{f \over 4}$. $B$'s expected value is now:
+$$
+= ({5f \over 8}) ( ({4f \over 5f} ) ( {4f \over 7f}) + 0 )
+$$
 
 $$
-\begin{align}
-v(B) &= ({F \over 2}) \ \ [ \ (f \div {5f \over 4} ) (  ( {f \over 2} + {f \over 4} )  \div {7f \over 4}) + ({f \over 4} \div {5f \over 4 }) ({{f \over 2} \div {f \over 2} })\ ] - {f \over 4}\\
-%& = ({5f \over 8}) \  [ \ ( f \div {5f \over 4} ) ( {f \over 4} \div {7f \over 4}) + 1 \ ] - {f \over 4}\\
-& = ({\cancel{5}f \over 8}) \  [ \ ({4f \over \cancel{5}f} ) ( {3f \over 7f}) + {1 \over \cancel{5}} \ ] - {f \over 4}\\
- v(B) &= ({f \over 8})  ({12 \over 7} + 1 ) - {f \over 4} = ({f \over 8}) ({19 \over 7}) - {f \over 4} \\ 
- &= ({19f \over 56}) - {14f \over (14(4))} = {5f \over 56}
-\end{align}
+v_s(A) = ({5f \over 8}) ({4 \over 5} ) ({4 \over 7})  = {2f \over 7}\\
 $$
+
+
+
+*Node* $B$'s expected value must take into account $B$'s unique cost in the form of the fee *node* $B$ supplemented to remain competitive with block work $-{f \over 4}$. $B$'s expected value after Sybilling is now:
+
+$$
+v_s(B) = ({F \over 2}) ( \ (f \div {5f \over 4} ) (  ( {f \over 2} + {f \over 4} )  \div {7f \over 4}) + ({f \over 4} \div {5f \over 4 }) ({{f \over 2} \div {f \over 2} })\ ) - {f \over 4}
+$$
+
+$$
+= ({5f \over 8})   ( ({4f \over 5f} ) ( {3f \over 7f}) + {1 \over 5} ) - {f \over 4}
+$$
+
+$$
+= ({f \over 8})  ({12 \over 7} + 1 ) - {f \over 4} = ({f \over 8}) ({19 \over 7}) - {f \over 4}
+$$
+
+$$
+v(B)_x = ({19f \over 56}) - {14f \over (14(4))} = {5f \over 56}
+$$
+
 
 #### Comparing Results
 
@@ -124,5 +148,16 @@ It turns out  this is exactly the quantity of burn fee from the supplemental tra
 
 This additional burned fee ends up as a bonus to the mining and staking rewards (as expected value for miners and stakers), which make complimentary attacks on the Golden Ticket mechanism more expensive - routing attackers' wasted value enhances re-org security.
 
+### Are Sybils Really Identified?
+
+One common objection to the the claim that Saito's router reward scheme is Sybil Proof is to notice that it cannot tell the difference between Sybils adding an extra hop to extract value and honest nodes performing sub-optimally. Saito is secure against Sybils, however, precisely because it is able to identify their behavior as a generalized  form of sub-optimal routing outcomes.
+
+This in fact makes Saito's defense against extractive behavior stronger than if it was specifically Sybil Proof, as sub-optimal outcomes which it is secure against *includes* Sybils.
+
+* The fact that Sybils fall under a broader category of behavior in Saito than simply self-cloning does not prevent Sybils from being punished and driven out.
+
+* This broader category of behaviors punishes sub-optimal outcomes more generally. Sybils and non-competitive nodes both extract reward without a similar provision of resources for the network.
+
+Saito's reward scheme, more generally, is *proofed* against sub-optimal routing behavior in favor of efficient routing and block production. Sybils may not be distinct from non-competitive nodes, but as neither can extract undue rewards (and neither is desirable for an economically scalable and sustainable network), the network has security against both.
 
 
