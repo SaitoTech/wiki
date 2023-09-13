@@ -1,8 +1,8 @@
 ---
-title: sybil-proof
+title: Sybil-Proof
 description: 
 published: true
-date: 2023-09-13T00:09:02.736Z
+date: 2023-09-13T00:13:19.664Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
