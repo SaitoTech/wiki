@@ -2,7 +2,7 @@
 title: Sybil-Proof
 description: 
 published: true
-date: 2023-09-13T00:13:19.664Z
+date: 2023-09-13T02:32:58.018Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
@@ -16,7 +16,7 @@ For complete and formal proof, please read the paper: [*A Simple Proof of Sybil 
 
 Per [Wikipedia](https://en.wikipedia.org/wiki/Sybil_attack): "A Sybil attack is a type of attack on a computer network service in which an attacker subverts the service's reputation system by creating a large number of pseudonymous identities and uses them to gain a disproportionately large influence." In blockchain, the relevant and oustanding avenue for Sybilling is to do with claims on rewards for propagating transactions into the distributed network.
 
-As argued in *On Bitcoin and Red Ballons* [[Babaioff et al., 201]](https://arxiv.org/abs/1111.2626) the problem is generally considered unsolvable, since giving other block producers access to transaction fees always gives them an advantage, and allowing arbitrary claims on fees allows Sybils to earn multiple, unwarranted rewards for fake relays.
+As argued in *On Bitcoin and Red Ballons* [[Babaioff et al., 201]](https://arxiv.org/abs/1111.2626) the problem was historically considered unsolvable, since giving other block producers access to transaction fees always gives them an advantage, and allowing arbitrary claims on fees allows Sybils to earn multiple, unwarranted rewards for fake relays.
 
 This poses a problem for blockchain networks which wish to remain open and secure against converging power at scale. If, as argued by experts in the field, Sybilling on transaction propagation is impossible to defend against, blockchain networks are doomed to fall into patterns of hoarding which reward the largest nodes in the network and introduce economic problems as they shelter transactions rather than share them - even if sharing would increase overall efficiency.
 
