@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2023-09-13T02:47:05.980Z
+date: 2023-09-13T02:48:41.054Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -37,6 +37,6 @@ There is a good amount of games running on the Saito platform now, and more to c
 
 ## Build Your Own
 
-Those interested in building on Saito should start [here](/tech/building_apps). The SDK used to make the all apps on this page is fully available for anyone to begin using. It has built-in functions to interact with the blockchain, perform basic cryptography, establish peer-to-peer connections and more. Applications are built using Javascript and run in the browser - the team is thrilled to see what the community builds and always willing to help developers.
+Those interested in building on Saito should start [here](/tech/building_apps). The SDK used to make the all apps on this page is fully available for anyone to begin using. It has built-in functions to interact with the blockchain, perform basic cryptography, establish peer-to-peer connections and more. Applications are built using Javascript and run in the browser.
 
-Many of the beloved Saito apps like [Beleaguered Castle](/tech/applications/BeleagueredCastle) and even [Red Square](/tech/applications/RedSquare) were built or spurred to life by community members. Any developers seeking assistance or who want to offer feedback can reach the lead developers on [Red Square](https://saito.io/redsquare/), [Saito Community Chat](https://saito.io/chat/), [Saito Community Telegram](https://t.me/SaitoIO) or make an [issue](https://github.com/SaitoTech/saito-lite-rust/issues) on the Github.
+Many of the beloved Saito apps like [Beleaguered Castle](/tech/applications/BeleagueredCastle) and even [Red Square](/tech/applications/RedSquare) were built or spurred to life by community members. Any developers seeking assistance or who want to offer feedback can reach the lead developers on [Red Square](https://saito.io/redsquare/), [Saito Community Chat](https://saito.io/chat/), [Saito Community Telegram](https://t.me/SaitoIO) or make an [issue](https://github.com/SaitoTech/saito-lite-rust/issues) on the Github. The team is thrilled to see what the community builds and values developer feedback.
