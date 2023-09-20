@@ -2,7 +2,7 @@
 title: 51% Attacks and How Saito Eliminates Them
 description: 
 published: true
-date: 2023-09-20T01:48:26.220Z
+date: 2023-09-20T01:50:04.528Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:48:26.220Z
@@ -48,7 +48,7 @@ The objective measure of work required for Saito block production is special in 
 
 Whereas in other blockchains, consensus nodes must commit to some recent fork in the blockchain in order to start producing the work which may earn them the right to build on top of that fork, consensus nodes in Saito can produce work and earn rewards *without even knowing* what the blockchain looks like. This is achieved through *routing work.*
 
-In Saito, transactions are signed by senders such thath the right claim rewards from it are given to relay nodes. This sharing of rewards can come directly from the author of the transaction, or from a relay node who wishes to propagate a transaction they were given. The more 'routing signatures' a transaction has, the more its reward is split between the routers and the less block work it can contribute to a block. Relevant to 51% attacks, the important aspect of this system is that the source of valid block work, transaction fees, *do not require a commitment to any particular fork.*
+In Saito, transactions are signed by senders such that the right claim rewards from it are given to relay nodes. This sharing of rewards can come directly from the author of the transaction, or from a relay node who wishes to propagate a transaction they were given. The more 'routing signatures' a transaction has, the more its reward is split between the routers and the less block work it can contribute to a block. Relevant to 51% attacks, the important aspect of this system is that the source of valid block work, transaction fees, *do not require a commitment to any particular fork.*
 
 - See [this](https://wiki.saito.io/en/consensus) article or the [whitepaper](https://saito.io/saito-whitepaper.pdf) for a more complete description of routing work.
 
@@ -58,8 +58,8 @@ In Saito, a node with 51% of the current transaction fees must use those fees to
 
 During an attempted attack, consensus nodes who were not allowed to make blocks accumulate work the longer they are censored, and the attacker quickly loses their work as they consume it to produce consecutive blocks, while the rest of the network's store of work grows and grows - both forces serving to reduce the length of the attack.
 
-If an attacker in Saito wants to produce consecutive blocks, they must use up their transaction fees in place of the honest network's fees. Since producing new blocks does not remove the valid work within the transaction fees of all other consensus nodes, honest nodes can maintain their *accumulation* of work, which cannot be eliminated just because a new block is made - this preservation of work which is independent of blocks is not possible in PoW or PoS, and is the missing peice to eliminating 51% attacks in any consensus protocol.
+If an attacker in Saito wants to produce consecutive blocks, they must use up their transaction fees in place of the honest network's fees. Since producing new blocks does not remove the valid work within the transaction fees of all other consensus nodes, honest nodes can maintain their *accumulation* of work, which cannot be eliminated just because a new block is made - this preservation of work which is independent of blocks is not possible in PoW or PoS, and is the missing piece to eliminating 51% attacks in any consensus protocol.
 
 Since the amount of work the honest network accumulates can only grow the longer they are censored, the amount of work the attacker must produce to keep censoring them also grows without bound, no matter if the attacker has 51% of inbound fees or 99%.
 
-A rigorous mathematical demonstration of Saito's elimination of the 51% attack can be found [here](https://wiki.saito.io/consensus/math).
+- A rigorous mathematical demonstration of Saito's elimination of the 51% attack can be found [here](https://wiki.saito.io/consensus/math).
