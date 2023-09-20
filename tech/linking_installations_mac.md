@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2023-09-20T20:44:09.882Z
+date: 2023-09-20T20:44:16.428Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
@@ -73,7 +73,7 @@ npm link
 #### 1. Navigate to the saito-js directory
 
 
-#### 2 Proceed with Installation  and creating a symbolic link for saito-js
+#### 2 Proceed with Installation  and 
 ```
 npm install
 ```
@@ -85,6 +85,7 @@ build
 ```
 npm run build
 ```
+creating a symbolic link for saito-js
 ```
 npm link
 ```
