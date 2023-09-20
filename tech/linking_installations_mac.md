@@ -2,14 +2,14 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2023-09-20T20:33:03.059Z
+date: 2023-09-20T20:38:41.527Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
 ---
 
 
- # Overview
+# Mac (M1) Specific Installations
 This guide provides a detailed walkthrough on how to link the saito-lite-rust repository to the saito-wasm locally via the saito-js wrapper. This process leverages the npm link command.
 
 Note: The saito-lite-rust (SLR) repository by default comes bundled with the saito-js library in its package.json. If, however, you wish to manually establish this linkage, the instructions below will guide you.
@@ -22,15 +22,6 @@ Before starting, ensure:
 
 - [saito-lite-rust](https://github.com/SaitoTech/saito-lite-rust), [saito-js](https://github.com/SaitoTech/saito-rust-workspace), and [saito-wasm](https://github.com/SaitoTech/saito-rust-workspace) repositories are cloned on your local machine.
 
-### Mac (M1) Specific Installations
-
-If you're using a Mac with the M1 chip, follow these additional steps:
-
-#### 1. Set Environment Variables
-
-```bash
-export CC=/opt/homebrew/opt/llvm/bin/clang
-```
 
 
 
@@ -48,7 +39,26 @@ npm link
 ```
 
 ## Step 2: Link saito-js to saito-wasm
+
 #### Navigate to the saito-js directory
+If you're using a Mac with the M1 chip, follow these additional steps:
+
+#### 1. Set Environment Variables
+
+```bash
+export CC=/opt/homebrew/opt/llvm/bin/clang
+```
+#### 2. Install LLVM: This provides the necessary tools, including clang.
+
+```
+brew install llvm
+```
+
+#### 3 Install wasm-pack: This is a crucial tool for compiling Rust to WebAssembly.
+
+```
+npm i -g wasm-pack
+```
 
 #### Link to saito-wasm build and create a symbolic link for saito-js
 ```
