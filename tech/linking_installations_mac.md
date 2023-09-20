@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2023-09-20T20:31:08.392Z
+date: 2023-09-20T20:33:03.059Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
@@ -19,7 +19,20 @@ Note: The saito-lite-rust (SLR) repository by default comes bundled with the sai
 Before starting, ensure:
 
 - Node.js and npm are installed.
+
 - [saito-lite-rust](https://github.com/SaitoTech/saito-lite-rust), [saito-js](https://github.com/SaitoTech/saito-rust-workspace), and [saito-wasm](https://github.com/SaitoTech/saito-rust-workspace) repositories are cloned on your local machine.
+
+### Mac (M1) Specific Installations
+
+If you're using a Mac with the M1 chip, follow these additional steps:
+
+#### 1. Set Environment Variables
+
+```bash
+export CC=/opt/homebrew/opt/llvm/bin/clang
+```
+
+
 
 ## Installation Guide
 
