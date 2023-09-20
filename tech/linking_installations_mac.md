@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2023-09-20T20:44:16.428Z
+date: 2023-09-20T20:47:35.488Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
@@ -57,13 +57,15 @@ npm i -g wasm-pack
 CC=/opt/homebrew/opt/llvm/bin/clang AR=/opt/homebrew/opt/llvm/bin/llvm-ar wasm-pack build --target web --out-dir wasm_build/deps/pkg/
 ```
 
-#### 6. Create a symbolic link for saito-wasm in the global node_modules after installation and building
+#### 6. Install
 ```
 npm install
 ```
+#### 7. build
 ```
 npm run build
 ```
+#### 8. create a symbolic link for saito-wasm
 ```
 npm link 
 ```
@@ -73,7 +75,7 @@ npm link
 #### 1. Navigate to the saito-js directory
 
 
-#### 2 Proceed with Installation  and 
+#### 2 Proceed with Installation  
 ```
 npm install
 ```
@@ -92,12 +94,19 @@ npm link
 
 ## Step 3: Link SLR to saito-js
 
-#### Navigate to the SLR directory
+#### 1. Navigate to the SLR directory
 
-#### Link to saito-js
+#### 2. Link to saito-js
+Install
 ``` 
 npm install
+```
+link with saito-js
+```
 npm link saito-js
+```
+Build and Run SLR
+```
 npm run go
 ```
 
