@@ -2,7 +2,7 @@
 title: Blockchain Security Budget and ATR
 description: 
 published: true
-date: 2023-09-20T00:12:14.526Z
+date: 2023-09-20T02:09:39.983Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T00:12:14.526Z
@@ -13,6 +13,8 @@ dateCreated: 2023-09-20T00:12:14.526Z
 ## Background
 
 Every public blockchain needs to fund its security, and in general, the greater the security fund, the more *economically secure* that blockchain becomes, due to the fact that attackers must overcome a proportion of the money spent on security in order to successfully and profitably attack the chain.
+
+- Read about how Saito eliminates 51% attacks [here](/consensus/majoritarian-attacks).
 
 Given that this 'security budget' is fundamental to the novel security that blockchain provides, a natural question then is: who is paying for it? In Bitcoin currently, the majority of the security budget, the rewards which incentivize miners to secure the network, come from *inflation.* What this means in practice is that *Bitcoin holders* are who pays for the majority of Bitcoin security - for now.
 
