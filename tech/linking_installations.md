@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories Locally: An Installation Guide
 description: This guide details how to manually link the saito-lite-rust repository to saito-wasm using the saito-js wrapper, leveraging the npm link command for local integration.
 published: true
-date: 2023-09-20T20:52:08.216Z
+date: 2023-09-20T20:52:14.241Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:23:18.461Z
@@ -14,7 +14,7 @@ This guide provides a detailed walkthrough on how to link the saito-lite-rust re
 
 Note: The saito-lite-rust (SLR) repository by default comes bundled with the saito-js library in its package.json. If, however, you wish to manually establish this linkage, the instructions below will guide you.
 
-If you're using a Mac with the M1 chip, you can find specific instructions [here](https://wiki.saito.io/e/en/tech/linking_installations_mac
+If you're using a Mac with the M1 chip, you can find specific instructions [here](https://wiki.saito.io/e/en/tech/linking_installations_mac)
 
 
 
