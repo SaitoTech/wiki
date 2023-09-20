@@ -2,13 +2,15 @@
 title: majoritarian-attacks
 description: 
 published: true
-date: 2023-09-20T01:58:02.086Z
+date: 2023-09-20T02:03:01.614Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
 ---
 
 # Eliminating 51% Attacks
+
+- For a complete mathematical proof [see here](https://wiki.saito.io/consensus/math).
 
 ### Consensus
 
@@ -64,4 +66,7 @@ If an attacker in Saito wants to produce consecutive blocks, they must use up th
 
 Since the amount of work the honest network accumulates can only grow the longer they are censored, the amount of work the attacker must produce to keep censoring them also grows without bound, no matter if the attacker has 51% of inbound fees or 99%.
 
-- A rigorous mathematical demonstration of Saito's elimination of the 51% attack can be found [here](https://wiki.saito.io/consensus/math).
+<hr>
+
+- We invite researchers and auditors to consult a more rigorous [mathematical proof](/consensus/math) of Saito's elimination of the 51% attack.
+
