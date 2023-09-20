@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2023-09-20T20:49:36.754Z
+date: 2023-09-20T20:49:48.121Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
@@ -96,15 +96,15 @@ npm link
 
 #### 1. Navigate to the SLR directory
 
-#### 3. Install
+#### 2. Install
 ``` 
 npm install
 ```
-#### 4. Link with saito js
+#### 3. Link with saito js
 ```
 npm link saito-js
 ```
-#### 5. Build and run SLR
+#### 4. Build and run SLR
 ```
 npm run go
 ```
