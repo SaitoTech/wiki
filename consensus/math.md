@@ -2,7 +2,7 @@
 title: Mathematical Proofs - Cost of Attack
 description: 
 published: true
-date: 2023-02-15T13:59:51.827Z
+date: 2023-09-20T02:20:53.677Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T05:43:22.402Z
@@ -16,7 +16,7 @@ This document provides a straightforward way to calculate the cost-of-attack on 
 
 ## Assumptions
 
-This model assumes the staking table is not controlled by the attacker of the network. If the staking table is fully-controlled by an attacker, the cost-of-attack on the network is maintained by the way the network smoothes outbound payments. This detail is left out-of-model in order to simplify the cost-of-attack calculations.
+This model assumes the staking payouts are not controlled by the attacker of the network. If there is a staking table which is fully-controlled by an attacker, the cost-of-attack on the network is maintained by the way the network smoothes outbound payments. This detail is left out-of-model in order to simplify the cost-of-attack calculations.
 
 
 ### Terms
