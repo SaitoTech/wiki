@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2023-09-20T20:42:04.852Z
+date: 2023-09-20T20:44:09.882Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
@@ -29,7 +29,7 @@ Before starting, ensure:
 
 ## Step 1: Prepare `saito-wasm` for Linking
 
-#### Navigate to the saito-wasm directory
+#### 1. Navigate to the saito-wasm directory
 
 
 
@@ -46,21 +46,25 @@ export CC=/opt/homebrew/opt/llvm/bin/clang
 brew install llvm
 ```
 
-#### 4 Install wasm-pack: This is a crucial tool for compiling Rust to WebAssembly.
+#### 4. Install wasm-pack: This is a crucial tool for compiling Rust to WebAssembly.
 
 ```
 npm i -g wasm-pack
 ```
 
-#### 5 Build with wasm pack
+#### 5. Build with wasm pack
 ```
 CC=/opt/homebrew/opt/llvm/bin/clang AR=/opt/homebrew/opt/llvm/bin/llvm-ar wasm-pack build --target web --out-dir wasm_build/deps/pkg/
 ```
 
-#### 6 Create a symbolic link for saito-wasm in the global node_modules after installation and building
+#### 6. Create a symbolic link for saito-wasm in the global node_modules after installation and building
 ```
 npm install
+```
+```
 npm run build
+```
+```
 npm link 
 ```
 
@@ -69,13 +73,15 @@ npm link
 #### 1. Navigate to the saito-js directory
 
 
-#### 6 Proceed with Installation building and creating a symbolic link
+#### 2 Proceed with Installation  and creating a symbolic link for saito-js
 ```
 npm install
 ```
+linking with saito-wasm
 ```
 npm link saito-wasm
 ```
+build
 ```
 npm run build
 ```
