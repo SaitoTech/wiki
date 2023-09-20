@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories Locally: An Installation Guide
 description: This guide details how to manually link the saito-lite-rust repository to saito-wasm using the saito-js wrapper, leveraging the npm link command for local integration.
 published: true
-date: 2023-09-20T21:08:03.625Z
+date: 2023-09-20T21:09:46.208Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:23:18.461Z
@@ -35,6 +35,7 @@ Before starting, ensure:
 
 ## Step 1: Prepare `saito-wasm` for Linking
 
+#### 1. Navigate to `saito-wasm` directory
 #### 2. Install
 ```
 npm install
@@ -43,8 +44,7 @@ npm install
 ```
 npm run build
 ```
-#### 4 Navigate into the dist folder 
-#### 5. create a symbolic link for saito-wasm
+#### 4. create a symbolic link for saito-wasm
 ```
 npm link 
 ```
