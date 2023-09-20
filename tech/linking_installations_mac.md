@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2023-09-20T20:38:41.527Z
+date: 2023-09-20T20:40:55.670Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
@@ -40,31 +40,42 @@ npm link
 
 ## Step 2: Link saito-js to saito-wasm
 
-#### Navigate to the saito-js directory
+#### 1. Navigate to the saito-js directory
 If you're using a Mac with the M1 chip, follow these additional steps:
 
-#### 1. Set Environment Variables
+#### 2. Set Environment Variables
 
 ```bash
 export CC=/opt/homebrew/opt/llvm/bin/clang
 ```
-#### 2. Install LLVM: This provides the necessary tools, including clang.
+#### 3. Install LLVM: This provides the necessary tools, including clang.
 
 ```
 brew install llvm
 ```
 
-#### 3 Install wasm-pack: This is a crucial tool for compiling Rust to WebAssembly.
+#### 4 Install wasm-pack: This is a crucial tool for compiling Rust to WebAssembly.
 
 ```
 npm i -g wasm-pack
 ```
 
-#### Link to saito-wasm build and create a symbolic link for saito-js
+#### 5 Build with wasm pack
+```
+CC=/opt/homebrew/opt/llvm/bin/clang AR=/opt/homebrew/opt/llvm/bin/llvm-ar wasm-pack build --target web --out-dir wasm_build/deps/pkg/
+```
+
+#### 6 Proceed with Installation building and creating a symbolic link
 ```
 npm install
+```
+```
 npm link saito-wasm
+```
+```
 npm run build
+```
+```
 npm link
 ```
 
