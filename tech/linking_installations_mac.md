@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2023-09-21T15:31:02.110Z
+date: 2023-09-21T15:41:11.629Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
@@ -28,47 +28,41 @@ Before starting, ensure:
 
 ## Step 1. Compiling Saito WASM
 
-#### 1. Install LLVM: This provides the necessary tools, including clang.
-
+#### 1. Install LLVM for necessary tools (clang, etc.).
 ```
 brew install llvm
 ```
 
 #### 2. Set Environment Variables
-
-
-
 ```bash
 export CC=/opt/homebrew/opt/llvm/bin/clang
 ```
 
-
-#### 3. Navigate to the saito-wasm directory
-
+#### 3. Navigate into saito-wasm directory
 ```
 cd saito-rust-workspace/saito-wasm
 ```
 
-
 #### 4. Install wasm-pack: This is a crucial tool for compiling Rust to WebAssembly.
-
 ```
 npm i -g wasm-pack
 ```
 
-#### 5. build with wasm pack
+#### 5. build with wasm-pack
 ```
 CC=/opt/homebrew/opt/llvm/bin/clang AR=/opt/homebrew/opt/llvm/bin/llvm-ar wasm-pack build --target web --out-dir wasm_build/deps/pkg/
 ```
 
-#### 6. Install
+#### 6. install
 ```
 npm install
 ```
+
 #### 7. build
 ```
 npm run build
 ```
+
 #### 8. create a symbolic link for saito-wasm
 ```
 npm link 
@@ -76,8 +70,7 @@ npm link
 
 ## Step 2: Bundle Saito WASM into NodeJS Package
 
-#### 1. Navigate to the saito-js directory
-
+#### 1. Navigate into saito-js directory
 ```
 cd saito-rust-workspace/saito-js
 ```
@@ -86,17 +79,23 @@ cd saito-rust-workspace/saito-js
 ```
 npm install
 ```
+
 #### 3. linking with saito-wasm
 ```
 npm link saito-wasm
 ```
+
 #### 4. build
 ```
 npm run build
 ```
-#### 5. create a symbolic link for saito-js
-- Navigate into the dist folder in the saito-js directory
-- Run link command 
+
+#### 5. navigate into dist directory
+```
+cd dist
+```
+
+#### 6. create a symbolic link
 ```
 npm link
 ```
