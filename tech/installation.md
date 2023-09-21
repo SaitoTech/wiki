@@ -2,7 +2,7 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2023-09-21T07:07:53.773Z
+date: 2023-09-21T07:29:29.308Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -12,24 +12,47 @@ dateCreated: 2022-01-18T09:49:16.786Z
 
 Saito consists of a Rust client that participates in the blockchain and handles consensus and network operations. The Rust client can be compiled into a WASM library that is used by a javascript-wallet that runs applications in the browser.
 
-If you are just interested in developing applications, you can skip and use a pre-compiled version of the WASM library. This page provides instructions on how to compile all three piece of software, for those who wish to participate in development and/or build the necessary components of the software stack from scratch.
+## Saito Rust
 
-### Saito Rust - Requirements
+The Saito Rust client is the main network client. Compiling it requires the standard command-line tools bundled with X-Code in Mac and included with most  most Linux distributions. On Ubuntu you can install them as follows:
+
+#### Requirements
 
 * OS: Ubuntu 20.04 (MacOS instructions)
 * Build tools: git, g++, make
 * Stack: cargo rust (v.1.5.7+)
 * https://github.com/saitotech/saito-rust-workspace
 
-### Saito Rust - Installation
+#### Installation
 ```
 git clone https://github.com/saitotech/saito-rust-workspace
 cd saito-lite-workspace
 RUST_LOG=debug cargo run
 ```
-If you are interested in exploring the Rust codebase, we have a separate page on [Rust Architecture and Design](/tech/rust-architecture). This explains the structure of the codebase for those interested in hacking on the code itself.
+For those interested in exploring the Rust codebase, we have a separate page on [Rust Architecture and Design](/tech/rust-architecture). This briefly describes the organization of the repository for those interested in digging into the code itself.
 
+## Saito WASM
 
+Saito WASM is a library created by compiling parts of the core Rust software into WASM. This library provides a way for other languages like javascript to bundle Saito into other applications and interact with the software.
+
+#### Requirements:
+
+In addition to the tools required for installation of Saito Rust:
+
+* WASM-Pack [download](https://rustwasm.github.io/wasm-pack/installer/)
+
+#### Installation
+```
+sudo apt-get update && sudo apt install build-essential pkg-config libssl-dev
+cd saito-rust-workspace
+cp configs/saito.config.template.json configs/saito.config.json
+cd saito-wasm
+wasm-pack build --debug --target browser
+```
+
+## Saito Javascript
+
+Saito Javascript is an in-browser lite-client that runs directly in the browser. The current version uses a compiled version of the Rust client which cna be compiled as above or downloaded from NPM as our saito-js library.
 
 #### Requirements:
 
@@ -38,9 +61,7 @@ If you are interested in exploring the Rust codebase, we have a separate page on
 * TypeScript
 * https://github.com/saitotech/saito-lite-rust ( JavaScript )
 
-If you do not have these dependencies installed on your machine, we have instructions on how to install the necessary packages for [MacOS](/tech/installation/mac), [Ubuntu Linux](/tech/installation/linux) and [Windows](/tech/installation/windows). If you run into problems please flag so we can keep these pages updated as system requirements change.
-
-#### 1. Install Dependencies
+#### Install Prerequisites
 
 ```
 sudo apt-get update
@@ -49,9 +70,10 @@ curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash
 sudo apt-get install -y nodejs
 ```
 
-#### 2. Download Saito
+#### Install Saito-Lite-Rust
 
-Saito is open source software. The latest version of the Saito code is always available in our public [Github repository](https://github.com/saitotech/saito-lite-rust).
+The latest version of the Saito code is always available in our public [Github repository](https://github.com/saitotech/saito-lite-rust).
+
 > Note: do not clone into ```/var/www/``` as this will cause webpack to error during compilation.
 
 ```
@@ -61,24 +83,22 @@ npm install -g typescript
 npm install
 ```
 
-#### 3. Compile and Run Saito
+#### Compile and Run Saito
 
-After you have downloaded the software, you need to run our compile script. This will delete any previously-existing databases and create fresh versions of the configuration files that Saito needs to run properly. It also compiles a compressed version of Saito for use in browsers.
+After you have downloaded the software, you need to "nuke" your Saito installation to prepare it to run. This will delete any previously-existing databases and create fresh versions of the configuration files that Saito needs to run properly.  This command creates a clean ```./config/options``` file and a ```.config/modules.config.js``` file from the template files in those directories (if not exists).
 
 ```
 npm run nuke
 npm start
 ```
+This compilation process also compiles a compressed version of Saito that will be fed out to any browsers that connect to your server. You can control which applications/modules will be included with this by editing your ```.config/modules.config.js``` file.
 
-##### 3.1 Compilation Types
+If you wish to change the applications supported on your server without resetting the blockchain, you can run the following instruction instead of "nuke"
 
-There are two compilation options:
+```npm run compile```
 
-```npm run compile``` - creates the client JavasScript and CSS for deployment or testing and leaves the blockchain and other data structures in tact. Use this option during development.
 
-```npm run nuke``` - creates the client JavaScript and CSS for deployment or testing, deletes the blockchain and data structures. This command also creates a clean ```./config/options``` file (```.config/options.conf``` is used as a template if it exists) and updates ```.config/modules.config.js``` file (```.config/modules.default.js``` is used as a template if the ```modules.config.js``` files does not exist.
-
-##### 3.1 Compilation 'dev' Flag
+##### Development 'dev' Flag
 
 Both the `compile` and `nuke` scripts can be run with a `dev` flag:
 ```npm run compile dev``` and ```npm run nuke dev```
@@ -86,24 +106,26 @@ Both the `compile` and `nuke` scripts can be run with a `dev` flag:
 When this flag is used:
 
  * JavaScript is not minimised and source maps are shipped with the code 
-   The payload is 2 to 3 times larger but in browser debugging is possible.
+   The payload is 2 to 3 times larger but in-browser debugging is possible.
    
-* CSS files are linked (```@include()``` CSS source files, rather than being a concatentation of the source CSS).
-  Many more files are downloaded by the client, but in browser debugging is possible.
+ * CSS files are linked (```@include()``` CSS source files, rather than 
+   being a concatentation of the source CSS). This makes CSS development
+   slightly easier.
+   
+The result is that many more files are downloaded by the client, but in-browser debugging is much easier
   
-  ---
 
-
-#### 3. Visit Saito in your Browser
+## Using Saito in your Browser
 
 Once you have run `npm start` above it will take a few moments for the Saito software to initialize and start. You will eventually see an animated Saito logo scroll across your terminal. Once that is done simply open a browser and visit:
 
-https://localhost:12101/arcade
+https://127.0.0.1:12101/arcade
 
-This will load the Saito Arcade - one of our default applications. If everything goes as plans, you now have a working version of Saito for use in local testing or development. Why not get take your next steps by checking out [tutorial one](https://wiki.saito.io/en/tech/tutorial-1-deploy-install-application) which demonstrates how to build a simple application that attaches data to transactions and broadcasts them into the network.
+This will load the Saito Arcade - one of our default applications. If everything has gone as planned, you now have a working version of Saito for use in local testing or development. 
+
+Take your next steps into application development with [tutorial one](https://wiki.saito.io/en/tech/tutorial-1-deploy-install-application) which explains how to build a simple application that attaches data to transactions and broadcasts them into the network.
 
 ### For more code and documentation please visit our public GitHub repository:
-
 
 https://github.com/saitotech
 
