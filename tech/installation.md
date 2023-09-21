@@ -2,7 +2,7 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2023-09-21T08:36:20.637Z
+date: 2023-09-21T09:51:16.942Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -10,7 +10,18 @@ dateCreated: 2022-01-18T09:49:16.786Z
 
 # Installation
 
-Saito consists of a Rust client that participates in the blockchain and handles consensus and network operations. The Rust client can be compiled into a WASM library that is used by a javascript-wallet that runs applications in the browser.
+Saito consists of three separate-but-related software packages. This page contains instructions on installing and compiling all three packages. At the very bottom of the page we include instructions on how to test that Saito is working once you have it setup:
+
+ - Saito Rust
+ - Saito WASM
+ - Saito Javascript
+ 
+The Saito Rust client is a command-line application built to handle consensus and network operations. If you want to run a high-throughput network node this is the software you need.
+
+The Saito WASM library is compiled from the Rust code and consists of a compact library that can be included in programs written in other programming languages like javascript and python to permit them to host wallets and run Saito applications.
+
+The javascript client uses the WASM library to create an in-browser application stack that can send-and-receive both on-chain and off-chain messages and run Saito applications. Applications like the [Saito Arcade](https://saito.io/arcade) are built using this client. If you are interested in building applications rather than contributing to core development, you should start with the javascript client.
+
 
 ## Saito Rust
 
@@ -28,33 +39,31 @@ The Saito Rust client is the main network client. Compiling it requires the stan
 git clone https://github.com/saitotech/saito-rust-workspace
 cd saito-lite-workspace
 git checkout develop
-cp saito-rust/config/config.template.js saito-rust/config/config.json
+cd saito-rust
+cp configs/config.template.js configs/config.json
 RUST_LOG=debug cargo run --bin saito-rust
 ```
-The "develop" branch has the most up-to-date code. For those interested in exploring the Rust codebase, we have a separate page on [Rust Architecture and Design](/tech/rust-architecture). This briefly describes the organization of the repository for those interested in digging into the code itself.
 
 ## Saito WASM
 
-Saito WASM is a library created by compiling parts of the core Rust software into WASM. This library provides a way for other languages like javascript to bundle Saito into other applications and interact with the software.
+Saito WASM is a version of the Rust core compiled into a portable library that can interact with other programming languages like javascript. To use Saito WASM you must first ```compile``` the code and then ```link``` it to your external application.
 
 #### Requirements:
 
-In addition to the tools required for installation of Saito Rust:
-
-* WASM-Pack [download](https://rustwasm.github.io/wasm-pack/installer/)
+* WASM-Pack [ [download](https://rustwasm.github.io/wasm-pack/installer/) ]
 
 #### Installation
 ```
 sudo apt-get update && sudo apt install build-essential pkg-config libssl-dev
 cd saito-rust-workspace
-cp configs/saito.config.template.json configs/saito.config.json
+cp saito-rust/configs/config.template.json saito-rust/configs/config.json
 cd saito-wasm
 wasm-pack build --debug --target browser
 ```
 
 ## Saito Javascript
 
-Saito Javascript is an in-browser lite-client that runs directly in the browser. The current version uses a compiled version of the Rust client which cna be compiled as above or downloaded from NPM as our saito-js library.
+Saito Javascript is an in-browser lite-client that runs directly in the browser. It uses a compiled version of the Rust client by default, but can be connected to a locally-compiled version of the Saito WASM library for core development if needed.
 
 #### Requirements:
 
@@ -63,7 +72,9 @@ Saito Javascript is an in-browser lite-client that runs directly in the browser.
 * TypeScript
 * https://github.com/saitotech/saito-lite-rust ( JavaScript )
 
-#### Install Prerequisites
+#### Installation
+
+First, ensure your machine has NodeJS installed:
 
 ```
 sudo apt-get update
@@ -72,9 +83,7 @@ curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash
 sudo apt-get install -y nodejs
 ```
 
-#### Install Saito-Lite-Rust
-
-The latest version of the Saito code is always available in our public [Github repository](https://github.com/saitotech/saito-lite-rust).
+Second, download the latest version of our Saito Javascript client and install it along with typescript:
 
 > Note: do not clone into ```/var/www/``` as this will cause webpack to error during compilation.
 
@@ -85,30 +94,38 @@ npm install -g typescript
 npm install
 ```
 
-#### Compile and Run Saito
-
-After you have downloaded the software, you need to "nuke" your Saito installation to prepare it to run. This will delete any previously-existing databases and create fresh versions of the configuration files that Saito needs to run properly.  This command creates a clean ```./config/options``` file and a ```.config/modules.config.js``` file from the template files in those directories (if not exists).
+Finally, compile and run the software. This requires entering the saito-lite-rust directory and running the following commands:
 
 ```
 npm run nuke
 npm start
 ```
-This compilation process also compiles a compressed version of Saito that will be fed out to any browsers that connect to your server. You can control which applications/modules will be included with this by editing your ```.config/modules.config.js``` file.
 
-If you wish to change the applications supported on your server without resetting the blockchain, you can run the following instruction instead of "nuke"
+#### Configuration
+
+Saito uses two main configuration files. The first is ```config/options``` which specifies network configuration options like the IP address on which the server runs and the ports it should open and the peers to which it should connect. A second ```config/modules.config.js``` file specifies which modules should run on the server and any browsers that connect to it.
+
+Running ```npm run nuke``` will create fresh versions of these configuration files from template files that are stored in the ```config``` directory. It will also compiles a compressed version of Saito from the ```modules.config.js``` that will be fed out to browsers which connect to the server and request the default javascript.
+
+You can always reset your client by running the "nuke" command, but if you wish to change the applications supported on your server without resetting the blockchain, you can run the following instruction instead:
 
 ```npm run compile```
 
 
-##### Development 'dev' Flag
+##### Javascript Client 'dev' Flag
 
 Both the `compile` and `nuke` scripts can be run with a `dev` flag:
-```npm run compile dev``` and ```npm run nuke dev```
+
+```
+npm run compile dev
+npm run nuke dev
+```
 
 When this flag is used:
 
- * JavaScript is not minimised and source maps are shipped with the code 
-   The payload is 2 to 3 times larger but in-browser debugging is possible.
+ * JavaScript is not minimized and source maps are shipped with the code 
+   The payload is 2 to 3 times larger than otherwise but makes in-browser 
+   debugging possible.
    
  * CSS files are linked (```@include()``` CSS source files, rather than 
    being a concatentation of the source CSS). This makes CSS development
