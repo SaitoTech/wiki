@@ -2,7 +2,7 @@
 title: majoritarian-attacks
 description: 
 published: true
-date: 2023-09-21T00:50:37.555Z
+date: 2023-09-21T00:56:49.599Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -12,7 +12,7 @@ dateCreated: 2023-09-20T01:58:02.086Z
 
 - For a complete mathematical proof [see here](https://wiki.saito.io/consensus/math).
 
-- Official Blog [post](https://saito.tech/eliminating-51-attacks-in-proof-of-work-blockchains/) on the same subject
+- Official Blog [post](https://saito.tech/eliminating-51-attacks-in-proof-of-work-blockchains/) on the same subject.
 
 ### Consensus
 
