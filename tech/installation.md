@@ -2,7 +2,7 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2023-09-21T10:03:31.795Z
+date: 2023-09-21T15:15:47.492Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -14,13 +14,13 @@ Saito consists of three separate-but-related software packages. This page contai
 
  - Saito Rust
  - Saito WASM
- - Saito Javascript
+ - Saito Lite (Rust)
  
 The Saito Rust client is a command-line application built to handle consensus and network operations. If you want to run a high-throughput network node this is the software you need.
 
 The Saito WASM library is compiled from the Rust code and consists of a compact library that can be included in programs written in other programming languages like javascript and python to permit them to host wallets and run Saito applications.
 
-The javascript client uses the WASM library to create an in-browser application stack that can send-and-receive both on-chain and off-chain messages and run Saito applications. Applications like the [Saito Arcade](https://saito.io/arcade) are built using this client. If you are interested in building applications rather than contributing to core development, you should start with the javascript client.
+Saito Lite (Rust) is a lite-client coded in javascript and designed for binary compatibility with the Rust client. It uses the compiled WASM library to support an in-browser wallet that can send-and-receive both on-chain and off-chain messages and run Saito applications. Applications like the [Saito Arcade](https://saito.io/arcade) are built using this client. If you are interested in building applications rather than contributing to core development, this is most likely what you need.
 
 
 ## Saito Rust
@@ -66,7 +66,7 @@ cd saito-wasm
 wasm-pack build --debug --target browser
 ```
 
-## Saito Javascript
+## Saito Lite (Rust)
 
 Saito Javascript is an in-browser lite-client that runs directly in the browser. It uses a compiled version of the Rust client by default, but can be connected to a locally-compiled version of the Saito WASM library for core development if needed.
 
