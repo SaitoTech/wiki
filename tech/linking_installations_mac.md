@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2023-09-21T10:19:18.806Z
+date: 2023-09-21T12:28:37.145Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
@@ -11,11 +11,9 @@ dateCreated: 2023-09-20T20:31:08.392Z
 
 # Mac (M1) Specific Installations
 
-This page assumes you are using a Mac with the M1 chip and want to compile the Saito WASM library and link it to a locally-compiled version of Saito Javascript. If you are trying to compile Saito on another OS please see our [standard installation guide](/tech/installation).
+This page assumes you are using a Mac with the M1 chip and want to compile a custom version of the Saito WASM library and have it used by a locally-compiled version of Saito Javascript. If you are trying to compile Saito on another OS please see our [standard installation guide](/tech/installation).
 
- It provides a detailed walkthrough on how to compile the Saito WASM library under MacOS so that Saito Javascript will use your locally-compiled version of the Saito WASM library instead of the default one hosted on NPM.
-
-Note: The saito-lite-rust (SLR) repository by default comes bundled with the saito-js library in its package.json. So it should work without the need to do anything on this page. These steps are only necessary if you want to modify the Rust/Javascript code or debug core parts of the software from within javascript.
+NOTE: unless you know why you are doing this you probably don't need to do it at all! Our Saito Javascript repository (saito-lite-rust) comes bundled with a pre-compiled version of the WASM saito-js library included its package.json and will work without the need to compile or link anything locally. These steps are only necessary if you want to modify the Rust/Javascript code or debug core parts of the software from within javascript.
 
 ## Prerequisites
 
@@ -37,6 +35,8 @@ brew install llvm
 ```
 
 #### 2. Set Environment Variables
+
+
 
 ```bash
 export CC=/opt/homebrew/opt/llvm/bin/clang
