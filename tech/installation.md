@@ -2,7 +2,7 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2023-09-21T07:31:07.786Z
+date: 2023-09-21T08:11:11.715Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -27,7 +27,7 @@ The Saito Rust client is the main network client. Compiling it requires the stan
 ```
 git clone https://github.com/saitotech/saito-rust-workspace
 cd saito-lite-workspace
-RUST_LOG=debug cargo run
+RUST_LOG=debug cargo run --bin saito-rust
 ```
 For those interested in exploring the Rust codebase, we have a separate page on [Rust Architecture and Design](/tech/rust-architecture). This briefly describes the organization of the repository for those interested in digging into the code itself.
 
