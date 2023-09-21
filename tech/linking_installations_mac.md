@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2023-09-21T12:28:37.145Z
+date: 2023-09-21T15:19:45.351Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
@@ -78,6 +78,9 @@ npm link
 
 #### 1. Navigate to the saito-js directory
 
+```
+cd saito-rust-workspace/saito-js
+```
 
 #### 2. Installation  
 ```
