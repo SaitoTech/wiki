@@ -2,7 +2,7 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2023-09-21T09:56:27.364Z
+date: 2023-09-21T10:00:36.436Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -53,6 +53,11 @@ Saito WASM is a version of the Rust core compiled into a portable library that c
 * WASM-Pack [ [download](https://rustwasm.github.io/wasm-pack/installer/) ]
 
 #### Installation
+
+There are two steps to getting Saito WASM. The library must first be ```compiled``` from the Rust codebase. The compiled library must then be ```linked``` to the Saito Javascript codebase so that your local copy is used instead of the pre-compiled version hosted on NPM.
+
+The following instructions work for most Linux environments. If you are using a Mac you will need [these instructions] on compiling the WASM library and linking it to Saito Javascript under MacOS instead.
+
 ```
 sudo apt-get update && sudo apt install build-essential pkg-config libssl-dev
 cd saito-rust-workspace
