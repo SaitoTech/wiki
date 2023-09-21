@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2023-09-21T15:41:11.629Z
+date: 2023-09-21T15:48:41.077Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
@@ -28,27 +28,27 @@ Before starting, ensure:
 
 ## Step 1. Compiling Saito WASM
 
-#### 1. Install LLVM for necessary tools (clang, etc.).
+#### 1. install LLVM for necessary tools (clang, etc.).
 ```
 brew install llvm
 ```
 
-#### 2. Set Environment Variables
+#### 2. set environment variables
 ```bash
 export CC=/opt/homebrew/opt/llvm/bin/clang
 ```
 
-#### 3. Navigate into saito-wasm directory
+#### 3. navigate into saito-wasm directory
 ```
 cd saito-rust-workspace/saito-wasm
 ```
 
-#### 4. Install wasm-pack: This is a crucial tool for compiling Rust to WebAssembly.
+#### 4. install wasm-pack: crucial tool for compiling Rust to WebAssembly
 ```
 npm i -g wasm-pack
 ```
 
-#### 5. build with wasm-pack
+#### 5. compile with wasm-pack
 ```
 CC=/opt/homebrew/opt/llvm/bin/clang AR=/opt/homebrew/opt/llvm/bin/llvm-ar wasm-pack build --target web --out-dir wasm_build/deps/pkg/
 ```
@@ -63,24 +63,24 @@ npm install
 npm run build
 ```
 
-#### 8. create a symbolic link for saito-wasm
+#### 8. create symbolic link for saito-wasm
 ```
 npm link 
 ```
 
 ## Step 2: Bundle Saito WASM into NodeJS Package
 
-#### 1. Navigate into saito-js directory
+#### 1. navigate into saito-js directory
 ```
 cd saito-rust-workspace/saito-js
 ```
 
-#### 2. Installation  
+#### 2. install  
 ```
 npm install
 ```
 
-#### 3. linking with saito-wasm
+#### 3. link with saito-wasm
 ```
 npm link saito-wasm
 ```
@@ -95,7 +95,7 @@ npm run build
 cd dist
 ```
 
-#### 6. create a symbolic link
+#### 6. create symbolic link for saito-js
 ```
 npm link
 ```
@@ -103,21 +103,21 @@ npm link
 
 ## Step 3: Use Custom Saito-JS with Saito Lite (Rust)
 
-#### 1. Navigate to the Saito Lite (Rust) directory
+#### 1. navigate into Saito Lite (Rust) directory
 ``` 
 cd saito-lite-rust
 ```
 
-#### 2. Install
+#### 2. install
 ``` 
 npm install
 ```
-#### 3. Link with saito-js
+#### 3. iink with saito-js
 ```
 npm link saito-js
 ```
 
-#### 4. Build and run SLR
+#### 4. build and run SLR
 ```
 npm run go
 ```
