@@ -2,7 +2,7 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2023-09-21T06:41:16.380Z
+date: 2023-09-21T07:07:36.477Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -10,9 +10,27 @@ dateCreated: 2022-01-18T09:49:16.786Z
 
 # Installation
 
-NOTE: this page is now antequated - updated installation instructions cover Saito Rust installation and (optional) compilation of the javascript-UI for running on the server.
+Saito consists of a Rust client that participates in the blockchain and handles consensus and network operations. The Rust client can be compiled into a WASM library that is used by a javascript-wallet that runs applications in the browser.
 
-This page contains instructions on how to download and install the NodeJS JavaScript client which currently forms the backbone of the network and is the best platform for developing applications and learning how Saito works. We have a Rust client under development with its own [installation instructions](https://wiki.saito.io/en/tech/installation-rust).
+If you are just interested in developing applications, you can skip and use a pre-compiled version of the WASM library. This page provides instructions on how to compile all three piece of software, for those who wish to participate in development and/or build the necessary components of the software stack from scratch.
+
+### Saito Rust - Requirements
+
+* OS: Ubuntu 20.04 (MacOS instructions)
+* Build tools: git, g++, make
+* Stack: cargo rust (v.1.5.7+)
+* https://github.com/saitotech/saito-rust-workspace
+
+### Saito Rust - Installation
+```
+git clone https://github.com/saitotech/saito-rust-workspace
+cd saito-lite-workspace
+RUST_LOG=debug cargo run
+```
+
+If you are interested in exploring the Rust codebase, we have a separate page on [Rust Architecture and Design](/tech/rust-architecture). This explains the structure of the codebase for those interested in hacking on the code itself.
+
+
 
 #### Requirements:
 
