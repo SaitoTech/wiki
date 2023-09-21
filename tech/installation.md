@@ -2,13 +2,15 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2023-03-31T02:51:30.057Z
+date: 2023-09-21T06:41:16.380Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
 ---
 
 # Installation
+
+NOTE: this page is now antequated - updated installation instructions cover Saito Rust installation and (optional) compilation of the javascript-UI for running on the server.
 
 This page contains instructions on how to download and install the NodeJS JavaScript client which currently forms the backbone of the network and is the best platform for developing applications and learning how Saito works. We have a Rust client under development with its own [installation instructions](https://wiki.saito.io/en/tech/installation-rust).
 
