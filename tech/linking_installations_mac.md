@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2023-09-21T15:19:45.351Z
+date: 2023-09-21T15:31:02.110Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
@@ -74,7 +74,7 @@ npm run build
 npm link 
 ```
 
-## Step 2: Linking to Your Compiled WASM Library
+## Step 2: Bundle Saito WASM into NodeJS Package
 
 #### 1. Navigate to the saito-js directory
 
@@ -102,9 +102,9 @@ npm link
 ```
 
 
-## Step 3: Linking Saito-JS SLR to saito-js
+## Step 3: Use Custom Saito-JS with Saito Lite (Rust)
 
-#### 1. Navigate to the Saito Javascript directory
+#### 1. Navigate to the Saito Lite (Rust) directory
 ``` 
 cd saito-lite-rust
 ```
