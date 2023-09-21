@@ -2,7 +2,7 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2023-09-21T09:52:59.939Z
+date: 2023-09-21T09:54:16.063Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -10,7 +10,7 @@ dateCreated: 2022-01-18T09:49:16.786Z
 
 # Installation
 
-Saito consists of three separate-but-related software packages. This page contains instructions on installing and compiling all three packages. At the very bottom of the page we include instructions on how to test that Saito is working once you have it setup:
+Saito consists of three separate-but-related software packages. This page contains instructions on installing and compiling all three packages as well as testing that they are working properly once setup:
 
  - Saito Rust
  - Saito WASM
