@@ -2,7 +2,7 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2023-09-21T07:07:36.477Z
+date: 2023-09-21T07:07:53.773Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -27,7 +27,6 @@ git clone https://github.com/saitotech/saito-rust-workspace
 cd saito-lite-workspace
 RUST_LOG=debug cargo run
 ```
-
 If you are interested in exploring the Rust codebase, we have a separate page on [Rust Architecture and Design](/tech/rust-architecture). This explains the structure of the codebase for those interested in hacking on the code itself.
 
 
