@@ -2,7 +2,7 @@
 title: Architecture and Design - Rust
 description: Installation instructions for Saito-Rust
 published: true
-date: 2023-09-21T07:03:55.291Z
+date: 2023-09-21T07:06:55.779Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-23T07:18:36.618Z
