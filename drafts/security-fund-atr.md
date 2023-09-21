@@ -2,7 +2,7 @@
 title: Blockchain Security Budget and ATR
 description: 
 published: true
-date: 2023-09-20T02:09:39.983Z
+date: 2023-09-21T01:13:16.080Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T00:12:14.526Z
@@ -18,7 +18,7 @@ Every public blockchain needs to fund its security, and in general, the greater 
 
 Given that this 'security budget' is fundamental to the novel security that blockchain provides, a natural question then is: who is paying for it? In Bitcoin currently, the majority of the security budget, the rewards which incentivize miners to secure the network, come from *inflation.* What this means in practice is that *Bitcoin holders* are who pays for the majority of Bitcoin security - for now.
 
-If Bitcoin is to become completely non-inflationary as planned, then the *entire* security budget must come from *transaction fees*. A heated debate in the Bitcoin community, which is emblematic of the core issue for all public blockchain, is whether the security budget will remain high enough to secure the network as inflation rewards diminish towards zero.
+If Bitcoin is to become completely non-inflationary as planned, then the *entire* security budget must come from *transaction fees*. A heated debate in the Bitcoin community, which is emblematic of the core issue for all public blockchain, is whether the security budget will remain high enough to secure the network as inflation rewards diminish towards zero and user fees must fill in the gap.
 
 Many holders want inflation as low as possible so their coins become more valuable, but others worry that transaction fees alone will not be sufficient to defend the network, and thus the supply should grow to fund security. When it comes to the question of who will pay for the security fund, ATR provides a fair and simple supplement: make those sitting on blockchain *storage* pay to keep their limited space on-chain.
 
@@ -32,16 +32,28 @@ Put simply, every transaction must pay a fee every $m$ blocks which is related t
 
 Saito's security protocol pays staking rewards at the same time it charges ATR fees - users seeking permanent storage can ensure this by making sure their UTXO balance is in equilibrium with the staking portion (25%) of the fee-reward  distribution: a UTXO worth at least four times the fee rate. UTXOs which sustain the blockchain by using their staking rewards as rent can persist indefinetely on-chain without their balance diminishing.
 
-On the more philosophic level, the removal of data from the blockchain in a systematic way does not make it any less of a universal and uncensorable ledger. In fact, without charging for storage or removing UTXOs too small to pay their for their storage burden, the chain itself becomes less sustainable and less likely to be funded into the future. ATR ensures that the blockchain can always pay for itself without centralized intervention.
+On the more philosophic level, the removal of data from the blockchain in a systematic way does not make it any less of a universal and uncensorable ledger. In fact, without charging for storage or removing UTXOs too small to pay their for their storage burden, the chain itself becomes less sustainable and less likely to be funded into the future. ATR ensures that the blockchain can always pay for itself without centralized intervention and prevents forms of economic abuse where users add data for a small fee which must be preserved forever.
 
 ## Security Budget
 
 Independent of Saito's other innovations to consensus, Automatic Transaction Rebroadcasting is an important resolution to the problem all blockchain's must face around how to fund the security budget. It solves issues on both sides of the coin:
 
-Even if a high-throughput chain can generate enough fees to reach a satisfiable level of total security, it eventually loses the ability to maintain the same fee-rate as the storage burden grows unbounded. Likewise, a low-throughput chain like Bitcoin requires sufficient fee-flow for security. ATR solves both issues: it charges a market rate for blockchain storage and puts those rewards into the hands of block producers.
+Even if a high-throughput chain can generate enough fees to reach a satisfiable level of total security, it eventually loses the ability to maintain the same fee-rate as the storage burden grows unbounded. Likewise, a low-throughput chain like Bitcoin requires sufficient fee-flow for security. ATR solves both issues: it charges a market rate for blockchain storage and puts those rewards into the hands of block producers; the nodes who end up storing and distributing the blockchain thus are paid for dealing with greater amounts of data, and thus can scale with demand.
 
-The security impact is greater for chains with larger blocks, as the cost of processing the entire epoch necessary to learn of the transactions which must be rebroadcast represents a greater cost to block producers than when blockspace is artificially limited.
+The security impact is greater for chains with larger blocks, as the cost of processing the entire epoch necessary to learn of the transactions which must be rebroadcast represents a greater cost to block producers than when blockspace is artificially limited. Verifying and distributing block data in a large-block chain with ATR thus becomes its own form of work which bankrupts attackers but rewards nodes providing access into the network.
 
-If blockspace is artificially scarce and users pay for that scarcity, block producers will not have the similar cost associated with processing and verifying a large amount of data - instead those resources go to hashing or staking. It remains a sustainable and fair method of increasing the rewards honest block producers and attackers compete to earn, and keeps holders majorly sheltered from the costs - unlike inflation.
+If blockspace is artificially scarce, as in Bitcoin, and users pay for that scarcity, block producers will not have the similar cost associated with processing and verifying a large amount of data - instead those resources go to hashing or staking. It remains a sustainable and fair method of increasing the rewards honest block producers and attackers compete to earn, and keeps holders majorly sheltered from the costs that bloat imposes. Inflation or solely relying on fees cannot protect against the ever growing costs which unchecked bloat passes on to others.
 
-ATR works best when blockspace is unconstrained and is allowed to set a market price for storage. Block producers can thus scale the blocksize as high or low as users are willing to pay for it by paying for it directly via ATR fees. The work required to sustain the actual block data and the work which contributes to security become one and the same.
+ATR works best when blockspace is unconstrained and is allowed to set a market price for storage, which means arbitrary block size. Block producers can thus scale the blocksize as high or low as users are willing to pay for it by paying for it directly via ATR fees. The work required to sustain the actual block data and the work which contributes to security become one and the same. A blockchain can thus finally pay for 'useful' work.
+
+
+## Conclusion
+
+Rather than paying for:
+
+* Hashing (random number crunching)
+* Staking (hoarding)
+* Protien Folding (unrelated to blockchain)
+* Artificial Intelligence (unrelated to blockchain)
+
+ATR (and routing work) pay for the crucial infrastructure without which blockchain could not survive. Rather than trickling the minimum funding to this infrastructure or relying on volunteers or private companies to take responsibility, Saito ensures that nodes in the network compete to provide these services and are directly rewarded for doing so. By funding these operatoins through consensus, the blockchain prevents the privatization of the infrastructure layers, and supports truly public access at any scale.
