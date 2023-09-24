@@ -2,7 +2,7 @@
 title: Golden Tickets
 description: 
 published: true
-date: 2023-09-23T14:24:05.626Z
+date: 2023-09-24T00:41:36.542Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-23T14:24:05.626Z
@@ -12,7 +12,7 @@ dateCreated: 2023-09-23T14:24:05.626Z
 
 ### Intro
 
-In Saito, Golden Ticket transactions are proofs-of-work which reference the previous block and are used to unlock that block's rewards, and the rewards of all preceding blocks which did not contain their own valid Golden Ticket.
+In Saito, Golden Ticket transactions are proofs-of-work which reference the previous block and are used to unlock that block's rewards, and the rewards of all preceding blocks since the last valid Golden Ticket.
 
 Golden Tickets appear to solve two problems:
 
@@ -31,4 +31,8 @@ Instead of a proof of work being required to produce a valid block, a proof of w
 
 The incentive for producing Golden Tickets is half the fee reward (the only reward in Saito) of the previous block. This Golden Ticket is required for unlocking of funds for routing nodes, because it is a costly and economically secure way to produce a valid random number which can be used to choose the winning router the other half of fee rewards will go to.
 
-In addition to providing an economically secure random number, the proofs of work required to unlock rewards forces an attacker who tries to use previously spent tokens to create a malicious fork (a long-range attack) to also spend energy to unlock those tokens and re-use them for new blocks. Even in the worst-case scenario where the attacker can convince honest miners to unlock the tokens, the attacker only gets back half each time, and quickly runs out of the capital needed to sustain the attack. 
+### Long-Range Attacks
+
+In addition to providing an economically secure random number, the proofs of work required to unlock rewards forces an attacker who tries to use previously spent tokens to create a malicious fork (a long-range attack) to also spend energy to unlock those tokens and re-use them for new blocks. Even in the worst-case scenario where the attacker can convince honest miners to unlock the tokens, the attacker only gets back half each time, and quickly runs out of the capital needed to sustain the attack.
+
+- For more information regarding Saito's economic security, consult the [attack vectors](https://wiki.saito.io/en/consensus/attack-vectors) page.
