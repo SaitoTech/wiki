@@ -2,7 +2,7 @@
 title: Sybil-Proof
 description: 
 published: true
-date: 2023-09-24T00:26:15.060Z
+date: 2023-09-24T00:33:17.625Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
@@ -10,12 +10,12 @@ dateCreated: 2023-09-12T04:54:16.592Z
 
 ## Proof of *Sybil-Proof*
 
+- Read [*A Simple Proof of Sybil Proof.*](https://github.com/SaitoTech/papers/blob/main/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf) for a complete and formal proof.
+
+- Learn about [Sybils](https://wiki.saito.io/en/consensus/sybils) and how they damage permisionless networks.
+
 > A sybil produces the block with w/ 2nd hop routing work. A non-sybil produces the block faster with 1st hop routing work. The probability of the sybil collecting payment is lower because the probability of their blocks being added to the chain is lower. <br><br>The only way a sybil can reach parity on probability is if they burn their own money, which puts their cost higher than the non-sybil. There is simply no world in which the probability of getting paid is the same for a sybil as a non-sybil ceteris paribus.
 <br>-David Lancashire
-
-- For complete and formal proof, please read the paper: [*A Simple Proof of Sybil Proof.*](https://github.com/SaitoTech/papers/blob/main/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf)
-
-- To learn how Sybils damage permisionless networks, read [here](https://wiki.saito.io/en/consensus/sybils).
 
 As argued in *On Bitcoin and Red Ballons* [[Babaioff et al., 201]](https://arxiv.org/abs/1111.2626) the Sybil problem widely agreed to be unsolvable, since giving other block producers access to transaction fees always gives them an advantage, and allowing arbitrary claims on fees allows Sybils to earn multiple, unwarranted rewards for fake relays.
 
