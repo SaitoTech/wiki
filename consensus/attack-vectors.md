@@ -2,7 +2,7 @@
 title: Attack Vectors
 description: how Saito is secure against common and uncommon attack vectors
 published: true
-date: 2022-08-20T16:05:00.550Z
+date: 2023-09-24T00:39:29.323Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-22T10:08:41.187Z
@@ -20,7 +20,7 @@ As every hop in a routing path lowers the profitability of every single node on 
 
 Readers who believe that sybils may prevent communications between nodes are reminded that the blockchain can serve as a tool to communicate with distant peers as necessary.
 
-An expanded description and link to formal proof of Saito's *Sybil Proof*ness can be found [here](/consensus/sybil-proof).
+- An expanded description and link to formal proof of Saito's *Sybil Proof*ness can be found [here](/consensus/sybil-proof).
 
 ## 2. TRANSACTION HOARDING
 All blockchains which give transaction fees directly to the nodes that produce blocks are vulnerable to transaction-hoarding attacks.
