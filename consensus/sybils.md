@@ -2,7 +2,7 @@
 title: Sybils
 description: 
 published: true
-date: 2023-09-24T00:48:03.008Z
+date: 2023-09-24T00:50:11.757Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T00:24:44.788Z
@@ -33,7 +33,8 @@ The optimal outcome for the network at large is that independent and competing n
 Not only is hoarding bad for network efficiency, it also concentrates power into the hands of the largest block producers. Users get transactions confirmed more quickly by sending to nodes who can actually produce blocks - not marginal producers. This leads to a self-reinforcing strategy where larger influences gain more and more power within the network and smaller contributions are irrational.
 
 The fundamental cause of this illness is the ability to Sybil leading to the incentive to hoard. By eliminating Sybil Attacks, Saito defines what it means to be a second generation blockchain and can maintain a healthy, fair and open network at any scale. Nodes are rewarded for contribution, not their ability to cheat.
+<hr>
 
 ### Proof
 
-- Please refer [this](https://wiki.saito.io/e/en/consensus/sybil-proof) this page for an introductory and formal proof that Saito blockchain eliminates Sybil attacks in the routing network.
+- Please refer [this](https://wiki.saito.io/e/en/consensus/sybil-proof) this page for an introductory as well as formal proof that Saito blockchain eliminates Sybil attacks in the routing network.
