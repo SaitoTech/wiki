@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories Locally: An Installation Guide
 description: This guide details how to manually link the saito-lite-rust repository to saito-wasm using the saito-js wrapper, leveraging the npm link command for local integration.
 published: true
-date: 2023-09-20T21:11:40.064Z
+date: 2023-09-24T12:26:57.237Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:23:18.461Z
@@ -16,7 +16,11 @@ dateCreated: 2023-09-20T20:23:18.461Z
 
 This guide provides a detailed walkthrough on how to link the saito-lite-rust repository to the saito-wasm locally via the saito-js wrapper. This process leverages the npm link command.
 
-Note: The saito-lite-rust (SLR) repository by default comes bundled with the saito-js library in its package.json. If, however, you wish to manually establish this linkage, the instructions below will guide you.
+saito-lite-rust relies on two npm modules, saito-js and it's dependency saito-wasm that provide core saito functions to the nodejs and javascript nodes.
+
+These modules are published to npm and included in saito-lite-rust's package.json file.
+
+Developers who want to work on the code in these libraries will need to "link" them using the following instructions. This allows for developers to incorporate their code into saito-lite-rust for testing without having to publish the modules to public npm repositories.
 
 
 
