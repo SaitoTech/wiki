@@ -2,7 +2,7 @@
 title: Sybil-Proof
 description: 
 published: true
-date: 2023-09-14T03:32:45.550Z
+date: 2023-09-24T00:26:15.060Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
@@ -13,13 +13,11 @@ dateCreated: 2023-09-12T04:54:16.592Z
 > A sybil produces the block with w/ 2nd hop routing work. A non-sybil produces the block faster with 1st hop routing work. The probability of the sybil collecting payment is lower because the probability of their blocks being added to the chain is lower. <br><br>The only way a sybil can reach parity on probability is if they burn their own money, which puts their cost higher than the non-sybil. There is simply no world in which the probability of getting paid is the same for a sybil as a non-sybil ceteris paribus.
 <br>-David Lancashire
 
-For complete and formal proof, please read the paper: [*A Simple Proof of Sybil Proof.*](https://github.com/SaitoTech/papers/blob/main/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf)
+- For complete and formal proof, please read the paper: [*A Simple Proof of Sybil Proof.*](https://github.com/SaitoTech/papers/blob/main/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf)
 
-### Introduction
+- To learn how Sybils damage permisionless networks, read [here](https://wiki.saito.io/en/consensus/sybils).
 
-Per [Wikipedia](https://en.wikipedia.org/wiki/Sybil_attack): "A Sybil attack is a type of attack on a computer network service in which an attacker subverts the service's reputation system by creating a large number of pseudonymous identities and uses them to gain a disproportionately large influence." In blockchain, the relevant and oustanding avenue for Sybilling is to do with claims on rewards for propagating transactions into the distributed network.
-
-As argued in *On Bitcoin and Red Ballons* [[Babaioff et al., 201]](https://arxiv.org/abs/1111.2626) the problem was historically considered unsolvable, since giving other block producers access to transaction fees always gives them an advantage, and allowing arbitrary claims on fees allows Sybils to earn multiple, unwarranted rewards for fake relays.
+As argued in *On Bitcoin and Red Ballons* [[Babaioff et al., 201]](https://arxiv.org/abs/1111.2626) the Sybil problem widely agreed to be unsolvable, since giving other block producers access to transaction fees always gives them an advantage, and allowing arbitrary claims on fees allows Sybils to earn multiple, unwarranted rewards for fake relays.
 
 This poses a problem for blockchain networks which wish to remain open and secure against converging power at scale. If, as argued by experts in the field, Sybilling on transaction propagation is impossible to defend against, blockchain networks are doomed to fall into patterns of hoarding which reward the largest nodes in the network and introduce economic problems as they shelter transactions rather than share them - even if sharing would increase overall efficiency.
 
