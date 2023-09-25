@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2023-09-25T06:16:13.543Z
+date: 2023-09-25T06:17:06.076Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -14,7 +14,7 @@ Saito Consensus eliminates the [sybil attacks](/consensus/sybil-proof), [majorit
 
 ## 1. PRODUCING BLOCKS
 
-When users send transactions into the network they add cryptographic routing signatures that specify the first-hop node(s) to which they are sending their transaction(s). Receiving nodes add similar routing signatures as they propagate these transactions, creating an unforgeable record within transactions of the path they have taken into the network.
+When users send transactions into the network they add cryptographic routing signatures that specify the first-hop node(s) to which they are sending their transaction(s). Receiving nodes add similar routing signatures as they forward these transactions, creating an unforgeable record within transactions of the path they have taken into the network.
 
 These routing paths can be examined to confirm the amount of "routing work" available in a transaction. Transactions without a valid routing path contain no routing work. The amount in any other transaction is the total fee paid by the transaction divided in half with each hop beyond the first that the transaction has taken into the network.
 
