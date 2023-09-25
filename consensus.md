@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2023-09-25T06:17:06.076Z
+date: 2023-09-25T06:24:43.649Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -16,20 +16,20 @@ Saito Consensus eliminates the [sybil attacks](/consensus/sybil-proof), [majorit
 
 When users send transactions into the network they add cryptographic routing signatures that specify the first-hop node(s) to which they are sending their transaction(s). Receiving nodes add similar routing signatures as they forward these transactions, creating an unforgeable record within transactions of the path they have taken into the network.
 
-These routing paths can be examined to confirm the amount of "routing work" available in a transaction. Transactions without a valid routing path contain no routing work. The amount in any other transaction is the total fee paid by the transaction divided in half with each hop beyond the first that the transaction has taken into the network.
+These routing paths can be examined to confirm the amount of "routing work" available in a transaction. Transactions without valid routing paths contain no routing work. The amount of routing work in any other transaction is its total fee halved with each hop beyond the first that the transaction has taken into the network.
 
-The blockchain maintains a "difficulty" for block production that is measured in routing work. Nodes produce blocks when they have enough routing work in the transactions in their mempool to meet this difficulty criteria. Blocks which do not contain the required amount of routing work are invalid according to consensus rules.
+The blockchain maintains a "difficulty" for block production that is measured in routing work. Nodes produce blocks when they have enough routing work in the transactions in their mempool to meet difficulty criteria. Blocks which do not contain the required amount of routing work are invalid according to consensus rules.
 
 
 ## 2. THE PAYMENT LOTTERY
 
 When a block is produced all of the fees in the block are burned. Miners then start hashing to find a golden ticket that will solve the block that has already been produced.
 
-If a golden ticket for block N is included in the very next block (N+1), consensus issues a payout worth the average fees burned per block over the last epoch. Half are paid to the miner that found the golden ticket and half are issued to a node that routed transactions into the block.
+If a golden ticket for the previous block (block N) is included in the very next block (block N+1), consensus issues a payout worth the average fees burned per block over the last epoch. Half are paid to the miner that found the golden ticket and half are paid to a routing node.
 
-The routing node is selected by using a random number associated with the golden ticket to pick a random transaction from the previous block (weighted by share of fees burned). A second random number is then used to select a node from the routing path of the winning transaction (weighted by its share of the aggregate routing work held by all nodes in that routing path).
+The routing node is selected by using a two-part weighted lottery. A random number associated with the golden ticket is first hashed to pick a random transaction from the previous block, which each transaction's chance of selection weighted by its share of fees contributed to the block. The number is then hashed again to select a node from the routing path of the winning transaction, with each participant's chance of selected weighted according to its share of the aggregate routing work held by all nodes at all positions in that routing path.
 
-This process repeats block by block. Nodes burn money to produce blocks, and then burn energy to release payments, creating a game that is profitable for honest nodes who burn user-paid fees, but costly for attackers who are forced to spend more than they can collect to outpace the honest chain.
+This process repeats block by block. The network burns money to produce blocks, and then burns energy to resurrect payments. This creates a game that is profitable for honest nodes who proffer user-paid fees for burning, but costly for attackers who must spend more than they can ever collect to outpace the honest chain.
 
 ## 3. IMPROVING SECURITY
 
