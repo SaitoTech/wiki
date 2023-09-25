@@ -2,7 +2,7 @@
 title: Use Cases
 description: 
 published: true
-date: 2023-09-25T06:04:29.281Z
+date: 2023-09-25T08:47:15.982Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T01:04:19.828Z
@@ -38,11 +38,13 @@ By the time a casual user of the internet wants to connect with another, they ar
 
 Today's secure internet ultimately relies on trust in a small collection of authoritative parties who manage a record of identities bound to public keys, preventing MITM attacks. The trust is necessary because the authorities managing such infrastructure ultimtely decide its contents, who is allowed to be certified, and work against malicious parties who may abuse it to commit mass fraud.
 
-### Web 3
+### Blockchain as PKI
 
 Saito is well suited to trustleslly perform the fundamental duties of a PKI without any authorities or any permission. Consider the key exchange again: two parties may share with each other their public keys over an insecure network and establish a secure connection between each other. Yet when they do so without the help of an authoritative web server or PKI network, they cannot be sure that no other parties exist between their secure connection.
 
-If instead each party publishes their initial messages to the blockchain, the MITM attackers lose the ability to freely censor before passing it on.
+If Alice wants to communicate with Bob and sends a transaction stating that intent, Mallory intercepts the message and instead publishes her own message to the blockchain. Bob recieves the same treatment, and what Mallory has ended up doing is publishing two transactions from herself purporting to be Alice and Bob. Until Alice and Bob see that their transctions were not published on the blockchain, they refuse to connect.
+
+The modified attack is as follows: Mallory censors Alice's message such that it does not reach the blockchain and sends her own message claiming to be Alice under a different public key (it is assumed Bob is not sure which public key Alice has yet). Bob responds, and sets up a connection. Since both parties have proof that their initial messages were posted onchain, and attackers cannot modify the chain without significant and ever-growing rate of cost, they can be fairly certain
 
 ## Permisionless Internet of Things
 
