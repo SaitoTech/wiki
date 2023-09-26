@@ -2,7 +2,7 @@
 title: Use Cases
 description: 
 published: true
-date: 2023-09-26T02:35:12.832Z
+date: 2023-09-26T08:21:16.615Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T01:04:19.828Z
@@ -34,7 +34,9 @@ Everyone who uses the internet today relies on PKI networks for security. All co
 
 Typically, when someone on the internet wants to connect to a friend, they do not each register with a PKI network and have their identities certified globally in web browsers, instead they leverage the hiearchy of trust by navigating to a website which is verified by the certificate authority, creating a user account, and finding their friend's user account. The website which connects two parties serves as a miniature PKI network for users to connect.
 
-By the time a casual user of the internet wants to connect with another, they are trusting the PKI network as well as any websites necessary to form a connection. PKI networks themselves have proven lucrative and concentrated targets of attack, both by government and rogue hackers, and websites themselves can be used to attack its users in similar ways.
+By the time a casual user of the internet wants to connect with another, they are trusting the PKI network as well as any websites necessary to form a connection. Much like the website had to identify itself with a certificate authority, a user must identify themselves with the website - time and time again the mangement of user information and authorization by websites who are forced to act like miniature PKIs for their users has been demonstrated to fail.
+
+The reliance on web services to provide these trust assumptions is a security risk for all involved - and often can only be done relatively safely at scale by large corporations who then use their monopoly on trust to pilfer and monetize user data as discreetly as possible. Even more dangerous than a compromise on a website, however, is a succesfull attack on the Web 2 base layer: PKI networks are lucrative and concentrated targets of attack, both by government and rogue hackers.
 
 Today's secure internet ultimately relies on trust in a small collection of authoritative parties who manage a record of identities bound to public keys, preventing MITM attacks. The trust is necessary because the authorities managing such infrastructure ultimtely decide its contents, who is allowed to be certified, and work against malicious parties who may abuse it to commit mass fraud.
 
