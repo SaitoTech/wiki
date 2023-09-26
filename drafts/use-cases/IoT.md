@@ -2,7 +2,7 @@
 title: Use Cases
 description: 
 published: true
-date: 2023-09-26T08:21:16.615Z
+date: 2023-09-26T10:22:24.935Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T01:04:19.828Z
@@ -42,7 +42,7 @@ Today's secure internet ultimately relies on trust in a small collection of auth
 
 ### Blockchain as PKI
 
-Saito is well suited to trustleslly perform the fundamental duties of a PKI without any authorities or any permission. Consider the key exchange again: two parties may share with each other their public keys over an insecure network and establish a secure connection between each other. Yet when they do so without the help of an authoritative web server or PKI network, they cannot be sure that no other parties exist between their secure connection.
+Saito is well suited to perform the much of the serious and fundamental responsibilities of a PKI without any authorities, any permission, and no central point of attack or corruption. Consider the key exchange again: two parties may share with each other their public keys over an insecure network and establish a secure connection between each other. Yet when they do so without the help of an authoritative web server or PKI network, they cannot be sure that no other parties exist between their secure connection.
 
 If Alice wants to communicate with Bob and sends a transaction stating that intent, Mallory intercepts the message and instead publishes her own message to the blockchain. Bob recieves the same treatment, and what Mallory has ended up doing is publishing two transactions from herself purporting to be Alice and Bob. She then attempts to set up a connection between the two by convincing them to each individually connect to her.
 
@@ -72,6 +72,10 @@ When the internet is flipped on its head such that individuals are no longer dep
 ## Permisionless Internet of Things
 
 Internet of things refers to the market of smart devices which consumers and businesses own and control remotely.
+
+Consider a security camera which connects to the internet - the manufacturer already respects user privacy, so it is end-to-end encrypted by default, and open source. When you set it up, you connect your phone and they swap public keys - now no matter what medium they connect through, they will only establish connections if the public keys match what was supplied during setup.
+
+This is convenient and practical for a single device, and can use an untrusted medium without fear of a MITM attack.
 
 
 ### Privacy Concerns
