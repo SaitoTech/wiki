@@ -2,7 +2,7 @@
 title: Use Cases
 description: 
 published: true
-date: 2023-09-26T01:34:58.071Z
+date: 2023-09-26T02:35:12.832Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T01:04:19.828Z
@@ -44,7 +44,9 @@ Saito is well suited to trustleslly perform the fundamental duties of a PKI with
 
 If Alice wants to communicate with Bob and sends a transaction stating that intent, Mallory intercepts the message and instead publishes her own message to the blockchain. Bob recieves the same treatment, and what Mallory has ended up doing is publishing two transactions from herself purporting to be Alice and Bob. She then attempts to set up a connection between the two by convincing them to each individually connect to her.
 
-But thanks to blockchain, and unlike public networks of the past, key exchange participants select their partners from a universal and uncensorable medium - where Mallory previously had the ability to censor for free, she now must resist the economic security of the blockchain in order to prevent Alice and Bob from noticing that someone is impersonating their messages and setting up a MITM attack.
+But thanks to blockchain, and unlike public networks of the past, key exchange participants select their partners from a universal and uncensorable medium - where Mallory previously had the ability to censor for free, she now must resist the economic security of the blockchain in order to fulfill her attack.
+
+Only when Alice and Bob both see that both of their messages were posted to the universal broadcast network do they then have economic security which protects those messages and allows each counterparty to see them in their original form. By establishing connections only after both messages appear on the blockchain, the attacker loses the crucial ability to censor those messages before replacing them and can thus no longer attempt the attack without being detected and ultimately shunned.
 
 ### Web 3
 
