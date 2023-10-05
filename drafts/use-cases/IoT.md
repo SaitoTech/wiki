@@ -2,7 +2,7 @@
 title: Use Cases
 description: 
 published: true
-date: 2023-09-26T10:22:24.935Z
+date: 2023-10-05T04:42:35.633Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T01:04:19.828Z
@@ -12,29 +12,31 @@ dateCreated: 2023-09-24T01:04:19.828Z
 
 ## What Does Saito Do?
 
-A common question for those investigating a new blockchain: what are its use cases? Money, smart contracts, decentralized finance, trustless computation - use cases are evolving constantly. But the creation of new projects to address each use case is unecessary and counter-productive. The common utility beneath all blockchain use cases is the *universal broadcast network*, and the quality of any application of blockchain ultimately relies on this.
+A common question for those investigating a new blockchain is: what are its use cases? Money, smart contracts, decentralized finance, trustless computation - use cases are evolving constantly. But the creation of new projects to address each use case is unecessary and counter-productive. The common utility beneath all blockchain use cases is the *universal broadcast network*, and the quality of any application of blockchain ultimately relies on this.
 
-Saito's consensus mechanism is fundamentally oriented towards providing an application-agnostic universal broadcast layer, which is optimizes for providing [security](https://wiki.saito.io/consensus/majoritarian-attacks) and affordability for any permisionless application at any scale, including applications for which blockchain was previously too expensive to even consider. By optimizing for universal broadcast rather than any specific use case, the network bears utility for users of all financial and social status.
+Saito's consensus mechanism is fundamentally oriented towards providing an application-agnostic universal broadcast layer, which is optimized for [security](https://wiki.saito.io/consensus/majoritarian-attacks) and affordability at any scale, including applications for which public and open blockchain was previously too expensive to even consider. By optimizing for universal broadcast rather than any particular use case, the network remains versatile enough to provide utility for users of all financial and social status.
 
 ## Public Key Infrastructure
 
 ### Man-in-the-Middle Attacks
 
-Public Key Infrastructures, also referred to as PKI networks, serve a vital role in a ubiquitous cryptographic primitive: key exchange. Safe and secure key exchange is so fundamental that it would be imspossible to fully describe every possible use case of scaalable and secure blockchain without first examining it.
+Public Key Infrastructures, also referred to as PKI networks, serve a vital role in a ubiquitous cryptographic primitive: key exchange. Safe and secure key exchange is so fundamental that it would be imspossible to fully describe every possible use case of scalable and secure blockchain without first examining it.
 
-Assyemtric cryptography makes it possible to set up a secure connection between any parties holding a public key pair, even when attackers can read the messages.  The problem is that such exchanges are vulnerable to *Man in the Middle* (MITM) *Attacks,* where an intercepting party can secretly place themselves between each party and dupe them into encrypting their data in favor of the attacker. Any parties communicating over an open network run the risk of anyone in between who can such messages intercepting and impersonating the authors.
+Assyemtric cryptography makes it possible to set up a secure connection between any parties holding a public key pair, even when attackers can read the messages.  The problem is that such exchanges are vulnerable to *Man in the Middle* (MITM) *Attacks,* where an intercepting party can secretly place themselves between each party and dupe them into encrypting their data in favor of the attacker. Any parties communicating over a traditional open network run the risk of of their messages being intercepted, allowing attackers to impersonate either party.
 
-Consult [Wikipedia](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) for a nice visual example.
+Consult [Wikipedia](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) for the basic example.
 
 In order to solve this problem, it is necessary to rely on PKI networks who will vouch for the authenticity of certain parties and thus allow users to spots public keys which do not have their blessing. PKI networks serve as the backbone of secure, remote communication, allowing two parties to establish a secure channel over an insecure network.
 
 ### Existing PKI Networks
 
-Everyone who uses the internet today relies on PKI networks for security. All consumer web browsers are compiled, distributed and installed with their trust assumptions resting on the *certificate authorities* within the PKI which bind web domains to public keys and prevent MITM attacks. Without these certificates, it would never be clear to web browsers if a domain it attempted to connect with was truly private or being intercepted.
+The great majority of applications using the internet today rely on permissioned PKI networks for security against MITM attacks. All consumer web browsers are compiled, distributed and installed with their trust assumptions resting on the *certificate authorities* within the PKI which bind web domains to public keys and prevent MITM attacks. Without these certificates, it would not be clear to web browsers connecting to untrusted domains if it was truly private or being intercepted by a MITM.
 
-Typically, when someone on the internet wants to connect to a friend, they do not each register with a PKI network and have their identities certified globally in web browsers, instead they leverage the hiearchy of trust by navigating to a website which is verified by the certificate authority, creating a user account, and finding their friend's user account. The website which connects two parties serves as a miniature PKI network for users to connect.
+Typically, when someone on the internet wants to connect to a friend, they do not each register with a PKI network and have their identities certified globally into all web browsers. Instead they leverage a hiearchy of trust by navigating to a website which *is* verified by the certificate authority, creating a user account, and finding their friend's user account. Each individual website then serves as a miniature PKI network, with users placing trust in its operators.
 
-By the time a casual user of the internet wants to connect with another, they are trusting the PKI network as well as any websites necessary to form a connection. Much like the website had to identify itself with a certificate authority, a user must identify themselves with the website - time and time again the mangement of user information and authorization by websites who are forced to act like miniature PKIs for their users has been demonstrated to fail.
+Much like the website had to identify itself with a certificate authority, a user must identify themselves with the website - time and time again the mangement of user information and authorization by websites who act as miniature PKIs for their users has been demonstrated to fail. Either the company is too poorly funded to properly secure their users, or so large that it can take advantage of those users' trust in them.
+
+It can be thus seen that permissioned PKI networks do not scale. Even assuming trust in the security of large certificate authorities and PKIs, these networks can only scale their security to authorize one domain at a time. Individual users, on the other hand, are forced to trust that the domains they connect through are behaving faithfully. The trust assumptions have been delegated down to parties with much less to lose and far fewer resources to put towards security.
 
 The reliance on web services to provide these trust assumptions is a security risk for all involved - and often can only be done relatively safely at scale by large corporations who then use their monopoly on trust to pilfer and monetize user data as discreetly as possible. Even more dangerous than a compromise on a website, however, is a succesfull attack on the Web 2 base layer: PKI networks are lucrative and concentrated targets of attack, both by government and rogue hackers.
 
