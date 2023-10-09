@@ -2,7 +2,7 @@
 title: Use Cases
 description: 
 published: true
-date: 2023-10-05T05:55:00.236Z
+date: 2023-10-09T06:15:37.404Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T01:04:19.828Z
@@ -12,43 +12,53 @@ dateCreated: 2023-09-24T01:04:19.828Z
 
 ## What Does Saito Do?
 
-A common question for those investigating a new blockchain is: what are its use cases? Money, smart contracts, decentralized finance, trustless computation - use cases are evolving constantly. But the creation of new projects to address each use case is unecessary and counter-productive. The common utility beneath all blockchain use cases is the *universal broadcast network*, and the quality of any application of blockchain ultimately relies on this.
+A common question for those investigating a new blockchain is "what are its use cases?" Money, smart contracts, decentralized finance, trustless computation - applications of blockchain are evolving constantly. But in a very fundamental sense, the blockchain has a singular point of value from which all applications flow: *Universal Broadcast*.
 
-Saito's consensus mechanism is fundamentally oriented towards providing an application-agnostic universal broadcast layer, which is optimized for [security](https://wiki.saito.io/consensus/majoritarian-attacks) and affordability at any scale, including applications for which public and open blockchain was previously too expensive to even consider. By optimizing for universal broadcast rather than any particular use case, the network remains versatile enough to provide utility for users of all financial and social status.
+For this reason, the creation of new projects to address each use case is largely unnecessary and counter-productive. The common need for a *universal broadcast network* all these applications ultimately share implies that the blockchain for which the majority of application development and economic security should accumulate is the one which best serves that need.
+
+Saito's consensus mechanism is fundamentally oriented towards providing an application-agnostic universal broadcast layer, which is optimizes for providing [security](https://wiki.saito.io/consensus/majoritarian-attacks) and affordability for any permissionless application at any scale - removing the need to start new chains when the old ones become to bloated. It addresses fundamental economic problems that no other blockchain recognizes, and is thus primed as the dominant public blockchain for secure and affordable high-volume applications.
+
+Applications for which blockchain was previously too expensive to even consider are now possible thanks to Saito's ability to universally broadcast data at a market rate, paying not much more than typical bandwidth and storage costs. The most notable use case, which all internet communication relies on, is the Public Key Infrastructure.
 
 ## Public Key Infrastructure
 
 ### Man-in-the-Middle Attacks
 
-Public Key Infrastructures, also referred to as PKI networks, serve a vital role in a ubiquitous cryptographic primitive: key exchange. Safe and secure key exchange is so fundamental that it would be imspossible to fully describe every possible use case of scalable and secure blockchain without first examining it.
+Safe and secure key exchange is fundamental to the internet as we know it, yet the current paradigm provides the best security only to the largest players and is globally marred by trust assumptions. Public Key Infrastructures, also referred to as PKI networks, are the current solution to this problem.
 
-Assyemtric cryptography makes it possible to set up a secure connection between any parties holding a public key pair, even when attackers can read the messages.  The problem is that such exchanges are vulnerable to *Man in the Middle* (MITM) *Attacks,* where an intercepting party can secretly place themselves between each party and dupe them into encrypting their data in favor of the attacker. Any parties communicating over a traditional open network run the risk of of their messages being intercepted, allowing attackers to impersonate either party.
+Assyemtric cryptography makes it possible to set up a secure connection between any parties holding a public key pair, even when attackers can read the messages. The problem is that such exchanges are vulnerable to *Man in the Middle* (MITM) *Attacks,* where an intercepting party can secretly place themselves between each party and dupe them into encrypting their data in favor of the attacker, who then relays the not-so-secret messages between the unsuspecting parties.
 
-Consult [Wikipedia](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) for the basic example.
+Consult [Wikipedia](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) for a nice visual example.
 
-In order to solve this problem, it is necessary to rely on PKI networks who will vouch for the authenticity of certain parties and thus allow users to spots public keys which do not have their blessing. PKI networks serve as the backbone of secure, remote communication, allowing two parties to establish a secure channel over an insecure network.
+PKI networks, in the simplest of terms, serve as trusted middlemen which can audit key exchange requests to spot and stop MITM attacks. Some PKIs are small, like for individual businesses, some are large, like for the world wide web, and some are hidden in plainsight, like the user security protocols on social media.
 
-### Existing PKI Networks
+Since these middlemen are all that stands in the way of a MITM attack, they also have the unique privilege to perform such attacks, making them prime targets for hackers, government corruption, and the prying eyes of data-hungry social media companies. Your connection is only as safe as your middleman.
 
-The great majority of applications using the internet today rely on permissioned PKI networks for security against MITM attacks. All consumer web browsers are compiled, distributed and installed with their trust assumptions resting on the *certificate authorities* within the PKI which bind web domains to public keys and prevent MITM attacks. Without these certificates, it would not be clear to web browsers connecting to untrusted domains if it was truly private or being intercepted by a MITM.
+### Implicit PKI Networks
 
-Typically, when someone on the internet wants to connect to a friend, they do not each register with a PKI network and have their identities certified globally into all web browsers. Instead they leverage a hiearchy of trust by navigating to a website which *is* verified by the certificate authority, creating a user account, and finding their friend's user account. Each individual website then serves as a miniature PKI network, with users placing trust in its operators.
+All consumer web browsers are compiled, distributed and installed with their trust assumptions resting on the *certificate authorities* of PKI networks, which bind web domains to public keys in hopes of preventing MITM attacks. Without this, it would never be clear to web browsers if a connection to some domain was secure or being intercepted.
 
-Much like the website had to identify itself with a certificate authority, a user must identify themselves with the website - time and time again the mangement of user information and authorization by websites who act as miniature PKIs for their users has been demonstrated to fail. Either the company is too poorly funded to properly secure their users, or so large that it can take advantage of those users' trust in them.
+Typically, when someone on the internet wants to connect to a friend, they do not each register with a 'global' PKI network and have their identities certified across all web browsers. Instead they navigate to a website verified by a certificate authority, authorize a user account, and connect to their friend's user account reliant on the security within that website.
 
-It can be thus seen that permissioned PKI networks do not scale. Even assuming trust in the security of large certificate authorities and PKIs, these networks can only scale their security to authorize one domain at a time. Individual users, on the other hand, are forced to trust that the domains they connect through are behaving faithfully. The trust assumptions have been delegated down to parties with much less to lose and far fewer resources to put towards security.
+Much like the website had to identify itself with a certificate authority, a user usually identifies themselves with the website by creating an account. Since the website is determining who owns which keys (or more typically: user accounts), it serves as an implicit PKI (though rarely referred to as such) for users - it prevents MITM attacks by audting connections against their own database of users.
 
-The reliance on web services to provide these trust assumptions is a security risk for all involved - and often can only be done relatively safely at scale by large corporations who then use their monopoly on trust to pilfer and monetize user data as discreetly as possible. Even more dangerous than a compromise on a website, however, is a succesfull attack on the Web 2 base layer: PKI networks are lucrative and concentrated targets of attack, both by government and rogue hackers.
+The reliance on middlemen to provide these trust assumptions is a security risk for all involved - companies make themselves targets for hackers, and users must rely on the skill and honesty behind corporate security practices. Often this is only acheived with relative safety by large corporations who then pilfer and monetize user data.
 
-Today's secure internet ultimately relies on trust in a small collection of authoritative parties who manage a record of identities bound to public keys, preventing MITM attacks. The trust is necessary because the authorities managing such infrastructure ultimtely decide its contents, who is allowed to be certified, and work against malicious parties who may abuse it to commit mass fraud.
+Today's secure internet ultimately relies on trust in a small collection of authoritative parties who catalog and mediate interactions between identities. Faith that these authorities will not perform a MITM attack of their own volition and to protect their operation from bribes and hackers is a requirement. Their permission to register and use the system is also required.
+
+While the PKI networks behind the websites themselves are generally considered more secure, the ramifications of those being compromised are also much worse. Despite this, everyday users of the internet end up reliant on the weakest link in this cryptographic chain to secure their communications: corporate Web 2 servers.
 
 ### Blockchain as PKI
 
-Saito is well suited to perform the much of the serious and fundamental responsibilities of a PKI without any authorities, any permission, and no central point of attack or corruption. Consider the key exchange again: two parties may share with each other their public keys over an insecure network and establish a secure connection between each other. Yet when they do so without the help of an authoritative web server or PKI network, they cannot be sure that no other parties exist between their secure connection.
+Saito is well suited to perform the much of the serious and fundamental responsibilities of a PKI without any authorities, any permission, and no central point of attack or corruption. Consider the key exchange again: two parties may share with each other their public keys over an insecure network and establish a secure connection between each other. Yet when they do so without the help of an authoritative web server or PKI network, they cannot be sure that no other parties exist between their connection.
 
 If Alice wants to communicate with Bob and sends a transaction stating that intent, Mallory intercepts the message and instead publishes her own message to the blockchain. Bob recieves the same treatment, and what Mallory has ended up doing is publishing two transactions from herself purporting to be Alice and Bob. She then attempts to set up a connection between the two by convincing them to each individually connect to her.
 
 But thanks to blockchain, and unlike public networks of the past, key exchange participants select their partners from a universal and uncensorable medium - where Mallory previously had the ability to censor for free, she now must resist the economic security of the blockchain in order to fulfill her attack.
+
+Alice and Bob using Saito to perform key exchange remove the ability for a MITM to censor their original messages. Mallory can still impersonate Alice and Bob, but unlike in any other network, she has objective and growing cost to censor the original messages. Saito incentivizes nodes to compete to spread and include data in blocks - naturally routing around MITM attackers.
+
+Nodes wishing to best serve users will route those relevant transactions back to them, and Alice and Bob can then see all key exchange requests directed towards them. When Alice or Bob sees that they each have multiple connection requests claiming to be the other, 
 
 Only when Alice and Bob both see that both of their messages were posted to the universal broadcast network do they then have economic security which protects those messages and allows each counterparty to see them in their original form. By establishing connections only after both messages appear on the blockchain, the attacker loses the crucial ability to censor those messages before replacing them and can thus no longer attempt the attack without being detected and ultimately shunned.
 
@@ -59,6 +69,7 @@ There are several considerations at play here which are very often taken for gra
 * The extent of the reliance on PKI networks for internet security
 * The extent to which registering with Web 2 PKIs is permissioned 
 * The security vulnerabilities of Web 2 PKIs
+* How, in practice, corporations serve as implicit and less secure PKIs for users
 * The ability for blockchain to serve as PKI
 
 Web 3 is well defined: a system of networking in which interested parties may safely connect directly to each other without any authoritative middlemen; without permission. By now it should be obvious that since the advent of public key cryptography, systems of authority have developed in order to solve the most basic problem of key exchange, and that all consumers rely on the security which  trickles down to social media platforms, and businesses on the blessings of authority to grant certificates.
