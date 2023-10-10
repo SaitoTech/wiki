@@ -2,7 +2,7 @@
 title: Use Cases
 description: 
 published: true
-date: 2023-10-10T00:56:46.262Z
+date: 2023-10-10T01:16:16.046Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T01:04:19.828Z
@@ -10,13 +10,17 @@ dateCreated: 2023-09-24T01:04:19.828Z
 
 # Use Cases
 
-1. What Does Saito Do?
-2. What Does Saito Pay For?
-3. Public Key Infrastructure
-	3a. Man-in-the-Middle Attacks
-  3b. 
-
-## What Does Saito Do?
+<ul>
+  <li> <a href="1">1. What Does Saito Do?</a> </li>
+  <li>2. What Does Saito Pay For?</li>
+  <li>3. Public Key Infrastructure</li>
+  <ul>
+    <li>3a. Man-in-the-Middle Attacks</li>
+    <li>3b. Implicit PKI Networks</li>
+  </ul>
+</ul>
+  
+## <div class="1">What Does Saito Do?</div>
 
 A common question for those investigating a new blockchain is "what are its use cases?" Money, smart contracts, decentralized finance, trustless computation - applications of blockchain are evolving constantly. But in a very fundamental sense, the blockchain has a singular source of value from which all applications flow: *Universal Broadcast*.
 
