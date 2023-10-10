@@ -2,7 +2,7 @@
 title: Use Cases
 description: 
 published: true
-date: 2023-10-10T01:27:42.098Z
+date: 2023-10-10T01:44:36.193Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T01:04:19.828Z
@@ -10,14 +10,18 @@ dateCreated: 2023-09-24T01:04:19.828Z
 
 # Use Cases
 
-<ul>
-  <li> 1. <a href="#1"> What Does Saito Do?</a> </li>
-  <li> 2. <a href="#2"> What Does Saito Pay For?</a> </li>
-  <li> 3. <a href="#3"> Public Key Infrastructure</a> </li>
+<ul style="color:">
+  <li> 1. <a style="text-decoration:none" href="#1"> What Does Saito Do?</a> </li>
+  <li> 2. <a style="text-decoration:none" href="#2"> What Does Saito Pay For?</a> </li>
+  <li> 3. <a style="text-decoration:none" href="#3"> Public Key Infrastructure</a> </li>
   <ul>
-    <li> 3a. <a href="#3a"> Man-in-the-Middle Attacks </a> </li>
-    <li> 3b. <a href="#3b"> Implicit PKI Networks </a> </li>
+    <li> 3a. <a style="text-decoration:none" href="#3a"> Man-in-the-Middle Attacks </a> </li>
+    <li> 3b. <a style="text-decoration:none" href="#3b"> Implicit PKI Networks </a> </li>
+    <li> 3c. <a style="text-decoration:none" href="#3b"> Blockchain as PKI </a> </li>
+    <li> 3d. <a style="text-decoration:none" href="#3b"> Web 3 </a> </li>
   </ul>
+  <br>
+  <li> 4. <a style="text-decoration:none" href="#3b"> Permissionless Internet of Things </a> </li>
 </ul>
   
 ## <div id="1">What Does Saito Do?</div>
@@ -28,7 +32,7 @@ Universal Broadcast means a network in which anyone paying the market rate may p
 
 For this reason, the creation of new projects to address each use case is largely unnecessary and counter-productive. The common need for a *universal broadcast network* which these applications share implies that the blockchain for which the majority of application development and economic security should accumulate is the one which best serves that need.
 
-## What Does Saito Pay For?
+## <div id="2"> What Does Saito Pay For?</div>
 
 One of the most common arguments for new chains created to serve new use cases is that the new chain is built to fund that utility - thus it is a "utility chain." Saito invalidates this argument in two ways:
 
@@ -42,9 +46,9 @@ Saito consensus rewards nodes for collecting transaction fees, so any node which
 
 Applications for which blockchain was previously too expensive to even consider are now possible thanks to Saito's ability to universally broadcast data at a market rate, paying not much more than typical bandwidth and storage costs. The most fundamental use case, which all secure internet communication relies on, is the Public Key Infrastructure.
 
-## Public Key Infrastructure
+## <div id="3">Public Key Infrastructure</div>
 
-### Man-in-the-Middle Attacks
+### <div id="3a">Man-in-the-Middle Attacks</div>
 
 Safe and secure key exchange is fundamental to the internet as we know it, yet the current paradigm provides the best security only to the largest players and is globally marred by trust assumptions. Public Key Infrastructures, also referred to as PKI networks, are the current solution to this problem.
 
@@ -56,7 +60,7 @@ PKI networks, in the simplest of terms, serve as trusted middlemen which can aud
 
 Since these middlemen are all that stands in the way of a MITM attack, they also have the unique privilege to perform such attacks, making them prime targets for hackers, government corruption, and the prying eyes of data-hungry social media companies. Your connection is only as safe as your middleman.
 
-### Implicit PKI Networks
+### <div id="3b">Implicit PKI Networks</div>
 
 All consumer web browsers are compiled, distributed and installed with their trust assumptions resting on the *certificate authorities* of PKI networks, which bind web domains to public keys in hopes of preventing MITM attacks. Without this, it would never be clear to web browsers if a connection to some domain was secure or being intercepted.
 
@@ -70,7 +74,7 @@ Today's secure internet ultimately relies on trust in a small collection of auth
 
 While the PKI networks behind the websites themselves are generally considered more secure, the ramifications of those being compromised are also much worse. Despite this, everyday users of the internet end up reliant on the weakest link in this cryptographic chain to secure their communications: corporate Web 2 servers.
 
-### Blockchain as PKI
+### <div id="3c">Blockchain as PKI</div>
 
 Saito is well suited to perform the much of the serious and fundamental responsibilities of a PKI without any authorities, any permission, and no central point of attack or corruption. Consider the key exchange again: two parties may share with each other their public keys over an insecure network and establish a secure connection between each other. Yet when they do so without the help of an authoritative web server or PKI network, they cannot be sure that no other parties exist between their connection.
 
@@ -84,7 +88,7 @@ Nodes wishing to best serve users will route those relevant transactions back to
 
 Only when Alice and Bob both see that both of their messages were posted to the universal broadcast network do they then have economic security which protects those messages and allows each counterparty to see them in their original form. By establishing connections only after both messages appear on the blockchain, the attacker loses the crucial ability to censor those messages before replacing them and can thus no longer attempt the attack without being detected and ultimately shunned.
 
-### Web 3
+### <div id="3d">Web 3</div>
 
 There are several considerations at play here which are very often taken for granted:
 
@@ -104,7 +108,7 @@ While users may still have their preference of software based on user experience
 
 When the internet is flipped on its head such that individuals are no longer dependent on the  authoritative and trusted coalitions of the internet today, Web 2 PKIs, there is no predicting from the ground floor all the developments which will generate. The Saito philosophy rests on one assumption: the internet is better when individuals have more freedom, soveriegnty and power - and the only way to provide that through an universal broadcast network which is secure against majority power and will not economically collapse or exclude users at scale.
 
-## Permisionless Internet of Things
+## <div id="4">Permisionless Internet of Things</div>
 
 Internet of things refers to the market of smart devices which consumers and businesses own and control remotely.
 
