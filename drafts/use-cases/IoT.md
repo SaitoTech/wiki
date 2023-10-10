@@ -2,7 +2,7 @@
 title: Use Cases
 description: 
 published: true
-date: 2023-10-09T06:15:37.404Z
+date: 2023-10-10T00:43:10.074Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T01:04:19.828Z
@@ -12,9 +12,15 @@ dateCreated: 2023-09-24T01:04:19.828Z
 
 ## What Does Saito Do?
 
-A common question for those investigating a new blockchain is "what are its use cases?" Money, smart contracts, decentralized finance, trustless computation - applications of blockchain are evolving constantly. But in a very fundamental sense, the blockchain has a singular point of value from which all applications flow: *Universal Broadcast*.
+A common question for those investigating a new blockchain is "what are its use cases?" Money, smart contracts, decentralized finance, trustless computation - applications of blockchain are evolving constantly. But in a very fundamental sense, the blockchain has a singular source of value from which all applications flow: *Universal Broadcast*.
 
-For this reason, the creation of new projects to address each use case is largely unnecessary and counter-productive. The common need for a *universal broadcast network* all these applications ultimately share implies that the blockchain for which the majority of application development and economic security should accumulate is the one which best serves that need.
+Universal Broadcast means a network in which anyone paying the market rate may publish data onto a medium which anyone can access. Saito consensus pays for data distribution and broadcasts the data 'universally' i.e. to every node in the network. This feature is crucial to censorship resistance and to ensuring all participants share and agree on the network state.
+
+For this reason, the creation of new projects to address each use case is largely unnecessary and counter-productive. The common need for a *universal broadcast network* which these applications share implies that the blockchain for which the majority of application development and economic security should accumulate is the one which best serves that need.
+
+## What Does Saito Pay For?
+
+A common argument justifying a new chain for a new use case is that since the new blockchain is geared towards that use case, it specifically pays for that use case and is thus the best market for that utility. 
 
 Saito's consensus mechanism is fundamentally oriented towards providing an application-agnostic universal broadcast layer, which is optimizes for providing [security](https://wiki.saito.io/consensus/majoritarian-attacks) and affordability for any permissionless application at any scale - removing the need to start new chains when the old ones become to bloated. It addresses fundamental economic problems that no other blockchain recognizes, and is thus primed as the dominant public blockchain for secure and affordable high-volume applications.
 
