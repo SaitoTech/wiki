@@ -2,13 +2,19 @@
 title: Use Cases
 description: 
 published: true
-date: 2023-10-10T00:43:10.074Z
+date: 2023-10-10T00:56:46.262Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T01:04:19.828Z
 ---
 
 # Use Cases
+
+1. What Does Saito Do?
+2. What Does Saito Pay For?
+3. Public Key Infrastructure
+	3a. Man-in-the-Middle Attacks
+  3b. 
 
 ## What Does Saito Do?
 
@@ -20,11 +26,17 @@ For this reason, the creation of new projects to address each use case is largel
 
 ## What Does Saito Pay For?
 
-A common argument justifying a new chain for a new use case is that since the new blockchain is geared towards that use case, it specifically pays for that use case and is thus the best market for that utility. 
+One of the most common arguments for new chains created to serve new use cases is that the new chain is built to fund that utility - thus it is a "utility chain." Saito invalidates this argument in two ways:
 
-Saito's consensus mechanism is fundamentally oriented towards providing an application-agnostic universal broadcast layer, which is optimizes for providing [security](https://wiki.saito.io/consensus/majoritarian-attacks) and affordability for any permissionless application at any scale - removing the need to start new chains when the old ones become to bloated. It addresses fundamental economic problems that no other blockchain recognizes, and is thus primed as the dominant public blockchain for secure and affordable high-volume applications.
+1. It recognizes that diverting funding explicitly towards some 'utility' degrades funding towards Universal Broadcast
 
-Applications for which blockchain was previously too expensive to even consider are now possible thanks to Saito's ability to universally broadcast data at a market rate, paying not much more than typical bandwidth and storage costs. The most notable use case, which all internet communication relies on, is the Public Key Infrastructure.
+2. Saito pays nodes who generate fee volume; so it naturally funds *any* utility which users demand.
+
+Thanks to Saito, it is no longer necessary to redesign consensus to pay for every new use case; a dangerous practice which both fractures security across chains and diverts funding away from true economic security. Because Saito pays for blockchain network infrastructure as its form of security rather than any arbitrary form of work, it is both more secure and more scalable.
+
+Saito consensus rewards nodes for collecting transaction fees, so any node which leverages Universal Broadcast for its popular application on Saito, for any use case, is paid. This makes the many utilities of blockchain far more flexible and secure as they do not need to 'bring their own (economic)  security.'
+
+Applications for which blockchain was previously too expensive to even consider are now possible thanks to Saito's ability to universally broadcast data at a market rate, paying not much more than typical bandwidth and storage costs. The most fundamental use case, which all secure internet communication relies on, is the Public Key Infrastructure.
 
 ## Public Key Infrastructure
 
