@@ -2,7 +2,7 @@
 title: Sybil-Proof
 description: 
 published: true
-date: 2023-09-24T00:43:41.838Z
+date: 2023-10-11T04:18:34.121Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
@@ -17,11 +17,15 @@ dateCreated: 2023-09-12T04:54:16.592Z
 > A sybil produces the block with w/ 2nd hop routing work. A non-sybil produces the block faster with 1st hop routing work. The probability of the sybil collecting payment is lower because the probability of their blocks being added to the chain is lower. <br><br>The only way a sybil can reach parity on probability is if they burn their own money, which puts their cost higher than the non-sybil. There is simply no world in which the probability of getting paid is the same for a sybil as a non-sybil ceteris paribus.
 <br>-David Lancashire
 
-As argued in *On Bitcoin and Red Ballons* [[Babaioff et al., 201]](https://arxiv.org/abs/1111.2626) the Sybil problem widely agreed to be unsolvable, since giving other block producers access to transaction fees always gives them an advantage, and allowing arbitrary claims on fees allows Sybils to earn multiple, unwarranted rewards for fake relays.
+As argued in *On Bitcoin and Red Ballons* [[Babaioff et al., 201]](https://arxiv.org/abs/1111.2626) the Sybil problem is widely agreed to be unsolvable, since giving other block producers access to transaction fees always gives them an advantage, and allowing arbitrary claims on fees allows Sybils to earn multiple, unwarranted rewards for fake relays.
 
-This poses a problem for blockchain networks which wish to remain open and secure against converging power at scale. If, as argued by experts in the field, Sybilling on transaction propagation is impossible to defend against, blockchain networks are doomed to fall into patterns of hoarding which reward the largest nodes in the network and introduce economic problems as they shelter transactions rather than share them - even if sharing would increase overall efficiency.
+Taking a step back, the basic problem is this: how do you reward relays for propagating data into a distributed network which doesn't end up with an optimal strategy of hoarding data. The naive idea is to allow nodes to place their routing signature on data, but then nothing stops them from Sybilling this mechanism to inflate their rewards.
 
-Saito proves that by reducing the work available to produce blocks with each 'hop' in a transaction's relay path, that Sybil nodes and nodes who otherwise add unnecessary 'hops' on their way to block producers are less profitable and out-compete by nodes who only add hops to reduce propagation time to block producers. The mechanism and basic mathematics of the proof are demonstrated below.
+Blockchains which can't solve this issue in regards to propagating transactions into blocks end up with a distributed network of nodes whose best strategy is to hoard, rather than share data - introducing economic closure and reducing efficiency.
+
+If, as argued by experts in the field, Sybilling on transaction propagation is impossible to defend against, blockchain networks are doomed to fall into patterns of hoarding which reward the largest nodes in the network as they shelter transactions rather than share them - even if sharing would increase the overall efficiency of the network.
+
+Saito proves that by reducing the work available to produce blocks with each 'hop' in a transaction's relay path, that Sybil nodes or any nodes who  add unnecessary 'hops' on their way to block producers are less profitable and out-compete by nodes who only add hops to reduce propagation time to block producers. The mechanism and basic mathematics of the proof are demonstrated below.
 
 ### SECURE ROUTER SELECTION
 
