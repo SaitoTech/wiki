@@ -2,7 +2,7 @@
 title: Token Persistence FAQ
 description: 
 published: true
-date: 2023-10-12T05:38:54.053Z
+date: 2023-10-13T05:19:11.150Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-12T05:38:54.053Z
@@ -22,7 +22,7 @@ __What wallets are supported?__
 * Native tokens can be stored, sent and received in the [Saito Web Wallet](/software/web-wallet) built into all applications on saito.io
 
 __How many Saito tokens to I need to request conversion?__
-* Balances are guranteed by the project on a falling curve listed in the [tomenomics](/tokenomics) documnets.
+* The minumum balance that will persist accross hard forks or resets is set on a falling curve listed in the [tomenomics](/tokenomics) documnets.
   (Initially balances under 500,000 SAITO will not be guaranteed on chain. Balances below this threshold will be reaped during a chain reset.)
   
 __How do I stake tokens?__
