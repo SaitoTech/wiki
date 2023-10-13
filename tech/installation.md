@@ -2,7 +2,7 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2023-09-25T06:32:19.489Z
+date: 2023-10-13T08:42:56.288Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -12,9 +12,9 @@ dateCreated: 2022-01-18T09:49:16.786Z
 
 Saito consists of three separate-but-related software packages. This page contains instructions on installing and compiling all three packages as well as testing that they are working properly once setup:
 
- - Saito Rust
- - Saito WASM
- - Saito Lite (Rust)
+ - [Saito Rust](/tech/installation/rust)
+ - [Saito WASM](/tech/installation/wasm)
+ - [Saito Lite (Rust)](/tech/installation/javascript)
  
 The Saito Rust client is a command-line application built to handle consensus and network operations. If you want to run a high-throughput network node this is the software you need.
 
