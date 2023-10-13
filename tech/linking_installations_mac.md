@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2023-09-24T12:28:35.934Z
+date: 2023-10-13T08:48:24.553Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
