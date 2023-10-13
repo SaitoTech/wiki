@@ -2,7 +2,7 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2023-10-13T08:45:25.839Z
+date: 2023-10-13T08:47:57.791Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -23,90 +23,14 @@ The Saito WASM library is compiled from the Rust code and consists of a compact 
 Saito Lite (Rust) is a lite-client coded in javascript and designed for binary compatibility with the Rust client. It uses the compiled WASM library to support an in-browser wallet that can send-and-receive both on-chain and off-chain messages and run Saito applications. Applications like the [Saito Arcade](https://saito.io/arcade) are built using this client. If you are interested in building applications rather than contributing to core development, this is most likely what you need.
 
 
-## Saito Rust
+## Installation
 
-The Saito Rust client is the main network client. Compiling it requires the standard command-line tools bundled with X-Code in Mac and included with most  most Linux distributions. On Ubuntu you can install them as follows:
+Please see the relevant sections above for detailed instructions on installing the software packages you need. If you are building applications you will only need to install Saito-Lite-Rust. If you are interested in contributing to protocol development you will need to install the Rust codebases as well.
 
-#### Requirements
 
-* OS: Ubuntu 20.04 (MacOS instructions)
-* Build tools: git, g++, make
-* Stack: cargo rust (v.1.5.7+)
-* https://github.com/saitotech/saito-rust-workspace
+## Configuration
 
-#### Installation
-```
-git clone https://github.com/saitotech/saito-rust-workspace
-cd saito-lite-workspace
-git checkout develop
-cd saito-rust
-cp configs/config.template.js configs/config.json
-RUST_LOG=debug cargo run --bin saito-rust
-```
-
-## Saito WASM
-
-Saito WASM is a version of the Rust core compiled into a portable library that can interact with other programming languages like javascript. To use Saito WASM you must first ```compile``` the code and then ```link``` it to your external application.
-
-#### Requirements:
-
-* WASM-Pack [ [download](https://rustwasm.github.io/wasm-pack/installer/) ]
-
-#### Installation
-
-There are two steps to getting the Saito WASM library. The library must first be ```compiled``` from the Rust codebase. The compiled library must then be ```linked``` to the Saito Javascript codebase so that your local copy is used instead of the pre-compiled version hosted on NPM.
-
-The following instructions work for most Linux environments. If you are using a Mac you will need [these instructions](/tech/linking_installations_mac) on compiling and linking the WASM library under MacOS instead.
-
-```
-sudo apt-get update && sudo apt install build-essential pkg-config libssl-dev
-cd saito-rust-workspace
-cp saito-rust/configs/config.template.json saito-rust/configs/config.json
-cd saito-wasm
-wasm-pack build --debug --target browser
-```
-
-## Saito Lite (Rust)
-
-Saito Javascript is an in-browser lite-client that runs directly in the browser. It uses a compiled version of the Rust client by default, but can be connected to a locally-compiled version of the Saito WASM library for core development if needed.
-
-#### Requirements:
-
-* Build tools: git, g++, make, python, tsc
-* Stack: node.js (v.16+), npm (v6+)
-* TypeScript
-* https://github.com/saitotech/saito-lite-rust ( JavaScript )
-
-#### Installation
-
-First, ensure your machine has NodeJS installed:
-
-```
-sudo apt-get update
-sudo apt-get install g++ make git python node-typescript
-curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash
-sudo apt-get install -y nodejs
-```
-
-Second, download the latest version of our Saito Javascript client and install it along with typescript:
-
-> Note: do not clone into ```/var/www/``` as this will cause webpack to error during compilation.
-
-```
-git clone https://github.com/saitotech/saito-lite-rust
-cd saito-lite-rust
-npm install -g typescript 
-npm install
-```
-
-Finally, compile and run the software. This requires entering the saito-lite-rust directory and running the following commands:
-
-```
-npm run nuke
-npm start
-```
-
-#### Configuration
+Once you have installed Saito-Lite-Rust you will be ready to configure the server to run the applications you wish to support and provide them to browsers on-demand. This section covers these follow-on configuration steps.
 
 Saito uses two main configuration files. The first is ```config/options``` which specifies network configuration options like the IP address on which the server runs and the ports it should open and the peers to which it should connect. A second ```config/modules.config.js``` file specifies which modules should run on the server and any browsers that connect to it.
 
