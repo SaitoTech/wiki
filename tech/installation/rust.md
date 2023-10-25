@@ -2,7 +2,7 @@
 title: Saito Rust - Installation Instructions
 description: 
 published: true
-date: 2023-10-13T08:32:52.212Z
+date: 2023-10-25T16:13:30.023Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:32:52.212Z
@@ -25,6 +25,6 @@ git clone https://github.com/saitotech/saito-rust-workspace
 cd saito-lite-workspace
 git checkout develop
 cd saito-rust
-cp configs/config.template.js configs/config.json
+cp configs/config.template.json configs/config.json
 RUST_LOG=debug cargo run --bin saito-rust
 ```
