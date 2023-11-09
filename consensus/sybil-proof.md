@@ -2,7 +2,7 @@
 title: Sybil-Proof
 description: 
 published: true
-date: 2023-10-11T04:18:34.121Z
+date: 2023-11-09T02:48:28.431Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
@@ -10,7 +10,7 @@ dateCreated: 2023-09-12T04:54:16.592Z
 
 ## Proof of *Sybil-Proof*
 
-- Read [*A Simple Proof of Sybil Proof.*](https://github.com/SaitoTech/papers/blob/main/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf) for a complete and formal proof.
+- Read [*A Simple Proof of Sybil Proof.*](https://github.com/SaitoTech/papers/blob/main/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf) for a complete and formal proof or for more brevity, the [original blog post](https://saito.tech/a-simple-proof-of-sybil-proof/).
 
 - Learn about [Sybils](https://wiki.saito.io/en/consensus/sybils) and how they damage permisionless networks.
 
