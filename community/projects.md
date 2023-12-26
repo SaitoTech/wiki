@@ -2,7 +2,7 @@
 title: Saito and Community Projects
 description: All details related to saito and community projects can be found here
 published: true
-date: 2023-12-06T14:59:55.041Z
+date: 2023-12-26T18:15:07.686Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-25T00:44:11.924Z
@@ -43,8 +43,9 @@ This page provides an overview of community-led projects that could use help fro
 
 #### web3 Graffiti ####
 
-**Status**: mid-development
-**Project Site**: [Saito Web 3.0 Forum Details](/community/projects/forum)
+**Status**: Live
+**Project Site**: https://saito.io/graffiti/ 
+**Forum**: [Saito Web 3.0 Forum Details](/community/projects/forum)
 **Partipate**: Ask for us on the official Saito Telegram
 **Looking for**: Developer help, testers
 **Summary** Graffiti is a Web3 derivative of the famous r/place community pixel art  
