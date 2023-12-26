@@ -2,7 +2,7 @@
 title: Tasks
 description: this would all be incredibly helpful...
 published: true
-date: 2023-09-13T07:42:42.015Z
+date: 2023-12-26T18:26:46.509Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-25T10:02:25.251Z
@@ -48,7 +48,7 @@ We do not want to be running a VM on the base Saito network layer that executes 
 
 It would be a meaningful research project for someone to look into what sort of open source VMs are available and start thinking about which approaches to scripting might be suitable for integration with Saito.
 
-Having someone handle this research could easily speed up having some for of smart contracts or scripting deployed atop Saito and available for reference by Saito applications.
+Having someone handle this research could easily speed up having some sort of smart contracts or scripting deployed atop Saito and available for reference by Saito applications.
 
 
 ## Creative Ways to Identify Attack Conditions?
