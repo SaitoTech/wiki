@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-01-03T04:53:12.539Z
+date: 2024-01-03T05:12:07.176Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -16,7 +16,7 @@ If you are getting started programming on Saito, a good place to start is our [t
 
 
 #### What can I build?
-You can build almost anything that can be coded on Saito.
+You can build almost anything that can can be created in code on Saito. Saito excels at sending large quantities of data on chain quickly and cheaply. This makes on-chain key swaps, card shuffles, handshakes etc. simple and cheap to deploy.
 
 Applications are currently useful if they: 
  - add transactions to the network
