@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2023-03-27T00:18:03.313Z
+date: 2024-01-03T04:53:12.539Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -10,9 +10,21 @@ dateCreated: 2022-01-07T07:06:32.790Z
 
 # Saito Applications
 
-Saito application are modules that get installed into the wallet. Applications use on-chain and off-chain messages to communicate and can plug into other applications.
+Applications on saito.io are modules that get installed into the wallet. Applications use on-chain and off-chain messages to communicate and can plug into other applications.
 
 If you are getting started programming on Saito, a good place to start is our [tutorial series](/tech/tutorials) for new developers. Our Github repository also has a directory full of [reference modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) you can modify or consult if you are curious how the existing applications work.
+
+
+#### What can I build?
+You can build almost anything that can be coded on Saito.
+
+Applications are currently useful if they: 
+ - add transactions to the network
+ - showcase use cases for the chain that are not possible elsewhere
+ 
+In the long term - applications will be profitable if they encourage users spend fees transacting on the network.
+
+## Getting Started
 
 The following documentation may be useful for those doing more advanced development. The **Module API** explains what functions you can include in your module. The **Events API** explain how to listen and respond when system-wide events occur (like a new block being found). The **Services API*** explains how peers can inform other peers of value-added services they are running.
 
