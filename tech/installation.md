@@ -2,7 +2,7 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2023-10-13T08:47:57.791Z
+date: 2024-01-15T23:40:28.038Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -39,6 +39,43 @@ Running ```npm run nuke``` will create fresh versions of these configuration fil
 You can always reset your client by running the "nuke" command, but if you wish to change the applications supported on your server without resetting the blockchain, you can run the following instruction instead:
 
 ```npm run compile```
+
+
+#### Advanced Usage of the `compile` Script
+
+The `compile` script supports additional logging options, which can be specified using the `--loglevel` or `-l` flags. This feature allows you to set the desired log level for the compilation process.
+
+#### Usage:
+
+To set a specific log level, use one of the following commands:
+
+```bash
+npm run compile -- --loglevel=<level>
+```
+
+or 
+```
+npm run compile -- -l <level>
+```
+
+Where level can be one of the following:
+
+- error
+- warn
+- info
+- trace
+- debug
+For example, to set the log level to 'warn', you can use either:
+
+```
+npm run compile -- --loglevel=warn
+
+
+or
+
+npm run compile -- -l warn
+
+```
 
 
 ##### Javascript Client 'dev' Flag
