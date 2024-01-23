@@ -2,7 +2,7 @@
 title: Saito Roadmap
 description: 
 published: true
-date: 2024-01-23T01:58:14.523Z
+date: 2024-01-23T02:07:11.977Z
 tags: 
 editor: markdown
 dateCreated: 2024-01-23T01:50:57.374Z
@@ -39,23 +39,21 @@ dateCreated: 2024-01-23T01:50:57.374Z
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Consensus work has focused on compiling the Rust software into a WASM bundle that can be embedded into browsers. Improvements are being made to offer greater security in periods of low transaction volume and permit Saito to support NFTs and other kinds of digital assets without the need for standalone VMs. As the name of the era implies, work is also ongoing to support token-persistence on the network. We expect the network to support transfers of small-denominations of Saito by the end of this era.</p>
+<p>Consensus work is focused on compiling our Rust client into a WASM bundle that can be embedded into browsers. Improvements are being made to offer greater security in periods of low transaction volume and permit Saito to support NFTs and other kinds of digital assets without the need for standalone VMs. As the name of the era implies, work is also ongoing to support token-persistence on the network. We expect the network to support transfers of small-denominations of Saito by the end of this era.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>App development saw the introduction and interation of RedSquare (our social media platform), a new P2P VideoCall application, and growing sophistication of our more popular games. Applications under development by the team and community include open source versions of "Here I Stand", "Realms", "". Work continues , including digital rights asset management necessary for cartridge-management and rental functions.</p>
+<p>App development saw the introduction and interation of RedSquare (our social media platform), a new P2P VideoCall application, and growing sophistication of our more popular games. Work will continue on polishing our core set of applications, with new applications under development by the team and community includind games including "Here I Stand" and "Realms", and supporting applications including digital rights asset management platforms necessary for cartridge-management and IP rental applications. web3 crypto support will become a reality for developers interested in integrating that functionality into their applications.</p>
 <!-- /wp:paragraph -->
 
-  all of the games Marketing will continue with an emphasis on our core messages around fundamentals. Focus will be on providing expanded liquidity and trading options. This period will reach its conclusion with the end of Saito's ERC20 token vesting, at which point we will have the zero-inflation token supply necessary for making the economic decisions that kick-off our second era.</p>
 <!-- /wp:paragraph -->
+<p>In tokenomics, token persistence will become a reality during this era. Staking, while having been possible for some time will begin to earn rewards. The network will pursue a zero-inflation token policy until the third era.</p>
+<!-- /wp:paragraph -->
+
 
 <!-- wp:heading {"level":3} -->
 <h3>The Dawn of Persistence</h3>
 <!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>Token persistence will become a reality during this era. Staking, while having been possible for some time will begin to earn rewards and token persistence will also come into play. This could include starting with persistence for larger token deposits in the staking tables and gradually reducing our reaping threshold over time as we hit development milestones.</p>
-<!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
 <p>Transaction volume will be ramped up through crypto-by-crypto integration into our software stack. Our team will begin development of an advertising faucet and ecosystem. Token allocations for initial staking or advertising purposes will be low and non-disruptive: intended to test the economic model and provide initial support to developers rather than drive scalable economic activity and growth.</p>
