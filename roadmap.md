@@ -2,7 +2,7 @@
 title: Saito Roadmap
 description: 
 published: true
-date: 2024-01-23T01:50:57.374Z
+date: 2024-01-23T01:58:14.523Z
 tags: 
 editor: markdown
 dateCreated: 2024-01-23T01:50:57.374Z
@@ -39,11 +39,14 @@ dateCreated: 2024-01-23T01:50:57.374Z
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>The capstone feature of this era is extended “web3” support that will bring low-fee support for integrated cryptocurrencies into the Saito Arcade and all other native applications. Crypto-integration will start with communities where we have partnerships.</p>
+<p>Consensus work has focused on compiling the Rust software into a WASM bundle that can be embedded into browsers. Improvements are being made to offer greater security in periods of low transaction volume and permit Saito to support NFTs and other kinds of digital assets without the need for standalone VMs. As the name of the era implies, work is also ongoing to support token-persistence on the network. We expect the network to support transfers of small-denominations of Saito by the end of this era.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Marketing will continue with an emphasis on our core messages around fundamentals. Focus will be on providing expanded liquidity and trading options. This period will reach its conclusion with the end of Saito's ERC20 token vesting, at which point we will have the zero-inflation token supply necessary for making the economic decisions that kick-off our second era.</p>
+<p>App development saw the introduction and interation of RedSquare (our social media platform), a new P2P VideoCall application, and growing sophistication of our more popular games. Applications under development by the team and community include open source versions of "Here I Stand", "Realms", "". Work continues , including digital rights asset management necessary for cartridge-management and rental functions.</p>
+<!-- /wp:paragraph -->
+
+  all of the games Marketing will continue with an emphasis on our core messages around fundamentals. Focus will be on providing expanded liquidity and trading options. This period will reach its conclusion with the end of Saito's ERC20 token vesting, at which point we will have the zero-inflation token supply necessary for making the economic decisions that kick-off our second era.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
