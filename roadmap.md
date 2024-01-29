@@ -2,7 +2,7 @@
 title: Saito Roadmap
 description: 
 published: true
-date: 2024-01-29T13:15:48.697Z
+date: 2024-01-29T13:21:29.206Z
 tags: 
 editor: markdown
 dateCreated: 2024-01-23T01:50:57.374Z
@@ -52,6 +52,6 @@ Saito is a mature open public blockchain. Core development focuses on advanced f
 
 Development is increasingly external and community-based. The project retains a leadership role in technical development and advancing the protocol, the community takes increasing responsibiltiy for stewardship of the ecosystem. 
 
-Project-released software is likely significantly forked and funding can be considered for private-sector development should use cases appear that the community expects will further drive transaction volume and increase security. 
+Funding is made available for private-sector development should use cases appear that the community expects will further drive transaction volume and increase security. 
 
 Any remaining unallocated tokens will be burned or locked-up.
