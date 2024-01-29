@@ -2,7 +2,7 @@
 title: Saito Roadmap
 description: 
 published: true
-date: 2024-01-29T00:09:24.608Z
+date: 2024-01-29T00:15:09.630Z
 tags: 
 editor: markdown
 dateCreated: 2024-01-23T01:50:57.374Z
@@ -35,7 +35,7 @@ dateCreated: 2024-01-23T01:50:57.374Z
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Our Rust codebase was upgraded into a WASM bundle for embedding in browsers. Improvements are being made to consensus to offer greater cost-of-attack in periods of low transaction volume and allow Saito to support NFTs and other kinds of tradable digital assets. Token persistence is a reality and we expect the network to support transfers of small-denominations of Saito by the end of this era.</p>
+<p>Our Rust codebase was upgraded into a binary form that can run in browsers. Improvements are now being made to consensus to offer greater cost-of-attack in periods of low transaction volume and to allow Saito to support NFTs and other tradable digital assets. Token persistence is already a reality and we expect the network to support transfers of even small-denominations of Saito by the end of this era.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
