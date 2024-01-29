@@ -2,7 +2,7 @@
 title: Saito Roadmap
 description: 
 published: true
-date: 2024-01-29T13:28:35.518Z
+date: 2024-01-29T13:31:28.225Z
 tags: 
 editor: markdown
 dateCreated: 2024-01-23T01:50:57.374Z
@@ -12,7 +12,7 @@ dateCreated: 2024-01-23T01:50:57.374Z
 
 This document contains our core roadmap. For clarity, we have divided our work into Four Eras which shift in focus from development the core software to focusing on growth of an open public ecosystem.
 
-![](https://saito.tech/wp-content/uploads/2022/04/img_62556f349adbd.png)
+<img style="width:100%; max-width: 900px; margin: 25px 0;" src="https://saito.tech/wp-content/uploads/2022/04/img_62556f349adbd.png">
 
 ### Rust Consensus
 
