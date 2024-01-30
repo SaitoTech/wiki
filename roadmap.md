@@ -18,7 +18,7 @@ This document contains our core roadmap. For clarity, we have divided our work i
 
 *April 2021 - December 2022 (finished)*
 
-Our first era focused on the development of a standalone Rust-client to replace our initial Javascript-coded prototype. The first version of this client joined the network around November 2021. This era also saw rapid application development: the Saito Arcade reached a reasonable stage of maturity. Peer to peer development patters where established while standard UI components and menus were developed to simplify application.
+Our first era focused on the development of a standalone Rust-client to replace our initial javascript-coded prototype. The first version of this client joined the network around November 2021. This era also saw rapid application development: the Saito Arcade reached a reasonable stage of maturity. Peer to peer development patterns were established while standard UI components and menus were developed to simplify application.
 
 Our first era also took us from our marketing launch in April 2021 through the vesting of roughly ~3 billion SAITO tokens, which constitute our current market supply. Vesting and distribution was completed by the end of this era, ushering in our current period of "zero inflation" and token stability.
 
@@ -32,7 +32,7 @@ Improvements are being made to consensus to offer greater cost-of-attack in peri
 
 Token persistence is underway and we expect the network to support transfers of even small-denominations of Saito by the end of this era.
 
-Application development is focused on user growth via our social media application RedSquare, a P2P communications suite (videocall and chat) and the Saito Arcade. Work continues to improve existing games (including expansion of web3 crypto support) and support upcoming community-driven projects including "Here I Stand" and "Realms". Work is also happening on backend digital rights asset management tools necessary for cartridge-management and licensing rental applications.
+Application development is focused on user growth via RedSquare, a P2P communications suite (videocall and chat) and the Saito Arcade. Work continues to improve existing games (including expansion of web3 crypto support) and support upcoming community-driven projects including "Here I Stand" and "Realms". Work is also happening on backend digital rights asset management tools necessary for cartridge-management and licencig rental applications.
 
 Tokens which migrate to the network become eligible to earn rewards. This payout is intended to stimulate development, assist with the testing of the ATR mechanism, and provide a subsidy to increase network security during periods of low transaction volume. Our zero-inflation token policy will otherwise continue until the third era.
 
