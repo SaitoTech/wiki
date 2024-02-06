@@ -2,7 +2,7 @@
 title: How to use config.template.json
 description: 
 published: true
-date: 2024-02-06T04:58:04.936Z
+date: 2024-02-06T04:58:47.795Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-06T04:58:04.936Z
@@ -25,6 +25,6 @@ The config.template.json file is essential for configuring your Saito node. Belo
 
 ### Peers Configuration
 - peers: An array of configurations for peer nodes the server will connect to.
-Each peer object includes host, port, protocol, and synctype (indicating the synchronization strategy, full for complete data sync).
+Each peer object includes host, port, protocol, and synctype
 This configuration is crucial for setting up how your node interacts with the network, manages resources, and synchronizes data with peers.
 
