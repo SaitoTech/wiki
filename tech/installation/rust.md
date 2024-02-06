@@ -2,7 +2,7 @@
 title: Saito Rust - Installation Instructions
 description: 
 published: true
-date: 2024-02-06T03:32:38.909Z
+date: 2024-02-06T03:39:18.199Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:32:52.212Z
@@ -34,10 +34,23 @@ git clone https://github.com/saitotech/saito-rust-workspace
 
 Navigate to the cloned directory and run the bootstrap script to prepare your environment:
 
+**For Linux**
+Run the bootstrap_linux.sh script to prepare your Linux environment:
+
 ````bash
 cd saito-rust-workspace
 bash scripts/bootstrap_linux.sh
 ````
+
+**For macOS**
+If you are on a macOS device, use the bootstrap_mac.sh script instead:
+
+````bash
+cd saito-rust-workspace
+bash scripts/bootstrap_mac.sh
+````
+
+
 ### Step 3: Configure the Application
 
 Change to the saito-rust directory:
