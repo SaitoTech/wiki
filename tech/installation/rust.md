@@ -2,7 +2,7 @@
 title: Saito Rust - Installation Instructions
 description: 
 published: true
-date: 2024-02-06T03:39:18.199Z
+date: 2024-02-06T04:42:20.273Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:32:52.212Z
@@ -48,6 +48,11 @@ If you are on a macOS device, use the bootstrap_mac.sh script instead:
 ````bash
 cd saito-rust-workspace
 bash scripts/bootstrap_mac.sh
+````
+
+**Build workspace**
+````bash
+cargo build
 ````
 
 
