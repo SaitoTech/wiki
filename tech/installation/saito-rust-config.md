@@ -2,7 +2,7 @@
 title: How to use saito-rust configuration file
 description: 
 published: true
-date: 2024-02-06T05:03:07.560Z
+date: 2024-02-06T05:21:45.836Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-06T05:03:07.560Z
@@ -18,7 +18,7 @@ The config.template.json file is essential for configuring your Saito node. Belo
 - endpoint: Specifies the endpoint details, mirroring the server's configuration for external access.
 - verification_threads: Number of threads for processing verification tasks.
 - channel_size: Maximum number of queued tasks or messages.
-- stat_timer_in_ms: Interval for reporting stats or performing periodic checks. 5000 ms here.
+- stat_timer_in_ms: Interval for reporting stats or performing periodic checks.
 - reconnection_wait_time: Wait time before attempting reconnection in ms. Default is 10000.
 - thread_sleep_time_in_ms: Sleep time for background threads in ms
 - block_fetch_batch_size: Number of blocks fetched per batch during sync.
