@@ -2,7 +2,7 @@
 title: Saito Rust - Installation Instructions
 description: 
 published: true
-date: 2024-02-06T04:42:20.273Z
+date: 2024-02-06T05:05:22.050Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:32:52.212Z
@@ -69,6 +69,9 @@ Copy the configuration template to create your own configuration file:
 ````bash
 cp configs/config.template.json configs/config.json
 ````
+for explaination of the configuration file, click [saito-rust-config](/tech/installation/saito-rust-config)
+
+
 
 
 #### Step 4: Prepare Data Directories
