@@ -2,7 +2,7 @@
 title: Design
 description: 
 published: true
-date: 2024-02-12T06:28:44.457Z
+date: 2024-02-12T06:29:44.351Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-04T12:00:40.771Z
@@ -13,7 +13,7 @@ dateCreated: 2022-04-04T12:00:40.771Z
 
 ## Design
 
-Following is the design proposed for new rust based Saito implementation.
+Following is the design for rust based Saito implementation.
 
 
 ```diagram
