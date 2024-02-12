@@ -2,7 +2,7 @@
 title: Why UTXO
 description: A quick introduction to why Saito uses a UTXO structure
 published: true
-date: 2024-02-12T00:58:27.056Z
+date: 2024-02-12T01:23:33.530Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-12T00:53:34.021Z
@@ -12,9 +12,9 @@ dateCreated: 2024-02-12T00:53:34.021Z
 
 Why does Saito employ a UTXO model rather than an account based ledger?
 
-Account models are popular because they let devs use pre-written database software, but scaling is limited by database throughput and overhead, and you can't check account balances or update them in parallel.
+Account models are popular because they let developers use pre-written database software. This speeds up development, but leaves scaling limited by database throughput and overhead and you can't check easily account balances or update them in parallel.
 
-In Saito, when UTXO are created an entry is inserted into an in—memory hashmap. This lets us use the fastest data structure to store the most critical information (do tokens exist and can they be spent?) As close to zero overhead as it is possible to get:
+In Saito, when UTXO are created an entry is inserted into an in—memory hashmap specific to that UTXO. This lets us use the fastest data structure to store the most critical information we need to frequently check: do these tokens exist and can they be spent? This gives us as close to zero overhead as it is possible to get on this critical check:
 
 ![Hashmap Speeds](https://pbs.twimg.com/media/GGETcXlX0AAD6I2?format=jpg&name=small)
 [source](https://tessil.github.10/2616/68/29/benchmark-hopscotch-map.html)
