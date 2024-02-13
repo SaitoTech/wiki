@@ -2,7 +2,7 @@
 title: 51% Attacks and How Saito Eliminates Them
 description: 
 published: true
-date: 2023-09-20T01:50:04.528Z
+date: 2024-02-13T19:22:33.817Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:48:26.220Z
@@ -10,11 +10,11 @@ dateCreated: 2023-09-20T01:48:26.220Z
 
 # Eliminating 51% Attacks
 
-### Consensus
-
-Blockchain consensus protocols can be considered objective competitions which determines what additions may be considered valid and canonical. By all participants recognizing a single consensus protocol, a distributed network can reach full consensus without total coordination (each node is not required to query every other node), by simply judging this agreed upon objective measure between competing proposals, whether it be based on Proof of Work, Proof of Stake or something else.
+This is a cursory overview; for a rigorous explanation, see [here](https://wiki.saito.io/consensus/math).
 
 ## Majority Assumptions
+
+While Proof of Work and Proof of Stake are the most common techniques from which distributed ledgers derive their consensus mechanisms, it is important to note that consensus mechanisms which may be labelled differently or genuinely rest outside these categories still, at large, fail to solve the 51% attack; they explicitly operate under an *honest majority assumption*. As far as we know, Saito is the only distributed system which is economically secure from attack without relying on such an assumption.
 
 ### Proof of Work
 
@@ -42,7 +42,7 @@ In practice, the 49% of the network is still burning almost half the resources t
 
 Since work is not cumulative, the majority, on average, always wins - on a long enough timescale the majority always has the longest chain of valid work.
 
-## How Saito Eliminates 51% Attacks - Cumulative, Block Agnostic Work
+## How Saito Eliminates 51% Attacks - Less Work-Orphaning
 
 The objective measure of work required for Saito block production is special in many ways, but perhaps the most relevant for eliminating the 51% attack is that work in Saito is *Block Agnostic.*
 
@@ -60,6 +60,6 @@ During an attempted attack, consensus nodes who were not allowed to make blocks 
 
 If an attacker in Saito wants to produce consecutive blocks, they must use up their transaction fees in place of the honest network's fees. Since producing new blocks does not remove the valid work within the transaction fees of all other consensus nodes, honest nodes can maintain their *accumulation* of work, which cannot be eliminated just because a new block is made - this preservation of work which is independent of blocks is not possible in PoW or PoS, and is the missing piece to eliminating 51% attacks in any consensus protocol.
 
-Since the amount of work the honest network accumulates can only grow the longer they are censored, the amount of work the attacker must produce to keep censoring them also grows without bound, no matter if the attacker has 51% of inbound fees or 99%.
+Since the amount of work the honest network accumulates can only grow the longer they are censored, the amount of work the attacker must produce to keep censoring them also grows without bound, no matter if the attacker has 51% of inbound fees or 99%. Note that this is a light overview, and fails to describe the Golden Ticket system which prevents attackers from recapturing their fees.
 
 - A rigorous mathematical demonstration of Saito's elimination of the 51% attack can be found [here](https://wiki.saito.io/consensus/math).
