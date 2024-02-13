@@ -2,7 +2,7 @@
 title: Why UTXO
 description: A quick introduction to why Saito uses a UTXO structure
 published: true
-date: 2024-02-12T01:23:33.530Z
+date: 2024-02-13T01:33:36.892Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-12T00:53:34.021Z
@@ -12,7 +12,13 @@ dateCreated: 2024-02-12T00:53:34.021Z
 
 Why does Saito employ a UTXO model rather than an account based ledger?
 
-Account models are popular because they let developers use pre-written database software. This speeds up development, but leaves scaling limited by database throughput and overhead and you can't check easily account balances or update them in parallel.
+Much has been written on *account* versus *UTXO* model for ledger designs. The account model makes programmability easier while making optimization harder. This means smart contracts are simple to implement out of the box but that verifying individual transactions becomes practically impossible since all state may depend on all other state within a block.
+
+Account also allow developers use pre-written database software. This, again, speeds up development, but leaves scaling limited by database throughput. Unless a chain's number one priority is arbitrary computation, then the overhead associated with verifying individual account balances (equal to verifying the state of entire blocks) and updating them in parallel rapidly degrades the ability for smaller nodes to meaningfully participate in the blockchain.
+
+Even Ethereum, the chain which popularized the account model, has adjusted its roadmap to push as much computation off-chain as possible via layer-2 scaling. Saito sees the choice of UTXO over accounts as a natural technical path to allow easier scaling; readers should note that it is also well-proven that smart contracts can exist and thrive on UTXO while maintaining its desirable properties.
+
+## Saito Implementation
 
 In Saito, when UTXO are created an entry is inserted into an in—memory hashmap specific to that UTXO. This lets us use the fastest data structure to store the most critical information we need to frequently check: do these tokens exist and can they be spent? This gives us as close to zero overhead as it is possible to get on this critical check:
 
