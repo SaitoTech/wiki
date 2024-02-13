@@ -2,13 +2,17 @@
 title: Why UTXO
 description: A quick introduction to why Saito uses a UTXO structure
 published: true
-date: 2024-02-13T03:33:54.843Z
+date: 2024-02-13T03:53:06.438Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-12T00:53:34.021Z
 ---
 
 # Why UTXO?
+
+This explanation derives from this [thread](https://twitter.com/dlancashi/status/1756705883029934464) written by David Lancashire.
+
+UTXO chains can add, verify, and revert transactions quickly and independently of one another, while Account Model chains must compute complex, interconnected outputs which cannot be checked in parallel and cannot be verified without doing so for every other transaction in the block.
 
 ## Overview
 
@@ -54,19 +58,22 @@ Entry A becomes unspendable and entries B and C become spendable.
 If the chain rolls back in the other direction (such as during a re-org) B and C become unspendable and A becomes spendable.
 -->
 
-The re-organizations (re-orgs) of blocks is one of the most fundamental issues all blockchains must grapple with. Given that blockchains aschew any central coordinator, nodes desynchronizing and then resolving their differences through re-orgs is an unavoidable cost of this leaderless property. Most attacks on blockchain consensus exploit and exacerbate the fact that re-orgs will happen, and thus handling them generally is a sensitive and crucial topic.
+The re-organizations (re-orgs) of blocks is one of the most fundamental issues all blockchains must grapple with. Given that blockchains eschew any central coordinator, nodes de-synchronizing and then resolving their differences through re-orgs is an unavoidable consequence. Most attacks on blockchain consensus exploit and exacerbate the fact that re-orgs will happen, and thus handling them generally is a sensitive and crucial topic.
 
-The great difficulty Account Model chains databses have around re-orgs is the *cost* associated with reverting and recomputing state transitions (new blocks). The difficulty that smart-contract and database-models have with elegant reverse-direction transformations is one reason they are so keen to add closure. Closure sacrifices the ability for anyone to participate in an attempt to make re-orgs less likely.
+The great difficulty Account Model chains have around re-orgs is the *cost* associated with reverting and recomputing state transitions (new blocks). Such database-models cannot elegantly perform reverse-direction transformations, and is one reason *closure* must be introduced. Open versus closed systems is out of scope, but simply put: closure sacrifices the ability for anyone to participate in an attempt to make re-orgs less likely.
 
-In many designs, the developers basically *have* to add closure because they can only transform their data-structure in a single forward-moving direction, so if the chain gets reversed they need to load an older version and roll it forward again onto a new branch, recomputing from scratch even if the input transaction list differs only a tiny amount. UTXO and hashmaps only need recompute each differing transaction.
+In many designs, the developers basically *must* add closure because state-transitions under Account Model data-structures may only progress in a forward-moving direction. If the chain gets reversed an older version must be dug up and rolled forward until it reaches consensus. This requires recomputing the blocks from scratch even if the input transaction list differs only by a tiny amount. 
 
-This is one reason POS devs typically push ”finality" so hard as a feature. Finality itself isn't what it is literally sold as - it really just seeks to impart grave penalties on nodes who end up on forks past a certain length, ideally allowing all nodes to assume they will never need to reorg more than $N$ blocks.
+UTXO and hashmaps only need recompute each differing transaction. The difference in the re-orged blocks is closely associated to the cost of re-org, whereas the cost of re-org under Account-based chains is associated with the size of the block.
 
-The sacrifices made to achieve those penalties are out of scope, but suffice to say discouraging forks doesn't solve the fundamental issue of expensive reorgs - especially when it requires tradeoffs against other consensus-level design choices.
+This is one reason POS developers typically push ”finality" so hard as a feature. Finality itself isn't what it is literally sold as - it really just seeks to impart grave penalties on nodes who end up on forks past a certain length, ideally allowing all nodes to assume they will never need to reorg more than $N$ blocks.
 
-UTXO reorgs are fundamentally simpler and faster because verification can be reduced down to flipping bits in a hashmap with no concern that one entry will have an unexpected relationship to any others. State-transitions moving backwards through the chain history happen almost as quickly as moving forwards.
+Debates on the sacrifices made to achieve those penalties are out of scope, but suffice to say that discouraging forks doesn't solve the fundamental issue of expensive reorgs, and requires tradeoffs against other consensus-level design choices which fundamentally tarnish many desirable properties of blockchain.
 
-Under a UTXO system, re-orgs are so much less threatening and expensive, that the sacrificing of openness properties necessary in Account-based chains is not at all necessary. The Layer-1 is simpler because "account cruft" gets pushed to wallet or apps.
+UTXO reorgs are fundamentally simpler and faster because verification can be reduced down to flipping bits in a hashmap with no concern that one entry will have an unexpected relationship to any other. State-transitions moving backwards through the chain history happen almost as quickly as moving forwards.
+
+Under a UTXO system, re-orgs are so much less expensive and thus much less threatening. Sacrificing of openness properties which Account-based chains must make are not at all necessary with UTXO. The Layer-1 is simpler because "account cruft" gets pushed to wallet or apps and the blockchain itself can be optimized for consensus.
+
 <!--
 From this [thread](https://twitter.com/dlancashi/status/1756705883029934464)  
 -->
