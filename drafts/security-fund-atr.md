@@ -2,7 +2,7 @@
 title: Blockchain Security Budget and ATR
 description: 
 published: true
-date: 2024-02-13T19:13:39.529Z
+date: 2024-02-13T19:24:22.945Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T00:12:14.526Z
@@ -36,7 +36,7 @@ Because the UTXO set of Saito is constantly being refreshed such that no transac
 
 ### Staking and Permanent Data
 
-Saito's security protocol pays staking rewards at the same time it charges ATR fees - users seeking permanent storage can ensure this by making sure their UTXO balance is in equilibrium with the staking portion (25%) of the fee-reward  distribution: a UTXO worth at least four times the fee rate. UTXOs which sustain the blockchain by using their staking rewards as rent can persist indefinetely on-chain without their balance diminishing.
+Saito's security protocol pays staking rewards at the same time it charges ATR fees - users seeking permanent storage can ensure this by making sure their UTXO balance is in equilibrium with the staking portion (25%) of the fee-reward  distribution: a UTXO worth at least four times the fee rate. UTXOs which sustain the blockchain by using their staking rewards as rent can persist indefinitely on-chain without their balance diminishing.
 
 On the more philosophic level, the removal of data from the blockchain in a systematic way does not make it any less of a universal and uncensorable ledger. In fact, without charging for storage or removing UTXOs too small to pay their for their storage burden, the chain itself becomes less sustainable and less likely to be funded into the future. ATR ensures that the blockchain can always pay for itself without centralized intervention and prevents forms of economic abuse where users add data for a small fee which must be preserved forever.
 
