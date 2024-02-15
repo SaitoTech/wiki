@@ -2,7 +2,7 @@
 title: Design
 description: 
 published: true
-date: 2024-02-13T00:17:06.073Z
+date: 2024-02-15T05:49:37.312Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-04T12:00:40.771Z
@@ -67,10 +67,13 @@ A rust node runs using following types of threads
 - Consensus Thread
 Consensus Thread handles most of the consensus related code such as managing the blockchain and the mempool
 - Routing Thread
-
+Routes messages between different threads. A separate thread is used for this purpose to avoid freezing the message flow due to a busy thread.
 - Verification Threads
+Verifies the block or transaction signatures,etc... Since those tasks can be done independent of other tasks, we can create multiple threads as required to increase the throughput of verification tasks.
 - Mining Thread
+Mines for a golden ticket. Since we need to mine continuously until a golden ticket is found, a separate thread is needed.
 - Network Thread
+Manages network related functionalities.
 
 ## Design Decisions
 
