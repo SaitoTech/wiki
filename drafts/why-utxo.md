@@ -2,7 +2,7 @@
 title: Why UTXO
 description: A quick introduction to why Saito uses a UTXO structure
 published: true
-date: 2024-02-13T03:53:06.438Z
+date: 2024-02-15T06:14:15.344Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-12T00:53:34.021Z
@@ -58,7 +58,7 @@ Entry A becomes unspendable and entries B and C become spendable.
 If the chain rolls back in the other direction (such as during a re-org) B and C become unspendable and A becomes spendable.
 -->
 
-The re-organizations (re-orgs) of blocks is one of the most fundamental issues all blockchains must grapple with. Given that blockchains eschew any central coordinator, nodes de-synchronizing and then resolving their differences through re-orgs is an unavoidable consequence. Most attacks on blockchain consensus exploit and exacerbate the fact that re-orgs will happen, and thus handling them generally is a sensitive and crucial topic.
+The re-organization (re-org) of blocks is one of the most fundamental issues all blockchains must grapple with. Given that blockchains eschew any central coordinator, nodes de-synchronizing and then resolving their differences through re-orgs is unavoidable. Most attacks on blockchain consensus exploit and exacerbate the fact that re-orgs will happen, and thus handling them generally is a sensitive and crucial topic.
 
 The great difficulty Account Model chains have around re-orgs is the *cost* associated with reverting and recomputing state transitions (new blocks). Such database-models cannot elegantly perform reverse-direction transformations, and is one reason *closure* must be introduced. Open versus closed systems is out of scope, but simply put: closure sacrifices the ability for anyone to participate in an attempt to make re-orgs less likely.
 
