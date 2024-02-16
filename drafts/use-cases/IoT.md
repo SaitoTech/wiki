@@ -2,7 +2,7 @@
 title: Use Cases
 description: 
 published: true
-date: 2024-02-16T01:48:29.502Z
+date: 2024-02-16T04:54:42.155Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T01:04:19.828Z
@@ -67,7 +67,7 @@ Safe and secure key exchange is fundamental to the internet as we know it, yet t
 
 Assyemtric cryptography makes it possible to set up a secure connection between any parties holding a public key pair, even when attackers can read the messages. The problem is that such exchanges are vulnerable to *Man in the Middle* (MITM) *Attacks,* where an intercepting party can secretly place themselves between each party and dupe them into encrypting their data in favor of the attacker, who then relays the not-so-secret messages between the unsuspecting parties.
 
-Consult [Wikipedia](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) for a nice visual example.
+Consult [Wikipedia](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) for a step-by-step example.
 
 PKI networks, in the simplest of terms, serve as trusted middlemen which can audit key exchange requests to spot and stop MITM attacks. Some PKIs are small, like for individual businesses, some are large, like for the world wide web, and some are hidden in plainsight, like the user security protocols on social media.
 
