@@ -2,7 +2,7 @@
 title: Use Cases
 description: 
 published: true
-date: 2023-10-10T01:44:36.193Z
+date: 2024-02-16T01:48:29.502Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T01:04:19.828Z
@@ -26,27 +26,40 @@ dateCreated: 2023-09-24T01:04:19.828Z
   
 ## <div id="1">What Does Saito Do?</div>
 
+Saito's primary use case is the most fundamental utility blockchain, implemented with superiority over all previous designs: Universal Broadcast.
+
 A common question for those investigating a new blockchain is "what are its use cases?" Money, smart contracts, decentralized finance, trustless computation - applications of blockchain are evolving constantly. But in a very fundamental sense, the blockchain has a singular source of value from which all applications flow: *Universal Broadcast*.
 
-Universal Broadcast means a network in which anyone paying the market rate may publish data onto a medium which anyone can access. Saito consensus pays for data distribution and broadcasts the data 'universally' i.e. to every node in the network. This feature is crucial to censorship resistance and to ensuring all participants share and agree on the network state.
+Universal Broadcast means a network in which anyone paying the market rate may publish and access data. The uncensorable and open nature of many existing blockchains, notably including Bitcoin, allows this same utility, but Saito consensus is the only protocol design which allows for a universal broadcast blockchain network which optimizes for the lowest possible fee-rate.
+
+Saito achieves this by incentivizing the provision of the very network resources which scales performance, increases volume, or drives individual fees down. Because Saito can scale arbitrarily large without latent economic misalignments waiting to enforce bottlenecks, use cases for which many believe are impossibly expensive for blockchain are possible on Saito at a global scale.
+
+<!--
+pays for data distribution and broadcasts the data 'universally' i.e. to every node in the network. This feature is crucial to censorship resistance and to ensuring all participants share and agree on the network state.
 
 For this reason, the creation of new projects to address each use case is largely unnecessary and counter-productive. The common need for a *universal broadcast network* which these applications share implies that the blockchain for which the majority of application development and economic security should accumulate is the one which best serves that need.
 
 ## <div id="2"> What Does Saito Pay For?</div>
 
-One of the most common arguments for new chains created to serve new use cases is that the new chain is built to fund that utility - thus it is a "utility chain." Saito invalidates this argument in two ways:
+One of the most common arguments for new chains created to serve new use cases is that the new chain is built to fund that specific utility - thus it is a "utility chain." Saito invalidates this argument in two ways:
 
-1. It recognizes that diverting funding explicitly towards some 'utility' degrades funding towards Universal Broadcast
+1. It recognizes that diverting funding explicitly towards some overly specified 'utility' degrades necessary funding towards Universal Broadcast
 
-2. Saito pays nodes who generate fee volume; so it naturally funds *any* utility which users demand.
+2. Saito pays nodes generating fee volume; therefore it naturally funds *any* utility which users demand.
 
-Thanks to Saito, it is no longer necessary to redesign consensus to pay for every new use case; a dangerous practice which both fractures security across chains and diverts funding away from true economic security. Because Saito pays for blockchain network infrastructure as its form of security rather than any arbitrary form of work, it is both more secure and more scalable.
+Thanks to Saito, it is no longer necessary to redesign consensus to pay for every new use case; a dangerous practice which both fractures security across chains and constraints the market's ability to generally fund infrastructure. Because Saito rewards the service of users as its form of security rather than any arbitrary form of work, the best performing nodes are incentivized to efficiently provide scale without sacrificing (and actually [enhancing](https://wiki.saito.io/consensus/attack-vectors)) security.
 
-Saito consensus rewards nodes for collecting transaction fees, so any node which leverages Universal Broadcast for its popular application on Saito, for any use case, is paid. This makes the many utilities of blockchain far more flexible and secure as they do not need to 'bring their own (economic)  security.'
+Saito consensus rewards nodes for collecting transaction fees, so any node which provides Universal Broadcast via its Saito application is paid. This makes the many utilities of blockchain far more flexible and secure as they do not need to 'bring their own (economic) security,' and the incentives of nodes is to compete to provide the lowest fee.
 
 Applications for which blockchain was previously too expensive to even consider are now possible thanks to Saito's ability to universally broadcast data at a market rate, paying not much more than typical bandwidth and storage costs. The most fundamental use case, which all secure internet communication relies on, is the Public Key Infrastructure.
-
+-->
 ## <div id="3">Public Key Infrastructure</div>
+
+Public Key Infrastructures (PKI) are one of the most important but least discussed components of the modern, secure, internet. Their origins come from the early desire to securely transact electronically over the web; without them, ecommerce as we know it could not exist - nor could the other security assumptions many take for granted while using the internet. 
+
+It is fitting that the next generation of PKI stems too from a general upgrade in the way we transact with one another. In much the same way that this need to securely send money lead to the modern PKIs and their emergent use cases, Saito, an economic system, revolutionizes how we transact while also opening the door for open, trustless security at a global scale.
+
+If no other point is taken away about PKIs, it's that the modern approach to web security, rooted in PKI, fundamentally rests on an assumption of trust, while Saito's PKI is secured by economic security capable of foiling even a [majority attacker](https://wiki.saito.io/en/drafts/fifty-one-percent-attacks), but also scalable enough for everyday use.
 
 ### <div id="3a">Man-in-the-Middle Attacks</div>
 
