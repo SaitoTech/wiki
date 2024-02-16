@@ -2,7 +2,7 @@
 title: Saito Roadmap
 description: 
 published: true
-date: 2024-01-29T23:29:18.752Z
+date: 2024-02-16T20:38:09.608Z
 tags: 
 editor: markdown
 dateCreated: 2024-01-23T01:50:57.374Z
@@ -30,7 +30,7 @@ Our Rust codebase has been upgraded into a binary form that can run in browsers 
 
 Improvements are being made to consensus to offer greater cost-of-attack in periods of low transaction volume and to allow Saito to support NFTs and other tradable digital assets. This also accellerates the financial viability of 3rd party application development and node opperation. 
 
-Token persistence is underway and we expect the network to support transfers of even small-denominations of Saito by the end of this era.
+Token persistence is underway and we expect the network to support transfers of even small-denominations of Saito by the end of this era. More information on persistence limits and migration instructions can be found [here](https://wiki.saito.io/en/tokenomics#migration-to-native-saito-token).
 
 Application development is focused on user growth via RedSquare, a P2P communications suite (videocall and chat) and the Saito Arcade. Work continues to improve existing games (including expansion of web3 crypto support) and support upcoming community-driven projects including "Here I Stand" and "Realms". Work is also happening on backend digital rights asset management tools necessary for cartridge-management and licencig rental applications.
 
