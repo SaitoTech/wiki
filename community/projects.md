@@ -2,7 +2,7 @@
 title: Saito and Community Projects
 description: All details related to saito and community projects can be found here
 published: true
-date: 2024-02-02T03:21:19.009Z
+date: 2024-02-18T07:33:56.031Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-25T00:44:11.924Z
@@ -34,15 +34,26 @@ This page provides an overview of community-led projects that could use help fro
 ## Saito Community Projects ##
   
 <p>
-  
+
+#### Saito Live-Docs ####
+
+**Status**: Live
+**Project Site**: https://github.com/mat888/saito-livedocs 
+**Participate**: Ask for help on the official Saito Telegram and we can find you
+**Looking for**: Developers to USE and give feedback
+**Summary**: Livedocs is an interactive documentation tool for Saito, offering real-time demonstrations of the Saito Lite Rust Node's capabilities. It combines code display with live execution, aiming to not only illustrate the core functions of the Saito Blockchain but also to provide a basic, functional application template for developers.
+
+<p>
+
 #### Web3 Graffiti ####
 
 **Status**: Live
 **Project Site**: https://saito.io/graffiti/ 
-**Forum**: [Saito Web 3.0 Forum Details](/community/projects/forum)
 **Participate**: Ask for us on the official Saito Telegram
 **Looking for**: Developer help, testers
-**Summary** Graffiti is a Web3 derivative of the famous r/place community pixel art canvas.
+**Summary**: Graffiti is a Web3 derivative of the famous r/place community pixel art canvas.
+
+<p>
   
 #### Saito Hodlers ####
 
