@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-18T11:29:26.812Z
+date: 2024-02-18T11:34:48.675Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -14,7 +14,7 @@ dateCreated: 2022-12-21T01:40:41.364Z
 
 ## Core Apps
 
-Saito Applications are programs that run directly in your browser. These applications have a built-in wallet and use the Saito network to communicate with peers. See our list of [available programs](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) or our [tutorials](/tech/tutorials) on how to develop a module from scratch.
+Saito Applications are programs that run directly in your browser. These applications have a built-in wallet and use the Saito network to communicate with peers. See our full list of [available programs](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) or our [tutorials](/tech/tutorials) on how to develop a module from scratch, or check out our flagship applications below.
 
 
 |     |     |     |
