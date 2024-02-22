@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-18T11:34:48.675Z
+date: 2024-02-22T22:01:56.748Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -10,6 +10,42 @@ dateCreated: 2022-12-21T01:40:41.364Z
 
 # Saito Applications
 
+<ul style="color:">
+  <li> 1. <a style="text-decoration:none" href="#1"> Gaming </a> </li>
+  <ul>
+    <li> <a style='text-decoration:none' href='#1a'> Better Business Models </a> </li>
+    <li> <a style='text-decoration:none' href='#1a'> Mental Poker </a> </li>
+  </ul>
+  <br>
+  <li> 2. <a style="text-decoration:none" href="#2"> b</a> </li>
+  <li> 3. <a style="text-decoration:none" href="#3"> c </a> </li>
+  <ul>
+    <li> 3a. <a style="text-decoration:none" href="#3a"> 3a </a> </li>
+    <li> 3b. <a style="text-decoration:none" href="#3b"> 3b Networks </a> </li>
+    <li> 3c. <a style="text-decoration:none" href="#3b"> 3c </a> </li>
+    <li> 3d. <a style="text-decoration:none" href="#3b"> 3d </a> </li>
+  </ul>
+  <br>
+  <li> 4. <a style="text-decoration:none" href="#3b"> d</a> </li>
+</ul>
+
+## Gaming
+
+The [Saito Arcade](https://saito.io/arcade/) is an open source game engine that runs as a fully-distributed peer-to-peer blockchain application in the browser. Many of the games leverage sophisticated cryptographic [techniques](#mental-poker) to ensure fair elements of chance can exist without any third-party oversight.
+
+
+
+Games on Saito require some of the most advanced use of Saito's cryptographic suite in order to ensure fair play in **genuine, peer-to-peer Web 3** (rather than a centrally hosted [Gacha-style](https://en.wikipedia.org/wiki/Gacha_game) game with token integrations). 
+The Arcade not only laid the groundwork for a more diverse suite of peer-to-peer applications but represents what we believe to be some of the richest Web 3 experiences online.
+
+All games, whether they rely on complex cryptographic interactivity or are simple single-player experiences, benefit from the Saito Consensus's natural ability to fund open source applications by allowing service providers to earn their share of payment for network bandwidth or service provided.
+
+For these reasons the [Web3 Foundation](https://web3.foundation/) has recognized the Saito Game Engine as a standard for open, cryptographic gaming, where it succesfully [applied](https://github.com/w3f/Grants-Program/blob/master/applications/saito-game-protocol-and-engine.md) and fulfilled requirements for its grants program.
+
+> I like this idea and think it provides something REALLY valuable to the ecosystem, and takes blockchain gaming in a very different (and good!) direction
+> - *[Bill Laboon](https://github.com/w3f/Grants-Program/pull/73#issuecomment-713638248)*, Head of Education and Grants at Web3 Foundation
+
+<!--
 ![](/apps.png)
 
 ## Core Apps
@@ -35,6 +71,7 @@ There is a good amount of games running on the Saito platform now, and more to c
 |     | [Solitrio](/tech/applications/solitrio) | [Saito Realm](/tech/applications/realm) |     | [Settlers of Saitoa](/tech/applications/settlers) |     |
 |     | [Shogun](/tech/applications/Shogun) | [Wordblocks](/tech/applications/wordblocks) |     | [Saito Mania](/tech/applications/SaitoMania) |     |
 |     | [Spider](/tech/applications/spider) | [Wuziqi](/tech/applications/wuziqi) |     | [Twilight Struggle](/tech/applications/twilightStruggle) |     |
+-->
 
 ## Build Your Own
 
