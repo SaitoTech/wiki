@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-23T00:54:39.560Z
+date: 2024-02-23T00:55:51.912Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -71,7 +71,7 @@ The Saito Arcade has taken the principles of Mental Poker and generalized and ex
 
 The entire process, from peer discovery to setup to gameplay benefits uniquely from taking place on a universal broadcast layer like Saito blockchain. Whereas many of these steps require a trusted party like Facebook to prevent MITM attacks, Saito does it trustlessly and in the open. While Mental Poker removes trust assumptions from the game, Saito removes trust assumptions from the network infrastructure, and thus can serve a secure and affordable Web 3 experience through every layer of interaction.
 
-For a more technical dive into how the current suite of games on Saito Arcade work, pay a visit to the Github or ask a question on Saito's social media platform [Red Square](https://saito.io/redsquare/).
+For a more technical dive into how the current suite of games on Saito Arcade work, pay a visit to our [Github Repository](https://github.com/SaitoTech/saito-lite-rust/blob/dbd9d622c8cb69c682045b780c63207eed8d7bf1/docs/gaming/saito-game-engine/readme.md) or ask a question on Saito's social media platform [Red Square](https://saito.io/redsquare/).
 
 
 ## Social Media
