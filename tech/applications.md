@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-23T03:46:05.240Z
+date: 2024-02-23T03:57:52.492Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -91,6 +91,8 @@ For a more technical dive into how the current suite of games on Saito Arcade wo
 ### <div id="saitoTalk"> Saito Talk </div>
   
 Saito Talk pure peer-to-peer video conferencing software, currently with support for up to four callers. [Transient Saito Transactions](https://wiki.saito.io/en/consensus#h-4-automatic-transaction-rebroadcasting-atr) securely bootstrap a STUN connection for the participants using their public keys, and those participants then enjoy a fully private, fully encrypted video call independent of the node originally providing STUN services.
+  
+We encourage users of centralized conferencing or video call software concerned with privacy and open source values to head over to [Red Square](https://saito.io/redsquare/) and find Saito Call under the hamburger menu in the top left. Saito proves that premium and everyday use cases can be stable and enjoyable under an open and privacy respecting model.
 <br>
 <div style="display: flex; justify-content: center;">
     <img src="/howtosaitocall.gif" width="400" alt="Use hamburger menu then Saito Call button to use the app">
@@ -98,6 +100,14 @@ Saito Talk pure peer-to-peer video conferencing software, currently with support
 <br>
 
 ### <div id="saitoChat"> Saito Chat </div>
+  
+[Saito Chat](https://saito.io/chat/) is an end-to-end encrypted (with the exception of public chats) peer-to-peer chat client which leverages the Saito blockchain to securely find and initiate key exchanges with peers. While the premise is simple and familiar, the privacy implications are profound:
+  
+Unlike other chat applications which require a user account and sometimes even a phone number, Saito Chat offers sovereign account creation and access by merely opening the web page (as do all Saito apps); a public key is automatically and locally generated. Not only is account creation more private, open and secure, but so is key exchange:
+  
+While the key exchange for a Web 2 encrypted messaging application relies on a central authority to assert that the true owners of the encryption keys are who they claim to be, Saito, defends against the man-in-the-middle attack by making it prohibitively costly to censor users, thus making the public-key identity theft as expensive, and moreso over time.
+  
+Users with the greatest need for security would be encouraged to delay sensitive messaging until the cost-to-attack the blockchain grows sufficiently large for the situation. Saito Chat demonstrates that the basic function as a leaderless yet secure public key infrastructure has application to all of our standard needs online.
 
 ## <div id="build"> Build Your Own </div>
   
