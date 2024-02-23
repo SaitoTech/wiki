@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-23T00:31:13.799Z
+date: 2024-02-23T00:50:09.292Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -55,7 +55,7 @@ Saito Arcade, and Saito generally, is an open index of applications which any no
 
 The best games may still gravitate towards free-to-play models, but alternative services and their monitization are not to be restricted: leaderboards, rankings, match-making services, and the like. Game designers on Saito have the freedom to experiment with different choices. Some games may be better off integrating decentralized advertising networks, or collecting micro-payments on a game-by-game or even a turn-by-turn basis.
 
-### Mental Poker
+### Mental Poker Technique
 
 For question of how the Saito Game Engine allows multiple parties to fairly agree on the state of truly random elements necessary for many games on the arcade, the answer begins with [Mental Poker](https://people.csail.mit.edu/rivest/pubs/SRA81.pdf):
 
@@ -63,7 +63,11 @@ For question of how the Saito Game Engine allows multiple parties to fairly agre
 
 Indeed, the most direct use of the techniques which authors Rivest, Shamir and Adleman (RSA) devised are most directly employed and enchanced in Saito's very own, peer-to-peer, Web 3 Poker - available to [play](https://saito.io/arcade) on the arcade or to [audit](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/poker) on Github.
 
+Mental Poker exploits the commutative nature properties of most public key encryption schemes to encrypt a deck of cards multiple times using the keys of the players who then shuffle the cards, ignorant of their unencrypted values and obscuring the order in which they were sent. A more complete explanation can be sought via [Wikipedia](https://en.wikipedia.org/wiki/Mental_poker).
 
+The Saito Arcade has taken the principles of Mental Poker and generalized and extended the technique to support several adversarial players and to encode and integrate arbitrary values which extend far past a simple game of Poker. Titles like Twilight Struggle and Settlers of Saitoa are two flagship examples. Because Saito solves the *man-in-the-middle attack* (MITM) without the need for a trusted party, it is in the unique position to apply the techniques without sweeping related trust assumptions under the rug.
+
+The entire process, from peer discovery to setup to gameplay benefits uniquely from taking place on a universal broadcast layer like Saito blockchain. Whereas many of these steps require a trusted party like Facebook to prevent MITM attacks, Saito does it trustlessly and in the open. While Mental Poker removes trust assumptions from the game, Saito removes trust assumptions from the network infrastructure, and thus can serve a secure and affordable Web 3 experience through every layer of interaction.
 <!--
 ![](/apps.png)
 
