@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-23T00:55:51.912Z
+date: 2024-02-23T00:56:31.937Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -33,9 +33,7 @@ dateCreated: 2022-12-21T01:40:41.364Z
 
 ## Gaming
 
-The [Saito Arcade](https://saito.io/arcade/) is an open source game engine that runs as a fully-distributed peer-to-peer blockchain application in the browser. Many of the games leverage sophisticated cryptographic [techniques](#mental-poker) to ensure fair elements of chance can exist without any third-party oversight.
-
-
+The [Saito Arcade](https://saito.io/arcade/) is an open source game engine that runs as a fully-distributed peer-to-peer blockchain application in the browser. Many of the games leverage sophisticated cryptographic [techniques](#mental-poker) to ensure fair elements of chance can exist without the need for any third-party oversight.
 
 Games on Saito require some of the most advanced use of Saito's cryptographic suite in order to ensure fair play in **genuine, peer-to-peer Web 3** (rather than a centrally hosted [Gacha-style](https://en.wikipedia.org/wiki/Gacha_game) game with token integrations). 
 The Arcade not only laid the groundwork for a more diverse suite of peer-to-peer applications but represents what we believe to be some of the richest Web 3 experiences online.
