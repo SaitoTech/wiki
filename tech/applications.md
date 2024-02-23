@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-23T03:57:52.492Z
+date: 2024-02-23T03:59:29.461Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -12,7 +12,7 @@ dateCreated: 2022-12-21T01:40:41.364Z
 
 <!-- INTRO - (mention importance of p2p and true web3) -->
 <ul style="color:">
-  <li>  <a style="text-decoration:none" href="#gaming"> Gaming </a> </li>
+  <li>  <a style="text-decoration:none" href="#arcade"> Saito Arcade </a> </li>
   <ul>
     <li> <a style='text-decoration:none' href='#betterBusiness'> Better Business Models </a> </li>
     <li> <a style='text-decoration:none' href='#mentalPoker'> Mental Poker </a> </li>
@@ -38,7 +38,7 @@ dateCreated: 2022-12-21T01:40:41.364Z
 </ul>
 -->
   
-## <div id="gaming"> Gaming </div>
+## <div id="arcade"> Saito Arcade </div>
 
 [Saito Arcade](https://saito.io/arcade/) is an open source game engine that runs as a fully-distributed peer-to-peer blockchain application in the browser. The arcade and its numerous games not only laid the groundwork for a more diverse suite of peer-to-peer applications but represents what we believe to be some of the richest and most genuine Web 3 experiences available to date.
 
