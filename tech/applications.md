@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-23T03:59:29.461Z
+date: 2024-02-23T23:15:58.491Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -76,6 +76,12 @@ Indeed, the most direct use of the techniques which authors Rivest, Shamir and A
 Mental Poker exploits the commutative nature properties of most public key encryption schemes to encrypt a deck of cards multiple times using the keys of the players who then shuffle the cards, ignorant of their unencrypted values and obscuring the order in which they were sent. A more complete explanation can be sought via [Wikipedia](https://en.wikipedia.org/wiki/Mental_poker).
 
 The Saito Arcade has taken the principles of Mental Poker and generalized and extended the technique to support several adversarial players and to encode and integrate arbitrary values which extend far past a simple game of Poker. Titles like Twilight Struggle and Settlers of Saitoa are two flagship examples. Because Saito solves the *man-in-the-middle attack* (MITM) without the need for a trusted party, it is in the unique position to apply the techniques without sweeping related trust assumptions under the rug.
+  
+
+<figure>
+  <img src="/_endomyjz0ceirxfq1u0pftenz5gnrzb__anvslwa7o.webp" alt="An image of the board game 'Twilight Struggle,' featuring a Cold War World map with various tiles representing the state of play of countries and global affairs.">
+  <figcaption style="opacity: 80%; text-align: center;"> Twilight Struggle on Saito proves that complex games can be played fairly p2p, without middlemen. </figcaption>
+</figure>
 
 The entire process, from peer discovery to setup to gameplay benefits uniquely from taking place on a universal broadcast layer like Saito blockchain. Whereas many of these steps require a trusted party like Facebook to prevent MITM attacks, Saito does it trustlessly and in the open. While Mental Poker removes trust assumptions from the game, Saito removes trust assumptions from the network infrastructure, and thus can serve a secure and affordable Web 3 experience through every layer of interaction.
 
