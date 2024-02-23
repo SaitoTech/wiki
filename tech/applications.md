@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-23T00:56:31.937Z
+date: 2024-02-23T03:46:05.240Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -11,16 +11,22 @@ dateCreated: 2022-12-21T01:40:41.364Z
 # Saito Applications
 
 <!-- INTRO - (mention importance of p2p and true web3) -->
-
 <ul style="color:">
-  <li> 1. <a style="text-decoration:none" href="#1"> Gaming </a> </li>
+  <li>  <a style="text-decoration:none" href="#gaming"> Gaming </a> </li>
   <ul>
-    <li> <a style='text-decoration:none' href='#1a'> Better Business Models </a> </li>
-    <li> <a style='text-decoration:none' href='#1a'> Mental Poker </a> </li>
+    <li> <a style='text-decoration:none' href='#betterBusiness'> Better Business Models </a> </li>
+    <li> <a style='text-decoration:none' href='#mentalPoker'> Mental Poker </a> </li>
   </ul>
   <br>
-  <li> 2. <a style="text-decoration:none" href="#2"> P2P Social Media </a> </li>
-  <li> 3. <a style="text-decoration:none" href="#3"> Build Your Own </a> </li>
+  <li>  <a style="text-decoration:none" href="#2"> P2P Social Media </a> </li>
+  <ul>
+  	<li>  <a style="text-decoration:none" href="#redSquare"> Red Square </a> </li>
+    <li>  <a style="text-decoration:none" href="#saitoTalk"> Saito Talk </a> </li>
+    <li>  <a style="text-decoration:none" href="#saitoChat"> Saito Chat </a> </li>
+  </ul>
+  <br>
+  <li> <a style="text-decoration:none" href="#build"> Build Your Own </a> </li>
+<!--
   <ul>
     <li> 3a. <a style="text-decoration:none" href="#3a"> 3a </a> </li>
     <li> 3b. <a style="text-decoration:none" href="#3b"> 3b </a> </li>
@@ -30,13 +36,13 @@ dateCreated: 2022-12-21T01:40:41.364Z
   <br>
   <li> 4. <a style="text-decoration:none" href="#3b"> d</a> </li>
 </ul>
+-->
+  
+## <div id="gaming"> Gaming </div>
 
-## Gaming
+[Saito Arcade](https://saito.io/arcade/) is an open source game engine that runs as a fully-distributed peer-to-peer blockchain application in the browser. The arcade and its numerous games not only laid the groundwork for a more diverse suite of peer-to-peer applications but represents what we believe to be some of the richest and most genuine Web 3 experiences available to date.
 
-The [Saito Arcade](https://saito.io/arcade/) is an open source game engine that runs as a fully-distributed peer-to-peer blockchain application in the browser. Many of the games leverage sophisticated cryptographic [techniques](#mental-poker) to ensure fair elements of chance can exist without the need for any third-party oversight.
-
-Games on Saito require some of the most advanced use of Saito's cryptographic suite in order to ensure fair play in **genuine, peer-to-peer Web 3** (rather than a centrally hosted [Gacha-style](https://en.wikipedia.org/wiki/Gacha_game) game with token integrations). 
-The Arcade not only laid the groundwork for a more diverse suite of peer-to-peer applications but represents what we believe to be some of the richest Web 3 experiences online.
+Many of the games leverage sophisticated cryptographic [techniques](#mental-poker) to ensure fair elements of chance can exist without the need for any third-party oversight. Games on Saito require some of the most advanced use of Saito's cryptographic suite in order to ensure fair play in **genuine, peer-to-peer Web 3** (rather than a centrally hosted [Gacha-style](https://en.wikipedia.org/wiki/Gacha_game) game with token integrations). 
 
 All games, whether they rely on complex cryptographic interactivity or are simple single-player experiences, benefit from the Saito Consensus's natural ability to fund open source applications by allowing service providers to earn their share of payment for network bandwidth or service provided.
 
@@ -45,7 +51,7 @@ For these reasons the [Web3 Foundation](https://web3.foundation/) has recognized
 > I like this idea and think it provides something REALLY valuable to the ecosystem, and takes blockchain gaming in a very different (and good!) direction
 > - *[Bill Laboon](https://github.com/w3f/Grants-Program/pull/73#issuecomment-713638248), Head of Education and Grants at Web3 Foundation*
 
-### Better Business Models
+### <div id="betterBusiness"> Better Business Models </div>
 
 High  quality games with significant followings often struggle to make money from digital sales. Companies like Apple and Google force developers to list games at extremely low prices to compete for visibility in their distribution channels, and then restrict how publishers can collect money from users.
 
@@ -55,11 +61,15 @@ Saito Arcade, and Saito generally, is an open index of applications which any no
 
 The best games may still gravitate towards free-to-play models, but alternative services and their monitization are not to be restricted: leaderboards, rankings, match-making services, and the like. Game designers on Saito have the freedom to experiment with different choices. Some games may be better off integrating decentralized advertising networks, or collecting micro-payments on a game-by-game or even a turn-by-turn basis.
 
-### Mental Poker Technique
+### <div id="mentalPoker"> Mental Poker Techniques </div>
 
 For question of how the Saito Game Engine allows multiple parties to fairly agree on the state of truly random elements necessary for many games on the arcade, the answer begins with [Mental Poker](https://people.csail.mit.edu/rivest/pubs/SRA81.pdf):
 
-![mentalpoker.png](/mentalpoker.png)
+<!-- ![mentalpoker.png](/mentalpoker.png) -->
+  <br>
+<div style="display: flex; justify-content: center;">
+    <img src="/mentalpoker.png" alt="Mental Poker; Adi Shamir, Ronald L. Rivest and Leanard M. Adleman; MASSACHUSETTS INSTITUTE OF TECHNOLOGY; ABSTRACT Can two potentially dishonest players play a fair game of poker without using any cards-for example, over the phone? This paper provides the following answers: 1. No. (Rigorous mathemmatical proof supplied.) 2. Yes. (Correct and complete protocol given.); Once there were two 'mental chess' experts who had become tired of their passtime. 'Let's play 'Mental Mpoker,' for variety' suggested one. 'Sure' said the other,' Just let me deal!'">
+</div>
 
 Indeed, the most direct use of the techniques which authors Rivest, Shamir and Adleman (RSA) devised are most directly employed and enchanced in Saito's very own, peer-to-peer, Web 3 Poker - available to [play](https://saito.io/arcade) on the arcade or to [audit](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/poker) on Github.
 
@@ -72,10 +82,25 @@ The entire process, from peer discovery to setup to gameplay benefits uniquely f
 For a more technical dive into how the current suite of games on Saito Arcade work, pay a visit to our [Github Repository](https://github.com/SaitoTech/saito-lite-rust/blob/dbd9d622c8cb69c682045b780c63207eed8d7bf1/docs/gaming/saito-game-engine/readme.md) or ask a question on Saito's social media platform [Red Square](https://saito.io/redsquare/).
 
 
-## Social Media
+## <div id="socialMedia"> Social Media </div>
+  
+### <div id="redSquare"> Red Square </div>
+  
+[Red Square](https://saito.io/redsquare/) is the Web 3 public square leveraging the Saito Blockchain and its peer-to-peer capabilities. While it may appear to function like a standard Web 2 Twitter-clone, Red Square's infrastructure has been heavily abstracted down into pure peer-to-peer interactions. Users of Red Square keep eachother up to date and can remain online despite the whims of any central authorities.
+<br>
+### <div id="saitoTalk"> Saito Talk </div>
+  
+Saito Talk pure peer-to-peer video conferencing software, currently with support for up to four callers. [Transient Saito Transactions](https://wiki.saito.io/en/consensus#h-4-automatic-transaction-rebroadcasting-atr) securely bootstrap a STUN connection for the participants using their public keys, and those participants then enjoy a fully private, fully encrypted video call independent of the node originally providing STUN services.
+<br>
+<div style="display: flex; justify-content: center;">
+    <img src="/howtosaitocall.gif" width="400" alt="Use hamburger menu then Saito Call button to use the app">
+</div>
+<br>
 
-## Build Your Own
+### <div id="saitoChat"> Saito Chat </div>
 
+## <div id="build"> Build Your Own </div>
+  
 Those interested in building on Saito should start [here](/tech/building_apps). The SDK used to make the all apps on this page is fully available for anyone to begin using. It has built-in functions to interact with the blockchain, perform basic cryptography, establish peer-to-peer connections and more. Applications are built using Javascript and run in the browser.
 
 Many of the beloved Saito apps like [Beleaguered Castle](/tech/applications/BeleagueredCastle) and even [Red Square](/tech/applications/RedSquare) were built or spurred to life by community members. Any developers seeking assistance or who want to offer feedback can reach the lead developers on [Red Square](https://saito.io/redsquare/), [Saito Community Chat](https://saito.io/chat/), [Saito Community Telegram](https://t.me/SaitoIO) or make an [issue](https://github.com/SaitoTech/saito-lite-rust/issues) on the Github. The team is thrilled to see what the community builds and values developer feedback.
