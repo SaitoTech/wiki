@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-22T22:01:56.748Z
+date: 2024-02-23T00:31:13.799Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -17,11 +17,11 @@ dateCreated: 2022-12-21T01:40:41.364Z
     <li> <a style='text-decoration:none' href='#1a'> Mental Poker </a> </li>
   </ul>
   <br>
-  <li> 2. <a style="text-decoration:none" href="#2"> b</a> </li>
-  <li> 3. <a style="text-decoration:none" href="#3"> c </a> </li>
+  <li> 2. <a style="text-decoration:none" href="#2"> P2P Social Media </a> </li>
+  <li> 3. <a style="text-decoration:none" href="#3"> Build Your Own </a> </li>
   <ul>
     <li> 3a. <a style="text-decoration:none" href="#3a"> 3a </a> </li>
-    <li> 3b. <a style="text-decoration:none" href="#3b"> 3b Networks </a> </li>
+    <li> 3b. <a style="text-decoration:none" href="#3b"> 3b </a> </li>
     <li> 3c. <a style="text-decoration:none" href="#3b"> 3c </a> </li>
     <li> 3d. <a style="text-decoration:none" href="#3b"> 3d </a> </li>
   </ul>
@@ -40,10 +40,29 @@ The Arcade not only laid the groundwork for a more diverse suite of peer-to-peer
 
 All games, whether they rely on complex cryptographic interactivity or are simple single-player experiences, benefit from the Saito Consensus's natural ability to fund open source applications by allowing service providers to earn their share of payment for network bandwidth or service provided.
 
-For these reasons the [Web3 Foundation](https://web3.foundation/) has recognized the Saito Game Engine as a standard for open, cryptographic gaming, where it succesfully [applied](https://github.com/w3f/Grants-Program/blob/master/applications/saito-game-protocol-and-engine.md) and fulfilled requirements for its grants program.
+For these reasons the [Web3 Foundation](https://web3.foundation/) has recognized the Saito Game Engine as a standard for open, cryptographic gaming, where it successfully [applied](https://github.com/w3f/Grants-Program/blob/master/applications/saito-game-protocol-and-engine.md) and fulfilled requirements for its grants program.
 
 > I like this idea and think it provides something REALLY valuable to the ecosystem, and takes blockchain gaming in a very different (and good!) direction
-> - *[Bill Laboon](https://github.com/w3f/Grants-Program/pull/73#issuecomment-713638248)*, Head of Education and Grants at Web3 Foundation
+> - *[Bill Laboon](https://github.com/w3f/Grants-Program/pull/73#issuecomment-713638248), Head of Education and Grants at Web3 Foundation*
+
+### Better Business Models
+
+High  quality games with significant followings often struggle to make money from digital sales. Companies like Apple and Google force developers to list games at extremely low prices to compete for visibility in their distribution channels, and then restrict how publishers can collect money from users.
+
+Instead of forcing publishers to revert to selling physical editions, merchandise, access to lightly-vieled gambling boxes or tokens of questionable utility and origin, Saito blurs the line between developer and publisher through new and better business models which rid themselves of the need to pay rent to centralized, digital storefronts.
+
+Saito Arcade, and Saito generally, is an open index of applications which any node, full or lite, can earn fees for serving to users. Open source developers can thus route their application's transactions into the network and earn part of that fee, all while keeping an open and direct line between them and their users. Saito [revolutionizes](https://medium.com/@0xluminous/the-future-of-open-source-software-7c77592f8f24) open source monetization.
+
+The best games may still gravitate towards free-to-play models, but alternative services and their monitization are not to be restricted: leaderboards, rankings, match-making services, and the like. Game designers on Saito have the freedom to experiment with different choices. Some games may be better off integrating decentralized advertising networks, or collecting micro-payments on a game-by-game or even a turn-by-turn basis.
+
+### Mental Poker
+
+For question of how the Saito Game Engine allows multiple parties to fairly agree on the state of truly random elements necessary for many games on the arcade, the answer begins with [Mental Poker](https://people.csail.mit.edu/rivest/pubs/SRA81.pdf):
+
+![mentalpoker.png](/mentalpoker.png)
+
+Indeed, the most direct use of the techniques which authors Rivest, Shamir and Adleman (RSA) devised are most directly employed and enchanced in Saito's very own, peer-to-peer, Web 3 Poker - available to [play](https://saito.io/arcade) on the arcade or to [audit](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/poker) on Github.
+
 
 <!--
 ![](/apps.png)
@@ -72,6 +91,8 @@ There is a good amount of games running on the Saito platform now, and more to c
 |     | [Shogun](/tech/applications/Shogun) | [Wordblocks](/tech/applications/wordblocks) |     | [Saito Mania](/tech/applications/SaitoMania) |     |
 |     | [Spider](/tech/applications/spider) | [Wuziqi](/tech/applications/wuziqi) |     | [Twilight Struggle](/tech/applications/twilightStruggle) |     |
 -->
+
+## Social Media
 
 ## Build Your Own
 
