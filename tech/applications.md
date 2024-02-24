@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-24T03:17:31.239Z
+date: 2024-02-24T03:19:30.565Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -29,8 +29,10 @@ Saito Applications prove that premium and everyday use cases can be stable and e
   <br>
   <li> <a style="text-decoration:none" href="#build"> Build Your Own </a> </li>
   <ul>
-    <li> <a style="text-decoration:none" href="community"> Community Applications </li>
+    <li> <a style="text-decoration:none" href="community"> Community Applications </a></li>
   </ul>
+  
+ 
 <!--
   <ul>
     <li> 3a. <a style="text-decoration:none" href="#3a"> 3a </a> </li>
