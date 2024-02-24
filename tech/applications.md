@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-24T04:23:13.126Z
+date: 2024-02-24T23:04:20.991Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -64,11 +64,11 @@ For these reasons the [Web3 Foundation](https://web3.foundation/) has recognized
 
 High  quality games with significant followings often struggle to make money from digital sales. Companies like Apple and Google force developers to list games at extremely low prices to compete for visibility in their distribution channels, and then restrict how publishers can collect money from users.
 
-Instead of forcing publishers to revert to selling physical editions, merchandise, access to lightly-vieled gambling boxes or tokens of questionable utility and origin, Saito blurs the line between developer and publisher through new and better business models which rid themselves of the need to pay rent to centralized, digital storefronts.
+Web 2 forces publishers to revert to selling physical editions, merchandise, access to lightly-veiled gambling boxes or tokens of questionable utility and origin. Saito blurs the line between developer and publisher through new and better business models which rid developers of the need to pay rent to centralized, digital storefronts.
 
-Saito Arcade, and Saito generally, is an open index of applications which any node, full or lite, can earn fees for serving to users. Open source developers can thus route their application's transactions into the network and earn part of that fee, all while keeping an open and direct line between them and their users. Saito [revolutionizes](https://medium.com/@0xluminous/the-future-of-open-source-software-7c77592f8f24) open source monetization.
+Saito Arcade, and Saito generally, is an open index of applications which any node, full or lite, can earn fees for serving to users. Open source developers can thus route their application's transactions into the network and earn the larger part of that fee. Developers can simply and permissionlessly become their own publishers. Saito [revolutionizes](https://medium.com/@0xluminous/the-future-of-open-source-software-7c77592f8f24) open source monetization.
 
-The best games may still gravitate towards free-to-play models, but alternative services and their monitization are not to be restricted: leaderboards, rankings, match-making services, and the like. Game designers on Saito have the freedom to experiment with different choices. Some games may be better off integrating decentralized advertising networks, or collecting micro-payments on a game-by-game or even a turn-by-turn basis.
+The best games may still gravitate towards free-to-play models, but alternative services and their monetization are not to be restricted: leader-boards, rankings, match-making services, and the like. Game designers on Saito have the freedom to experiment with different choices. Some games may be better off integrating decentralized advertising networks, or collecting micro-payments on a game-by-game or even a turn-by-turn basis.
 
 ### <div id="mentalPoker"> Mental Poker Techniques </div>
 
@@ -80,19 +80,21 @@ For question of how the Saito Game Engine allows multiple parties to fairly agre
     <img src="/mentalpoker.png" alt="Mental Poker; Adi Shamir, Ronald L. Rivest and Leanard M. Adleman; MASSACHUSETTS INSTITUTE OF TECHNOLOGY; ABSTRACT Can two potentially dishonest players play a fair game of poker without using any cards-for example, over the phone? This paper provides the following answers: 1. No. (Rigorous mathemmatical proof supplied.) 2. Yes. (Correct and complete protocol given.); Once there were two 'mental chess' experts who had become tired of their passtime. 'Let's play 'Mental Mpoker,' for variety' suggested one. 'Sure' said the other,' Just let me deal!'">
 </div>
 
-Indeed, the most direct use of the techniques which authors Rivest, Shamir and Adleman (RSA) devised are most directly employed and enchanced in Saito's very own, peer-to-peer, Web 3 Poker - available to [play](https://saito.io/arcade) on the arcade or to [audit](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/poker) on Github.
+Indeed, the most direct use of the techniques which authors Rivest, Shamir and Adleman (RSA) devised are most directly employed and enhanced in Saito's very own, peer-to-peer, Web 3 Poker - available to [play](https://saito.io/arcade) on the arcade or to [audit](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/poker) on Github.
 
-Mental Poker exploits the commutative nature properties of most public key encryption schemes to encrypt a deck of cards multiple times using the keys of the players who then shuffle the cards, ignorant of their unencrypted values and obscuring the order in which they were sent. A more complete explanation can be sought via [Wikipedia](https://en.wikipedia.org/wiki/Mental_poker).
+Mental Poker exploits the commutative properties of public key encryption schemes to encrypt and shuffle a deck of cards using the keys of each player, and then progressively decrypt card when they must be revealed. A more complete explanation can be sought via [Wikipedia](https://en.wikipedia.org/wiki/Mental_poker).
 
-The Saito Arcade has taken the principles of Mental Poker and generalized and extended the technique to support several adversarial players and to encode and integrate arbitrary values which extend far past a simple game of Poker. Titles like Twilight Struggle and Settlers of Saitoa are two flagship examples. Because Saito solves the *man-in-the-middle attack* (MITM) without the need for a trusted party, it is in the unique position to apply the techniques without sweeping related trust assumptions under the rug.
+The Saito Arcade has taken the principles of Mental Poker and generalized and extended the technique to support several adversarial players and to encode and integrate arbitrary values which extend far past a simple game of Poker. Titles like Twilight Struggle and Settlers of Saitoa are two flagship examples.
   
 <br>
 <figure>
   <img src="/_endomyjz0ceirxfq1u0pftenz5gnrzb__anvslwa7o.webp" alt="An image of the board game 'Twilight Struggle,' featuring a Cold War World map with various tiles representing the state of play of countries and global affairs.">
   <figcaption style="opacity: 80%; text-align: center;"> Twilight Struggle on Saito proves that complex games can be played fairly p2p, without middlemen. </figcaption>
 </figure>
-
-The entire process, from peer discovery to setup to gameplay benefits uniquely from taking place on a universal broadcast layer like Saito blockchain. Whereas many of these steps require a trusted party like Facebook to prevent MITM attacks, Saito does it trustlessly and in the open. While Mental Poker removes trust assumptions from the game, Saito removes trust assumptions from the network infrastructure, and thus can serve a secure and affordable Web 3 experience through every layer of interaction.
+    
+Because Saito solves the *man-in-the-middle attack* (MITM) without the need for a trusted party, it is in the unique position to apply the techniques without sweeping related trust assumptions under the rug. The entire process, from peer discovery to setup to gameplay benefits uniquely from taking place on a universal broadcast layer like Saito blockchain.
+    
+Whereas many of these steps require a trusted party like Facebook to prevent MITM attacks, Saito does it trustlessly and in the open. While Mental Poker removes trust assumptions from the game, Saito removes trust assumptions from the network infrastructure, and thus can initiate a secure and affordable Web 3 experience through every layer of interaction.
 
 For a more technical dive into how the current suite of games on Saito Arcade work, pay a visit to our [Github Repository](https://github.com/SaitoTech/saito-lite-rust/blob/dbd9d622c8cb69c682045b780c63207eed8d7bf1/docs/gaming/saito-game-engine/readme.md) or ask a question on Saito's social media platform [Red Square](https://saito.io/redsquare/).
   
@@ -104,14 +106,20 @@ For a more technical dive into how the current suite of games on Saito Arcade wo
   
 ### <div id="redSquare"> Red Square </div>
   
-[Red Square](https://saito.io/redsquare/) is the Web 3 public square leveraging the Saito Blockchain and its peer-to-peer capabilities. While it may appear to function like a standard Web 2 Twitter-clone, Red Square's infrastructure has been heavily abstracted down into pure peer-to-peer interactions. Users of Red Square keep eachother up to date and can remain online despite the whims of any network nodes or central authorities.
+[Red Square](https://saito.io/redsquare/) is the Web 3 public square leveraging the Saito Blockchain and its peer-to-peer capabilities. While it may appear to function like a standard Web 2 Twitter-clone, Red Square's processes have been heavily abstracted down to pure peer-to-peer interactions.
+    
+For this reason, Red Square achieves what other incumbents like Mastadon or Nostr have failed: an uncensorable public square without reliance on volunteers. Users of Red Square keep each other up to date and can remain online without the permission of any network nodes or central authorities.
  
 <br><img src="/redsquare.png" alt="Screenshot of Red Square app: typing a reply with an emote to an image gallery post. Notification and home menus, chats, game invites, leaderboards, calender and more can be seen in the background.">
 <br>
+    
+Like many Saito applications, Red Square uses a thoughtful mix of on and off chain protocols. Actions like publishing, liking, reposting and following are carried through public transactions while the re-propagation of that information is shared more discreetly between peers.
+    
+The usual features take on new meaning in Web 3: *Retweeting* actively rebroadcasts the post to other peers, *Following* subsribes to the data-stream of that user, and in an ecosystem with built-in DoS protections, a user's *Likes* are unlimited.
   
 **Moderation in Web 3**
   
-Red Square is as much the community's go-to hub as it is an experiment on the cuttind edge of Web 3. One of the most interesting and difficult questions to answer with any public square, but especially a Web 3 site is: how is unsavory content moderated without reliance on centralized authorities?
+Red Square is as much the community's go-to hub as it is an experiment on the cutting edge of Web 3. One of the most interesting and difficult questions to answer with any public square, but especially a Web 3 site is: how is unsavory content moderated without reliance on centralized authorities?
   
 Red Square is not centralized like *X,* nor is it federated like *Mastadon* or *Nostr,* it is a fully peer-to-peer social media platform. Since individual users are the fundamental unit of Red Square, it is approaching this question by starting with user choice:
   
