@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-23T23:15:58.491Z
+date: 2024-02-24T00:48:44.240Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -92,8 +92,13 @@ For a more technical dive into how the current suite of games on Saito Arcade wo
   
 ### <div id="redSquare"> Red Square </div>
   
+
+  
 [Red Square](https://saito.io/redsquare/) is the Web 3 public square leveraging the Saito Blockchain and its peer-to-peer capabilities. While it may appear to function like a standard Web 2 Twitter-clone, Red Square's infrastructure has been heavily abstracted down into pure peer-to-peer interactions. Users of Red Square keep eachother up to date and can remain online despite the whims of any central authorities.
+ 
+<br><img src="/redsquare.png" alt="Screenshot of Red Square app: typing a reply with an emote to an image gallery post. Notification and home menus, chats, game invites, leaderboards, calender and more can be seen in the background.">
 <br>
+  
 ### <div id="saitoTalk"> Saito Talk </div>
   
 Saito Talk pure peer-to-peer video conferencing software, currently with support for up to four callers. [Transient Saito Transactions](https://wiki.saito.io/en/consensus#h-4-automatic-transaction-rebroadcasting-atr) securely bootstrap a STUN connection for the participants using their public keys, and those participants then enjoy a fully private, fully encrypted video call independent of the node originally providing STUN services.
