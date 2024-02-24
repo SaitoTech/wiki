@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-24T23:04:20.991Z
+date: 2024-02-24T23:21:23.252Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -125,18 +125,23 @@ Red Square is not centralized like *X,* nor is it federated like *Mastadon* or *
   
  ![self-moderate.jpg](/self-moderate.jpg) 
   
-If a user wishes to hide and refrain from rebroadcasting certain posts or accounts to their peers, they have that choice. As Red Square scales up we expect being on the cuttind edge will reveal yet unsolved problems and give way to more sophisticated solutions. Spam and fraud prevention, curation and moderation tools are all ameneties users come to expect, but also the most effective avenues of tech tyranny.
-  
-Open source and optional mechanisms will be required to provide users desiring a more refined experience the ability to a
+If a user wishes to hide and refrain from rebroadcasting certain posts or accounts to their peers, they have that choice. As Red Square scales up we expect that being leaders in Web 3 will reveal yet unsolved problems and give way to more sophisticated solutions.
+    
+Spam and fraud prevention, curation and moderation tools are all ameneties users come to expect, but also the most effective avenues of traditional tech tyranny. Open source and opt-in mechanisms will be required to provide users desiring a more refined experience the ability to have it.
+    
+[Community Notes](https://vitalik.eth.limo/general/2023/08/16/communitynotes.html) is a great example of an open source tool which allows users to issue corrections on social media without oversight; tools like this will very likely be an important part of Red Square's, and Web 3's future.
+    
+* Visit [Red Square](https://saito.io/redsquare/)
   
 The team is always open to [feedback](https://wiki.saito.io/en/community) and ideas.
  
-  
+<br>  
+    
 ### <div id="saitoTalk"> Saito Talk </div>
   
-Saito Talk is a peer-to-peer, end-to-end encrypted video conferencing software for everyday use. No user account, phone number, or personal information of any kind is required to use it. Saito Talk currently supports up to four callers. [Transient Saito Transactions](https://wiki.saito.io/en/consensus#h-4-automatic-transaction-rebroadcasting-atr) securely bootstrap a STUN connection for the participants using their public keys.
-  
-Users enjoy a fully private, fully encrypted video call independent of the node originally providing STUN services. 
+Saito Talk is a peer-to-peer, end-to-end encrypted video conferencing software for everyday use. No user account, phone number, credit card or personal information of any kind is required to use it. Saito Talk currently supports up to four callers.
+    
+[Transient Saito Transactions](https://wiki.saito.io/en/consensus#h-4-automatic-transaction-rebroadcasting-atr) securely bootstraps a STUN connection for the participants based around their public keys. Users then enjoy a fully private, fully encrypted video call independent of the node originally providing STUN services. 
   
 ![saito-talk.jpg](/saito-talk.jpg)
 
@@ -148,6 +153,7 @@ To access Saito Talk, click on the hamburger menu on Red Square and find the *Sa
     <img src="/howtosaitocall.gif" width="400" alt="Use hamburger menu then Saito Call button to use the app">
 </div>
 <br>
+<br>
   
 ### <div id="saitoChat"> Saito Chat </div>
   
@@ -155,15 +161,16 @@ To access Saito Talk, click on the hamburger menu on Red Square and find the *Sa
   
 Unlike other chat applications which require a user account and sometimes even a phone number, Saito Chat offers sovereign account creation and access by merely opening the web page (as do all Saito apps); a public key is automatically and locally generated. Not only is account creation more private, open and secure, but so is the key exchange process:
   
-While the key exchange for a Web 2 encrypted messaging application relies on a central authority to assert that the true owners of the encryption keys are who they claim to be, Saito, defends against the man-in-the-middle attack by making it prohibitively costly to censor users, thus making the public-key identity theft as expensive, and moreso over time.
+While the key exchange for a Web 2 encrypted messaging application relies on a central authority to assert that the true owners of the encryption keys are who they claim to be, Saito, defends against the man-in-the-middle attack by making it prohibitively costly to censor users, thus making the public-key identity theft as expensive, and more so over time.
   
-Users with the greatest need for security would be encouraged to delay sensitive messaging until the cost-to-attack the blockchain grows sufficiently large for the situation. Saito Chat demonstrates that the basic function as a leaderless yet secure public key infrastructure has application to all of our standard needs online.
+Users with the greatest need for security would be encouraged to delay sensitive messaging until the cost-to-attack the blockchain grows sufficiently large for the situation. Saito Chat demonstrates that the basic function as a leaderless yet secure public key infrastructure has compelling reason to exist beneath all of our basic online needs.
   
 <img src="/saito-chat-feb24.png" alt="Screenshot of Saito Chat window. Several chat previews are shown on the left, an active 'Saito Community Chat' is displayed in the middle, and online members of said chat are displayed on the right.">
+<br>
 
 ## <div id="build"> Build Your Own </div>
   
-Those interested in building on Saito should start [here](/tech/building_apps). The SDK used to make the all apps on this page is fully available for anyone to begin using. It has built-in functions to interact with the blockchain, perform basic cryptography, establish peer-to-peer connections and more. Applications are built using Javascript and run in the browser.
+Those interested in building on Saito should start [here](/tech/building_apps). The SDK used to make the all apps on this page is fully available for anyone to begin using. It has built-in functions to interact with the blockchain, perform basic cryptography, establish peer-to-peer connections, perform secure p2p dice rolls and shuffles, and more.
 
 Many of the beloved Saito apps like [Beleaguered Castle](/tech/applications/BeleagueredCastle) and even [Red Square](/tech/applications/RedSquare) were built or spurred to life by community members. Any developers seeking assistance or who want to offer feedback can reach the lead developers on [Red Square](https://saito.io/redsquare/), [Saito Community Chat](https://saito.io/chat/), [Saito Community Telegram](https://t.me/SaitoIO) or make an [issue](https://github.com/SaitoTech/saito-lite-rust/issues) on the Github. The team is thrilled to see what the community builds and values developer feedback.
 
