@@ -2,7 +2,7 @@
 title: Use Cases
 description: 
 published: true
-date: 2024-02-25T23:37:59.004Z
+date: 2024-02-25T23:55:36.330Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T01:04:19.828Z
@@ -105,7 +105,7 @@ If Alice wants to communicate with Bob and sends a transaction stating that inte
 
 But thanks to blockchain, and unlike public networks of the past, key exchange participants select their partners from a universal and uncensorable medium - where Mallory previously had the ability to censor for free, she now must resist the economic security of the blockchain in order to fulfill her attack.
 
-Alice and Bob using Saito to perform key exchange remove the ability for a MITM to censor their original messages. Mallory can still impersonate Alice and Bob, but unlike in any other network, she has objective and growing cost to censor the original messages. Saito incentivizes nodes to compete to spread and include data in blocks - naturally routing around MITM attackers.
+Alice and Bob using Saito to perform key exchange remove the ability for a MITM to freely and easily censor their original messages. Mallory can still impersonate Alice and Bob, but unlike in any other network, she has objective and growing cost to censor the original messages. Saito [incentivizes](https://wiki.saito.io/en/consensus) nodes to compete to spread and include data in blocks - naturally routing around MITM attackers.
 
 Nodes wishing to best serve users will route those relevant transactions back to them, and Alice and Bob can then see all key exchange requests directed towards them. When Alice or Bob sees that they each have multiple connection requests claiming to be the other, 
 
