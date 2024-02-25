@@ -2,7 +2,7 @@
 title: Use Cases
 description: 
 published: true
-date: 2024-02-25T23:55:36.330Z
+date: 2024-02-25T23:59:55.275Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T01:04:19.828Z
@@ -113,7 +113,7 @@ Only when Alice and Bob both see that both of their messages were posted to the 
 
 ### <div id="3d">Web 3</div>
 
-There are several considerations at play here which are very often taken for granted:
+Web 3 may be considered the internet free of trust assumptions of central parties. There are several considerations at play here which are very often taken for granted:
 
 * The extent of the reliance on PKI networks for internet security
 * The extent to which registering with Web 2 PKIs is permissioned 
@@ -121,7 +121,7 @@ There are several considerations at play here which are very often taken for gra
 * How, in practice, corporations serve as implicit and less secure PKIs for users
 * The ability for blockchain to serve as PKI
 
-Web 3 is well defined: a system of networking in which interested parties may safely connect directly to each other without any authoritative middlemen; without permission. By now it should be obvious that since the advent of public key cryptography, systems of authority have developed in order to solve the most basic problem of key exchange, and that all consumers rely on the security which  trickles down to social media platforms, and businesses on the blessings of authority to grant certificates.
+Web 3 is well defined: a system of networking in which interested parties may safely connect directly to each other without any authoritative middlemen; without permission. By now it should be obvious that since the advent of public key cryptography, systems of trusted authority have developed in order to solve the most basic problem of key exchange. Users of the internet rely on the security which trickles down to social media platforms and businesses from the authority to grant certificates held by Web 2 PKIs.
 
 Web 3, using blockchain as PKI, solves the MITM attack and does not require any participant to request certification from an authority, nor does it require users to rely on any hierarchies of trust which place them at the bottom rung. All participants in Web 3 will have access to a universal broadcast network which grants measurable and objective economic security to perform key direct exchange permissionlessly.
 
