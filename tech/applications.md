@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-24T23:21:23.252Z
+date: 2024-02-25T03:43:47.915Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -10,7 +10,7 @@ dateCreated: 2022-12-21T01:40:41.364Z
 
 <h1> Saito Applications </h1>
 
-Saito Applications prove that premium and everyday use cases can be stable and enjoyable under a **true, peer-to-peer Web 3** model. Saito applications are open source, peer-to-peer and end-to-end encrypted by default. Users only require one active and fee-accepting node, and can even use each other, to stay active and connected despite the malicious intent of all other parties.
+Saito Applications prove that premium and everyday use cases can be stable and enjoyable under a **true, peer-to-peer Web 3** model. Saito applications are open source, peer-to-peer and end-to-end encrypted by default. Applications on Saito enjoy the security and openness that only the [Saito Blockchain](https://wiki.saito.io/en/consensus) can provide.
 
 <!-- INTRO - (mention importance of p2p and true web3) -->
 <ul style="color:">
@@ -28,8 +28,9 @@ Saito Applications prove that premium and everyday use cases can be stable and e
   </ul>
   <br>
   <li> <a style="text-decoration:none" href="#build"> Build Your Own </a> </li>
-  <ul>
-    <!--
+  </ul>
+  
+<!--
     <li> <a style="text-decoration:none" href="community"> Community Applications </a></li>
   </ul>
 -->
