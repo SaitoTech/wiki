@@ -2,13 +2,13 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-25T21:19:18.777Z
+date: 2024-02-25T21:25:18.645Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
 ---
 
-<h1> Saito Applications </h1>
+# Saito Applications 
 
 Saito Applications prove that premium and everyday use cases can be stable and enjoyable under a **true, peer-to-peer Web 3** model. Saito applications are open source, peer-to-peer and end-to-end encrypted by default. Applications on Saito enjoy the security and openness that only the [Saito Blockchain](https://wiki.saito.io/en/consensus) can provide.
 
