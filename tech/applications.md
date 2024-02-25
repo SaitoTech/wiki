@@ -2,17 +2,18 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-25T21:46:35.646Z
+date: 2024-02-25T23:04:28.731Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
 ---
 
-# Saito Applications 
+# Saito Applications
 
-Saito Applications prove that premium and everyday use cases can be stable and enjoyable under a **true, peer-to-peer Web 3** model. Saito applications are open source, peer-to-peer and end-to-end encrypted by default. Applications on Saito enjoy the security and openness that only the [Saito Blockchain](https://wiki.saito.io/en/consensus) can provide.
+While most of crypto uses a Web 2 model with token integrations or a federated model reliant on volunteer work, **Saito applications** operate in true, **peer-to-peer Web 3** and are self-funding.
 
-<!-- INTRO - (mention importance of p2p and true web3) -->
+Saito apps prove that premium and everyday use cases can be stable and enjoyable under a genuine Web 3 model. To begin understanding why this is uniquely possible on Saito, it's crucial to understand [Saito Consensus](https://wiki.saito.io/en/consensus).
+
 <ul>
   
   <li>  <a style="text-decoration:none" href="#arcade"> Saito Arcade </a> </li>
