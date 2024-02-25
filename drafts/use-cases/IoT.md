@@ -2,13 +2,15 @@
 title: Use Cases
 description: 
 published: true
-date: 2024-02-16T04:54:42.155Z
+date: 2024-02-25T03:43:57.917Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T01:04:19.828Z
 ---
 
 # Use Cases
+
+This page serves as an abstract discussion of the utility of Saito and scalable blockchain generally. To learn more about the applications running on Saito currently, visit the [applications](https://wiki.saito.io/en/tech/applications) page of the Wiki.
 
 <ul style="color:">
   <li> 1. <a style="text-decoration:none" href="#1"> What Does Saito Do?</a> </li>
