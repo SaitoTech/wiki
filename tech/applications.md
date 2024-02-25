@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-25T03:43:47.915Z
+date: 2024-02-25T21:19:18.777Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -13,22 +13,29 @@ dateCreated: 2022-12-21T01:40:41.364Z
 Saito Applications prove that premium and everyday use cases can be stable and enjoyable under a **true, peer-to-peer Web 3** model. Saito applications are open source, peer-to-peer and end-to-end encrypted by default. Applications on Saito enjoy the security and openness that only the [Saito Blockchain](https://wiki.saito.io/en/consensus) can provide.
 
 <!-- INTRO - (mention importance of p2p and true web3) -->
-<ul style="color:">
+<ul>
+  
   <li>  <a style="text-decoration:none" href="#arcade"> Saito Arcade </a> </li>
+  
   <ul>
     <li> <a style='text-decoration:none' href='#betterBusiness'> Better Business Models </a> </li>
     <li> <a style='text-decoration:none' href='#mentalPoker'> Mental Poker </a> </li>
   </ul>
+  
   <br>
   <li>  <a style="text-decoration:none" href="#2"> P2P Social Media </a> </li>
+  
   <ul>
   	<li>  <a style="text-decoration:none" href="#redSquare"> Red Square </a> </li>
     <li>  <a style="text-decoration:none" href="#saitoTalk"> Saito Talk </a> </li>
     <li>  <a style="text-decoration:none" href="#saitoChat"> Saito Chat </a> </li>
   </ul>
+  
   <br>
   <li> <a style="text-decoration:none" href="#build"> Build Your Own </a> </li>
-  </ul>
+  
+</ul>
+  
   
 <!--
     <li> <a style="text-decoration:none" href="community"> Community Applications </a></li>
