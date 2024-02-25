@@ -2,7 +2,7 @@
 title: Use Cases
 description: 
 published: true
-date: 2024-02-25T23:22:52.119Z
+date: 2024-02-25T23:37:59.004Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T01:04:19.828Z
@@ -91,9 +91,11 @@ Much like the website had to identify itself with a certificate authority, a use
 
 The reliance on middlemen to provide these trust assumptions is a security risk for all involved - companies make themselves targets for hackers, and users must rely on the skill and honesty behind corporate security practices. Often this is only achieved with relative safety by large corporations who then pilfer and monetize user data.
 
-Today's secure internet ultimately relies on trust in a small collection of authoritative parties who catalog and mediate interactions between identities. Faith that these authorities will not perform a MITM attack of their own volition and to protect their operation from bribes and hackers is a requirement. Their permission to register and use the system is also required.
+Today's secure internet ultimately relies on trust in a small collection of authoritative parties who catalog and mediate interactions between identities. Faith that these authorities will not perform a MITM attack of their own volition and to protect their operation from bribes and hackers is an unfortunate requirement. Their permission to register and use the system is also required.
 
-While the PKI networks behind the websites themselves are generally considered more secure, the ramifications of those being compromised are also much worse. Despite this, everyday users of the internet end up reliant on the weakest link in this cryptographic chain to secure their communications: corporate Web 2 servers.
+While the PKI networks behind the websites themselves are generally considered more secure, the ramifications of those being compromised are also much more severe. Due to incompetence, or malice disguised as such, crucial security infrastructure has been discovered compromised [several times](https://cromwell-intl.com/cybersecurity/pki-failures.html) in the past. One can only speculate on what vulnerabilities or trust assumptions are exploited in secret.
+
+Putting more existential risks aside: everyday users of the internet end up reliant on the weakest and least trustworthy link in this cryptographic chain to secure their communications: corporate Web 2 servers.
 
 ### <div id="3c">Blockchain as PKI</div>
 
