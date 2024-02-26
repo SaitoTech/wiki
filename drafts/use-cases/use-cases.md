@@ -2,7 +2,7 @@
 title: Use Cases
 description: 
 published: true
-date: 2024-02-26T01:37:41.692Z
+date: 2024-02-26T10:49:59.429Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T01:04:19.828Z
@@ -10,7 +10,7 @@ dateCreated: 2023-09-24T01:04:19.828Z
 
 # Use Cases
 
-This page serves as an abstract discussion of the utility of Saito and scalable blockchain generally. To learn more about the applications running on Saito currently, visit the [applications](https://wiki.saito.io/en/tech/applications) page of the Wiki.
+This page serves as an abstract discussion of the utility of Saito and scalable blockchain generally. To learn about specific applications running on Saito, visit the [applications](https://wiki.saito.io/en/tech/applications) page of the Wiki or [try them](https://saito.io/redsquare/) yourself.
 
 <ul style="color:">
   <li> 1. <a style="text-decoration:none" href="#1"> Universal Broadcast </a> </li>
@@ -25,6 +25,12 @@ This page serves as an abstract discussion of the utility of Saito and scalable 
   <br>
   <li> 4. <a style="text-decoration:none" href="#3b"> Permissionless Internet of Things </a> </li>
 </ul>
+
+## Introduction
+
+Many wonder what possible use cases another new blockchain could possibly serve, and yet others wonder what compelling use case blockchain truly serves at all. This page answers the latter by contextualizing Saito's strengths as solutions to known problems in existing internet infrastructure.
+
+As to the former question: why another blockchain need exist to solve this problem; the complete answer is out of scope. The short answer is that [Saito Consensus](https://wiki.saito.io/en/consensus) solves known market failures which impede traditional and 'modern' blockchain's ability to scale while remaining open.
   
 ## <div id="1">Universal Broadcast</div>
 
