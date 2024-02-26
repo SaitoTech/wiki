@@ -2,7 +2,7 @@
 title: Use Cases
 description: 
 published: true
-date: 2024-02-26T10:49:59.429Z
+date: 2024-02-26T11:04:04.224Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T01:04:19.828Z
@@ -14,16 +14,27 @@ This page serves as an abstract discussion of the utility of Saito and scalable 
 
 <ul style="color:">
   <li> 1. <a style="text-decoration:none" href="#1"> Universal Broadcast </a> </li>
-  <li> 2. <a style="text-decoration:none" href="#2"> What Does Saito Pay For?</a> </li>
-  <li> 3. <a style="text-decoration:none" href="#3"> Public Key Infrastructure</a> </li>
+  <!--<li> 2. <a style="text-decoration:none" href="#2"> What Does Saito Pay For?</a> </li>-->
+  <li> 2. <a style="text-decoration:none" href="#2"> Public Key Infrastructure</a> </li>
   <ul>
-    <li> 3a. <a style="text-decoration:none" href="#3a"> Man-in-the-Middle Attacks </a> </li>
-    <li> 3b. <a style="text-decoration:none" href="#3b"> Implicit PKI Networks </a> </li>
-    <li> 3c. <a style="text-decoration:none" href="#3b"> Blockchain as PKI </a> </li>
-    <li> 3d. <a style="text-decoration:none" href="#3b"> Web 3 </a> </li>
+    <li> 2a. <a style="text-decoration:none" href="#2a"> Man-in-the-Middle Attacks </a> </li>
+    <li> 2b. <a style="text-decoration:none" href="#2b"> Implicit PKI Networks </a> </li>
+    <li> 2c. <a style="text-decoration:none" href="#2b"> Blockchain as PKI </a> </li>
+    <li> 2d. <a style="text-decoration:none" href="#2b"> Web 3 </a> </li>
   </ul>
   <br>
+  <li> 3. <a style="text-decoration:none" href="#3"> Web 3 </a> </li>
+  <ul>
+    <li> 3a. <a style="text-decoration:none" href="#3a"> What is Web 3? </a> </li>
+    <li> 3b. <a style="text-decoration:none" href="#3b"> placeholder </a> </li>
+    <li> 3c. <a style="text-decoration:none" href="#3b"> placeholder </a> </li>
+    <li> 3d. <a style="text-decoration:none" href="#3b"> placeholder </a> </li>
+  </ul>
+  <br>
+  <!--
   <li> 4. <a style="text-decoration:none" href="#3b"> Permissionless Internet of Things </a> </li>
+-->
+  <li> 3. <a style="text-decoration:none" href="#3b"> Conclusion </a> </li>
 </ul>
 
 ## Introduction
@@ -65,7 +76,7 @@ Saito consensus rewards nodes for collecting transaction fees, so any node which
 
 Applications for which blockchain was previously too expensive to even consider are now possible thanks to Saito's ability to universally broadcast data at a market rate, paying not much more than typical bandwidth and storage costs. The most fundamental use case, which all secure internet communication relies on, is the Public Key Infrastructure.
 -->
-## <div id="3">Public Key Infrastructure</div>
+## <div id="2">Public Key Infrastructure</div>
 
 Public Key Infrastructures (PKI) are, among other uses, one of the most important but least discussed components of the modern, secure, internet. Their origins come from the early desire to securely transact electronically over the web; without them, eCommerce as we know it could not exist - nor could the other security assumptions many take for granted while using the internet. 
 
@@ -73,7 +84,7 @@ It is fitting that the next generation of PKI stems too from a general upgrade i
 
 If no other point is taken away about PKIs, it's that the modern approach to web security, rooted in PKI, fundamentally rests on assumptions of trust, while Saito's PKI is secured by economic security capable of foiling even a state-level [majority attacker](https://wiki.saito.io/en/drafts/fifty-one-percent-attacks), but also scalable enough for everyday use.
 
-### <div id="3a">Man-in-the-Middle Attacks</div>
+### <div id="2a">Man-in-the-Middle Attacks</div>
 
 Safe and secure key exchange is fundamental to the internet as we know it, yet the current paradigm provides the best security only to the largest players and is globally marred by trust assumptions. Public Key Infrastructures (PKI networks), are the current solution to this problem.
 
@@ -87,7 +98,7 @@ These middleman serve the important role of binding identities to keys, such tha
 
 Since these middlemen are all that stands in the way of a MITM attack, they also have the unique privilege to perform such attacks, making them prime targets for hackers, government corruption, and the prying eyes of data-hungry social media companies. Your connection is only as safe as your middleman.
 
-### <div id="3b">Implicit PKI Networks</div>
+### <div id="2b">Implicit PKI Networks</div>
 
 All consumer web browsers are compiled, distributed and installed with their trust assumptions resting on the *certificate authorities* of PKI networks, which bind web domains to public keys in hopes of preventing MITM attacks. Without this, it would never be clear to web browsers if a connection to some domain was secure or being intercepted.
 
@@ -103,7 +114,7 @@ While the PKI networks behind the websites themselves are generally considered m
 
 Putting more existential risks aside: everyday users of the internet end up reliant on the weakest and least trustworthy link in this cryptographic chain to secure their communications: corporate Web 2 servers.
 
-### <div id="3c">Blockchain as PKI</div>
+### <div id="2c">Blockchain as PKI</div>
 
 Saito is well suited to perform the much of the serious and fundamental responsibilities of a PKI without any authorities, any permission, and no central point of attack or corruption. Consider the key exchange again: two parties may share with each other their public keys over an insecure network and establish a secure connection between each other. Yet when they do so without the help of an authoritative web server or PKI network, they cannot be sure that no other parties exist between their connection.
 
@@ -117,7 +128,9 @@ Nodes wishing to best serve users will route those relevant transactions back to
 
 Only when Alice and Bob both see that both of their messages were posted to the universal broadcast network do they then have economic security which protects those messages and allows each counter-party to see them in their original form. By establishing connections only after both messages appear on the blockchain, the attacker loses the crucial ability to censor those messages before replacing them and can thus no longer attempt the attack without being detected and ultimately shunned.
 
-### <div id="3d">Web 3</div>
+## <div id="3">Web 3</div>
+
+### <div id="3a"> Web 3 is Greater Than Web 2 </div>
 
 Web 3 is well defined: a system of networking in which interested parties may safely connect directly to each other without any authoritative middlemen; without permission.  It may be considered the internet free of trust assumptions of central parties. When assessing the benefits of Web 3, there are several compromising aspects of Web 2 which are frequently taken for granted but highlight its inability to naively extend into Web 3:
 
@@ -131,9 +144,11 @@ By now it should be obvious that since the advent of public key cryptography, sy
 
 Web 3, using blockchain as PKI, solves the MITM attack and does not require any participant to request certification from an authority, nor does it require users to rely on any hierarchies of trust which place them at the bottom rung. All participants in Web 3 will have access to a universal broadcast network which grants measurable and objective economic security to perform key direct exchange permissionlessly.
 
-Not only do users enjoy the the raw security of the root-level PKI (the blockchain), a tool for which most have never had direct access too, but this most foundational layer as instantiated on Saito, free from majoritarian attacks, is an order of magnitude more secure than the largely-gated, private, Web 2 PKIs. As users finally gain access to the tool, it is simultaneously upgraded.
+Not only do users enjoy open and affordable access to raw security of the root-level PKI (the blockchain), a tool for which most have never had direct access too, but this most foundational layer as instantiated on Saito, free from majoritarian attacks, is an order of magnitude more secure than the largely-gated, private, Web 2 PKIs, as censorship has measurable costs.
 
 The way in which this reshapes the internet and a user's relationship to internet services is absolutely fundamental. For starters, the services which connect people need not be bound by any corporate interests, as users no longer rely on the trickle-down-trust that corporations receive from Web 2 PKIs and sometimes pass faithfully down to users. Every individual instead has secure and direct access to one another via open source software.
+
+### <div id="3b"> Practical Benefits </div>
 
 **Native interoperability** is a natural consequence of a more open internet. Though many choices may exist, they can each interoperate via the Web 3 PKI and peer-to-peer connections rather than the walled-gardens of private companies. Those designing user-facing software are no longer burdened with being shepherds of *trust* - they instead allow user security to be handled by the most scalable and secure universal broadcast network: Saito blockchain.
 
