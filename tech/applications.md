@@ -2,18 +2,17 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-25T23:04:28.731Z
+date: 2024-02-26T23:07:25.354Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
 ---
 
-# Saito Applications
+# Saito Applications 
 
 While most of crypto uses a Web 2 model with token integrations or a federated model reliant on volunteer work, **Saito applications** operate in true, **peer-to-peer Web 3** and are self-funding.
 
-Saito apps prove that premium and everyday use cases can be stable and enjoyable under a genuine Web 3 model. To begin understanding why this is uniquely possible on Saito, it's crucial to understand [Saito Consensus](https://wiki.saito.io/en/consensus).
-
+Saito apps prove that premium and everyday applications can be stable and enjoyable under a genuine Web 3 model. Saito apps are open source, peer-to-peer, and end-to-end encrypted by default. To begin understanding why this is uniquely possible on Saito, it's crucial to understand [Saito Consensus](https://wiki.saito.io/en/consensus).
 <ul>
   
   <li>  <a style="text-decoration:none" href="#arcade"> Saito Arcade </a> </li>
@@ -148,7 +147,7 @@ The team is always open to [feedback](https://wiki.saito.io/en/community) and id
     
 ### <div id="saitoTalk"> Saito Talk </div>
   
-Saito Talk is a peer-to-peer, end-to-end encrypted video conferencing software for everyday use. No user account, phone number, credit card or personal information of any kind is required to use it. Saito Talk currently supports up to four callers.
+[Saito Talk](https://saito.io/videocall/) is a peer-to-peer, end-to-end encrypted video conferencing software for everyday use. No user account, phone number, credit card or personal information of any kind is required to use it - simply click the link and invite a friend. Saito Talk currently supports up to four callers.
     
 [Transient Saito Transactions](https://wiki.saito.io/en/consensus#h-4-automatic-transaction-rebroadcasting-atr) securely bootstraps a STUN connection for the participants based around their public keys. Users then enjoy a fully private, fully encrypted video call independent of the node originally providing STUN services. 
   
@@ -156,7 +155,7 @@ Saito Talk is a peer-to-peer, end-to-end encrypted video conferencing software f
 
 We encourage users of centralized conferencing or video call software concerned with privacy and open source values to head over to migrate to Saito Talk - it's only a few clicks away and partners can join via a one-click invitation link.
   
-To access Saito Talk, click on the hamburger menu on Red Square and find the *Saito Talk* button:
+Saito Talk can be accessed directly via the above link or through [Red Square](https://saito.io/redsquare/): click on the hamburger menu and find the *Saito Talk* button:
 <br>
 <div style="display: flex; justify-content: center;">
     <img src="/howtosaitocall.gif" width="400" alt="Use hamburger menu then Saito Call button to use the app">
