@@ -2,7 +2,7 @@
 title: Use Cases
 description: 
 published: true
-date: 2024-02-25T23:59:55.275Z
+date: 2024-02-26T01:37:17.570Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T01:04:19.828Z
@@ -113,7 +113,7 @@ Only when Alice and Bob both see that both of their messages were posted to the 
 
 ### <div id="3d">Web 3</div>
 
-Web 3 may be considered the internet free of trust assumptions of central parties. There are several considerations at play here which are very often taken for granted:
+Web 3 is well defined: a system of networking in which interested parties may safely connect directly to each other without any authoritative middlemen; without permission.  It may be considered the internet free of trust assumptions of central parties. When assessing the benefits of Web 3, there are several compromising aspects of Web 2 which are frequently taken for granted but highlight its inability to naively extend into Web 3:
 
 * The extent of the reliance on PKI networks for internet security
 * The extent to which registering with Web 2 PKIs is permissioned 
@@ -121,16 +121,21 @@ Web 3 may be considered the internet free of trust assumptions of central partie
 * How, in practice, corporations serve as implicit and less secure PKIs for users
 * The ability for blockchain to serve as PKI
 
-Web 3 is well defined: a system of networking in which interested parties may safely connect directly to each other without any authoritative middlemen; without permission. By now it should be obvious that since the advent of public key cryptography, systems of trusted authority have developed in order to solve the most basic problem of key exchange. Users of the internet rely on the security which trickles down to social media platforms and businesses from the authority to grant certificates held by Web 2 PKIs.
+By now it should be obvious that since the advent of public key cryptography, systems of trusted authority have developed in order to solve the most basic problem of key exchange. Users of the internet rely on the *trust* which trickles down from Web 2 PKIs and is then delegated to social media platforms and businesses in the form of user accounts.
 
 Web 3, using blockchain as PKI, solves the MITM attack and does not require any participant to request certification from an authority, nor does it require users to rely on any hierarchies of trust which place them at the bottom rung. All participants in Web 3 will have access to a universal broadcast network which grants measurable and objective economic security to perform key direct exchange permissionlessly.
 
+Not only do users enjoy the the raw security of the root-level PKI (the blockchain), a tool for which most have never had direct access too, but this most foundational layer as instantiated on Saito, free from majoritarian attacks, is an order of magnitude more secure than the largely-gated, private, Web 2 PKIs. As users finally gain access to the tool, it is simultaneously upgraded.
+
 The way in which this reshapes the internet and a user's relationship to internet services is absolutely fundamental. For starters, the services which connect people need not be bound by any corporate interests, as users no longer rely on the trickle-down-trust that corporations receive from Web 2 PKIs and sometimes pass faithfully down to users. Every individual instead has secure and direct access to one another via open source software.
 
-While users may still have their preference of software based on user experience and user interface, their secure use of Web 3 relies on that software being open source, auditable to the public (else it may as well be Web 2 software considering the trust assumptions users must make). Though many choices may exist, they can each interoperate via the Web 3 PKI and peer-to-peer connections. Those designing user-facing software are no longer burdened with being shepherds of *trust* - they instead allow user security to be handled by the most scalable and secure universal broadcast network: Saito blockchain.
+**Native interoperability** is a natural consequence of a more open internet. Though many choices may exist, they can each interoperate via the Web 3 PKI and peer-to-peer connections rather than the walled-gardens of private companies. Those designing user-facing software are no longer burdened with being shepherds of *trust* - they instead allow user security to be handled by the most scalable and secure universal broadcast network: Saito blockchain.
+
+## Conclusion
 
 When the internet is flipped on its head such that individuals are no longer dependent on the  authoritative and trusted coalitions of the internet today, Web 2 PKIs, there is no predicting from the ground floor all the developments which will generate. The Saito philosophy rests on one assumption: the internet is better when individuals have more freedom, sovereignty and power - and the only way to provide that through an universal broadcast network which is secure against majority power and will not economically collapse or exclude users at scale.
 
+<!--
 ## <div id="4">Permisionless Internet of Things</div>
 
 Internet of things refers to the market of smart devices which consumers and businesses own and control remotely.
@@ -148,3 +153,4 @@ This is convenient and practical for a single device, and can use an untrusted m
 ## Timestamping
 
 ## Money
+-->
