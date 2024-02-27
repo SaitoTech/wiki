@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-26T23:07:25.354Z
+date: 2024-02-27T05:52:52.810Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -32,6 +32,7 @@ Saito apps prove that premium and everyday applications can be stable and enjoya
   </ul>
   
   <br>
+  <li> <a style="text-decoration:none" href="#community"> Community Apps </a> </li>
   <li> <a style="text-decoration:none" href="#build"> Build Your Own </a> </li>
   
 </ul>
@@ -176,11 +177,48 @@ Users with the greatest need for security would be encouraged to delay sensitive
 <img src="/saito-chat-feb24.png" alt="Screenshot of Saito Chat window. Several chat previews are shown on the left, an active 'Saito Community Chat' is displayed in the middle, and online members of said chat are displayed on the right.">
 <br>
 
+## <div id="build"> Community Apps </div>
+
+Many of the beloved Saito apps like [Beleaguered Castle](/tech/applications/BeleagueredCastle) and even [Red Square](/tech/applications/RedSquare) were built or spurred to life by community members.
+
+The [community](https://wiki.saito.io/en/community/projects) page attempts to keep track of all Saito community efforts, including Saito Web 3 applications built by developers outside the Saito team. This section features a non-comphrensive list of noteworthy projects:
+
+### Graffiti
+
+[Graffiti](https://saito.io/graffiti/) is universal pixel canvas atop the Saito blockchain. Inspired by r/place, the application serves to test the social experiment in the context of Web 3.
+
+*CD* (@abbababaababb on Telegram) takes credit for the current implementation with help from team developer [Daniel Worlton](https://saito.io/redsquare/?user_id=bmwguu4n2ReYRjUsJoxrY1j1vECo7fpSfJn3qt2zQ1Su).
+
+![graffiti.png](/graffiti.png)
+
+### Saito Mania
+
+Saito Mania is a single player Saito-themed shoot em' up which can be accessed from the [Arcade](https://saito.io/arcade/). It features a fully-integrated leaderboard and sophisticated pacing despite its classic skeleton.
+
+The game is a labor of love from community member [SaitoWeb3](https://twitter.com/SaitoWeb3) - [22jWAzPBoAqn9hUsec9UydbXvaj862qB6q4mBpa9Bex4P](https://saito.io/redsquare/?user_id=22jWAzPBoAqn9hUsec9UydbXvaj862qB6q4mBpa9Bex4P)
+
+![saito-mania.jpg](/saito-mania.jpg)
+
+### Beleaguered Castle Solitare
+
+Beleaguered Castle Solitare is a puzzling variation on the classic. If grokking the Saito Whitepaper was easy for you, then you may be game for this challenging community created card conundrum. See how you stack up on the [Arcade](https://saito.io/arcade/).
+
+![blgcastle.png](/blgcastle.png)
+
+### Realms NFT Card Game
+
+Realms is a strategic fantasy card game in development for the Saito Arcade. The artwork for the cards is in production thanks to [Darkus](https://twitter.com/Darkus0?s=09). The current development on cards can be watched on [Github](https://github.com/SaitoTech/graphics/tree/main/realms/cards).
+
+Realms cards are distributed as NFTs and their launch marks the inaugural release of non-fungible tokens on the Saito network, with consensus development taking place alongside the artwork. Some highlights from the first batch of cards are shown below:
+
+![realms-showcase.jpg](/realms-showcase.jpg)
+
+
 ## <div id="build"> Build Your Own </div>
   
 Those interested in building on Saito should start [here](/tech/building_apps). The SDK used to make the all apps on this page is fully available for anyone to begin using. It has built-in functions to interact with the blockchain, perform basic cryptography, establish peer-to-peer connections, perform secure p2p dice rolls and shuffles, and more.
 
-Many of the beloved Saito apps like [Beleaguered Castle](/tech/applications/BeleagueredCastle) and even [Red Square](/tech/applications/RedSquare) were built or spurred to life by community members. Any developers seeking assistance or who want to offer feedback can reach the lead developers on [Red Square](https://saito.io/redsquare/), [Saito Community Chat](https://saito.io/chat/), [Saito Community Telegram](https://t.me/SaitoIO) or make an [issue](https://github.com/SaitoTech/saito-lite-rust/issues) on the Github. The team is thrilled to see what the community builds and values developer feedback.
+Any developers seeking assistance or who want to offer feedback can reach the lead developers on [Red Square](https://saito.io/redsquare/), [Saito Community Chat](https://saito.io/chat/), [Saito Community Telegram](https://t.me/SaitoIO) or make an [issue](https://github.com/SaitoTech/saito-lite-rust/issues) on the Github. The team is thrilled to see what the community builds and values developer feedback.
 
 <!--
 ![](/apps.png)
