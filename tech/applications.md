@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-27T06:01:38.219Z
+date: 2024-02-27T06:05:28.382Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -93,7 +93,7 @@ Indeed, the most direct use of the techniques which authors Rivest, Shamir and A
 
 Mental Poker exploits the commutative properties of public key encryption schemes to encrypt and shuffle a deck of cards using the keys of each player, and then progressively decrypt card when they must be revealed. A more complete explanation can be sought via [Wikipedia](https://en.wikipedia.org/wiki/Mental_poker).
 
-The Saito Arcade has taken the principles of Mental Poker and generalized and extended the technique to support several adversarial players and to encode and integrate arbitrary values which extend far past a simple game of Poker. Titles like Twilight Struggle and Settlers of Saitoa are two flagship examples.
+The Saito Arcade has taken the principles of Mental Poker and generalized and extended the technique to support several adversarial players and to encode and integrate arbitrary values which extend far past a simple game of Poker. Titles like *Twilight Struggle* and *Settlers of Saitoa* are two flagship examples.
   
 <br>
 <figure>
@@ -124,7 +124,7 @@ For this reason, Red Square achieves what other incumbents like Mastadon or Nost
     
 Like many Saito applications, Red Square uses a thoughtful mix of on and off chain protocols. Actions like publishing, liking, reposting and following are carried through public transactions while the re-propagation of that information is shared more discreetly between peers.
     
-The usual features take on new meaning in Web 3: *Retweeting* actively rebroadcasts the post to other peers, *Following* subsribes to the data-stream of that user, and in an ecosystem with built-in DoS protections, a user's *Likes* are unlimited.
+The usual features take on new meaning in Web 3: *Retweeting* actively rebroadcasts the post to other peers, *Following* subscribes to the data-stream of that user, and in an ecosystem with built-in DoS protections, a user's *Likes* are unlimited.
   
 **Moderation in Web 3**
   
@@ -180,7 +180,7 @@ Users with the greatest need for security would be encouraged to delay sensitive
 
 Many of the beloved Saito apps like [Beleaguered Castle](/tech/applications/BeleagueredCastle) and even [Red Square](/tech/applications/RedSquare) were built or spurred to life by community members.
 
-The [community](https://wiki.saito.io/en/community/projects) page attempts to keep track of all Saito community efforts, including Saito Web 3 applications built by developers outside the Saito team. This section features a non-comphrensive list of noteworthy projects:
+The [community](https://wiki.saito.io/en/community/projects) page attempts to keep track of all Saito community efforts, including Saito Web 3 applications built by developers outside the Saito team. This section features a non-comprehensive list of noteworthy projects:
 
 ### Graffiti
 
@@ -198,9 +198,9 @@ The game is a labor of love from community member [SaitoWeb3](https://twitter.co
 
 ![saito-mania.jpg](/saito-mania.jpg)
 
-### Beleaguered Castle Solitare
+### Beleaguered Castle Solitaire
 
-Beleaguered Castle Solitare is a puzzling variation on the classic. If grokking the Saito Whitepaper was easy for you, then you may be game for this challenging community created card conundrum. See how you stack up on the [Arcade](https://saito.io/arcade/).
+Beleaguered Castle Solitaire is a puzzling variation on the classic. If grokking the Saito Whitepaper was easy for you, then you may be game for this challenging community created card conundrum. See how you stack up on the [Arcade](https://saito.io/arcade/).
 
 ![blgcastle.png](/blgcastle.png)
 
