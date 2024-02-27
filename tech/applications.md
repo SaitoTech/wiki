@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-27T05:52:52.810Z
+date: 2024-02-27T06:01:38.219Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -143,8 +143,7 @@ Spam and fraud prevention, curation and moderation tools are all ameneties users
 * Visit [Red Square](https://saito.io/redsquare/)
   
 The team is always open to [feedback](https://wiki.saito.io/en/community) and ideas.
- 
-<br>  
+  
     
 ### <div id="saitoTalk"> Saito Talk </div>
   
@@ -212,6 +211,16 @@ Realms is a strategic fantasy card game in development for the Saito Arcade. The
 Realms cards are distributed as NFTs and their launch marks the inaugural release of non-fungible tokens on the Saito network, with consensus development taking place alongside the artwork. Some highlights from the first batch of cards are shown below:
 
 ![realms-showcase.jpg](/realms-showcase.jpg)
+
+### Livedocs
+
+[Livedocs](https://github.com/mat888/saito-livedocs) is an interactive documentation application available for developers to install and tweak on their machines. The user interface shows some of the most important functions developers need to make dApps on Saito and allows the user to experiment with them in real time.
+
+It also serves as a useful skeleton to quickly get started applying Saito's most powerful features. Feedback for Livedocs can be directed towards [Muk](https://saito.io/redsquare/?user_id=21Usr3tkmytn26ndmcGBHs8tKAKxLJ4RfKiL2SgZhSZy2).
+<br>
+<div style="display: flex; justify-content: center;">
+  <img src="/livedocs.jpg">
+  </div>
 
 
 ## <div id="build"> Build Your Own </div>
