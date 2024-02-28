@@ -2,13 +2,15 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-02-27T02:31:48.642Z
+date: 2024-02-28T11:18:41.811Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
 ---
 
 # Saito Economics
+
+**under construction**
 
 <!--
 Saito consensus primarily addresses two well studied market failures: situations in which the rational incentives of all participants individually lead to less prosperous outcomes for the collective. These suboptimal outcomes are pervasive due to the extreme sensitivity of systems to 'defection;' few dishonest players can exploit the honesty of the group and turn the 'honest' strategy into a losing one.
@@ -26,7 +28,9 @@ Saito is the
 
 The Free Rider Problem in Proof of Work, Proof of Stake, and their cousins manifests itself between the mismatch in the ability to earn fees by mining or holding stake, and the ability to *collect and include* fees by running full nodes. Clearly it is not an increase in mining or staking which scales the blockchain's throughput, but an increase in the collective bandwidth of network full nodes.
 
-Saito takes principled issue with an all too common, naive libretarian response to this mismatch: "Miners or Stakers who increase their transaction bandwidth will increase their rewards." 
+Saito takes principled issue with an all too common, naive libretarian response to this mismatch: "Miners or Stakers who increase their transaction bandwidth will increase their rewards." The reason is simple: holding a high volume of transaction fees does not grant the ability for such a node to earn those fees, because it does not grant them the ability to produce blocks.
+
+Nodes which already produce a certain proportion of blocks cannot use an increase in fee volume to actually include those transactions and earn those fees, so these nodes have poor incentives to increase their bandwidth. The only way to increase fee rewards as a miner or staker is
 
 <!-- 
 The [Saito Whitepaper](https://saito.io/saito-whitepaper.pdf) discusses the two incentive problems that prevent POW and POS blockchains from achieving the scale necessary to support web3 applications: a tragedy-of-the-commons problem that leads to blockchain bloat; and a free-rider problem that encourages participants to do paid-work like mining and staking at the expense of the unpaid work that ultimately pays for mining and staking.
