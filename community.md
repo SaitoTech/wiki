@@ -2,7 +2,7 @@
 title: Community Chat Groups and Resources
 description: Community Chat Groups and Resources
 published: true
-date: 2023-12-06T14:15:04.053Z
+date: 2024-02-29T00:24:39.625Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-23T08:16:57.540Z
@@ -23,7 +23,7 @@ Come interact with the community and the Saito blockchain at the same time, with
 
 - [Saito Telegram Group](https://t.me/SaitoIO) (official)
 - [Saito Discord](https://discord.gg/HjTFh9Tfec) (official)
-- [Saito Traders Group](https://t.me/SaitoIO) (*unofficial*)
+- [Saito Traders Group](https://t.me/saitotraders) (*unofficial*)
 - [Spanish – Saito Telegram Group](https://t.me/saito_esp) (*unofficial*)
 - [French – Saito Telegram Group](https://t.me/Saito_France) (*unofficial*)
 - [Philippines – Saito Telegram Group](https://t.me/SaitoPH) (*unofficial*)
