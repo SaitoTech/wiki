@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-29T07:22:41.732Z
+date: 2024-02-29T07:23:14.205Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -23,7 +23,7 @@ Saito apps prove that premium and everyday applications can be stable and enjoya
   </ul>
   
   <br>
-  <li>  <a style="text-decoration:none" href="#2"> P2P Social Media </a> </li>
+  <li>  <a style="text-decoration:none" href="social"> P2P Social Media </a> </li>
   
   <ul>
   	<li>  <a style="text-decoration:none" href="#redSquare"> Red Square </a> </li>
@@ -111,7 +111,7 @@ For a more technical dive into how the current suite of games on Saito Arcade wo
 * Visit the [Saito Arcade](https://saito.io/arcade/).
 
 
-## <div id="socialMedia"> Social Media </div>
+## <div id="social"> Social Media </div>
   
 ### <div id="redSquare"> Red Square </div>
   
