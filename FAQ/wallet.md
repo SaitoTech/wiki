@@ -2,7 +2,7 @@
 title: Saito Wallet
 description: Information about holding native Saito
 published: true
-date: 2024-02-29T00:50:25.280Z
+date: 2024-02-29T06:09:24.529Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-29T00:06:48.906Z
@@ -38,7 +38,7 @@ One of the first differences users notice when using Saito for the first time is
 
 > *I seem to automatically enter my Saito Wallet by clicking on https://saito.io/redsquare.  Is that correct?  Because I don't have to enter any password to access my wallet, it seems very insecure.  Any thoughts about this?*
 
-In the context of Saito's non-financial applications, these are intentional design decisions. Web 3 means users are digitally signing messages and transactions frequently - if users were required to input extra credentials for every digital signature than many apps would become unusable.
+In the context of Saito's non-financial applications, these are intentional design decisions. Web 3 means users are digitally signing messages and transactions frequently - if users were required to input extra credentials for every digital signature, the user experience of many apps would degrade significantly.
 
 The wallet used for day-to-day activities like [video calls](https://saito.io/videocall/) or [chat](https://saito.io/chat/) should not require significant amounts of Saito token to operate normally, and in fact, for the majority of the persistence curve timeline, most applications will remain free to use, requiring zero Saito tokens in a hot wallet.
 
