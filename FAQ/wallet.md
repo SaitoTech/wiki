@@ -2,7 +2,7 @@
 title: Saito Wallet
 description: Information about holding native Saito
 published: true
-date: 2024-02-29T06:11:16.645Z
+date: 2024-02-29T06:11:30.344Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-29T00:06:48.906Z
@@ -58,7 +58,7 @@ Using a browser (easiest):
 <ol>
   <li>Create a Saito Wallet and backup its private and public key.</li>
   <li>Save the key somewhere safe.</li>
-  <li>Clear the browser cache and use a seperate, newly generated key for everyday use.</li>
+  <li>Clear the browser cache and use a separate, newly generated key for everyday use.</li>
 </ol>
 
 Using a one-time browser:
