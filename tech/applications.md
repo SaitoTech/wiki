@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-02-29T07:23:14.205Z
+date: 2024-02-29T07:24:34.135Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -23,7 +23,7 @@ Saito apps prove that premium and everyday applications can be stable and enjoya
   </ul>
   
   <br>
-  <li>  <a style="text-decoration:none" href="social"> P2P Social Media </a> </li>
+  <li>  <a style="text-decoration:none" href="#socialMedia"> P2P Social Media </a> </li>
   
   <ul>
   	<li>  <a style="text-decoration:none" href="#redSquare"> Red Square </a> </li>
@@ -32,7 +32,7 @@ Saito apps prove that premium and everyday applications can be stable and enjoya
   </ul>
   
   <br>
-  <li> <a style="text-decoration:none" href="#community"> Community Apps </a> </li>
+  <li> <a style="text-decoration:none" href="#comm"> Community Apps </a> </li>
   <li> <a style="text-decoration:none" href="#build"> Build Your Own </a> </li>
   
 </ul>
@@ -111,7 +111,7 @@ For a more technical dive into how the current suite of games on Saito Arcade wo
 * Visit the [Saito Arcade](https://saito.io/arcade/).
 
 
-## <div id="social"> Social Media </div>
+## <div id="socialMedia"> Social Media </div>
   
 ### <div id="redSquare"> Red Square </div>
   
@@ -176,7 +176,7 @@ Users with the greatest need for security would be encouraged to delay sensitive
 <img src="/saito-chat-feb24.png" alt="Screenshot of Saito Chat window. Several chat previews are shown on the left, an active 'Saito Community Chat' is displayed in the middle, and online members of said chat are displayed on the right.">
 <br>
 
-## <div id="community"> Community Apps </div>
+## <div id="comm"> Community Apps </div>
 
 Many of the beloved Saito apps like [Beleaguered Castle](/tech/applications/BeleagueredCastle) and even [Red Square](/tech/applications/RedSquare) were built or spurred to life by community members.
 
