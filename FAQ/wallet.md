@@ -2,7 +2,7 @@
 title: Saito Wallet
 description: Information about holding native Saito
 published: true
-date: 2024-02-29T06:09:24.529Z
+date: 2024-02-29T06:10:03.591Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-29T00:06:48.906Z
@@ -51,7 +51,6 @@ Hot wallets are inherently easier to use but less secure. Responsible Saito user
 **Note:** Users creating and storing wallets are responsible for their own keys. The Saito team nor the author of these instructions can take any responsibility for loss or theft of wallet credentials or funds.
 
 Those who are insistent on the utmost security should keep their wrapped Saito on a hardware wallet until hardware wallet support arrives for native Saito.
-<hr>
 
 For users who want more security for their native Saito Wallet, they are encouraged to generate a Saito Wallet which is to some degree isolated from frequent use and insecure computing. Starting with the easiest, ending with the most secure; some options for generating wallets with extra security:
 
