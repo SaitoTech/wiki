@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-01T06:54:07.791Z
+date: 2024-03-01T06:56:09.056Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -27,8 +27,8 @@ Saito consensus primarily addresses two well studied market failures: situations
 <br>
 <div style="display: flex; justify-content: center;">
 <figure>
-  <img style="width:80%; margin:auto;"src="/prisoners_dilemma.svg.png" alt="A chart showing the prisoner's dilemma dynamic where defection is suboptimal globally, but individually preferred.">
-  <figcaption style="opacity: 80%; text-align: center;"> Staying silent results in less jailtime globally, but each individual has the incentive to testify anyways. <a href="#prisoner">Attribution</a></figcaption>
+  <img style="width:75%;"src="/prisoners_dilemma.svg.png" alt="A chart showing the prisoner's dilemma dynamic where defection is suboptimal globally, but individually preferred.">
+  <figcaption style="opacity: 80%; text-align: center;"> Staying silent results in less collective jailtime, but each individual has the incentive to testify anyways, resulting in the <i>worst</i> collective outcome. <a href="#prisoner">Attribution</a></figcaption>
 </figure>
 </div>
 
