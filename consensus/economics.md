@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-01T03:10:51.306Z
+date: 2024-03-01T03:36:08.767Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -64,12 +64,21 @@ In order for transaction collection to happen at scale on a PoW or PoS blockchai
 
 Different blockchains cope with the Free Rider Problem in different ways. Bitcoin very famously chooses to forgoe scaling so as to risk no compromises in the ability of interested volunteers to run nodes which verify the chain and route transactions to miners. Because the miners are expected to free-ride off of these nodes for the network to function, the chain has chosen to remain small in order to keep allowing low powered computers fulfill this task without compensation.
 
+<br>
+<div style="display: flex; justify-content: center;">
 <figure>
   <img src="/cons-node-service.png" alt="Alt: What are the cons of using a Node Service? By using a node service you are centralizing the infrastructure aspect of your product. For this reason, projects that hold decentralization to the upmost importance might prefer self-hosting nodes rather than outsourcing to a 3rd party. Read more about the benefits of running your own node. -- from ethereum.org">
-  <figcaption style="opacity: 80%; text-align: center;"> Ethereum recognizes the danger of node infrastructure privatization - from <a href="https://ethereum.org/developers/docs/nodes-and-clients/nodes-as-a-service#cons-of-using-a-node-service">ethereum.org</a> </figcaption>
+  <figcaption style="opacity: 80%; text-align: center;"> Ethereum recognizes danger in node infrastructure privatization - from <a href="https://ethereum.org/developers/docs/nodes-and-clients/nodes-as-a-service#cons-of-using-a-node-service">ethereum.org</a> </figcaption>
 </figure>
+</div>
 
-Ethereum is a great example of the opposite approach. In pushing the Free-Rider Problem towards its natural conclusion, crucial network infrastructure tends towards private control and centralization. The flagship example is the API node service [Infura](https://youtu.be/fJGuxcEvats) which
+Ethereum is a great example of the opposite approach. In pushing the Free-Rider Problem towards its natural conclusion, crucial network infrastructure tends towards private control and centralization. The flagship example is the API node service [Infura](https://youtu.be/fJGuxcEvats) which is majorly responsible for serving applications both in service of developers and users. The massive userbase which the wallet Metamask serves primarily [routes through](https://support.metamask.io/hc/en-us/articles/4417315392795-What-is-Infura-and-why-does-MetaMask-use-it) Infura.
+
+Infura and similar node providers serve more than just Ethereum. Dozens of chains with the ambition to scale their blockchain like or past Ethereum quickly outpace what independent full nodes are able to provide and fall-back to private solutions like Infura. This dynamic concentrates power and profit to private companies which will [censor](https://cryptoslate.com/metamask-blocks-ethereum-transactions-in-several-jurisdictions-citing-compliance-issues/), and [monitor](https://cointelegraph.com/news/metamask-will-start-collecting-user-ip-addresses) users.
+
+So despite the fact that block producers in PoW and PoS are fairly compensated by following consensus rules, the free-riding dynamic involved in running the infrastructure which serves users and provides those fees to block producers is neglected under consensus. It is not possible for nodes who route transactions into the network to secure any rewards from those transactions, thus it is necessary for traditional blockchains to accept restriction of network access in exchange for increased bandwidth.
+
+### Saito Fixes The Free Rider Problem
 
 <!--
 The Free Rider Problem in Proof of Work, Proof of Stake, and their cousins manifests itself between the mismatch in the ability to earn fees by mining or holding stake, and the ability to *collect and include* fees by running full nodes. Clearly it is not an increase in mining or staking which scales the blockchain's throughput, but an increase in the collective bandwidth of network full nodes.
