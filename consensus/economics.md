@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-02-28T11:18:41.811Z
+date: 2024-03-01T01:00:46.101Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -26,9 +26,23 @@ Saito is the
 
 ## <div id="fr"> Free Rider Problem </div>
 
+A [video](https://youtu.be/XJiE8TrwW2A) about the Free Rider Problem and its relationship to blockchain is also available.
+
+Free Rider Problems occur between the funding of a non-excludable good (one that everyone can enjoy) and the benefit of that good. Consider a group dedicated to removing litter at a free nature-park: all park-goers enjoy the benefit of a cleaner park, but only those donating time or money to the group have to pay for it. Everyone else is allowed to 'free-ride' off the expense of the maintainers.
+
+> *Markets need to control the distribution of benefits to induce people to pay for them. If you're producing something that everyone can enjoy, you'll have difficulty convincing someone to pay you to cover the cost.*
+> [Saito FAQs](https://saitofaqs.com/faq/how-does-saito-solve-the-free-rider-problem)
+
+The classic solution to this problem is to *privatize* the once public good - to exclude access to its benefits in order to force payment from those seeking access to the good.
+
+> *The traditional solution is to privatize things, incentivizing someone to manage it. But the public network in any blockchain is a public good.*
+> [Saito FAQs](https://saitofaqs.com/faq/how-does-saito-solve-the-free-rider-problem)
+
+### In Blockchain
+
 The Free Rider Problem in Proof of Work, Proof of Stake, and their cousins manifests itself between the mismatch in the ability to earn fees by mining or holding stake, and the ability to *collect and include* fees by running full nodes. Clearly it is not an increase in mining or staking which scales the blockchain's throughput, but an increase in the collective bandwidth of network full nodes.
 
-Saito takes principled issue with an all too common, naive libretarian response to this mismatch: "Miners or Stakers who increase their transaction bandwidth will increase their rewards." The reason is simple: holding a high volume of transaction fees does not grant the ability for such a node to earn those fees, because it does not grant them the ability to produce blocks.
+Saito takes principled issue with an all too common, naive libertarian response to this mismatch: "Miners or Stakers who increase their transaction bandwidth will increase their rewards." The reason is simple: holding a high volume of transaction fees does not grant the ability for such a node to earn those fees, because it does not grant them the ability to produce blocks.
 
 Nodes which already produce a certain proportion of blocks cannot use an increase in fee volume to actually include those transactions and earn those fees, so these nodes have poor incentives to increase their bandwidth. The only way to increase fee rewards as a miner or staker is
 
