@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-01T06:28:50.849Z
+date: 2024-03-01T06:34:24.523Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -10,17 +10,9 @@ dateCreated: 2022-03-25T07:08:04.493Z
 
 # Saito Economics
 
-**under construction**
+Those familiar with market failures and blockchain may find the [Saito Whitepaper](https://saito.io/saito-whitepaper.pdf) a quicker explanation.
 
-Those familiar with market failures and blockchain should skip ahead to the [Saito Whitepaper](https://saito.io/saito-whitepaper.pdf).
 
-The cryptographic schemes in Saito which are repsonsible for addressing the market failures in Proof of Work and Proof of Stake are relatively simple, certainly less complicated than many modern Proof of Stake consensus protocols; so it is natural to ask: why is Saito the first and only blockchain to address these market failures?
-
-The answer is that merely recognizing the true nature of the problem is difficult. Seeing that issues around scaling, openness, and security can be distilled down a few fundamental problems and understanding how exactly cryptography and incentives can be employed to address those problems is where the nuance lies. But once the problems are clearly identified, the mechanisms required to address them are elegant.
-
-Thus in attempting to understand Saito, many study the crypographic schemes and understand them on a technical level, but still cannot truly explain what motivates the incentives therein. Most blockchain issues are framed as technical problems, but are in fact incentive-level, game-theoretic, economic problems - therefore most people approach Saito with the wrong frame-of-mind.
-
-This page hopes to explain the incentive-level issues which lead to market failures in Proof of Work, Proof of Stake and other non-Saito blockchains. The technical solutions may be easy to understand, but the economic motivations informing those solutions are key to a holistic understanding of Saito and blockchain generally.
 
 <!--
 Saito consensus primarily addresses two well studied market failures: situations in which the rational incentives of all participants individually lead to less prosperous outcomes for the collective. These suboptimal outcomes are pervasive due to the extreme sensitivity of systems to 'defection;' few dishonest players can exploit the honesty of the group and turn the 'honest' strategy into a losing one.
@@ -30,9 +22,20 @@ This dynamic is commonly referred to as a [Prisoner's Dilemma](https://en.wikipe
 Saito is the
 -->
 <ul>
+  <li>  <a style="text-decoration:none" href="#mf"> Market Failures </a> </li>
   <li>  <a style="text-decoration:none" href="#fr"> Free Rider Problem </a> </li>
   <li> <a style="text-decoration:none" href="#totc"> Tragedy of The Commons </a> </li>
 </ul>
+
+## <div id="mf"> Market Failures </div>
+
+The cryptographic schemes in Saito which are repsonsible for addressing the market failures in Proof of Work and Proof of Stake are relatively simple, certainly less complicated than many modern Proof of Stake consensus protocols; so it is natural to ask: why is Saito the first and only blockchain to address these market failures?
+
+The answer is that merely recognizing the true nature of the problem is difficult. Seeing that issues around scaling, openness, and security can be distilled down a few fundamental problems and understanding how exactly cryptography and incentives can be employed to address those problems is where the nuance lies. But once the problems are clearly identified, the mechanisms required to address them are elegant.
+
+Thus in attempting to understand Saito, many study the crypographic schemes and understand them on a technical level, but still cannot truly explain what motivates the incentives therein. Most blockchain issues are framed as technical problems, but are in fact incentive-level, game-theoretic, economic problems - therefore most people approach Saito with the wrong frame-of-mind.
+
+This page hopes to explain the incentive-level issues which lead to market failures in Proof of Work, Proof of Stake and other non-Saito blockchains. The technical solutions may be easy to understand, but the economic motivations informing those solutions are key to a holistic understanding of Saito and blockchain generally.
 
 ## <div id="fr"> Free Rider Problem </div>
 
