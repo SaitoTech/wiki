@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-01T06:53:16.673Z
+date: 2024-03-01T06:54:07.791Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -24,10 +24,10 @@ Those familiar with market failures and blockchain may find the [Saito Whitepape
 
 Saito consensus primarily addresses two well studied market failures: situations in which the rational incentives of all participants individually lead to less prosperous outcomes for the collective. These suboptimal outcomes are pervasive due to the extreme sensitivity of systems to 'defection;' few dishonest players can exploit the honesty of the group and turn the 'honest' or 'nice' strategy into a losing one.
 
-<div style="display: flex; justify-content: center;">
 <br>
+<div style="display: flex; justify-content: center;">
 <figure>
-  <img style="width:80%"src="/prisoners_dilemma.svg.png" alt="A chart showing the prisoner's dilemma dynamic where defection is suboptimal globally, but individually preferred.">
+  <img style="width:80%; margin:auto;"src="/prisoners_dilemma.svg.png" alt="A chart showing the prisoner's dilemma dynamic where defection is suboptimal globally, but individually preferred.">
   <figcaption style="opacity: 80%; text-align: center;"> Staying silent results in less jailtime globally, but each individual has the incentive to testify anyways. <a href="#prisoner">Attribution</a></figcaption>
 </figure>
 </div>
