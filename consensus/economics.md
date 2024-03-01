@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-01T06:45:00.881Z
+date: 2024-03-01T06:53:16.673Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -23,6 +23,14 @@ Those familiar with market failures and blockchain may find the [Saito Whitepape
 ## <div id="mf"> Market Failures </div>
 
 Saito consensus primarily addresses two well studied market failures: situations in which the rational incentives of all participants individually lead to less prosperous outcomes for the collective. These suboptimal outcomes are pervasive due to the extreme sensitivity of systems to 'defection;' few dishonest players can exploit the honesty of the group and turn the 'honest' or 'nice' strategy into a losing one.
+
+<div style="display: flex; justify-content: center;">
+<br>
+<figure>
+  <img style="width:80%"src="/prisoners_dilemma.svg.png" alt="A chart showing the prisoner's dilemma dynamic where defection is suboptimal globally, but individually preferred.">
+  <figcaption style="opacity: 80%; text-align: center;"> Staying silent results in less jailtime globally, but each individual has the incentive to testify anyways. <a href="#prisoner">Attribution</a></figcaption>
+</figure>
+</div>
 
 This dynamic is commonly referred to as a [Prisoner's Dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma); the Wikipedia link lists some notable real-life examples. The standard solution to these market failures is to privatize access to the good in order to protect against exploitation. Since privatization of the blockchain is not an acceptable solution, adressing these market failures is crucial for scalable, secure and sustainable blockchain.
 
@@ -93,7 +101,11 @@ So despite the fact that block producers in PoW and PoS are fairly compensated b
 
 Recall the dilemma transaction-serving nodes face: in order to serve their users well (get transactions included in next block) they must distribute transactions to as many potential block producers as possible, but in order to profit from those fees, they must restrict access to that transaction data; they must privatize. Since block producers are necessary to fulfill the service, most node providers choose to privatize access to user-facing service instead.
 
-In Saito there is no such dilemma. Nodes which share transactions do not risk the block producer who picks them up 'stealing' it from them - instead, the nodes with earlier access to the transactions become *entitled* to larger shares of the fee and compete with other early nodes to route the version of the transaction with their claim on it first. The incentives become aligned: nodes are both rewarded for collecting **and** sharing transactions. 
+In Saito there is no such dilemma. Nodes which share transactions do not risk the block producer who picks them up 'stealing' it from them - instead, the nodes with earlier access to the transactions become *entitled* to larger shares of the fee and compete with other early nodes to route the version of the transaction with their claim on it first. The incentives become aligned: nodes are both rewarded for collecting **and** sharing transactions.
+
+### Attributions:
+
+<p id="prisoner"> By cmglee, http://github.com/emojione/emojione/graphs/contributors, http://github.com/twitter/twemoji#committers-and-contributors - This vector image includes elements from this file:, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=140014761 </p>
 
 <!--
 The Free Rider Problem in Proof of Work, Proof of Stake, and their cousins manifests itself between the mismatch in the ability to earn fees by mining or holding stake, and the ability to *collect and include* fees by running full nodes. Clearly it is not an increase in mining or staking which scales the blockchain's throughput, but an increase in the collective bandwidth of network full nodes.
