@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-01T03:36:08.767Z
+date: 2024-03-01T04:20:52.413Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -76,9 +76,13 @@ Ethereum is a great example of the opposite approach. In pushing the Free-Rider 
 
 Infura and similar node providers serve more than just Ethereum. Dozens of chains with the ambition to scale their blockchain like or past Ethereum quickly outpace what independent full nodes are able to provide and fall-back to private solutions like Infura. This dynamic concentrates power and profit to private companies which will [censor](https://cryptoslate.com/metamask-blocks-ethereum-transactions-in-several-jurisdictions-citing-compliance-issues/), and [monitor](https://cointelegraph.com/news/metamask-will-start-collecting-user-ip-addresses) users.
 
-So despite the fact that block producers in PoW and PoS are fairly compensated by following consensus rules, the free-riding dynamic involved in running the infrastructure which serves users and provides those fees to block producers is neglected under consensus. It is not possible for nodes who route transactions into the network to secure any rewards from those transactions, thus it is necessary for traditional blockchains to accept restriction of network access in exchange for increased bandwidth.
+So despite the fact that block producers in PoW and PoS are fairly compensated by following consensus rules, the free-riding dynamic involved in running the infrastructure is left neglected by consensus. It is not possible for nodes who route transactions into the network to secure any rewards from those transactions, thus it is necessary for traditional blockchains to accept restriction of network access in exchange for increased bandwidth.
 
 ### Saito Fixes The Free Rider Problem
+
+Recall the dilemma transaction-serving nodes face: in order to serve their users well (get transactions included in next block) they must distribute transactions to as many potential block producers as possible, but in order to profit from those fees, they must restrict access to that transaction data; they must privatize. Since block producers are necessary to fulfill the service, most node providers choose to privatize access to user-facing service instead.
+
+In Saito there is no such dilemma. 
 
 <!--
 The Free Rider Problem in Proof of Work, Proof of Stake, and their cousins manifests itself between the mismatch in the ability to earn fees by mining or holding stake, and the ability to *collect and include* fees by running full nodes. Clearly it is not an increase in mining or staking which scales the blockchain's throughput, but an increase in the collective bandwidth of network full nodes.
