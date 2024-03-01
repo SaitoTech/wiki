@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-01T06:34:24.523Z
+date: 2024-03-01T06:35:36.683Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -10,7 +10,7 @@ dateCreated: 2022-03-25T07:08:04.493Z
 
 # Saito Economics
 
-Those familiar with market failures and blockchain may find the [Saito Whitepaper](https://saito.io/saito-whitepaper.pdf) a quicker explanation.
+Those familiar with market failures and blockchain may find the [Saito Whitepaper](https://saito.io/saito-whitepaper.pdf) a more succinct guide.
 
 
 
