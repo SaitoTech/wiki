@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-02T02:10:21.720Z
+date: 2024-03-02T02:11:54.181Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -109,7 +109,7 @@ In Saito there is no such dilemma. Nodes which share transactions do not risk th
 
 The mechanism which solves the Free Rider Problem is **Routing Work**. A transaction carries a chain of digital signatures demarking how much fee each relay is due and how quickly each relay can produce the next block.
 
-![routing-work.png](/routing-work.png)
+![routing-work-v3.png](/routing-work-v3.png)
 
 Because public-facing relay nodes are no longer doing free work for block producers, the infrastructure of the network which connects users to the blockchain is not required to restrict access in order to profit. The fees in the transaction pay their way into blocks through every hop, thanks to cryptography and consensus.
 
