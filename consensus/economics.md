@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-02T01:38:27.888Z
+date: 2024-03-02T02:10:21.720Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -107,7 +107,21 @@ Recall the dilemma transaction-serving nodes face: in order to serve their users
 
 In Saito there is no such dilemma. Nodes which share transactions do not risk the block producer who picks them up 'stealing' it from them - instead, the nodes with earlier access to the transactions become *entitled* to larger shares of the fee and compete with other early nodes to route the version of the transaction with their claim on it first. The incentives become aligned: nodes are both rewarded for collecting **and** sharing transactions.
 
-Users and relay nodes 
+The mechanism which solves the Free Rider Problem is **Routing Work**. A transaction carries a chain of digital signatures demarking how much fee each relay is due and how quickly each relay can produce the next block.
+
+![routing-work.png](/routing-work.png)
+
+Because public-facing relay nodes are no longer doing free work for block producers, the infrastructure of the network which connects users to the blockchain is not required to restrict access in order to profit. The fees in the transaction pay their way into blocks through every hop, thanks to cryptography and consensus.
+
+What users value and what nodes value in Saito is the same. Users want fast transaction confirmation (and security), and relay nodes secure the network and earn fees by getting their version of a transaction into a block before a competing routing node does. Because consensus nodes and users have the same incentive, **fees pay for what users actually value and optimizing rewards means optimizing user experience**.
+
+The **practical benefits** which stem from this fundamental shift in incentives are profound:
+
+* Security and scale are paid for from a single fee.
+* Fee/byte is optimized in favor of cheaper service.
+* Money spent on the network directly benefits users, rather than just serving to enrich large holders (stakers) or number crunchers (miners).
+
+
 
 ### Attributions:
 
