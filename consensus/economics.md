@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-02T23:40:47.506Z
+date: 2024-03-02T23:41:59.900Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -26,12 +26,11 @@ Saito consensus primarily addresses two well studied market failures: situations
 
 <br>
 <div style="display: flex; justify-content: center; width: 100%;">
-<figure>
-  <img style="width:70%; margin:auto;"src="/prisoners_dilemma.svg.png" alt="A chart showing the prisoner's dilemma dynamic where defection is suboptimal globally, but individually preferred.">
-  <figcaption style="opacity: 80%; text-align: center;"> Staying silent results in less collective jailtime, but each individual has the incentive to testify anyways. <a href="#prisoner">Attribution</a></figcaption>
-</figure>
+ <figure style="width: 70%; margin: auto;">
+    <img style="width: 100%;" src="/prisoners_dilemma.svg.png" alt="A chart showing the prisoner's dilemma dynamic where defection is suboptimal globally, but individually preferred.">
+    <figcaption style="opacity: 80%; text-align: center;">Staying silent results in less collective jailtime, but each individual has the incentive to testify anyways. <a href="#prisoner">Attribution</a></figcaption>
+ </figure>
 </div>
-
 This dynamic is commonly referred to as a [Prisoner's Dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma); the Wikipedia link lists some notable real-life examples. The standard solution to these market failures is to privatize access to the good in order to protect against exploitation. Since privatization of the blockchain is not an acceptable solution, adressing these market failures is crucial for scalable, secure and sustainable blockchain.
 
 Saito is the first and only layer-1 blockchain to address these market failures on the consensus level, thereby avoiding the tough decision between remaining open or scaling network bandwidth. Saito consensus aligns the incentives for scale and openness as a single fee-sharing mechanism, and avoids collapse via bloat through a market-based rent system.
