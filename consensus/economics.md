@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-01T06:56:09.056Z
+date: 2024-03-02T01:38:27.888Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -27,8 +27,8 @@ Saito consensus primarily addresses two well studied market failures: situations
 <br>
 <div style="display: flex; justify-content: center;">
 <figure>
-  <img style="width:75%;"src="/prisoners_dilemma.svg.png" alt="A chart showing the prisoner's dilemma dynamic where defection is suboptimal globally, but individually preferred.">
-  <figcaption style="opacity: 80%; text-align: center;"> Staying silent results in less collective jailtime, but each individual has the incentive to testify anyways, resulting in the <i>worst</i> collective outcome. <a href="#prisoner">Attribution</a></figcaption>
+  <img style="width:80%; margin:auto;"src="/prisoners_dilemma.svg.png" alt="A chart showing the prisoner's dilemma dynamic where defection is suboptimal globally, but individually preferred.">
+  <figcaption style="opacity: 80%; text-align: center;"> Staying silent results in less collective jailtime, but each individual has the incentive to testify anyways. <a href="#prisoner">Attribution</a></figcaption>
 </figure>
 </div>
 
@@ -41,15 +41,15 @@ Saito is the first and only layer-1 blockchain to address these market failures 
 
 The cryptographic schemes in Saito which are repsonsible for addressing the market failures in Proof of Work and Proof of Stake are relatively simple, certainly less complicated than many modern Proof of Stake consensus protocols; so it is natural to ask: why is Saito the first and only blockchain to address these market failures?
 
-The answer is that merely recognizing the true nature of the problem is difficult. Seeing that issues around scaling, openness, and security can be distilled down a few fundamental problems and understanding how exactly cryptography and incentives can be employed to address those problems is where the nuance lies. But once the problems are clearly identified, the mechanisms required to address them are elegant.
+The answer is that merely recognizing the true nature of the problem is difficult. Seeing that issues around scaling, openness, and security can be distilled down to a more fundamental problems and understanding how exactly cryptography and incentives can be employed to address those problems is where the sophistication lies. Once the problems are clearly identified, the mechanisms required to address them are elegant.
 
-Thus in attempting to understand Saito, many study the crypographic schemes and understand them on a technical level, but still cannot truly explain what motivates the incentives therein. Most blockchain issues are framed as technical problems, but are in fact incentive-level, game-theoretic, economic problems - therefore most people approach Saito with the wrong frame-of-mind.
+Thus in attempting to understand Saito, many study the crypographic schemes and understand them on a technical level, but still cannot truly explain what motivates the incentives therein. Most blockchain issues are framed as technical problems, but are in fact incentive-level, game-theoretic, economic problems - therefore many people study Saito with the wrong frame-of-mind.
 
 This page hopes to explain the incentive-level issues which lead to market failures in Proof of Work, Proof of Stake and other non-Saito blockchains. The technical solutions may be easy to understand, but the economic motivations informing those solutions are key to a holistic understanding of Saito and blockchain generally.
 
 ## <div id="fr"> Free Rider Problem </div>
 
-* A [video](https://youtu.be/XJiE8TrwW2A) on the Free Rider Problem and its relationship to blockchain is also available.
+* A [video](https://youtu.be/XJiE8TrwW2A) overview on the Free Rider Problem, its relationship to blockchain, and Saito's solution is also available.
 
 Free Rider Problems occur between the funding of a non-excludable good (one that everyone can enjoy) and the benefit of that good. Consider a group dedicated to removing litter at a free nature-park: all park-goers enjoy the benefit of a cleaner park, but only those donating time or money to the group have to pay for it. Everyone else is allowed to 'free-ride' off the expense of the maintainers.
 
@@ -62,17 +62,19 @@ The classic solution to this problem is to *privatize* the once public good - to
 
 One of the key innovations in Bitcoin was that the act of securing the longest chain by mining atop it was not to be restricted to any authorized party, but to be a responsibility available to and rewarding to anyone; this is crucial for the incorruptibility of the network.
 
-Likewise, any user wishing to send transactions need only to propagate that data to a node, or set of nodes, capable of mining it into a block - at least that was the vision. In theory and in practice, the collection of fee-paying transactions results in a Free Rider Problem.
+Likewise, any user wishing to send transactions need only to propagate that data to a node, or set of nodes, capable of mining it into a block - at least that was the vision. In theory and in practice, the collection of fee-paying transactions in PoW and PoS results in a Free Rider Problem.
 
 ### In Theory
 
 Miners who wish to make money off of transaction fees must possess those transactions within their mempools before they begin mining. Since it can't be known who will produce the block, transactions must be sent to an arbitrary and large set of miners if they are likely to be included as soon as possible.
 
-Because nodes or other services which collect and transmit transactions *do not know* who the next miner will be and thus *must* transactions and the right to earn their fees to all miners, the nodes who actually route fees into the network are unable to earn those fees. The miners are Free Riders atop transaction-routing nodes.
+Because nodes or other services which collect and transmit transactions *do not know* who the next miner will be, they *must* send their transactions and the right to earn their fees to all miners; the nodes who actually route fees to the block producers are unable to earn those fees. The block producers (miners, stakers) are Free Riders atop transaction-routing nodes, because transaction relayers have no choice but to send to all of them to remain competitive.
 
+<!--
 Similar dynamics apply to any blockchain which cannot cryptographically certify and share claims on transactions fees, including all manner of Proof-of-Stake chains as well as  more exotic consensus mechanisms. Speeding up some aspect of consensus *technically* cannot solve the Free Rider Problem, which is an incentive-level roadbloack to scaling.
+-->
 
-In order for transaction collection to happen at scale on a PoW or PoS blockchain, the infrastructure which collects transactions must privatize that service in order to ensure they receive payment. This results in large nodes capable of choosing how rewards are distributed - both users and block producers become reliant upon them; this is a grave omen for security, as the largest private firm in the network now has their finger on how the nodes providing security can earn.
+In order for transaction collection to happen at scale on a PoW or PoS blockchain, the infrastructure which collects transactions must privatize that service in order to ensure they receive payment. This results in large nodes capable of choosing how rewards are distributed - both users and block producers become reliant upon them; this is a grave omen for security and openness, as the largest private firm in the network now has their finger on how the nodes providing security can earn.
 
 ### In Practice
 <br>
@@ -91,17 +93,21 @@ Different blockchains cope with the Free Rider Problem in different ways. Bitcoi
 </figure>
 </div>
 
-Ethereum is a great example of the opposite approach. In pushing the Free-Rider Problem towards its natural conclusion, crucial network infrastructure tends towards private control and centralization. The flagship example is the API node service [Infura](https://youtu.be/fJGuxcEvats) which is majorly responsible for serving applications both in service of developers and users. The massive userbase which the wallet Metamask serves primarily [routes through](https://support.metamask.io/hc/en-us/articles/4417315392795-What-is-Infura-and-why-does-MetaMask-use-it) Infura.
+Ethereum is a great example of the opposite tradeoff. In pushing the Free-Rider Problem towards its natural conclusion, crucial network infrastructure tends towards private control and centralization. The flagship example is the API node service [Infura](https://youtu.be/fJGuxcEvats) which is majorly responsible for serving applications both in service of developers and users. The massive userbase which the wallet Metamask serves primarily [routes through](https://support.metamask.io/hc/en-us/articles/4417315392795-What-is-Infura-and-why-does-MetaMask-use-it) Infura.
 
-Infura and similar node providers serve more than just Ethereum. Dozens of chains with the ambition to scale their blockchain like or past Ethereum quickly outpace what independent full nodes are able to provide and fall-back to private solutions like Infura. This dynamic concentrates power and profit to private companies which will [censor](https://cryptoslate.com/metamask-blocks-ethereum-transactions-in-several-jurisdictions-citing-compliance-issues/), and [monitor](https://cointelegraph.com/news/metamask-will-start-collecting-user-ip-addresses) users.
+Infura and similar node providers serve more than just Ethereum. Dozens of chains with the ambition to scale their blockchain like or past Ethereum quickly outpace what independent full nodes are able to provide and fall-back to private solutions like Infura. This dynamic concentrates power and profit to private companies which can [censor](https://cryptoslate.com/metamask-blocks-ethereum-transactions-in-several-jurisdictions-citing-compliance-issues/), and [spy on](https://cointelegraph.com/news/metamask-will-start-collecting-user-ip-addresses) users.
 
-So despite the fact that block producers in PoW and PoS are fairly compensated by following consensus rules, the free-riding dynamic involved in running the infrastructure is left neglected by consensus. It is not possible for nodes who route transactions into the network to secure any rewards from those transactions, thus it is necessary for traditional blockchains to accept restriction of network access in exchange for increased bandwidth.
+So despite the fact that block producers in PoW and PoS are fairly compensated by following consensus rules, the free-riding dynamic involved in running the infrastructure is left neglected by consensus. It is not possible for nodes who route transactions into the network to secure any rewards from those transactions, thus it is necessary for traditional blockchains to accept restriction of network access in exchange for increased bandwidth, or to never increase bandwidth.
+
+The users sending the transaction and the relay nodes propagating them into the network share the same incentive: deliver it to a block producer as quickly as possible. The user simply wants fast service, but the relay node needs to outcompete other relay nodes handling that transaction.
 
 ### Saito Fixes The Free Rider Problem
 
 Recall the dilemma transaction-serving nodes face: in order to serve their users well (get transactions included in next block) they must distribute transactions to as many potential block producers as possible, but in order to profit from those fees, they must restrict access to that transaction data; they must privatize. Since block producers are necessary to fulfill the service, most node providers choose to privatize access to user-facing service instead.
 
 In Saito there is no such dilemma. Nodes which share transactions do not risk the block producer who picks them up 'stealing' it from them - instead, the nodes with earlier access to the transactions become *entitled* to larger shares of the fee and compete with other early nodes to route the version of the transaction with their claim on it first. The incentives become aligned: nodes are both rewarded for collecting **and** sharing transactions.
+
+Users and relay nodes 
 
 ### Attributions:
 
