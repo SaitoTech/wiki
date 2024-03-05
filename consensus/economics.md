@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-05T07:15:44.911Z
+date: 2024-03-05T09:41:17.781Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -137,7 +137,7 @@ The **practical benefits** which stem from this fundamental shift in incentives 
 
 ![totc-comic.jpg](/totc-comic.jpg)
 
-The Tragedy of the Commons (TOTC) occurs when a valuable, publicly-accessible resource (non-excludable good), is quickly depleted as competing or self-interested actors
+The Tragedy of the Commons (TOTC) occurs when a valuable, publicly-accessible resource (non-excludable good), is quickly depleted as competing or self-interested actors race to consume it. Despite the fact that the depletion results in a situation where everyone collectively is worse off, each individual during the process has a rational incentive to continue consuming the resource, and to do so with greater effort than others. As with Free Riding, the classical solution to the problem is to relegate control over that resource to a private interest.
 
 ### <div id="chainIncentiveTOTC"> Blockchain Incentives </div>
 ### <div id="outcomesTOTC"> Sub-optimal Outcomes </div>
