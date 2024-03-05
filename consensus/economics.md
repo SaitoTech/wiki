@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-05T06:48:23.530Z
+date: 2024-03-05T07:15:44.911Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -28,7 +28,6 @@ Those familiar with market failures and blockchain may find the [Saito Whitepape
     <li>  <a style="text-decoration:none" href="#solutionTOTC"> Saito Solution </a> </li>
   </ul><br>
 </ul>
-
 
 ## <div id="mf"> Market Failures </div>
 
@@ -68,7 +67,7 @@ Free Rider Problems occur between the funding of a non-excludable good (one that
 
 The classic solution to this problem is to *privatize* the once public good - to exclude access to its benefits in order to force payment from those seeking access to the good. But this solution is inadequate for goods which can't be restricted from public use, or which have open access as a founding principle: like blockchain.
 
-### Blockchain Incentives
+### <div id="chainIncentivesFR"> Blockchain Incentives </div>
 
 One of the key innovations in Bitcoin was that the act of securing the longest chain by mining atop it was not to be restricted to any authorized party, but to be a responsibility available to and rewarding to anyone; this is crucial for the incorruptibility of the network.
 
@@ -84,7 +83,7 @@ Similar dynamics apply to any blockchain which cannot cryptographically certify 
 
 In order for transaction collection to happen at scale on a PoW or PoS blockchain, the infrastructure which collects transactions must privatize that service in order to ensure they receive payment. This results in large nodes capable of choosing how rewards are distributed - both users and block producers become reliant upon them; this is a grave omen for security and openness, as the largest private firm in the network now has their finger on how the nodes providing security can earn.
 
-### Sub-optimal Outcomes
+### <div id="outcomesFR"> Sub-optimal Outcomes </div>
 <br>
 <figure>
   <img src="/raspi4-btc.jpg" alt="An image of a small computer (Raspberry Pi) running a Bitcoin Node.">
@@ -109,7 +108,7 @@ So despite the fact that block producers in PoW and PoS are fairly compensated b
 
 The users sending the transaction and the relay nodes propagating them into the network share the same incentive: deliver it to a block producer as quickly as possible. The user simply wants fast service, but the relay node needs to outcompete other relay nodes handling that transaction.
 
-### Saito Fixes The Free Rider Problem
+### <div id="solutionFR"> Saito's Solution to The Free Rider Problem </div>
 
 Recall the dilemma transaction-serving nodes face: in order to serve their users well (get transactions included in next block) they must distribute transactions to as many potential block producers as possible, but in order to profit from those fees, they must restrict access to that transaction data; they must privatize. Since block producers are necessary to fulfill the service, most node providers choose to privatize access to user-facing service instead.
 
@@ -134,7 +133,15 @@ The **practical benefits** which stem from this fundamental shift in incentives 
 * Fee/byte is optimized in favor of cheaper service.
 * Money spent on the network directly benefits users, rather than just serving to enrich large holders (stakers) or number crunchers (miners).
 
+## <div id="totc"> The Tragedy of The Commons </div>
 
+![totc-comic.jpg](/totc-comic.jpg)
+
+The Tragedy of the Commons (TOTC) occurs when a valuable, publicly-accessible resource (non-excludable good), is quickly depleted as competing or self-interested actors
+
+### <div id="chainIncentiveTOTC"> Blockchain Incentives </div>
+### <div id="outcomesTOTC"> Sub-optimal Outcomes </div>
+### <div id="solutionTOTC"> Saito's Solution to The Tragedy of The Commons </div>
 
 ### Attributions:
 
