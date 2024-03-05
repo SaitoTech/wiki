@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-05T06:28:08.731Z
+date: 2024-03-05T06:48:23.530Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -16,7 +16,17 @@ Those familiar with market failures and blockchain may find the [Saito Whitepape
   <li>  <a style="text-decoration:none" href="#mf"> Market Failures </a> </li>
   <li>  <a style="text-decoration:none" href="#complicated"> Is Saito Complicated? </a> </li>
   <li>  <a style="text-decoration:none" href="#fr"> Free Rider Problem </a> </li>
+  <ul>
+  	<li>  <a style="text-decoration:none" href="#chainIncentivesFR"> Blockchain Incentives </a> </li>
+    <li>  <a style="text-decoration:none" href="#outcomesFR"> Sub-optimal Outcomes </a> </li>
+    <li>  <a style="text-decoration:none" href="#solutionFR"> Saito Solution </a> </li>
+  </ul><br>
   <li> <a style="text-decoration:none" href="#totc"> Tragedy of The Commons </a> </li>
+  <ul>
+  	<li>  <a style="text-decoration:none" href="#chainIncentivesTOTC"> Blockchain Incentives </a> </li>
+    <li>  <a style="text-decoration:none" href="#outcomesTOTC"> Sub-optimal Outcomes </a> </li>
+    <li>  <a style="text-decoration:none" href="#solutionTOTC"> Saito Solution </a> </li>
+  </ul><br>
 </ul>
 
 
