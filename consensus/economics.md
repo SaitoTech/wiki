@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-06T11:53:32.824Z
+date: 2024-03-06T12:04:54.404Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -81,6 +81,21 @@ The classic solution to this problem is to *privatize* the once public good - to
 One of the key innovations in Bitcoin was that the act of securing the longest chain by mining atop it was not to be restricted to any authorized party, but to be a responsibility available to and rewarding to anyone; this is crucial for the incorruptibility of the network.
 
 Likewise, any user wishing to send transactions need only to propagate that data to a node, or set of nodes, capable of mining it into a block - at least that was the vision. In theory and in practice, the collection of fee-paying transactions in PoW and PoS results in a Free Rider Problem.
+
+<br>
+<figure>
+  <img src="/bitcoin-whitepaper-network-assumptions.png" alt="The steps to run the network are as follows:
+1) New transactions are broadcast to all nodes.
+2) Each node collects new transactions into a block.
+3) Each node works on finding a difficult proof-of-work for its block.
+4) When a node finds a proof-of-work, it broadcasts the block to all nodes.
+5) Nodes accept the block only if all transactions in it are valid and not already spent.
+6) Nodes express their acceptance of the block by working on creating the next block in the chain, using the hash of the accepted block as the previous hash.
+Nodes always consider the longest chain to be the correct one and will keep working on extending it. If two nodes broadcast different versions of the next block simultaneously, some nodes may receive one or the other first. In that case, they work on the first one they received, but save the other branch in case it becomes longer. The tie will be broken when the next proof- of-work is found and one branch becomes longer; the nodes that were working on the other branch will then switch to the longer one.">
+  <figcaption style="opacity: 80%; text-align: center;"> Nakamoto assumed transactions would be widely broadcast but did not foresee The Free Rider Problem afflicting this task - <a href="https://github.com/kdmukai/raspi4_bitcoin_node_tutorial?tab=MIT-1-ov-file#readme">Bitcoin Whitepaper</a> </figcaption>
+</figure>
+
+[On Bitcoin and Red Balloons](https://arxiv.org/abs/1111.2626) famously identifies this problem and incorrectly proports that "there are no reward schemes in which information propagation and no self-cloning is a dominant strategy - " this conclusion is proven incorrect using Saito consensus in [A Simple Proof of Sybil Proof](https://github.com/SaitoTech/papers/blob/main/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf).
 
 Miners who wish to make money off of transaction fees must possess those transactions within their mempools before they begin mining. Since it can't be known who will produce the block, transactions must be sent to an arbitrary and large set of miners if they are likely to be included as quickly as possible.
 
