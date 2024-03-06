@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-06T05:17:08.016Z
+date: 2024-03-06T11:53:32.824Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -17,9 +17,9 @@ Those familiar with market failures and blockchain may find the [Saito Whitepape
   <li>  <a style="text-decoration:none" href="#elegant"> Saito is Elegant </a> </li>
   <li>  <a style="text-decoration:none" href="#fr"> Free Rider Problem </a> </li>
   <ul>
-  	<li>  <a style="text-decoration:none" href="#chainIncentivesFR"> Blockchain Incentives </a> </li>
-    <li>  <a style="text-decoration:none" href="#outcomesFR"> Sub-optimal Outcomes </a> </li>
-    <li>  <a style="text-decoration:none" href="#solutionFR"> Saito Solution </a> </li>
+  	<li>  <a style="text-decoration:none" href="#chainIncentivesFR"> Free Rider Incentives in Blockchain </a> </li>
+    <li>  <a style="text-decoration:none" href="#outcomesFR"> Sub-optimal Outcomes of Free Riding </a> </li>
+    <li>  <a style="text-decoration:none" href="#solutionFR"> Saito's Open Solution to Free Riding </a> </li>
   </ul><br>
   <li> <a style="text-decoration:none" href="#totc"> Tragedy of The Commons </a> </li>
   <ul>
@@ -69,55 +69,60 @@ This page hopes to explain the incentive-level issues which lead to market failu
 
 * A [video](https://youtu.be/XJiE8TrwW2A) overview on the Free Rider Problem, its relationship to blockchain, and Saito's solution is also available.
 
-Free Rider Problems occur between the funding of a non-excludable good (one that everyone can enjoy) and the benefit of that good. Consider a group dedicated to removing litter at a free nature-park: all park-goers enjoy the benefit of a cleaner park, but only those donating time or money to the group have to pay for it. Everyone else is allowed to 'free-ride' off the expense of the maintainers.
+Free Rider Problems occur between the funding of a non-excludable good (one that everyone can enjoy) and the benefit of that good. Consider a group dedicated to removing litter at a free nature-park: everyone collectively enjoys the benefit of a cleaner park, but only those donating time or money to the group have to pay for it. Everyone else is allowed to 'free-ride' off the expense of the maintainers.
 
 > *Markets need to control the distribution of benefits to induce people to pay for them. If you're producing something that everyone can enjoy, you'll have difficulty convincing someone to pay you to cover the cost.*
 > -[Saito FAQs](https://saitofaqs.com/faq/how-does-saito-solve-the-free-rider-problem)
 
-The classic solution to this problem is to *privatize* the once public good - to exclude access to its benefits in order to force payment from those seeking access to the good. But this solution is inadequate for goods which can't be restricted from public use, or which have open access as a founding principle; in the case of blockchain, the routing of fee-paying transaction towards the block producers who enjoy the rewards is a Free Rider Problem.
+The classic solution to this problem is to *privatize* the once public good - to exclude access to its benefits in order to solicit appropriate payment. But this solution is inadequate for goods which can't be restricted from public use, or which have open access as a founding principle; in the case of blockchain, the routing of fee-paying transaction towards the block producers who enjoy the total fee-reward is a Free Rider Problem.
 
-### <div id="chainIncentivesFR"> Blockchain Incentives </div>
+### <div id="chainIncentivesFR"> Free Rider Incentives in Blockchain </div>
 
 One of the key innovations in Bitcoin was that the act of securing the longest chain by mining atop it was not to be restricted to any authorized party, but to be a responsibility available to and rewarding to anyone; this is crucial for the incorruptibility of the network.
 
 Likewise, any user wishing to send transactions need only to propagate that data to a node, or set of nodes, capable of mining it into a block - at least that was the vision. In theory and in practice, the collection of fee-paying transactions in PoW and PoS results in a Free Rider Problem.
 
-Miners who wish to make money off of transaction fees must possess those transactions within their mempools before they begin mining. Since it can't be known who will produce the block, transactions must be sent to an arbitrary and large set of miners if they are likely to be included as soon as possible.
+Miners who wish to make money off of transaction fees must possess those transactions within their mempools before they begin mining. Since it can't be known who will produce the block, transactions must be sent to an arbitrary and large set of miners if they are likely to be included as quickly as possible.
 
-Because nodes or other services which collect and transmit transactions *do not know* who the next miner will be, they *must* send their transactions and the right to earn their fees to all miners; the nodes who actually route fees to the block producers are unable to earn those fees. The block producers (miners, stakers) are Free Riders atop transaction-routing nodes, because transaction relayers have no choice but to send to all of them to remain competitive.
+Because nodes or other services which collect and transmit transactions *do not know* who the next miner will be, they *must* send their transactions and the right to earn their fees to all miners; the nodes who actually route fees to the block producers are unable to earn those fees. The block producers (miners, stakers) are Free Riders atop transaction-routing nodes, because transaction relayers have no choice but to give up these transactions if they are to remain useful to their users.
 
 <!--
 Similar dynamics apply to any blockchain which cannot cryptographically certify and share claims on transactions fees, including all manner of Proof-of-Stake chains as well as  more exotic consensus mechanisms. Speeding up some aspect of consensus *technically* cannot solve the Free Rider Problem, which is an incentive-level roadbloack to scaling.
 -->
 
-In order for transaction collection to happen at scale on a PoW or PoS blockchain, the infrastructure which collects transactions must privatize that service in order to ensure they receive payment. This results in large nodes capable of choosing how rewards are distributed - both users and block producers become reliant upon them; this is a grave omen for security and openness, as the largest private firm in the network now has their finger on how the nodes providing security can earn.
+In order for transaction collection to happen at scale on a PoW or PoS blockchain, the infrastructure which collects transactions must privatize that service in order to ensure they receive payment. This payment is either an additional cost users must pay, or it detracts from the 'security budget;' i.e. the fees which grant the blockchain economic security against consensus attacks.
 
-### <div id="outcomesFR"> Sub-optimal Outcomes </div>
+This inadvertent privatization can turn large portions of a blockchain network into a [permissioned system](https://cryptopotato.com/ethereum-censorship-concerns-raised-as-block-builders-comply-with-ofac-sanctions/), but the other option is to remain a non-scalable chain. The debates around "scale versus decentralization" can be more precisely framed as tradeoffs around an unaddressed Free Rider Problem.
+
+<!-- This results in large nodes capable of choosing how rewards are distributed - both users and block producers become reliant upon them; this is a grave omen for security and openness, as the largest private firm in the network now has their finger on how the nodes providing security can earn. -->
+
+### <div id="outcomesFR"> Sub-optimal Outcomes of Free Riding </div>
 <br>
 <figure>
   <img src="/raspi4-btc.jpg" alt="An image of a small computer (Raspberry Pi) running a Bitcoin Node.">
   <figcaption style="opacity: 80%; text-align: center;"> Bitcoin Nodes are not powerful - image is under <a href="https://github.com/kdmukai/raspi4_bitcoin_node_tutorial?tab=MIT-1-ov-file#readme">MIT License</a> </figcaption>
 </figure>
 
-Different blockchains cope with the Free Rider Problem in different ways. Bitcoin very famously chooses to forgoe scaling so as to risk no compromises in the ability of interested volunteers to run nodes which verify the chain and route transactions to miners. Because the miners are expected to free-ride off of these nodes for the network to function, the chain has chosen to remain small in order to keep allowing low powered computers fulfill this task without compensation.
+Different blockchains cope with the Free Rider Problem in different ways. Bitcoin very famously chooses to forgo scaling in order to ensure unpaid, low-powered nodes can and will route transactions to miners. Because the miners are expected to free-ride off of these nodes for the network to function, the chain has chosen to remain small with the hopes that volunteers will continue to perform this task without compensation.
+
+Ethereum is a great example of the opposite tradeoff. In pushing the Free-Rider Problem towards its natural conclusion, crucial network infrastructure tends towards private control and centralization.
 
 <br>
 <div style="display: flex; justify-content: center;">
 <figure>
   <img src="/cons-node-service.png" alt="Alt: What are the cons of using a Node Service? By using a node service you are centralizing the infrastructure aspect of your product. For this reason, projects that hold decentralization to the upmost importance might prefer self-hosting nodes rather than outsourcing to a 3rd party. Read more about the benefits of running your own node. -- from ethereum.org">
-  <figcaption style="opacity: 80%; text-align: center;"> Ethereum recognizes danger in node infrastructure privatization - from <a href="https://ethereum.org/developers/docs/nodes-and-clients/nodes-as-a-service#cons-of-using-a-node-service">ethereum.org</a> </figcaption>
+  <figcaption style="opacity: 80%; text-align: center;"> Ethereum recognizes danger in node infrastructure privatization, but can't stop it - from <a href="https://ethereum.org/developers/docs/nodes-and-clients/nodes-as-a-service#cons-of-using-a-node-service">ethereum.org</a> </figcaption>
 </figure>
 </div>
 
-Ethereum is a great example of the opposite tradeoff. In pushing the Free-Rider Problem towards its natural conclusion, crucial network infrastructure tends towards private control and centralization. The flagship example is the API node service [Infura](https://youtu.be/fJGuxcEvats) which is majorly responsible for serving applications both in service of developers and users. The massive userbase which the wallet Metamask serves primarily [routes through](https://support.metamask.io/hc/en-us/articles/4417315392795-What-is-Infura-and-why-does-MetaMask-use-it) Infura.
+The flagship example is the API node service [Infura](https://youtu.be/fJGuxcEvats) which is majorly responsible for serving applications both in service of developers and users. The massive userbase of the Metamask wallet is primarily [routed through](https://support.metamask.io/hc/en-us/articles/4417315392795-What-is-Infura-and-why-does-MetaMask-use-it) [and dependent](https://decrypt.co/98457/metamask-ethereum-apps-down-infura-outage) on Infura, not to mention many 'decentralized' applications.
 
-Infura and similar node providers serve more than just Ethereum. Dozens of chains with the ambition to scale their blockchain like or past Ethereum quickly outpace what independent full nodes are able to provide and fall-back to private solutions like Infura. This dynamic concentrates power and profit to private companies which can [censor](https://cryptoslate.com/metamask-blocks-ethereum-transactions-in-several-jurisdictions-citing-compliance-issues/), and [spy on](https://cointelegraph.com/news/metamask-will-start-collecting-user-ip-addresses) users.
+Infura and similar node providers serve more than just Ethereum. Dozens of chains with the ambition to scale their blockchain like or past Ethereum quickly outpace what independent full nodes are able to provide and fall-back to private solutions like Infura. This dynamic concentrates power and profit to private companies which can [censor](https://cryptoslate.com/metamask-blocks-ethereum-transactions-in-several-jurisdictions-citing-compliance-issues/), and [spy on](https://cointelegraph.com/news/metamask-will-start-collecting-user-ip-addresses) users, and which take security from the underlying blockchain to instead finance closed revenue streams.
 
-So despite the fact that block producers in PoW and PoS are fairly compensated by following consensus rules, the free-riding dynamic involved in running the infrastructure is left neglected by consensus. It is not possible for nodes who route transactions into the network to secure any rewards from those transactions, thus it is necessary for traditional blockchains to accept restriction of network access in exchange for increased bandwidth, or to never increase bandwidth.
+<!--
+The users sending the transaction and the relay nodes propagating them into the network share the same incentive: deliver it to a block producer as quickly as possible. The user simply wants fast service, but the relay node needs to outcompete other relay nodes handling that transaction. -->
 
-The users sending the transaction and the relay nodes propagating them into the network share the same incentive: deliver it to a block producer as quickly as possible. The user simply wants fast service, but the relay node needs to outcompete other relay nodes handling that transaction.
-
-### <div id="solutionFR"> Saito's Solution to The Free Rider Problem </div>
+### <div id="solutionFR"> Saito's *Open* Solution to Free Riding </div>
 
 Recall the dilemma transaction-serving nodes face: in order to serve their users well (get transactions included in next block) they must distribute transactions to as many potential block producers as possible, but in order to profit from those fees, they must restrict access to that transaction data; they must privatize. Since block producers are necessary to fulfill the service, most node providers choose to privatize access to user-facing service instead.
 
