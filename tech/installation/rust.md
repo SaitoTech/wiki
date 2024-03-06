@@ -2,7 +2,7 @@
 title: Saito Rust - Installation Instructions
 description: 
 published: true
-date: 2024-03-06T10:17:34.225Z
+date: 2024-03-06T10:18:31.475Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:32:52.212Z
@@ -22,7 +22,7 @@ This guide provides step-by-step instructions for setting up the Saito Rust work
 
 ## Setup Instructions
 
-To bootstrap this entire process, please refer to this documentation ```https://wiki.saito.io/e/en/tech/installation/rust-bootstrap-script```
+To bootstrap the entire process below, please refer to this documentation https://wiki.saito.io/e/en/tech/installation/rust-bootstrap-script
 
 ### Step 1: Clone the Repository
 
