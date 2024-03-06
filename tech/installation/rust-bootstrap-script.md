@@ -2,7 +2,7 @@
 title: Saito-Rust Bootstrap Script
 description: 
 published: true
-date: 2024-03-06T10:16:29.649Z
+date: 2024-03-06T10:22:49.683Z
 tags: 
 editor: markdown
 dateCreated: 2024-03-06T10:09:36.384Z
@@ -11,6 +11,9 @@ dateCreated: 2024-03-06T10:09:36.384Z
 # Documentation for Saito Rust Setup Script
 
 This documentation covers the setup script for configuring a Saito Rust node. The script automates the process of configuring the environment, managing configuration files, installing dependencies, and starting the node.
+
+## Usage
+For executing the script, navigate to the script directory and launch ```initial_setup.sh```
 
 ## Overview
 The script performs the following main tasks:
@@ -47,8 +50,8 @@ Prompts the user to start the node immediately after setup. If the user agrees, 
 
 ## Auxiliary Scripts
 
-- bootstrap_linux.sh
--  bootstrap_mac.sh
+- ``` bootstrap_linux.sh```
+- ``` bootstrap_mac.sh ```
 
 These scripts checks for and installs missing dependencies required for the Saito Rust project on Linux or mac systems. It includes checks for Rust installation, updates package lists, and installs various development tools and libraries.
 
