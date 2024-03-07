@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-07T12:20:45.857Z
+date: 2024-03-07T12:23:14.236Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -194,8 +194,8 @@ Arweave is one project based entirely around storage, and which uses an economic
 
 <br>
 <div style="display: flex; justify-content: center; width: 100%;">
- <figure style="margin: auto;">
-    <img style="width: 90%;" src="/arweave-storage-estimates.png" alt="Defining the Kryder+ Rate
+ <figure style="width: 90%; margin: auto;">
+    <img src="/arweave-storage-estimates.png" alt="Defining the Kryder+ Rate
 In practice, the Arweave network utilizes a modification of the raw Kryder rate, which we will refer to as the Kryder+ rate in this document. The Kryder+ rate includes not just raw data storage, but also the other factors that are required in order to keep a network like Arweave online: replications, electricity, and operational costs. Each of these, we note, is affected by the same underlying decay in storage costs:
     Replications: Each new replica of the dataset inherits the same declining storage costs as the first.
     Power Usage: Changes in data density and reliability (the factors that most prominently effect the Kryder rate) are rarely, if ever, accompanied by increases in power usage. Subsequently, as storage mediums increase in capacity, the relative energy cost of storing a given quantity of data declines, too.
