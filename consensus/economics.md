@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-07T12:23:14.236Z
+date: 2024-03-07T12:24:12.280Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -23,9 +23,9 @@ Those familiar with market failures and blockchain may find the [Saito Whitepape
   </ul><br>
   <li> <a style="text-decoration:none" href="#totc"> Tragedy of The Commons </a> </li>
   <ul>
-  	<li>  <a style="text-decoration:none" href="#chainIncentivesTOTC"> Blockchain Incentives </a> </li>
-    <li>  <a style="text-decoration:none" href="#outcomesTOTC"> Sub-optimal Outcomes </a> </li>
-    <li>  <a style="text-decoration:none" href="#solutionTOTC"> Saito Solution </a> </li>
+  	<li>  <a style="text-decoration:none" href="#chainIncentivesTOTC"> Tragedy of THe Commons Incentives in Blockchain </a> </li>
+    <li>  <a style="text-decoration:none" href="#outcomesTOTC"> Sub-optimal Outcomes of The Tragedy of The Commons </a> </li>
+    <li>  <a style="text-decoration:none" href="#solutionTOTC"> Saito's Open Solution to The Tragedy of The Commons </a> </li>
   </ul><br>
 </ul>
 
