@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-07T05:17:20.781Z
+date: 2024-03-07T05:40:23.363Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -188,9 +188,38 @@ The second way long-term nodes can be exploited by short term interests is from 
 
 The more subtle version of both of these issues is blockchain bloat: the network slowly accumulates data past what it can support without expenditure; when nodes begin spending more money on storage, it leads to *new* transactions paying the debt of storage incurred by the old ones.
 
-Even if hardware storage prices continue to decrease, without an economic model to price blockchain storage, fees will either be higher than necessary or too low to support existing infrastructure. A true market solution will render lower user fees as storage costs decrease - not simply maintain some set level of efficiency.
+Even if hardware storage prices continue to decrease, without a sound economic model to price blockchain storage, fees will either be higher than necessary or too low to support existing infrastructure. A true market solution will render lower user fees as storage costs decrease - not simply maintain some set level of efficiency.
+
+<br>
+<div style="display: flex; justify-content: center; width: 100%;">
+ <figure style="margin: auto;">
+    <img style="width: 100%;" src="/arweave-storage-estimates.png" alt="Defining the Kryder+ Rate
+In practice, the Arweave network utilizes a modification of the raw Kryder rate, which we will refer to as the Kryder+ rate in this document. The Kryder+ rate includes not just raw data storage, but also the other factors that are required in order to keep a network like Arweave online: replications, electricity, and operational costs. Each of these, we note, is affected by the same underlying decay in storage costs:
+    Replications: Each new replica of the dataset inherits the same declining storage costs as the first.
+    Power Usage: Changes in data density and reliability (the factors that most prominently effect the Kryder rate) are rarely, if ever, accompanied by increases in power usage. Subsequently, as storage mediums increase in capacity, the relative energy cost of storing a given quantity of data declines, too.
+    Operational Expenses: As with power usage, as the efficiency of individual digital storage mediums increases, the number of devices needed to store a piece of data (and thus, the operational overhead to maintain them) declines.
+In the present version of the Arweave network (2.5.3), 45 replicas of the dataset are targeted in the Kryder+ rate (defined here), along with a 2x storage overhead for operational and power expenses (see here)..">
+   <figcaption style="opacity: 80%; text-align: center;"> Arweave makes broad estimates about storage cost into the future and uses those estimates to assume costs - from <a href="https://arwiki.wiki/#/en/endowment-simulation">ArWiki</a> </figcaption>
+ </figure>
+</div>
+
+Arweave is one project based entirely around storage, and which uses an economic model which attempts to predict the longterm price dynamics of digital storage. Not only will this lead to mismatches between the real cost of storage and the model's assumed cost, but if the model needs to ever be adjusted then it will require developers making changes to incentives and how node operators are paid.
+
+Arweave is not alone in relying on developers to attempt to predict storage costs for the chain. Most big-block chains make even less rigurous assumptions: namely, that since storage costs decrease over time that accurately pricing it isn't an issue. This is common in big-block forks of Bitcoin.
+
+But even more ambitious chains at least do recognize that continually adding permanent data is not sustainable. The solution for them is to *not use the blockchain* - literally, their answer is to push transactions onto less secure and more centralized layers 2, 3 and above. Because it is assumed there are no solutions to deal with this problem on the layer 1, most smart contract chains believe that most data shouldn't enjoy the benefits of the layer 1.
 
 ### <div id="solutionTOTC"> Saito's Solution to The Tragedy of The Commons </div>
+
+In Saito, not only is the price of storage accurately adjusted automatically and in real-time, but transactions by default pay for the minimum amount of storage required, rather than paying for the maximum (forever). This is because transactions in Saito are allowed to expire after their epoch, but if they have a live balance, they must be rebroadcast into a fresh block such that the UTXO set only relies on blocks from the past, while also paying a fee.
+
+Hence the name: *Automatic Transcation Rebroadcasting* (ATR). Once any unspent transaction is *N* blocks old, it must be rebroadcast and will automatically pay a fee from its balance when it is. If the transaction does not have sufficient funds to pay the fee, then it is removed from storage and nodes are no longer responsible for it. The fee paid is a positive multiple of the average fee paid over the transactions lifespan.
+
+This benefits users and full nodes equally. Because a node cannot produce a valid block without including all transactions which must be rebroadcast, a node cannot produce blocks until it *truly* becomes a full node and is holding the full UTXO set and the blocks which validate that set. This makes Data-Availability a default incentive for Saito.
+
+Because full nodes are now paid for holding transactions, they do not care if data sticks around forever, because it will also pay them forever. On the flipside, users are no longer required to pay upfront fees which assume that data *will be around forver.* Because transactions can be removed, user fees only need to pay to add data - if it sticks around for rebroadcasting, it will pay for storage later.
+
+This is a massive boon for use of the blockchain as a messaging layer. Posting data on any chain which does not have ATR means paying upfront for forever-storage costs. On Saito, transactions only need to pay for their first epoch when they are added, which means greatly reduced transaction fees and a greater ability to use the blockchain to transmit messages universally around the globe - making Saito an ideal PKI network.
 
 ### Attributions:
 
