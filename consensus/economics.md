@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-07T05:40:23.363Z
+date: 2024-03-07T11:56:15.613Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -212,6 +212,14 @@ But even more ambitious chains at least do recognize that continually adding per
 ### <div id="solutionTOTC"> Saito's Solution to The Tragedy of The Commons </div>
 
 In Saito, not only is the price of storage accurately adjusted automatically and in real-time, but transactions by default pay for the minimum amount of storage required, rather than paying for the maximum (forever). This is because transactions in Saito are allowed to expire after their epoch, but if they have a live balance, they must be rebroadcast into a fresh block such that the UTXO set only relies on blocks from the past, while also paying a fee.
+
+<br>
+<div style="display: flex; justify-content: center; width: 100%;">
+ <figure style="width: 70%; margin: auto;">
+    <img style="width: 100%;" src="/atr-v2.png" alt="A diagram showing Saito ATR mechanism in action in three steps.">
+ </figure>
+</div>
+<br>
 
 Hence the name: *Automatic Transcation Rebroadcasting* (ATR). Once any unspent transaction is *N* blocks old, it must be rebroadcast and will automatically pay a fee from its balance when it is. If the transaction does not have sufficient funds to pay the fee, then it is removed from storage and nodes are no longer responsible for it. The fee paid is a positive multiple of the average fee paid over the transactions lifespan.
 
