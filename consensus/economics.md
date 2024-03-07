@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-07T11:56:15.613Z
+date: 2024-03-07T12:00:59.326Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -190,10 +190,12 @@ The more subtle version of both of these issues is blockchain bloat: the network
 
 Even if hardware storage prices continue to decrease, without a sound economic model to price blockchain storage, fees will either be higher than necessary or too low to support existing infrastructure. A true market solution will render lower user fees as storage costs decrease - not simply maintain some set level of efficiency.
 
+Arweave is one project based entirely around storage, and which uses an economic model which attempts to predict the longterm price dynamics of digital storage. Not only will this lead to mismatches between the real cost of storage and the model's assumed cost, but if the model needs to ever be adjusted then it will again require developers making decisions about incentives and how node operators are paid.
+
 <br>
 <div style="display: flex; justify-content: center; width: 100%;">
  <figure style="margin: auto;">
-    <img style="width: 100%;" src="/arweave-storage-estimates.png" alt="Defining the Kryder+ Rate
+    <img style="width: 90%;" src="/arweave-storage-estimates.png" alt="Defining the Kryder+ Rate
 In practice, the Arweave network utilizes a modification of the raw Kryder rate, which we will refer to as the Kryder+ rate in this document. The Kryder+ rate includes not just raw data storage, but also the other factors that are required in order to keep a network like Arweave online: replications, electricity, and operational costs. Each of these, we note, is affected by the same underlying decay in storage costs:
     Replications: Each new replica of the dataset inherits the same declining storage costs as the first.
     Power Usage: Changes in data density and reliability (the factors that most prominently effect the Kryder rate) are rarely, if ever, accompanied by increases in power usage. Subsequently, as storage mediums increase in capacity, the relative energy cost of storing a given quantity of data declines, too.
@@ -203,11 +205,11 @@ In the present version of the Arweave network (2.5.3), 45 replicas of the datase
  </figure>
 </div>
 
-Arweave is one project based entirely around storage, and which uses an economic model which attempts to predict the longterm price dynamics of digital storage. Not only will this lead to mismatches between the real cost of storage and the model's assumed cost, but if the model needs to ever be adjusted then it will require developers making changes to incentives and how node operators are paid.
-
 Arweave is not alone in relying on developers to attempt to predict storage costs for the chain. Most big-block chains make even less rigurous assumptions: namely, that since storage costs decrease over time that accurately pricing it isn't an issue. This is common in big-block forks of Bitcoin.
 
 But even more ambitious chains at least do recognize that continually adding permanent data is not sustainable. The solution for them is to *not use the blockchain* - literally, their answer is to push transactions onto less secure and more centralized layers 2, 3 and above. Because it is assumed there are no solutions to deal with this problem on the layer 1, most smart contract chains believe that most data shouldn't enjoy the benefits of the layer 1.
+
+And again, holding the uber conservative side of the spectrum is Bitcoin. Bitcoin hopes that by keeping blocks very small, any economic problems which occur out of a model which leads to a Tragedy of The Commons Problem will be insignificant. It's as if Bitcoin is saying - without a solution to this problem, we will not scale. Saito identifies the problem and poses a solution.
 
 ### <div id="solutionTOTC"> Saito's Solution to The Tragedy of The Commons </div>
 
@@ -215,7 +217,7 @@ In Saito, not only is the price of storage accurately adjusted automatically and
 
 <br>
 <div style="display: flex; justify-content: center; width: 100%;">
- <figure style="width: 70%; margin: auto;">
+ <figure style="width: 56%; margin: auto;">
     <img style="width: 100%;" src="/atr-v2.png" alt="A diagram showing Saito ATR mechanism in action in three steps.">
  </figure>
 </div>
