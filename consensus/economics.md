@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-07T00:11:39.002Z
+date: 2024-03-07T03:27:27.977Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -39,7 +39,7 @@ Market failures are situations in which the rational incentives of individuals l
 <div style="display: flex; justify-content: center; width: 100%;">
  <figure style="width: 70%; margin: auto;">
     <img style="width: 100%;" src="/prisoners_dilemma.svg.png" alt="A chart showing the prisoner's dilemma dynamic where defection is suboptimal globally, but individually preferred.">
-    <figcaption style="opacity: 80%; text-align: center;">Staying silent results in less collective jailtime, but each individual has the incentive to testify anyways. <a href="#prisoner">Attribution</a></figcaption>
+    <figcaption style="opacity: 80%; text-align: center;">Prisoner's Dilemma: staying silent results in less collective jailtime, but each individual has the incentive to testify in every scenario. <a href="#prisoner">Attribution</a></figcaption>
  </figure>
 </div>
 <br>
@@ -152,7 +152,7 @@ The mechanism which solves the Free Rider Problem is **Routing Work**. A transac
  </figure>
 </div>
 
-Because public-facing relay nodes are no longer doing free work for block producers, the infrastructure of the network which connects users to the blockchain is not required to restrict access in order to profit. The fees in the transaction pay their way into blocks through every hop, thanks to cryptography and consensus.
+Because public-facing relay nodes are no longer doing free work for block producers, the infrastructure of the network which connects users to the blockchain is not required to restrict access in order to profit, thus the network layer can be funded **without defunding security**. This means scale and security are not mutually exclusive, they are in fact the same metric in Saito - therefore, Saito proves the blockchain trilemma does not exist.
 
 What users value and what nodes value in Saito is the same. Users want fast transaction confirmation (and security), and relay nodes secure the network and earn fees by getting their version of a transaction into a block before a competing routing node does. Because consensus nodes and users have the same incentive, **fees pay for what users actually value and optimizing rewards means optimizing user experience**.
 
@@ -161,6 +161,7 @@ The **practical benefits** which stem from this fundamental shift in incentives 
 * Security and scale are paid for from a single fee.
 * Fee/byte is optimized in favor of cheaper service.
 * Money spent on the network directly benefits users, rather than just serving to enrich large holders (stakers) or number crunchers (miners).
+* The security mechanism involved ends up also solving the 51% attack.
 
 ## <div id="totc"> The Tragedy of The Commons </div>
 
