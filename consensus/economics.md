@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-07T03:27:27.977Z
+date: 2024-03-07T05:17:20.781Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -167,10 +167,29 @@ The **practical benefits** which stem from this fundamental shift in incentives 
 
 ![totc-comic.jpg](/totc-comic.jpg)
 
-The Tragedy of the Commons (TOTC) occurs when a valuable, publicly-accessible resource (non-excludable good), is quickly depleted as competing or self-interested actors race to consume it. Despite the fact that the depletion results in a situation where everyone collectively is worse off, each individual during the process has a rational incentive to continue consuming the resource, and to do so with greater effort than others. As with Free Riding, the classical solution to the problem is to relegate control over that resource to a private interest.
+The Tragedy of the Commons (TOTC) occurs when a valuable, publicly-accessible resource (non-excludable good), is quickly depleted as competing or self-interested actors race to consume it. The classic example is a public field which farmers compete to freely feed their livestock until it is barren.
+
+The comic above shows a more abstract version, where the quality of public air is degraded in order to increase production; the cost of a degradation in air quality is paid by everyone equally, rather than solely the polluters. When the air quality is so poor that people are too sick to work, the resource may be considered fully consumed.
+
+Despite the fact that the depletion results in a situation where everyone collectively is worse off, each individual during the process has a rational incentive to continue consuming the resource, and to do so with greater effort than others. As with Free Riding, the classical solution to the problem is to relegate control over that consumption to a private interest.
 
 ### <div id="chainIncentiveTOTC"> Blockchain Incentives </div>
+
+The Tragedy of The Commons in blockchain is more similar to the pollution example, since long-term storage burdens can be incurred on blockchain for a one-time price:
+
+> <i>The tragedy-of-the-commons issue is created by the existence of the permanent ledger, which encourages nodes to accept payment today for work that can be offloaded to others tomorrow. This incentive leads to bloated blockchains and more subtly to transaction mis-pricing, as users can pay fees that do not reflect the true cost of their transaction to the overall network.</i>
+> -[Saito Whitepaper](https://saito.io/saito-whitepaper.pdf)
+
+There are a couple ways rational profit-seeking nodes will end up exploiting the storage commitments of more 'loyal' nodes. The first is a node which produces blocks, earns fees, but does not bother to validate or even hold historic transactions. For blockchains with large blocks, it may be costly for *anyone* to validate a block, and the job may end up pushed to just a few nodes who copy each other's work.
+
+The second way long-term nodes can be exploited by short term interests is from nodes who come online during a surge of high demand in order to earn the fees of that surge. The massive influx of new transactions will pay the nodes as soon as they are added, and when the surge subsides, those nodes will take their profits and leave the data for everyone else to hold and maintain.
+
 ### <div id="outcomesTOTC"> Sub-optimal Outcomes </div>
+
+The more subtle version of both of these issues is blockchain bloat: the network slowly accumulates data past what it can support without expenditure; when nodes begin spending more money on storage, it leads to *new* transactions paying the debt of storage incurred by the old ones.
+
+Even if hardware storage prices continue to decrease, without an economic model to price blockchain storage, fees will either be higher than necessary or too low to support existing infrastructure. A true market solution will render lower user fees as storage costs decrease - not simply maintain some set level of efficiency.
+
 ### <div id="solutionTOTC"> Saito's Solution to The Tragedy of The Commons </div>
 
 ### Attributions:
