@@ -2,7 +2,7 @@
 title: Saito Rust - Installation Instructions
 description: 
 published: true
-date: 2024-03-08T08:18:04.154Z
+date: 2024-03-08T08:19:17.675Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:32:52.212Z
@@ -53,4 +53,4 @@ cd ../saito-rust
 RUST_LOG=debug cargo run
 ````
 
-After executing these steps, your Saito Rust workspace should be fully operational. The initial_setup.sh script simplifies the process, making it straightforward to get up and running. For customization or further information, refer to the detailed documentation or contact the Saito community for support.
+After executing these steps, your Saito Rust workspace should be fully operational. The initial_setup.sh script simplifies the process, making it straightforward to get up and running. For customization or further information, refer to the [detailed documentation](https://wiki.saito.io/e/en/tech/installation/rust-bootstrap-script) or contact the Saito community for support.
