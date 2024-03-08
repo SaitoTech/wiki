@@ -2,7 +2,7 @@
 title: Saito Rust - Installation Instructions
 description: 
 published: true
-date: 2024-03-06T10:18:31.475Z
+date: 2024-03-08T08:08:57.958Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:32:52.212Z
@@ -22,14 +22,17 @@ This guide provides step-by-step instructions for setting up the Saito Rust work
 
 ## Setup Instructions
 
-To bootstrap the entire process below, please refer to this documentation https://wiki.saito.io/e/en/tech/installation/rust-bootstrap-script
 
-### Step 1: Clone the Repository
 
-First, clone the Saito Rust workspace repository from GitHub using the following command:
+### Step 1: Run the Initial Setup Script
+
+Navigate to the cloned directory, then run the initial_setup.sh script to automatically configure and prepare your environment.
+
 
 ```bash
-git clone https://github.com/saitotech/saito-rust-workspace 
+cd saito-rust-workspace/scripts
+./initial_setup.sh
+
 ````
 
 ### Step 2: Initialize the Environment
