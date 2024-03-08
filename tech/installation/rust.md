@@ -2,7 +2,7 @@
 title: Saito Rust - Installation Instructions
 description: 
 published: true
-date: 2024-03-08T08:19:17.675Z
+date: 2024-03-08T08:32:18.637Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:32:52.212Z
@@ -14,10 +14,10 @@ This guide provides step-by-step instructions for setting up the Saito Rust work
 
 #### Requirements
 
-* OS: Ubuntu 20.04 (MacOS instructions)
-* Build tools: git, g++, make
-* Stack: cargo rust (v.1.5.7+)
-* https://github.com/saitotech/saito-rust-workspace
+* Operating System: Ubuntu 20.04 or macOS
+* Build Tools: git, g++, make (Linux), or equivalent development tools (macOS)
+* Stack: Cargo, Rust (version 1.5.7 or higher)
+* Repository: https://github.com/saitotech/saito-rust-workspace
 
 
 ## Setup Instructions
