@@ -2,7 +2,7 @@
 title: Saito-Rust Bootstrap Script
 description: 
 published: true
-date: 2024-03-06T10:22:49.683Z
+date: 2024-03-08T08:25:14.858Z
 tags: 
 editor: markdown
 dateCreated: 2024-03-06T10:09:36.384Z
@@ -25,7 +25,8 @@ The script performs the following main tasks:
 
 
 ###  Configuring the Node
-This section checks if a config.json file exists. If not, it copies a template configuration file and modifies it to ensure the node is set correctly
+This section checks if a config.json file exists. If not, it copies a template configuration file and modifies it to ensure the node is set correctly.
+How to configure the node for explaination of the configuration file, click [saito-rust-config](/tech/installation/saito-rust-config)
 
 ### Creating Necessary Directories and Files
 
