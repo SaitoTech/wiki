@@ -2,7 +2,7 @@
 title: Saito Rust - Installation Instructions
 description: 
 published: true
-date: 2024-03-08T08:10:16.406Z
+date: 2024-03-08T08:11:08.574Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:32:52.212Z
@@ -29,14 +29,12 @@ Clone the Saito Rust workspace repository from GitHub:
 
 ````bash
 git clone https://github.com/saitotech/saito-rust-workspace
-
 ````
 
 
 ### Step 2: Run the Initial Setup Script
 
 Navigate to the cloned directory, then run the initial_setup.sh script to automatically configure and prepare your environment.
-
 
 ```bash
 cd saito-rust-workspace/scripts
@@ -46,55 +44,7 @@ cd saito-rust-workspace/scripts
 This script handles the environment setup, dependencies installation, configuration files preparation, and data directories setup across both Linux and macOS platforms.
 
 
-
-**For macOS**
-If you are on a macOS device, use the bootstrap_mac.sh script instead:
-
-````bash
-cd saito-rust-workspace
-bash scripts/bootstrap_mac.sh
-````
-
-**Build workspace**
-````bash
-cargo build
-````
-
-
-### Step 3: Configure the Application
-
-Change to the saito-rust directory:
-
-```bash
-cd saito-rust
-```
-
-Copy the configuration template to create your own configuration file:
-
-````bash
-cp configs/config.template.json configs/config.json
-````
-for explaination of the configuration file, click [saito-rust-config](/tech/installation/saito-rust-config)
-
-
-
-
-#### Step 4: Prepare Data Directories
-
-Copy the issuance template to the appropriate directory:
-
-
-````bash
-cp data/issuance/issuance.template data/issuance/issuance
-````
-
-Create a directory for blockchain blocks:
-
-````bash
-mkdir data/blocks
-````
-
-#### Step 5: Run the Application
+#### Step 3: Run the Application
 
 Finally, start the Saito application with Rust's cargo tool, enabling debug logging:
 
