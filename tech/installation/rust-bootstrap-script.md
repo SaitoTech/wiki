@@ -2,7 +2,7 @@
 title: Saito-Rust Bootstrap Script
 description: 
 published: true
-date: 2024-03-08T08:28:58.840Z
+date: 2024-03-08T08:30:45.432Z
 tags: 
 editor: markdown
 dateCreated: 2024-03-06T10:09:36.384Z
@@ -27,12 +27,11 @@ The script performs the following main tasks:
 ###  Configuring the Node
  Automatically configures the node. For manual node configuration instructions, please see [saito-rust-config](/tech/installation/saito-rust-config)
 
-### Creating Necessary Directories and Files
+### Issuance File Setup
 
-Ensures the data/blocks directory exists for blockchain data storage and creates an issuance file from a template if it's missing.
+ Creates an issuance file from a template if it's missing.
 
 Key Operations:
-- Directory creation for blocks.
 - Issuance file setup.
 
 
