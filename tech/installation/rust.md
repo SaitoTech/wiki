@@ -2,7 +2,7 @@
 title: Saito Rust - Installation Instructions
 description: 
 published: true
-date: 2024-03-08T08:17:40.645Z
+date: 2024-03-08T08:18:04.154Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:32:52.212Z
@@ -42,8 +42,6 @@ cd saito-rust-workspace/scripts
 
 The setup process has been simplified to just running the initial_setup.sh script. This script automates the environment setup, application configuration, and prepares your system for the Saito Rust workspace. For a detailed explanation of what the script does, please refer to the [Rust bootstrap script documentation](https://wiki.saito.io/e/en/tech/installation/rust-bootstrap-script)
 
-
-This script handles the environment setup, dependencies installation, configuration files preparation, and data directories setup across both Linux and macOS platforms.
 
 
 #### Step 3: Run the Application
