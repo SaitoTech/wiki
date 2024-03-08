@@ -2,14 +2,14 @@
 title: How to use saito-rust configuration file
 description: 
 published: true
-date: 2024-02-06T05:21:45.836Z
+date: 2024-03-08T08:29:46.170Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-06T05:03:07.560Z
 ---
 
 ## Configuration File Explanation
-The config.template.json file is essential for configuring your Saito node. Below is an explanation of its structure:
+The config.template.json is a template file for configuring your Saito node. Below is an explanation of its structure:
 
 ### Server Configuration
 - host: IP address the server listens on. 127.0.0.1 for localhost.
