@@ -1,16 +1,16 @@
 ---
-title: Use Cases
-description: 
+title: PKI and ATR
+description: Public Key Infrastructure and Automatic Transaction Rebroadcasting
 published: true
-date: 2024-03-11T21:58:52.864Z
+date: 2024-03-11T22:00:37.588Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T01:04:19.828Z
 ---
 
-# Public Key Infrastructure and ATR
+# Public Key Infrastructure and Automatic Transaction Rebroadcasting - PKI & ATR
 
-This page serves as an abstract discussion of the utility of Saito and scalable, but specifically, transient, blockchain generally. To learn about specific applications running on Saito, visit the [applications](https://wiki.saito.io/en/tech/applications) page of the Wiki or [try them](https://saito.io/redsquare/) yourself.
+This page serves as an abstract discussion of the utility of Saito and scalable, but specifically, transient, blockchain generally. To learn about applications leveraging this technology on Saito right now, visit the [applications](https://wiki.saito.io/en/tech/applications) page of the Wiki or [try them](https://saito.io/redsquare/) yourself.
 
 <ul style="color:">
   <li> 1. <a style="text-decoration:none" href="#1"> Universal Broadcast </a> </li>
