@@ -2,7 +2,7 @@
 title: PKI and ATR
 description: Public Key Infrastructure and Automatic Transaction Rebroadcasting
 published: true
-date: 2024-03-11T22:00:37.588Z
+date: 2024-03-12T05:16:39.097Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T01:04:19.828Z
@@ -39,9 +39,11 @@ This page serves as an abstract discussion of the utility of Saito and scalable,
 
 ## Introduction
 
-Many wonder what possible use cases another new blockchain could possibly serve, and yet others wonder what compelling use case blockchain truly serves at all. This page answers the latter by contextualizing Saito's strengths as solutions to known problems in existing internet infrastructure.
+Many wonder what possible use cases another new blockchain could possibly serve, and yet others wonder what compelling use case blockchain truly serves at all. This page answers the latter by contextualizing Saito's strengths as solutions to known problems in existing internet security which fit under the category *Public Key Infrastructure.* 
 
 As to the former question: why another blockchain need exist to solve this problem; the complete answer is out of scope. The short answer is that [Saito Consensus](https://wiki.saito.io/en/consensus) solves known market failures which impede traditional and 'modern' blockchain's ability to scale while remaining open.
+
+Automatic Transaction Rebroadcasting's allowance of 'temporary' or 'transient' data on the blockchain is a crucial economic feature which disintermediates Universal Broadcast from permanent storage liabilities. Such seperation is necessary for scaling any non-sharded, open data structure.
   
 ## <div id="1">Universal Broadcast</div>
 
