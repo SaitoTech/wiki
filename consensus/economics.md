@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-07T12:24:22.647Z
+date: 2024-03-13T03:44:52.123Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -74,7 +74,7 @@ Free Rider Problems occur between the funding of a non-excludable good (one that
 > *Markets need to control the distribution of benefits to induce people to pay for them. If you're producing something that everyone can enjoy, you'll have difficulty convincing someone to pay you to cover the cost.*
 > -[Saito FAQs](https://saitofaqs.com/faq/how-does-saito-solve-the-free-rider-problem)
 
-The classic solution to this problem is to *privatize* the once public good - to exclude access to its benefits in order to solicit appropriate payment. But this solution is inadequate for goods which can't be restricted from public use, or which have open access as a founding principle; in the case of blockchain, the routing of fee-paying transaction towards the block producers who enjoy the total fee-reward is a Free Rider Problem.
+The classic solution to this problem is to *privatize* the once public good - to exclude access to its benefits in order to solicit appropriate payment. But this solution is inadequate for goods which can't be restricted from public use, or which have open access as a founding principle; in the case of blockchain, the routing of fee-paying transaction towards the block producers, who then enjoy the total fee-reward, is a Free Rider Problem.
 
 ### <div id="chainIncentivesFR"> Free Rider Incentives in Blockchain </div>
 
