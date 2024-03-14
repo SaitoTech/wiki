@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-13T03:44:52.123Z
+date: 2024-03-14T05:21:12.890Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -33,7 +33,7 @@ Those familiar with market failures and blockchain may find the [Saito Whitepape
 
 Saito consensus primarily addresses two well studied market failures, The <a style="text-decoration:none" href="#fr"> Free Rider Problem </a>, and The <a style="text-decoration:none" href="#totc"> Tragedy of The Commons </a> - both well-founded and recognized game theoretic dilemmas; the only assumption being that self-interested actors behave rationally.
 
-Market failures are situations in which the rational incentives of individuals leads to less prosperous outcomes for the group. These sub-optimal outcomes are pervasive due to the extreme sensitivity of systems to 'defection;' few dishonest players can exploit the honesty of the group and turn the 'honest' or 'nice' strategy into a losing one.
+Market failures are situations in which the rational incentives of individuals leads to less prosperous outcomes for everyone. These sub-optimal outcomes are pervasive due to the extreme sensitivity of naive systems to 'defection;' few dishonest players can exploit the honesty of the group and turn the 'honest' or 'nice' strategy into a losing one.
 
 <br>
 <div style="display: flex; justify-content: center; width: 100%;">
@@ -46,7 +46,7 @@ Market failures are situations in which the rational incentives of individuals l
 
 This dynamic is commonly referred to as a [Prisoner's Dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma); the Wikipedia link lists some notable real-life examples. The standard reaction to the dilemma in the context of market failures is to privatize access to the good in order to protect against exploitation. 
 
-**Saito exists to solve market failures in Proof of Work and Proof of Stake, because privatization of the blockchain is not an acceptable solution.** Addressing these market failures is crucial for scalable, secure, sustainable and most importantly, open, blockchain.
+**Saito exists to solve market failures in Proof of Work and Proof of Stake, without privatization of the blockchain.** Addressing these market failures is crucial for scalable, secure, sustainable and most importantly, open, blockchain.
 
 Saito is the first and only layer-1 blockchain to address these market failures on the consensus level, thereby avoiding the tough decision between remaining open or scaling network bandwidth. Saito consensus aligns the incentives for scale and openness as a single fee-sharing mechanism, and avoids collapse via bloat through a market-based rent system.
 
@@ -54,7 +54,7 @@ Saito is the first and only layer-1 blockchain to address these market failures 
 
 The cryptographic schemes in Saito which are responsible for addressing the market failures in Proof of Work and Proof of Stake are relatively simple, certainly less complicated than many modern Proof of Stake consensus protocols; so it is natural to ask: why is Saito the first and only blockchain to address these market failures?
 
-The answer is that merely recognizing the true nature of the problem is difficult. Seeing that issues around scaling, openness, and security can be distilled down to  more fundamental problems and understanding how exactly cryptography and incentives can be employed to address those problems is where the sophistication lies. Once the problems are clearly identified, the mechanisms required to address them are elegant.
+The answer is that merely recognizing the true nature of the problem is difficult. Seeing that issues around scaling, openness, and security can be distilled down to  more fundamental problems and understanding how exactly cryptography and incentives can be employed to address those problems is where the sophistication lies. Once the problems are clearly identified, the mechanisms required to address emerge somewhat naturally.
 
 Thus in attempting to understand Saito, many study the cryptographic schemes and understand them on a technical level, but still cannot truly explain what motivates the incentives therein. Most blockchain issues are framed as technical problems, but are in fact incentive-level, game-theoretic, economic problems - therefore many people study Saito with the wrong frame-of-mind.
 
@@ -74,7 +74,7 @@ Free Rider Problems occur between the funding of a non-excludable good (one that
 > *Markets need to control the distribution of benefits to induce people to pay for them. If you're producing something that everyone can enjoy, you'll have difficulty convincing someone to pay you to cover the cost.*
 > -[Saito FAQs](https://saitofaqs.com/faq/how-does-saito-solve-the-free-rider-problem)
 
-The classic solution to this problem is to *privatize* the once public good - to exclude access to its benefits in order to solicit appropriate payment. But this solution is inadequate for goods which can't be restricted from public use, or which have open access as a founding principle; in the case of blockchain, the routing of fee-paying transaction towards the block producers, who then enjoy the total fee-reward, is a Free Rider Problem.
+The classic solution to this problem is to *privatize* the once public good - to exclude access to its benefits in order to solicit appropriate payment. But this solution is inadequate for goods which can't be restricted from public use, or which have open access as a founding principle; in the case of blockchain, the routing of fee-paying transaction towards the block producers who enjoy the total fee-reward is a Free Rider Problem.
 
 ### <div id="chainIncentivesFR"> Free Rider Incentives in Blockchain </div>
 
