@@ -2,7 +2,7 @@
 title: Incentive Misalignments in Non-Saito Blockchains
 description: 
 published: true
-date: 2024-03-14T05:21:12.890Z
+date: 2024-03-14T05:31:57.614Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-25T07:08:04.493Z
@@ -69,12 +69,12 @@ This page hopes to explain the incentive-level issues which lead to market failu
 
 * A [video](https://youtu.be/XJiE8TrwW2A) overview on the Free Rider Problem, its relationship to blockchain, and Saito's solution is also available.
 
-Free Rider Problems occur between the funding of a non-excludable good (one that everyone can enjoy) and the benefit of that good. Consider a group dedicated to removing litter at a free nature-park: everyone collectively enjoys the benefit of a cleaner park, but only those donating time or money to the group have to pay for it. Everyone else is allowed to 'free-ride' off the expense of the maintainers.
+Free Rider Problems occur between the funding of a non-excludable good (one that everyone can enjoy) and the benefit of that good. Consider a group dedicated to removing litter at a public nature-park: everyone collectively enjoys the benefit of a cleaner park, but only those donating time or money to the group have to pay for it. Everyone else is allowed to 'free-ride' off the expense of the maintainers.
 
 > *Markets need to control the distribution of benefits to induce people to pay for them. If you're producing something that everyone can enjoy, you'll have difficulty convincing someone to pay you to cover the cost.*
 > -[Saito FAQs](https://saitofaqs.com/faq/how-does-saito-solve-the-free-rider-problem)
 
-The classic solution to this problem is to *privatize* the once public good - to exclude access to its benefits in order to solicit appropriate payment. But this solution is inadequate for goods which can't be restricted from public use, or which have open access as a founding principle; in the case of blockchain, the routing of fee-paying transaction towards the block producers who enjoy the total fee-reward is a Free Rider Problem.
+The classic solution to this problem is to *privatize* the once public good - to exclude access to its benefits in order to solicit appropriate payment. But this solution is inadequate for goods which can't be restricted from public use, or which have open access as a founding principle; in the case of blockchain, **the routing of fee-paying transaction towards the block producers who hoards the total fee-reward is a Free Rider Problem.**
 
 ### <div id="chainIncentivesFR"> Free Rider Incentives in Blockchain </div>
 
@@ -130,9 +130,11 @@ Ethereum is a great example of the opposite tradeoff. In pushing the Free-Rider 
 </figure>
 </div>
 
-The flagship example is the API node service [Infura](https://youtu.be/fJGuxcEvats) which is majorly responsible for serving applications both in service of developers and users. The massive userbase of the Metamask wallet is primarily [routed through](https://support.metamask.io/hc/en-us/articles/4417315392795-What-is-Infura-and-why-does-MetaMask-use-it) [and dependent](https://decrypt.co/98457/metamask-ethereum-apps-down-infura-outage) on Infura, not to mention many 'decentralized' applications.
+The flagship example is the API node service [Infura](https://youtu.be/fJGuxcEvats) which is majorly responsible for serving applications both in service of developers and users. The massive userbase of the Metamask wallet is primarily [routed through](https://support.metamask.io/hc/en-us/articles/4417315392795-What-is-Infura-and-why-does-MetaMask-use-it) [and dependent](https://decrypt.co/98457/metamask-ethereum-apps-down-infura-outage) on Infura, not to mention the prolific share of 'decentralized' applications reliant on it. Note that Infura and other node providers mainly run their infrastructure atop even more centralized operations like AWS.
 
 Infura and similar node providers serve more than just Ethereum. Dozens of chains with the ambition to scale their blockchain like or past Ethereum quickly outpace what independent full nodes are able to provide and fall-back to private solutions like Infura. This dynamic concentrates power and profit to private companies which can [censor](https://cryptoslate.com/metamask-blocks-ethereum-transactions-in-several-jurisdictions-citing-compliance-issues/), and [spy on](https://cointelegraph.com/news/metamask-will-start-collecting-user-ip-addresses) users, and which take security from the underlying blockchain to instead finance closed revenue streams.
+
+Private operations running blockchain nodes isn't the issue, but their lack of accountability towards the blockchains they serve is. Whereas mining and staking have built-in punishment for nodes who misbehave, censor, or perform sub-optimally, the typical dynamics of monopoly are the rules that apply to node services whose work is so disconnected from consensus.
 
 <!--
 The users sending the transaction and the relay nodes propagating them into the network share the same incentive: deliver it to a block producer as quickly as possible. The user simply wants fast service, but the relay node needs to outcompete other relay nodes handling that transaction. -->
