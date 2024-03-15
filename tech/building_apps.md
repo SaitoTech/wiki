@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-01-03T05:12:07.176Z
+date: 2024-03-15T00:51:16.102Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -14,6 +14,7 @@ Applications on saito.io are modules that get installed into the wallet. Applica
 
 If you are getting started programming on Saito, a good place to start is our [tutorial series](/tech/tutorials) for new developers. Our Github repository also has a directory full of [reference modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) you can modify or consult if you are curious how the existing applications work.
 
+You can also check out the community resource [Livedocs](https://github.com/mat888/saito-livedocs), which serves as a working demonstration and hackable template for basic Saito applications.
 
 #### What can I build?
 You can build almost anything that can can be created in code on Saito. Saito excels at sending large quantities of data on chain quickly and cheaply. This makes on-chain key swaps, card shuffles, handshakes etc. simple and cheap to deploy.
