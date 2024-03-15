@@ -2,7 +2,7 @@
 title: Saito Rust - Installation Instructions
 description: 
 published: true
-date: 2024-03-15T05:27:09.974Z
+date: 2024-03-15T05:28:57.723Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:32:52.212Z
@@ -45,11 +45,11 @@ For a detailed explanation of what the script does, please refer to the [Rust bo
 
 #### Step 3: Run the Application
 
-Upon completion of the setup script, your Saito Rust workspace is ready to use. Start the application with Rust's cargo tool:
+Upon completion of the setup script, you are ready to start running Saito Rust locally. Go back to the root directory and navigate into the ```saito-rust``` subdirectory. Then start the application with Rust's cargo tool:
 
 ````bash
 cd ../saito-rust
 RUST_LOG=debug cargo run
 ````
 
-After executing these steps, your Saito Rust workspace should be fully operational. The initial_setup.sh script simplifies the process, making it straightforward to get up and running. For customization or further information, refer to the [detailed documentation](https://wiki.saito.io/e/en/tech/installation/rust-bootstrap-script) or contact the Saito community for support.
+You can now test if Saito is running on your machine by pointing your browser to http://localhost:12101/. 
