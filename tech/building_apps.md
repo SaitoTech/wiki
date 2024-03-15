@@ -2,13 +2,13 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-03-15T00:51:16.102Z
+date: 2024-03-15T00:52:01.951Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
 ---
 
-# Saito Applications
+# Saito Application Development
 
 Applications on saito.io are modules that get installed into the wallet. Applications use on-chain and off-chain messages to communicate and can plug into other applications.
 
