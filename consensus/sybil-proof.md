@@ -2,7 +2,7 @@
 title: Sybil-Proof
 description: 
 published: true
-date: 2023-11-09T02:48:28.431Z
+date: 2024-04-02T06:07:05.035Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
@@ -64,6 +64,7 @@ Note that $A$ is free at any time to produce a block with the version of the tra
 | Fee | $A$ routing work | $B$ routing work | Total Routing Work
 ---|---|---|---|
 $f$ | $f \longrightarrow$ | $f \over 2$ | $3f \over{2}$
+$f$ | $f \longrightarrow$ | $f \over 2$ | $\frac{3f}{2}$
 
 For the block containing just the single transaction in the table above, the total fees equals $F = f$, thus the probability of that transaction being chosen is $f \over{F}$$=1$, and there is only a single term for each sum of probabilities. The routing reward is ${F \over 2} = {f \over 2}$.
 
