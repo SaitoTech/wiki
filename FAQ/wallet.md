@@ -2,13 +2,13 @@
 title: Saito Wallet
 description: Information about holding native Saito
 published: true
-date: 2024-04-02T17:35:17.117Z
+date: 2024-04-02T17:35:30.056Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-29T00:06:48.906Z
 ---
 
-# Saito Wallet
+# Saito Wallet FAQs
 
 <ol>
   <li><a href="#tokens">Does Saito have a native token?</a></li>
