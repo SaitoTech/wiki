@@ -2,7 +2,7 @@
 title: Saito Wallet
 description: Information about holding native Saito
 published: true
-date: 2024-02-29T06:11:30.344Z
+date: 2024-04-02T17:35:17.117Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-29T00:06:48.906Z
@@ -10,9 +10,15 @@ dateCreated: 2024-02-29T00:06:48.906Z
 
 # Saito Wallet
 
-## Wrapped Tokens and Bridging
+<ol>
+  <li><a href="#tokens">Does Saito have a native token?</a></li>
+  <li><a href="#native">Where is my native Saito wallet?</a></li>
+  <li><a href="#wallet">Cold wallet for native tokens?</a></li>
+</ol>
 
-The Saito token exists in three forms: a wrapped [ERC20](https://etherscan.io/address/0xFa14Fa6958401314851A17d6C5360cA29f74B57B), a wrapped [BEP20](https://bscscan.com/address/0x3c6dad0475d3a1696b359dc04c99fd401be134da), and the native token. The wrapped tokens can be held on traditional wallets such as Metamask - in order to migrate wrapped tokens to a native Saito wallet, follow closely these [instructions](https://wiki.saito.io/en/tokenomics#migration-to-native-saito-token).
+## <div id="tokens"> Wrapped Tokens and Bridging </div>
+
+The Saito token exists primarily in three forms: a wrapped [ERC20](https://etherscan.io/address/0xFa14Fa6958401314851A17d6C5360cA29f74B57B), a wrapped [BEP20](https://bscscan.com/address/0x3c6dad0475d3a1696b359dc04c99fd401be134da), and the native token. The wrapped tokens can be held on traditional wallets such as Metamask - in order to migrate wrapped tokens to a native Saito wallet, follow closely these [instructions](https://wiki.saito.io/en/tokenomics#migration-to-native-saito-token).
 
 <span style="font-weight:bold; font-size:18px">THERE IS NO NEED TO BRIDGE</span> - there will never be any event which forces users to bridge their wrapped tokens. Wrapped Saito tokens will remain valid indefinitely. Avoid scammers claiming otherwise.
 
@@ -20,7 +26,7 @@ Before bridging, please take care to understand the token [persistence curve](ht
 
 ![token_persistence_curve.png](/token_persistence_curve.png)
 
-## Native Wallet
+## <div id="native"> Native Wallet </div>
 
 Upon loading into a [Saito Application](https://wiki.saito.io/en/tech/applications) such as [Red Square](https://saito.io/redsquare/) a native wallet is automatically generated and can be accessed from the hamburger menu in the top right; From here the native Saito balance and ability to send Saito tokens are exposed.
 
@@ -46,7 +52,7 @@ One of the visions for Saito is that anyone can use the open internet, Web 3, wi
 
 Hot wallets are inherently easier to use but less secure. Responsible Saito users are expected to keep a reasonable amount of tokens in their hot wallets at one time. Users who wish to use Saito as a secure token vault are encouraged to manage a cold wallet:
 
-### Cold Wallets
+### <div id="wallet"> Cold Wallets </div>
 
 **Note:** Users creating and storing wallets are responsible for their own keys. The Saito team nor the author of these instructions can take any responsibility for loss or theft of wallet credentials or funds.
 
