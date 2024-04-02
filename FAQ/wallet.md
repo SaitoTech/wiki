@@ -2,7 +2,7 @@
 title: Saito Wallet
 description: Information about holding native Saito
 published: true
-date: 2024-04-02T17:40:23.702Z
+date: 2024-04-02T18:35:37.047Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-29T00:06:48.906Z
@@ -26,17 +26,23 @@ Before bridging, please take care to understand the token [persistence curve](ht
 
 ![token_persistence_curve.png](/token_persistence_curve.png)
 
-## <div id="native"> Native Wallet </div>
+## <div id="native"> Wallet Backups </div>
 
 Upon loading into a [Saito Application](https://wiki.saito.io/en/tech/applications) such as [Red Square](https://saito.io/redsquare/) a native wallet is automatically generated and can be accessed from the hamburger menu in the top right; From here the native Saito balance and ability to send Saito tokens are exposed.
 
-<br>
-<div style="display: flex; justify-content: center;">
-<img src="/walletgif.gif" alt="screencast showing wallet menu with address, balance, backup and additional apps; accessed from 'Red Square' social media site">
-</div>
 
 This wallet is saved in the browser's cache and should be loaded up for future sessions automatically. Users with any attachment to a Saito account are encouraged to find and execute the **backup** functions in this same menu.
 
+Saito wallets can be easily backed up from the settings menu. Access the menu (as seen below) but clicking the hamburger icon in the top right of the screen and hitting the 'account' button.
+
+From this menu the private key can be saved directly, or a more convenient file containing the private key and extra account information can be backed up. This file (as opposed to just the private key) will remember certain data, such as the shared secret keys of your contacts.
+<br>
+
+<div style="text-align: center;">
+<img src="/wallet-backup-p1.png" alt="Image 1" style="width:45%;">
+<img src="/wallet-backup-p2.png" alt="Image 1" style="width:45%;">
+<img src="/wallet-backup-p3.png" alt="Image 1" style="width:75%;">
+</div>
 
 ### Hot Wallet
 
