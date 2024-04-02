@@ -2,7 +2,7 @@
 title: Sybil-Proof
 description: 
 published: true
-date: 2024-04-02T06:13:00.020Z
+date: 2024-04-02T06:15:54.648Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
@@ -13,6 +13,8 @@ dateCreated: 2023-09-12T04:54:16.592Z
 - Read [*A Simple Proof of Sybil Proof.*](https://github.com/SaitoTech/papers/blob/main/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf) for a complete and formal proof or for more brevity, the [original blog post](https://saito.tech/a-simple-proof-of-sybil-proof/).
 
 - Learn about [Sybils](https://wiki.saito.io/en/consensus/sybils) and how they damage permisionless networks.
+
+## Introduction
 
 > A sybil produces the block with w/ 2nd hop routing work. A non-sybil produces the block faster with 1st hop routing work. The probability of the sybil collecting payment is lower because the probability of their blocks being added to the chain is lower. <br><br>The only way a sybil can reach parity on probability is if they burn their own money, which puts their cost higher than the non-sybil. There is simply no world in which the probability of getting paid is the same for a sybil as a non-sybil ceteris paribus.
 <br>-David Lancashire
