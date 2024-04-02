@@ -2,7 +2,7 @@
 title: Sybil-Proof
 description: 
 published: true
-date: 2024-04-02T06:11:55.182Z
+date: 2024-04-02T06:13:00.020Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
@@ -86,13 +86,13 @@ If *node* $B$ decides to Sybil the transaction sent to him by *node* $A$, the re
 
 | Fee | $A$ routing work | $B$ routing work | $B_2$ routing work | Total Routing Work
 ---|---|---|---|---|
-$f$ | $f \longrightarrow$ | ${f \over 2} \longrightarrow$ | ${f \over 4}$ | $7f \over 4$
+$f$ | $f \longrightarrow$ | ${f \over 2} \longrightarrow$ | $f \over 4$ | $7f \over 4$
 
 Crucially, *node* $B$ has also diminished his block production ability from $f \over 2$ to $f \over 4$. If $B$ wants to include  this Sybilled transaction which pays him more, he must supplement his block with the routing work he destroyed when adding a hop ($f \over 4$) - that block looks like this:
 
 | Fee | $A$ routing work | $B$ routing work | $B_2$ routing work | Total Routing Work
 ---|---|---|---|---|
-$f$ | $f \longrightarrow$ | ${f \over 2} \longrightarrow$ | ${f \over 4}$ | $7f \over 4$
+$f$ | $f \longrightarrow$ | ${f \over 2} \longrightarrow$ | $f \over 4$ | $7f \over 4$
 $f \over 4$ | 0 | $f \over 4$ | 0 | $f \over 4$
 
 The total block reward is now $F = f + {f\over 4} = {5f \over 4}$ and so the routing reward is ${F \over 2} = {5f \over 8}$. In the *Sybil* case, the expected values $v_s(X)$ are:
