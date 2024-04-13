@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2024-02-26T12:21:58.805Z
+date: 2024-04-13T06:52:17.987Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -10,20 +10,19 @@ dateCreated: 2022-02-17T10:09:00.217Z
 
 # Saito Consensus
 
-Saito Consensus eliminates the [sybil attacks](/consensus/sybil-proof),  [majoritarian attacks](/consensus/majoritarian-attacks),and several other [attack vectors](/consensus/attack-vectors) common in proof-of-work and proof-of-stake consensus mechanisms by correcting the collective action problems buried in their incentive structures.
+Saito Consensus eliminates the [sybil attacks](/consensus/sybil-proof),  [majoritarian attacks](/consensus/majoritarian-attacks),and several other [attack vectors](/consensus/attack-vectors) common in proof-of-work and proof-of-stake consensus mechanisms by correcting the collective action problems buried in their incentive structures. This page offers a brief introduction to how consensus works.
 
 ## 1. PRODUCING BLOCKS
 
-When users send transactions into the network they add cryptographic routing signatures that specify the first-hop node(s) to which they are sending their transaction(s). Receiving nodes add similar routing signatures as they forward these transactions, creating an unforgeable record within transactions of the path they have taken into the network.
+When users send transactions into the network they add cryptographic routing signatures that specify the first-hop node(s) to which they are sending their transaction(s). Receiving nodes add similar signatures as they relay these transactions, creating an unforgeable record of the path transactions have taken into the network.
 
-These routing paths can be examined to confirm the amount of "routing work" available in a transaction. Transactions without valid routing paths contain no routing work. The amount of routing work in any other transaction is its total fee halved with each hop beyond the first that the transaction has taken into the network.
+The blockchain maintains a "difficulty" for block production that specifies the amount of "routing work" blocks are required to contain. Nodes produce blocks when their mempool contains enough valid transactions to meet this criteria. Any blocks without adequate routing work are invalid by consensus rules.
 
-The blockchain maintains a "difficulty" for block production that is measured in routing work. Nodes produce blocks when they have enough routing work in the transactions in their mempool to meet difficulty criteria. Blocks which do not contain the required amount of routing work are invalid according to consensus rules.
-
+The amount of routing work in any other transaction is its total fee halved with every hop beyond the first that the transaction has taken into the network. Transactions without a valid routing path connecting the block producer to the sending user contain no routing work. 
 
 ## 2. THE PAYMENT LOTTERY
 
-When a block is produced all of the fees in the block are burned. Miners then start hashing to find a golden ticket that will solve the block that has already been produced.
+When a block is produced all of the fees in the block are burned. But miners may start hashing to find a golden ticket that will trigger the resurrection of the burned fees and bring them back into circulation.
 
 If a golden ticket for the previous block (block N) is included in the very next block (block N+1), consensus issues a payout worth the average fees burned per block over the last epoch. Half are paid to the miner that found the golden ticket and half are paid to a routing node.
 
