@@ -2,7 +2,7 @@
 title: HIS Tutorial
 description: 
 published: true
-date: 2024-04-22T01:04:45.185Z
+date: 2024-04-22T01:06:42.346Z
 tags: 
 editor: markdown
 dateCreated: 2024-04-20T08:11:24.441Z
@@ -50,22 +50,22 @@ Victory Determination Phases happen at the end of each turn - this is the phase 
 
 These are the six factions of the game - many game scenarios take place in the following order:
 
-<div style="display: inline-block; width: 12px; height: 12px; background-color: #019d4c; border: solid 0.5px black; border-radius: 2px;"></div> Ottomans
+<div style="display: inline-block; width: 16px; height: 16px; background-color: #019d4c; border: solid 0.5px black; border-radius: 2px;"></div> Ottomans
 <br>
 
-<div style="display: inline-block; width: 12px; height: 12px; background-color: #fce75a; border: solid 0.5px black; border-radius: 2px;"></div> Hapsburgs
+<div style="display: inline-block; width: 16px; height: 16px; background-color: #fce75a; border: solid 0.5px black; border-radius: 2px;"></div> Hapsburgs
 <br>
 
-<div style="display: inline-block; width: 12px; height: 12px; background-color: #e54640; border: solid 0.5px black; border-radius: 2px;"></div> England
+<div style="display: inline-block; width: 16px; height: 16px; background-color: #e54640; border: solid 0.5px black; border-radius: 2px;"></div> England
 <br>
 
-<div style="display: inline-block; width: 12px; height: 12px; background-color: #0090cf; border: solid 0.5px black; border-radius: 2px;"></div> France
+<div style="display: inline-block; width: 16px; height: 16px; background-color: #0090cf; border: solid 0.5px black; border-radius: 2px;"></div> France
 <br>
 
-<div style="display: inline-block; width: 12px; height: 12px; background-color: #7b4d96; border: solid 0.5px black; border-radius: 2px;"></div> Papacy
+<div style="display: inline-block; width: 16px; height: 16px; background-color: #7b4d96; border: solid 0.5px black; border-radius: 2px;"></div> Papacy
 <br>
 
-<div style="display: inline-block; width: 12px; height: 12px; background-color: #a2583d; border: solid 0.5px black; border-radius: 2px;"></div> Protestants
+<div style="display: inline-block; width: 16px; height: 16px; background-color: #a2583d; border: solid 0.5px black; border-radius: 2px;"></div> Protestants
 <br>
 
 
