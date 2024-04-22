@@ -2,7 +2,7 @@
 title: HIS Tutorial
 description: 
 published: true
-date: 2024-04-22T00:47:04.897Z
+date: 2024-04-22T01:04:45.185Z
 tags: 
 editor: markdown
 dateCreated: 2024-04-20T08:11:24.441Z
@@ -16,13 +16,13 @@ This open-source tutorial uses excerpts from the [official rulebook](https://www
 
 You win a game of *Here I Stand*, most simply, by ammassing *Victory Points.*
 
-In the victory track pictured below, you can see six colored *VP* tiles as they lie at the start of a game; each color represents a <a href=#factions>faction</a>. 
+In the victory track pictured below, you can see six colored *VP* tiles as they lie at the start of a game; each color represents a <a href=#factions onclick="flashDiv()">faction</a>. 
 
 ![his-victory-track-gamestart.png](/his-victory-track-gamestart.png)
 
 ## How to Gain Victory Points
 
-
+Though special conditions can trigger <a href="#early">early victory</a>, the game is most commonly won by simply having more victory points than your opponents.
 
 ## Types of Victory
 
@@ -30,7 +30,9 @@ In the victory track pictured below, you can see six colored *VP* tiles as they 
 
 Victory Determination Phases happen at the end of each turn - this is the phase of the game where winners may be determined. Having the most VPs on the final phase equals a win. But there are also a few special conditions to strategize around in order to win the game before the last turn.
 
-<details><summary> Types of Early Victory </summary>
+### <div id="early" class="targetDiv"> Early Victories </div>
+
+<details> <summary>Types of Early Victory</summary>
   
   <details><summary> Automatic Victory </summary>
     Standard Victory - 
@@ -44,7 +46,7 @@ Victory Determination Phases happen at the end of each turn - this is the phase 
 </details>
   
 
-## <div id="factions"> Factions </div>
+## <div id="factions" class="targetDiv"> Factions </div>
 
 These are the six factions of the game - many game scenarios take place in the following order:
 
@@ -69,7 +71,7 @@ These are the six factions of the game - many game scenarios take place in the f
 
 <br>
 
-## <div id="license"> License </div>
+## <div id="license" class="targetDiv"> License </div>
 
 This open-source tutorial uses some excerpts from the [official rulebook](https://www.gmtgames.com/living_rules/HIS-Rules-2010.pdf).
 
@@ -86,4 +88,22 @@ GMT GAMES: https://www.gmtgames.com/p-917-here-i-stand-500th-anniversary-reprint
 AMAZON: https://www.amazon.com/Here-I-Stand-Board-Game/dp/B077QTQGYQ
 
 
+<style>
+ @keyframes flash {
+    0% { background-color: transparent; }
+    33% { background-color: #f71f3d; }
+    100% { background-color: transparent; }
+    
+ }
+
+ .targetDiv {
+    animation-name: flash;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+ }
+
+ .targetDiv:target {
+    animation-iteration-count: 1;
+ }
+</style>
 
