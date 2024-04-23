@@ -2,7 +2,7 @@
 title: HIS Tutorial
 description: 
 published: true
-date: 2024-04-23T02:00:33.257Z
+date: 2024-04-23T04:36:58.373Z
 tags: 
 editor: markdown
 dateCreated: 2024-04-20T08:11:24.441Z
@@ -21,9 +21,11 @@ This tutorial is built ground-up for the <a href="saito.io/arcade">Saito Arcade<
 
 ## The Goal
 
+Though special conditions can trigger <a href="#early">early victory</a>, the game is most commonly won by simply having more victory points than your opponents. 
+
 You win a game of *Here I Stand*, most simply, by ammassing *Victory Points.*
 
-In the victory track pictured below, you can see six <a href=#factions onclick="flashDiv()">factions'</a> *VP* tiles as they lie at the start of a game. 
+In the victory track pictured below, you can see six <a href=#factions onclick="flashDiv()">factions'</a> *VP* tiles as they lie at the start of a game:
 
 ![his-victory-track-gamestart.png](/his-victory-track-gamestart.png)
 
@@ -44,7 +46,7 @@ You play as one or more of the six factions - many game scenarios take place in 
 
 ## Earning Victory Points
 
-Though special conditions can trigger <a href="#early">early victory</a>, the game is most commonly won by simply having more victory points than your opponents. The 'base' VP is calculated at the end of each turn as follows:
+The 'base' VP is calculated at the end of each turn as follows:
 
 <div class="box">
 <div class="factionBox" style="background-color: #019d4c;"></div> Ottomans
