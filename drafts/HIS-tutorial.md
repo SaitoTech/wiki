@@ -2,7 +2,7 @@
 title: HIS Tutorial
 description: 
 published: true
-date: 2024-04-23T00:57:13.261Z
+date: 2024-04-23T01:36:50.398Z
 tags: 
 editor: markdown
 dateCreated: 2024-04-20T08:11:24.441Z
@@ -10,7 +10,14 @@ dateCreated: 2024-04-20T08:11:24.441Z
 
 # *Here I Stand* Game Tutorial
 
-This open-source tutorial uses excerpts from the [official rulebook](https://www.gmtgames.com/living_rules/HIS-Rules-2010.pdf). Please refer to the license agreements <a href="#license">below</a>.
+## Saito Version
+
+The goal for this tutorial is to serve as an in-game aid and get new players started without first studying a longer rulebook. It gets right to the point.
+
+This tutorial is built ground-up for the <a href="saito.io/arcade">Saito Arcade</a> version of *Here I Stand.* It is breifer than the official rulebook because the Saito version simplifies some game elements and automates many of the complex mechanisms for the player (such as score-keeping).
+
+
+* This open-source tutorial uses excerpts from the [official rulebook](https://www.gmtgames.com/living_rules/HIS-Rules-2010.pdf). Please refer to the license agreements <a href="#license">below</a>.
 
 ## The Goal
 
@@ -20,9 +27,33 @@ In the victory track pictured below, you can see six colored *VP* tiles as they 
 
 ![his-victory-track-gamestart.png](/his-victory-track-gamestart.png)
 
-## How to Gain Victory Points
+### Earning Victory Points
 
-Though special conditions can trigger <a href="#early">early victory</a>, the game is most commonly won by simply having more victory points than your opponents.
+Though special conditions can trigger <a href="#early">early victory</a>, the game is most commonly won by simply having more victory points than your opponents. 
+
+<br>
+<div class="factionBox" style="background-color: #019d4c;"></div> Ottomans
+
+<div class="factionBox" style="background-color: #fce75a;"></div> Hapsburgs
+
+<div class="factionBox" style="background-color: #e54640;"></div> England
+
+<div class="factionBox" style="background-color: #0090cf;"></div> France
+
+<div class="factionBox" style="background-color: #7b4d96;"></div> Papacy
+<br>
+
+The English, French, Hapsburg, Ottoman and Papal base VP are all determined by the number of <a href="keys">keys</a> they control. 
+<br>
+
+  
+<div  class="factionBox" style="background-color: #a2583d;"></div> Protestants
+<br>
+
+The Protestant player adds up base VP as follows: 2 VP for each <a href="#electorates">electorate</a> that is under Protestant religious influence and political control.
+
+Note that **neither <a href="keys">keys</a> nor <a href="#electorates">electorates</a>** provide VPs to a faction when those spaces are under <a href="#unrest">unrest</a>.
+  
 
 ## Types of Victory
 
@@ -50,22 +81,22 @@ Victory Determination Phases happen at the end of each turn - this is the phase 
 
 These are the six factions of the game - many game scenarios take place in the following order:
 
-<div style="display: inline-block; width: 16px; height: 16px; background-color: #019d4c; border: solid 0.5px black; border-radius: 2px;"></div> Ottomans
+<div class="factionBox" style="background-color: #019d4c;"></div> Ottomans
 <br>
 
-<div style="display: inline-block; width: 16px; height: 16px; background-color: #fce75a; border: solid 0.5px black; border-radius: 2px;"></div> Hapsburgs
+<div class="factionBox" style="background-color: #fce75a;"></div> Hapsburgs
 <br>
 
-<div style="display: inline-block; width: 16px; height: 16px; background-color: #e54640; border: solid 0.5px black; border-radius: 2px;"></div> England
+<div  class="factionBox" style="background-color: #e54640;"></div> England
 <br>
 
-<div style="display: inline-block; width: 16px; height: 16px; background-color: #0090cf; border: solid 0.5px black; border-radius: 2px;"></div> France
+<div  class="factionBox" style="background-color: #0090cf;"></div> France
 <br>
 
-<div style="display: inline-block; width: 16px; height: 16px; background-color: #7b4d96; border: solid 0.5px black; border-radius: 2px;"></div> Papacy
+<div  class="factionBox" style="background-color: #7b4d96;"></div> Papacy
 <br>
 
-<div style="display: inline-block; width: 16px; height: 16px; background-color: #a2583d; border: solid 0.5px black; border-radius: 2px;"></div> Protestants
+<div  class="factionBox" style="background-color: #a2583d;"></div> Protestants
 <br>
 
 
@@ -89,19 +120,21 @@ AMAZON: https://www.amazon.com/Here-I-Stand-Board-Game/dp/B077QTQGYQ
 
 
 <style>
+  
+  .box {
+    //border: 5px solid black;
+  }
+
  @keyframes flash {
     0% { background-color: transparent; }
     33% { background-color: #f71f3d; }
     100% { background-color: transparent; }
-    
  }
-
  .targetDiv {
     animation-name: flash;
     animation-duration: 1.5s;
     animation-iteration-count: 1;
  }
-
  .targetDiv:target {
     animation-iteration-count: 1;
  }
