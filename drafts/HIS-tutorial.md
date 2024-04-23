@@ -2,7 +2,7 @@
 title: HIS Tutorial
 description: 
 published: true
-date: 2024-04-23T01:48:30.765Z
+date: 2024-04-23T02:00:33.257Z
 tags: 
 editor: markdown
 dateCreated: 2024-04-20T08:11:24.441Z
@@ -23,9 +23,24 @@ This tutorial is built ground-up for the <a href="saito.io/arcade">Saito Arcade<
 
 You win a game of *Here I Stand*, most simply, by ammassing *Victory Points.*
 
-In the victory track pictured below, you can see six colored *VP* tiles as they lie at the start of a game; each color represents a <a href=#factions onclick="flashDiv()">faction</a>. 
+In the victory track pictured below, you can see six <a href=#factions onclick="flashDiv()">factions'</a> *VP* tiles as they lie at the start of a game. 
 
 ![his-victory-track-gamestart.png](/his-victory-track-gamestart.png)
+
+You play as one or more of the six factions - many game scenarios take place in the following order:
+<br>
+<div class="factionBox" style="background-color: #019d4c;"></div> Ottomans
+
+<div class="factionBox" style="background-color: #fce75a;"></div> Hapsburgs
+
+<div  class="factionBox" style="background-color: #e54640;"></div> England
+
+<div  class="factionBox" style="background-color: #0090cf;"></div> France
+
+<div  class="factionBox" style="background-color: #7b4d96;"></div> Papacy
+
+<div  class="factionBox" style="background-color: #a2583d;"></div> Protestants
+
 
 ## Earning Victory Points
 
@@ -56,6 +71,7 @@ Earns 2 VP for each <a href="#electorates">electorate</a> that is under Protesta
 **Neither <a href="keys">keys</a> nor <a href="#electorates">electorates</a>** provide VPs to a faction when those spaces are under <a href="#unrest">unrest</a>.
   
 
+
 ## Types of Victory
 
 ### <div id="determination"> Victory Determination Phase </div>
@@ -78,27 +94,7 @@ Victory Determination Phases happen at the end of each turn - this is the phase 
 </details>
   
 
-## <div id="factions" class="targetDiv"> Factions </div>
 
-These are the six factions of the game - many game scenarios take place in the following order:
-
-<div class="factionBox" style="background-color: #019d4c;"></div> Ottomans
-<br>
-
-<div class="factionBox" style="background-color: #fce75a;"></div> Hapsburgs
-<br>
-
-<div  class="factionBox" style="background-color: #e54640;"></div> England
-<br>
-
-<div  class="factionBox" style="background-color: #0090cf;"></div> France
-<br>
-
-<div  class="factionBox" style="background-color: #7b4d96;"></div> Papacy
-<br>
-
-<div  class="factionBox" style="background-color: #a2583d;"></div> Protestants
-<br>
 
 
 <br>
