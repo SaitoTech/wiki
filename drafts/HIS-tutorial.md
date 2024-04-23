@@ -2,7 +2,7 @@
 title: HIS Tutorial
 description: 
 published: true
-date: 2024-04-22T01:06:42.346Z
+date: 2024-04-23T00:57:13.261Z
 tags: 
 editor: markdown
 dateCreated: 2024-04-20T08:11:24.441Z
@@ -73,7 +73,7 @@ These are the six factions of the game - many game scenarios take place in the f
 
 ## <div id="license" class="targetDiv"> License </div>
 
-This open-source tutorial uses some excerpts from the [official rulebook](https://www.gmtgames.com/living_rules/HIS-Rules-2010.pdf).
+This open-source tutorial uses some excerpts from the [official rulebook](https://www.gmtgames.com/living_rules/HIS-Rules-2010.pdf). Please support the creators and obtain a license for *Here I Stand* before enjoying any open source, non-commercial content (like this guide and the game hosted Saito Arcade) from the game.
 
 All game module code released under the MIT license. All GMT-developed materials (board design, cards, gameplay text) remain owned by GMT Games and are distributed under their license which provides for gameplay and distribution under the following conditions:
 
