@@ -2,7 +2,7 @@
 title: HIS Tutorial
 description: 
 published: true
-date: 2024-04-23T01:36:50.398Z
+date: 2024-04-23T01:48:30.765Z
 tags: 
 editor: markdown
 dateCreated: 2024-04-20T08:11:24.441Z
@@ -27,11 +27,11 @@ In the victory track pictured below, you can see six colored *VP* tiles as they 
 
 ![his-victory-track-gamestart.png](/his-victory-track-gamestart.png)
 
-### Earning Victory Points
+## Earning Victory Points
 
-Though special conditions can trigger <a href="#early">early victory</a>, the game is most commonly won by simply having more victory points than your opponents. 
+Though special conditions can trigger <a href="#early">early victory</a>, the game is most commonly won by simply having more victory points than your opponents. The 'base' VP is calculated at the end of each turn as follows:
 
-<br>
+<div class="box">
 <div class="factionBox" style="background-color: #019d4c;"></div> Ottomans
 
 <div class="factionBox" style="background-color: #fce75a;"></div> Hapsburgs
@@ -43,21 +43,22 @@ Though special conditions can trigger <a href="#early">early victory</a>, the ga
 <div class="factionBox" style="background-color: #7b4d96;"></div> Papacy
 <br>
 
-The English, French, Hapsburg, Ottoman and Papal base VP are all determined by the number of <a href="keys">keys</a> they control. 
-<br>
+Each earn VP equal to the number of <a href="keys">keys</a> they control. 
+</div>
 
-  
+<div class="box">
 <div  class="factionBox" style="background-color: #a2583d;"></div> Protestants
 <br>
 
-The Protestant player adds up base VP as follows: 2 VP for each <a href="#electorates">electorate</a> that is under Protestant religious influence and political control.
+Earns 2 VP for each <a href="#electorates">electorate</a> that is under Protestant religious influence and political control.
+</div>
 
-Note that **neither <a href="keys">keys</a> nor <a href="#electorates">electorates</a>** provide VPs to a faction when those spaces are under <a href="#unrest">unrest</a>.
+**Neither <a href="keys">keys</a> nor <a href="#electorates">electorates</a>** provide VPs to a faction when those spaces are under <a href="#unrest">unrest</a>.
   
 
 ## Types of Victory
 
-### Victory Determination Phase
+### <div id="determination"> Victory Determination Phase </div>
 
 Victory Determination Phases happen at the end of each turn - this is the phase of the game where winners may be determined. Having the most VPs on the final phase equals a win. But there are also a few special conditions to strategize around in order to win the game before the last turn.
 
@@ -122,7 +123,16 @@ AMAZON: https://www.amazon.com/Here-I-Stand-Board-Game/dp/B077QTQGYQ
 <style>
   
   .box {
-    //border: 5px solid black;
+    padding: 10px 10px;
+    margin: 10px;
+    border: 4px solid #00000090;
+    border-radius: 15px;
+  }
+  .factionBox {
+    display: inline-block;
+    width: 16px; height: 16px;
+    border: solid 0.5px black;
+    border-radius: 2px;
   }
 
  @keyframes flash {
