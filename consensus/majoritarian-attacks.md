@@ -2,7 +2,7 @@
 title: majoritarian-attacks
 description: 
 published: true
-date: 2024-04-24T23:05:11.998Z
+date: 2024-04-24T23:12:22.176Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -74,23 +74,24 @@ This is a crucial component, as it makes it costly to use spoofed transaction fe
 
 ### Comparing Saito to PoW
 
-In Bitcoin, a node with 51% of hashpower produces a block and forces the entire network to start over on that new most recent block; it does not matter if the honest network sometimes finds a block first, because the attacker can always wait until their solo-mined-chain is longer. All work from the honest network is censored.
+In Bitcoin, a node with 51% of hashpower produces a block and forces the entire network to start over on that new most recent block; it does not matter if the honest network sometimes finds a block first, because the attacking majority can always wait until their solo-mined-chain is longer. Work and rewards of the honest network is censored.
 
 In Saito, a node with 51% of the current transaction fees must use those fees to produce a block, but the other 49% of transaction fees which were not involved do not suddenly lose their value, and can still be used to make valid blocks. This means any minority of work which remains unincluded in a block remains valuable to consensus nodes, and their ability to contribute to blocks cannot be censored by a malicious majority.
 
-Even if a malicious majority can create a longer chain and censor block production from the honest network for some time, their longest chain has no ability to censor the transactions which an honest minority is building up while the attacker censors them. Honest nodes can always include their work at the end of the attacker's fork, meaning that whatever share of work they accumulate is equal to the share of blocks they can create - this is not possible when a 51% attack exists.
+Even if a malicious majority can create a longer chain and censor block production from the honest network for some time, their longest chain has no ability to censor the transactions which an honest minority is building up while the attacker censors them. Honest nodes can always include their valid work of any age at the end of the attacker's fork - this is not possible in PoW or PoS.
 
 During an attempted attack, consensus nodes who were not allowed to make blocks accumulate work the longer they are censored, and the attacker quickly loses their work as they consume it to produce consecutive blocks, while the rest of the network's store of work grows and grows - both forces serving to reduce the length of the attack.
 
-If an attacker in Saito wants to produce consecutive blocks, they must use up their transaction fees in place of the honest network's fees. Since producing new blocks does not remove the valid work derived from the transaction fees of all other consensus nodes, honest nodes can maintain their *accumulation* of work, which cannot be eliminated just because a new block is made - this preservation of work which is independent of blocks is not possible in PoW or PoS, and is the missing piece to eliminating 51% attacks in any consensus protocol.
+If an attacker in Saito wants to keep producing consecutive blocks after the censored minority has caught-up, they must begin supplementing their attack by paying for fees out-of-pcket and paying the miners. This dedicated attacker first runs out of 'work,' and then runs out of money.
+
+Where PoW and PoS attackers can use their majority to control the chain forever and profit from doing so, the same attack in Saito grows in expense the longer it goes on no matter how large the attacker is.
+
+### Conclusion
+
+The preservation of work, work which is independent of blocks, is not possible in PoW or PoS, and is how Saito eliminates 51% attacks.
 
 Since the amount of work the honest network accumulates can only grow the longer they are censored, the amount of work the attacker must produce to keep censoring them also grows without bound, no matter if the attacker has 51% of inbound fees or 99%.
 
-Even if the attacker owns 100% of inbound fees, as soon as they begin abusing users, new routing nodes are free to enter the network and begin taking market share and interrupting the majority fork.  The ability for recovery from 100% attacks is not possible in any other blockchain.
+Even if the attacker owns 100% of inbound fees, as soon as they begin abusing users, new routing nodes are free to enter the network and begin taking market share and interrupting the majority fork. The ability for recovery from 100% attacks is not possible in any other blockchain.
 
-
----
-
-
-- We invite researchers and auditors to consult a more rigorous [mathematical proof](/consensus/math) of Saito's elimination of the 51% attack.
 
