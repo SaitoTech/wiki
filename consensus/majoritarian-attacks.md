@@ -2,13 +2,15 @@
 title: majoritarian-attacks
 description: 
 published: true
-date: 2023-11-09T02:30:41.398Z
+date: 2024-04-24T22:37:32.331Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
 ---
 
 # Eliminating 51% Attacks
+
+- Consult the [whitepaper](https://saito.io/saito-whitepaper.pdf) to learn the basics.
 
 - For a complete mathematical proof [see here](https://wiki.saito.io/consensus/math).
 
