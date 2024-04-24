@@ -2,7 +2,7 @@
 title: majoritarian-attacks
 description: 
 published: true
-date: 2024-04-24T22:43:15.905Z
+date: 2024-04-24T22:49:59.766Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -18,17 +18,17 @@ dateCreated: 2023-09-20T01:58:02.086Z
 
 ### Consensus
 
-Blockchain consensus protocols can be considered objective competitions which determines what additions may be considered valid and canonical. By all participants recognizing a single consensus protocol, a distributed network can reach full consensus without total coordination (each node is not required to query every other node), by simply judging this agreed upon objective measure between competing proposals, whether it be based on Proof of Work, Proof of Stake or something else.
+Blockchain consensus protocols can be considered objective competitions which determines what additions may be considered valid and canonical. By all participants recognizing a single consensus protocol, a distributed network can reach full consensus with (PoS) or without (PoW, Saito) total coordination (each node is not required data from every other node).
 
 ## Majority Assumptions
 
 ### Proof of Work
 
-Consensus design for distributed ledgers has come a long way since Bitcoin, which uses a longest-chain-rule and threshold of hash-based work within blocks to determine the priorities of competing blocks during disputes. Despite many technical advancements  atop the Bitcoin model, every consensus protocol, except for Saito's, falls prey to *Majoritarian Attack*, commonly referred to as the 51% Attack. 
+Consensus design for distributed ledgers has evolved since Bitcoin, which uses a longest-chain-rule and threshold of hash-based work within blocks to determine the priorities between competing blocks during disputes. Despite many technical advancements atop the Bitcoin model, every consensus protocol, except for Saito's, falls prey to *Majoritarian Attack*, commonly referred to as the 51% Attack. 
 
-While blockchain has provable and objective cost-of-attack when the majority of consensus power stems from honest, competing participants, the economic security unique to blockchain breaks down completely when a majority of power is held by any single, self-interested party. This majority coalition of 51% or more holds the power to censor all other blocks made by the 49% minority, because they can always build a longer chain.
+While blockchain has provable and objective cost-of-attack when the majority of consensus power can be assumed held by honest and competing participants, the economic security unique to blockchain breaks down completely when a majority of power is held by one party or coalition. This majority coalition of 51% or more holds the power to censor all other blocks made by the 49% minority, because they can always build a longer chain.
 
-The biggest issue, and common misconceptions with 51% attacks is the fact that they are in certain cases sustainable. Because overcoming the majority threshold allows attackers to produce all blocks, and earn all rewards, without increasing their work production, attackers have the incentive and the means to *continue* the attack *indefinitely*.
+The biggest issue with 51% attacks is the fact that they are economically sustainable - this is contrary to naive popular belief, which states that a 51% has a cost per unit of time, but no profit. Because attackers can produce a longer chain of all their own blocks, they can earn all rewards. All without increasing their work production (cost), attackers have the incentive and the means to *continue* the attack *indefinitely*.
 
 [Discouragement Attacks](https://saito.tech/on-discouragement-attacks/) can make tolerating losses more amenable to attackers as they can force all honest participants to share those losses and effectively 'buy out'  honest shares of consensus power by marginalizing their profits until they are forced to drop out.
 
