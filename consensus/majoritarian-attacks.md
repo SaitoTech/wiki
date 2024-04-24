@@ -2,7 +2,7 @@
 title: majoritarian-attacks
 description: 
 published: true
-date: 2024-04-24T22:37:32.331Z
+date: 2024-04-24T22:43:15.905Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -34,13 +34,13 @@ The biggest issue, and common misconceptions with 51% attacks is the fact that t
 
 ### Proof of Stake
 
-Advanced Proof of Stake systems like Ethereum may not map onto the Bitcoin metaphor as simply, but these systems are themselves not immune to majority assumptions and the relevant attack vectors from 51% or even 33% colusion of consensus power. Ethereum ultimately resorts to handling such pervasive attackers through *[Social Consensus](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/attack-and-defense/#people-the-last-line-of-defense)* i.e. a user initiated and approved fork.
+Advanced Proof of Stake systems like Ethereum may not map onto the Bitcoin metaphor as simply, but these systems are themselves not immune to majority assumptions and the relevant attack vectors from 51% or even 33% colusion of consensus power. Ethereum ultimately resorts to handling such pervasive attackers through *[Social Consensus](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/attack-and-defense/#people-the-last-line-of-defense)* i.e. a user-initiated and approved fork.
 
-Because Proof of Stake systems introduce closure to maintain what security they can offer, their consensus model is fundamentally different than that of Bitcoin or Saito, which both allow open defense of any fork by anyone. Proof of Stake is essentially a traditional distributed system which bars access to those not willing to stake a token, and punishes the subset of misbehaviors it can detect by slashing those staked tokens.
+Because Proof of Stake systems introduce closure to maintain what security they can offer, their consensus model is fundamentally different than that of Bitcoin or Saito, which both allow anyone to participate in consensus without first interacting with the chain. Proof of Stake is essentially a traditional distributed system which bars access to those not willing to stake a token, and punishes the subset of misbehaviors it can detect by slashing those staked tokens.
 
 While the principles of a 51% attack described on this page are fundamentally shared in a Proof of Stake system, it is also important to recognize that Saito solves the problem in a domain which does not introduce closure on the set of nodes who may participate - such a model is ultimately simpler and distinct from the methods required by Proof of Stake.
 
-Since Saito is descended from Nakamoto Consensus, this document demonstrates the elimination of the possibility of 51% attacks in a fully open consensus system and largely disregards possible Proof of Stake implementations.
+Proof of Stake is more complicated, but not fundamentally more secure. This document describes the problem and its solution on the simpler, Nakamoto model, which has the same downstream implications towards PoS.
 
 ## How a 51% Attack Works
 
