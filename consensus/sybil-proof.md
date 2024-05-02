@@ -2,7 +2,7 @@
 title: Sybil-Proof
 description: 
 published: true
-date: 2024-04-02T06:16:20.271Z
+date: 2024-05-02T03:56:28.451Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
@@ -158,14 +158,14 @@ This additional burned fee ends up as a bonus to the mining and staking rewards 
 
 ### Are Sybils Really Identified?
 
-One common objection to the the claim that Saito's router reward scheme is Sybil Proof is to notice that it cannot tell the difference between Sybils adding an extra hop to extract value and honest nodes performing sub-optimally. Saito is secure against Sybils, however, precisely because it is able to identify their behavior as a generalized  form of sub-optimal routing outcomes.
+One common objection to the the claim that Saito's router reward scheme is Sybil Proof is to notice that it cannot tell the difference between Sybils adding an extra hop to extract value and honest nodes performing sub-optimally. Saito is secure against Sybils, however, precisely because it is able to identify their behavior as a generalized form of sub-optimal routing outcomes.
 
 This in fact makes Saito's defense against extractive behavior stronger than if it was specifically Sybil Proof, as sub-optimal outcomes which it is secure against *includes* Sybils.
 
 * The fact that Sybils fall under a broader category of behavior in Saito than simply self-cloning does not prevent Sybils from being punished and driven out.
 
-* This broader category of behaviors punishes sub-optimal outcomes more generally. Sybils and non-competitive nodes both extract reward without a similar provision of resources for the network.
+* This broader category of behaviors punishes sub-optimal outcomes more generally. Sybils and non-competitive nodes are punished at the same rate. This is similar to how Bitcoin punishes mining on the wrong fork.
 
-Saito's reward scheme, more generally, is *proofed* against sub-optimal routing behavior in favor of efficient routing and block production. Sybils may not be distinct from non-competitive nodes, but as neither can extract undue rewards (and neither is desirable for an economically scalable and sustainable network), the network has security against both.
+Saito's reward scheme, more generally, is *proofed* against sub-optimal routing behavior in favor of efficient routing and block production. Sybils may not be distinct from non-competitive nodes, but as neither can extract undue rewards (and neither is desirable for an economically scalable and sustainable network), the network has economic security generally against both.
 
 
