@@ -2,7 +2,7 @@
 title: Sybil-Proof
 description: 
 published: true
-date: 2024-05-02T03:56:28.451Z
+date: 2024-05-02T04:21:38.881Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
@@ -53,15 +53,17 @@ The chance that a transaction from the block is the $\text{tx routing share}$, w
 
 The sum considers every transaction in the block. Transactions where a node has a routing work share of zero add zero expected value.
 
-Consider a transaction pays $f$ fee, and is given to *node* $A$ who then propagates it to *node* $B$. If $B$ Sybils, then he will increase his share of routing work in the transaction by marking it with an additional address he controls - if $B$ is honest, he will not. Note that by adding an extra signature to the routing-chain, $B$ claims more of its reward without further propagation the transaction.
+Consider a transaction pays $f$ fee, and is given to *node* $A$ who then propagates it to *node* $B$. If $B$ Sybils, then he will increase his share of routing work in the transaction by marking it with an additional address he controls - if $B$ is honest, he will not. Note that by adding an extra signature to the routing-chain, $B$ takes more share of the reward without further propagating the transaction.
+
+Though the reward, if chosen, increases for Sybils, the chance of being rewarded at all goes down to a greater degree; if there is one takeaway to be remembered from this explanation, this is the one.
 
 The following demonstrates the expected returns of both $A$ and $B$ when $B$ is honest, then when $B$ decides to Sybil:
 
 #### Non-Sybil (honest) Case
 
-$A$ and $B$'s respective shares of routing work as well as the total routing work of the transaction which $B$ holds (total) are described below. 
+$A$ and $B$'s respective shares of routing work as well as the total routing work of the transaction which $B$ holds are described below. 
 
-Note that $A$ is free at any time to produce a block with the version of the transaction without including $B$ and keep $f \over f$, 100%, of the work, but if $B$ wants to produce a block, he only has access to it such that $A$ is in the routing path and thus must share the work.
+Note that $A$ is free at any time to produce a block with the version of the transaction that does not sign any routing-work to $B$ and keep 100%, of the work, but if $B$ wants to produce a block, he only has access to the transaction with $A$ in the routing path and thus must share the work.
 
 | Fee | $A$ routing work | $B$ routing work | Total Routing Work
 ---|---|---|---|
@@ -84,7 +86,7 @@ If this behavior is repeated and the parameters do not change, *node* $A$ can ex
 
 #### Sybil Case
 
-If *node* $B$ decides to Sybil the transaction sent to him by *node* $A$, the respective and total shares of routing work are now described by:
+If *node* $B$ decides to Sybil the transaction sent to him by *node* $A$, adding one extra hop, the respective and total shares of routing work are now described by:
 
 | Fee | $A$ routing work | $B$ routing work | $B_2$ routing work | Total Routing Work
 ---|---|---|---|---|
