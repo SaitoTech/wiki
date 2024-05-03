@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2024-04-13T06:52:17.987Z
+date: 2024-05-03T04:46:15.438Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -14,17 +14,17 @@ Saito Consensus eliminates the [sybil attacks](/consensus/sybil-proof),  [majori
 
 ## 1. PRODUCING BLOCKS
 
-When users send transactions into the network they add cryptographic routing signatures that specify the first-hop node(s) to which they are sending their transaction(s). Receiving nodes add similar signatures as they relay these transactions, creating an unforgeable record of the path transactions have taken into the network.
+When users send transactions into the network they add cryptographic routing signatures that specify the first-hop node(s) to which they are sending their transaction(s). The nodes that receive these transactions add similar signatures as they relay these transactions to their own peers. This gives all transactions an unforgeable record of the path they have taken into the network.
 
-The blockchain maintains a "difficulty" for block production that specifies the amount of "routing work" blocks are required to contain. Nodes produce blocks when their mempool contains enough valid transactions to meet this criteria. Any blocks without adequate routing work are invalid by consensus rules.
+The amount of routing work in any transaction can be derived from this chain of signatures. We specify it as the total fee halved with every hop beyond the first that the transaction has taken into the network. 
 
-The amount of routing work in any other transaction is its total fee halved with every hop beyond the first that the transaction has taken into the network. Transactions without a valid routing path connecting the block producer to the sending user contain no routing work. 
+Nodes produce blocks when their mempool contains enough valid transactions to meet a difficulty criteria maintained by consensus. Any blocks without adequate routing work are invalid by consensus rules.
 
 ## 2. THE PAYMENT LOTTERY
 
-When a block is produced all of the fees in the block are burned. But miners may start hashing to find a golden ticket that will trigger the resurrection of the burned fees and bring them back into circulation.
+When a block is produced all of the fees in it are burned. But miners may start hashing to find a golden ticket that will resurrect the burned fees and bring them back into circulation. This golden ticket is a hash puzzle with its own consensus-imposed difficulty.
 
-If a golden ticket for the previous block (block N) is included in the very next block (block N+1), consensus issues a payout worth the average fees burned per block over the last epoch. Half are paid to the miner that found the golden ticket and half are paid to a routing node.
+If a golden ticket for the previous block (block N) is included in the next block (block N+1), consensus issues a payout worth the average fees burned per block over the last epoch. Half are paid to the miner that found the golden ticket and half are paid to a routing node.
 
 The routing node is selected by using a two-part weighted lottery. A random number associated with the golden ticket is first hashed to pick a random transaction from the previous block, which each transaction's chance of selection weighted by its share of fees contributed to the block. The number is then hashed again to select a node from the routing path of the winning transaction, with each participant's chance of selected weighted according to its share of the aggregate routing work held by all nodes at all positions in that routing path.
 
