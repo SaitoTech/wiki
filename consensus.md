@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2024-05-03T04:46:15.438Z
+date: 2024-05-23T11:44:32.301Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -14,11 +14,11 @@ Saito Consensus eliminates the [sybil attacks](/consensus/sybil-proof),  [majori
 
 ## 1. PRODUCING BLOCKS
 
-When users send transactions into the network they add cryptographic routing signatures that specify the first-hop node(s) to which they are sending their transaction(s). The nodes that receive these transactions add similar signatures as they relay these transactions to their own peers. This gives all transactions an unforgeable record of the path they have taken into the network.
+When users send transactions into the network they add cryptographic routing signatures that specify the first-hop node(s) to which they are sending their transaction(s). Nodes add similar signatures as they relay these transactions to their own peers. This gives all transactions an unforgeable record of the path they have taken into the network.
 
-The amount of routing work in any transaction can be derived from this chain of signatures. We specify it as the total fee halved with every hop beyond the first that the transaction has taken into the network. 
+The amount of routing work in a transaction is derived from this chain of signatures. It is the total fee halved with every hop beyond the first that the transaction has taken into the network. Nodes gather transactions until their mempools contain enough routing work to meet a difficulty criteria maintained by consensus.
 
-Nodes produce blocks when their mempool contains enough valid transactions to meet a difficulty criteria maintained by consensus. Any blocks without adequate routing work are invalid by consensus rules.
+Blocks without adequate routing work are invalid by consensus rules.
 
 ## 2. THE PAYMENT LOTTERY
 
