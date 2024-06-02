@@ -2,7 +2,7 @@
 title: Saito Key Exchange Protocol
 description: 
 published: true
-date: 2024-06-02T03:01:34.115Z
+date: 2024-06-02T03:02:24.084Z
 tags: 
 editor: markdown
 dateCreated: 2024-06-02T03:01:34.115Z
@@ -22,7 +22,7 @@ This isn't the entire story, however. A succesful key exchange by no means ensur
 
 <figure>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Man_in_the_middle_attack.svg/1280px-Man_in_the_middle_attack.svg.png" style="border: 1px gray solid;">
-  <figcaption style="opacity: 80%; text-align: center;"> Credit: <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack#/media/File:Man_in_the_middle_attack.svg">Wikipedia</a> </figcaption>
+  <figcaption style="opacity: 80%; text-align: center;"> Simplified image of a Man-in-the-Middle Attack; Credit: <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack#/media/File:Man_in_the_middle_attack.svg">Wikipedia</a> </figcaption>
   </figure>
 
 The crucial step to prevent a MITM Attack is *authentication -* this step gives some degree of assurance that the cryptographic keys involved in a key exchange belong to the rightful owners.
