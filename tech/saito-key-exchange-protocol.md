@@ -2,7 +2,7 @@
 title: Saito Key Exchange Protocol
 description: 
 published: true
-date: 2024-06-02T03:02:24.084Z
+date: 2024-06-26T04:00:14.856Z
 tags: 
 editor: markdown
 dateCreated: 2024-06-02T03:01:34.115Z
@@ -34,6 +34,8 @@ CAs are a type of trusted database which bind public cryptographic keys to websi
 If the digital signature that a supposed Facebook domain provides a browser does not match the associated certificate that your web browser or device knows, then the user will be issued a warning and implored to not continue the interaction.
 
 ## Flaws of Web2 Key Exchange
+
+https://cromwell-intl.com/cybersecurity/pki-failures.html#badly
 
 Astute cypherpunks will have already spotted the problem: a secure key exchange ultimately relies on *trusting* one or a few certificate authorities.
 
