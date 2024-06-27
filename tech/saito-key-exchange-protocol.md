@@ -2,7 +2,7 @@
 title: Saito Key Exchange Protocol
 description: 
 published: true
-date: 2024-06-26T04:00:14.856Z
+date: 2024-06-27T03:40:18.734Z
 tags: 
 editor: markdown
 dateCreated: 2024-06-02T03:01:34.115Z
@@ -37,7 +37,7 @@ If the digital signature that a supposed Facebook domain provides a browser does
 
 https://cromwell-intl.com/cybersecurity/pki-failures.html#badly
 
-Astute cypherpunks will have already spotted the problem: a secure key exchange ultimately relies on *trusting* one or a few certificate authorities.
+Astute cypherpunks will have already spotted the problem inherent in traditional authentication schemes, that being that a secure key exchange ultimately relies on *trusting* one or a few certificate authorities.
 
 The CAs were put in place to help users protect themselves from imposters and wire-tappers, but there is very little protection a user has from a malicious certificate authority. If a CA has been compromised, it can issue certificates which assure users that any server they visit is indeed authentic and true, when it in fact may not be - it's the same old Man-in-The-Middle Attack, but with extra steps.
 
