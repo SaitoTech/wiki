@@ -2,7 +2,7 @@
 title: Saito Multi-Wallet Deposit Tutorial
 description: 
 published: false
-date: 2024-07-02T23:04:42.599Z
+date: 2024-07-02T23:05:55.548Z
 tags: user-tutorial
 editor: markdown
 dateCreated: 2024-06-27T02:42:23.029Z
@@ -50,4 +50,8 @@ Open the hamburger menu like in <a href="#step1">step 1</a>, and press the **ACC
 Press the **Backup Wallet** option near the top, and save the file. This wallet file includes your Saito private key as well as your other crypto private keys, contacts and other important wallet data.
 
 **Note:** Backup your wallet - do not just save your private key! Your Saito private key does not contain information about your other crypto keys, so it is imperative that you backup the entire wallet and not just the private key!
+
+2. Allow Saito to Automatically Help
+
+When adding a new crypto, or creating a new contact (key exchange), Saito will automatically ask you if you want help backing up your wallet. By providing an email and password, you will recieve an encrypted file which will allow you to recover the wallet.
 
