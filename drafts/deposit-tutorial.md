@@ -2,7 +2,7 @@
 title: Saito Multi-Wallet Deposit Tutorial
 description: 
 published: false
-date: 2024-07-02T22:51:00.932Z
+date: 2024-07-02T23:04:42.599Z
 tags: user-tutorial
 editor: markdown
 dateCreated: 2024-06-27T02:42:23.029Z
@@ -45,7 +45,7 @@ There are two primary ways to backup your wallet:
 
 1. Encrypt Wallet and upload to Saito
 
-Open the hamburger menu like in <a href="#step1">step 1</a>, and press the *ACCOUNT* button. A settings menu will appear with many options.
+Open the hamburger menu like in <a href="#step1">step 1</a>, and press the **ACCOUNT** button. A settings menu will appear with many options.
 
 Press the **Backup Wallet** option near the top, and save the file. This wallet file includes your Saito private key as well as your other crypto private keys, contacts and other important wallet data.
 
