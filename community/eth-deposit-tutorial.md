@@ -2,7 +2,7 @@
 title: Eth Deposit Tutorial
 description: Steps to getting Eth into the Saito Ethereum Wallet
 published: true
-date: 2024-07-04T02:09:03.059Z
+date: 2024-07-04T02:12:48.903Z
 tags: 
 editor: markdown
 dateCreated: 2024-07-04T02:08:37.643Z
@@ -16,7 +16,7 @@ Saito.io node supports feeless Eth transfers within its node network. Before sen
 
 You can be sure that any time the domain begins with https://Saito.io, that feeless inter-network Eth transfers are supported.
 
-Getting Eth into your Saito Wallet is just like getting Eth into other standard self-custodial crypto wallets:
+Getting Eth into your Saito Wallet is similar to getting Eth into other self-custodial crypto wallets:
 <br>
 
 <div id="step1"> 1. First open the hamburger menu from the top right.</div>
