@@ -2,7 +2,7 @@
 title: Saito Multi-Wallet Deposit Tutorial
 description: 
 published: false
-date: 2024-07-02T23:05:55.548Z
+date: 2024-07-04T02:03:28.485Z
 tags: user-tutorial
 editor: markdown
 dateCreated: 2024-06-27T02:42:23.029Z
