@@ -2,7 +2,7 @@
 title: Eth Deposit Tutorial
 description: Steps to getting Eth into the Saito Ethereum Wallet
 published: true
-date: 2024-07-04T02:08:37.643Z
+date: 2024-07-04T02:09:03.059Z
 tags: 
 editor: markdown
 dateCreated: 2024-07-04T02:08:37.643Z
