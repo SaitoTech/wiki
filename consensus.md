@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2024-08-06T16:57:12.560Z
+date: 2024-08-06T17:02:02.168Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -22,7 +22,7 @@ Nodes gather transactions until they have enough routing work to meet a difficul
 
 ## 2. HOW PAYMENTS ARE ISSUED
 
-Once a block is produced miners may start hashing to solve a mining puzzle based on the block hash similar to proof-of-work. We call the solution to this puzzle the golden ticket.
+Once a block is produced miners may start hashing to solve a mining puzzle based on the block hash. The puzzle works similarly to proof-of-work, except it is determining who gets paid rather than who has the right to produce blocks. We call the solution to this puzzle the golden ticket.
 
 If a golden ticket for block N is included in the very next block (N+1), consensus issues a payout to the miner that found the solution and a random routing node selected from the transactions in the block. The block producer is eligible to win this routing payout as it is the last routing hop in every transaction, but other nodes may win as well.
 
