@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2024-08-06T17:02:02.168Z
+date: 2024-08-06T17:06:29.891Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -18,7 +18,7 @@ When users send transactions into the network they add cryptographic routing sig
 
 The amount of routing work in any transaction is derived from its transaction fee and this chain of signatures. It consists of the transaction fee halved with every hop beyond the first that the transaction has taken into the network. A transaction with a 10 SAITO fee offers 1st-hop nodes 10 units of routing work, 2nd-hop nodes 5 units of routing work, and so on.
 
-Nodes gather transactions until they have enough routing work to meet a difficulty criteria maintained by consensus that auto-adjusts to keep blocktime reasonably constant. We refer to this difficulty level as the "burn fee" as when the block is produced all of the transaction fees included in the block are burned.
+Nodes gather transactions until they have enough routing work to meet a difficulty criteria maintained by consensus. We refer to this difficulty level as the "burn fee" as when the block is produced all of the transaction fees included in the block are burned. The difficulty level is automatically adjusted by consensus over time to keep blocktime constant as fee-throughput changes.
 
 ## 2. HOW PAYMENTS ARE ISSUED
 
