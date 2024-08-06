@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2024-05-23T12:11:18.439Z
+date: 2024-08-06T16:40:20.216Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -12,17 +12,19 @@ dateCreated: 2022-02-17T10:09:00.217Z
 
 Saito Consensus eliminates the [sybil attacks](/consensus/sybil-proof),  [majoritarian attacks](/consensus/majoritarian-attacks),and several other [attack vectors](/consensus/attack-vectors) common in proof-of-work and proof-of-stake consensus mechanisms by correcting the collective action problems buried in their incentive structures. This page offers a brief introduction to how consensus works.
 
-## 1. PRODUCING BLOCKS
+## 1. HOW BLOCKS ARE PRODUCED
 
-When users send transactions into the network they add cryptographic routing signatures that specify the first-hop node(s) to which they are sending their transaction(s). Nodes add similar signatures as they relay these transactions to their own peers. This gives all transactions an unforgeable record of the path they have taken into the network.
+When users send transactions into the network they add cryptographic routing signatures that specify the first-hop node(s) to which they are sending their transaction(s). Nodes add similar signatures as they relay these transactions to their own peers. As a result, when a block is produced all of its transactions have an unforgeable record of the path they have taken into the network.
 
-The amount of routing work in any transaction is derived from its chain of signatures. It is the total fee halved with every hop beyond the first that the transaction has taken into the network. Nodes gather transactions until they have enough routing work to meet a difficulty criteria maintained by consensus. Blocks without adequate routing work are invalid by consensus rules.
+The amount of routing work in any transaction is derived from its transaction fee and this chain of signatures. It consists of the transaction fee halved with every hop beyond the first that the transaction has taken into the network. 
 
-## 2. THE PAYMENT LOTTERY
+Nodes gather transactions until they have enough routing work to meet a difficulty criteria maintained by consensus. We refer to this difficulty level as the "burn fee" as when the block is produced all of the transaction fees included in the block are burned.
 
-When a block is produced all of the fees in it are burned. But miners may start hashing to solve a mining puzzle that will resurrect these burned fees and bring them back into circulation. We call the solution to this puzzle the golden ticket.
+## 2. HOW PAYMENTS ARE ISSUED
 
-If a golden ticket solving the previous block (block N) is included in its very next block (block N+1), consensus issues a payout worth the average fees burned over the last epoch. In the classic Saito mechanism, half are paid to the miner that found the golden ticket and half are paid to a random routing node from the routing signatures embedded in the block. The block producer is eligible for this payment as the last routing node.
+Once a block is produced miners may start hashing to solve a mining puzzle based on the block hash similar to proof-of-work. We call the solution to this puzzle the golden ticket.
+
+If a golden ticket solving the previous block (block N) is included in the very next block (block N+1), consensus issues a payout worth the average fees burned over the last epoch. In the classic Saito mechanism, half are paid to the miner that found the golden ticket and half are paid to a random routing node from the routing signatures embedded in the block. The block producer is eligible for this payment as the last routing node.
 
 A weighted lottery is used to select the winning routing node. A random hash in the golden ticket is first hashed to pick a random transaction from the previous block, with each transaction's chance of selection weighted to reflect by its share of fees in the block. The random hash that selected the transaction is then hashed again to select a node from the routing path of that winning transaction, with each router's chance of selection weighted according to its share of the total routing work held by all nodes at all positions in that routing path. In a 2-hop routing path the first hop has a 2/3 chance of payout while the second has a 1/3 chance. In a 3-hop routing path the first hop has a 10/17.5 chance of payout, while the second hop has a 5/17.5 chance of payout and the third has a 2.5/17.5 chance of payout, etc.
 
