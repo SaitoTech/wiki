@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2024-08-06T16:40:20.216Z
+date: 2024-08-06T16:46:01.560Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -24,17 +24,17 @@ Nodes gather transactions until they have enough routing work to meet a difficul
 
 Once a block is produced miners may start hashing to solve a mining puzzle based on the block hash similar to proof-of-work. We call the solution to this puzzle the golden ticket.
 
-If a golden ticket solving the previous block (block N) is included in the very next block (block N+1), consensus issues a payout worth the average fees burned over the last epoch. In the classic Saito mechanism, half are paid to the miner that found the golden ticket and half are paid to a random routing node from the routing signatures embedded in the block. The block producer is eligible for this payment as the last routing node.
+If a golden ticket solving the previous block (block N) is included in the very next block (block N+1), consensus issues a payout to both the miner and a random routing node selected from the transaction-embedded routing signatures. The block producer is eligible for the routing payout as it is the last routing node for every transaction, but other routing nodes may also win the payout.
 
-A weighted lottery is used to select the winning routing node. A random hash in the golden ticket is first hashed to pick a random transaction from the previous block, with each transaction's chance of selection weighted to reflect by its share of fees in the block. The random hash that selected the transaction is then hashed again to select a node from the routing path of that winning transaction, with each router's chance of selection weighted according to its share of the total routing work held by all nodes at all positions in that routing path. In a 2-hop routing path the first hop has a 2/3 chance of payout while the second has a 1/3 chance. In a 3-hop routing path the first hop has a 10/17.5 chance of payout, while the second hop has a 5/17.5 chance of payout and the third has a 2.5/17.5 chance of payout, etc.
+A weighted lottery is used to select the winning routing node. A random nonce from the golden ticket is first hashed to select a transaction from the previous block, with each transaction's chance of selection weighted according to its share of total fees in the block. That hash is then hashed again to select a node from the routing path of the winning transaction, with each router's chance of selection weighted according to its share of the total routing work held by all nodes in that routing path. In a 2-hop routing path the first hop has a 2/3 chance of payout while the second has a 1/3 chance. In a 3-hop routing path the first hop has a 10/17.5 chance of payout, while the second hop has a 5/17.5 chance of payout and the third has a 2.5/17.5 chance of payout, etc.
 
-This process repeats block by block as nodes burn money to produce blocks, and then burn energy to resurrect payments. This creates a game that is profitable for honest nodes who process user-paid fees, but costly anyone who must spend their own money to generate routing work and attack the chain.
+This process repeats block by block. Nodes burn money to produce blocks, and then burn hashpower to resurrect payments. This creates a game that is profitable for honest nodes who burn routing work generated from user-paid fees, but costly for attackers who must spend their own money to generate fake routing work and orphan blocks produced more efficiently by others.
 
 ## 3. IMPROVING SECURITY
 
-To improve security and prevent deflation Saito adds recursive payouts and a ATR payout. The way that recursive payouts work is that whenever a golden ticket is included in block N the block producer for that block must include the payouts for block N-1 as described above. But if block N-1 did not contain a golden ticket, the block producer must recurse to block N-2 and hash the golden ticket again to issue a router payout for that block.
+To improve security and prevent deflation from unsolved blocks Saito adds recursive payouts and a ATR payout. Whenever a golden ticket is included in block N this block must include the payouts for block N-1 as described above. If block N-1 did not contain a golden ticket, the block producer then recurses to block N-2 and hashes the golden ticket again to issue a router payout for block N-2.
 
-The missing "miner" payout from block N-2 is collected by consensus and placed in a treasury that is used to issue payouts to the oldest unspent UTXO in the blockchain as part of the ATR mechanism described below.
+The missing "miner" payout from block N-2 is collected by consensus and placed in a treasury that issues payouts to the oldest unspent UTXO in the blockchain as part of the ATR mechanism described below. The mining payout may also be smoothed in this fashion.
 
 ## 4. AUTOMATIC TRANSACTION REBROADCASTING (ATR)
 
