@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2024-08-06T16:54:25.186Z
+date: 2024-08-06T16:56:36.232Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -16,7 +16,7 @@ Saito Consensus eliminates the [sybil attacks](/consensus/sybil-proof),  [majori
 
 When users send transactions into the network they add cryptographic routing signatures that specify the first-hop node(s) to which they are sending their transaction(s). Nodes add similar signatures as they relay these transactions to their own peers. As a result, when a block is produced all of its transactions have an unforgeable record of the path they have taken into the network.
 
-The amount of routing work in any transaction is derived from its transaction fee and this chain of signatures. It consists of the transaction fee halved with every hop beyond the first that the transaction has taken into the network. 
+The amount of routing work in any transaction is derived from its transaction fee and this chain of signatures. It consists of the transaction fee halved with every hop beyond the first that the transaction has taken into the network. A transaction with a 10 SAITO fee offers 1st-hop nodes 10 units of routing work, 2nd-hop nodes 5 units of routing work, and so on.
 
 Nodes gather transactions until they have enough routing work to meet a difficulty criteria maintained by consensus. We refer to this difficulty level as the "burn fee" as when the block is produced all of the transaction fees included in the block are burned.
 
