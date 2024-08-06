@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2024-08-06T16:46:01.560Z
+date: 2024-08-06T16:51:59.665Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -24,11 +24,11 @@ Nodes gather transactions until they have enough routing work to meet a difficul
 
 Once a block is produced miners may start hashing to solve a mining puzzle based on the block hash similar to proof-of-work. We call the solution to this puzzle the golden ticket.
 
-If a golden ticket solving the previous block (block N) is included in the very next block (block N+1), consensus issues a payout to both the miner and a random routing node selected from the transaction-embedded routing signatures. The block producer is eligible for the routing payout as it is the last routing node for every transaction, but other routing nodes may also win the payout.
+If a golden ticket for block N is included in the very next block (N+1), consensus issues a payout to the miner that found the solution and a random routing node selected from the transactions in the block. The block producer is eligible to win this routing payout as it is the last routing hop in every transaction, but other nodes may win as well.
 
-A weighted lottery is used to select the winning routing node. A random nonce from the golden ticket is first hashed to select a transaction from the previous block, with each transaction's chance of selection weighted according to its share of total fees in the block. That hash is then hashed again to select a node from the routing path of the winning transaction, with each router's chance of selection weighted according to its share of the total routing work held by all nodes in that routing path. In a 2-hop routing path the first hop has a 2/3 chance of payout while the second has a 1/3 chance. In a 3-hop routing path the first hop has a 10/17.5 chance of payout, while the second hop has a 5/17.5 chance of payout and the third has a 2.5/17.5 chance of payout, etc.
+A weighted lottery selects the winning routing node as follows. A random nonce from the golden ticket is hashed to select a transaction from the previous block, with each transaction's chance of selection weighted based on its fee's share of the total fees in the block. That number is then hashed again to select a node from the routing path of the winning transaction, with each router's chance of selection weighted according to its share of the total routing work in that routing path. In a transaction with a 2-hop routing path and a 10 SAITO fee, the first hop has a 10/5 chance of payout while the second has a 5/15 chance. In a transaction with a 3-hop routing path and a 10 SAITO fee the first hop has a 10/17.5 chance of payout, while the second hop has a 5/17.5 chance of payout and the third has a 2.5/17.5 chance of payout, etc.
 
-This process repeats block by block. Nodes burn money to produce blocks, and then burn hashpower to resurrect payments. This creates a game that is profitable for honest nodes who burn routing work generated from user-paid fees, but costly for attackers who must spend their own money to generate fake routing work and orphan blocks produced more efficiently by others.
+This process repeats block by block. Nodes burn fees to produce blocks, and then burn hashpower to resurrect fees. This creates a game that is profitable for honest nodes to play, but costly for attackers who must spend their own money to generate the fake routing work needed to orphan blocks produced more efficiently by other nodes.
 
 ## 3. IMPROVING SECURITY
 
