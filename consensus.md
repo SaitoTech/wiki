@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2024-08-06T16:51:59.665Z
+date: 2024-08-06T16:54:25.186Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -32,7 +32,7 @@ This process repeats block by block. Nodes burn fees to produce blocks, and then
 
 ## 3. IMPROVING SECURITY
 
-To improve security and prevent deflation from unsolved blocks Saito adds recursive payouts and a ATR payout. Whenever a golden ticket is included in block N this block must include the payouts for block N-1 as described above. If block N-1 did not contain a golden ticket, the block producer then recurses to block N-2 and hashes the golden ticket again to issue a router payout for block N-2.
+To improve security and prevent deflation (from unsolved blocks) Saito adds recursive payouts and a ATR payout. Whenever a golden ticket is included in a block (N) that block must include the payouts for the previous block (N-1) as described above. If block N-1 did not contain a golden ticket, the block producer recurses to block N-2 and hashes the golden ticket again to issue a router payout for block N-2.
 
 The missing "miner" payout from block N-2 is collected by consensus and placed in a treasury that issues payouts to the oldest unspent UTXO in the blockchain as part of the ATR mechanism described below. The mining payout may also be smoothed in this fashion.
 
