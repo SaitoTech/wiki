@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2024-08-06T17:06:29.891Z
+date: 2024-08-10T05:38:50.561Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -14,27 +14,27 @@ Saito Consensus eliminates the [sybil attacks](/consensus/sybil-proof),  [majori
 
 ## 1. HOW BLOCKS ARE PRODUCED
 
-When users send transactions into the network they add cryptographic routing signatures that specify the first-hop node(s) to which they are sending their transaction(s). Nodes add similar signatures as they relay these transactions to their own peers. As a result, when a block is produced all of its transactions have an unforgeable record of the path they have taken into the network.
+When users send transactions into the network they add cryptographic routing signatures that specify the first-hop node(s) to which they are sending their transaction(s). Nodes add similar signatures as they relay these transactions to their own peers. As a result, when a block is produced all of its transactions have an unforgeable record of the path they have taken into the network from the sending user to the node that produces the block.
 
-The amount of routing work in any transaction is derived from its transaction fee and this chain of signatures. It consists of the transaction fee halved with every hop beyond the first that the transaction has taken into the network. A transaction with a 10 SAITO fee offers 1st-hop nodes 10 units of routing work, 2nd-hop nodes 5 units of routing work, and so on.
+The amount of routing work in any transaction is derived from its transaction fee and this chain of signatures. It consists of the transaction fee halved with every hop beyond the first that the transaction has taken into the network. A transaction with a 10 SAITO fee offers 1st-hop nodes 10 units of routing work, 2nd-hop nodes 5 units of routing work, 3rd-hop nodes 2.5 units of routing work, and so on.
 
 Nodes gather transactions until they have enough routing work to meet a difficulty criteria maintained by consensus. We refer to this difficulty level as the "burn fee" as when the block is produced all of the transaction fees included in the block are burned. The difficulty level is automatically adjusted by consensus over time to keep blocktime constant as fee-throughput changes.
 
 ## 2. HOW PAYMENTS ARE ISSUED
 
-Once a block is produced miners may start hashing to solve a mining puzzle based on the block hash. The puzzle works similarly to proof-of-work, except it is determining who gets paid rather than who has the right to produce blocks. We call the solution to this puzzle the golden ticket.
+Once a block is produced miners start hashing to solve a mining puzzle. The puzzle works similarly to proof-of-work -- the goal is to find a random string that can be hashed with the previous block hash to achieve a computationally difficult result -- except here the hashpower is determining who gets paid rather than who has the right to propose a block. We call the solution to this puzzle the golden ticket.
 
-If a golden ticket for block N is included in the very next block (N+1), consensus issues a payout to the miner that found the solution and a random routing node selected from the transactions in the block. The block producer is eligible to win this routing payout as it is the last routing hop in every transaction, but other nodes may win as well.
+If a golden ticket for block N is included in the very next block (N+1), consensus issues a payout to the miner that found the solution and a random routing node who contributed to the previous block. The block producer is eligible to win this routing payout as the last hop in the routing path of every transation, but other nodes may win as well.
 
-A weighted lottery selects the winning routing node as follows. A random nonce from the golden ticket is hashed to select a transaction from the previous block, with each transaction's chance of selection weighted based on its fee's share of the total fees in the block. That number is then hashed again to select a node from the routing path of the winning transaction, with each router's chance of selection weighted according to its share of the total routing work in that routing path. In a transaction with a 2-hop routing path and a 10 SAITO fee, the first hop has a 10/5 chance of payout while the second has a 5/15 chance. In a transaction with a 3-hop routing path and a 10 SAITO fee the first hop has a 10/17.5 chance of payout, while the second hop has a 5/17.5 chance of payout and the third has a 2.5/17.5 chance of payout, etc.
+A weighted lottery determines the winning routing node as follows. We hash the golden ticket solution again to choose a transaction from the block. The chance of each transaction  winning is weighted according to its share of all fees in the block. That hash is then hashed again to select a hop from the routing path of the winning transaction, with each hop weighted according to its share of work in the overall routing path. If a transaction with a 2-hop routing path and a 10 SAITO fee, the 1st-hop has a 10/5 chance of payout while the 2nd-hop has a 5/15 chance. In a transaction with a 3-hop routing path and a 10 SAITO fee the 1st-hop has a 10/17.5 chance of payout, while the 2nd-hop has a 5/17.5 chance of payout and the third has a 2.5/17.5 chance of payout, etc.
 
-This process repeats block by block. Nodes burn fees to produce blocks, and then burn hashpower to resurrect fees. This creates a game that is profitable for honest nodes to play, but costly for attackers who must spend their own money to generate the fake routing work needed to orphan blocks produced more efficiently by other nodes.
+This process repeats block by block. Nodes burn fees to produce blocks, and then burn hash to resurrect fees. If no golden ticket is found all of the fees from the previous block remain burned.
 
-## 3. IMPROVING SECURITY
+## 3. IMPROVING SECURITY AND PREVENTING DEFLATION
 
-To improve security and prevent deflation (from unsolved blocks) Saito adds recursive payouts and a ATR payout. Whenever a golden ticket is included in a block (N) that block must include the payouts for the previous block (N-1) as described above. If block N-1 did not contain a golden ticket, the block producer recurses to block N-2 and hashes the golden ticket again to issue a router payout for block N-2.
+When a golden ticket is included in a block (N), calculate the winner of bock (N-1) as described above. If block N-1 did not contain a golden ticket, hash the golden ticket again to find and issue a router payout for block N-2.
 
-The missing "miner" payout from block N-2 is collected by consensus and placed in a treasury that issues payouts to the oldest unspent UTXO in the blockchain as part of the ATR mechanism described below. The mining payout may also be smoothed in this fashion.
+The missing "miner" payout from block N-2 may be collected by consensus and placed in a treasury that issues payouts to the oldest unspent UTXO in the blockchain as part of the ATR mechanism described below.
 
 ## 4. AUTOMATIC TRANSACTION REBROADCASTING (ATR)
 
