@@ -2,7 +2,7 @@
 title: Saito Listing Program
 description: Get your token integrated into the official node's apps
 published: true
-date: 2024-08-12T01:31:37.517Z
+date: 2024-08-12T02:27:55.496Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-12T01:20:35.264Z
@@ -25,7 +25,7 @@ A big factor we are looking for when choosing a crypto is community support. We 
 
 ### Get Started
 
-To get started listing your favorite crypto on Saito hop onto Red Square and make a post titled "Saito Listing Proposal." Include the following details:
+To get started listing your favorite crypto on Saito hop onto [Red Square](saito.io/redsquare) and make a post titled "Saito Listing Proposal." Include the following details:
 
 - Token name, ticker and logo
 - Token network (if token exists on another network)
