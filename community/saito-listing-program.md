@@ -2,7 +2,7 @@
 title: Saito Listing Program
 description: Get your token integrated into the official node's apps
 published: true
-date: 2024-08-13T02:50:38.709Z
+date: 2024-08-13T02:51:55.576Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-12T01:20:35.264Z
@@ -12,9 +12,10 @@ dateCreated: 2024-08-12T01:20:35.264Z
 
 The Saito Listing Program exists to help cryptocurrency developers get their tokens working on the Saito Network and integrated with the official Saito nodes. Benefits of listing include:
 
-* simple token transfers through the Saito Wallet
+* Saito users can send and receive your token
 * integration with RedSquare and Saito Arcade
-* automatic integration into all new token features
+* ability to build Saito Applications that use your own token
+
 
 ## Get Listed on Saito
 
