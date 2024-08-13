@@ -2,7 +2,7 @@
 title: Saito Listing Program
 description: Get your token integrated into the official node's apps
 published: true
-date: 2024-08-13T02:47:18.475Z
+date: 2024-08-13T02:48:28.866Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-12T01:20:35.264Z
@@ -10,7 +10,7 @@ dateCreated: 2024-08-12T01:20:35.264Z
 
 # Saito Listing Program
 
-The Saito Listing Program allows communities across crypto to get involved and get their token integrated on the official Saito Node.
+The Saito Listing Program exists to help cryptocurrency developers get their tokens working on the Saito Network and integrated with the official Saito nodes.
 
 Benefits of listing is token integration into all Saito apps, which includes, but is not limited to:
 
