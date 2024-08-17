@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-08-17T02:47:10.068Z
+date: 2024-08-17T02:50:27.244Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -17,7 +17,7 @@ Applications on Saito look and feel like traditional software and services, but 
 - Enhanced privacy - Your data, your control
 - Open Source - Audit, modify, and earn with no restrictions
 
-The Saito blockchain serves as a hyper-efficient data-layer which serves as a *trustless PKI* network capable of securing P2P connections for the entire globe.
+The Saito blockchain serves as a hyper-efficient data-layer which serves as a *trustless PKI* network capable of securing P2P connections for the entire globe, offering a seamless experience which is also robustly open and decentralized at scale.
 <br>
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 10px; max-width: 1000px; margin: 0 auto;">
 
@@ -35,16 +35,13 @@ The Saito blockchain serves as a hyper-efficient data-layer which serves as a *t
   </div>
 </div>
 
-Explore our growing ecosystem of cutting-edge apps and games, where blockchain meets user-friendly design:
-
-
-
 
 
 ## Core Apps
 
-Saito Applications are programs that run directly in your browser. These applications have a built-in wallet and use the Saito network to communicate with peers. See our full list of [available programs](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) or our [tutorials](/tech/tutorials) on how to develop a module from scratch, or check out our flagship applications below.
+Explore our growing ecosystem of cutting-edge apps and games, where blockchain meets user-friendly design:.
 
+Saito Apps run directly in your browser. These applications have a built-in wallet and use the Saito network to communicate with peers. See our full list of [available programs](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) or our [tutorials](/tech/tutorials) on how to develop a module from scratch, or use one of our flaghsip apps below:
 
 - [Saito Arcade](/tech/applications/arcade)
 - [Red Square](/tech/applications/RedSquare)
