@@ -2,13 +2,70 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-06-01T23:36:53.968Z
+date: 2024-08-17T02:47:10.068Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
 ---
 
-# Saito Applications 
+# Saito Applications
+
+Applications on Saito look and feel like traditional software and services, but offer unparalleled decentralization, privacy and user control. Web 3 philosophy and P2P technology in every app. Unlike traditional platforms, Saito offers:
+
+- Instant access - No logins or registrations required
+- True decentralization - Permissionless service providers
+- Enhanced privacy - Your data, your control
+- Open Source - Audit, modify, and earn with no restrictions
+
+The Saito blockchain serves as a hyper-efficient data-layer which serves as a *trustless PKI* network capable of securing P2P connections for the entire globe.
+<br>
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 10px; max-width: 1000px; margin: 0 auto;">
+
+  <div style="display: flex; justify-content: center; align-items: center;">
+    <img src="/rs-square.png" alt="Image 4" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+  </div>
+  <div style="display: flex; justify-content: center; align-items: center;">
+    <img src="/ts.png" alt="Image 3" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+  </div>
+  <div style="display: flex; justify-content: center; align-items: center;">
+    <img src="/settlers-eth.png" alt="Image 2" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+  </div>
+    <div style="display: flex; justify-content: center; align-items: center;">
+    <img src="/swarmcast-square.png" alt="Image 1" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+  </div>
+</div>
+
+Explore our growing ecosystem of cutting-edge apps and games, where blockchain meets user-friendly design:
+
+
+
+
+
+## Core Apps
+
+Saito Applications are programs that run directly in your browser. These applications have a built-in wallet and use the Saito network to communicate with peers. See our full list of [available programs](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) or our [tutorials](/tech/tutorials) on how to develop a module from scratch, or check out our flagship applications below.
+
+
+- [Saito Arcade](/tech/applications/arcade)
+- [Red Square](/tech/applications/RedSquare)
+- [Chat](/tech/applications/chat)
+- [Video Call](/tech/applications/VideoCall)
+- [Swarmcast](/tech/applications/Swarmcast)
+
+<!--
+## Games
+
+There is a good amount of games running on the Saito platform now, and more to come that are currently in development, some of them have been made for members of the community. With Saito being an open-source project that is delighted to receive apps from other developers to run them in the network, this is just the tip of the iceberg for what is to come.
+
+|     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- |
+|     | [Chess](/tech/applications/chess) | [Blackjack](/tech/applications/Blackjack) |     | [Beleaguered Castle](/tech/applications/BeleagueredCastle) |     |
+|     | [Epidemic](/tech/applications/epidemic) | [Mahjong](/tech/applications/Mahjong) |     | [Nintendo 64 (Emulator)](/tech/applications/n64) |     |
+|     | [Poker](/tech/applications/poker) | [Quake 3](/tech/applications/quake3) |     | [Red Imperium](/tech/applications/redImperium) |     |
+|     | [Solitrio](/tech/applications/solitrio) | [Saito Realm](/tech/applications/realm) |     | [Settlers of Saitoa](/tech/applications/settlers) |     |
+|     | [Shogun](/tech/applications/Shogun) | [Wordblocks](/tech/applications/wordblocks) |     | [Saito Mania](/tech/applications/SaitoMania) |     |
+|     | [Spider](/tech/applications/spider) | [Wuziqi](/tech/applications/wuziqi) |     | [Twilight Struggle](/tech/applications/twilightStruggle) |     |
+
 
 While most of crypto uses a Web 2 model with token integrations or a federated model reliant on volunteer work, **Saito applications** operate in true, **peer-to-peer Web 3** and are self-funding.
 
@@ -36,25 +93,6 @@ Saito apps prove that premium and everyday applications can be stable and enjoya
   <li> <a style="text-decoration:none" href="#build"> Build Your Own </a> </li>
   
 </ul>
-  
-  
-<!--
-    <li> <a style="text-decoration:none" href="community"> Community Applications </a></li>
-  </ul>
--->
-  
- 
-<!--
-  <ul>
-    <li> 3a. <a style="text-decoration:none" href="#3a"> 3a </a> </li>
-    <li> 3b. <a style="text-decoration:none" href="#3b"> 3b </a> </li>
-    <li> 3c. <a style="text-decoration:none" href="#3b"> 3c </a> </li>
-    <li> 3d. <a style="text-decoration:none" href="#3b"> 3d </a> </li>
-  </ul>
-  <br>
-  <li> 4. <a style="text-decoration:none" href="#3b"> d</a> </li>
-</ul>
--->
 
 ## <div id="arcade"> Saito Arcade </div>
 
@@ -83,7 +121,6 @@ The best games may still gravitate towards free-to-play models, but alternative 
 
 For question of how the Saito Game Engine allows multiple parties to fairly agree on the state of truly random elements necessary for many games on the arcade, the answer begins with [Mental Poker](https://people.csail.mit.edu/rivest/pubs/SRA81.pdf):
 
-<!-- ![mentalpoker.png](/mentalpoker.png) -->
   <br>
 <div style="display: flex; justify-content: center;">
     <img src="/mentalpoker.png" alt="Mental Poker; Adi Shamir, Ronald L. Rivest and Leanard M. Adleman; MASSACHUSETTS INSTITUTE OF TECHNOLOGY; ABSTRACT Can two potentially dishonest players play a fair game of poker without using any cards-for example, over the phone? This paper provides the following answers: 1. No. (Rigorous mathemmatical proof supplied.) 2. Yes. (Correct and complete protocol given.); Once there were two 'mental chess' experts who had become tired of their passtime. 'Let's play 'Mental Mpoker,' for variety' suggested one. 'Sure' said the other,' Just let me deal!'">
@@ -256,3 +293,4 @@ There is a good amount of games running on the Saito platform now, and more to c
 |     | [Shogun](/tech/applications/Shogun) | [Wordblocks](/tech/applications/wordblocks) |     | [Saito Mania](/tech/applications/SaitoMania) |     |
 |     | [Spider](/tech/applications/spider) | [Wuziqi](/tech/applications/wuziqi) |     | [Twilight Struggle](/tech/applications/twilightStruggle) |     |
 -->
+
