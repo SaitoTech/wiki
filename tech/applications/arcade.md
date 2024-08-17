@@ -2,7 +2,7 @@
 title: SaitoArcade
 description: 
 published: true
-date: 2024-08-17T01:54:01.156Z
+date: 2024-08-17T02:47:05.490Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-19T20:49:30.032Z
@@ -48,9 +48,18 @@ Mental Poker exploits the commutative properties of public key encryption scheme
 
 The Saito Arcade has taken the principles of Mental Poker and generalized and extended the technique to support several adversarial players and to encode and integrate arbitrary values which extend far past a simple game of Poker. Titles like *Twilight Struggle* and *Settlers of Saitoa* are two flagship examples.
 
+## Games
 
+There is a good amount of games running on the Saito platform now, and more to come that are currently in development, some of them have been made for members of the community. With Saito being an open-source project that is delighted to receive apps from other developers to run them in the network, this is just the tip of the iceberg for what is to come.
 
-
+|     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- |
+|     | [Chess](/tech/applications/chess) | [Blackjack](/tech/applications/Blackjack) |     | [Beleaguered Castle](/tech/applications/BeleagueredCastle) |     |
+|     | [Epidemic](/tech/applications/epidemic) | [Mahjong](/tech/applications/Mahjong) |     | [Nintendo 64 (Emulator)](/tech/applications/n64) |     |
+|     | [Poker](/tech/applications/poker) | [Quake 3](/tech/applications/quake3) |     | [Red Imperium](/tech/applications/redImperium) |     |
+|     | [Solitrio](/tech/applications/solitrio) | [Saito Realm](/tech/applications/realm) |     | [Settlers of Saitoa](/tech/applications/settlers) |     |
+|     | [Shogun](/tech/applications/Shogun) | [Wordblocks](/tech/applications/wordblocks) |     | [Saito Mania](/tech/applications/SaitoMania) |     |
+|     | [Spider](/tech/applications/spider) | [Wuziqi](/tech/applications/wuziqi) |     | [Twilight Struggle](/tech/applications/twilightStruggle) |     |
 
 
 
