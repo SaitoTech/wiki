@@ -2,7 +2,7 @@
 title: Red Square
 description: 
 published: true
-date: 2024-08-17T01:48:32.963Z
+date: 2024-08-18T18:15:01.556Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-23T00:47:55.328Z
@@ -10,7 +10,7 @@ dateCreated: 2023-01-23T00:47:55.328Z
 
 # Red Square
   
-[Red Square](https://saito.io/redsquare/) is the Web 3 public square leveraging the Saito Blockchain and its peer-to-peer capabilities. While it may appear to function like a standard Web 2 Twitter-clone, Red Square's processes have been heavily abstracted down to pure peer-to-peer interactions.
+[Red Square](https://saito.io/redsquare/) is the Web 3 public square leveraging the Saito Blockchain and its peer-to-peer capabilities. While it may appear to function like a standard Web 2 Twitter-clone, Red Square's is built to use pure peer-to-peer interactions rather than client-to-server.
     
 For this reason, Red Square achieves what other incumbents like Mastadon or Nostr have failed: an uncensorable public square without reliance on volunteers. Users of Red Square keep each other up to date and can remain online without the permission of any network nodes or central authorities.
  
