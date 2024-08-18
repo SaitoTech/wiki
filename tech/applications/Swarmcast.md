@@ -2,7 +2,7 @@
 title: Swarmcast
 description: 
 published: true
-date: 2024-08-18T18:09:35.271Z
+date: 2024-08-18T18:10:01.042Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-17T03:29:13.103Z
@@ -20,9 +20,9 @@ Swarmcast creates a branching network from a source broadcast:
 
 This recursive network structure allows for decent scale without relying on centralized servers or expensive infrastructure.
 
-## Simulcast on YouTube
+## How to Simulcast on YouTube
 
-You can amplify a Swarmcast onto YouTube by providing a [YouTube Stream Key](https://support.google.com/youtube/answer/9854503?hl=en#zippy=%2Cstream-key). This feature currently requires you start a Swarmcast from within the [Video Call](https://saito.io/videocall/) app.
+You can amplify (restream) a Swarmcast onto YouTube by providing a [YouTube Stream Key](https://support.google.com/youtube/answer/9854503?hl=en#zippy=%2Cstream-key). This feature currently requires you start a Swarmcast from within the [Video Call](https://saito.io/videocall/) app.
 
 
 ## Steps:
