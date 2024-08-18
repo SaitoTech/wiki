@@ -2,7 +2,7 @@
 title: Chat
 description: 
 published: true
-date: 2024-08-17T02:34:21.043Z
+date: 2024-08-18T18:13:56.042Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-09T04:44:07.894Z
@@ -16,9 +16,9 @@ dateCreated: 2023-03-09T04:44:07.894Z
 
 
 
-Saito's chat App, like all other apps, runs on top of the Saito blockchain, and it's a Peer to Peer chat, which simply means that it runs between **two computers, phones, or tablets that can share resources and communicate without going through a server(**[**Saito's**](https://saito.io/) **blockchain)**. This means your communication is quick and secure without relying on a messenger to share or peeking at your information.  
+[Saito Chat](https://saito.io/chat/) runs on top of the Saito blockchain and communicates with other clients P2P. This simply means that it runs between **two or more computers, phones, or tablets that can share resources and communicate without going through a central server. Your communication is quick and secure and only involves the blockchain and your intended recipients - no middlemen.
 
-To access to Saito Community Chat, which is a public where you can freely talk with other users and members of the Saito team, you only need to open the [Chat App](https://saito.io/chat/). You can also find chat at the bottom right of your screen on [Saito Arcade](https://saito.io/arcade/) or [Saito RedSquare](https://saito.io/redsquare/#home). 
+To access to Saito Community Chat, which is a public room where you can freely talk with other users and members of the Saito team, you only need to open the [Chat App](https://saito.io/chat/). You can also find chat at the bottom right of your screen on [Saito Arcade](https://saito.io/arcade/) or [Saito RedSquare](https://saito.io/redsquare/#home). 
 
 ## Private Chats
 
