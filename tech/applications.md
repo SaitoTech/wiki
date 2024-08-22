@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-08-22T08:43:11.330Z
+date: 2024-08-22T13:37:10.861Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -15,12 +15,12 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
 <br/>
 <div class="app_container">
 
-  <a href="/tech/applications/swarmcast">
+  <a href="/tech/applications/chat">
     <div class="app_box">
        <div class="app_img">
          <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
        </div>
-       <div class="app_title">Swarmcasting</div>
+       <div class="app_title">Saito Chat</div>
     </div>
   </a>
 
@@ -57,6 +57,15 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
         <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
       </div>
       <div class="app_title">Saito Arcade</div>
+    </div>
+  </a>
+
+  <a href="/tech/applications/swarmcast">
+    <div class="app_box">
+      <div class="app_img">
+        <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
+      </div>
+      <div class="app_title">Swarmcast</div>
     </div>
   </a>
 
