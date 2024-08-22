@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-08-22T07:40:28.548Z
+date: 2024-08-22T07:43:45.730Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -19,9 +19,36 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
      <div class="app_img">
        <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
      </div>
-     <div class="app_title">Twilight Struggle</div>
+     <div class="app_title">Red Square</div>
    </div>
 
+  <div class="app_box">
+     <div class="app_img">
+       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
+     </div>
+     <div class="app_title">Video Calls</div>
+   </div>
+
+
+  <div class="app_box">
+     <div class="app_img">
+       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
+     </div>
+     <div class="app_title">Saito Arcade</div>
+   </div>
+
+
+  <div class="app_box">
+     <div class="app_img">
+       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
+     </div>
+     <div class="app_title">Swarmcasting</div>
+   </div>
+</div>
+
+The Saito Game Engine is a project supported by the Web3 Foundation intended. Most of these games are available directly on the Saito Arcade or available for download and installation under permissive open source licenses.
+
+<div class="app_container">
   <div class="app_box">
      <div class="app_img">
        <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
@@ -34,7 +61,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
      <div class="app_img">
        <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
      </div>
-     <div class="app_title">Twilight Struggle</div>
+     <div class="app_title">Red Imperium</div>
    </div>
 
 
@@ -42,31 +69,35 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
      <div class="app_img">
        <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
      </div>
-     <div class="app_title">Twilight Struggle</div>
+     <div class="app_title">Settlers</div>
    </div>
-
 
   <div class="app_box">
      <div class="app_img">
        <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
      </div>
-     <div class="app_title">Twilight Struggle</div>
+     <div class="app_title">Settlers</div>
    </div>
-
 
   <div class="app_box">
      <div class="app_img">
        <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
      </div>
-     <div class="app_title">Twilight Struggle</div>
+     <div class="app_title">Settlers</div>
    </div>
-
 
   <div class="app_box">
      <div class="app_img">
        <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
      </div>
-     <div class="app_title">Twilight Struggle</div>
+     <div class="app_title">Settlers</div>
+   </div>
+
+  <div class="app_box">
+     <div class="app_img">
+       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
+     </div>
+     <div class="app_title">Settlers</div>
    </div>
 
 </div>
