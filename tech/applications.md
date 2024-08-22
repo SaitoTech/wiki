@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-08-22T08:16:36.991Z
+date: 2024-08-22T08:43:11.330Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -88,7 +88,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/tech/applications/imperium">
     <div class="app_box">
        <div class="app_img">
-         <img src="https://saito.io/imperium/img/arcade/arcade.jpg" />
+         <img src="https://staging.saito.io/imperium/img/arcade/arcade.jpg" />
        </div>
        <div class="app_title">Red Imperium</div>
      </div>
@@ -97,7 +97,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/tech/applications/his">
     <div class="app_box">
        <div class="app_img">
-         <img src="https://saito.io/his/img/arcade/arcade.jpg" />
+         <img src="https://staging.saito.io/his/img/arcade/arcade.jpg" />
        </div>
        <div class="app_title">Here I Stand</div>
     </div>
