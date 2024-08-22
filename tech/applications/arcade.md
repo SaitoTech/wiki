@@ -2,7 +2,7 @@
 title: SaitoArcade
 description: 
 published: true
-date: 2024-08-22T14:57:20.186Z
+date: 2024-08-22T15:00:40.646Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-19T20:49:30.032Z
@@ -48,34 +48,6 @@ The Saito Arcade has taken the principles of Mental Poker and generalized and ex
 
 ## Games
 
-There is a good amount of games running on the Saito platform now, and more to come that are currently in development, some of them have been made for members of the community. With Saito being an open-source project that is delighted to receive apps from other developers to run them in the network, this is just the tip of the iceberg for what is to come.
+There is a good amount of games running on the Saito platform now and more to come that are currently in development. Some games have also been made by members of the community. All benefit from the broad suite of functionality available to all Saito Applications: text chats, video calls, integrated cryptocurrency support and more.
 
-|     |     |     |     |     |     |
-| --- | --- | --- | --- | --- | --- |
-|     | [Chess](/tech/applications/chess) | [Blackjack](/tech/applications/Blackjack) |     | [Beleaguered Castle](/tech/applications/BeleagueredCastle) |     |
-|     | [Epidemic](/tech/applications/epidemic) | [Mahjong](/tech/applications/Mahjong) |     | [Nintendo 64 (Emulator)](/tech/applications/n64) |     |
-|     | [Poker](/tech/applications/poker) | [Quake 3](/tech/applications/quake3) |     | [Red Imperium](/tech/applications/redImperium) |     |
-|     | [Solitrio](/tech/applications/solitrio) | [Saito Realm](/tech/applications/realm) |     | [Settlers of Saitoa](/tech/applications/settlers) |     |
-|     | [Shogun](/tech/applications/Shogun) | [Wordblocks](/tech/applications/wordblocks) |     | [Saito Mania](/tech/applications/SaitoMania) |     |
-|     | [Spider](/tech/applications/spider) | [Wuziqi](/tech/applications/wuziqi) |     | [Twilight Struggle](/tech/applications/twilightStruggle) |     |
-
-
-
-<!--
-
-The [Saito Arcade](https://saito.io/arcade/) is an open-source game engine that runs as a fully-distributed peer-to-peer (p2p) blockchain application. All the games you can play run directly in the browser using p2p communications to send and receive game moves. Players interact only with each other - there is no central trusted server for deals or storing game data.
-
-This is one of the first open-source software developed by the Saito team. It has been recognized by the Web3 Foundation as a standard for open cryptographic gaming.  Also, the arcade works as a showcase for the games/app/chat/forum/AppStore /etc. These are all applications that run in the browser and send-and-receive on-chain data.
-
--->
-
-
-<!-- OLD VERSION
-![](/arcade.png)
-
-# Saito Arcade
-
-The [Saito Arcade](https://saito.io/arcade/) is an open-source game engine that runs as a fully-distributed peer-to-peer (p2p) blockchain application. All the games you can play run directly in the browser using p2p communications to send and receive game moves. Players interact only with each other - there is no central trusted server for deals or storing game data.
-
-This is one of the first open-source software developed by the Saito team. It has been recognized by the Web3 Foundation as a standard for open cryptographic gaming.  Also, the arcade works as a showcase for the games/app/chat/forum/AppStore /etc. These are all applications that run in the browser and send-and-receive on-chain data.
--->
+For a full list of the games available in the Saito Arcade please see the [mods directory](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods). Links to some of the more popular games that are playable on the Arcade can also be found on the [applications](/tech/applications) page in our wiki.
