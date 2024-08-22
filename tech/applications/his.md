@@ -2,7 +2,7 @@
 title: Here I Stand
 description: Here I Stand - Wars of the Reformation - Saito Edition
 published: true
-date: 2024-08-22T11:35:40.239Z
+date: 2024-08-22T11:36:19.811Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-22T11:35:40.239Z
@@ -13,19 +13,7 @@ dateCreated: 2024-08-22T11:35:40.239Z
 
 *""Here I stand, I can do no other, so help me God...""* - Martin Luther
 
-Here I Stand is a lengthy game for between 2 and 6 players that simulates the political and religious conflicts of early 16th Century Europe. The game mixes religious conflict with territorial battles and plays out differently each time as the six primary factions in Europe pursue their own interests at the expense of their peers:
-
-**The Protestants:** seeking to increase the number of spaces under Protestant religious influence while fending off reprisals from the Papal Authorities in Rome and their military lapdogs in the Hapsburg Dynasty.
-
-**The English:** desperate for a secure line of succession after the tumultuous War of the Roses and willing to rupture relations with Rome and throw England herself into discord if such is the cost of doing so.
-
-**The Papacy:** at risk of being rent asunder by the military clashes between Europe's Christian monarchs, and facing the rise of a militant Turkish power, the Papacy must keep the souls of her children while also uniting Italy.
-
-**The French:** a Catholic country led by an aggressive and militant monarch, France must manage its relationships with foreign allies while handling disputes with the Papal and Hapsburg authorities. And perhaps also the British?
-
-**The Hapsburg Empire:** Europe's largest military dynasty, with territories stretching from Spain to Vienna, the Hapsburgs are a military power facing the direct threat of the Turkish invasion of Europe.
-
-**The Ottoman Empire:** Manage the Islamic invasion of Europe while securing control over the Mediterranean and the riches available to those who engage in state-sanctioned piracy.
+Here I Stand is a lengthy game for between 2 and 6 players that simulates the political and religious conflicts of early 16th Century Europe. The game mixes religious conflict with territorial battles and plays out differently each time as the six primary factions in Europe: the Protestants, English, French, Hapsburg, Papacy and Ottoman Turks.
 
 A genuinely-balanced six-sided diplomatic struggle, Here I Stand allows players to plot military and religious advances while offering benefits to those who are able to successfully build alliances through secret and public negotiations that can take place over the course of the game. The game deck consists of more than 100 cards that enable both offensive and defensive maneuvering. The complexity of the game and its action-and-response mechanisms makes Here I Stand one of the most complex games that has ever been coded for the Saito Game Engine.
 
