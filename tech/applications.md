@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-08-22T07:58:57.697Z
+date: 2024-08-22T07:59:15.750Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -24,7 +24,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   </div>
   </a>
 
-  <a href="https://saito.io">
+  <a href="/tech/applications/RedSquare">
   <div class="app_box">
      <div class="app_img">
        <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
@@ -34,7 +34,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
 </a>
 
 
-  <a href="https://saito.io">
+  <a href="/tech/applications/RedSquare">
   <div class="app_box">
      <div class="app_img">
        <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
@@ -43,7 +43,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
    </div>
 </a>
 
-  <a href="https://saito.io">
+  <a href="/tech/applications/RedSquare">
   <div class="app_box">
      <div class="app_img">
        <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
@@ -52,7 +52,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
    </div>
 </a>
 
-  <a href="https://saito.io">
+  <a href="/tech/applications/RedSquare">
   <div class="app_box">
      <div class="app_img">
        <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
