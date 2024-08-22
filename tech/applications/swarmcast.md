@@ -2,7 +2,7 @@
 title: swarmcast
 description: 
 published: true
-date: 2024-08-22T14:15:48.607Z
+date: 2024-08-22T14:23:10.027Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-17T03:29:13.103Z
@@ -12,7 +12,7 @@ dateCreated: 2024-08-17T03:29:13.103Z
 
 A [swarmcast](https://saito.io/swarmcast) is a peer-to-peer audio/video broadcast. It works by creating a "swarm" of listeners who pick up and amplify your broadcast in real-time. This allows for video broadcasts at decent scale without the need for on centralized servers or expensive infrastructure.
 
-In additional to automating, Saito also provides swarmcasts with dedicated "group chats" and basic moderation. Try using Saito Swarmcast for your next 
+In additional to automating the task of joining and amplifying swarmcasts, Saito also provides swarmcasts with dedicated "group chats" and basic moderation features. Try using Saito Swarmcast for your next podcast or group call!
 
 ![swarmcast-chat.png](/swarmcast-chat.png)
 
