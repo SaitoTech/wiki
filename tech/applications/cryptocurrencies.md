@@ -2,13 +2,13 @@
 title: Web3 Cryptocurrencies
 description: Adding non-Saito Cryptocurrency support to Saito Applications
 published: true
-date: 2024-08-22T14:50:02.881Z
+date: 2024-08-22T15:06:29.140Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-08T05:05:16.041Z
 ---
 
-# Saito Wallet (Web3 Crypto Support)
+# Other Cryptocurrencies (Web3 Crypto Support)
 
 ## Introduction
 
