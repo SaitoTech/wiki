@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-08-22T07:34:59.821Z
+date: 2024-08-22T07:40:28.548Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -13,56 +13,62 @@ dateCreated: 2022-12-21T01:40:41.364Z
 Applications on Saito look and feel like traditional web apps, but run in a peer-to-peer swarm, with browsers connecting directly to each other to exchange data and falling back to the underlying blockchain only when needed. Here are some of the genuine web3 apps working today:
 
 <br>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); grid-gap: 10px; max-width: 1000px; margin: 0 auto;">
+<div class="app_container">
 
-   <div class="app_box" style="
-        box-shadow: 0px 2px 4px var(--saito-bubble-shadow);
-        height: min(250px, calc((100vw - 34.5rem) / 4));
-        border-radius: 0.5rem; width: 100%;
-        border: 1px solid var(--saito-border-color);
-        position: relative;
-        cursor: pointer;
-        overflow: hidden;">
-        <div class="app_img" style="
-					height: 100%;
-          width:100%">
-					<img src="https://saito.io/twilight/img/arcade/arcade.jpg">
-     		</div>
-        <div class="app_title" style="
-    box-sizing: border-box;
-    position: absolute;
-    background-color: #000a;
-    color: white;
-    width: 100%;
-    top: 0;
-    left: 0px;
-    height: 3rem;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1.5rem;
-    border-radius: 0.5rem 0.5rem 0 0;
-    ">Twilight Struggle
+  <div class="app_box">
+     <div class="app_img">
+       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
      </div>
-     </div>
+     <div class="app_title">Twilight Struggle</div>
+   </div>
 
-  <div style="display: flex; justify-content: center; align-items: center;">
-    <img src="/rs-square.png" alt="Image 4" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-  </div>
-  <div style="display: flex; justify-content: center; align-items: center;">
-    <img src="/ts.png" alt="Image 3" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-  </div>
-  <div style="display: flex; justify-content: center; align-items: center;">
-    <img src="/settlers-eth.png" alt="Image 2" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-  </div>
-    <div style="display: flex; justify-content: center; align-items: center;">
-    <img src="/swarmcast-square.png" alt="Image 1" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-  </div>
+  <div class="app_box">
+     <div class="app_img">
+       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
+     </div>
+     <div class="app_title">Twilight Struggle</div>
+   </div>
+
+
+  <div class="app_box">
+     <div class="app_img">
+       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
+     </div>
+     <div class="app_title">Twilight Struggle</div>
+   </div>
+
+
+  <div class="app_box">
+     <div class="app_img">
+       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
+     </div>
+     <div class="app_title">Twilight Struggle</div>
+   </div>
+
+
+  <div class="app_box">
+     <div class="app_img">
+       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
+     </div>
+     <div class="app_title">Twilight Struggle</div>
+   </div>
+
+
+  <div class="app_box">
+     <div class="app_img">
+       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
+     </div>
+     <div class="app_title">Twilight Struggle</div>
+   </div>
+
+
+  <div class="app_box">
+     <div class="app_img">
+       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
+     </div>
+     <div class="app_title">Twilight Struggle</div>
+   </div>
+
 </div>
 
 
