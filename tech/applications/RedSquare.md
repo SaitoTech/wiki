@@ -2,13 +2,13 @@
 title: Red Square
 description: 
 published: true
-date: 2024-08-22T08:37:35.003Z
+date: 2024-08-22T08:37:47.368Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-23T00:47:55.328Z
 ---
 
-# Red Square
+# Saito RedSquare
   
 [Red Square](https://saito.io/redsquare/) is a social media application that runs atop the Saito Network. Users can create posts, leave comments, like or otherwise engage with peer comments.
 
