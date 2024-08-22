@@ -2,13 +2,14 @@
 title: Red Imperium
 description: Red Imperium is a Multiplayer Space Exploration and Conquest Game
 published: true
-date: 2024-08-22T10:46:21.909Z
+date: 2024-08-22T10:57:05.994Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-22T10:46:21.909Z
 ---
 
 
+# Red Imperium
 
 Red Imperium invites two to six players to lead one of eight unique factions in a quest for control over the galaxy. Success relies on military strength, diplomatic cunning, and savvy economic planning. Only one will ultimately triumph and rule a new thousand-year empire from the seat of New Byzantium. 
 
