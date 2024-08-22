@@ -2,7 +2,7 @@
 title: swarmcast
 description: 
 published: true
-date: 2024-08-22T14:23:10.027Z
+date: 2024-08-22T14:24:21.899Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-17T03:29:13.103Z
@@ -19,7 +19,7 @@ In additional to automating the task of joining and amplifying swarmcasts, Saito
 
 ## How to Swarmcast on YouTube
 
-You can connect a Swarmcast with YouTube by providing a [YouTube Stream Key](https://support.google.com/youtube/answer/9854503?hl=en#zippy=%2Cstream-key). This lets people watch your swarmcast on Youtube, and ensures it is saved for replayability once the recording is finished.
+You can connect a Swarmcast with YouTube by providing a [YouTube Stream Key](https://support.google.com/youtube/answer/9854503?hl=en#zippy=%2Cstream-key). Click on that link if you want to know how to get that Stream Key -- it usually takes about 24 hours for Youtube to enable accounts so you should do it at least a day in advance of your first swarmcast. This lets people watch your swarmcast on Youtube, and ensures it is saved for replayability once the recording is finished.
 
 ### Steps:
 
