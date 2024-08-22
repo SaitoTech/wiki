@@ -2,7 +2,7 @@
 title: Poker
 description: 
 published: true
-date: 2023-03-10T01:33:20.612Z
+date: 2024-08-22T09:56:13.895Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-01-23T00:58:05.891Z
@@ -10,11 +10,12 @@ dateCreated: 2023-01-23T00:58:05.891Z
 
 <figure class="image image_resized" style="width:73.82%;"><img src="/poker_game_screenshot.jpg"></figure>
 <h1><a href="https://saito.io/arcade/">Poker</a></h1>
-<p>Texas Hold'em Poker for the Saito Arcade. Is one of the most popular variants of the card game of poker. Two cards, known as hole cards, are dealt face down to each player, and then five <a href="https://en.wikipedia.org/wiki/Community_card_poker">community cards</a> are dealt face up in three stages. The stages consist of a series of three cards ("the flop"), later an additional single card ("the turn" or "fourth street"), and a final card ("the river" or "fifth street"). Each player seeks the best <a href="https://en.wikipedia.org/wiki/List_of_poker_hands">five card poker hand</a> from any combination of the seven cards; the five community cards and their two hole cards. Players have <a href="https://en.wikipedia.org/wiki/Betting_in_poker">betting</a> options to check, call, raise, or fold. Rounds of betting take place before the flop is dealt and after each subsequent deal.&nbsp;</p>
-<h2>Saito Poker League</h2>
-<figure class="image image_resized" style="width:31.85%;"><img src="/poker_prizes.png"></figure>
-<p>The <a href="https://wiki.saito.io/en/community/Leagues">Poker League</a> was launched soon after Chess’ and it’s currently entering its playoff stage. The Poker Nights are an integral component of this league. As a precursor to the Chess Club, it’s similarly structured and takes place from Thursday to Saturday.For the poker league. the registration will be done through a form in which players will submit their contact information.&nbsp;</p>
-<p>You can <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJmQ-nVC4gveACcLaBtNUsPO3AacrwbgtO1P1-ccUdrwg7dg/viewform">join</a> the League at any time, it will only affect when you get your scheduled games and your ability to qualify for playoffs.</p>
-<p>&nbsp;</p>
+<p>Saito Poker is a implementation of &nbsp;Texas Hold'em Poker that uses advanced cryptographic techniques to allow players to play the game in a provably-fair fashion without the need for a trusted third-party.</p>
+<p>Saito Poker is fundamentally different from other “web3” poker implementations which allow players to use cryptocurrencies to make wagers, but which rely on centralized servers or trusted third-parties to deal cards, manage betting, and handle payouts. With Saito all gameplay is provably fair and occurs directly between players using peer-to-peer cryptographic techniques.</p>
+<p>The techniques used to secure poker are available in all other games as well, provided by the Saito Game Engine which underpins most of the game modules. This engine implements poker-friendly techniques like [mental poker](https://en.wikipedia.org/wiki/Mental_poker), as described by Adi Shamir, Ronald L. Rivest and Leanard M. Adleman – the inventors of public key cryptography. These techniques exploit the commutative properties of public key encryption schemes to encrypt and shuffle cards in such a way that cards cannot be dealt from the deck without all players sharing their portion of the decryption keys. &nbsp;the keys of each player, and then progressively decrypt card when they must be revealed.&nbsp;<br><br>&lt;img src="/mentalpoker.png" alt="Mental Poker; Adi Shamir, Ronald L. Rivest and Leanard M. Adleman; MASSACHUSETTS INSTITUTE OF TECHNOLOGY;"&gt;</p>
+<p>Saito Poker is under development, but already supports most featured needed for a fun game. Players can join or leave tables, and easily stake real-world cryptocurrencies supported by the Saito Wallet. Whereas these steps require a trusted party like Facebook in other systems, Saito removes trust assumptions from the network infrastructure, allowing scalable and permissionless gameplay.</p>
+<h2>How to Play</h2>
+<p>At the start of each turn, two “hole cards” are dealt face down to each player. Five <a href="https://en.wikipedia.org/wiki/Community_card_poker">community cards</a> are then dealt face-down on the table and revealed in three stages ("the flop", “the turn”, and then “the river”). Once all cards have been revealed, the winner is the player with the best <a href="https://en.wikipedia.org/wiki/List_of_poker_hands">poker hand</a> created using any combination of their seven cards.</p>
+<p>Betting occurs in stages throughout the game. A single round precedes the revelation of any community cards, and then a single round following each one. In all of these stages players can check, call, raise, or fold.</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
