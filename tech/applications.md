@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-08-22T08:16:29.096Z
+date: 2024-08-22T08:16:36.991Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -10,7 +10,7 @@ dateCreated: 2022-12-21T01:40:41.364Z
 
 # Saito Applications
 
-Applications on Saito look and feel like traditional web apps, but run in a peer-to-peer swarm, with browsers connecting directly to each other to exchange data and falling back to the blockchain only when needed. Here are some of the web3 apps this approach enables that are working today:
+Applications on Saito look and feel like traditional web apps, but run in a peer-to-peer swarm, with browsers connecting directly to each other to exchange data and falling back to the blockchain only when needed. Here are some of the web3 apps this approach enables you can use today:
 
 <br/>
 <div class="app_container">
