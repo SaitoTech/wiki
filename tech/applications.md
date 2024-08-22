@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-08-22T07:57:08.039Z
+date: 2024-08-22T07:58:03.425Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -24,34 +24,44 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   </div>
   </a>
 
-  [<div class="app_box">
+  <a href="https://saito.io">
+  <div class="app_box">
      <div class="app_img">
        <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
      </div>
      <div class="app_title">Video Calls</div>
-   </div>](https://saito.io)
+   </div>
+</a>
 
 
+  <a href="https://saito.io">
   <div class="app_box">
      <div class="app_img">
        <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
      </div>
      <div class="app_title">Saito Arcade</div>
-   </div>(https://saito.io)
+   </div>
+</a>
 
+  <a href="https://saito.io">
   <div class="app_box">
      <div class="app_img">
        <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
      </div>
      <div class="app_title">Saito Wallet</div>
-   </div>(https://saito.io)
+   </div>
+</a>
 
-  [<div class="app_box">
+  <a href="https://saito.io">
+  <div class="app_box">
      <div class="app_img">
        <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
      </div>
      <div class="app_title">Swarmcasting</div>
-   </div>](https://saito.io)
+   </div>
+</a>
+
+
 </div>
 
 <p>The Saito Game Engine abstracts away the complicated cryptographic operations necessary to run provably-fair games on a distributed P2P network. Most games are available directly on the Saito Arcade or can be downloaded and installed in your browser under permissive open source licenses.</p>
