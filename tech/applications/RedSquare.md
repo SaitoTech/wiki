@@ -2,7 +2,7 @@
 title: Red Square
 description: 
 published: true
-date: 2024-08-22T08:37:47.368Z
+date: 2024-08-22T14:01:27.216Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-23T00:47:55.328Z
@@ -10,11 +10,16 @@ dateCreated: 2023-01-23T00:47:55.328Z
 
 # Saito RedSquare
   
-[Red Square](https://saito.io/redsquare/) is a social media application that runs atop the Saito Network. Users can create posts, leave comments, like or otherwise engage with peer comments.
+[Red Square](https://saito.io/redsquare/) is a open source clone of Twitter that runs atop the Saito Network. Users can create posts, track and follow their peers, and leave comments or otherwise engage with other people's content.
 
-Unlike Twitter and other "web3" social media platforms like Mastadon and Nostr, RedSquare is genuinely decentralized. Instead of fetching "tweets" and other content from a single server, users request them from the peer nodes to which they are connected across the swarm. Moderation functions are similarly decentralized, so your experience using the site depends heavily on the friends you make online.
+In addition to Twitter-like functionality, [Red Square](/tech/applications/redsquare) includes a real-time chat functions (powered by Saito Chat) and gaming portal (powered by Saito Arcade) and other gaming features like leaderboards. These demonstrate the power of Saito Modules to not only provide features, but add UI Components to other elements.
 
-This allows RedSquare to achieve what more mainstreain crypto platforms like Mastadon or Nostr fail to provide: a truly uncensorable public square in which all users are treated on equal terms.
+
+### Why Build a Decentralized Twitter?
+
+Unlike Twitter and other "web3" social media platforms like Mastadon and Nostr, RedSquare is genuinely decentralized. What this means is that instead of fetching "tweets" and other content from a single server which controls which accounts exist and restricts their access to data, on RedSquare users run the application in their browser and request tweets from whichever peer nodes they are connected to across the swarm.
+
+Moderation functions are similarly decentralized, meaning that your experience using the site will depend heavily on the friends you make online. This allows RedSquare to achieve what mainstreain sites like Mastadon or Nostr fail to provide: a truly uncensorable public square in which all users are treated on equal terms.
  
 <br><img src="/redsquare.png" alt="Screenshot of Red Square app: typing a reply with an emote to an image gallery post. Notification and home menus, chats, game invites, leaderboards, calender and more can be seen in the background.">
 <br>
