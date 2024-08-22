@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-08-22T07:26:18.934Z
+date: 2024-08-22T07:32:09.125Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -13,7 +13,22 @@ dateCreated: 2022-12-21T01:40:41.364Z
 Applications on Saito look and feel like traditional web apps, but run in a peer-to-peer swarm, with browsers connecting directly to each other to exchange data and falling back to the underlying blockchain only when needed. Here are some of the genuine web3 apps working today:
 
 <br>
-<div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 10px; max-width: 1000px; margin: 0 auto;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); grid-gap: 10px; max-width: 1000px; margin: 0 auto;">
+
+   <div class="app_box" style="
+        box-shadow: 0px 2px 4px var(--saito-bubble-shadow);
+        height: min(250px, calc((100vw - 34.5rem) / 4));
+        border-radius: 0.5rem; width: 100%;
+        border: 1px solid var(--saito-border-color);
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;">
+        <div class="app_img" style="
+					height: 100%;
+          width:100%">
+					<img src="https://saito.io/twilight/img/arcade/arcade.jpg">
+     		</div>
+     </div>
 
   <div style="display: flex; justify-content: center; align-items: center;">
     <img src="/rs-square.png" alt="Image 4" style="max-width: 100%; max-height: 100%; object-fit: contain;">
