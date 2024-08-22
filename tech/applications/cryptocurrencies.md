@@ -2,19 +2,19 @@
 title: Web3 Cryptocurrencies
 description: Adding non-Saito Cryptocurrency support to Saito Applications
 published: true
-date: 2022-03-25T02:17:49.915Z
+date: 2024-08-22T14:50:02.881Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-08T05:05:16.041Z
 ---
 
-# Web3 Crypto Support
+# Saito Wallet (Web3 Crypto Support)
 
 ## Introduction
 
-Saito makes it possible to write applications that use tokens and assets on other blockchains. You can code a game that requires a payment to be made in another cryptocurrency, for instance, or a wallet-plugin that lets you send and receive transactions stored on another chain. Saito does this by allowing wallets to install third-party "cryptocurrency modules" that provides a bridge to other networks.
+Saito makes it possible to write applications that use tokens and assets on other blockchains. You can code a game that requires a payment to be made in another cryptocurrency, for instance, or a wallet-plugin that lets you send and receive transactions stored on another chain. Saito does this by allowing wallets to install third-party "cryptocurrency modules" that provide a bridge to other networks.
 
-In order to use another cryptocurrency with Saito applications, users need to have the appropriate module installed in their Saito wallet. Saito comes by default with bundles that provide support for a number of other cryptocurrencies like Polkadot and Elrond. Modules can easily be built that add support for other tokens as well -- if you are a developer interested in getting your favourite cryptocurrency supported get in touch!
+In order to use another cryptocurrency with Saito applications, users need to have the appropriate module installed in their Saito wallet. Saito includes support for Bitcoin and Ethereum by default. But modules can be built to add support for other tokens as well -- if you are a developer interested in getting your favourite cryptocurrency supported get in touch!
 
 ## Using Cryptocurrencies within Saito Applications
 
