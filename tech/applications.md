@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-08-22T07:55:02.543Z
+date: 2024-08-22T07:57:08.039Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -15,12 +15,14 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
 <br/>
 <div class="app_container">
 
-  [<div class="app_box">
+  <a href="https://saito.io">
+  <div class="app_box">
      <div class="app_img">
        <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
      </div>
      <div class="app_title">Swarmcasting</div>
-   </div>](https://saito.io)
+  </div>
+  </a>
 
   [<div class="app_box">
      <div class="app_img">
