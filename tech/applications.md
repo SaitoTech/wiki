@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-08-17T02:50:27.244Z
+date: 2024-08-22T07:26:18.934Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -10,14 +10,8 @@ dateCreated: 2022-12-21T01:40:41.364Z
 
 # Saito Applications
 
-Applications on Saito look and feel like traditional software and services, but offer unparalleled decentralization, privacy and user control. Web 3 philosophy and P2P technology in every app. Unlike traditional platforms, Saito offers:
+Applications on Saito look and feel like traditional web apps, but run in a peer-to-peer swarm, with browsers connecting directly to each other to exchange data and falling back to the underlying blockchain only when needed. Here are some of the genuine web3 apps working today:
 
-- Instant access - No logins or registrations required
-- True decentralization - Permissionless service providers
-- Enhanced privacy - Your data, your control
-- Open Source - Audit, modify, and earn with no restrictions
-
-The Saito blockchain serves as a hyper-efficient data-layer which serves as a *trustless PKI* network capable of securing P2P connections for the entire globe, offering a seamless experience which is also robustly open and decentralized at scale.
 <br>
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 10px; max-width: 1000px; margin: 0 auto;">
 
