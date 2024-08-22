@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-08-22T07:59:15.750Z
+date: 2024-08-22T08:02:59.190Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -16,51 +16,49 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
 <div class="app_container">
 
   <a href="/tech/applications/RedSquare">
-  <div class="app_box">
-     <div class="app_img">
-       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
-     </div>
-     <div class="app_title">Swarmcasting</div>
-  </div>
+    <div class="app_box">
+       <div class="app_img">
+         <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
+       </div>
+       <div class="app_title">Swarmcasting</div>
+    </div>
   </a>
 
   <a href="/tech/applications/RedSquare">
-  <div class="app_box">
-     <div class="app_img">
-       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
-     </div>
-     <div class="app_title">Video Calls</div>
-   </div>
-</a>
-
-
-  <a href="/tech/applications/RedSquare">
-  <div class="app_box">
-     <div class="app_img">
-       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
-     </div>
-     <div class="app_title">Saito Arcade</div>
-   </div>
-</a>
+    <div class="app_box">
+       <div class="app_img">
+         <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
+       </div>
+       <div class="app_title">Video Calls</div>
+    </div>
+  </a>
 
   <a href="/tech/applications/RedSquare">
-  <div class="app_box">
-     <div class="app_img">
-       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
+    <div class="app_box">
+       <div class="app_img">
+         <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
+       </div>
+       <div class="app_title">Saito Arcade</div>
      </div>
-     <div class="app_title">Saito Wallet</div>
-   </div>
-</a>
+  </a>
 
   <a href="/tech/applications/RedSquare">
-  <div class="app_box">
-     <div class="app_img">
-       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
-     </div>
-     <div class="app_title">Swarmcasting</div>
-   </div>
-</a>
+    <div class="app_box">
+       <div class="app_img">
+         <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
+       </div>
+       <div class="app_title">Saito Wallet</div>
+    </div>
+  </a>
 
+  <a href="/tech/applications/RedSquare">
+    <div class="app_box">
+      <div class="app_img">
+        <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
+      </div>
+      <div class="app_title">Swarmcasting</div>
+    </div>
+  </a>
 
 </div>
 
@@ -68,59 +66,71 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
 
 <br/>
 <div class="app_container">
-  <div class="app_box">
-     <div class="app_img">
-       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
+
+  <a href="/tech/applications/twilight">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
+       </div>
+       <div class="app_title">Twilight Struggle</div>
+    </div>
+  </a>
+
+  <a href="/tech/applications/settlers">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="https://saito.io/settlers/img/arcade/arcade.jpg" />
+       </div>
+       <div class="app_title">Settlers</div>
+    </div>
+  </a>
+
+  <a href="/tech/applications/imperium">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="https://saito.io/imperium/img/arcade/arcade.jpg" />
+       </div>
+       <div class="app_title">Red Imperium</div>
      </div>
-     <div class="app_title">Twilight Struggle</div>
-   </div>
+  </a>
 
+  <a href="/tech/applications/his">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="https://saito.io/his/img/arcade/arcade.jpg" />
+       </div>
+       <div class="app_title">Here I Stand</div>
+    </div>
+  </a>
 
-  <div class="app_box">
-     <div class="app_img">
-       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
-     </div>
-     <div class="app_title">Red Imperium</div>
-   </div>
+  <a href="/tech/applications/chess">
+    <div class="app_box">
+      <div class="app_img">
+        <img src="https://saito.io/chess/img/arcade/arcade.jpg" />
+      </div>
+      <div class="app_title">Chess</div>
+    </div>
+  </a>
 
+  <a href="/tech/applications/wuziqi">
+    <div class="app_box">
+      <div class="app_img">
+        <img src="https://saito.io/wuziqi/img/arcade/arcade.jpg" />
+      </div>
+      <div class="app_title">Wuziqi</div>
+    </div>
+  </a>
 
-  <div class="app_box">
-     <div class="app_img">
-       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
-     </div>
-     <div class="app_title">Settlers</div>
-   </div>
-
-  <div class="app_box">
-     <div class="app_img">
-       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
-     </div>
-     <div class="app_title">Settlers</div>
-   </div>
-
-  <div class="app_box">
-     <div class="app_img">
-       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
-     </div>
-     <div class="app_title">Settlers</div>
-   </div>
-
-  <div class="app_box">
-     <div class="app_img">
-       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
-     </div>
-     <div class="app_title">Settlers</div>
-   </div>
-
-  <div class="app_box">
-     <div class="app_img">
-       <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
-     </div>
-     <div class="app_title">Settlers</div>
-   </div>
+  <a href="/tech/applications/poker">
+    <div class="app_box">
+      <div class="app_img">
+        <img src="https://saito.io/poker/img/arcade/arcade.jpg" />
+      </div>
+      <div class="app_title">Poker</div>
+    </div>
+  </a>
 
 </div>
-
 
 ## Want to Develop Applications?
 
