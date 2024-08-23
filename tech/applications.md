@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-08-23T00:07:44.412Z
+date: 2024-08-23T00:08:18.908Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -18,7 +18,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/tech/applications/redsquare">
     <div class="app_box">
        <div class="app_img">
-         <img src="/red-square.png" />
+         <img src="https://saito.io/twilight/img/arcade/arcade.jpg" />
        </div>
        <div class="app_title">RedSquare</div>
     </div>
