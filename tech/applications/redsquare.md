@@ -2,7 +2,7 @@
 title: Red Square
 description: 
 published: true
-date: 2024-08-22T14:01:27.216Z
+date: 2024-08-25T19:57:15.633Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-23T00:47:55.328Z
@@ -20,9 +20,13 @@ In addition to Twitter-like functionality, [Red Square](/tech/applications/redsq
 Unlike Twitter and other "web3" social media platforms like Mastadon and Nostr, RedSquare is genuinely decentralized. What this means is that instead of fetching "tweets" and other content from a single server which controls which accounts exist and restricts their access to data, on RedSquare users run the application in their browser and request tweets from whichever peer nodes they are connected to across the swarm.
 
 Moderation functions are similarly decentralized, meaning that your experience using the site will depend heavily on the friends you make online. This allows RedSquare to achieve what mainstreain sites like Mastadon or Nostr fail to provide: a truly uncensorable public square in which all users are treated on equal terms.
+
+![red-square-feed.jpg](/red-square-feed.jpg)
  
+ <!--
 <br><img src="/redsquare.png" alt="Screenshot of Red Square app: typing a reply with an emote to an image gallery post. Notification and home menus, chats, game invites, leaderboards, calender and more can be seen in the background.">
 <br>
+-->
 
 Like many Saito applications, Red Square is agnostic to whether the content it processes arrives through on-chain or off-chain protocols. By default all content is broadcast onto the underlying Saito blockchain, but content can also be fetched from off-chain transaction archives. The architecture is designed to scale with the amount of traffic on the underlying blockchain, allowing cost-sensitive users to shift more activity to off-chain peer-to-peer channels as public broadcast grows more expensive.
     
