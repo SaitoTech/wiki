@@ -2,7 +2,7 @@
 title: Red Square
 description: 
 published: true
-date: 2024-08-25T19:57:15.633Z
+date: 2024-08-25T20:02:44.157Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-23T00:47:55.328Z
@@ -21,7 +21,8 @@ Unlike Twitter and other "web3" social media platforms like Mastadon and Nostr, 
 
 Moderation functions are similarly decentralized, meaning that your experience using the site will depend heavily on the friends you make online. This allows RedSquare to achieve what mainstreain sites like Mastadon or Nostr fail to provide: a truly uncensorable public square in which all users are treated on equal terms.
 
-![red-square-feed.jpg](/red-square-feed.jpg)
+![rs-mobile-dark.png](/rs-mobile-dark.png)
+
  
  <!--
 <br><img src="/redsquare.png" alt="Screenshot of Red Square app: typing a reply with an emote to an image gallery post. Notification and home menus, chats, game invites, leaderboards, calender and more can be seen in the background.">
@@ -31,6 +32,8 @@ Moderation functions are similarly decentralized, meaning that your experience u
 Like many Saito applications, Red Square is agnostic to whether the content it processes arrives through on-chain or off-chain protocols. By default all content is broadcast onto the underlying Saito blockchain, but content can also be fetched from off-chain transaction archives. The architecture is designed to scale with the amount of traffic on the underlying blockchain, allowing cost-sensitive users to shift more activity to off-chain peer-to-peer channels as public broadcast grows more expensive.
     
 If you are getting started with RedSquare, browse through the content you can see and start *following* users whose content you like. You'll not only get amplified access to their media streams, but you'll allow them to help sculpt the nature of the content you see by default: all fully transparently, and all without adding centralized parties to limit your freedom of action on the web.
+
+![red-square-feed.jpg](/red-square-feed.jpg)
 
 ## [DeMod](https://saito.tech/saito-modtools-decentralized-moderation/) - Decentralized Moderation
 
