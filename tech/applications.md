@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-08-25T19:28:08.764Z
+date: 2024-08-25T19:40:12.478Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -13,6 +13,13 @@ dateCreated: 2022-12-21T01:40:41.364Z
 Applications on Saito look and feel like traditional web apps, but run in a peer-to-peer swarm, with browsers connecting directly to each other to exchange data and falling back to the blockchain only when needed. Here are some of the web3 apps this approach enables you can use today:
 
 <br/>
+
+<style>
+  .app_box {
+  height: 250px;
+  }
+</style>
+
 <div class="app_container">
 
   <a href="/tech/applications/redsquare">
