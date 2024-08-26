@@ -2,13 +2,13 @@
 title: swarmcast
 description: 
 published: true
-date: 2024-08-22T14:26:07.347Z
+date: 2024-08-26T20:39:02.035Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-17T03:29:13.103Z
 ---
 
-## Saito Swarmcast
+# Saito Swarmcast
 
 A [swarmcast](https://saito.io/swarmcast) is a peer-to-peer audio/video broadcast. It works by creating a "swarm" of listeners who pick up and amplify your broadcast in real-time. This allows for video broadcasts at decent scale without the need for on centralized servers or expensive infrastructure.
 
@@ -19,9 +19,23 @@ In additional to automating the task of joining and amplifying swarmcasts, Saito
 
 ## How to Swarmcast on YouTube
 
-You can connect a Swarmcast with YouTube by providing a [YouTube Stream Key](https://support.google.com/youtube/answer/9854503?hl=en#zippy=%2Cstream-key). Click on that link if you want to know how to get that Stream Key -- it usually takes about 24 hours for Youtube to enable accounts so you should do it at least a day in advance of your first swarmcast. This lets people watch your swarmcast on Youtube, and ensures it is saved for replayability once the recording is finished.
+Swarmcast on Youtube ensures your show is saved for replayability once the recording is finished.
 
-### Steps:
+## Steps on YouTube
+
+Before doing anything on Swarmcast, you will need a [YouTube Stream Key](https://support.google.com/youtube/answer/9854503?hl=en#zippy=%2Cstream-key). Note that the following steps work even if you already have a live stream scheduled.
+
+1. Hit the create button and go to the *Go Live* page.
+![yt-stream-key.png](/yt-stream-key.png)
+
+2. Find the stream key associated with your YouTube Account.
+
+![step2-streamkey.png](/step2-streamkey.png)
+
+
+Keep in mind that it usually takes about 24 hours for YouTube to enable newly created YouTube accounts, so plan ahead!
+
+## Steps on Swarmcast:
 
 **1. Start a Saito [Video Call](https://saito.io/videocall/)**
 
