@@ -2,7 +2,7 @@
 title: Swarmcasting on Youtube
 description: How to Setup Saito Swarmcasting on Youtube
 published: true
-date: 2024-08-27T07:08:06.411Z
+date: 2024-08-27T07:12:50.616Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-27T05:33:30.520Z
@@ -47,11 +47,18 @@ Click NEXT when you are ready to continue. There will two more pages of options 
 <br />
 <img src="/media_gallery/youtube_live.png" style="width:600px" />
 
-
 Your <b>STREAM KEY</b> is below the preview video towards the bottom of the page. You can click on the copy button to copy it into your clipboard. What you want to do is leave this tab open (or come back and open it again) when you are ready to start your Saito Swarmcast.
 
-Back at the Saito Swarmcast, you should click on the Youtube button when you are ready to start and it will ask you for this key. Once you provide it, Saito will connect to Youtube and you will see your swarmcast in the preview window of the screen above. Make sure you click "Play" on Saito to start recording. When you click "Stop" it will stop both your Youtube broadcast and your P2P Swarmcast at the same time.
 
-Hopefully this page has been helpful. Let us know if there are any questions and we'll do our best to update it. And have fun Youtube Swarmcasting. :)
+## 4. Go Back to Saito!
+
+Back at the Saito Swarmcast, click on the Youtube button when you are ready to start sending your feed to Youtube. Once you click on the Youtube button Saito will ask you for this <b>STREAM KEY</b>. Once you provide it, everything else is automated -- Saito will connect to Youtube and you will see your swarmcast in the preview window on the Youtube Stream page.
+
+Make sure you click "Play" on Saito to start recording. When you click "Stop" it will stop both your Youtube broadcast and your P2P Swarmcast at the same time.
+
+<br />
+<img src="/step4-enterkey.png" style="width:500px" />
+
+Hopefully this page has been helpful. Let us know if there are any questions and we'll do our best to update it. And have fun Youtube Swarmcasting.
 
 
