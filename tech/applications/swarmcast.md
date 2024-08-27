@@ -2,7 +2,7 @@
 title: swarmcast
 description: 
 published: true
-date: 2024-08-27T06:57:02.953Z
+date: 2024-08-27T06:57:30.384Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-17T03:29:13.103Z
@@ -51,5 +51,5 @@ Before doing anything on Swarmcast, you will need a YouTube Stream Key. Note tha
 ![step2-streamkey.png](/step2-streamkey.png)
 
 
-Keep in mind that it usually takes about 24 hours for YouTube to enable newly created YouTube accounts, so plan ahead!
+Keep in mind that it usually takes about 24 hours for YouTube to enable newly created YouTube accounts, so plan ahead if you want to use YouTube with Swarmcast!
 
