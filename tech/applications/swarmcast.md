@@ -2,7 +2,7 @@
 title: swarmcast
 description: 
 published: true
-date: 2024-08-27T06:58:50.307Z
+date: 2024-08-27T07:00:08.106Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-17T03:29:13.103Z
@@ -37,9 +37,9 @@ Click the YouTube icon in the top bar - enter your stream key (<a href="#yt">see
 Congratulations! You are now swarmcasting with YouTube amplification! Viewers have the option of finding your stream and connecting directly via [Swarmcast](https://saito.io/swarmcast) or your YouTube Channel. 
 
 
-## <div id="yt"> How to Swarmcast to YouTube </div>
+## <div id="yt"> Swarmcasting with YouTube </div>
 
-Swarmcast on Youtube ensures your show is saved for replayability once the recording is finished.
+Swarmcast on Youtube ensures your show is recorded and amplifies the stream using YouTube infrastructure.
 
 Before doing anything on Swarmcast, you will need a YouTube Stream Key. Note that the following steps work even if you already have a live stream scheduled.
 
