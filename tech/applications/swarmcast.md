@@ -2,7 +2,7 @@
 title: swarmcast
 description: 
 published: true
-date: 2024-08-27T06:57:30.384Z
+date: 2024-08-27T06:58:50.307Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-17T03:29:13.103Z
@@ -16,7 +16,7 @@ In additional to automating the task of joining and amplifying swarmcasts, Saito
 
 ![swarmcast-chat.png](/swarmcast-chat.png)
 
-## How to Swarmcast:
+## How to Swarmcast (and YouTube):
 
 **1. Start a Saito [Video Call](https://saito.io/videocall/)**
 
