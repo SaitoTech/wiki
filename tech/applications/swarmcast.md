@@ -2,7 +2,7 @@
 title: swarmcast
 description: 
 published: true
-date: 2024-08-27T07:00:08.106Z
+date: 2024-08-27T07:38:10.519Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-17T03:29:13.103Z
@@ -14,42 +14,22 @@ A [swarmcast](https://saito.io/swarmcast) is a peer-to-peer audio/video broadcas
 
 In additional to automating the task of joining and amplifying swarmcasts, Saito also provides swarmcasts with dedicated "group chats" and basic moderation features. Try using Saito Swarmcast for your next podcast or group call!
 
-![swarmcast-chat.png](/swarmcast-chat.png)
+<br/>
+<img src="/swarmcast-chat.png" style="width:600px" />
+          
+## Swarmcast from VideoCall:
 
-## How to Swarmcast (and YouTube):
+1. Start a Saito [VideoCall](https://saito.io/videocall/)
 
-**1. Start a Saito [Video Call](https://saito.io/videocall/)**
+2. Click the *Cast* button on the bottom menu
 
-**2. Click the *Cast* button on the bottom row - enter a title and description.**
+3. Enter Title and Description for your Swarmcast
+
 ![step1-cast-circle.png](/step1-cast-circle.png)
 ![step2-namecast.png](/step2-namecast.png)
 
+4. Hit Play button
 
-**3. Optional: Swarmcast onto Youtube**:
+Congratulations! You are now swarmcasting. If you want to hook-up Youtube support, you can find instructions on [streaming your swarmcast to Youtube](/tech/applications/swarmcast/youtube) right here.
 
-Click the YouTube icon in the top bar - enter your stream key (<a href="#yt">see below</a>).
-![step3-youtube-button-circled.png](/step3-youtube-button-circled.png)
-![step4-enterkey.png](/step4-enterkey.png)
-
-**4. Hit the play button.**
-![step3-youtube-button-circle-start.png](/step3-youtube-button-circle-start.png)
-
-Congratulations! You are now swarmcasting with YouTube amplification! Viewers have the option of finding your stream and connecting directly via [Swarmcast](https://saito.io/swarmcast) or your YouTube Channel. 
-
-
-## <div id="yt"> Swarmcasting with YouTube </div>
-
-Swarmcast on Youtube ensures your show is recorded and amplifies the stream using YouTube infrastructure.
-
-Before doing anything on Swarmcast, you will need a YouTube Stream Key. Note that the following steps work even if you already have a live stream scheduled.
-
-1. Hit the create button and go to the *Go Live* page.
-![yt-stream-key.png](/yt-stream-key.png)
-
-2. Find the stream key associated with your YouTube Account.
-
-![step2-streamkey.png](/step2-streamkey.png)
-
-
-Keep in mind that it usually takes about 24 hours for YouTube to enable newly created YouTube accounts, so plan ahead if you want to use YouTube with Swarmcast!
 
