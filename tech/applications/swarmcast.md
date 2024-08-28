@@ -2,7 +2,7 @@
 title: swarmcast
 description: 
 published: true
-date: 2024-08-27T07:38:10.519Z
+date: 2024-08-28T23:27:20.090Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-17T03:29:13.103Z
@@ -25,8 +25,8 @@ In additional to automating the task of joining and amplifying swarmcasts, Saito
 
 3. Enter Title and Description for your Swarmcast
 
-![step1-cast-circle.png](/step1-cast-circle.png)
-![step2-namecast.png](/step2-namecast.png)
+<img src="/step1-cast-circle.png" style="width:600px" />)
+<img src="/step2-namecast.png" style="width:600px" />)
 
 4. Hit Play button
 
