@@ -2,7 +2,7 @@
 title: swarmcast
 description: 
 published: true
-date: 2024-08-28T23:28:13.881Z
+date: 2024-08-28T23:28:23.533Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-17T03:29:13.103Z
@@ -28,7 +28,7 @@ In additional to automating the task of joining and amplifying swarmcasts, Saito
 <img src="/step1-cast-circle.png" style="width:600px" />)
 <img src="/step2-namecast.png" style="width:600px" />)
 
-4. Hit the *Play button* on the top bar.
+4. Hit the *Play* button on the top bar.
 
 Congratulations! You are now swarmcasting. If you want to hook-up Youtube support, you can find instructions on [streaming your swarmcast to Youtube](/tech/applications/swarmcast/youtube) right here.
 
