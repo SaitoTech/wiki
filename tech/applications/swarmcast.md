@@ -2,7 +2,7 @@
 title: swarmcast
 description: 
 published: true
-date: 2024-08-28T23:28:23.533Z
+date: 2024-08-28T23:31:22.447Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-17T03:29:13.103Z
@@ -22,11 +22,10 @@ In additional to automating the task of joining and amplifying swarmcasts, Saito
 1. Start a Saito [VideoCall](https://saito.io/videocall/)
 
 2. Click the *Cast* button on the bottom menu
+<img src="/step1-cast-circle-small.png" style="width:600px" />
 
 3. Enter Title and Description for your Swarmcast
-
-<img src="/step1-cast-circle.png" style="width:600px" />)
-<img src="/step2-namecast.png" style="width:600px" />)
+<img src="/step2-namecast-small.png" style="width:600px" />
 
 4. Hit the *Play* button on the top bar.
 
