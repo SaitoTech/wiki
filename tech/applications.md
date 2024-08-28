@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-08-28T23:45:29.437Z
+date: 2024-08-28T23:55:03.831Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -35,7 +35,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/tech/applications/chat">
     <div class="app_box">
        <div class="app_img">
-         <img src="/chat-shot.png" />
+         <img src="/chat-small.png" />
        </div>
        <div class="app_title">Saito Chat</div>
     </div>
