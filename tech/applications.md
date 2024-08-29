@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-08-29T00:11:09.463Z
+date: 2024-08-29T00:19:44.930Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -71,7 +71,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/tech/applications/swarmcast">
     <div class="app_box">
       <div class="app_img">
-        <img src="/swarmcast-demo.png" />
+        <img src="/swarmcast-small.png" />
       </div>
       <div class="app_title">Swarmcast</div>
     </div>
