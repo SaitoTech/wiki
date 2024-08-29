@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-08-29T00:23:01.102Z
+date: 2024-08-29T04:17:38.357Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -74,6 +74,15 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
         <img src="/swarmcast-small.png" />
       </div>
       <div class="app_title">Swarmcast</div>
+    </div>
+  </a>
+  
+  <a href="/tech/applications/fileshare">
+    <div class="app_box">
+      <div class="app_img">
+        <img src="/fileshare-ubuntu.png" />
+      </div>
+      <div class="app_title">Fileshare</div>
     </div>
   </a>
 
