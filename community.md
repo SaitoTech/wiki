@@ -2,7 +2,7 @@
 title: Community Chat Groups and Resources
 description: Community Chat Groups and Resources
 published: true
-date: 2024-02-29T00:24:49.552Z
+date: 2024-08-29T02:05:08.818Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-23T08:16:57.540Z
@@ -13,13 +13,18 @@ This page contains links to our many official and unofficial social media destin
 <br>
 
 ### Red Square ###
-Come interact with the community and the Saito blockchain at the same time, with Red Square; a social-media-hub-on-the-blockchain. Go there to talk to the community and the team; post as you would on X; play games.. and more.
-***All interaction happens P2P and on-chain!***
+
+Red Square is our P2P, onchain community hub.
+
 - [saito.io/redsquare](http://saito.io/redsquare)
 <p>
   
+### X (formerly known as 'Twitter'):  ###
+[@SaitoOfficial](https://x.com/SaitoOfficial?s=20)
+<br>
+  
 
-### Main Telegram Groups ###
+### Telegram ###
 
 - [Saito Telegram Group](https://t.me/SaitoIO) (official)
 - [Saito Discord](https://discord.gg/HjTFh9Tfec) (official)
@@ -34,14 +39,8 @@ Come interact with the community and the Saito blockchain at the same time, with
   
 
 
-### Saito Memes Telegram ###
-
-This [Telegram group](https://t.me/SaitoMemes) is very informal and the best place to have a good laugh, if the memes are your thing, you should Join now!
-<p>
   
-### X (formerly known as 'Twitter'):  ###
-- Username: **SaitoOfficial** [(link to profile)](https://x.com/SaitoOfficial?s=20)
-<br>
+
 
 ### Discord ###
 
@@ -51,12 +50,16 @@ Saito Discord Server (Currently invite-only)
   
 ### Websites ###
 
-**MAIN WEB SITES**
-- [saito.tech](https://saito.tech) - Main web resource for Saito
+**Brochure**
+ - [saito.tech](https://saito.tech) - Main web resource for Saito
 - [saito.io](https://saito.io) - Central Saito landing page for on-chain projects
+  
+ **Flahship Applications**
+  
 - [saito.io/redsquare](https://saito.io/redsquare) - Saito's Red Square Project
 - [saito.io/arcade](https://saito.io/arcade) - Community Arcade Project
-- [saito.io/redsquare](https://saito.io/videocall) - On-chain serverless video calling
+- [saito.io/videocall](https://saito.io/videocall) - On-chain serverless video calling
+
 
  
   
