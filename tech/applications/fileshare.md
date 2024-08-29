@@ -2,7 +2,7 @@
 title: Fileshare
 description: 
 published: true
-date: 2024-08-29T04:23:19.442Z
+date: 2024-08-29T04:24:06.977Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-29T04:07:44.659Z
@@ -20,7 +20,7 @@ Fileshare exists as a feature within [Saito Chat](https://saito.io/chat/), but c
 2. FInd your *Chat ID* URL.
 
 Open the chat menu:
-<img src="/chat-id.png" style="width: 600px" />
+<img src="/chat-id.png" style="" />
 ...and copy it by pressing this button near the bottom.
 <img src="/my-chat-id.png" style="width: 600px" />
 
