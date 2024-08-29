@@ -2,7 +2,7 @@
 title: Fileshare
 description: 
 published: true
-date: 2024-08-29T04:24:57.438Z
+date: 2024-08-29T04:26:28.770Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-29T04:07:44.659Z
@@ -20,14 +20,14 @@ Fileshare exists as a feature within [Saito Chat](https://saito.io/chat/), but c
 2. FInd your *Chat ID* URL.
 
 Open the chat menu:
-<img src="/chat-id.png" style="" />
+<img src="/chat-id.png" style="padding:10px" />
 Copy your *Chat ID* URL by pressing this button near the bottom.
-<img src="/my-chat-id.png" style="width: 600px" />
+<img src="/my-chat-id.png" style="width: 600px; padding:10px" />
 
 3. Recipient opens the URL.
 
 4. Sender press the *Fileshare Button* 
 
-<img src="/chat-file.png" style="width: 600px" />
+<img src="/chat-file.png" style="width: 600px; padding:10px" />
 
-The sender chooses any file, and all that's left is for the recipient to accept the file on their end.
+That's it. Once the sender chooses a file, and the recipient accepts, it will be privately sent across the P2P connection, no strings attached. 
