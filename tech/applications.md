@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-08-29T00:19:44.930Z
+date: 2024-08-29T00:23:01.102Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -62,7 +62,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/tech/applications/wallet">
     <div class="app_box">
        <div class="app_img">
-         <img src="/wallet4.png" />
+         <img src="/wallet-small.png" />
        </div>
        <div class="app_title">Saito Wallet</div>
     </div>
