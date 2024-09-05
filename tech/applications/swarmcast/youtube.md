@@ -2,7 +2,7 @@
 title: Swarmcasting on Youtube
 description: How to Setup Saito Swarmcasting on Youtube
 published: true
-date: 2024-09-05T22:10:44.127Z
+date: 2024-09-05T22:11:58.736Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-27T05:33:30.520Z
@@ -54,7 +54,9 @@ Your <b>STREAM KEY</b> is below the preview video towards the bottom of the page
 
 Back at the Saito Swarmcast, click on the Youtube button when you are ready to start sending your feed to Youtube. Once you click on the Youtube button Saito will ask you for this <b>STREAM KEY</b>. Once you provide it, everything else is automated -- Saito will connect to Youtube and you will see your swarmcast in the preview window on the Youtube Stream page.
 
-Make sure you click "Play" on Saito to start recording. When you click "Stop" it will stop both your Youtube broadcast and your P2P Swarmcast at the same time.
+**Make sure you click "Play" on Saito to start recording**. When you click "Stop" it will stop both your Youtube broadcast and your P2P Swarmcast at the same time.
+
+See the [Swarmcast Wiki Page](https://wiki.saito.io/tech/applications/swarmcast) for more info on how to use Swarmcast generally.
 
 <br />
 <img src="/step4-enterkey.png" style="width:500px" />
