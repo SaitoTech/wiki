@@ -2,13 +2,24 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2024-01-15T23:40:28.038Z
+date: 2024-09-05T05:54:07.778Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
 ---
 
 # Installation
+
+This section of the Saito Wiki is intended for developers interested in building applications for Saito, or contributing to the development of the protocol and the core software that runs the nodes on the network.
+
+
+## Module and Application Development
+
+Applications like the [Saito Arcade](https://saito.io/arcade) run inside the Saito Wallet, which receives on-chain and off-chain messages and passes them into the modules that are running inside the user wallet. For help getting started building applications, we recommend starting with our tutorial section for Application Developers.
+
+If you are interested in building Saito applications, please visit our page for Application Developers. The remainder of this page will focus on how to install/setup the core client, which can be helpful for compiling and debugging applications.
+
+## Core Client Development
 
 Saito consists of three separate-but-related software packages. The following links contain more detailed information on these packages along with instructions on how to compile and install them under Linux. We have a separate page with installation instructions for [Mac users](/tech/installation/mac).
 
