@@ -2,7 +2,7 @@
 title: swarmcast
 description: 
 published: true
-date: 2024-09-07T03:42:53.007Z
+date: 2024-09-07T03:43:42.734Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-17T03:29:13.103Z
@@ -31,6 +31,10 @@ In additional to automating the task of joining and amplifying swarmcasts, Saito
 
 <img src="/hit-play-swarmcast.png" style="width:600px" />
 
-Congratulations! You are now swarmcasting. If you want to hook-up Youtube support, you can find instructions on [streaming your swarmcast to Youtube](/tech/applications/swarmcast/youtube) right here.
+Congratulations! You are now swarmcasting P2P.
+
+## YouTube Support
+
+If you want to hook-up Youtube support, you can find instructions on [streaming your swarmcast to Youtube](/tech/applications/swarmcast/youtube) right here.
 
 
