@@ -2,14 +2,14 @@
 title: Settlers of Saitoa
 description: 
 published: true
-date: 2024-09-10T20:20:24.668Z
+date: 2024-09-10T20:20:49.636Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-29T19:34:11.091Z
 ---
 
 ![](/settlers-wide.png)
-<img src="/settlers-wide.png" style="width: 600px;"/>
+<!-- <img src="/settlers-wide.png" style="width: 600px;"/> -->
 
 # Settlers of Saito
 
