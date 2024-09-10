@@ -2,13 +2,13 @@
 title: Poker
 description: 
 published: true
-date: 2024-09-10T20:43:42.038Z
+date: 2024-09-10T20:45:34.727Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-23T00:58:05.891Z
 ---
 
-![](/poker_game_screenshot.jpg)
+<img src="/poker-wide-no-crypto.png">
 
 # [Poker](https://saito.io/arcade/)
 
