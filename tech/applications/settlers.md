@@ -2,13 +2,14 @@
 title: Settlers of Saitoa
 description: 
 published: true
-date: 2024-09-10T20:19:39.526Z
+date: 2024-09-10T20:20:24.668Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-29T19:34:11.091Z
 ---
 
 ![](/settlers-wide.png)
+<img src="/settlers-wide.png" style="width: 600px;"/>
 
 # Settlers of Saito
 
@@ -16,7 +17,7 @@ dateCreated: 2023-01-29T19:34:11.091Z
   
 The goal of the game is to reach ten victory points, but this can be customized. The two-player game also has some unique customizations designed to make victory harder. Once a player has an entrenched lead, the local bandit ("Robin Hood") will typically favour them over their opponent out of sense of natural justice.  
   
-\## How to Play  
+## How to Play  
   
 Players build by spending [resources](https://en.wikipedia.org/wiki/Game_mechanics#Resource_management) (wool, grain, lumber, brick, and ore) that are depicted by these resource cards; each land type, with the exception of the unproductive desert, produces a specific resource: hills produce brick, forests produce lumber, mountains produce ore, fields produce grain, and pastures produce wool. 
 
