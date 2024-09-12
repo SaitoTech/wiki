@@ -2,7 +2,7 @@
 title: swarmcast
 description: 
 published: true
-date: 2024-09-12T07:26:06.762Z
+date: 2024-09-12T07:27:51.468Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-17T03:29:13.103Z
@@ -19,17 +19,17 @@ In additional to automating the task of joining and amplifying swarmcasts, Saito
           
 ## Swarmcast from VideoCall:
 
-1. Start a [VideoCall](https://saito.io/videocall/) and click the *Cast* button. Provide title and description when asked.
+1. Click the *Cast* button and provide title and description when asked.
 
 <br />
 <img src="/media_gallery/videocall_swarmcast_button.png" style="width:400px" />
 
-2. Click on the green *Play* button on the new swarmcast menu to go live.
+2. Click on the *Play* button on the new swarmcast menu to start broadcasting.
 
 <br />
 <img src="/media_gallery/videocall_play_button.png" style="width:400px" />
 
-4. Click on the Youtube button to [stream your swarmcast to Youtube](/tech/applications/swarmcast/youtube) (instructions at link)
+4. Click on the Youtube button to [stream your swarmcast to Youtube](/tech/applications/swarmcast/youtube) (optional)
 
 <br />
 <img src="/media_gallery/videocall_youtube_button.png" style="width:400px" />
