@@ -2,15 +2,13 @@
 title: Swarmcasting on Youtube
 description: How to Setup Saito Swarmcasting on Youtube
 published: true
-date: 2024-09-07T03:47:06.013Z
+date: 2024-09-12T07:37:03.154Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-27T05:33:30.520Z
 ---
 
 # Swarmcasting on Youtube
-
-[Back to Swarmcast Wiki Article](https://wiki.saito.io/tech/applications/swarmcast)
 
 You can connect a [Swarmcast](https://saito.io/swarmcast) with YouTube by providing a YouTube Stream Key. Youtube has its own rather unhelpful instructions on how to . Since these are unclear, we're provided more straightforward directions below.
 
