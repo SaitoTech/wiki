@@ -2,15 +2,13 @@
 title: Community Chat Groups and Resources
 description: Community Chat Groups and Resources
 published: true
-date: 2024-09-13T03:34:51.296Z
+date: 2024-09-13T03:52:38.693Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-23T08:16:57.540Z
 ---
 
-# Community Links
-
-## Red Square
+# Red Square
 
 Red Square is our on-chain, Web 3 hub. Saito founders, OGs, and users of the protocol convene on-chain here:
 
@@ -18,6 +16,8 @@ Red Square is our on-chain, Web 3 hub. Saito founders, OGs, and users of the pro
 
 Learn more about how Red Square works [here](https://wiki.saito.io/tech/applications/arcade).
 <p>
+  
+![red-square-feed.jpg](/red-square-feed.jpg)
   
 ## Official Saito Web 2 Hubs
 ### X (formerly Twitter):  ###
