@@ -2,22 +2,25 @@
 title: Community Chat Groups and Resources
 description: Community Chat Groups and Resources
 published: true
-date: 2024-09-13T03:52:38.693Z
+date: 2024-09-13T04:00:25.876Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-23T08:16:57.540Z
 ---
 
 # Red Square
+<br>
+<img src="/red-square-feed.jpg" style="width: 600px">
 
-Red Square is our on-chain, Web 3 hub. Saito founders, OGs, and users of the protocol convene on-chain here:
+Red Square is our on-chain, Web 3 hub. Saito founders, OGs, and users of the protocol convene on-chain at Red Square.
+
+When you click the link, your browser will automatically generate and save a wallet and synchronize a lite node, so you can join the conversation instantly:
 
 - [saito.io/redsquare](http://saito.io/redsquare)
 
 Learn more about how Red Square works [here](https://wiki.saito.io/tech/applications/arcade).
 <p>
   
-![red-square-feed.jpg](/red-square-feed.jpg)
   
 ## Official Saito Web 2 Hubs
 ### X (formerly Twitter):  ###
@@ -41,10 +44,15 @@ If you'd like to start a Telegram group for your language, please feel free. Not
 - [Saito Discord](https://discord.gg/HjTFh9Tfec)
 <br>
 
-### Websites 
+### Website
   
 - [saito.tech](https://saito.tech) - Main web resource for Saito
 - [saito.io](https://saito.io) - Central Saito landing page
+  
+### Other
+  
+- [Community Project Page](https://wiki.saito.io/en/community/projects) (may not be up to date)
+- [Creator Resources](/en/community/MediaGallery)
  
 <!--
   
