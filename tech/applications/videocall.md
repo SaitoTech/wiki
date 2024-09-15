@@ -2,7 +2,7 @@
 title: Video Call
 description: 
 published: true
-date: 2024-09-15T20:59:22.629Z
+date: 2024-09-15T20:59:55.043Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-27T03:22:36.662Z
@@ -24,7 +24,7 @@ Video Call can be accessed directly via the above link or through the slide-in m
 
 Saito Video Call uses WebRTC to negotiate direct P2P connections between clients. The Saito Blockchain and routing network serve as the coordation layer both to authenticate users and to perform peer discovery, as well as provide incentives to any nodes hosting STUN/TURN services.
 
-Because the coordation layer and application are completely open protocols, developers, hackers and security researchers can all enjoy the same robust infrastructure without the hassle of a privatized middleman service like Zoom extorting money, privacy and sanity.
+Because the coordation layer and application are completely open protocols, users, developers and security researchers can all enjoy, leverage and audit the same robust infrastructure without the hassle of a privatized middleman service like Zoom extorting money, privacy and sanity.
 
 <!--
 <br>
