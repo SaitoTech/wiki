@@ -2,7 +2,7 @@
 title: Settlers of Saitoa
 description: 
 published: true
-date: 2024-09-10T20:20:49.636Z
+date: 2024-09-15T21:13:09.287Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-29T19:34:11.091Z
@@ -11,11 +11,13 @@ dateCreated: 2023-01-29T19:34:11.091Z
 ![](/settlers-wide.png)
 <!-- <img src="/settlers-wide.png" style="width: 600px;"/> -->
 
-# Settlers of Saito
+# Settlers of Saitoa
 
-[Settlers of Saito](https://saito.io/arcade) is an open source implementation of an island-settling game with similar mechanics to the well-known Settlers of Catan. Players build settlements, cities, and roads to expand their control over island resources and earn Victory Points. The game board, which represents the island, is composed of hexagonal tiles ([hexes](https://en.wikipedia.org/wiki/Hex_map)) which are laid out randomly at the beginning of each game.   
+[Settlers of Saitoa](https://saito.io/arcade) is an open source implementation of an island-settling game with similar mechanics to the well-known Settlers of Catan. Players build settlements, cities, and roads to expand their control over island resources and earn Victory Points. The game board, which represents the island, is composed of hexagonal tiles ([hexes](https://en.wikipedia.org/wiki/Hex_map)) which are laid out randomly at the beginning of each game.   
   
-The goal of the game is to reach ten victory points, but this can be customized. The two-player game also has some unique customizations designed to make victory harder. Once a player has an entrenched lead, the local bandit ("Robin Hood") will typically favour them over their opponent out of sense of natural justice.  
+The goal of the game is to reach ten victory points, but this can be customized. The two-player game also has some unique customizations designed to make victory harder. Once a player has an entrenched lead, the local bandit ("Robin Hood") will typically favour them over their opponent out of sense of natural justice.
+
+Settlers of Saitoa [source code.](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/settlers)
   
 ## How to Play  
   
