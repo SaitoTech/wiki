@@ -2,7 +2,7 @@
 title: Video Call
 description: 
 published: true
-date: 2024-09-15T20:59:55.043Z
+date: 2024-09-15T21:01:42.749Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-27T03:22:36.662Z
@@ -13,8 +13,10 @@ dateCreated: 2023-03-27T03:22:36.662Z
 [Saito Video Call](https://saito.io/videocall/) is a peer-to-peer, end-to-end encrypted video conferencing tool for everyday use. And because it is decentralized you don't need to download software, create an account, or provide your phone or credit card number to use it - just create the call and share the link with a friend.
 
 - Video Call [source code.](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/videocall)
+
+<br>
   
-![saito-talk.jpg](/saito-talk.jpg)
+<img src="/saito-talk.jpg" style="maxwidth: 600px;">
 
 In addition to direct calls, video calls also come with chat channels, and support standard use cases like sharing presentations. You can also now [swarmcast](/tech/applications/swarmcast) your video calls to turn private calls into realtime public broadcasts.
 
