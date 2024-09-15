@@ -2,7 +2,7 @@
 title: Twilight Struggle
 description: Twilight Struggle on Saito
 published: true
-date: 2024-09-10T20:48:34.337Z
+date: 2024-09-15T21:12:00.001Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-22T11:12:21.027Z
@@ -19,6 +19,8 @@ Twilight Struggle soared into popular lists of the best boardgames ever released
 The game itself is a strategic simulation of the Cold War in which one player assumes the role of the USSR and the other attempts to contain them as the US. The game takes place over 10 rounds in which the critical events of the Cold War may or may not be played depending on which cards and dealt and played to which player. Will Castro take Cuba? And will the powers fall into or manage nuclear brinkmanship? Every game is different.
 
 The defining mechanic of Twilight Struggle is that as players must choose to use cards for the "events" described on them, or play those cards for points -- in which case the event will always fire if it is an "opponent" event. This results in a game of crisis management as players seek to dominate regions to score points from doing so, while defusing crises that can be triggered by their own actions. Will their opponents be able to take advantage of those weaknesses, or will they be struggling with crises of their own making? These sorts of calculations lie at the heart of the game.
+
+- Twilight Struggle [source code.](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/twilight)
 
 ## About the Saito Edition
 
