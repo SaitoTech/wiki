@@ -2,15 +2,17 @@
 title: Chess
 description: 
 published: true
-date: 2024-09-15T21:21:07.400Z
+date: 2024-09-15T21:23:18.758Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-23T01:18:24.058Z
 ---
 
-![](/chess_game.jpg)
 
-# **Chess** 
+
+# Chess
+
+<img src="/chess-clocks.png" style="maxwidth: 600px;">
 
 The Saito Chess module supports the standard two player game that is sometimes called **international chess** or **Western chess** to distinguish it from [related games](https://en.wikipedia.org/wiki/Chess_variant), such as [xiangqi](https://en.wikipedia.org/wiki/Xiangqi) (Chinese chess) and [shogi](https://en.wikipedia.org/wiki/Shogi) (Japanese chess). This is the form of the game that emerged in Spain and the rest of Southern Europe during the 2nd half of the 15th century. The game is now one of the most popular games, played by millions worldwide.
 
@@ -18,4 +20,4 @@ Chess was the first game module ever coded for the Saito Network, primarily as a
 
 While there are many places for players to play chess, the Saito module by now supports a number of additional features that are not available elsewhere. Players can chat and make videocalls during their games, as well as to broadcast their matches via a P2P swarmcast or through Youtube. Observer mode allows other players to track game moves in real-time. And it is also possible for players – law permitting – to wager cryptocurrencies as part of their matches.
 
-Chess [source code.](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/chess)
+- Chess [source code.](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/chess)
