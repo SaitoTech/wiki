@@ -2,7 +2,7 @@
 title: Here I Stand
 description: Here I Stand - Wars of the Reformation - Saito Edition
 published: true
-date: 2024-08-22T11:36:31.747Z
+date: 2024-09-15T21:15:01.922Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-22T11:35:40.239Z
@@ -16,6 +16,8 @@ dateCreated: 2024-08-22T11:35:40.239Z
 Here I Stand is a lengthy game for between 2 and 6 players that simulates the political and religious conflicts of early 16th Century Europe. The game mixes religious conflict with territorial battles and plays out differently each time as the six primary factions in Europe: the Protestants, English, French, Hapsburg, Papacy and Ottoman Turks.
 
 As a six-sided diplomatic struggle, Here I Stand allows players to plot military and religious advances while offering benefits to those who are able to successfully build alliances through secret and public negotiations that can take place over the course of the game. The game deck consists of more than 100 cards that enable both offensive and defensive maneuvering. The complexity of the game and its action-and-response mechanisms makes Here I Stand one of the most complex games that has ever been coded for the Saito Game Engine.
+
+Here I Stand [source code.](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/his)
 
 ## About the Saito Edition
 
