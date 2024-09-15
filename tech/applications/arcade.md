@@ -2,7 +2,7 @@
 title: SaitoArcade
 description: 
 published: true
-date: 2024-08-22T15:04:54.765Z
+date: 2024-09-15T21:03:54.348Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-19T20:49:30.032Z
@@ -20,6 +20,8 @@ For these reasons the [Web3 Foundation](https://web3.foundation/) has recognized
 
 > I like this idea and think it provides something REALLY valuable to the ecosystem, and takes blockchain gaming in a very different (and good!) direction
 > - *[Bill Laboon](https://github.com/w3f/Grants-Program/pull/73#issuecomment-713638248), Head of Education and Grants at Web3 Foundation*
+
+- Arcade [source code.](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/arcade)
 
 ### <div id="betterBusiness"> Why Build an Open Source Arcade? </div>
 
