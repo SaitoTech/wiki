@@ -2,7 +2,7 @@
 title: Fileshare
 description: 
 published: true
-date: 2024-09-14T06:51:58.084Z
+date: 2024-09-15T21:08:22.811Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-29T04:07:44.659Z
@@ -11,6 +11,8 @@ dateCreated: 2024-08-29T04:07:44.659Z
 # Fileshare
 
 Saito Fileshare is a peer-to-peer encrypted file-streaming service between two peers. Saito Fileshare is a feature within [Saito Chat](https://saito.io/chat/) but can be integrated into any other Saito Application. Developers can find the application code [right here](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/fileshare).
+
+- Fileshare [source code.](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/fileshare)
 
 ## How To Send a File
 
