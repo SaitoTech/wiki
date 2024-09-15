@@ -2,7 +2,7 @@
 title: Saito Wallet
 description: Cryptocurrencies in Saito
 published: true
-date: 2024-08-22T15:17:12.953Z
+date: 2024-09-15T21:04:56.380Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-22T15:17:12.953Z
@@ -13,6 +13,8 @@ dateCreated: 2024-08-22T15:17:12.953Z
 Saito makes it possible to write applications that use tokens and assets on other blockchains. You can code a game that requires a payment to be made in another cryptocurrency, for instance, or a plugin that reads data on other chains. Saito does this by supporting third-party "cryptocurrency modules" that provide a bridge to other networks.
 
 Once your wallet has these modules installed, you will have the option to enable them, at which point the Saito Wallet will provide you with a network address and allow you to send-and-receive tokens on those networks. Right now Saito includes support for Bitcoin and Ethereum by default, but we expect to expand the list as usage grows -- if you are a developer interested in getting your favourite cryptocurrency supported get in touch.
+
+- Wallet [source code.](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/wallet)
 
 
 ## Getting Started
