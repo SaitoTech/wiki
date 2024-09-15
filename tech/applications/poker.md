@@ -2,17 +2,25 @@
 title: Poker
 description: 
 published: true
-date: 2024-09-10T20:45:34.727Z
+date: 2024-09-15T21:20:23.910Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-23T00:58:05.891Z
 ---
 
-<img src="/poker-wide-no-crypto.png">
-
 # [Poker](https://saito.io/arcade/)
 
-Saito Poker is a implementation of  Texas Hold'em Poker that uses advanced cryptographic techniques to allow players to play the game in a provably-fair fashion without the need for a trusted third-party. Gameplay also happens directly peer-to-peer, without the need for a central server to connect players or mediate disputes. This makes Saito Poker fundamentally different from other “web3” poker implementations where players use cryptocurrencies to make wagers, but which still. rely on centralized servers or trusted third-parties to deal cards, manage bets, and handle payouts.
+<img src="/poker-wide-no-crypto.png" style="maxwidth=600px;">
+
+Saito Poker is an implementation of Texas Hold'em Poker that uses advanced cryptographic techniques to allow players to play the game in a provably-fair fashion without the need for a trusted third-party. It was the initial proof of concept for [Saito Web 3 Gaming](https://wiki.saito.io/tech/applications/arcade) and paved the way for a wide variety of games.
+
+Saito Poker supports P2P crypto wagers that settle between hands - no custodian or middleman is required.
+
+- Poker [source code.](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/poker)
+
+## How it Works
+
+Gameplay happens directly peer-to-peer, without the need for a central server to connect players or mediate disputes. This makes Saito Poker fundamentally different from other “web3” poker implementations where players use cryptocurrencies to make wagers, but which still. rely on centralized servers or trusted third-parties to deal cards, manage bets, and handle payouts.
 
 The cryptographic techniques used to secure gameplay are provided by the Saito Game Engine and include techniques like \[mental poker\](https://en.wikipedia.org/wiki/Mental\_poker), as described by Adi Shamir, Ronald L. Rivest and Leanard M. Adleman – the inventors of public key cryptography. These techniques exploit the commutative properties of public key encryption schemes to encrypt cards in a way they cannot be dealt from the deck without the consent of all players.  
   
