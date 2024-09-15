@@ -2,7 +2,7 @@
 title: swarmcast
 description: 
 published: true
-date: 2024-09-15T21:06:10.592Z
+date: 2024-09-15T21:07:45.253Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-17T03:29:13.103Z
@@ -20,6 +20,8 @@ In additional to automating the task of joining and amplifying swarmcasts, Saito
 <img src="/swarmcast-chat.png" style="width:600px" />
           
 ## Swarmcast from VideoCall:
+
+We curreently recommend you initiate a Swarmcast from within a [Video Call.](https://saito.io/videocall/)
 
 1. Click the *Cast* button and provide title and description when asked.
 
