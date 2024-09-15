@@ -2,7 +2,7 @@
 title: Red Square
 description: 
 published: true
-date: 2024-08-25T20:02:44.157Z
+date: 2024-09-15T20:51:47.128Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-23T00:47:55.328Z
@@ -13,6 +13,8 @@ dateCreated: 2023-01-23T00:47:55.328Z
 [Red Square](https://saito.io/redsquare/) is a open source clone of Twitter that runs atop the Saito Network. Users can create posts, track and follow their peers, and leave comments or otherwise engage with other people's content.
 
 In addition to Twitter-like functionality, [Red Square](/tech/applications/redsquare) includes a real-time chat functions (powered by Saito Chat) and gaming portal (powered by Saito Arcade) and other gaming features like leaderboards. These demonstrate the power of Saito Modules to not only provide features, but add UI Components to other elements.
+
+- Red Square's [source code](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/redsquare).
 
 
 ### Why Build a Decentralized Twitter?
