@@ -2,7 +2,7 @@
 title: Chat
 description: 
 published: true
-date: 2024-08-22T13:53:18.564Z
+date: 2024-09-15T20:52:57.543Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-09T04:44:07.894Z
@@ -17,6 +17,8 @@ dateCreated: 2023-03-09T04:44:07.894Z
 Saito Chat is designed as both an on-chain and off-chain applications, while your browser will likely receive the majority of chat messages directly from other peers, it is also possible to send messages to other users fully on-chain. On-chain messages can also be used . this situation .All communications are quick and secure and involve the blockchain and your intended recipients - no middlemen. In the case of 
 
 In addition to private chats, the Saito Chat module also supports public channels like the Saito Community Chat, which are public rooms in which all messages are unencrypted by default. The chat module is also easy to integrate with other applications. You can see it in the sidebar of RedSquare as well as access it within games to chat with fellow players.
+
+- Saito Chat [source code.](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/chat)
 
 ## How to Add a Contact
 
