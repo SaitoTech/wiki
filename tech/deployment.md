@@ -2,7 +2,7 @@
 title: Deploy Saito Instance
 description: 
 published: true
-date: 2024-09-17T07:58:10.847Z
+date: 2024-09-17T08:01:03.088Z
 tags: installation
 editor: markdown
 dateCreated: 2023-02-23T07:15:16.260Z
@@ -12,7 +12,11 @@ dateCreated: 2023-02-23T07:15:16.260Z
 
 Be sure you've completed the [installation instructions](https://wiki.saito.io/en/tech/installation) and have a functioning [Saito Lite Rust Client](https://github.com/saitotech/saito-lite-rust) running on your machine before continuing.
 
-To generate a custom options file make a `options.conf` in the `config/` folder with the following content; be sure to set your endpoint to your domain:
+<hr>
+
+## Configuration
+
+Generate a custom options file make a `options.conf` in the `config/` folder with the following content; be sure to set your endpoint to your domain:
 ```
 {
 	"server":{
@@ -28,7 +32,7 @@ To generate a custom options file make a `options.conf` in the `config/` folder 
 }
 ```
 
-## 5) WebServer, reverse proxy and HTTPS
+## WebServer, reverse proxy and HTTPS
 Make sure to point your domain to your VPS or server.
 
 The following instructions will use ***NGINX*** as the webserver and secure it with Let's Encrypt. Alternatives webserver should follow the same logic, please refer to your service's manual/documentation.
@@ -37,7 +41,7 @@ The following instructions will use ***NGINX*** as the webserver and secure it w
 sudo apt-get update
 sudo apt-get install nginx
 ```
-#### Configure NGINX as a reverse proxy
+#### 1) Configure NGINX as a reverse proxy
 
 Add the server block config on `/etc/nginx/sites-enable/<file_name>`
 Your saito installation will point to localhost:12101 by default
@@ -51,7 +55,7 @@ server {
 ```
 Now you can visit Saito in your browser visiting `http://yourdomain.com`
 
-#### Secure NGINX with Let's Encrypt (HTTPS)
+#### 2) Secure NGINX with Let's Encrypt (HTTPS)
 ```
 sudo apt-get install certbot python3-certbot-nginx
 ```
@@ -83,7 +87,7 @@ Now that you have a secure connection to your node we need to change the endpoin
 ```
 Compile your Saito (`npm run nuke`) and if everything is correct you can visit your Saito with `https://yourdomain.com`
 
-####  Enable websockets for NGINX
+#### 3) Enable websockets for NGINX
 Add the following config on your server block `/etc/nginx/sites-enable/<file_name>` config file with:
 ```
 server {
@@ -100,7 +104,7 @@ server {
 }
 ```
 
-#### Enable Cross-origin Resource sharing (CORS) for NGINX
+#### 4) Enable Cross-origin Resource sharing (CORS) for NGINX
 
 Add the following config on your server block `/etc/nginx/sites-enable/<file_name>` config file with:
 ```
@@ -137,7 +141,7 @@ location / {
      }
 }
 ```
-#### Enable compression for NGINX
+#### 5) Enable compression for NGINX
 Add the following config on your server block `/etc/nginx/sites-enable/<file_name>` config file with:
 ```
 server {
