@@ -2,13 +2,15 @@
 title: Saito Wallet
 description: Cryptocurrencies in Saito
 published: true
-date: 2024-09-15T21:04:56.380Z
+date: 2024-09-17T10:57:37.309Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-22T15:17:12.953Z
 ---
 
 # Saito Wallet
+
+<img src="/wallet.png" style="max-width: 600px;">
 
 Saito makes it possible to write applications that use tokens and assets on other blockchains. You can code a game that requires a payment to be made in another cryptocurrency, for instance, or a plugin that reads data on other chains. Saito does this by supporting third-party "cryptocurrency modules" that provide a bridge to other networks.
 
