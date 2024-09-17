@@ -2,7 +2,7 @@
 title: Network API
 description: This doc offers a high-level overview of the networking APIs.
 published: true
-date: 2024-09-17T07:16:40.381Z
+date: 2024-09-17T07:23:51.469Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-10T06:12:36.195Z
@@ -30,18 +30,6 @@ REQBLKHD: request block_header
 SNDBLKHD: send block_header
 SNDKYLST: send keylist
 -->
-
-| Command | Description |
-|---------|-------------|
-| SHAKINIT | Initialize handshake |
-| SHAKCOMP | Complete handshake |
-| SNDTRANS | Send transaction |
-| REQBLOCK | Request block |
-| REQCHAIN | Request blockchain |
-| SNDCHAIN | Send blockchain |
-| REQBLKHD | Request block_header |
-| SNDBLKHD | Send block_header |
-| SNDKYLST | Send keylist |
 
 | Command | Description |
 |---------|-------------|
@@ -160,7 +148,7 @@ Future Work:
 Here we will eventually use fork_id(or some other means) to figure out what is a decent common ancestor.
 
 request block_header could be used for this purpose if it accepted block id.
-
+<!--
 Clayton Rabenda, [12.08.21 13:58]
 we could add an API that let's B discover the common ancestor, but i think this is what fork_id is for...?
 
@@ -170,7 +158,7 @@ that is a good idea
 the reason it is all packed together in that one request is to speed up lite-client connection
 
 but we can do that better with the functionality separated
-
+-->
 <div id="sndchain">
 
 ## Send blockchain (SNDCHAIN)
@@ -258,16 +246,17 @@ Currently only the block hash is included in the SendBlockHeadMessage, but this 
 ### Future considerations:
 
 We will need to access the blockchain and peers in the future here to implement “congestion policy”.
-E.g.  has peer has forwarded 2 blocks at the same depth from the same block producer? blacklist them
-E.g. this block didn’t validate. did the sending peer say that it did and sign that?
+E.g.  If peer has forwarded 2 blocks at the same depth from the same block producer? Blacklist as spam.
+E.g. This block didn’t validate. Did the sending peer say that it did and sign that?
 
 In the future this will also send routing sigs.
-“we have routing sigs when sending TXS and will need to have them for blocks in the near future”
+“We have routing sigs when sending TXS and will need to have them for blocks in the near future”
+<!--
 David mentioned that this should include routing sigs, but it’s not clear why and they are currently unimplemented so I’m leaving it off the spec.
-
+-->
 <div id="sndkylst">
 
-## send keylist (SNDKYLST)
+## Send Keylist (SNDKYLST)
 
 </div>
 
