@@ -2,7 +2,7 @@
 title: Network API
 description: This doc offers a high-level overview of the networking APIs.
 published: true
-date: 2022-03-29T03:45:54.059Z
+date: 2024-09-17T07:16:40.381Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-10T06:12:36.195Z
@@ -19,6 +19,7 @@ In addition to connecting with other nodes via websocket, nodes are also expecte
 
 All messages are sent with an 8-byte header which indicates the type of data being sent along the chain. The data that follows is specific to the type of request.
 
+<!--
 SHAKINIT: initialize handshake
 SHAKCOMP: complete handshake
 SNDTRANS: send transaction
@@ -28,8 +29,37 @@ SNDCHAIN: send blockchain
 REQBLKHD: request block_header
 SNDBLKHD: send block_header
 SNDKYLST: send keylist
+-->
+
+| Command | Description |
+|---------|-------------|
+| SHAKINIT | Initialize handshake |
+| SHAKCOMP | Complete handshake |
+| SNDTRANS | Send transaction |
+| REQBLOCK | Request block |
+| REQCHAIN | Request blockchain |
+| SNDCHAIN | Send blockchain |
+| REQBLKHD | Request block_header |
+| SNDBLKHD | Send block_header |
+| SNDKYLST | Send keylist |
+
+| Command | Description |
+|---------|-------------|
+| [SHAKINIT](#shakinit) | Initialize handshake |
+| [SHAKCOMP](#shakcomp) | Complete handshake |
+| [SNDTRANS](#sndtrans) | Send transaction |
+| [REQBLOCK](#reqblock) | Request block |
+| [REQCHAIN](#reqchain) | Request blockchain |
+| [SNDCHAIN](#sndchain) | Send blockchain |
+| [REQBLKHD](#reqblkhd) | Request block_header |
+| [SNDBLKHD](#sndblkhd) | Send block_header |
+| [SNDKYLST](#sndkylst) | Send keylist |
+
+<div id="shakinit">
 
 ## Initialize Handshake (SHAKINIT)
+
+</div>
 
 Does a handshake which authorizes each party as their public key. This is the first thing which should be done after opening the websocket connection. Unless a peer is aware of your publickey and you have cryptographically proved your ownership of it, that peer will not route transactions to you.
 
@@ -49,7 +79,11 @@ RESULT__:
 ERROR___: Message describing any error encountered
 
 
-## Handshake Complete(SHAKCOMP)
+<div id="shakcomp">
+
+## Handshake Complete (SHAKCOMP)
+
+</div>
 
 After the IP and signature of the SHAKINIT response(RESULT__) have been verified by the peer which sent the SHAKINIT request, they will send this command.
 
@@ -65,7 +99,11 @@ The data package is simply the entire SHAKINIT response signed again by the Send
 RESULT__: OK
 ERROR___: Message describing any error encountered
 
-## Send transaction(SNDTRANS)
+<div id="sndtrans">
+
+## Send transaction (SNDTRANS)
+
+</div>
 
 validates transaction and adds it to mempool
 
@@ -77,7 +115,11 @@ validates transaction and adds it to mempool
 RESULT__: OK
 ERROR___: Message describing reason transaction is not valid or Description of any other error
 
-## request block
+<div id="reqblock">
+
+## Request Block (REQBLOCK)
+
+</div>
 
 ### SENDS:
 
@@ -88,8 +130,12 @@ ERROR___: Message describing reason transaction is not valid or Description of a
 
  - full-block
  - lite-block
+ 
+<div id="reqchain">
 
-## Request blockchain(REQCHAIN)
+## Request blockchain (REQCHAIN)
+
+</div>
 
 This is for requesting meta-data about the blockchain which will be sent via “send blockchain”.
 
@@ -125,8 +171,11 @@ the reason it is all packed together in that one request is to speed up lite-cli
 
 but we can do that better with the functionality separated
 
+<div id="sndchain">
 
-## Send blockchain(SNDCHAIN)
+## Send blockchain (SNDCHAIN)
+
+</div>
 
 After request blockchain, the peer pushes blockchain data at the requesting peer.
 
@@ -155,7 +204,11 @@ ERROR___: Description of any error
 Future Work:
 Since we are not yet validating payments with lite-blocks/merkle tree, it’s not necessary to send pre_hash or number of transactions. This could be sent now, but we won’t be doing anything with the data until the future when we add lite blocks.
 
-## Request block_header(REQBLKHD)
+<div id="reqblkhd">
+
+## Request block_header (REQBLKHD)
+
+</div>
 
 This is only called in case a node falls behind and receives a block or block header that has a gap between it and it’s latest block. In this case, this API can be called using the prev_hash of the new block and this process can be repeated until an ancestor of the new block/blockheader is found.
 
@@ -178,7 +231,11 @@ ERROR___: NOTFOUND or Description of any error
 
 For now we can only request blockheader by hash, but it may be useful for performance or conveniences in the future to also be able to request headers by block id.
 
-## Send block_header(SNDBLKHD)
+<div id="sndblkhd">
+
+## Send block_header (SNDBLKHD)
+
+</div>
 
 This is used to send block meta data to a peer which may be interested in a block that the node has. There are two cases, when a node produces a block or when a node receives a block from a 3rd peer.
 
@@ -208,7 +265,11 @@ In the future this will also send routing sigs.
 “we have routing sigs when sending TXS and will need to have them for blocks in the near future”
 David mentioned that this should include routing sigs, but it’s not clear why and they are currently unimplemented so I’m leaving it off the spec.
 
-## send keylist(SNDKYLST)
+<div id="sndkylst">
+
+## send keylist (SNDKYLST)
+
+</div>
 
 This will not be implemented at all for version 1. This is only needed for lite-blocks and the design is not yet finalized.
 
