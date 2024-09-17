@@ -2,7 +2,7 @@
 title: Deploy Saito Instance
 description: 
 published: true
-date: 2024-09-17T07:49:48.030Z
+date: 2024-09-17T07:54:33.640Z
 tags: installation
 editor: markdown
 dateCreated: 2023-02-23T07:15:16.260Z
@@ -10,7 +10,7 @@ dateCreated: 2023-02-23T07:15:16.260Z
 
 # Deploy your Saito on a VPS or server - Ubuntu 22.04 (LTS) x64
 
-Be sure you've completed the [installation instructions] and have a functioning [Saito Lite Rust Client]  running on your machine before continuing.
+Be sure you've completed the [installation instructions](https://wiki.saito.io/en/tech/installation) and have a functioning [Saito Lite Rust Client]  running on your machine before continuing.
 
 <!--
 
@@ -67,6 +67,22 @@ To generate a custom options file make a `options.conf` on `config/` folder, now
 ```
 Compile with ```npm run nuke```, final compiled file is on config/options
 -->
+
+To generate a custom options file make a `options.conf` in the `config/` folder with the following content; be sure to set your endpoint to your domain:
+```
+{
+	"server":{
+		"host":"localhost",
+		"port":12101,
+		"protocol":"http"
+		"endpoint":{
+			"host":"your_domain.com",
+			"port":12101,
+			"protocol":"http"
+		}
+	}
+}
+```
 
 ## 5) WebServer, reverse proxy and HTTPS
 Make sure to point your domain to your VPS or server.
