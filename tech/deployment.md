@@ -2,14 +2,18 @@
 title: Deploy Saito Instance
 description: 
 published: true
-date: 2023-03-08T23:54:15.502Z
+date: 2024-09-17T07:49:48.030Z
 tags: installation
 editor: markdown
 dateCreated: 2023-02-23T07:15:16.260Z
 ---
 
 # Deploy your Saito on a VPS or server - Ubuntu 22.04 (LTS) x64
----
+
+Be sure you've completed the [installation instructions] and have a functioning [Saito Lite Rust Client]  running on your machine before continuing.
+
+<!--
+
 Requirements:
 - Machine with at least 2GB RAM.
 - Domain
@@ -62,6 +66,8 @@ To generate a custom options file make a `options.conf` on `config/` folder, now
 }
 ```
 Compile with ```npm run nuke```, final compiled file is on config/options
+-->
+
 ## 5) WebServer, reverse proxy and HTTPS
 Make sure to point your domain to your VPS or server.
 
