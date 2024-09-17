@@ -2,7 +2,7 @@
 title: Deploy Saito Instance
 description: 
 published: true
-date: 2024-09-17T07:55:02.664Z
+date: 2024-09-17T07:58:10.847Z
 tags: installation
 editor: markdown
 dateCreated: 2023-02-23T07:15:16.260Z
@@ -11,62 +11,6 @@ dateCreated: 2023-02-23T07:15:16.260Z
 # Deploy your Saito on a VPS or server - Ubuntu 22.04 (LTS) x64
 
 Be sure you've completed the [installation instructions](https://wiki.saito.io/en/tech/installation) and have a functioning [Saito Lite Rust Client](https://github.com/saitotech/saito-lite-rust) running on your machine before continuing.
-
-<!--
-
-Requirements:
-- Machine with at least 2GB RAM.
-- Domain
-- Build tools: git, g++, make, python, tsc
-- Stack: node.js (v.16+), npm (v6+)
-- TypeScript
----
-## 1) Install Dependencies
-SSH to your VPS and run:
-```
-sudo apt-get update
-sudo apt-get install g++ make git python3
-curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash
-sudo apt-get install -y nodejs
-```
-
-## 2) Download Saito
-```
-git clone https://github.com/saitotech/saito-lite-rust
-cd saito-lite-rust
-npm install
-```
-> note: in case npm fails to install a module, you might need to `sudo apt-get install python-is-python3`.
-## 3) Compile and Run Saito
-```
-npm run nuke
-npm start
-```
-## 4) Visit Saito in your Browser
-Once you have run ```npm start``` it will take a few moments for the Saito software to initialize and start. You will eventually see an animated Saito logo scroll across your terminal. Once that is done simply open a browser and visit:
-> http://localhost:12101
-
-
-To visit your Saito instance on your VPS:
->http://<your_server_ip>:12101
-
-To generate a custom options file make a `options.conf` on `config/` folder, now set your endpoint to your domain with the following:
-```
-{
-	"server":{
-		"host":"localhost",
-		"port":12101,
-		"protocol":"http"
-		"endpoint":{
-			"host":"your_domain.com",
-			"port":12101,
-			"protocol":"http"
-		}
-	}
-}
-```
-Compile with ```npm run nuke```, final compiled file is on config/options
--->
 
 To generate a custom options file make a `options.conf` in the `config/` folder with the following content; be sure to set your endpoint to your domain:
 ```
@@ -221,3 +165,71 @@ nginx -t
 systemctl restart nginx
 ```
 And done!
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+Requirements:
+- Machine with at least 2GB RAM.
+- Domain
+- Build tools: git, g++, make, python, tsc
+- Stack: node.js (v.16+), npm (v6+)
+- TypeScript
+---
+## 1) Install Dependencies
+SSH to your VPS and run:
+```
+sudo apt-get update
+sudo apt-get install g++ make git python3
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash
+sudo apt-get install -y nodejs
+```
+
+## 2) Download Saito
+```
+git clone https://github.com/saitotech/saito-lite-rust
+cd saito-lite-rust
+npm install
+```
+> note: in case npm fails to install a module, you might need to `sudo apt-get install python-is-python3`.
+## 3) Compile and Run Saito
+```
+npm run nuke
+npm start
+```
+## 4) Visit Saito in your Browser
+Once you have run ```npm start``` it will take a few moments for the Saito software to initialize and start. You will eventually see an animated Saito logo scroll across your terminal. Once that is done simply open a browser and visit:
+> http://localhost:12101
+
+
+To visit your Saito instance on your VPS:
+>http://<your_server_ip>:12101
+
+To generate a custom options file make a `options.conf` on `config/` folder, now set your endpoint to your domain with the following:
+```
+{
+	"server":{
+		"host":"localhost",
+		"port":12101,
+		"protocol":"http"
+		"endpoint":{
+			"host":"your_domain.com",
+			"port":12101,
+			"protocol":"http"
+		}
+	}
+}
+```
+Compile with ```npm run nuke```, final compiled file is on config/options
+-->
