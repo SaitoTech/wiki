@@ -2,7 +2,7 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2024-09-17T08:18:21.553Z
+date: 2024-09-17T08:19:34.726Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -10,7 +10,7 @@ dateCreated: 2022-01-18T09:49:16.786Z
 
 # Installation
 
-This section of the Saito Wiki is intended for developers interested in building applications for Saito. [See here]() for information about contributing to the development of the protocol and the core software that runs the nodes on the network.
+This section of the Saito Wiki is intended for developers interested in building applications for Saito. [See here](/tech/installation/core-software) for information about contributing to the development of the protocol and the core software that runs the nodes on the network.
 
 - Mac [install instructions](https://wiki.saito.io/tech/installation/mac)
 - Windows [install instructions](https://wiki.saito.io/en/tech/installation/windows)
