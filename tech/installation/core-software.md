@@ -2,7 +2,7 @@
 title: Core
 description: 
 published: true
-date: 2024-09-17T08:28:29.387Z
+date: 2024-09-17T08:40:15.447Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-17T08:16:38.266Z
@@ -33,3 +33,17 @@ Saito Lite (Rust) is a lite-client coded in javascript and designed for binary c
 ## Networking API
 
 Documentation on the networking API can be found [here](/tech/core).
+
+## External Resources
+
+For more code and documentation please visit our public GitHub repository:
+
+https://github.com/saitotech
+
+This repository includes older branches and versions which are not being maintained. If you are interested in developing on the public site, please make sure you are using the latest two live repositories:
+
+ - https://github.com/saitotech/saito-lite-rust
+   ( JavaScript )
+
+ - https://github.com/saitotech/saito-rust-workspace
+   ( Rust )
