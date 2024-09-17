@@ -2,7 +2,7 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2024-09-05T05:58:04.892Z
+date: 2024-09-17T07:48:23.093Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -11,6 +11,10 @@ dateCreated: 2022-01-18T09:49:16.786Z
 # Installation
 
 This section of the Saito Wiki is intended for developers interested in building applications for Saito, or contributing to the development of the protocol and the core software that runs the nodes on the network.
+
+## Quick Install - Ubuntu 22.04 (LTS) x64
+
+
 
 
 ## Module and Application Development
