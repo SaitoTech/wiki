@@ -2,7 +2,7 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2024-09-17T08:19:34.726Z
+date: 2024-09-17T08:24:10.520Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -39,12 +39,21 @@ git clone https://github.com/saitotech/saito-lite-rust
 cd saito-lite-rust
 npm install
 ```
-> note: in case npm fails to install a module, you might need to `sudo apt-get install python-is-python3`.
+**Note:** If npm fails to install a module, you may need to install `python-is-python3`.
+
+On Ubuntu:
+`sudo apt-get install python-is-python3`
+
 ### 3) Compile and Run Saito
 ```
 npm run nuke
 npm start
 ```
+
+If after a few moments with no errors a large Saito ASCII Logo appears on screen, move on to the next step.
+
+It is common that errors at this stage are related to your NodeJS install, so consider first searching for NodeJS troubleshooting help if you can't get Saito running at this stage.
+
 ### 4) Visit Saito in your Browser
 Once you have run ```npm start``` it will take a few moments for the Saito software to initialize and start. You will eventually see an animated Saito logo scroll across your terminal. Once that is done simply open a browser and visit:
 > http://localhost:12101
