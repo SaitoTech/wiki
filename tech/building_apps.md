@@ -2,13 +2,20 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-03-15T00:52:01.951Z
+date: 2024-09-17T08:36:55.214Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
 ---
 
 # Saito Application Development
+
+There are two primary ways to develop applications through Saito:
+
+1. Via Dynamic Module Compilation
+2. Self-hosting a node and application(s)
+
+For developers interested in hosting their applications on their own node, the [node installation instructions](/en/tech/installation) should be completed before moving on. Developers planning on leveraging Dynamic Module Compilation can move ahead.
 
 Applications on saito.io are modules that get installed into the wallet. Applications use on-chain and off-chain messages to communicate and can plug into other applications.
 
