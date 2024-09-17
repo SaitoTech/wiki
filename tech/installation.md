@@ -2,7 +2,7 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2024-09-17T08:17:57.112Z
+date: 2024-09-17T08:18:21.553Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -15,7 +15,7 @@ This section of the Saito Wiki is intended for developers interested in building
 - Mac [install instructions](https://wiki.saito.io/tech/installation/mac)
 - Windows [install instructions](https://wiki.saito.io/en/tech/installation/windows)
 
-## Quick Install - Ubuntu 22.04 (LTS) x64
+## Ubuntu 22.04 (LTS) x64
 
 Requirements:
 - Machine with at least 2GB RAM.
