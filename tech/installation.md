@@ -2,7 +2,7 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2024-09-17T07:50:21.617Z
+date: 2024-09-17T07:54:26.359Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -10,7 +10,7 @@ dateCreated: 2022-01-18T09:49:16.786Z
 
 # Installation
 
-This section of the Saito Wiki is intended for developers interested in building applications for Saito, or contributing to the development of the protocol and the core software that runs the nodes on the network.
+This section of the Saito Wiki is intended for developers interested in building applications for Saito. [See here]() for information about contributing to the development of the protocol and the core software that runs the nodes on the network.
 
 ## Quick Install - Ubuntu 22.04 (LTS) x64
 
@@ -46,11 +46,10 @@ npm start
 Once you have run ```npm start``` it will take a few moments for the Saito software to initialize and start. You will eventually see an animated Saito logo scroll across your terminal. Once that is done simply open a browser and visit:
 > http://localhost:12101
 
-
 To visit your Saito instance on your VPS:
 >http://<your_server_ip>:12101
-
-To generate a custom options file make a `options.conf` on `config/` folder, now set your endpoint to your domain with the following:
+<!--
+To generate a custom options file make a `options.conf` in the `config/` folder with the following content; be sure to set your endpoint to your domain:
 ```
 {
 	"server":{
@@ -65,6 +64,7 @@ To generate a custom options file make a `options.conf` on `config/` folder, now
 	}
 }
 ```
+-->
 Compile with ```npm run nuke```, final compiled file is on config/options
 
 
