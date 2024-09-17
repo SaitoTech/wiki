@@ -2,7 +2,7 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2024-09-17T07:54:26.359Z
+date: 2024-09-17T08:14:04.924Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -12,37 +12,40 @@ dateCreated: 2022-01-18T09:49:16.786Z
 
 This section of the Saito Wiki is intended for developers interested in building applications for Saito. [See here]() for information about contributing to the development of the protocol and the core software that runs the nodes on the network.
 
+- Mac [install instructions](https://wiki.saito.io/tech/installation/mac)
+- Windows [install instructions](https://wiki.saito.io/en/tech/installation/windows)
+
 ## Quick Install - Ubuntu 22.04 (LTS) x64
 
 Requirements:
 - Machine with at least 2GB RAM.
-- Domain
 - Build tools: git, g++, make, python, tsc
 - Stack: node.js (v.16+), npm (v6+)
 - TypeScript
 ---
-## 1) Install Dependencies
-SSH to your VPS and run:
+#### Install Dependencies
 ```
 sudo apt-get update
 sudo apt-get install g++ make git python3
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash
 sudo apt-get install -y nodejs
 ```
+### 2) Download Saito
 
-## 2) Download Saito
+The following instructions should be similar for Mac, Windows and the broader audience of Linux users; if you are not using Ubuntu, substitute in your package manager where appropriate.
+
 ```
 git clone https://github.com/saitotech/saito-lite-rust
 cd saito-lite-rust
 npm install
 ```
 > note: in case npm fails to install a module, you might need to `sudo apt-get install python-is-python3`.
-## 3) Compile and Run Saito
+### 3) Compile and Run Saito
 ```
 npm run nuke
 npm start
 ```
-## 4) Visit Saito in your Browser
+### 4) Visit Saito in your Browser
 Once you have run ```npm start``` it will take a few moments for the Saito software to initialize and start. You will eventually see an animated Saito logo scroll across your terminal. Once that is done simply open a browser and visit:
 > http://localhost:12101
 
@@ -65,7 +68,11 @@ To generate a custom options file make a `options.conf` in the `config/` folder 
 }
 ```
 -->
-Compile with ```npm run nuke```, final compiled file is on config/options
+
+Any changes can be compiled with `npm run nuke`. The final compiled file will rest in `config/options`.
+
+### 5) Deploy
+Visit the [deploy instructions](https://wiki.saito.io/en/tech/deployment) to learn how to connect your Saito Node to the public internet.
 
 
 ## Module and Application Development
