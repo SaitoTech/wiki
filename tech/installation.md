@@ -2,7 +2,7 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2024-09-17T08:14:04.924Z
+date: 2024-09-17T08:15:05.118Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -79,25 +79,6 @@ Visit the [deploy instructions](https://wiki.saito.io/en/tech/deployment) to lea
 
 Applications like the [Saito Arcade](https://saito.io/arcade) run inside the Saito Wallet, which receives on-chain and off-chain messages and passes them into the modules that are running inside the user wallet. If you want to get started building applications, we recommend starting with our tutorial series for new Application Developers.
 
-
-## Core Client Installation and Development
-
-Saito consists of three separate-but-related software packages. The following links contain more detailed information on these packages along with instructions on how to compile and install them under Linux. We have a separate page with installation instructions for [Mac users](/tech/installation/mac).
-
- - [Saito Rust](/tech/installation/rust)
- - [Saito WASM](/tech/installation/wasm)
- - [Saito Lite (Rust)](/tech/installation/javascript)
- 
-The Saito Rust client is a command-line application built to handle consensus and network operations. If you want to run a high-throughput network node this is the software you need.
-
-The Saito WASM library is compiled from the Rust code and consists of a compact library that can be included in programs written in other programming languages like javascript and python. This section of our wiki also contains instructions on compiling a NPM package that contains this WASM code and makes it easy to write NodeJS applications atop Saito.
-
-Saito Lite (Rust) is a lite-client coded in javascript and designed for binary compatibility with the Rust client. It uses the compiled WASM library to support an in-browser wallet that can send-and-receive both on-chain and off-chain messages and run Saito applications. Applications like the [Saito Arcade](https://saito.io/arcade) are built using this client. If you are interested in building applications rather than contributing to core development, this is most likely what you need.
-
-
-## Installation
-
-Please see the relevant sections above for detailed instructions on installing the software packages you need. If you are building applications you will only need to install Saito-Lite-Rust. If you are interested in contributing to protocol development you will need to install the Rust codebases as well.
 
 
 ## Configuration
@@ -181,6 +162,20 @@ https://127.0.0.1:12101/arcade
 This will load the Saito Arcade - one of our default applications. If everything has gone as planned, you now have a working version of Saito for use in local testing or development. 
 
 Take your next steps into application development with [tutorial one](https://wiki.saito.io/en/tech/tutorial-1-deploy-install-application) which explains how to build a simple application that attaches data to transactions and broadcasts them into the network.
+
+## Core Client Installation and Development
+
+Saito consists of three separate-but-related software packages. The following links contain more detailed information on these packages along with instructions on how to compile and install them under Linux. We have a separate page with installation instructions for [Mac users](/tech/installation/mac).
+
+ - [Saito Rust](/tech/installation/rust)
+ - [Saito WASM](/tech/installation/wasm)
+ - [Saito Lite (Rust)](/tech/installation/javascript)
+ 
+The Saito Rust client is a command-line application built to handle consensus and network operations. If you want to run a high-throughput network node this is the software you need.
+
+The Saito WASM library is compiled from the Rust code and consists of a compact library that can be included in programs written in other programming languages like javascript and python. This section of our wiki also contains instructions on compiling a NPM package that contains this WASM code and makes it easy to write NodeJS applications atop Saito.
+
+Saito Lite (Rust) is a lite-client coded in javascript and designed for binary compatibility with the Rust client. It uses the compiled WASM library to support an in-browser wallet that can send-and-receive both on-chain and off-chain messages and run Saito applications. Applications like the [Saito Arcade](https://saito.io/arcade) are built using this client. If you are interested in building applications rather than contributing to core development, this is most likely what you need.
 
 ### For more code and documentation please visit our public GitHub repository:
 
