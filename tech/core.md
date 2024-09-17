@@ -2,7 +2,7 @@
 title: Network API
 description: This doc offers a high-level overview of the networking APIs.
 published: true
-date: 2024-09-17T07:23:51.469Z
+date: 2024-09-17T07:47:46.528Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-10T06:12:36.195Z
@@ -89,7 +89,7 @@ ERROR___: Message describing any error encountered
 
 <div id="sndtrans">
 
-## Send transaction (SNDTRANS)
+## Send Transaction (SNDTRANS)
 
 </div>
 
@@ -121,7 +121,7 @@ ERROR___: Message describing reason transaction is not valid or Description of a
  
 <div id="reqchain">
 
-## Request blockchain (REQCHAIN)
+## Request Blockchain (REQCHAIN)
 
 </div>
 
@@ -161,7 +161,7 @@ but we can do that better with the functionality separated
 -->
 <div id="sndchain">
 
-## Send blockchain (SNDCHAIN)
+## Send Blockchain (SNDCHAIN)
 
 </div>
 
