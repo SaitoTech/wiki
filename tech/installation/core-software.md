@@ -2,7 +2,7 @@
 title: Core
 description: 
 published: true
-date: 2024-09-17T08:16:38.266Z
+date: 2024-09-17T08:18:39.152Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-17T08:16:38.266Z
@@ -10,11 +10,11 @@ dateCreated: 2024-09-17T08:16:38.266Z
 
 # Core Client Installation and Development
 
-Saito consists of three separate-but-related software packages. The following links contain more detailed information on these packages along with instructions on how to compile and install them under Linux. We have a separate page with installation instructions for [Mac users](/tech/installation/mac).
+Saito consists of three separate-but-related software packages. The following links contain more detailed information on these packages along with instructions on how to compile and install them under Linux.
 
  - [Saito Rust](/tech/installation/rust)
  - [Saito WASM](/tech/installation/wasm)
- - [Saito Lite (Rust)](/tech/installation/javascript)
+ - [Saito Lite (Rust)](/tech/installation)
  
 The Saito Rust client is a command-line application built to handle consensus and network operations. If you want to run a high-throughput network node this is the software you need.
 
