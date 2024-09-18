@@ -2,28 +2,34 @@
 title: Community Chat Groups and Resources
 description: Community Chat Groups and Resources
 published: true
-date: 2024-09-13T04:00:25.876Z
+date: 2024-09-18T04:52:38.504Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-23T08:16:57.540Z
 ---
 
-# Red Square
+# Join the Community
+
+[RedSquare](http://saito.io/redsquare) is our on-chain web3 hub. Visit RedSquare to find and chat with the Saito team, OGs, and all members of the community. As with all Saito Applications, when you run these apps your browser will automatically generate a wallet and synchronize a lite node, so you can join the conversation instantly:
+
 <br>
-<img src="/red-square-feed.jpg" style="width: 600px">
+<div style="height:400px;width:600px;overflow:hidden;">
+  <img src="/red-square-feed.jpg">
+</div>
 
-Red Square is our on-chain, Web 3 hub. Saito founders, OGs, and users of the protocol convene on-chain at Red Square.
+While we recommend newbiews to ynchronize a lite node, so you can join the conversation instantly:
 
-When you click the link, your browser will automatically generate and save a wallet and synchronize a lite node, so you can join the conversation instantly:
-
-- [saito.io/redsquare](http://saito.io/redsquare)
+- [saito.io/redsquare]
 
 Learn more about how Red Square works [here](https://wiki.saito.io/tech/applications/arcade).
 <p>
   
-  
-## Official Saito Web 2 Hubs
-### X (formerly Twitter):  ###
+ 
+## Off-Chain Communities
+
+  <br>
+
+### Twitter:  ###
 - [@SaitoOfficial](https://x.com/SaitoOfficial?s=20)
 <br>
  
@@ -38,53 +44,22 @@ Learn more about how Red Square works [here](https://wiki.saito.io/tech/applicat
   
 If you'd like to start a Telegram group for your language, please feel free. Note that as Saito development progresses more and more of community  is migrating to Red Square.
 
+<br>
   
 ### Discord ###
   
 - [Saito Discord](https://discord.gg/HjTFh9Tfec)
 <br>
 
-### Website
+### Other
   
 - [saito.tech](https://saito.tech) - Main web resource for Saito
 - [saito.io](https://saito.io) - Central Saito landing page
-  
-### Other
-  
 - [Community Project Page](https://wiki.saito.io/en/community/projects) (may not be up to date)
-- [Creator Resources](/en/community/MediaGallery)
- 
-<!--
-  
-- [Saito Traders Group](https://t.me/saitotraders) (*unofficial*)
-- [Spanish – Saito Telegram Group](https://t.me/saito_esp) (*unofficial*)
-- [French – Saito Telegram Group](https://t.me/Saito_France) (*unofficial*)
-- [Philippines – Saito Telegram Group](https://t.me/SaitoPH) (*unofficial*)
-- [Dutch – Saito Telegram Group](https://t.me/saitonltg) (*unofficial*)
-- [Polish – Saito Traders Group](https://t.me/SaitoTradersPL) (*unofficial*)
-<p hidden>- [Chinese – Saito Telegram Group](https://t.me/SaitoNetworkCN) (*unofficial*)</p>
--->
+- [Media Resources](/en/community/MediaGallery)
 
+ <br>
 
-<p>
-  
-
-<!--  
- **Flahship Applications**
-  
-- [saito.io/redsquare](https://saito.io/redsquare) - Saito's Red Square Project
-- [saito.io/arcade](https://saito.io/arcade) - Community Arcade Project
-- [saito.io/videocall](https://saito.io/videocall) - On-chain serverless video calling
-
-**Community Sites:**
-
-- [Awesome Saito](https://github.com/0xluminous/awesome-saito) - best compilation of Saito materials on the web. ([*0xluminous*](https://mobile.twitter.com/0xluminous))
-- [Saito Merch](https://saitomerch.com) - online shop for discerning Saitozens (Mr. Saito)
-- [Saito FAQs](https://saitofaqs.com/) - best compilation of FAQs and answers ([*0xluminous*](https://mobile.twitter.com/0xluminous))
-- [Saito Hodlers](https://saitohodlers.com/) - easy way to see how early we all are.... ([*0xluminous*](https://mobile.twitter.com/0xluminous))
-
-  <p>
--->
 ### Contact Us ###
 
 If you know who you want to write you should be able to figure out their email address (Hint: we are all on a first name basis). If you're not sure how to get in touch our public address is info@saito.io but you can skip our first-line filter by reaching out to us at community@saito.io.
