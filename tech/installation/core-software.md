@@ -2,22 +2,25 @@
 title: Core
 description: 
 published: true
-date: 2024-09-17T08:44:38.451Z
+date: 2024-09-18T05:25:33.900Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-17T08:16:38.266Z
 ---
 
-# Core Client Installation and Development
+# Core Client Protocol and Documentation
 
-## Saito Clients
+This page is intended for developers working on the core Saito software clients. If you just want to run a node, you should visit our tutorial on how to [run a node](/tech/installation). If you just want to build applications we have a [tutorial series](/tech/building_apps) that will get you started.
 
-Saito consists of three separate-but-related software packages. The following links contain more detailed information on these packages along with instructions on how to compile and install them under Linux.
+If you have a hankering for digging into the source code that runs the Saito Network and re-compiling the software from scratch you are in the right place. The rest of this page will get you started. We start by exploring the three separate-but-related software packages that make up the Saito stack:
 
  - [Saito Rust](/tech/installation/rust)
  - [Saito WASM](/tech/installation/wasm)
  - [Saito Lite (Rust)](/tech/installation)
- 
+
+The following links contain more detailed information on these packages along with instructions on how to compile and install them under Linux.
+
+
 ### Saito Rust
  
 The Saito Rust client is a command-line application built to handle consensus and network operations. If you want to run a high-throughput network node this is the software you need.
