@@ -2,7 +2,7 @@
 title: Core
 description: 
 published: true
-date: 2024-09-18T05:36:00.024Z
+date: 2024-09-18T05:37:11.318Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-17T08:16:38.266Z
@@ -10,7 +10,7 @@ dateCreated: 2024-09-17T08:16:38.266Z
 
 # Core Client Protocol and Documentation
 
-This page is intended for developers working on core Saito software clients. If you just want to run a node, visit our tutorial on how to [run a node](/tech/installation). If you just want to build applications, we have a [tutorial series](/tech/building_apps) to get you started too.
+This page is for developers who want to modify the core Saito protocol or client software. If you just want to run a node, visit our tutorial on how to [run a node](/tech/installation). If you just want to build applications, we have a [tutorial series](/tech/building_apps) to get you started too.
 
 The rest of this page starts by exploring the three separate-but-related software packages that make up the Saito stack. The first step to doing protocol development work is understanding where the code exists that you will want to modify/change/update.
 
