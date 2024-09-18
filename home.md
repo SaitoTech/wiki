@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2024-09-14T06:46:41.579Z
+date: 2024-09-18T05:07:10.028Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -15,29 +15,26 @@ dateCreated: 2021-11-09T07:50:58.627Z
 .cls-1{fill:rgb(247, 31, 61);}
 </style>
 
-Saito is a layer-1 blockchain that scales by fixing incentive misalignments in the consensus layers of all other blockchains. You can use Saito today to run web3 applications [directly in your browser](https://saito.io/redsquare). If you are new to Saito you can read our [one page explanation](https://wiki.saito.io/en/consensus) of how Saito Consensus works, check out our [development roadmap](https://wiki.saito.io/en/roadmap), start down the Saito rabbit-hole with the [Saito whitepaper](https://saito.io/saito-whitepaper.pdf), and read one of our favorite community [deep dives](https://medium.com/@saitosquare/defusing-cryptos-ticking-time-bomb-b2df6cd37221).
+Saito is a layer-1 blockchain designed to run applications directly in [your browser](https://saito.io/redsquare). It achieves the scale necessary for this by fixing incentive misalignments that exist in the consensus layers of all other blockchains. Newcomers can read our [one page explanation](https://wiki.saito.io/en/consensus) of how Saito Consensus works, check out our [development roadmap](https://wiki.saito.io/en/roadmap), see the [applications] running on the network, or read a lengthy analysis of routing work [deep dives](https://medium.com/@saitosquare/defusing-cryptos-ticking-time-bomb-b2df6cd37221).
 
-This wiki is intended as a community-editable resource and knowledge repository. If youd like to contribute, you can find all pages stored in markdown in our [Saito Wiki Github Repository](https://github.com/saitotech/wiki). Submit edits by making a push request with your proposed changes or emailing us at community@saito.tech. In order to help organize the site, we've divided the content into three main categories: 
+This wiki is a community-editable knowledge repository. If you'd like to contribute, you can find all pages stored in markdown in our [Saito Wiki Github Repository](https://github.com/saitotech/wiki). Submit edits by making a push request with your proposed changes. In order to help organize the site, we've divided the content into three main categories: 
 
 ## [Saito Consensus](/consensus)
-  Saito Consensus includes details on the consensus mechanism that Saito uses to power its blockchain network. It includes discussions of the incentive problems that Saito fixes and explains why solving them requires paying for fee-collection rather than other gameable forms of work like mining and staking. 
+Our consensus section includes details on the consensus mechanism that Saito uses to power its blockchain network. It includes discussions of the incentive problems that Saito fixes and explains why solving them requires paying for fee-collection rather than other gameable forms of work like mining and staking. 
   
 Saito is a layer-one blockchain that requires its blocks to contain a certain amount of “routing work”. Routing work is derived from transactions fees so in practice this means they need to contain a certain amount of money. How much depends on how long it has been since the last block and how many hops the transactions containing these fees have taken to reach the block producer.
-  
  
 In cybersecurity, an [attack vector](/consensus/attack-vectors)  is a method of achieving unauthorized network access to launch a cyber attack. Attack vectors allow cybercriminals to exploit system vulnerabilities to gain access to sensitive data, personally identifiable information (PII), and other valuable information accessible after a data breach. Saito is secure against classes of attack which have no defense mechanisms in other chains. This page explains how these mechanisms work
   
 ## [Saito Community](/community) 
-  Our community section includes links to our Telegram and Discord channels, non-English community resources, and information on community-led projects and ways to help the network. We also have information on some ongoing public development efforts and ways you can help out.
+Our community section includes links to our Telegram and Discord channels, non-English community resources, and information on community-led projects and ways to help the network. We also have information on some ongoing public development efforts and ways you can help out.
  
 ## [Saito Technology](/tech)
-  This section is for developers. It includes instructions on installing Saito, API guides and reference materials for those interested in building applications on the network, as well as more detailed explanations of the network architecture.
-  
-## [References](/consensus/references)
+Our developer section has instructions on setting up a node in the network, building applications, as well as API guides and reference materials for those interested in hacking up the core software client or learning more about the network architecture.
   
 ## Links
 
 [Saito Whitepaper](https://saito.io/saito-whitepaper.pdf)
 [Saito Arcade](https://saito.io/arcade/)
-[Get SAITO](https://wiki.saito.io/en/tokenomics#where-to-buy-saito)
+[Where to Buy Saito](https://wiki.saito.io/en/tokenomics#where-to-buy-saito)
 
