@@ -2,7 +2,7 @@
 title: Core
 description: 
 published: true
-date: 2024-09-18T05:25:33.900Z
+date: 2024-09-18T05:36:00.024Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-17T08:16:38.266Z
@@ -10,28 +10,27 @@ dateCreated: 2024-09-17T08:16:38.266Z
 
 # Core Client Protocol and Documentation
 
-This page is intended for developers working on the core Saito software clients. If you just want to run a node, you should visit our tutorial on how to [run a node](/tech/installation). If you just want to build applications we have a [tutorial series](/tech/building_apps) that will get you started.
+This page is intended for developers working on core Saito software clients. If you just want to run a node, visit our tutorial on how to [run a node](/tech/installation). If you just want to build applications, we have a [tutorial series](/tech/building_apps) to get you started too.
 
-If you have a hankering for digging into the source code that runs the Saito Network and re-compiling the software from scratch you are in the right place. The rest of this page will get you started. We start by exploring the three separate-but-related software packages that make up the Saito stack:
-
- - [Saito Rust](/tech/installation/rust)
- - [Saito WASM](/tech/installation/wasm)
- - [Saito Lite (Rust)](/tech/installation)
-
-The following links contain more detailed information on these packages along with instructions on how to compile and install them under Linux.
+The rest of this page starts by exploring the three separate-but-related software packages that make up the Saito stack. The first step to doing protocol development work is understanding where the code exists that you will want to modify/change/update.
 
 
-### Saito Rust
- 
-The Saito Rust client is a command-line application built to handle consensus and network operations. If you want to run a high-throughput network node this is the software you need.
+### [Saito Rust](/tech/installation/rust)
+The Saito Rust client is a command-line client programmed in Rust and intended to server as a high-throughput network node. This is the version of Saito that you want to be running if you are installing the software for use in a colocation facility. This also includes the core consensus-level classes (block, transaction, peer, network) that other clients use, and is the best source of documentation on how the core protocol works.
 
-### Saito WASM
+### [Saito WASM](/tech/installation/wasm)
 
-The Saito WASM library is compiled from the Rust code and consists of a compact library that can be included in programs written in other programming languages like javascript and python. This section of our wiki also contains instructions on compiling a NPM package that contains this WASM code and makes it easy to write NodeJS applications atop Saito.
+The Saito WASM library is compiled from the Rust code and consists of a compact library that exists in binary form and thus can be used by programs written in other languages like javascript and python that want to run a Saito node or otherwise interact with the Rust codebase.
 
-### Saito Lite (Rust)
+If you update Saito Rust codebase and want to make those changes "visible" to applications or clients coded in different languages (like javascript) you will need to compile a new version of the Saito WASM binary so that your non-Rust software is using the version of Saito that has the changes you have made. 
 
-Saito Lite (Rust) is a lite-client coded in javascript and designed for binary compatibility with the Rust client. It uses the compiled WASM library to support an in-browser wallet that can send-and-receive both on-chain and off-chain messages and run Saito applications. Applications like the [Saito Arcade](https://saito.io/arcade) are built using this client. If you are interested in building applications rather than contributing to core development, this is most likely what you need.
+### [Saito Lite (Rust)](/tech/installation)
+
+Saito Lite (Rust) is a Saito client that is written in javascript and intended for use primarily in web-browsers. This is the version of Saito that you are using when you visit [saito.io](https://saito.io) and use the applications in your browser.
+
+Saito Lite (Rust) uses the compiled WASM library to run a Saito client that can send-and-receive both on-chain and off-chain messages. It also includes support for most of the functions that applications will want to use. Most of the time if you are building Saito Applicaitons this is the version of Saito that you will want to be installing and playing with.
+
+Applications like the [Saito Arcade](https://saito.io/arcade) are built using this client. If you are interested in building applications rather than contributing to core development, this is most likely what you need.
 
 ## Networking API
 
