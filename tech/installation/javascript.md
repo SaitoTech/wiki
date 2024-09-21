@@ -2,7 +2,7 @@
 title: Saito Javascript - Installation Instructions
 description: 
 published: true
-date: 2023-10-13T08:41:59.352Z
+date: 2024-09-21T14:12:58.831Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:41:59.352Z
@@ -27,6 +27,7 @@ First, ensure your machine has NodeJS installed:
 
 ```
 sudo apt-get update
+sudo apt-get upgrade
 sudo apt-get install g++ make git python node-typescript
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash
 sudo apt-get install -y nodejs
