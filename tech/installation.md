@@ -2,7 +2,7 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2024-09-17T08:33:10.085Z
+date: 2024-09-21T15:32:00.591Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -26,7 +26,7 @@ Requirements:
 #### Install Dependencies
 ```
 sudo apt-get update
-sudo apt-get install g++ make git python3
+sudo apt-get install g++ make git python-is-python3 npm
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash
 sudo apt-get install -y nodejs
 ```
