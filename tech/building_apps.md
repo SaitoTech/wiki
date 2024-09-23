@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-09-23T06:55:17.417Z
+date: 2024-09-23T08:36:14.507Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -17,7 +17,7 @@ The first step in building Saito applications is to install a local copy of Sait
 
 ## Tutorials
 
-A good place to start is our [tutorial series](/tech/tutorials) for new developers. These tutorials start by teaching the absolute basics: how to build modules that send and receive transactions, and display UI elements and overlays that let the user. The more advanced tutorials explain how to get your module to insert itself into the existing UI elements like the standard drop-down menu.
+A good place to start is our [tutorial series](/tech/tutorials) for new developers. These tutorials start by teaching the absolute basics: how to send and receive transactions, and display UI elements and overlays that let users interact with your application. Our more advanced tutorials explain how to get your module to insert itself into the existing UI elements like the standard drop-down menu.
 
 More advanced developers can check our directory of [reference modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) which show exactly how the existing applications work. You can often consult an existing module to see how it works or modify an existing application to customize it and get it to do what you want.
 
