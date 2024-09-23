@@ -1,8 +1,8 @@
 ---
-title: Tutorial 1 Deploy and Install Application
-description: Deploying and Installing Application in Saito
+title: Tutorial 1 - Basic Application Structure
+description: Building Your First Saito Application
 published: true
-date: 2024-09-23T10:46:20.395Z
+date: 2024-09-23T10:47:11.250Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-22T07:07:49.922Z
