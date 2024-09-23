@@ -2,7 +2,7 @@
 title: Tutorial 1 Deploy and Install Application
 description: Deploying and Installing Application in Saito
 published: true
-date: 2024-09-23T10:45:29.005Z
+date: 2024-09-23T10:46:20.395Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-22T07:07:49.922Z
@@ -104,7 +104,7 @@ Most applications
 
 ## Reference Materials
 
-If you would like to test this application without compile it yourself, you can find a pre-packaged version available for installation into your browser here. Download the file and drag it into your. See here for instructions on compiling your own application into this portable format.
+If you would like to test this application without compiling it yourself, you can find a pre-packaged version available for installation into your browser here. Download the file and drag-and-drop it into your browser. The See here for instructions on compiling your own application into this portable format.
 
 You can find the complete source code associated with this tutorial in the default ```/mods``` directory. 
 
