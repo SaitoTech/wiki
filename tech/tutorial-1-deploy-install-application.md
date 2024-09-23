@@ -2,7 +2,7 @@
 title: Tutorial 1 Deploy and Install Application
 description: Deploying and Installing Application in Saito
 published: true
-date: 2024-09-23T09:18:33.117Z
+date: 2024-09-23T10:35:48.274Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-22T07:07:49.922Z
@@ -38,6 +38,8 @@ class Tutorial01 extends ModTemplate {
   }
 
 }
+
+module.exports = Tutorial01;
 ```
 
 All Saito modules extend from the ModTemplate class, which we required at the top of our module. This parent class provides the default set of functions that are called by the Saito Wallet whenever specific actions happen, such as when a new block is received or a transaction arrives that may require processing.
@@ -46,26 +48,54 @@ Start by customizing the name and description of your module. The slug should be
 
 ## Adding Functionality
 
-All Saito modules ultimately inherit from this class. You can look into thi file to see a list of the functions that you can override in your module. If you override a function then your module will run that function whenever the action
+All Saito modules ultimately inherit from the ```/lib/templates/modtemplate``` class. You can look into this file to see a list of the functions that you can override in your own module. If you override a function then your function will run whenever that function is called.
 
-In this case, we are going to override three specific functions. The first function ```initialize(app)``` runs whenever . 
+In this case, we are going to override three specific functions. The first function ```initialize(app)``` runs whenever your wallet is initialized. First we pass control to the parent class to let it initialize your module. And then we add anything specific we want our module to do. In this case, if I am a browser, let's trigger an alert to let the user know that we've initialized our module!
 
 ```
   async initialize(app) { 
     super.initialize(app);
-    console.log("Hello World - Initializing Tutorial01!"); 
+    if (app.BROWSER) { alert("Hello World - Initializing Tutorial01!"); 
   }
 ```
 
-An important difference between Saito and other application platforms is that all modules are always . This . All applications are always primed. This is a . Even if you are chatting with someone, your wallet can still receive a game move.
+An important difference between Saito and other application platforms is that all modules are always initialized whenever Saito starts, and all modules are always running all-the-time. This can be a bit counterintuitive to web2 developers, because your applications can be running even when you are not interacting with them. But this is what needs to happen, because your applications always need to be ready to receive messages/instructions on-chain or off-chain.
+
+```
+  async render() { 
+    if (document.querySelector(body)) {
+       document.querySelector(body).innerHTML = "Hello World";  
+       alert("Hello World!");
+    }
+  }
+```
+
+The second function we are going to override is the ```render()``` function. This is run whenever the user. We normally use it to initialize the UI for applications when users want to interact with them by viewing the application in the browser.
+
+Here is the fun part -- the rendering is not done on the server. Saito has noticed that you are trying to interact with an application located at ```/tutorial01``` and it sees the slug assocaited with your module and instructs it to render itself. Even though we can install this application on the server, it is the browser that is rendering the webpage.
+
+Add these functions to the body of our tutorial file. We are now ready to install this module and compile it.
+
+## Installing and Compiling Your Application
+
+Open the file ```/config/modules.config.js```. This file contains two lists of modules. The first list is in the ```core``` section -- it lists the modules that will run on your server. The second is in the ```lite``` section -- it lists the modules that you will compile for any lite-clients that connect to your server.
+
+You can build modules that are designed to work ONLY for servers or ONLY for browsers, but most modules are written so that they work on both servers and lite-clients. If you need to disable functionality, you can check the ```app.BROWSER``` variable to see if you are running in a browser or not.
+
+Follow the convention in this configuation file and include your tutorial in both the CORE and LITE sections of this file. Then navigate to ```/saito-lite-rust``` and compile
+
+```
+> npm run nuke
+```
+
+If this is not your first time compiling the software you can run ```npm run compile``` instead. The difference between ```nuke``` and ```compile``` is that ```nuke``` will purge all of the information. This makes it useful for debugging. If you don't want to purge your whole server or wallet, use ```compile``` instead.
+
+The Saito install script will let. If everything goes well you'll If there are any problems, it means you have a typo or javascript error. Fix the problem and run ```npm run nuke``` again until it works. At that point you can start Saito by running ```npm start``` and test your action in real life.
 
 
-The initialize function is called whenever the Saito Wallet boots-up.
-In this case, we want to use or over-ride, but the first step to customizing your application is creating   You can change the name and description of the module to whatever you want. The slug of the application should map to the name of the directory that contains the module, and the name of the main application javascript file.
+## Using our Application
 
-
-
-
+If you haven't removed any application froms the default set of applications in your 
 Congratulations! You’ve just published your application. Technically, you’ve just sent that transaction (containing your app) out into the network along with metadata requesting that the AppStores on the network index and host your application. 
 
 Surprise! If your browser sent the transaction properly, you’ll have received an email confirming your submission. Open this email and you’ll find your unique APP-ID along with a link you can click on to install the application. Anyone can use that link or your APP-ID to find your application. If you ever need to search manually, go back to the AppStore, click to launch the Saito Appstore and search for your APP-ID manually (note: if your application is not found right away, wait a minute until it is finished indexing). You should see this:
