@@ -2,21 +2,28 @@
 title: Tutorial 1 Deploy and Install Application
 description: Deploying and Installing Application in Saito
 published: true
-date: 2022-05-16T03:01:52.408Z
+date: 2024-09-23T08:47:18.855Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-22T07:07:49.922Z
 ---
 
-# Tutorial 1 – Deploy and Install a Saito Application
+# Tutorial 1 – Hello World
 
-Start by downloading this [ZIP file](/tutorial01_(2).zip). 
+In this tutorial we will build a simple application that alerts the user when they start-up their wallet and connect to the network. Our goal is to explain the basics of how to develop and install applications. We assume that you have already installed a local copy of Saito and know how to compile and start the node.
 
-***Note**: need to change since org will be deprecated, which contains a very simple application*. You can find an annotated copy of the source code online, and may want to take a quick look. For now let’s move on to uploading and installing it.
+NOTE: you can access all of the files in this tutorial by downloading this [ZIP file](/tutorial01_(2).zip). If you want to skip the tutorial and see how the compiled application works in practice, you can also download this application as a [standalone Saito module] and install it into your wallet.
 
 ![appstore_screenshot.png](/appstore_screenshot.png)
 
-Visit your [Saito Settings](https://saito.io/dev/#email-nav-AppStore) and click on “AppStore” in the application sidebar. We want to upload our new application, so drag that zipfile onto the drag-and-drop upload panel. This transfers the file into your browser and wraps it in a Saito transaction. A submit button will appear when this process is done. Click it.
+## Creating the Application Directory
+
+Once you have installed Saito, navigate into your /mods directory and create a folder with the name "tutorial01". Within that directory create the file "tutorial01.js". All modules exist in this faction -- the name of the directory is the "slug" of the module and the javscript file within it should also be lowercase.
+
+The forma
+
+
+
 
 Congratulations! You’ve just published your application. Technically, you’ve just sent that transaction (containing your app) out into the network along with metadata requesting that the AppStores on the network index and host your application. 
 
