@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-09-23T08:36:14.507Z
+date: 2024-09-24T07:42:52.523Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -10,10 +10,7 @@ dateCreated: 2022-01-07T07:06:32.790Z
 
 # Building Saito Applications
 
-This section is for developers who want to build Saito applications. These applications can be as simple as a module that listens and responds to a certain type of transaction, or as complicated as any of the standalone apps that already run on Saito such as [RedSquare](/en/applications/redsquare) or the various games available on the [Saito Arcade](/en/applications/arcade).
-
-The first step in building Saito applications is to install a local copy of Saito. You will need to have a local version of Saito installed in order to test that your modules can compile properly. If you have not already installed Saito you can find [installation instructions](/en/tech/installation) here on getting Saito running locally. Once you have Saito installed you'll be able to confirm your modules are working properly and prepare compile binaries that other users can install direectly into their wallet.
-
+Saito applications can be as simple as a module that listens for a certain type of transaction, or as complicated as any of the standalone apps that run on Saito such as [RedSquare](/en/applications/redsquare) or the various games available on the [Saito Arcade](/en/applications/arcade).
 
 ## Tutorials
 
