@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-09-24T07:42:52.523Z
+date: 2024-09-25T21:26:35.638Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -11,6 +11,8 @@ dateCreated: 2022-01-07T07:06:32.790Z
 # Building Saito Applications
 
 Saito applications can be as simple as a module that listens for a certain type of transaction, or as complicated as any of the standalone apps that run on Saito such as [RedSquare](/en/applications/redsquare) or the various games available on the [Saito Arcade](/en/applications/arcade).
+
+- See also: [instructions](/en/tech/installation) on installing and running a Saito Node.
 
 ## Tutorials
 
