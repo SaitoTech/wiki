@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2024-09-27T10:16:35.495Z
+date: 2024-09-27T10:21:04.348Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -15,11 +15,11 @@ dateCreated: 2021-11-09T07:50:58.627Z
 .cls-1{fill:rgb(247, 31, 61);}
 </style>
 
-Saito is a layer-1 blockchain designed to run applications directly in [your browser](https://saito.io/redsquare). It buys the scale necessary for this by fixing incentive misalignments that exist in the consensus layers of all other blockchains. Whereas in other designs fees are drained-away by miners or stakers, in Saito Consensus fees go directly to the nodes that run the network.
+Saito is a layer-1 blockchain designed to run applications directly in [your browser](https://saito.io/redsquare). It buys the scale necessary for this by fixing several underlying incentive misalignments that exist in the consensus layers of all other blockchains. Specifically, whereas in other designs fees are drained-away by miners or stakers, in Saito Consensus fees go directly to the nodes that run the network.
 
-If you are new to Saito you can read our one page description of [Saito Consensus](/consensus), check out our project [roadmap](/roadmap) and [tokenomics](/roadmap), or visit our [applications](/applications) section to get a sense of what applications are running on the network. We also have instructions on how to [run a node](/tech/install) or [build applications](/tech/building_apps).
+If you are new to Saito, good starting points for learning about the project are our page description of [Saito Consensus](/consensus), check out our project [roadmap](/roadmap) and [tokenomics](/roadmap), or visit our [applications](/applications) section to get a sense of what applications are running on the network. We also have instructions on how to [run a node](/tech/install) or [build applications](/tech/building_apps).
 
-This wiki is a community-editable knowledge repository. If you'd like to contribute, you can find all pages stored in markdown in our [Saito Wiki Github Repository](https://github.com/saitotech/wiki). 
+This wiki is a community-editable knowledge repository. If you'd like to contribute, you can find all pages stored in markdown in our [Saito Wiki Github Repository](https://github.com/saitotech/wiki).  
 
 ## External Links
 
