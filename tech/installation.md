@@ -2,18 +2,15 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2024-09-27T10:06:16.720Z
+date: 2024-09-27T10:08:17.979Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
 ---
 
-# Installation
+# Running a Node
 
-This section of the Saito Wiki is intended for developers interested in running nodes on Saito.
-
-- Mac [install instructions](https://wiki.saito.io/tech/installation/mac)
-- Windows [install instructions](https://wiki.saito.io/en/tech/installation/windows)
+This section of the Saito Wiki is intended for developers interested in running nodes on Saito. The instructions below are for developers working on Linux. We have separate installation instructions for [Mac users](https://wiki.saito.io/tech/installation/mac) and [Windows users](https://wiki.saito.io/en/tech/installation/windows).
 
 ## Ubuntu 22.04 (LTS) x64
 
@@ -23,7 +20,8 @@ Requirements:
 - Stack: node.js (v.16+), npm (v6+)
 - TypeScript
 ---
-#### Install Dependencies
+
+### 1) Install Dependencies
 ```
 sudo apt-get update
 sudo apt-get install g++ make git python-is-python3 npm
