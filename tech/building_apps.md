@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-09-25T21:26:35.638Z
+date: 2024-09-27T09:01:09.069Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -10,13 +10,7 @@ dateCreated: 2022-01-07T07:06:32.790Z
 
 # Building Saito Applications
 
-Saito applications can be as simple as a module that listens for a certain type of transaction, or as complicated as any of the standalone apps that run on Saito such as [RedSquare](/en/applications/redsquare) or the various games available on the [Saito Arcade](/en/applications/arcade).
-
-- See also: [instructions](/en/tech/installation) on installing and running a Saito Node.
-
-## Tutorials
-
-A good place to start is our [tutorial series](/tech/tutorials) for new developers. These tutorials start by teaching the absolute basics: how to send and receive transactions, and display UI elements and overlays that let users interact with your application. Our more advanced tutorials explain how to get your module to insert itself into the existing UI elements like the standard drop-down menu.
+In order to build Saito applications you will need to have a local copy of Saito [installed](/en/tech/installation). At that point, a good place to start is visiting our [tutorial series](/tech/tutorials) for new developers. These  start by teaching the absolute basics: how to send and receive transactions and display UI elements.
 
 More advanced developers can check our directory of [reference modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) which show exactly how the existing applications work. You can often consult an existing module to see how it works or modify an existing application to customize it and get it to do what you want.
 
