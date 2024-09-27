@@ -2,7 +2,7 @@
 title: Compiling Standalone Applications
 description: This page convers how to turn your module into an installable Saito Application
 published: true
-date: 2024-09-27T09:58:34.986Z
+date: 2024-09-27T09:58:57.850Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-27T09:25:06.675Z
@@ -40,5 +40,12 @@ Click on the add button and you'll get another drag-and-drop target. Drag the ap
 <br />
 <img src="/compile-04.png" style="width:600px" />
 
-A popup will appear to confirm installation. Confirm that you want to install this application and click "Install" if so. Your browser will unpack the application, save it in your wallet and refresh. Once your browser reloads it will load the application you have just installed along with all other modules. You can now toggle it on-or-off like any other module.
+A popup will appear to confirm installation. Confirm that you want to install this application and click "Install" if so. 
+
+<br />
+<img src="/compile-05.png" style="width:600px" />
+
+Your browser will unpack the application, save it in your wallet and refresh. Once your browser reloads it will load the application you have just installed along with all other modules. You can now toggle it on-or-off like any other module.
+
+
 
