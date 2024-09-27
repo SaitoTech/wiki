@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-09-27T09:11:33.172Z
+date: 2024-09-27T09:13:38.546Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -14,7 +14,9 @@ In order to build Saito applications you will need to have a local copy of Saito
 
 ## Tutorials
 
-
+| Tutorial    | Title | Description |
+| #1          | Hello World | Build an application that installs into the User's wallet and alerts the user every time their wallet loads. This explains the structure of a Saito application, the basic information you should provide to users, and how to compile and distribute your applications. All of the other tutorials in this series assume that you understand the basics covered in this tutorial. |
+| #2          | Sending Transactions | This tutorial modifies the application we built in our first tutorial. This time we use a UI Component to display a button on the page and attach a click-event. When the button is clicked, this event first and calls a function inside our module that creates a transaction and sends it out into the network. This tutorial teaches the basics of creating UI components and connecting them to functions in your core module. |
 
 ## API Documentation
 
