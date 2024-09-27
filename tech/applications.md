@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-08-29T04:17:38.357Z
+date: 2024-09-27T10:48:24.859Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -88,7 +88,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
 
 </div>
 
-<p>The Saito Game Engine abstracts away the complicated cryptographic operations necessary to run provably-fair games on a distributed P2P network. Most games are available directly on the Saito Arcade or can be downloaded and installed in your browser under permissive open source licenses.</p>
+<p>In addition to those applications, Saito supports a number of great game that can be installed into the Saito Arcade. The Saito Game Engine that powers these games abstracts away the complicated cryptographic operations necessary to run provably-fair games on a distributed P2P network. </p>
 
 <br/>
 <div class="app_container">
