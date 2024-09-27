@@ -1,0 +1,62 @@
+---
+title: Compiling Standalone Applications
+description: This page convers how to turn your module into an installable Saito Application
+published: true
+date: 2024-09-27T09:25:06.675Z
+tags: 
+editor: markdown
+dateCreated: 2024-09-27T09:25:06.675Z
+---
+
+# Compiling Standalone Application
+
+This page contains instructions on how to compile your application into a single file that can be installed in anyone's wallet by using the drag-and-drop application install feature that exists.
+
+
+The default way to include an application on any node is to edit the ```/config/modules.config.js``` file to include. Modules that are included in the CORE section of that file are installed on the server. Modules that are included in the LITE section of that file are compiled into the ```saito.js``` file that the server will distribute to new browsers that visit it.
+
+The downside of distributing modules this way is that you need to be running a node, and users need to know which Saito node to visit in order to be able to use your application. For this reason, Saito supports the ability for browsers to drag-and-drop install applications.
+
+These modules are saved in the browser and work like any other application. They can even create the appearance of having a webpage even if the server that the user is visiting has no knowledge of the application itself.
+
+## Compile 
+
+Following the instructions to [install](/tech/installation) a 
+
+
+In order to build Saito applications you will need to have a local copy of Saito [installed](/en/tech/installation). At that point, a good place to start is visiting our [tutorial series](/tech/tutorials) for new developers. Our first three tutorials are listed below:
+
+## Tutorials for Beginners
+
+| Tutorial    | Title | Description |
+|:----------- |:----- |:----------- |
+| #1          | Hello World | Build an application that installs into the User's wallet and alerts the user every time their wallet loads. This explains the structure of a Saito application, the basic information you should provide to users, and how to compile and distribute your applications. All of the other tutorials in this series assume that you understand the basics covered in this tutorial. |
+| #2          | Sending Transactions and UI Components | This tutorial modifies the application we built in our first tutorial. This time we use a UI Component to display a button on the page and attach a click-event. When the button is clicked, this event first and calls a function inside our module that creates a transaction and sends it out into the network. This tutorial teaches the basics of creating UI components and connecting them to functions in your core module. |
+| #3          | Receiving Transactions | This tutorial continues our basic application. Now in addition to sending a transaction, the module will listen on the blockchain for the transactions that we have created and update our UI whenever we receive one with the information that was delivered. At this point, our tutorials have now covered how to create a simple interface and send transactions and process them on receipt... |
+
+For the full list of available tutorials see our dedicated [tutorials page](/tech/tutorials) with a full list of. You may also be interested in our standalone tutorial covering how to [compile your application](/tech/compile) so that others can install it by dragging-and-dropping it into their browser. If there is something in particular you're looking for that isn't covered, feel welcome to make a request on [RedSquare](https://saito.io/redsquare).
+
+## API Documentation
+
+If you are an advanced developer our directory of [reference modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) may be of use for those who want to build "standard" applications in the same style and approach as our default application suite. You can also check out the community resource [Livedocs](https://github.com/mat888/saito-livedocs), which serves as a working demonstration and hackable template for basic Saito applications.
+
+The **Module API** explains what functions you can include in your module. The **Events API** explain how to listen and respond to system-wide events that are triggered when events happen like a new block being found. The **Services API*** explains how peers can inform other peers that they can be queried for special types of data. Finally, our **Ui Components** and **CSS Design** specifications explain our standard approach for creating UI components that will work and look good regardless of the applications that users are running.
+
+### [Module API](/tech/applications/module-api)
+* Saito Modules inherit from the ```/lib/templates/modtemplate.js``` file. This template file defines a number of default functions that create the basic behavior for the module. If you overwrite these functions you can customize the behavior of your module, such as specifying what actions it should take when it receives a transaction or off-chain message. This API outlines these basic functions.
+
+### [Events API](/tech/applications/events-api)
+* Saito includes an event system where components may activate when significant events occur, such as the discovery of a golden ticket or the receipt of a new block that builds on the longest-chain, or the update of your wallet balance. Modules can subscribe to the ```app.connection``` channel to be notified when these various events happen - this API explains how to do that and provides a short list of available events.
+
+### [Services API](/tech/applications/services-api)
+* Saito modules can announce their support for arbitrary "Services" when connecting to other peers. This lets peers know they are available to handle specific requests. Modules can announce their support for various services, and use this information to request data from peers running similar modules or service protocols. 
+
+### [UI Components and Templates](/tech/applications/ui-components)
+* Saito comes with an extensive set of UIComponents and Templates that can be used to create applications with headers, sidebars, user-boxes and games and invites and much more. This section explains how to use existing components in your applications.
+
+### [CSS Design](/tech/applications/saito-css)
+* Saito comes with a default set of CSS classes that creates the colorful aesthetic behind our core applications. While developers can always create their own CSS designs, you can extend the core classes in our Saito CSS design for a faster path to having your module look good everywhere.
+
+
+
+Your content here
