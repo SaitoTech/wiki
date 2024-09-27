@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-09-27T09:13:38.546Z
+date: 2024-09-27T09:17:02.824Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -10,13 +10,17 @@ dateCreated: 2022-01-07T07:06:32.790Z
 
 # Building Saito Applications
 
-In order to build Saito applications you will need to have a local copy of Saito [installed](/en/tech/installation). At that point, a good place to start is visiting our [tutorial series](/tech/tutorials) for new developers. These  start by teaching the absolute basics: how to send and receive transactions and display UI elements.
+In order to build Saito applications you will need to have a local copy of Saito [installed](/en/tech/installation). At that point, a good place to start is visiting our [tutorial series](/tech/tutorials) for new developers. Our first three tutorials are listed below:
 
 ## Tutorials
 
 | Tutorial    | Title | Description |
+|:----------- |:----- |:----------- |
 | #1          | Hello World | Build an application that installs into the User's wallet and alerts the user every time their wallet loads. This explains the structure of a Saito application, the basic information you should provide to users, and how to compile and distribute your applications. All of the other tutorials in this series assume that you understand the basics covered in this tutorial. |
-| #2          | Sending Transactions | This tutorial modifies the application we built in our first tutorial. This time we use a UI Component to display a button on the page and attach a click-event. When the button is clicked, this event first and calls a function inside our module that creates a transaction and sends it out into the network. This tutorial teaches the basics of creating UI components and connecting them to functions in your core module. |
+| #2          | Sending Transactions and UI Components | This tutorial modifies the application we built in our first tutorial. This time we use a UI Component to display a button on the page and attach a click-event. When the button is clicked, this event first and calls a function inside our module that creates a transaction and sends it out into the network. This tutorial teaches the basics of creating UI components and connecting them to functions in your core module. |
+| #3          | Receiving Transactions | This tutorial continues our basic application. Now in addition to sending a transaction, the module will listen on the blockchain for the transactions that we have created and update our UI whenever we receive one with the information that was delivered. At this point, our tutorials have now covered how to create a simple interface and send transactions and process them on receipt... |
+
+For the full list of available tutorials see our dedicated [tutorials page](/tech/tutorials) with a full list of. If there is something in particular you're looking for that isn't covered, feel welcome to make a request on [RedSquare](https://saito.io/redsquare).
 
 ## API Documentation
 
