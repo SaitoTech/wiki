@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-09-27T09:01:09.069Z
+date: 2024-09-27T09:11:10.374Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -12,14 +12,9 @@ dateCreated: 2022-01-07T07:06:32.790Z
 
 In order to build Saito applications you will need to have a local copy of Saito [installed](/en/tech/installation). At that point, a good place to start is visiting our [tutorial series](/tech/tutorials) for new developers. These  start by teaching the absolute basics: how to send and receive transactions and display UI elements.
 
-More advanced developers can check our directory of [reference modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) which show exactly how the existing applications work. You can often consult an existing module to see how it works or modify an existing application to customize it and get it to do what you want.
-
-You can also check out the community resource [Livedocs](https://github.com/mat888/saito-livedocs), which serves as a working demonstration and hackable template for basic Saito applications.
-
-
 ## API Documentation
 
-If you are an advanced developer already familiar with how to build applications, we have the follow reference pages available that may be of use for those who want to build "standard" applications in the same style and approach as the default modules that we have hosted on our main site. 
+If you are an advanced developer our directory of [reference modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) may be of use for those who want to build "standard" applications in the same style and approach as our default application suite. You can also check out the community resource [Livedocs](https://github.com/mat888/saito-livedocs), which serves as a working demonstration and hackable template for basic Saito applications.
 
 The **Module API** explains what functions you can include in your module. The **Events API** explain how to listen and respond to system-wide events that are triggered when events happen like a new block being found. The **Services API*** explains how peers can inform other peers that they can be queried for special types of data. Finally, our **Ui Components** and **CSS Design** specifications explain our standard approach for creating UI components that will work and look good regardless of the applications that users are running.
 
