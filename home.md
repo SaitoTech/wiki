@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2024-09-18T05:07:10.028Z
+date: 2024-09-27T10:14:30.939Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -15,7 +15,9 @@ dateCreated: 2021-11-09T07:50:58.627Z
 .cls-1{fill:rgb(247, 31, 61);}
 </style>
 
-Saito is a layer-1 blockchain designed to run applications directly in [your browser](https://saito.io/redsquare). It achieves the scale necessary for this by fixing incentive misalignments that exist in the consensus layers of all other blockchains. Newcomers can read our [one page explanation](https://wiki.saito.io/en/consensus) of how Saito Consensus works, check out our [development roadmap](https://wiki.saito.io/en/roadmap), see the [applications] running on the network, or read a lengthy analysis of routing work [deep dives](https://medium.com/@saitosquare/defusing-cryptos-ticking-time-bomb-b2df6cd37221).
+Saito is a layer-1 blockchain designed to run applications directly in [your browser](https://saito.io/redsquare). It buys the scale necessary for this by fixing incentive misalignments that exist in the consensus layers of all other blockchains so that the fees go directly to the nodes in the network instead of being drained off to miners or stakers.
+
+Newcomers can read our one page description of [Saito Consensus](/consensus), check out our project [roadmap](/roadmap) and [tokenomics](/roadmap), or visit our [applications](/applications) section to get a sense of what applications are running on the network. We also have instructions on how to [run a node](/tech/install) or [build applications](/tech/building_apps).
 
 This wiki is a community-editable knowledge repository. If you'd like to contribute, you can find all pages stored in markdown in our [Saito Wiki Github Repository](https://github.com/saitotech/wiki). Submit edits by making a push request with your proposed changes. In order to help organize the site, we've divided the content into three main categories: 
 
@@ -31,7 +33,7 @@ Our community section includes links to our Telegram and Discord channels, non-E
  
 ## [Saito Technology](/tech)
 Our developer section has instructions on setting up a node in the network, building applications, as well as API guides and reference materials for those interested in hacking up the core software client or learning more about the network architecture.
-  
+
 ## Links
 
 [Saito Whitepaper](https://saito.io/saito-whitepaper.pdf)
