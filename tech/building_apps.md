@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-09-27T09:17:34.579Z
+date: 2024-09-27T09:18:02.508Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -12,7 +12,7 @@ dateCreated: 2022-01-07T07:06:32.790Z
 
 In order to build Saito applications you will need to have a local copy of Saito [installed](/en/tech/installation). At that point, a good place to start is visiting our [tutorial series](/tech/tutorials) for new developers. Our first three tutorials are listed below:
 
-## Tutorials
+## Tutorials for Beginners
 
 | Tutorial    | Title | Description |
 |:----------- |:----- |:----------- |
