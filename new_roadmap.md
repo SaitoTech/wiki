@@ -2,7 +2,7 @@
 title: Saito Roadmap
 description: Saito Development Roadmap
 published: true
-date: 2024-09-27T11:02:15.108Z
+date: 2024-09-27T11:23:07.494Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-27T11:02:15.108Z
@@ -18,21 +18,23 @@ The Saito Roadmap is divided into Four Eras which shift focus from development o
 
 *April 2021 - December 2022 (finished)*
 
-Our first era focused on the development of a standalone Rust-client to replace our javascript prototype. The first version of this Rust client joined the network in November 2021. Application development focused on the Saito Arcade and the development of standard UI components. Our initial supply of ~3 billion SAITO tokens were distributed to adopters to usher in our current period of "zero inflation" and token stability.
+Developed a standalone Rust-client to replace our javascript prototype which joined the network in November 2021. Applications focused on the Saito Arcade and standardized UI Components. The initial supply of ~3 billion SAITO tokens were distributed to adopters to usher in our current period of "zero inflation" and token stability.
 
 ### Dawn of Persistence
 
 *January 2023 - December 2024 (expected)*
 
-Our Rust codebase reached enough maturity to compile into a binary form that can run in browsers and applications (WASM). The application suite expanded with the rise of Saito RedSquare and our Video/Chat tools, while gaming activity grew. Token persistence become a reality for large on-network deposits, and the Saito Wallet expanded to support third-party crypto assets.
+Our Rust codebase reached  enough maturity to compile into its WASM binary form. Our application suite expanded to include Saito RedSquare and a suite of Video/Chat tools. Token persistence become a reality for large on-network deposits, while the Saito Wallet expanded to include support third-party assets.
 
 ### The Real Economy
 
-In the current, work on Token Persistence is continuing as the software becomes capable of supporting all on-chain deposits. The network is also shifting to support a circular blockchain that will persist without the need for chain-resets.
+*January 2024 - December 2024 (expected)*
 
-The team will continue to work on improving the applications that generate transaction volume, but development tools will allow third-party developers to deploy applications both on their own nodes as well as in wallets that are supported by other network nodes.
+Token Persistence work continues as our Rust client expands support for all on-chain deposits. The network will also shifting to support our circular design with reliable ATR broadcasting to permit the network to persist without the need for chain-resets.
 
-The network should have a nucleus of real organic usage around a core set of distributed P2P applications. We will leverage these to scale up our incentive design to incubate a scalable real-world Saito economy. With staking well-tested and token persistence a reality, incentive mechanisms for the release of additional tokens can be finalized, or the outstanding supply can be burned or released into the ATR mechanism in a Bitcoin-style 21-year programmatic release.
+Our application team will continue to improve our core suite of applications, but shift focus to ensuring tools exist to allow third-party developers to develop and deploy applications onto the network.
+
+Saito will have a nucleus of real organic usage by now. We will focus on expanding these use cases to incubate a real-world Saito economy. With staking well-tested and token persistence a reality, incentives for the release of additional tokens can be developed or the outstanding supply burned or released into the ATR mechanism for release over the next century.
 
 Core development will finalize consensus variables such the burn-fee algorithm, block time and advanced features like congestion management in the light of real network conditions. Updates and software patches can simply be applied to the rotating blockchain as is routinely done in other networks.
 
@@ -42,10 +44,8 @@ Core application work will shift from specific applications toward infrastructur
 
 ### The Open Era
 
-Saito is a mature open public blockchain. Core development focuses on advanced features like L2 EVMs and base-layer scripting support. Wallets and applications are available for a variety of platforms. Nodes are predominantly run by third party and commercial entities.
+Core development will focus on advanced features like L2 EVMs and base-layer scripting support as required by fee-generating applications. Wallets and applications are available for a variety of platforms. Nodes are predominantly run by third party and commercial entities.
 
-Development is increasingly external and community-based. The project retains a leadership role in technical development and advancing the protocol, the community takes increasing responsibiltiy for stewardship of the ecosystem. 
+Development is increasingly external and community-based. The project retains a leadership role in technical development and advancing the protocol, including the operation of core servers to provide infrastructure stability. The community takes increasing responsibiltiy for stewardship of the ecosystem and the prioritization of Saito Implementation Proposals.
 
-Funding is made available for private-sector development should use cases appear that the community expects will further drive transaction volume and increase security. 
-
-Any remaining unallocated tokens will be burned or locked-up.
+Funding is made available for private-sector development should use cases appear that the community expects to further drive transaction volume and increase security. Any remaining unallocated tokens will be burned or locked-up to force further tokenomics changes to require a community-backed hard fork.
