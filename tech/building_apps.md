@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-09-28T11:52:02.285Z
+date: 2024-09-28T11:52:42.609Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -10,7 +10,8 @@ dateCreated: 2022-01-07T07:06:32.790Z
 
 # Building Saito Applications
 
-In order to build Saito applications you need to [install](/en/tech/installation) a Saito node. Then visit our [tutorial series](/tech/tutorials) for new developers. Our first two tutorials are below, but the entire series is [available here](/tech/tutorials).
+In order to build Saito applications you need to [install](/en/tech/installation) a Saito node. Then visit our [tutorial series](/tech/tutorials) for new developers. Our first two tutorials are below, but the entire series is [available here](/tech/tutorials). If you already have an application built and want to package it so that any wallet can install it see our instructions on [compiling applications for drag-and-drop installation in browsers](/tech/compile).
+
 
 ## Tutorials for Beginners
 
@@ -19,8 +20,7 @@ In order to build Saito applications you need to [install](/en/tech/installation
 | #1          | Hello World | Build an application that installs into the User's wallet and alerts the user every time their wallet loads. This explains the structure of a Saito application, the basic information you should provide to users, and how to compile and distribute your applications. All of the other tutorials in this series assume that you understand the basics covered in this tutorial. |
 | #2          | Sending Transactions and UI Components | This tutorial modifies the application we built in our first tutorial. This time we use a UI Component to display a button on the page and attach a click-event. When the button is clicked, this event first and calls a function inside our module that creates a transaction and sends it out into the network. This tutorial teaches the basics of creating UI components and connecting them to functions in your core module. |
 
-Once you know how to build a simple application, you may be interested in [compiling it for remote installation in browsers](/tech/compile). The section that below moves past the basics and provides 
- 
+
 ## API Documentation
 
 If you are an advanced developer our directory of [reference modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) may be of use for those who want to build "standard" applications in the same style and approach as our default application suite. You can also check out the community resource [Livedocs](https://github.com/mat888/saito-livedocs), which serves as a working demonstration and hackable template for basic Saito applications.
