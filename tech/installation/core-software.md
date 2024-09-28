@@ -2,7 +2,7 @@
 title: Core
 description: 
 published: true
-date: 2024-09-18T05:37:11.318Z
+date: 2024-09-28T16:18:10.963Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-17T08:16:38.266Z
