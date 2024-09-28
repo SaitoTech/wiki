@@ -2,7 +2,7 @@
 title: Community Chat Groups and Resources
 description: Community Chat Groups and Resources
 published: true
-date: 2024-09-28T09:23:05.443Z
+date: 2024-09-28T09:23:16.406Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-23T08:16:57.540Z
@@ -22,7 +22,7 @@ We encourage newcomers to visit [RedSquare](http://saito.io/redsquare) to find a
 ## Off-Chain Communities
 
 - [Twitter](https://x.com/SaitoOfficial?s=20) - Official Saito Account
-- [Telegram](https://t.me/SaitoIO) - Official Saito Group
+- [Telegram](https://t.me/SaitoIO) - Official Saito Discussion Group
 - [Discord](https://discord.gg/HjTFh9Tfec) - Official Saito Discord Channel
 
 <br />
