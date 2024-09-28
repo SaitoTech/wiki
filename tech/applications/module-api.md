@@ -2,7 +2,7 @@
 title: Saito Modules Protocol
 description: API for Building Saito Modules
 published: true
-date: 2024-09-28T16:45:12.716Z
+date: 2024-09-28T16:50:19.751Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-08T04:45:17.837Z
