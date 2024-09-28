@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-09-27T10:46:43.572Z
+date: 2024-09-28T09:26:51.571Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -10,7 +10,7 @@ dateCreated: 2022-01-07T07:06:32.790Z
 
 # Building Saito Applications
 
-In order to build Saito applications you will need to have a local copy of Saito [installed](/en/tech/installation). At that point, a good place to start is visiting our [tutorial series](/tech/tutorials) for new developers. Our first three tutorials are below, but the entire series is [available here](/tech/tutorials). Instructions also exist on [compiling applications](/tech/compile) for installation in browsers.
+In order to build Saito applications you need to [install](/en/tech/installation) a Saito node. Then try visiting our [tutorial series](/tech/tutorials) for new developers. Our first three tutorials are below, but the entire series is [available here](/tech/tutorials). Instructions also exist on [compiling applications](/tech/compile) for installation in browsers.
 
 ## Tutorials for Beginners
 
