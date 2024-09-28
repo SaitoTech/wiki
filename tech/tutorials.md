@@ -1,25 +1,27 @@
 ---
 title: Saito Tutorials
-description: tutorials on how to build applications for the Saito Network
+description: How to Build Applications on Saito
 published: true
-date: 2022-05-24T04:51:18.933Z
+date: 2024-09-28T09:43:23.468Z
 tags: 
 editor: markdown
-dateCreated: 2022-03-25T03:17:50.240Z
+dateCreated: 2024-09-28T09:43:23.468Z
 ---
 
-# Learn Saito the Easy Way
+# Saito Application Tutorials
 
-This tutorial series is designed to get you developing Saito applications quickly, and learn how Saito works as an application platform. Additional tutorials and documentation are forthcoming, questions and comments are always welcome on Telegram or by email.
+This tutorial series is designed to get you developing Saito applications quickly. Our first tutorial explains the basics of what an application is and how it works. We recommend all developers new to Saito start by at least reading it. The remaining tutorials cover specific topics – you can look for one that is close to the kind of application that you want to build and use it as a starting point.We  You can also see how existing modules work by checking out the modules directory in our main repository.
 
-Our first tutorial takes about five minutes to complete. It explains how to build a simple application that attaches data to transactions and broadcasts them into the network. The tutorials that follow build on this, showing how to listen for transactions, interact with other modules, and more. You can also see how existing modules work by checking out the [modules directory](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) in our main repository.
+| Tutorial    | Title | Description |
+|:----------- |:----- |:----------- |
+| #1          | Hello World | Build an application that installs into the User's wallet and alerts the user every time their wallet loads. This explains the structure of a Saito application, the basic information you should provide to users, and how to compile and distribute your applications. All of the other tutorials in this series assume that you understand the basics covered in this tutorial. |
+| #2          | Sending Transactions and UI Components | This tutorial modifies the application we built in our first tutorial. This time we use a UI Component to display a button on the page and attach a click-event. When the button is clicked, this event first and calls a function inside our module that creates a transaction and sends it out into the network. This tutorial teaches the basics of creating UI components and connecting them to functions in your core module. |
+| #3          | Receiving On-Chain Transactions | This tutorial continues our basic application. Now in addition to sending a transaction, the module will listen on the blockchain for the transactions that we have created and update our UI whenever we receive one with the information that was delivered. At this point, our tutorials have now covered how to create a simple interface and send transactions and process them on receipt... |
+| #4          | Chat Monitor | Build a chatbot that listens for chat messages received on-chain, off-chain and/or through server relays. Whenever a transaction is received, this module processes the transaction and decides how to respond based on some simple metrics. |
+| #5          | Adding Menu Items | Build a module that inserts a link into several of the menus available for desktop and mobile users. If you're building an application and want to make it show up in the default menu list, this is the tutorial for you. |
+| #6          | Modifying CSS | Want to experiment with CSS? This module shows how to programmatically update/change/delete CSS entries. We'll also cover some basic techniques for modifying webpages that already exist even if they are provided by other modules. |
+| #7          | Keyword-Filtering | Build an application that adds keyword filtering rules to determine whether transaction should be permitted past content filters  |
+| #8          | Advertising Module |  |
+| #9          | Drag-and-Drop and DOM Manipulation | This tutorial covers some very useful techniques for creating an manipulating the HTML used by applications to build and show UI elements. The shortcuts in this tutorial have saved us significant time. |
+| #10          | Tic-Tac-Toe | This tutorial covers the basics of how to build a simple, simple game that shows up on the Saito Arcade and can be used. If you are interested in building games, this will provide a useful introduction to how games works generally.  |
 
-### Tutorials
-
- - **[Tutorial #1: Build an Application](/tech/tutorial-1-deploy-install-application)**
-   build an application that sends a transaction onto the network when the user clicks a button. this tutorial teaches what an application looks like and explains how to publish it to the network.
-   
- - **[Tutorial #2: Chat Notification on TX Receipt](/tech/tutorial-2-chat)**
-   build an application that listens for transactions / messages that are sent to you and adds a message to the chatbox once your wallet receives them.
-
- 
