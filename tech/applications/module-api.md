@@ -2,7 +2,7 @@
 title: Saito Modules Protocol
 description: API for Building Saito Modules
 published: true
-date: 2024-09-28T16:15:03.062Z
+date: 2024-09-28T16:41:53.944Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-08T04:45:17.837Z
@@ -10,23 +10,12 @@ dateCreated: 2022-01-08T04:45:17.837Z
 
 # Saito Module Protocol
 
-## Abstract
-
-The following standard describes the expected functionality available to javascript applications installed into the javascript Saito client. This standard provides basic functionality that allow modules to interact with the blockchain, process messages received over the blockchain, as well as handle common user-interface needs.
+The following document describes the basic structure of a Saito module and the core functions that most modules will extend. We recommend that total beginners work through our [first tutorial](/tech/tutorials/01) before reading through this page.
 
 
-| Field   | Value             |
-| ------- | ----------------- |
-| Author  | David Lancashire  |
-| Status  | Published         |
-| Type    | Protocol Standard |
-| Created | January 8, 2021   |
+## Module Structure
 
-## Module Filename Conventions
-
-Applications exist in standalone directories in the `/mods` directory. The name of the directory should be the lowercase, alphanumeric version of the application name without hyphens or spaces. I.e. the `Arcade` module should be installed at `/mods/arcade`, and the `AppStore` module should be installed at `/mods/appstore`. 
-
-Within their directory, all applications share the same basic directory structure:
+Applications exist in standalone directories in the `/mods` directory. The name of the directory should be the lowercase, alphanumeric version of the application name without hyphens or spaces. The `Arcade` module can be found at `/mods/arcade` and the `RedSquare` module is in `/mods/appstore`.  Within each directory, applications share the same basic structure:
 
 ```
 appname.js
@@ -36,54 +25,20 @@ web/
 README.md.
 ```
 
-The only necessary file is the `appname.js` file, which should share its name with the parent directory. I.e. the main class for the `Encrypt` module is thus `/mods/encrypt/encrypt.js`. If additional files are needed they should be included in the `/src` or `lib` or `docs` directories.
+The only necessary file is the `appname.js` file, which shares its name with the parent directory. The main class for the `Encrypt` module is thus `/mods/encrypt/encrypt.js`. If additional javascript files they should be included in the `/src` or `/lib` or `/docs` directories.
 
-__lib/__
-Optional directory to place additional javascript files.
-
-__doc/__
-Optional directory for documentation and license information.
-
-__sql/__
-Optional directory for database definition files (sqlite3 format). Saito clients with database support will automatically create a sqlite3 database (`/data/appname.sq3`) on installation if there are table definition files in this directory.
-
-__web/__
-Optional directory for JS / HTML / CSS files. Saito clients with HTTP support will serve these files from the subdirectory of the application name (i.e. `https://appserver.com/appname`) with `index.html` as the default file to serve.
-
-__src/__
-Optional directory for pre-compiled files. Some modules like `Red Imperium` are "compiled" into a single javascript file prior to release. Including the source files in this `/src` directory will prevent errors bundling the entire Saito codebase into a single javascript file or code-duplication when compiling.
-
-## Local Module Installation / Compilation
-
-In the `/config` directory you'll find a file named `modules.config.js`. This file is created from a default file we make available, but is not overwritten if it already exists. To customize which modules are installed you will need to edit this file.
-
-The `/config/modules.config.js` file contains two lists of modules: `core` and `lite`. Any modules included in the `core` list will run on the server when you start it. Any modules included in the `lite` list will be compiled into the bundled javascript file that is made available to browsers by default.
-
-Once your module is in the config file you should run *./compile nuke* which will compile the file `saito.js` and copy it into the web directory at `/web/saito/saito.js`. The core code will serve this file at localhost:12101/saito/saito.js. If your application starts from a standalone webpage, this file should be included in the index.html file in the `/web` directory in your module.
-
-The server can then be started by running `npm run dev`.
-
-## Publishing Modules to the Network
-
-Publishing an application involves compressing it into a .zip file and publishing that zip file the network by attaching it to a special transactions. AppStores listening on the network monitor the blockchain for these types of transactions and elect to index new applications or update existing ones as they are published.
-
-The easiest way to publish an application is to go into the application directory and compress the contents of that directory into a .zip file (`zip -r appname.zip .`). The AppStore module is bundled with most Saito Wallets. It creates a panel in the Dev application that will automatically create a Saito transaction with this format:
-
-```javascript
-  tx.msg = {
-    module: "AppStore",
-    request: "submit module",
-    module_zip: appname.zip,
-    name: appname
-  };
-```
-
-AppStores will index your application, identifying it with a unique ID created by hashing the timestamp and signature of the transaction you created containing the application payload. Users download the application by fetching the full transaction, and can verify the application is signed and the code has not been altered before installing it locally. Some AppStores offer remote app-compilation as a service.
+| directory | purpose |
+| --------- | ------- |
+| __/lib__  | directory for additional javascript files |
+| __/doc__  | directory for docs and license info |
+| __/sql__  | directory for sqlite3 database definition files (sqlite3 format). Saito clients with database support will automatically create a sqlite3 database (`/data/appname.sq3`) on installation if there are table definition files in this directory |
+| __/web__  | directory for JS / HTML / CSS files. Saito clients with HTTP support will serve these files from the subdirectory of the application name (i.e. `https://appserver.com/appname`) with `index.html` as the default file to serve.
+| __/src__ | some modules like `Red Imperium` are "compiled" into a single javascript file from multiple source files, using a compile script that is often also located in the main directory. The `/src` directory provides a place to put these files. |
 
 
-## Building the Application (Saito API)
+## The Application File
 
-All modules should extend from a class in the `/lib/templates` directory. The most basic module should inherit from the `/lib/saito/templates/modtemplate` file. The most basic requirement for a valid module is a constructor and name as follows:
+Your main application file should extend from a class in the `/lib/templates` directory as as the `/lib/saito/templates/modtemplate` file. The simplest document that is a valid module is as follows:
 
 ```javascript
 const ModTemplate = require('../../lib/templates/modtemplate');
@@ -100,21 +55,22 @@ class ModuleName extends ModTemplate {
 module.exports = ModuleName;
 ```
 
-### Optional Class Variables
+The following variables may also be defined within the constructor.
 
-The following variables may also be defined within the constructor:
-
-| Variable Name | Variable Type | Description |
-|---------------|---------------|-------------|
+| Variable  |  Type | Description |
+|:--------------|:--------------|:------------|
 | name          | String        | the name of the application |
 | description   | String        | a brief description of the application |
-| categories    | String        | application categories |
-| slug          | String        | custom slug (alphanumeric, lowercase) |
+| categories    | Array         | application categories |
+| slug          | String        | custom application slug (alphanumeric, lowercase) |
 | events        | Array         | list of events to which this module listens |
 
 
 
 ### Application Functions
+
+The most common functions for modules to override are as follows:
+
 
 ```javascript
 installModule(app) {}
