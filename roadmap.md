@@ -2,7 +2,7 @@
 title: Saito Roadmap
 description: 
 published: true
-date: 2024-09-27T10:39:33.466Z
+date: 2024-09-28T09:14:53.033Z
 tags: 
 editor: markdown
 dateCreated: 2024-01-23T01:50:57.374Z
@@ -10,7 +10,7 @@ dateCreated: 2024-01-23T01:50:57.374Z
 
 # Development Roadmap
 
-The Saito Roadmap is divided into Four Eras which shift focus from development of the underlying software to distribution of usable apps and growth of an open public ecosystem.
+The Saito Roadmap is divided into Four Eras which shift focus from development of the underlying software to distribution of usable apps and growth of an open public ecosystem. We have a separate page with information on [tokenomics](/tokenomics).
 
 <img style="width:100%; max-width: 900px; margin: 25px 0 0;" src="https://saito.tech/wp-content/uploads/2022/04/img_62556f349adbd.png">
 
