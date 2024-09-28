@@ -2,13 +2,13 @@
 title: Saito Rust - Installation Instructions
 description: 
 published: true
-date: 2024-03-15T05:28:57.723Z
+date: 2024-09-28T17:02:59.328Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:32:52.212Z
 ---
 
-# Saito Rust Workspace Setup Guide
+# Saito Rust Installation
 
 This guide provides step-by-step instructions for setting up the Saito Rust workspace on a Linux and mac environment. Follow these steps to clone the repository, prepare the environment, and run the application.
 
