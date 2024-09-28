@@ -2,7 +2,7 @@
 title: Saito Modules Protocol
 description: API for Building Saito Modules
 published: true
-date: 2024-09-28T16:50:19.751Z
+date: 2024-09-28T16:52:38.582Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-08T04:45:17.837Z
@@ -10,10 +10,10 @@ dateCreated: 2022-01-08T04:45:17.837Z
 
 # Saito Module Protocol
 
-The following document describes the basic structure of a Saito module and the core functions that most modules will extend. We recommend that total beginners work through our [first tutorial](/tech/tutorials/01) before reading through this page.
+The following document describes the basic structure of a Saito module and the core functions that most modules will extend. We recommend that total beginners work through our [first tutorial](/tech/tutorials/01) before reading this page.
 
 
-## Module Structure
+## Directory Structure
 
 Applications exist in standalone directories in the `/mods` directory. The name of the directory should be the lowercase, alphanumeric version of the application name without hyphens or spaces. The `Arcade` module can be found at `/mods/arcade` and the `RedSquare` module is in `/mods/appstore`.  Within each directory, applications share the same basic structure:
 
@@ -36,9 +36,9 @@ The only necessary file is the `appname.js` file, which shares its name with the
 | __/src__ | some modules like `Red Imperium` are "compiled" into a single javascript file from multiple source files, using a compile script that is often also located in the main directory. The `/src` directory provides a place to put these files. |
 
 
-## The Application File
+## Main Application
 
-Your main application file should extend from a class in the `/lib/templates` directory as as the `/lib/saito/templates/modtemplate` file. The simplest document that is a valid module is as follows:
+Your main application file should extend from a class in the `/lib/templates` directory such as the `/lib/saito/templates/modtemplate` file. This ensures that the module supports all of the functions that are needed for operation, making the simplest document that is a valid module what follows:
 
 ```javascript
 const ModTemplate = require('../../lib/templates/modtemplate');
