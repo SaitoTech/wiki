@@ -2,7 +2,7 @@
 title: Saito Modules Protocol
 description: API for Building Saito Modules
 published: true
-date: 2024-09-28T16:41:53.944Z
+date: 2024-09-28T16:45:12.716Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-08T04:45:17.837Z
@@ -91,23 +91,12 @@ __app__ - reference to the Saito application object.
 
 
 ```javascript
-  initializeHTML(app) {}
+  render(app) {}
 ```
 
 __app__ - reference to the Saito application object.
 
-(OPTIONAL) This function is run whenever the HTML/DOM is initialized in an application the user is seeking to interact with. It is the recommended place to manipulate the DOM and add new components.
-
-
-```javascript
-  attachEvents(app) {}
-```
-
-
-
-__app__ - reference to the Saito application object.
-
-(OPTIONAL) This function is run after `initializeHTML(app)` is executed in an application that the user has loaded to interact with through a web interface. It is traditionally used to attach events to DOM objects every time the module is initialized.
+(OPTIONAL) This function is run whenever the HTML/DOM is initialized in an application the user is seeking to interact with. This will be the case if the application slug matches the application the user has specified in their browser location bar.
 
 
 ```javascript
@@ -121,14 +110,18 @@ __app__ - reference to the Saito application object
 
 (OPTIONAL) This function is executed whenever a transaction receives an additional confirmation (conf). The first time it is executed conf will be provided as 0 rather than 1. The transaction is provided along with the block which contained the transaction. The block may or may not have the other transaction-level information stored depending on its depth in the chain.
 
+
 ```javascript
-  onNewBlock(blk, lc) {}
+  async handlePeerTransaction(app, tx=null, peer, mycallback=null) {}
 ```
 
-__blk__ - the block which has just been added to the chain
-__lc__ - is this block part of the longest chain (0 or 1)
+__app__ - reference to the Saito application object
+__tx__ - the transaction being processed
+__peer__ - the peer that has send us this transaction
+__mycallback__ - a callback function to execute after processing
 
-(OPTIONAL) This function is executed whenever a new block is added to the chain. Modules can overwrite this function to take action when blocks are received. It differs from onConfirmation in that it will be triggered by any blocks, not just those that add to the longest-chain.
+(OPTIONAL) This function is executed whenever a transaction is received from a peer over the peer-to-peer network (i.e. not an on-chain transaction). Modules that support both *handlePeerTransaction()* and *onConfirmation()* support both on-chain and off-chain messaging.
+
 
 ```javascript
   onChainReorganization(bid, bsh, lc, pos) {}
@@ -174,16 +167,7 @@ __type__ - the request-type to which our application may choose to respond
 
 (OPTIONAL) Modules can interact by querying other modules to see if they "respondTo" specific opportunities. An example is the Saito Arcade which queries installed games which `respondTo('arcade-games')` with an object. The object returns and its protocol is defined on a module-by-module basis. Modules which implement this are responding to opportunities for interactivity created by other modules.
 
-```javascript
-  receiveEvent(evtname, data) {}
-```
 
-RETURNS Object or null
-
-__evtname__ - the name of the event to which we respond
-__data__ - the data object emitted by the event originator
-
-(OPTIONAL) Modules can listen to events by including the names of those events in the events Array in their constructor. Implement this function to catch those events as they are triggered. You may skip this and have your module hook manually onto the `app.connector` object.
 
 
 
