@@ -2,7 +2,7 @@
 title: Core
 description: 
 published: true
-date: 2024-09-28T17:01:58.271Z
+date: 2024-09-28T17:04:26.218Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-17T08:16:38.266Z
@@ -12,7 +12,7 @@ dateCreated: 2024-09-17T08:16:38.266Z
 
 This page is for developers who want to modify the core Saito protocol or client software. If you just want to run a node, visit our tutorial on how to [run a node](/tech/installation). If you just want to build applications, we have a [tutorial series](/tech/building_apps) to get you started too.
 
-The rest of this page explains the three major components that make up the Saito stack. The first step to doing protocol development work is understanding which code repository will need to be modified/updated depending on what part of the software stack you want to improve.
+The rest of this page is intended for developers who want to change the underlying code that powers the network: either the consensus protocol or the set of core functions that is exposed to the application layer. Since the first step to making these changes is understanding which part of the codebase needs to be changed, this page explains the three major components used in the Saito stack and links to instructions on how to install them locally for development purposes.
 
 
 ### [Saito Rust](/tech/installation/rust)
