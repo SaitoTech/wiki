@@ -2,21 +2,19 @@
 title: Compiling Standalone Applications
 description: This page convers how to turn your module into an installable Saito Application
 published: true
-date: 2024-09-27T10:05:41.726Z
+date: 2024-09-30T15:11:17.862Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-27T09:25:06.675Z
 ---
 
-# Compiling Standalone Application
+# Compiling for Distribution
 
-The default way to compile applications is to edit the ```/config/modules.config.js``` file on your server. Modules that are included in the CORE section of that file are installed on the server. Modules that are included in the LITE section of that file are compiled into the ```saito.js``` file that the server will distribute to any browsers that ask for a copy.
-
-The downside of this approach is that you need to run a node, and/or users need to visit your Saito node in order to use your application. For this reason, Saito supports the ability to compile applications into special application-packages that browsers can install by drag-and-drop into their wallet.
+To compile applications for your own server edit your ```/config/modules.config.js``` file as covered in our [installation](/tech/installation) instructions. This page covers a secondary technique that can be used to compile modules into standalone bundles users can drag-and-drop to install into their browser.
 
 ## AppStore - Compilation
 
-Make sure your local Saito node is compiled with both CORE and LITE support of the ```appstore``` module, and then start your server and visit ```/appstore``` in your browser. You will see a drag-and-drop target.
+Make sure your local Saito node is compiled with both CORE and LITE support of the ```devtools``` module, and then start your server and visit ```/devtools``` in your browser. You will see a drag-and-drop target.
 
 <br />
 <img src="/compile-01.png" style="width:600px" />
