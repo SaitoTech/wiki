@@ -2,7 +2,7 @@
 title: Saito Tutorials
 description: How to Build Applications on Saito
 published: true
-date: 2024-09-28T09:44:50.936Z
+date: 2024-10-01T14:03:37.233Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-28T09:43:23.468Z
@@ -15,7 +15,7 @@ This tutorial series is designed to get you developing Saito applications quickl
 | Tutorial    | Title | Description |
 |:----------- |:----- |:----------- |
 | #1          | [Hello World](/tech/tutorials/01) | Build an application that installs into the User's wallet and alerts the user every time their wallet loads. This explains the structure of a Saito application, the basic information you should provide to users, and how to compile and distribute your applications. All of the other tutorials in this series assume that you understand the basics covered in this tutorial. |
-| #2          | [Sending Transactions and UI Components](/tech/tutorials/02) | This tutorial modifies the application we built in our first tutorial. This time we use a UI Component to display a button on the page and attach a click-event. When the button is clicked, this event first and calls a function inside our module that creates a transaction and sends it out into the network. This tutorial teaches the basics of creating UI components and connecting them to functions in your core module. |
+| #2          | [Sending Transactions and UI Components](/tech/tutorials/02) | This tutorial modifies the application we built in our first tutorial. This time we use a UI Component to display a button on the page and attach a click-event. When the button is clicked, this event fires and triggers a function inside our module that creates a transaction and sends it into the network. This tutorial teaches the basics of creating UI components and connecting them to functions in your core module. |
 | #3          | [Receiving On-Chain Transactions](/tech/tutorials/03) | This tutorial continues our basic application. Now in addition to sending a transaction, the module will listen on the blockchain for the transactions that we have created and update our UI whenever we receive one with the information that was delivered. At this point, our tutorials have now covered how to create a simple interface and send transactions and process them on receipt... |
 | #4          | [Chat Monitor](/tech/tutorials/04) | Build a chatbot that listens for chat messages received on-chain, off-chain and/or through server relays. Whenever a transaction is received, this module processes the transaction and decides how to respond based on some simple metrics. |
 | #5          | Adding Menu Items | Build a module that inserts a link into several of the menus available for desktop and mobile users. If you're building an application and want to make it show up in the default menu list, this is the tutorial for you. |
