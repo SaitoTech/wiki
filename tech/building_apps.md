@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-09-30T05:12:46.436Z
+date: 2024-10-01T04:13:09.523Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -10,7 +10,7 @@ dateCreated: 2022-01-07T07:06:32.790Z
 
 # Building Saito Applications
 
-In order to build Saito applications you need to [install](/en/tech/installation) a Saito node. Then visit our [tutorial series](/tech/tutorials) for new developers. Our first two tutorials are below, but the entire series is [available here](/tech/tutorials). If you already have an application built and want to package it so that any wallet can install it see our instructions on [compiling applications for drag-and-drop installation in browsers](/tech/compile).
+In order to build Saito applications you need to [install](/en/tech/installation) a Saito node. Then visit our [tutorial series](/tech/tutorials) for new developers. Once your application is built you can package it so that any wallet can install it by using our instructions on [compiling applications for drag-and-drop install](/tech/compile).
 
 
 ## Tutorials for Beginners
