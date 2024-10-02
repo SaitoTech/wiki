@@ -2,7 +2,7 @@
 title: Compiling Standalone Applications
 description: This page convers how to turn your module into an installable Saito Application
 published: true
-date: 2024-09-30T15:11:17.862Z
+date: 2024-10-02T21:50:26.655Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-27T09:25:06.675Z
@@ -10,7 +10,7 @@ dateCreated: 2024-09-27T09:25:06.675Z
 
 # Compiling for Distribution
 
-To compile applications for your own server edit your ```/config/modules.config.js``` file as covered in our [installation](/tech/installation) instructions. This page covers a secondary technique that can be used to compile modules into standalone bundles users can drag-and-drop to install into their browser.
+To compile applications for your own server edit your `/config/modules.config.js` file as covered in our [first tutorial](https://wiki.saito.io/tech/tutorials/01#installing-and-compiling). This page covers a secondary technique that can be used to compile modules into standalone bundles users can drag-and-drop to install into their browser.
 
 ## AppStore - Compilation
 
