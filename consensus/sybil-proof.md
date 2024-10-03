@@ -2,15 +2,15 @@
 title: Sybil-Proof
 description: 
 published: true
-date: 2024-05-02T04:21:38.881Z
+date: 2024-10-03T07:26:11.898Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
 ---
 
-## Proof of *Sybil-Proof*
+# Sybil-Proof Consensus Mechanism
 
-- Read [*A Simple Proof of Sybil Proof.*](https://github.com/SaitoTech/papers/blob/main/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf) for a complete and formal proof or for more brevity, the [original blog post](https://saito.tech/a-simple-proof-of-sybil-proof/).
+Saito Consensus is the sybil-proof consensus mechanism. A mathematical proof of these claims is available in the paper [*A Simple Proof of Sybil Proof.*](https://github.com/SaitoTech/papers/blob/main/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf) which provides a rigorous mathematical proof that sybilling is formally unprofitable in our routing work mechanism. A more basic introduction for laypersons is also available in this [blog post](https://saito.tech/a-simple-proof-of-sybil-proof/) covering the release of the paper.
 
 - Learn about [Sybils](https://wiki.saito.io/en/consensus/sybils) and how they damage permisionless networks.
 
