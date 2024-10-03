@@ -1,8 +1,8 @@
 ---
-title: Sybil-Proof
+title: Sybil Attacks
 description: 
 published: true
-date: 2024-10-03T11:37:27.437Z
+date: 2024-10-03T15:06:38.262Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
@@ -28,7 +28,7 @@ In the paper *[On Bitcoin and Red Ballons](https://arxiv.org/abs/1111.2626)* sev
 
 Saito Consensus solves this sybil problem without sacrificing permissionless or otherwise adding closure to the network. This makes it the first consensus mechanism that fundamentally incentivizes data propagation. More importantly, it means the routing payout that Saito offers to peer-to-peer nodes cannot be attacked.
 
-Before we cover the solution, it's worth noticing what exactly *Babaioff* and his colleagues got wrong. Because the critical flaw in their paper is not that their math is wrong so much that they make two assumptions about how blockchains must work that do not apply to routing work mechanisms at all.
+> Before we cover the solution, it's worth noticing what exactly *Babaioff* and his colleagues got wrong. Because the critical flaw in their paper is not that their math is wrong so much that they make two assumptions about how blockchains must work that do not apply to routing work mechanisms at all.
 
 The first assumption *On Bitcoin and Red Balloons* makes is that all nodes must face the same cost of producing blocks. This is true in proof-of-work and proof-of-stake mechanisms, but in routing mechanisms like Saito Consensus the cost of producing blocks can differ for different nodes based on the compactness of the routing paths inside the transactions that block producers add to their blocks. Any node that adds fake routing hops to a transaction consequently makes it more expensive for them to produce blocks. The maths in our paper prove that these costs always increase faster than the expected payout from sybilling, reducing the income of nodes that sybil.
 
