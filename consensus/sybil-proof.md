@@ -2,7 +2,7 @@
 title: Sybil-Proof
 description: 
 published: true
-date: 2024-10-03T11:36:01.767Z
+date: 2024-10-03T11:37:27.437Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
@@ -34,7 +34,7 @@ The first assumption *On Bitcoin and Red Balloons* makes is that all nodes must 
 
 The second assumption *On Bitcoin and Red Balloons* makes is that sharing a transaction does not increase the chance of the node that shares it getting paid. But in Saito Consensus sharing increases the chance of both nodes getting paid, because the recipient can use their own mempool of routing work to help the sharing-node get their transaction into a block faster than their joint competitors can. Instead of a unidirectional tree we have a bidirectional tree where work flows in multiple directions.
 
-These assumptions are buried in the *On Bitcoin and Red Balloons* paper and simply accepted uncritically by the authors because they are properties of the Bitcoin network. The fact that proof-of-stake networks have these same problems has encouraged a sense that all consensus mechanisms must have them. But routing work does not have them, as the next section shows.
+These assumptions are buried in the *On Bitcoin and Red Balloons* paper where they are accepted uncritically by the authors because they are properties of the Bitcoin network. These assumptions cease to hold in routing work mechanisms, which is a key part of why Saito Consensus provably eliminates sybilling.
 
 ## SECURE ROUTER SELECTION
 
