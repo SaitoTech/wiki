@@ -2,7 +2,7 @@
 title: Compiling Standalone Applications
 description: This page convers how to turn your module into an installable Saito Application
 published: true
-date: 2024-10-03T23:06:07.506Z
+date: 2024-10-03T23:17:33.343Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-27T09:25:06.675Z
@@ -10,7 +10,9 @@ dateCreated: 2024-09-27T09:25:06.675Z
 
 # Compiling & Configuration
 
-When building applications with the Saito-Lite-Rust software, Javapscript must first be compiled before it can be served to *lite-clients* (like browsers) from *core-client* full nodes - note that core clients running these apps also require a compile.
+When building applications with the Saito-Lite-Rust software, Javapscript must first be compiled before it can ran on a *core-client* or served to *lite-clients* (like browsers).
+
+The core-client is a full node, more specifically, an [*application node*](https://github.com/SaitoTech/saito-lite-rust) and is responsible for compiling and serving compiled applications to lite-clients.
 
 ## Basic Compile
 
