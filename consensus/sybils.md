@@ -2,7 +2,7 @@
 title: Sybils
 description: 
 published: true
-date: 2024-10-03T09:37:51.812Z
+date: 2024-10-03T09:54:29.662Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T00:24:44.788Z
@@ -18,17 +18,9 @@ Proof-of-stake developers thus claim their networks are sybil-resistant because 
 
 None of these approaches address sybil attacks as a fundamental attack vector. Proof-of-stake mechanisms have no control over whether sybils dominate their voting mechanisms. In proof-of-work networks you can still sybil the network by setting up cheap routing nodes and seeding the peer-to-peer network in a way that affects how block and transaction data propagates. In proof-of-stake networks In POW you can sybil the network simply by setting up routing nodes that add additional hops and favor/disfavor.
 
-Saito solves the problem on the fundamental level. It accomplishes this because all sybil attacks necessarily require adding inefficiency into the way that transactions and blocks flow around the network, and routing work as a consensus mechanism punishes participants who add inefficiency by making it less likely they will produce blocks, and making the blocks they produce less profitable in the event they actually get to produce one.
+Saito solves the problem on the fundamental level. It accomplishes this because all sybil attacks necessarily require adding inefficiency into the network structure, and routing work as a consensus mechanism punishes participants who cooperate with sybils to produce and distribute blocks. This makes it less likely that sybils will produce blocks, and it makes the blocks they produce less profitable than they would be in the absence of the sybil node.
 
-There is a formal proof that Saito Consensus is routing-proof. If you are interested in a more.
-
-### Routing Networks
-
-With all the focus on block production, many have missed that while blockchain can get up and running in a practical sense, Sybils constrain the efficiency of distributed permissionless networks; particularly they constrain the propagation of transaction data. Consider a blockchain which can allow arbitrary amounts of transaction data into blocks. The optimal behavior of the network is that nodes will generously share transactions and build blocks more quickly than if it was not shared. In practice this does not happen.
-
-This is precisely where Sybilling forces first generation permissionless networks to remain sub-optimal. If transaction fees reward block producers, rational nodes will not share it for free and cannot make trustless deals around it. If routing nodes are allowed to place signatures claiming partial rewards from fees, then they are able to duplicate their their contribution by Sybiling and maximize their reward without contributing meaningful propagation of transactions into the network.
-
-The ability for nodes to Sybil routing rewards is exactly why blockchains do not bother implementing routing signature schemes - they accept that the rational strategy is for nodes to hoard transactions either way. Hoarding and Sybilling are two opposite outcomes of the same problem and so eliminating Sybil Attacks also eliminates the incentive to hoard, thus making possible a routing signature scheme which is secure against Sybil Attacks and disincentivizes hoarding.
+We have a mathematical proof that Saito Consensus is [sybil-proof](/consensus/sybil-proof). What becomes possible is a network that can pay for fee-collection, which means a network that can fund the user-facing nodes that pay for the bandwidth needed to operate the network.
 
 ### Collaboration
 
