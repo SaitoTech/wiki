@@ -2,21 +2,25 @@
 title: Sybils
 description: 
 published: true
-date: 2023-09-26T10:17:14.951Z
+date: 2024-10-03T09:28:34.740Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-24T00:24:44.788Z
 ---
 
-## Sybils Constrain Distributed Networks
+## What is a Sybil Attack
 
-### Introduction
+The traditional definition of a sybil attack is -- as per [Wikipedia](https://en.wikipedia.org/wiki/Sybil_attack) -- "a type of attack on a computer network in which an attacker subverts the service's reputation system by creating a large number of pseudonymous identities and uses them to gain a disproportionately large influence." 
 
-Per [Wikipedia](https://en.wikipedia.org/wiki/Sybil_attack): "A Sybil attack is a type of attack on a computer network service in which an attacker subverts the service's reputation system by creating a large number of pseudonymous identities and uses them to gain a disproportionately large influence." In blockchain, the relevant and remaining avenue for Sybils is to do with claims on rewards for propagating transactions into the distributed network of nodes collectively working to build blocks.
+In blockchain, the term is used much more loosely to describe any attack that disrupts a consensus mechanism by substituting a cheap or free activity for the kind of honest work that the network needs. This is why many different types of activities are often referred to as "sybil attacks" and why developers typically claim their mechanisms are "sybil-resistant" by identifying a single attack vector and making trade-offs to disincentivize it.
 
-The original goal of blockchain was to instantiate a public network which anyone could participate in without permission; a native coin was both the primary feature, and a necessary security function to incentivize certain behaviors without relying on an external controller of that coin. The great freedom of of a permissionless network also conjures up problems with identity: voting on blocks can always be cheated because there is no central authority verifying each identity is unique and deserving of a vote.
+Proof-of-stake networks claim they are sybil-resistant because their permissioned voting rings prevent nodes from create false identities and using them to vote. Proof-of-work mechanisms claim they are sybil-resistant because the need to hash to produce blocks prevents nodes from flooding the network with potential blocks. Airdrops often limit participation in creative ways to prevent anyone from showing up an claiming a share of the token distribution.
 
-This is the primary problem Bitcoin solved using Proof of Work as verification - anyone can create a block, but the cost and rewards associated in doing so make agreeing on a single fork the optimal strategy for everyone in the network, assuming an [honest majority](https://wiki.saito.io/en/consensus/majoritarian-attacks). With Sybilling for block production solved, Bitcoin went from impossible to practical, and all first generation blockchain has either followed in its footsteps or has made lateral tradeoffs.
+None of these solutions address sybilling. Permissioned voting rings have no control over whether sybils dominate their voting mechanisms. In proof-of-work networks you can still sybil the network by setting up cheap routing nodes and seeding the peer-to-peer network in a way that affects how block and transaction data propagates. In proof-of-stake networks In POW you can sybil the network simply by setting up routing nodes that add additional hops and favor/disfavor.
+
+Saito solves the problem on the fundamental level - it eliminates ALL vectors by  punishing all forms of inefficient information transfer. This is because the form of the work that is needed to extend the chain is the efficient collection of fees, and the ability for nodes to generate claims-on-payout depends on submitting those fees into consensus to be burned.
+
+This solves sybil attacks as a general class of attack as all sybil require adding inefficiency into the process of creating blocks or generating payouts or otherwise distributing information around the network.
 
 ### Routing Networks
 
