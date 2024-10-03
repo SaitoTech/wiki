@@ -2,7 +2,7 @@
 title: Saito Tutorials
 description: How to Build Applications on Saito
 published: true
-date: 2024-10-01T14:03:37.233Z
+date: 2024-10-03T21:01:43.968Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-28T09:43:23.468Z
@@ -11,6 +11,8 @@ dateCreated: 2024-09-28T09:43:23.468Z
 # Saito Application Tutorials
 
 This tutorial series is designed to get you developing Saito applications quickly. Our first tutorial explains the basics of what an application is and how it works. We recommend all developers new to Saito start by at least reading it. The remaining tutorials cover specific topics – you can look for one that is close to the kind of application that you want to build and use it as a starting point.We  You can also see how existing modules work by checking out the modules directory in our main repository.
+
+Be sure you've succesfully installed and can run your local Saito Node before moving forward. You can learn how [here](https://wiki.saito.io/en/tech/installation).
 
 | Tutorial    | Title | Description |
 |:----------- |:----- |:----------- |
