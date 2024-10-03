@@ -2,7 +2,7 @@
 title: Sybil-Proof
 description: 
 published: true
-date: 2024-10-03T07:26:11.898Z
+date: 2024-10-03T09:57:59.801Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
@@ -10,20 +10,21 @@ dateCreated: 2023-09-12T04:54:16.592Z
 
 # Sybil-Proof Consensus Mechanism
 
-Saito Consensus is the sybil-proof consensus mechanism. A mathematical proof of these claims is available in the paper [*A Simple Proof of Sybil Proof.*](https://github.com/SaitoTech/papers/blob/main/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf) which provides a rigorous mathematical proof that sybilling is formally unprofitable in our routing work mechanism. A more basic introduction for laypersons is also available in this [blog post](https://saito.tech/a-simple-proof-of-sybil-proof/) covering the release of the paper.
-
-- Learn about [Sybils](https://wiki.saito.io/en/consensus/sybils) and how they damage permisionless networks.
+Saito Consensus is a sybil-proof consensus mechanism. A proof of these claims is available in the paper [*A Simple Proof of Sybil Proof.*](https://github.com/SaitoTech/papers/blob/main/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf) which includes a rigorous mathematical demonstration that sybilling is always less profitable than not-sybilling in routing work mechanisms. This page provides a brief non-technical introduction to why this solution matters. 
 
 ## Introduction
 
-> A sybil produces the block with w/ 2nd hop routing work. A non-sybil produces the block faster with 1st hop routing work. The probability of the sybil collecting payment is lower because the probability of their blocks being added to the chain is lower. <br><br>The only way a sybil can reach parity on probability is if they burn their own money, which puts their cost higher than the non-sybil. There is simply no world in which the probability of getting paid is the same for a sybil as a non-sybil ceteris paribus.
-<br>-David Lancashire
+> Many large decentralized systems rely on information propagation to ensure their proper function... [we show] that there are no reward schemes in which information
+propagation and no self-cloning is a dominant strategy.
+<br>-Moshe Babaioff, Microsoft Research
 
-As argued in *On Bitcoin and Red Ballons* [[Babaioff et al., 201]](https://arxiv.org/abs/1111.2626) the Sybil problem is widely agreed to be unsolvable, since giving other block producers access to transaction fees always gives them an advantage, and allowing arbitrary claims on fees allows Sybils to earn multiple, unwarranted rewards for fake relays.
+One of the major problems affecting blockchains is that nodes in possession of unconfirmed fee-bearing transactions do not have an incentive to share those transactions to their peers, because if they share their expected profitability falls. Solving this problem -- incentivizing propagation -- is necessary in order to create a network where nodes share information freely.
 
-Taking a step back, the basic problem is this: how do you reward relays for propagating data into a distributed network which doesn't end up with an optimal strategy of hoarding data. The naive idea is to allow nodes to place their routing signature on data, but then nothing stops them from Sybilling this mechanism to inflate their rewards.
+The solution requires a payout to nodes that share unconfirmed transactions. But this creates an information problem, because how can you create a payout mechanism that rewards nodes that route transactions, without the same incentive mechanism encouraging nodes to add fake routing hops in order to generate these claims on payout?
 
-Blockchains which can't solve this issue in regards to propagating transactions into blocks end up with a distributed network of nodes whose best strategy is to hoard, rather than share data - introducing economic closure and reducing efficiency.
+In the paper *On Bitcoin and Red Ballons* [[Babaioff et al., 201]](https://arxiv.org/abs/1111.2626) several computer scientists examine this problem and conclude that it is impossible to solve this problem. This is what Moshe Babaioff means when he writes that there are no reward schemes that exist which can incentivize *information propagation* without also incentivizing *self-cloning*. If you pay nodes for sharing, they will create fake identities and share through them in order to .
+
+Blockchains which cannot solve this issue in regards to propagating transactions into blocks end up with a distributed network of nodes whose best strategy is to hoard, rather than share data - introducing economic closure and reducing efficiency.
 
 If, as argued by experts in the field, Sybilling on transaction propagation is impossible to defend against, blockchain networks are doomed to fall into patterns of hoarding which reward the largest nodes in the network as they shelter transactions rather than share them - even if sharing would increase the overall efficiency of the network.
 
