@@ -2,39 +2,40 @@
 title: Sybil Attacks
 description: 
 published: true
-date: 2024-10-03T15:06:38.262Z
+date: 2024-10-04T04:38:59.448Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
 ---
 
-# Sybil-Proof Consensus Mechanism
+# Sybil Attacks
 
-Saito Consensus is a sybil-proof consensus mechanism. A mathematical proof of this claim is available in the paper [*A Simple Proof of Sybil Proof.*](https://github.com/SaitoTech/papers/blob/main/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf). This page provides a non-technical introduction to why this solution matters. 
+Saito Consensus is the first consensus mechanism that is known to be sybil-proof, a property that is necessary in order to issue a secure routing payout. While a mathematical proof of this claim is available in the paper [*A Simple Proof of Sybil Proof.*](https://github.com/SaitoTech/papers/blob/main/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf), this page provides a non-technical introduction to how the sybil problem is solved.
 
-## The Problem
+## An Impossible Problem
 
-> Many large decentralized systems rely on information propagation to ensure their proper function... [we show] that there are no reward schemes in which information
+> Many large decentralized systems rely on information propagation to ensure their
+proper function... [we show] that there are no reward schemes in which information
 propagation and no self-cloning is a dominant strategy.
 <br>-Moshe Babaioff, Microsoft Research
 
-One of the major problems affecting blockchains is that nodes in possession of unconfirmed fee-bearing transactions do not have an incentive to share those transactions with their peers, because if they share their expected profitability falls. Keeping networks open thus requires incentivizing propagation, which means creating an incentive for nodes to share information with competitors.
+We've long known that nodes in possession of fee-bearing transactions do not have an incentive to share those transactions with their peers. Why share something worth money when you can collect it yourself? This creates a tendency towards centralization which can only be pushed back against by incentiving nodes to share fees with potential competitors.
 
-The need for a payout to incentivize nodes to propagate creates a secondary problem, because how can you create a payout that rewards nodes that share transactions without simultaneously encouraging nodes to add fake routing hops to fake identities they also control in order to maximize the routing payout and thus the amount of money they can pull away from the block producer via the routing payout?
+Paying nodes to share fee-bearing transactions creates a secondary problem, because how can you reward nodes that share transactions with their peers without also encouraging them to add fake routing hops to maximize the routing payout and pull money away from their competitors via the routing payout? How can we create an ungameable network payout that cannot be sybilled?
 
-In the paper *[On Bitcoin and Red Ballons](https://arxiv.org/abs/1111.2626)* several computer scientists examine this problem and conclude that it is impossible to solve. This is what Moshe Babaioff means when he writes that there are no reward schemes that can incentivize *information propagation* without also incentivizing *self-cloning*. If you pay nodes for sharing, Moshe argues, the availability of that payout will always encourage nodes to create fake identities and *sybil* the network by routing themselves their own transactions before forwarding them on to the block producer.
+In the paper *[On Bitcoin and Red Ballons](https://arxiv.org/abs/1111.2626)* Moshe Babaioff and his colleagues looked at this problem and concluded it was impossible to solve. This is what Babaioff means when he writes that there are no reward schemes that can incentivize *information propagation* that do not also incentivize *self-cloning*. If you pay nodes to share, Moshe argues, you will always encourage them to  create fake identities and route transactions to themselves in order to maximize their income from the routing payout.
 
-## Routing Work - A New Solution
+## Routing Work - A Groundbreaking Solution
 
-Saito Consensus solves this sybil problem without sacrificing permissionless or otherwise adding closure to the network. This makes it the first consensus mechanism that fundamentally incentivizes data propagation. More importantly, it means the routing payout that Saito offers to peer-to-peer nodes cannot be attacked.
+Saito Consensus is the first consensus mechanism that solves this problem and properly incentivizes data propagation. It achieves this by eliminating sybil attacks entirely -- by ensuring that no costless strategies exist that allow for value-extraction from the network.
 
-> Before we cover the solution, it's worth noticing what exactly *Babaioff* and his colleagues got wrong. Because the critical flaw in their paper is not that their math is wrong so much that they make two assumptions about how blockchains must work that do not apply to routing work mechanisms at all.
+While the [mathematical paper](https://github.com/SaitoTech/papers/blob/main/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf) linked above provides a rigorous proof of this, this page is intended to provide an easier starting point. With this in mind, it's worth starting by noticing exactly what *Babaioff* and his colleagues missed: the two critical assumptions they make about how blockchains must work that do not apply to routing work mechanisms at all.
 
 The first assumption *On Bitcoin and Red Balloons* makes is that all nodes must face the same cost of producing blocks. This is true in proof-of-work and proof-of-stake mechanisms, but in routing mechanisms like Saito Consensus the cost of producing blocks can differ for different nodes based on the compactness of the routing paths inside the transactions that block producers add to their blocks. Any node that adds fake routing hops to a transaction consequently makes it more expensive for them to produce blocks. The maths in our paper prove that these costs always increase faster than the expected payout from sybilling, reducing the income of nodes that sybil.
 
-The second assumption *On Bitcoin and Red Balloons* makes is that sharing a transaction does not increase the chance of the node that shares it getting paid. But in Saito Consensus sharing increases the chance of both nodes getting paid, because the recipient can use their own mempool of routing work to help the sharing-node get their transaction into a block faster than their joint competitors can. Instead of a unidirectional tree we have a bidirectional tree where work flows in multiple directions.
+The second assumption *On Bitcoin and Red Balloons* makes is that sharing a transaction does not increase the chance that the node that shares it will get paid. But in Saito Consensus sharing increases the chance of both nodes getting paid, because the recipient can use their own mempool of routing work to help get the shared transaction into a block faster than other nodes on the network may be able to. This increases the expected income of both the node that shares and the node that receives the transaction, since nodes are more likely to collect payment from transactions they can include before others.
 
-These assumptions are buried in the *On Bitcoin and Red Balloons* paper where they are accepted uncritically by the authors because they are properties of the Bitcoin network. These assumptions cease to hold in routing work mechanisms, which is a key part of why Saito Consensus provably eliminates sybilling.
+These two assumptions are buried in the *On Bitcoin and Red Balloons* paper where they are accepted uncritically in part because they describe how the Bitcoin network functions. Yet neither of these assumptions hold in routing work mechanisms, and the difference allows the creation of a secure network payout that cannot be attacked.
 
 ## SECURE ROUTER SELECTION
 
@@ -48,7 +49,7 @@ The winning routing node is selected using the hashing puzzle solution from the 
 
 The "Classic Saito" design targets a difficulty where the network can produce one golden ticket every two blocks on average and is secure at the cost of deflation from unsolved blocks.
 
-Saito's routing reward scheme is [provably](https://github.com/SaitoTech/papers/blob/main/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf) Sybil Proof, as any routing node which self-clones to gain a larger share of routing-work for a given transaction also reduces by half the ability for that transaction to contribute towards the valid block production work threshold. In order to remain competitive for block production with a node at the same depth who chooses not to Sybil, the self-cloning node must produce their own transaction to supplement the reduced block work; the math works out that this strategy is less profitable.
+Saito's routing reward scheme is [provably](https://github.com/SaitoTech/papers/blob/main/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf) Sybil Proof, as any routing node which self-clones to gain a larger share of routing-work for a given transaction also reduces by half the ability of that transaction to contribute towards the valid block production work threshold. In order to remain competitive for block production with a node at the same depth which chooses not to Sybil, the self-cloning node must produce their own transaction to supplement the reduced block work. Since a portion of this second payment must be burned or potentially lost to earlier-hop nodes participating in the payout lottery for the block reward; the math works out to make this a losing strategy.
 
 ### Basic Proof of Sybil Proof
 
