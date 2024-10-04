@@ -2,7 +2,7 @@
 title: majoritarian-attacks
 description: 
 published: true
-date: 2024-04-24T23:12:22.176Z
+date: 2024-10-04T06:14:32.688Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -16,13 +16,8 @@ dateCreated: 2023-09-20T01:58:02.086Z
 
 - Official Blog [post](https://saito.tech/eliminating-51-attacks-in-proof-of-work-blockchains/) on the same subject.
 
-### Consensus
 
-Blockchain consensus protocols can be considered objective competitions which determines what additions may be considered valid and canonical. By all participants recognizing a single consensus protocol, a distributed network can reach full consensus with (PoS) or without (PoW, Saito) total coordination (each node is not required data from every other node).
-
-## Majority Assumptions
-
-### Proof of Work
+## Proof of Work
 
 Consensus design for distributed ledgers has evolved since Bitcoin, which uses a longest-chain-rule and threshold of hash-based work within blocks to determine the priorities between competing blocks during disputes. Despite many technical advancements atop the Bitcoin model, every consensus protocol, except for Saito's, falls prey to *Majoritarian Attack*, commonly referred to as the 51% Attack. 
 
