@@ -2,7 +2,7 @@
 title: Sybil Attacks
 description: 
 published: true
-date: 2024-10-04T06:11:51.644Z
+date: 2024-10-04T06:13:17.572Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
@@ -53,5 +53,7 @@ But what about other network-layer strategies? Are the same cheap workarounds av
 
 Put more plainly, with Saito Consensus you can *try* to sybil, but all you do is reduce the efficiency of the network and increase your costs faster than your expected income. Sybilling becomes a strictly dominated strategy.
 
+## Conclusion
 
+Saito Consensus is a groundbreaking advance in distributed consensus. We encourage all readers to dig into the information problems described on this page and about how to address them using routing signatures.
 
