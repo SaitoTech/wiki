@@ -2,7 +2,7 @@
 title: Installation Instructions
 description: Saito Node Installation Instructions
 published: true
-date: 2024-09-27T10:22:41.758Z
+date: 2024-10-09T16:06:32.485Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -58,6 +58,8 @@ npm start
 If after a few moments with no errors a large Saito ASCII Logo appears on screen, move on to the next step.
 
 It is common that errors at this stage are related to your NodeJS install, so consider first searching for NodeJS troubleshooting help if you can't get Saito running at this stage.
+
+- See [here](https://wiki.saito.io/tech/compile) for more complete documentation about compiling and configuring Saito.
 
 <br />
 
