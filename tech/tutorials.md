@@ -2,7 +2,7 @@
 title: Saito Tutorials
 description: How to Build Applications on Saito
 published: true
-date: 2024-10-07T10:07:18.450Z
+date: 2024-10-10T18:31:22.028Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-28T09:43:23.468Z
@@ -12,7 +12,7 @@ dateCreated: 2024-09-28T09:43:23.468Z
 
 This tutorial series is designed to get you developing Saito applications quickly. Our first tutorial explains the basics of what an application is and how it works. We recommend all developers new to Saito start by at least reading it. The remaining tutorials cover specific topics – you can look for one that is close to the kind of application that you want to build and use it as a starting point.We  You can also see how existing modules work by checking out the modules directory in our main repository.
 
-Be sure you've succesfully installed and can run your local Saito Node before moving forward. You can learn how [here](https://wiki.saito.io/en/tech/installation).
+- Be sure you've succesfully installed and can run your local Saito Node before moving forward. You can learn how [here](https://wiki.saito.io/en/tech/installation).
 
 | Tutorial    | Title | Description |
 |:----------- |:----- |:----------- |
@@ -21,7 +21,7 @@ Be sure you've succesfully installed and can run your local Saito Node before mo
 | #3          | [Receiving On-Chain Transactions](/tech/tutorials/03) | This tutorial continues our basic application. Now in addition to sending a transaction, the module will listen on the blockchain for the transactions that we have created and update our UI whenever we receive one with the information that was delivered. At this point, our tutorials have now covered how to create a simple interface and send transactions and process them on receipt... |
 | #4          | [Chat Monitor](/tech/tutorials/04) | Build a chatbot that listens for chat messages received on-chain, off-chain and/or through server relays. Whenever a transaction is received, this module processes the transaction and decides how to respond based on some simple metrics. |
 | #5          | [Adding Menu Items](/tech/tutorials/05) | Build a module that inserts a link into several of the menus available for desktop and mobile users. If you're building an application and want to make it show up in the default menu list, this is the tutorial for you. |
-| #6          | [Modifying CSS](/tech/tutorials/06) | Want to experiment with CSS? This module shows how to programmatically update/change/delete CSS entries. We'll also cover some basic techniques for modifying webpages that already exist even if they are provided by other modules. |
+| #6          | [Modifying CSS and Adding Overlays](/tech/tutorials/06) | This module shows how to programmatically update/change/delete CSS entries and cover some basic techniques for modifying webpages that already exist even if they are provided by other modules. Then the rendering of a custom overlay is demonstrated. |
 | #7          | Keyword-Filtering | Build an application that adds keyword filtering rules to determine whether transaction should be permitted past content filters  |
 | #8          | Advertising Module |  |
 | #9          | Drag-and-Drop and DOM Manipulation | This tutorial covers some very useful techniques for creating an manipulating the HTML used by applications to build and show UI elements. The shortcuts in this tutorial have saved us significant time. |
