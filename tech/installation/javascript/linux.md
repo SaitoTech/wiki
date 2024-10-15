@@ -1,8 +1,8 @@
 ---
-title: Installation Instructions
-description: Saito Node Installation Instructions
+title: Linux Installation
+description: Linux SLR Installation Instructions
 published: true
-date: 2024-10-15T23:22:35.627Z
+date: 2024-10-15T23:40:20.921Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
