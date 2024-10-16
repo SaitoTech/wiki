@@ -2,7 +2,7 @@
 title: Saito Javascript - Installation Instructions
 description: 
 published: true
-date: 2024-10-16T00:30:51.713Z
+date: 2024-10-16T00:33:35.600Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:41:59.352Z
@@ -23,11 +23,11 @@ Specific instructions for installing the necessary tools are available for [Linu
 - TypeScript
 - Saito-Lite-Rust - [Github](https://github.com/saitotech/saito-lite-rust)
 
-Instructions for other flavors or Linux are not currently provided, but if the prerequisites are installed the remaining instructions should be universal:
+<hr>
+
+Once prerequisites are installed, the following instructions should be similar for Mac, Windows and the broader audience of Linux users; if you are not using Ubuntu, substitute in your package manager where appropriate.
 
 ### 1) Download Saito
-
-The following instructions should be similar for Mac, Windows and the broader audience of Linux users; if you are not using Ubuntu, substitute in your package manager where appropriate.
 
 ```
 git clone https://github.com/saitotech/saito-lite-rust
