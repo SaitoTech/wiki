@@ -2,7 +2,7 @@
 title: Run a Node
 description: 
 published: true
-date: 2024-10-16T00:43:56.225Z
+date: 2024-10-16T00:57:05.241Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -10,7 +10,7 @@ dateCreated: 2024-10-15T23:32:31.744Z
 
 # Running a Node
 
-This page provides information for running a [Saito-Lite-Rust Node](https://github.com/SaitoTech/saito-lite-rust), which is the most useful for hosting and developing [Web 3 applications on Saito](/tech/applications). See our page for [building applications](https://wiki.saito.io/en/tech/building_apps) once installation is complete.
+This page provides information for running a [Saito-Lite-Rust Node](https://github.com/SaitoTech/saito-lite-rust), which is typically the best option for hosting and developing [Web 3 applications on Saito](/tech/applications). See our page for [building applications](https://wiki.saito.io/en/tech/building_apps) once installation is complete.
 
 See [here]() for or information on the Core [Rust Node](https://github.com/saitotech/saito-rust-workspace) if you are interested in protocol development.
 
