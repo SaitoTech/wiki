@@ -2,7 +2,7 @@
 title: Run a Node
 description: 
 published: true
-date: 2024-10-16T00:59:54.236Z
+date: 2024-10-16T01:00:25.485Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -14,7 +14,7 @@ This page provides information for running a [Saito-Lite-Rust Node](https://gith
 
 See [here]() for or information on the Core [Rust Node](https://github.com/saitotech/saito-rust-workspace) if you are interested in protocol development.
 
-## Installation
+## [Installation](/tech/installation/javascript)
 
 See the [installation](/tech/installation/javascript) page for instructions on installing, configuring and building applications on Saito-Lite-Rust.
 
