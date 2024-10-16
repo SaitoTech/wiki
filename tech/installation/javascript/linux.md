@@ -2,7 +2,7 @@
 title: Linux Installation
 description: Linux SLR Installation Instructions
 published: true
-date: 2024-10-16T00:30:50.234Z
+date: 2024-10-16T00:35:57.276Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -50,8 +50,6 @@ If after a few moments with no errors a large Saito ASCII Logo appears on screen
 
 It is common that errors at this stage are related to your NodeJS install, so consider first searching for NodeJS troubleshooting help if you can't get Saito running at this stage.
 
-- See [here](https://wiki.saito.io/tech/compile) for more complete documentation about compiling and configuring Saito.
-
 <br />
 
 ### 4) Visit Saito in your Browser
@@ -82,6 +80,8 @@ Any changes can be compiled with `npm run nuke`. The final compiled file will re
 
 <br />
 
+### Compilation and Configuration
 
+- Visit the page [compiling and configuring](https://wiki.saito.io/tech/compile) for more information on setting up your SLR Node.
 
 
