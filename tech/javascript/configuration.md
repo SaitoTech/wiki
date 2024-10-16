@@ -2,7 +2,7 @@
 title: Saito-Lite-Rust Configuration
 description: Configuration instructions for SLR
 published: true
-date: 2024-10-16T00:00:13.358Z
+date: 2024-10-16T00:37:45.890Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-16T00:00:13.358Z
@@ -35,7 +35,7 @@ There are two primary compilation commands.
 
 The more extreme `npm run nuke` will reset the blockchain and is useful for your first installation or for hard resets where your local version of the chain is not important to retain. It will also create fresh versions of these configuration files from template config files stored in the `config` directory.
 
-Use `npm run compile` if you wish to change the applications supported on your server without resetting the blockchain - crucial for deployed nodes connected to mainnet.
+Use `npm run compile` if you wish to change or update the applications supported and distributed on your server without resetting the blockchain - better for [deployed](https://wiki.saito.io/en/tech/deployment) nodes connected to mainnet.
 
 ### Advanced Usage of the `compile` Script
 
