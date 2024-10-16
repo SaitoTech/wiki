@@ -2,7 +2,7 @@
 title: Saito CSS
 description: Saito CSS Design
 published: true
-date: 2024-04-08T11:40:34.345Z
+date: 2024-10-16T01:33:41.184Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T02:53:29.274Z
@@ -148,18 +148,19 @@ This page provides information on the core classes and explains their internal /
 
 ### Important Classes
 
-- [saito-container](/tech/applications/saito-css/saito-container)
-- [saito-header](/tech/applications/saito-css/saito-header)
-- [saito-sidebar  \[ left \| right \]](/tech/applications/saito-css/saito-sidebar)
-- [saito-list](/tech/applications/saito-css/saito-list)
-- [saito-identicon](/tech/applications/saito-css/saito-identicon)
-- [saito-username](/tech/applications/saito-css/saito-username)
+- [saito-container](/tech/docs/saito-css/saito-container)
+- [saito-header](/tech/docs/saito-css/saito-header)
+- [saito-sidebar  \[ left \| right \]](/tech/docs/saito-css/saito-sidebar)
+- [saito-list](/tech/docs/saito-css/saito-list)
+- [saito-identicon](/tech/docs/saito-css/saito-identicon)
+- [saito-username](/tech/docs/saito-css/saito-username)
 - [saito-user]
 - [saito-group]
 - [saito-table]
 - [saito-calendar]
 - [saito-datepicker]
-- [saito-menu](/tech/applications/saito-css/saito-menu)
-- [saito-overlay](/tech/applications/saito-css/saito-overlay)
-- [saito-backdrop](/tech/applications/saito-css/saito-backdrop)
+- [saito-menu](/tech/docs/saito-css/saito-menu)
+- [saito-overlay](/tech/docs/saito-css/saito-overlay)
+- [saito-backdrop](/tech/docs/saito-css/saito-backdrop)
+
 
