@@ -2,7 +2,7 @@
 title: Core
 description: 
 published: true
-date: 2024-10-03T23:13:24.355Z
+date: 2024-10-16T00:50:16.529Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-17T08:16:38.266Z
@@ -10,9 +10,9 @@ dateCreated: 2024-09-17T08:16:38.266Z
 
 # Core Client Protocol and Documentation
 
-This page is intended for developers who want to modify the core Saito protocol or client software. Be it the or the set of core functions that is exposed to the application layer. This page explains the three major components used in the Saito stack and links to instructions on how to install them locally for development purposes.
+This page provides information on [Saito's Core Node](https://github.com/saitotech/saito-rust-workspace) software, targetted at developers who want to modify the core Saito protocol or client software - be it consensus code or the set of core functions that is exposed to the application layer. This page explains the three major components used in the Saito stack and links to instructions on how to install them locally for development purposes.
 
-If you just want to run a node, visit our tutorial on how to [run a node](/tech/installation). If you just want to build applications, we have a [tutorial series](/tech/building_apps) to get you started too.
+For more application-centric development, or if you just want to run a node check out [Saito-Lite-Rust](https://wiki.saito.io/en/tech/javascript). There also exists a followup [tutorial series](/tech/building_apps) for building applications.
 
 
 ### [Saito Rust](/tech/installation/rust)
