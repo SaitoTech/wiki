@@ -2,7 +2,7 @@
 title: Core
 description: 
 published: true
-date: 2024-10-16T00:55:01.515Z
+date: 2024-10-16T00:55:31.604Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-17T08:16:38.266Z
@@ -14,7 +14,7 @@ This page provides information on [Saito's Core Node](https://github.com/saitote
 
 For more application-centric development, or if you just want to run a node check out [Saito-Lite-Rust](https://wiki.saito.io/en/tech/javascript). There also exists a followup [tutorial series](/tech/building_apps) for building applications.
 
-<hr>
+## Saito Stack
 
 The following links will lead to installation instructions for each respective Saito Node software. 
 
