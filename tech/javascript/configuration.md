@@ -2,7 +2,7 @@
 title: Saito-Lite-Rust Configuration
 description: Configuration instructions for SLR
 published: true
-date: 2024-10-16T00:37:45.890Z
+date: 2024-10-16T01:11:01.291Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-16T00:00:13.358Z
@@ -10,7 +10,7 @@ dateCreated: 2024-10-16T00:00:13.358Z
 
 # Saito-Lite-Rust Configuration
 
-After [installing](https://wiki.saito.io/en/tech/javascript#installation) Saito-Lite-Rust you will be ready to configure the server to run the applications you wish to support and provide them to browsers on-demand. This section covers these follow-on configuration steps.
+After [installing](/tech/installation/javascript) Saito-Lite-Rust you will be ready to configure the server to run the applications you wish to support and provide them to browsers on-demand. This section covers these follow-on configuration steps.
 
 ## Configuration Files
 
