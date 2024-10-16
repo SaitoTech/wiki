@@ -2,7 +2,7 @@
 title: Run a Node
 description: 
 published: true
-date: 2024-10-16T00:57:29.316Z
+date: 2024-10-16T00:59:54.236Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -43,11 +43,9 @@ Visit the [deploy instructions](https://wiki.saito.io/en/tech/deployment) to lea
 
 ## Module and Application Development
 
-Applications like the [Saito Arcade](https://saito.io/arcade) run inside the Saito Wallet, which receives on-chain and off-chain messages and passes them into the modules that are running inside the user wallet. If you want to get started building applications, we recommend starting with our tutorial series for new Application Developers.
+If you want to get started building applications, we recommend starting with our [tutorial series](/tech/building_apps) for new Application Developers.
 
-
-
-
+Applications like the [Saito Arcade](https://saito.io/arcade) run inside the Saito Wallet, which receives on-chain and off-chain messages and passes them into the modules that are running inside the user wallet. See our [applications page](/tech/applications) for examples and descriptions of the Web 3 apps currently running on Saito.
   
 
 ## Using Saito in your Browser
