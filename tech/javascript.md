@@ -2,7 +2,7 @@
 title: Run a Node
 description: 
 published: true
-date: 2024-10-16T01:01:02.989Z
+date: 2024-10-16T01:01:34.668Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -16,7 +16,7 @@ See [here]() for or information on the Core [Rust Node](https://github.com/saito
 
 ## [Installation](/tech/installation/javascript)
 
-See the [installation](/tech/installation/javascript) page for instructions on installing, configuring and building applications on Saito-Lite-Rust. It includes steps supporting Linux, Mac and Windows.
+See the [installation](/tech/installation/javascript) page for instructions on installing, configuring and building applications on Saito-Lite-Rust. It accommodates Linux, Mac and Windows.
 
 #### Requirements:
 - Machine with at least 2GB RAM.
