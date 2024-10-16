@@ -2,7 +2,7 @@
 title: Saito Javascript - Installation Instructions
 description: 
 published: true
-date: 2024-10-16T00:33:35.600Z
+date: 2024-10-16T00:36:00.688Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:41:59.352Z
@@ -52,8 +52,6 @@ If after a few moments with no errors a large Saito ASCII Logo appears on screen
 
 It is common that errors at this stage are related to your NodeJS install, so consider first searching for NodeJS troubleshooting help if you can't get Saito running at this stage.
 
-- See [here](https://wiki.saito.io/tech/compile) for more complete documentation about compiling and configuring Saito.
-
 <br />
 
 ### 3) Visit Saito in your Browser
@@ -81,6 +79,10 @@ To generate a custom options file make a `options.conf` in the `config/` folder 
 -->
 
 Any changes can be compiled with `npm run nuke`. The final compiled file will rest in `config/options`.
+
+### Compilation and Configuration
+
+- Visit the page [compiling and configuring](https://wiki.saito.io/tech/compile) for more information on setting up your SLR Node.
 
 <br />
 
