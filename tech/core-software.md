@@ -2,7 +2,7 @@
 title: Core
 description: 
 published: true
-date: 2024-10-16T00:52:49.369Z
+date: 2024-10-16T00:53:01.900Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-17T08:16:38.266Z
@@ -14,7 +14,6 @@ This page provides information on [Saito's Core Node](https://github.com/saitote
 
 For more application-centric development, or if you just want to run a node check out [Saito-Lite-Rust](https://wiki.saito.io/en/tech/javascript). There also exists a followup [tutorial series](/tech/building_apps) for building applications.
 
-## Node Hierarchy
 
 ### [Saito Rust](/tech/installation/rust)
 The core software is the Saito Rust client. This consists of a command-line client programmed in Rust that is intended to serve as a high-throughput network node. This is the version of Saito you want to be running if you are installing the software for use processing a high-throughput blockchain. This repository also includes the consensus-level classes (block, transaction, peer, network) that are compiled into the WASM binary that other clients use.
