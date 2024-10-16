@@ -2,7 +2,7 @@
 title: Run a Node
 description: 
 published: true
-date: 2024-10-15T23:46:09.134Z
+date: 2024-10-16T00:41:41.767Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -16,12 +16,23 @@ See [here]() for or information on the [Rust Node](https://github.com/saitotech/
 
 ## Installation
 
+#### Requirements:
+- Machine with at least 2GB RAM.
+- Build tools: git, g++, make, python, tsc
+- Stack: node.js (v.16+), npm (v6+)
+- TypeScript
+- Saito-Lite-Rust - [Github](https://github.com/saitotech/saito-lite-rust)
+
+
+See the [installation](/tech/installation/javascript) page for instructions on installing, configuring and building applications on Saito-Lite-Rust.
+
+<!--
 Saito-Lite-Rust runs atop NodeJS. Instructions for installing are available for:
 
 - [Linux](/tech/installation/javascript/linux)
 - [Mac](/tech/installation/javascript/mac)
 - [Windows](/tech/installation/javascript/windows)
-
+-->
 
 ## Deploy
 Visit the [deploy instructions](https://wiki.saito.io/en/tech/deployment) to learn how to connect your Saito-Lite-Rust Node to the public internet.
