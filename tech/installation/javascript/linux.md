@@ -2,7 +2,7 @@
 title: Linux Installation
 description: Linux SLR Installation Instructions
 published: true
-date: 2024-10-15T23:40:20.921Z
+date: 2024-10-16T00:30:50.234Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -12,17 +12,8 @@ dateCreated: 2022-01-18T09:49:16.786Z
 
 The instructions below are for developers building on Linux. We have separate installation instructions for [Mac users](https://wiki.saito.io/tech/installation/mac) and [Windows users](https://wiki.saito.io/en/tech/installation/windows).
 
-## Ubuntu 22.04 (LTS) x64
 
-Requirements:
-- Machine with at least 2GB RAM.
-- Build tools: git, g++, make, python, tsc
-- Stack: node.js (v.16+), npm (v6+)
-- TypeScript
-
-<br />
-
-### 1) Install Dependencies
+### 1) Install Dependencies (Ubuntu 22.04 (LTS) x64)
 ```
 sudo apt-get update
 sudo apt-get install g++ make git python-is-python3 npm
