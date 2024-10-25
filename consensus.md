@@ -3,14 +3,14 @@ title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
 date: 2024-09-28T09:14:01.563Z
-tags: 
+tags:
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
 ---
 
 # Saito Consensus
 
-Saito Consensus eliminates the [sybil attacks](/consensus/sybil-proof),  [majoritarian attacks](/consensus/majoritarian-attacks),and several other [attack vectors](/consensus/attack-vectors) common in proof-of-work and proof-of-stake consensus mechanisms by correcting the collective action problems buried in their incentive structures. This page offers a brief introduction to how consensus works. Details on network [tokenomics](/tokenomics) are also available.
+Saito Consensus eliminates the [sybil attacks](/consensus/sybil-attacks), [majoritarian attacks](/consensus/majoritarian-attacks),and several other [attack vectors](/consensus/attack-vectors) common in proof-of-work and proof-of-stake consensus mechanisms by correcting the collective action problems buried in their incentive structures. This page offers a brief introduction to how consensus works. Details on network [tokenomics](/tokenomics) are also available.
 
 ## 1. HOW BLOCKS ARE PRODUCED
 
@@ -26,7 +26,7 @@ Once a block is produced miners start hashing to solve a mining puzzle. The puzz
 
 If a golden ticket for block N is included in the very next block (N+1), consensus issues a payout to the miner that found the solution and a random routing node who contributed to the previous block. The block producer is eligible to win this routing payout as the last hop in the routing path of every transation, but other nodes may win as well.
 
-A weighted lottery determines the winning routing node as follows. We hash the golden ticket solution again to choose a transaction from the block. The chance of each transaction  winning is weighted according to its share of all fees in the block. That hash is then hashed again to select a hop from the routing path of the winning transaction, with each hop weighted according to its share of work in the overall routing path. If a transaction with a 2-hop routing path and a 10 SAITO fee, the 1st-hop has a 10/5 chance of payout while the 2nd-hop has a 5/15 chance. In a transaction with a 3-hop routing path and a 10 SAITO fee the 1st-hop has a 10/17.5 chance of payout, while the 2nd-hop has a 5/17.5 chance of payout and the third has a 2.5/17.5 chance of payout, etc.
+A weighted lottery determines the winning routing node as follows. We hash the golden ticket solution again to choose a transaction from the block. The chance of each transaction winning is weighted according to its share of all fees in the block. That hash is then hashed again to select a hop from the routing path of the winning transaction, with each hop weighted according to its share of work in the overall routing path. If a transaction with a 2-hop routing path and a 10 SAITO fee, the 1st-hop has a 10/5 chance of payout while the 2nd-hop has a 5/15 chance. In a transaction with a 3-hop routing path and a 10 SAITO fee the 1st-hop has a 10/17.5 chance of payout, while the 2nd-hop has a 5/17.5 chance of payout and the third has a 2.5/17.5 chance of payout, etc.
 
 This process repeats block by block. Nodes burn fees to produce blocks, and then burn hash to resurrect fees. If no golden ticket is found all of the fees from the previous block remain burned.
 
@@ -48,16 +48,15 @@ The UTXO may also be issued a staking payout on rebroadcasting. This ATR payout 
 
 Additional mechanisms which increase network robustness:
 
-* consensus can maintain a smoothed average of the fees included in each block over the last epoch. in the event that the block reward spikes well in excess of this smoothed average, the excess portion can be burned for good. This adds a deflationary burn which penalizes attackers who use their own tokens to attack the network.
+- consensus can maintain a smoothed average of the fees included in each block over the last epoch. in the event that the block reward spikes well in excess of this smoothed average, the excess portion can be burned for good. This adds a deflationary burn which penalizes attackers who use their own tokens to attack the network.
 
-* consensus can maintain a smoothed average of the fee-throughput to aggregate routing depth over the last epoch. in the event that this ratio decreases significantly, the block reward can automatically reduced with a deflationary burn. This adds a deflationary burn which penalizes attackers who use their own tokens to attack the network.
+- consensus can maintain a smoothed average of the fee-throughput to aggregate routing depth over the last epoch. in the event that this ratio decreases significantly, the block reward can automatically reduced with a deflationary burn. This adds a deflationary burn which penalizes attackers who use their own tokens to attack the network.
 
-* consensus can requires all valid chains to contain N golden tickets over the last M blocks and declare forks unextendable unless they meet these minimal hashing requirements. This provides wrap-around spam-resistance to cash-only attacks at the cost of making halting attacks theoretically possible for attackers with unlimited hashpower.
+- consensus can requires all valid chains to contain N golden tickets over the last M blocks and declare forks unextendable unless they meet these minimal hashing requirements. This provides wrap-around spam-resistance to cash-only attacks at the cost of making halting attacks theoretically possible for attackers with unlimited hashpower.
 
-* routing policies at the block level can be added to incentivize nodes to following sensible routing policies and not spam the network or relay malicious blocks, while also speeding up relay speeds for valid blocks from honest producers.
+- routing policies at the block level can be added to incentivize nodes to following sensible routing policies and not spam the network or relay malicious blocks, while also speeding up relay speeds for valid blocks from honest producers.
 
-* block producers can be required to affix tokens (making them unspendable for X blocks and ineligible for the ATR payout) when producing blocks. Social slashing of these locked tokens is possible in some situations, permitting even low fee-throughput chains to maintain a high cost-of-attack.
-
+- block producers can be required to affix tokens (making them unspendable for X blocks and ineligible for the ATR payout) when producing blocks. Social slashing of these locked tokens is possible in some situations, permitting even low fee-throughput chains to maintain a high cost-of-attack.
 
 ### APPENDIX I: SAITO TERMINOLOGY
 
@@ -68,7 +67,3 @@ Additional mechanisms which increase network robustness:
 **Golden Ticket:** a transaction from a miner containing a valid solution to the computational lottery puzzle embodied in the previous block hash.
 
 **Genesis Period:** the length of the epoch in number of blocks.
-
-
-
-

@@ -1,9 +1,9 @@
 ---
 title: Run a Node
-description: 
+description:
 published: true
 date: 2024-10-16T01:06:59.198Z
-tags: 
+tags:
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
 ---
@@ -19,12 +19,12 @@ If you are interested in protocol development, visit the page for our [Core Rust
 See the [installation](/tech/installation/javascript) page for instructions on installing, configuring and building applications on Saito-Lite-Rust. It accommodates Linux, Mac and Windows.
 
 #### Requirements:
+
 - Machine with at least 2GB RAM.
 - Build tools: git, g++, make, python, tsc
 - Stack: node.js (v.16+), npm (v6+)
 - TypeScript
 - Saito-Lite-Rust - [Github](https://github.com/saitotech/saito-lite-rust)
-
 
 <!--
 Saito-Lite-Rust runs atop NodeJS. Instructions for installing are available for:
@@ -40,9 +40,10 @@ If you want to get started building applications, we recommend starting with our
 
 Applications like the [Saito Arcade](https://saito.io/arcade) run inside the Saito Wallet, which receives on-chain and off-chain messages and passes them into the modules that are running inside the user wallet. See our [applications page](/tech/applications) for examples and descriptions of the Web 3 apps currently running on Saito.
 
-## [Deploy](https://wiki.saito.io/en/tech/deployment) Your Node
-Visit the [deploy instructions](https://wiki.saito.io/en/tech/deployment) to learn how to connect your Saito-Lite-Rust Node to the public internet.
-  
+## [Deploy](/tech/javascript/deployment) Your Node
+
+Visit the [deploy instructions](/tech/javascript/deployment) to learn how to connect your Saito-Lite-Rust Node to the public internet.
+
 <!--
 ## Using Saito in your Browser
 
@@ -50,11 +51,10 @@ Once you have run `npm start` above it will take a few moments for the Saito sof
 
 https://127.0.0.1:12101/arcade
 
-This will load the Saito Arcade - one of our default applications. If everything has gone as planned, you now have a working version of Saito for use in local testing or development. 
+This will load the Saito Arcade - one of our default applications. If everything has gone as planned, you now have a working version of Saito for use in local testing or development.
 
 Take your next steps into application development with [tutorial one](https://wiki.saito.io/en/tech/tutorial-1-deploy-install-application) which explains how to build a simple application that attaches data to transactions and broadcasts them into the network.
 -->
-
 
 ## External References
 
@@ -68,4 +68,3 @@ https://github.com/saitotech/saito-lite-rust
 ( JavaScript )
 https://github.com/saitotech/saito-rust-workspace
 ( Rust )
-
