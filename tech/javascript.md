@@ -40,7 +40,7 @@ If you want to get started building applications, we recommend starting with our
 
 Applications like the [Saito Arcade](https://saito.io/arcade) run inside the Saito Wallet, which receives on-chain and off-chain messages and passes them into the modules that are running inside the user wallet. See our [applications page](/tech/applications) for examples and descriptions of the Web 3 apps currently running on Saito.
 
-## [Deploy](https://wiki.saito.io/en/tech/deployment) Your Node
+## [Deploy](/tech/javascript/deployment) Your Node
 Visit the [deploy instructions](/tech/javascript/deployment) to learn how to connect your Saito-Lite-Rust Node to the public internet.
   
 <!--
