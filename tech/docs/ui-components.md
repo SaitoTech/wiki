@@ -2,7 +2,7 @@
 title: Saito UI Components
 description: An introduction to Saito UI Components and CSS Structure
 published: true
-date: 2022-06-29T03:15:06.491Z
+date: 2024-10-29T21:51:40.329Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T02:39:03.187Z
@@ -10,7 +10,9 @@ dateCreated: 2022-06-29T02:39:03.187Z
 
 # Saito UI Components
 
-Saito comes with UI Components like the Saito Header and the Saito Chatbox which you will see in many applications. You can include these components in any applications that you want to write.
+Saito comes with an extensive set of UI Components and Templates that can be used to create applications with headers, sidebars, user-boxes, game & other invites, and much more. You can include these components in any applications that you want to write.
+
+## Adding Components
 
 To use a Saito UI component in your application, start by including the component at the top of your module file. A number of UI Components are included by default in the ```/lib/saito/new-ui``` directory. You can build your own module-specific components and include them in the ```/lib``` directory of your module as well.
 
