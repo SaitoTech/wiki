@@ -2,7 +2,7 @@
 title: CSS Guidelines
 description: 
 published: true
-date: 2023-03-08T02:12:35.617Z
+date: 2024-10-29T21:18:59.892Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-07T07:41:32.600Z
@@ -10,4 +10,4 @@ dateCreated: 2022-12-07T07:41:32.600Z
 
 # CSS Guidelines
 
-Deprecated content is now [here](/tech/applications/saito-css)
+Page has been moved [here](/tech/applications/saito-css)
