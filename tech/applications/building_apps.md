@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-10-29T22:06:27.910Z
+date: 2024-10-29T22:14:42.042Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -47,9 +47,9 @@ The **Module API** explains what functions you can include in your module. The *
 ### [CSS Design](/tech/docs/saito-css)
 * Saito comes with a default set of CSS classes that creates the colorful aesthetic behind our core applications. While developers can always create their own CSS designs, you can extend the core classes in our Saito CSS design for a faster path to having your module look good everywhere. -->
 
-## External Resources
+## Documentation and External Resources
 
-- [Saito Docs](https://wiki.saito.io/en/tech/docs)
+Visit the [Saito Docs](https://wiki.saito.io/en/tech/docs) for detailed information about interfacing with the network and working with Saito Modules.
 
 If you are an advanced developer our directory of [reference modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) may be of use for those who want to build "standard" applications in the same style and approach as our default application suite.
 
