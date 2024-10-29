@@ -2,7 +2,7 @@
 title: Saito Modules Protocol
 description: API for Building Saito Modules
 published: true
-date: 2024-09-28T16:52:38.582Z
+date: 2024-10-29T21:48:14.627Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-08T04:45:17.837Z
@@ -10,8 +10,9 @@ dateCreated: 2022-01-08T04:45:17.837Z
 
 # Saito Module Protocol
 
-The following document describes the basic structure of a Saito module and the core functions that most modules will extend. We recommend that total beginners work through our [first tutorial](/tech/tutorials/01) before reading this page.
+The following document describes the basic structure of a Saito module and the core functions that most modules will extend.
 
+Saito Modules inherit from the ```/lib/templates/modtemplate.js``` file. This template file defines a number of default functions that create the basic behavior for the module. If you overwrite these functions you can customize the behavior of your module, such as specifying what actions it should take when it receives a transaction or off-chain message. This API outlines these basic functions.
 
 ## Directory Structure
 
