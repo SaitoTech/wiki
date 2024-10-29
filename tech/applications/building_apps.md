@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-10-29T21:30:57.171Z
+date: 2024-10-29T21:33:57.705Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -27,7 +27,7 @@ Then visit our [full tutorial series](/tech/tutorials) for new developers or jum
 
 Once your application is built you can package it so that any wallet can install it by using our instructions on [compiling applications for drag-and-drop install](/tech/compile).
 
-
+<!--
 ## Misc.
 
 The **Module API** explains what functions you can include in your module. The **Events API** explain how to listen and respond to system-wide events that are triggered when events happen like a new block being found. The **Services API*** explains how peers can inform other peers that they can be queried for special types of data. Finally, our **Ui Components** and **CSS Design** specifications explain our standard approach for creating UI components that will work and look good regardless of the applications that users are running.
@@ -45,7 +45,7 @@ The **Module API** explains what functions you can include in your module. The *
 * Saito comes with an extensive set of UIComponents and Templates that can be used to create applications with headers, sidebars, user-boxes and games and invites and much more. This section explains how to use existing components in your applications.
 
 ### [CSS Design](/tech/docs/saito-css)
-* Saito comes with a default set of CSS classes that creates the colorful aesthetic behind our core applications. While developers can always create their own CSS designs, you can extend the core classes in our Saito CSS design for a faster path to having your module look good everywhere.
+* Saito comes with a default set of CSS classes that creates the colorful aesthetic behind our core applications. While developers can always create their own CSS designs, you can extend the core classes in our Saito CSS design for a faster path to having your module look good everywhere. -->
 
 ## External Resources
 
