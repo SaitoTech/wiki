@@ -2,7 +2,7 @@
 title: Saito CSS
 description: Saito CSS Design
 published: true
-date: 2024-10-29T21:52:31.887Z
+date: 2024-10-29T22:18:44.581Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T02:53:29.274Z
@@ -43,7 +43,7 @@ Note use of color varliables below.
 * Use one line per property declaration.
 * Always follow a rule with one line of whitespace.
 
-## Saito Specifices
+## Saito Specifics
 
 * Colors should be defined in variables kept in ```saito-variables.css``` 
   *This is to comply with requirements for theme switching*
