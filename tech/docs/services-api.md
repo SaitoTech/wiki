@@ -2,7 +2,7 @@
 title: Services API
 description: Creating a Service for Better Cross-Node Interactivity
 published: true
-date: 2022-03-25T04:41:59.203Z
+date: 2024-10-29T21:48:45.195Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-08T04:49:26.175Z
@@ -10,7 +10,9 @@ dateCreated: 2022-01-08T04:49:26.175Z
 
 # Saito Services Protocol
 
+Saito modules can announce their support for arbitrary "Services" when connecting to other peers. This lets peers know they are available to handle specific requests. Modules can announce their support for various services, and use this information to request data from peers running similar modules or service protocols. 
 
+<!--
 ## Abstract
 
 The following document describes the methods modules use to broadcast services they are running to peers and users on the network. It covers how to query a remote peer to find out what services it offers, and how to submit service requests to that peer.
@@ -21,6 +23,7 @@ The following document describes the methods modules use to broadcast services t
 | Status  | Published         |
 | Type    | Protocol Standard |
 | Created | January 8, 2021   |
+-->
 
 ## What Are Services
 
@@ -133,9 +136,8 @@ It is easier to understand how this works with a documented example:
       }
       return 0;
     }
-
   );
-
+```
 
 ## Making Database Requests
 
