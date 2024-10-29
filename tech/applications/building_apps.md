@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-10-29T21:07:55.420Z
+date: 2024-10-29T21:10:00.519Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -27,9 +27,8 @@ Then visit our [full tutorial series](/tech/tutorials) for new developers or jum
 
 Once your application is built you can package it so that any wallet can install it by using our instructions on [compiling applications for drag-and-drop install](/tech/compile).
 
-## API Documentation
 
-If you are an advanced developer our directory of [reference modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) may be of use for those who want to build "standard" applications in the same style and approach as our default application suite. You can also check out the community resource [Livedocs](https://github.com/mat888/saito-livedocs), which serves as a working demonstration and hackable template for basic Saito applications.
+## API Documentation
 
 The **Module API** explains what functions you can include in your module. The **Events API** explain how to listen and respond to system-wide events that are triggered when events happen like a new block being found. The **Services API*** explains how peers can inform other peers that they can be queried for special types of data. Finally, our **Ui Components** and **CSS Design** specifications explain our standard approach for creating UI components that will work and look good regardless of the applications that users are running.
 
@@ -48,4 +47,6 @@ The **Module API** explains what functions you can include in your module. The *
 ### [CSS Design](/tech/applications/saito-css)
 * Saito comes with a default set of CSS classes that creates the colorful aesthetic behind our core applications. While developers can always create their own CSS designs, you can extend the core classes in our Saito CSS design for a faster path to having your module look good everywhere.
 
+## External Resources
 
+If you are an advanced developer our directory of [reference modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) may be of use for those who want to build "standard" applications in the same style and approach as our default application suite. You can also check out the community resource [Livedocs](https://github.com/mat888/saito-livedocs), which serves as a working demonstration and hackable template for basic Saito applications.
