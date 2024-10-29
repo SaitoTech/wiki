@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-10-29T21:10:00.519Z
+date: 2024-10-29T21:27:41.660Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -28,7 +28,7 @@ Then visit our [full tutorial series](/tech/tutorials) for new developers or jum
 Once your application is built you can package it so that any wallet can install it by using our instructions on [compiling applications for drag-and-drop install](/tech/compile).
 
 
-## API Documentation
+## Misc.
 
 The **Module API** explains what functions you can include in your module. The **Events API** explain how to listen and respond to system-wide events that are triggered when events happen like a new block being found. The **Services API*** explains how peers can inform other peers that they can be queried for special types of data. Finally, our **Ui Components** and **CSS Design** specifications explain our standard approach for creating UI components that will work and look good regardless of the applications that users are running.
 
