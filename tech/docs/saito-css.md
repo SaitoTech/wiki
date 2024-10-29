@@ -2,13 +2,15 @@
 title: Saito CSS
 description: Saito CSS Design
 published: true
-date: 2024-10-16T01:33:41.184Z
+date: 2024-10-29T21:52:31.887Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-29T02:53:29.274Z
 ---
 
 # CSS Guidelines
+
+Saito comes with a default set of CSS classes that creates the aesthetics behind our core applications. While developers can always create their own CSS designs, you can extend the core classes in our Saito CSS design for a faster path to having your module look good everywhere.
 
 ## CSS File Structure
 
