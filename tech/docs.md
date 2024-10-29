@@ -2,7 +2,7 @@
 title: Saito Documentation
 description: 
 published: true
-date: 2024-10-29T22:12:38.747Z
+date: 2024-10-29T22:13:10.654Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-29T21:33:20.620Z
@@ -15,6 +15,7 @@ dateCreated: 2024-10-29T21:33:20.620Z
 Saito modules are the standard way to develop, serve and run P2P applications. [Saito Lite Rust](https://wiki.saito.io/en/tech/javascript) allows users to easily run any P2P app on a browser lite-node and for full nodes to distribute these applications, provide service and earn transaction fees.
 
 ### [Module Conventions](/tech/docs/module-conventions)
+General guideline and instructions for working with and creating Saito Modules. 
 
 ### [Module API](/tech/docs/module-api)
 The Module API explains how to include and leverage functions which react to common blockchain, P2P and other events in your module.
