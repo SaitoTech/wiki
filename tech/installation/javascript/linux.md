@@ -2,7 +2,7 @@
 title: Linux Installation
 description: Linux SLR Installation Instructions
 published: true
-date: 2024-10-16T00:35:57.276Z
+date: 2024-10-31T23:41:52.232Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -48,7 +48,7 @@ npm start
 
 If after a few moments with no errors a large Saito ASCII Logo appears on screen, move on to the next step.
 
-It is common that errors at this stage are related to your NodeJS install, so consider first searching for NodeJS troubleshooting help if you can't get Saito running at this stage.
+If you do see an error, it is common that errors at this stage are related to your NodeJS install, be sure each of the dependencies is properly installed.
 
 <br />
 
