@@ -2,7 +2,7 @@
 title: Saito Javascript - Installation Instructions
 description: 
 published: true
-date: 2024-10-16T00:36:00.688Z
+date: 2024-11-01T00:11:50.654Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:41:59.352Z
@@ -86,6 +86,9 @@ Any changes can be compiled with `npm run nuke`. The final compiled file will re
 
 <br />
 
+## Building Apps
+
+You are now ready to modify, build and compile Saito applications. Head over to the [tutorial](https://wiki.saito.io/en/tech/applications/building_apps) section to get started!
 
 <!-- this belongs on an info page not install
 This application is coded as a lite-client capable of supporting SPV blocks but is techcally capable of supporting full-blocks and functioning as a full standalone application.
