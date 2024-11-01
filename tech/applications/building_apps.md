@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-10-29T22:14:42.042Z
+date: 2024-11-01T00:10:51.127Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -10,7 +10,7 @@ dateCreated: 2022-01-07T07:06:32.790Z
 
 # Building Saito Applications
 
-In order to build and test Saito blockchain applications you first need to [run a Saito Lite Rust (SLR) node](https://wiki.saito.io/en/tech/javascript).
+In order to build and test Saito blockchain applications you first need to [install a Saito Lite Rust (SLR) node](https://wiki.saito.io/tech/installation/javascript).
 
 Then visit our [full tutorial series](/tech/tutorials) for new developers or jump in with the beginner lessons below:
 
