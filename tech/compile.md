@@ -2,7 +2,7 @@
 title: Compiling Standalone Applications
 description: This page convers how to turn your module into an installable Saito Application
 published: true
-date: 2024-11-08T18:18:42.569Z
+date: 2024-11-08T19:23:48.935Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-27T09:25:06.675Z
@@ -10,11 +10,17 @@ dateCreated: 2024-09-27T09:25:06.675Z
 
 # Compiling & Configuration
 
-When building applications with the Saito-Lite-Rust software, Javapscript must first be compiled before it can ran on a *core-client* or served to *lite-clients* (like browsers).
+This page demonstrates the various methods of compiling and distributing Saito applications, including compiling and serving directly from an *Application (serving) Full Node*, or compiling [standalone bundles](#distribution) which users can drag-and-drop install onto their clients.
 
-The core-client is a full node, more specifically, an [*application node*](https://github.com/SaitoTech/saito-lite-rust) and is responsible for compiling and serving compiled applications to lite-clients.
+Even if you plan to use dynamically compiled [standalone bundles](#distribution), it is useful to follow the application node compile steps below and run apps locally to test and debug.
 
-## Basic Compile
+## Application Node Compile
+
+When building applications with the [Saito-Lite-Rust](https://wiki.saito.io/en/tech/javascript) software, Javapscript must first be compiled before it can ran on a *core-client* or served to *lite-clients* (like browsers). 
+
+The core-client is a full node and more specifically, an [*application node*](https://github.com/SaitoTech/saito-lite-rust). This software is responsible for compiling and serving compiled applications to lite-clients which can be seen in action when using the [apps](/tech/applications) on [Saito.io](Saito.io).
+
+### Config File
 
 Your application won't be compiled until the compile configuration lists it.
 
@@ -44,6 +50,44 @@ If this is not your first time compiling the software you can run `npm run compi
 ```bash
 > npm start
 ```
+<br>
+
+## <div id="distribution">Dynamic Module Compilation for Distribution</div>
+
+*Dynamic Module Compilation* can be used to compile modules into standalone bundles users can drag-and-drop to [install](#install) into their browser. The following section shows how to compile applications into this format.
+
+### AppStore - Compilation
+
+Make sure your local Saito node is compiled with both CORE and LITE support of the ```devtools``` module, and then start your server and visit ```/devtools``` in your browser. You will see a drag-and-drop target.
+
+<br />
+<img src="/compile-01.png" style="width:600px" />
+
+Provide ZIP file of your module directory and a popup will appear confirming the details of the application. If there is an issue reading the .zip file you likely have a problem with the application -- make sure it compiles and runs locally before you attempt to compile for remote installation. Otherwise click the button to generate the application.
+
+Once you click the button, it may take a short while, but your machine will compile your module into a standalone file and download it to your machine. Find that file - this is the application-file that browsers will be able to install. <!-- Be sure it has a `.saito` file extension. -->
+
+### <div id="install">AppStore - Installation</div>
+
+To install these standalone application packages, click on the top-right menu in any Saito application and click on the Account button below your wallet balance. On the overlay that appears, look for the "+" button that shows up on the top-right of your installed modules. 
+
+<br />
+<img src="/compile-03.png" style="width:600px" />
+
+Click on the add button and you'll get another drag-and-drop target. Drag the application package that you previously compiled into this window.
+
+<br />
+<img src="/compile-04.png" style="width:600px" />
+
+A popup will appear to confirm installation. Confirm that you want to install this application and click "Install" if so. 
+
+<br />
+<img src="/compile-05.png" style="width:600px" />
+
+Your browser will unpack the application, save it in your wallet and refresh. Once your browser reloads it will load the application you have just installed along with all other modules. You can now toggle it on-or-off like any other module.
+
+
+
 
 ## Configuration
 
@@ -116,41 +160,3 @@ When this flag is used:
    slightly easier.
    
 The result is that many more files are downloaded by the client, but in-browser debugging is much easier
-
-
-## <div id="disttribution">Compiling for Distribution</div>
-
-*Dynamic Module Compilation* can be used to compile modules into standalone bundles users can drag-and-drop to install into their browser. The following section shows how to compile applications into this format.
-
-### AppStore - Compilation
-
-Make sure your local Saito node is compiled with both CORE and LITE support of the ```devtools``` module, and then start your server and visit ```/devtools``` in your browser. You will see a drag-and-drop target.
-
-<br />
-<img src="/compile-01.png" style="width:600px" />
-
-Provide ZIP file of your module directory and a popup will appear confirming the details of the application. If there is an issue reading the .zip file you likely have a problem with the application -- make sure it compiles and runs locally before you attempt to compile for remote installation. Otherwise click the button to generate the application.
-
-Once you click the button, it may take a short while, but your machine will compile your module into a standalone file and download it to your machine. Find that file - this is the application-file that browsers will be able to install. <!-- Be sure it has a `.saito` file extension. -->
-
-### AppStore - Installation
-
-To install these standalone application packages, click on the top-right menu in any Saito application and click on the Account button below your wallet balance. On the overlay that appears, look for the "+" button that shows up on the top-right of your installed modules. 
-
-<br />
-<img src="/compile-03.png" style="width:600px" />
-
-Click on the add button and you'll get another drag-and-drop target. Drag the application package that you previously compiled into this window.
-
-<br />
-<img src="/compile-04.png" style="width:600px" />
-
-A popup will appear to confirm installation. Confirm that you want to install this application and click "Install" if so. 
-
-<br />
-<img src="/compile-05.png" style="width:600px" />
-
-Your browser will unpack the application, save it in your wallet and refresh. Once your browser reloads it will load the application you have just installed along with all other modules. You can now toggle it on-or-off like any other module.
-
-
-
