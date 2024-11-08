@@ -2,7 +2,7 @@
 title: Compiling Standalone Applications
 description: This page convers how to turn your module into an installable Saito Application
 published: true
-date: 2024-10-03T23:17:33.343Z
+date: 2024-11-08T18:18:42.569Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-27T09:25:06.675Z
@@ -118,7 +118,7 @@ When this flag is used:
 The result is that many more files are downloaded by the client, but in-browser debugging is much easier
 
 
-## Compiling for Distribution
+## <div id="disttribution">Compiling for Distribution</div>
 
 *Dynamic Module Compilation* can be used to compile modules into standalone bundles users can drag-and-drop to install into their browser. The following section shows how to compile applications into this format.
 
