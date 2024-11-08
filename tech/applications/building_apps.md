@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-11-01T00:12:45.661Z
+date: 2024-11-08T18:19:57.903Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -10,7 +10,13 @@ dateCreated: 2022-01-07T07:06:32.790Z
 
 # Building Saito Applications
 
-In order to build and test Saito blockchain applications you first need to [install a Saito Lite Rust (SLR) node](https://wiki.saito.io/tech/installation/javascript).
+If you are interested in building Saito applications, we have a [tutorial series] for learning how to code apps. This page also contains instructions on how to install modules onto a server, and how to compile them into an form where users can install them on their wallet.
+
+## Getting Started
+
+In order to build and test Saito blockchain applications you first need to [install a Saito Lite Rust (SLR) node](https://wiki.saito.io/tech/installation/javascript). For those interested in deploying a full node to the internet, we have instructions to do so.
+
+If instead you want to compile and distribute applications without running infrastructure, check out the <a href=#compile>section below</a> on compilation, specifically [dynamic module compilation](https://wiki.saito.io/en/tech/compile#compiling-for-distribution).
 
 Then visit our [full tutorial series](/tech/tutorials) for new developers or jump in with the beginner lessons below:
 
@@ -23,9 +29,9 @@ Then visit our [full tutorial series](/tech/tutorials) for new developers or jum
 
 | ... | [More tutorials](/tech/tutorials) | See the complete [tutorial series](/tech/tutorials) for more advanced lessons.
 
-## Compiling and Distributing
+## <div id="compile"> Compiling and Distributing </div>
 
-Once your application is built you can package it so that any wallet can install it by using our instructions on [compiling applications for drag-and-drop install](/tech/compile).
+Once your application is built you can package it so that any wallet can install it by using our instructions on [compiling applications for drag-and-drop install](https://wiki.saito.io/en/tech/compile#compiling-for-distribution).
 
 <!--
 ## Misc.
