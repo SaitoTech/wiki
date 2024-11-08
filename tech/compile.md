@@ -2,7 +2,7 @@
 title: Compiling Standalone Applications
 description: This page convers how to turn your module into an installable Saito Application
 published: true
-date: 2024-11-08T19:23:48.935Z
+date: 2024-11-08T19:24:55.725Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-27T09:25:06.675Z
@@ -52,9 +52,11 @@ If this is not your first time compiling the software you can run `npm run compi
 ```
 <br>
 
-## <div id="distribution">Dynamic Module Compilation for Distribution</div>
+## <div id="distribution">Dynamic Module Compilation for Severless Distribution</div>
 
-*Dynamic Module Compilation* can be used to compile modules into standalone bundles users can drag-and-drop to [install](#install) into their browser. The following section shows how to compile applications into this format.
+*Dynamic Module Compilation* can be used to compile modules into standalone bundles users can drag-and-drop to [install](#install) into their browser. This precludes the need for developers to run infrastructure which serves the application bundles.
+
+The following section shows how to compile applications into this format.
 
 ### AppStore - Compilation
 
