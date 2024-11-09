@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-11-08T18:48:56.707Z
+date: 2024-11-09T04:20:16.379Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -37,6 +37,16 @@ In order to build and test Saito blockchain applications you first need to [inst
 
 Once your application is built you can package it so that any wallet can install it by using our instructions on [compiling applications for drag-and-drop install](https://wiki.saito.io/en/tech/compile#compiling-for-distribution).
 
+
+
+## Documentation and External Resources
+
+Visit the [Saito Docs](https://wiki.saito.io/en/tech/docs) for detailed information about interfacing with the network and working with Saito Modules.
+
+If you are an advanced developer our directory of [reference modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) may be of use for those who want to build "standard" applications in the same style and approach as our default application suite.
+
+You can also check out the community resource [Livedocs](https://github.com/mat888/saito-livedocs), which serves as a working demonstration and hackable template for basic Saito applications.
+
 <!--
 ## Misc.
 
@@ -56,11 +66,3 @@ The **Module API** explains what functions you can include in your module. The *
 
 ### [CSS Design](/tech/docs/saito-css)
 * Saito comes with a default set of CSS classes that creates the colorful aesthetic behind our core applications. While developers can always create their own CSS designs, you can extend the core classes in our Saito CSS design for a faster path to having your module look good everywhere. -->
-
-## Documentation and External Resources
-
-Visit the [Saito Docs](https://wiki.saito.io/en/tech/docs) for detailed information about interfacing with the network and working with Saito Modules.
-
-If you are an advanced developer our directory of [reference modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) may be of use for those who want to build "standard" applications in the same style and approach as our default application suite.
-
-You can also check out the community resource [Livedocs](https://github.com/mat888/saito-livedocs), which serves as a working demonstration and hackable template for basic Saito applications.
