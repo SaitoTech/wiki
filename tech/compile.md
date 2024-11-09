@@ -2,7 +2,7 @@
 title: Compiling Standalone Applications
 description: This page convers how to turn your module into an installable Saito Application
 published: true
-date: 2024-11-08T19:24:55.725Z
+date: 2024-11-09T02:42:19.437Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-27T09:25:06.675Z
@@ -12,11 +12,13 @@ dateCreated: 2024-09-27T09:25:06.675Z
 
 This page demonstrates the various methods of compiling and distributing Saito applications, including compiling and serving directly from an *Application (serving) Full Node*, or compiling [standalone bundles](#distribution) which users can drag-and-drop install onto their clients.
 
+[Advanced configuration](#aconf) options are described at the bottom of the page.
+
 Even if you plan to use dynamically compiled [standalone bundles](#distribution), it is useful to follow the application node compile steps below and run apps locally to test and debug.
 
 ## Application Node Compile
 
-When building applications with the [Saito-Lite-Rust](https://wiki.saito.io/en/tech/javascript) software, Javapscript must first be compiled before it can ran on a *core-client* or served to *lite-clients* (like browsers). 
+When building applications with the [Saito-Lite-Rust](https://wiki.saito.io/en/tech/javascript) software, Javascript must first be compiled before it can ran on a *core-client* or served to *lite-clients* (like browsers). 
 
 The core-client is a full node and more specifically, an [*application node*](https://github.com/SaitoTech/saito-lite-rust). This software is responsible for compiling and serving compiled applications to lite-clients which can be seen in action when using the [apps](/tech/applications) on [Saito.io](Saito.io).
 
@@ -39,7 +41,7 @@ lite: [
 ...
 ```
 
-Then navigate to `/saito-lite-rust` and compile the javascript bundle:
+Then navigate to `/saito-lite-rust` and compile the Javascript bundle:
 
 ```bash
 > npm run nuke
@@ -89,27 +91,25 @@ A popup will appear to confirm installation. Confirm that you want to install th
 Your browser will unpack the application, save it in your wallet and refresh. Once your browser reloads it will load the application you have just installed along with all other modules. You can now toggle it on-or-off like any other module.
 
 
-
-
-## Configuration
+## <div id="aconf">Advanced Configuration</div>
 
 <!--
 Once you have installed Saito-Lite-Rust you will be ready to configure the server to run the applications you wish to support and provide them to browsers on-demand. This section covers these follow-on configuration steps. -->
 
 Saito uses two main configuration files. The first is ```config/options``` which specifies network configuration options like the IP address on which the server runs and the ports it should open and the peers to which it should connect. A second ```config/modules.config.js``` file specifies which modules should run on the server and any browsers that connect to it.
 
-Running ```npm run nuke``` will create fresh versions of these configuration files from template files that are stored in the ```config``` directory. It will also compiles a compressed version of Saito from the ```modules.config.js``` that will be fed out to browsers which connect to the server and request the default javascript.
+Running ```npm run nuke``` will create fresh versions of these configuration files from template files that are stored in the ```config``` directory. It will also compiles a compressed version of Saito from the ```modules.config.js``` that will be fed out to browsers which connect to the server and request the default Javascript.
 
 You can always reset your client by running the "nuke" command, but if you wish to change the applications supported on your server without resetting the blockchain, you can run the following instruction instead:
 
 ```npm run compile```
 
 
-## Advanced Usage of the `compile` Script
+### Advanced Usage of the `compile` Script
 
 The `compile` script supports additional logging options, which can be specified using the `--loglevel` or `-l` flags. This feature allows you to set the desired log level for the compilation process.
 
-## Usage:
+### Usage:
 
 To set a specific log level, use one of the following commands:
 
@@ -158,7 +158,7 @@ When this flag is used:
    debugging possible.
    
  * CSS files are linked (```@include()``` CSS source files, rather than 
-   being a concatentation of the source CSS). This makes CSS development
+   being a concatenation of the source CSS). This makes CSS development
    slightly easier.
    
 The result is that many more files are downloaded by the client, but in-browser debugging is much easier
