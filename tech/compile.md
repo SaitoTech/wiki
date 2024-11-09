@@ -2,7 +2,7 @@
 title: Compiling Standalone Applications
 description: This page convers how to turn your module into an installable Saito Application
 published: true
-date: 2024-11-09T02:42:19.437Z
+date: 2024-11-09T02:44:26.539Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-27T09:25:06.675Z
@@ -10,11 +10,11 @@ dateCreated: 2024-09-27T09:25:06.675Z
 
 # Compiling & Configuration
 
-This page demonstrates the various methods of compiling and distributing Saito applications, including compiling and serving directly from an *Application (serving) Full Node*, or compiling [standalone bundles](#distribution) which users can drag-and-drop install onto their clients.
+This page demonstrates the various methods of compiling and distributing Saito applications, including compiling and serving directly from an *Application (serving) Full Node*, or dynamically compiled [standalone bundles](#distribution) which users can drag-and-drop install onto their clients.
 
 [Advanced configuration](#aconf) options are described at the bottom of the page.
 
-Even if you plan to use dynamically compiled [standalone bundles](#distribution), it is useful to follow the application node compile steps below and run apps locally to test and debug.
+Even if you plan to use dynamically compiled [standalone bundles](#distribution), it is useful to follow the *Application Node Compile* steps below and run apps locally to quickly test and debug them.
 
 ## Application Node Compile
 
