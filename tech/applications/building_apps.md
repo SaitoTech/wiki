@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-11-09T04:20:16.379Z
+date: 2024-11-13T05:10:10.090Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -10,7 +10,7 @@ dateCreated: 2022-01-07T07:06:32.790Z
 
 # Building Saito Applications
 
-If you are interested in building Saito applications, we have a [tutorial series] for learning how to code apps. This page also contains instructions on how to install modules onto a server, and how to compile them into an form where users can install them on their wallet.
+If you are interested in building Saito applications, we have a [tutorial series](/tech/tutorials) for learning how to code apps. This page also contains instructions on how to install modules onto a server, and how to compile them into an form where users can install them on their wallet.
 
 <!-- ## Getting Started
 
