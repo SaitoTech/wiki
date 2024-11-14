@@ -2,7 +2,7 @@
 title: dcm install test
 description: 
 published: true
-date: 2024-11-14T02:46:16.461Z
+date: 2024-11-14T02:47:25.103Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-13T20:09:07.715Z
@@ -52,18 +52,8 @@ Table of contents template:
   <div class="toc-title">Contents</div>
   <ul>
     <li>1. <a href="app">App Store</a>
-      <ul>
-        <li>1.1 <a href="quickstart">Quick Start Guide</a></li>
-        <li>1.2 <a href="installation">Installation</a></li>
-        <li>1.3 <a href="requirements">System Requirements</a></li>
-      </ul>
     </li>
-    <li>2. <a href="concepts">Core Concepts</a>
-      <ul>
-        <li>2.1 <a href="concepts/basics">Basic Principles</a></li>
-        <li>2.2 <a href="concepts/architecture">Architecture</a></li>
-        <li>2.3 <a href="concepts/components">Key Components</a></li>
-      </ul>
+    <li>2. <a href="mods">Mods vs Apps</a>
     </li>
   </ul>
 </div>
@@ -91,7 +81,7 @@ Move all mods into a seperate Github Repo.
 
 <!--An app can be hosted which fethes and installs from such a link, or installs a user uploaded file for more advanced users wishing to install trustlessly i.e. have access to source code.-->
 
-## "Mod" vs "App" Language
+## <div id="mods">"Mod" vs "App" Language</div>
 
 ![apps-vs-mods.png](/apps-vs-mods.png)
 
