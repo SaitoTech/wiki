@@ -2,7 +2,7 @@
 title: dcm install test
 description: 
 published: true
-date: 2024-11-14T02:47:39.354Z
+date: 2024-11-14T02:48:04.794Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-13T20:09:07.715Z
@@ -10,54 +10,7 @@ dateCreated: 2024-11-13T20:09:07.715Z
 
 # Wiki Overhaul
 
-Table of contents template:
-<style>
-  .toc {
-    display: table;
-    border: 1px solid #a2a9b1;
-    background-color: #f8f9fa;
-    padding: 5px;
-    margin: 1em 0;
-    font-size: 95%;
-  }
 
-  .toc-title {
-    text-align: center;
-    font-weight: bold;
-    margin: 0.5em 1;
-  }
-
-  .toc ul {
-    list-style: none;
-    margin: 0.3em 0 0 1em;
-    padding: 0;
-    line-height: 1.4;
-  }
-
-  .toc li {
-    margin: 0.1em 0;
-  }
-
-  .toc a {
-    color: #0645ad;
-    text-decoration: none;
-  }
-
-  .toc a:hover {
-    text-decoration: underline;
-  }
-</style>
-
-<div class="toc">
-  <div class="toc-title">Contents</div>
-  <ul>
-    <li>1. <a href="app">App Store</a>
-    </li>
-    <li>2. <a href="mods">Mods vs Apps</a>
-    </li>
-    ...
-  </ul>
-</div>
 
 ## <div id="app">Psuedo App Store - Dynamically Compiled Module Install</div>
 
