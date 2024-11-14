@@ -2,7 +2,7 @@
 title: dcm install test
 description: 
 published: true
-date: 2024-11-14T02:51:22.924Z
+date: 2024-11-14T02:51:59.703Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-13T20:09:07.715Z
@@ -48,6 +48,6 @@ Saito Applications are Saito Modules that have a user interface.
 3. Tutorials
 4. Docs
 
-Then there can be just two pages under Development
+Then there can be just two pages under *Development* sidebar category 
 1. App Development
 2. Core Development
