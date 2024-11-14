@@ -2,7 +2,7 @@
 title: dcm install test
 description: 
 published: true
-date: 2024-11-14T02:51:59.703Z
+date: 2024-11-14T02:53:53.150Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-13T20:09:07.715Z
@@ -34,7 +34,6 @@ Move all mods into a seperate Github Repo.
 <!--An app can be hosted which fethes and installs from such a link, or installs a user uploaded file for more advanced users wishing to install trustlessly i.e. have access to source code.-->
 
 ## <div id="mods">"Mod" vs "App" Language</div>
-
 ![apps-vs-mods.png](/apps-vs-mods.png)
 
 Saito Applications are Saito Modules that have a user interface.
