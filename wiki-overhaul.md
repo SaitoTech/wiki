@@ -2,7 +2,7 @@
 title: dcm install test
 description: 
 published: true
-date: 2024-11-14T02:53:53.150Z
+date: 2024-11-14T06:54:18.533Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-13T20:09:07.715Z
@@ -42,9 +42,88 @@ Saito Applications are Saito Modules that have a user interface.
 
 "App Development" page that has links to everything an SLR dev needs in the order they will need them:
 
-1. Running an SLR Node
-2. Configuring
-3. Tutorials
+1. Running a Node
+		- /tech/install
+    		- Saito-Rust				/tech/install/rust
+        - Saito-Lite-Rust		/tech/install/lite
+
+ ( assumption : anyone coming here wants to download or install node software )
+ ( goal : get to the point Saito available on localhost:12101 )
+ 
+
+2. Build Applications
+
+		/tech/applications/
+    /tech/tutorials
+
+		- they need to 
+    		- how to run a node but specifically SLR
+        - configure the modules installed on the server
+        - compile and editing / recompile
+		- tutorials 
+    - link to APIs
+    		- by repo
+
+ ( assumption, anyone coming here wants to build apps )
+ ( goal : get to the point Saito available on localhost )
+
+
+3. Deploy Applications			/tech/applications/deploy
+		- you can deploy your applications in various ways
+    		- run a server that hosts them
+        - compile them into dynamic modules
+
+4. Documentation
+	- core development section here, highly technical, no-one should click unless they are willing to wade through DOCUMENTATION, so the content is less critical
+  
+  
+  
+  SUBPAGES;
+
+
+2. Configure (not main menu, but own part of tree)
+	( too ambiguous to have as main menu )
+  - how to edit modules.config.js
+  - other configuration files and what they do
+
+	- config options for the server
+			/tech/config <--- "what do you want to configure"
+			/tech/config/server <--- options.conf
+      /tech/config/network <--- options.conf
+      /tech/config/applications <---- config/modules.config.js
+      /tech/config/settings <---- unsure / this would be coding modules Settings
+      
+	/tech/configure or /tech/applications/config
+
+
+3. Compiling. (not main menu, but own part of tree)
+	/tech/compile <--- "what vdo you want to compile?"
+		- Saito Rust				/tech/compile/saito-rust
+    - Saito Wasm			/tech/compile/saito-rust
+    - Saito JS			/tech/compile/saito-rust
+    - Saito Lite Rust			/tech/compile/saito-rust
+    - Applications			/tech/compile/saito-rust
+    
+  4. Tutorials (main menu), but linked from Build Applications as well
+  	/tech/tutorials
+  
+  (assumption: users or ignorant devs who want a sense of hwo to do things)
+
+
+
+
+OTHER:
+
+/ applications page should link to doc that helps users "install" apps
+  
+
+
+
+
+
+
+
+3. AppStore 
 4. Docs
 
 Then there can be just two pages under *Development* sidebar category 
