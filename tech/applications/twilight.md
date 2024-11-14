@@ -2,7 +2,7 @@
 title: Twilight Struggle
 description: Twilight Struggle on Saito
 published: true
-date: 2024-11-14T18:53:55.919Z
+date: 2024-11-14T18:54:17.234Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-22T11:12:21.027Z
@@ -13,7 +13,7 @@ dateCreated: 2024-08-22T11:12:21.027Z
 *"Now the trumpet summons us again, not as a call to bear arms –– but a call to bear the burden of a long twilight struggle..."* - John F. Kennedy
 
 Twilight Struggle soared into popular lists of the best boardgames ever released within a few years of its publication in 2012, and continues to be recognized as one of the most compelling two-player boardgames ever released, with near infinite replayability and strategic challenge. If you are new to the game, you will find Twilight Struggle an incredibly rewarding experience that justifies the minimal investment in time needed to learn the rules.
-
+<br>
 <img src="/ts.png" style="max-width: 600px;">
 
 The game itself is a strategic simulation of the Cold War in which one player assumes the role of the USSR and the other attempts to contain them as the US. The game takes place over 10 rounds in which the critical events of the Cold War may or may not be played depending on which cards and dealt and played to which player. Will Castro take Cuba? And will the powers fall into or manage nuclear brinkmanship? Every game is different.
