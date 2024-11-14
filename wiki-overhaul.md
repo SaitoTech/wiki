@@ -2,7 +2,7 @@
 title: dcm install test
 description: 
 published: true
-date: 2024-11-14T02:48:46.208Z
+date: 2024-11-14T02:51:22.924Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-13T20:09:07.715Z
@@ -27,7 +27,7 @@ It would be nice if they were just hosted on Github and updated there - Wiki wou
 Move all mods into a seperate Github Repo.
 
 * This is how third-praty mods will be hosted already
-* Serves as a page for the app which is better suited than a Wiki page
+* Serves as a page for the app which is better suited than a Wiki page - [example](https://github.com/notable/notable)
 * That page is updated with the app
 * Wiki can link to those repos
 
