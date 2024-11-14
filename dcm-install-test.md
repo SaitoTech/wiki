@@ -2,7 +2,7 @@
 title: dcm install test
 description: 
 published: true
-date: 2024-11-14T00:50:00.286Z
+date: 2024-11-14T00:51:21.041Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-13T20:09:07.715Z
@@ -34,9 +34,13 @@ Saito Applications are Saito Modules that have a user interface.
 
 ## SLR Developer Structure
 
-"App Development" page that has links to everything a dev needs:
+"App Development" page that has links to everything an SLR dev needs:
 
 1. Running an SLR Node
 2. Configuring
 3. Tutorials
 4. Docs
+
+Then there can be just two pages under Development
+1. App Development
+2. Core Development
