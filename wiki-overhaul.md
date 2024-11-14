@@ -2,7 +2,7 @@
 title: dcm install test
 description: 
 published: true
-date: 2024-11-14T02:44:15.393Z
+date: 2024-11-14T02:46:16.461Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-13T20:09:07.715Z
@@ -24,7 +24,7 @@ Table of contents template:
   .toc-title {
     text-align: center;
     font-weight: bold;
-    margin: 0.5em 0;
+    margin: 0.5em 1;
   }
 
   .toc ul {
@@ -51,7 +51,7 @@ Table of contents template:
 <div class="toc">
   <div class="toc-title">Contents</div>
   <ul>
-    <li>1. <a href="introduction">Getting Started</a>
+    <li>1. <a href="app">App Store</a>
       <ul>
         <li>1.1 <a href="quickstart">Quick Start Guide</a></li>
         <li>1.2 <a href="installation">Installation</a></li>
@@ -68,7 +68,7 @@ Table of contents template:
   </ul>
 </div>
 
-## Psuedo App Store - Dynamically Compiled Module Install
+## <div id="app">Psuedo App Store - Dynamically Compiled Module Install</div>
 
 DCM applications should be installable form the wiki.
 
