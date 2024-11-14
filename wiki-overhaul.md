@@ -2,7 +2,7 @@
 title: dcm install test
 description: 
 published: true
-date: 2024-11-14T02:47:25.103Z
+date: 2024-11-14T02:47:39.354Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-13T20:09:07.715Z
@@ -55,6 +55,7 @@ Table of contents template:
     </li>
     <li>2. <a href="mods">Mods vs Apps</a>
     </li>
+    ...
   </ul>
 </div>
 
