@@ -2,7 +2,7 @@
 title: dcm install test
 description: 
 published: true
-date: 2024-11-14T02:48:04.794Z
+date: 2024-11-14T02:48:46.208Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-13T20:09:07.715Z
@@ -16,10 +16,8 @@ dateCreated: 2024-11-13T20:09:07.715Z
 
 DCM applications should be installable form the wiki.
 
-1. Is it possible to host the files on the Wiki? Yes.
+1. Is it possible to host the files on the Wiki? [yes](/tutorial01.saito)
 2. Can any install steps be automated?
-
-Here is a DCM file hosted on the wiki: [tutorial01.saito](/tutorial01.saito)
 
 **Problem:** Updating these app files is a pain.
 
