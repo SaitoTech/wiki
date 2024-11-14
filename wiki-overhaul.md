@@ -2,7 +2,7 @@
 title: dcm install test
 description: 
 published: true
-date: 2024-11-14T02:41:28.847Z
+date: 2024-11-14T02:42:54.185Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-13T20:09:07.715Z
@@ -13,97 +13,56 @@ dateCreated: 2024-11-13T20:09:07.715Z
 Table of contents template:
 <style>
   .wiki-toc {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 20px;
+    line-height: 1.6;
   }
 
   .wiki-toc h1 {
-    color: #2d3748;
-    border-bottom: 2px solid #e2e8f0;
+    border-bottom: 2px solid #ddd;
     padding-bottom: 10px;
     margin-bottom: 20px;
   }
 
   .section {
-    margin-bottom: 20px;
+    margin: 15px 0;
   }
 
-  .section input[type="checkbox"] {
-    display: none;
-  }
-
-  .section-header {
-    background-color: #f7fafc;
-    border-left: 4px solid #4299e1;
-    padding: 10px 15px;
-    margin: 10px 0;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.2s;
-  }
-
-  .section-header:hover {
-    background-color: #edf2f7;
-  }
-
-  .section-header::after {
-    content: '+';
+  .section-title {
     font-size: 1.2em;
     font-weight: bold;
-  }
-
-  .section input[type="checkbox"]:checked ~ .section-header::after {
-    content: '−';
+    margin: 15px 0 10px 0;
+    color: #2c3e50;
   }
 
   .section-content {
-    padding-left: 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-  }
-
-  .section input[type="checkbox"]:checked ~ .section-content {
-    max-height: 500px; /* Adjust based on content */
+    margin-left: 20px;
   }
 
   .section-content ul {
-    list-style: none;
+    margin: 5px 0;
     padding-left: 20px;
-    margin: 10px 0;
   }
 
   .section-content li {
-    margin: 8px 0;
+    margin: 5px 0;
   }
 
   .section-content a {
-    color: #4a5568;
+    color: #3498db;
     text-decoration: none;
-    transition: color 0.2s;
   }
 
   .section-content a:hover {
-    color: #2b6cb0;
-  }
-
-  .emoji {
-    margin-right: 8px;
+    text-decoration: underline;
   }
 </style>
 
 <div class="wiki-toc">
-  <h1>📚 Table of Contents</h1>
+  <h1>📚 Documentation</h1>
   
   <div class="section">
-    <input type="checkbox" id="getting-started">
-    <label class="section-header" for="getting-started">
-      <span><span class="emoji">🚀</span> Getting Started</span>
-    </label>
+    <div class="section-title">🚀 Getting Started</div>
     <div class="section-content">
       <ul>
         <li><a href="introduction">Introduction</a></li>
@@ -119,10 +78,7 @@ Table of contents template:
   </div>
 
   <div class="section">
-    <input type="checkbox" id="core-concepts">
-    <label class="section-header" for="core-concepts">
-      <span><span class="emoji">📖</span> Core Concepts</span>
-    </label>
+    <div class="section-title">📖 Core Concepts</div>
     <div class="section-content">
       <ul>
         <li><a href="concepts/basics">Basic Principles</a></li>
@@ -138,10 +94,7 @@ Table of contents template:
   </div>
 
   <div class="section">
-    <input type="checkbox" id="advanced">
-    <label class="section-header" for="advanced">
-      <span><span class="emoji">⚙️</span> Advanced Topics</span>
-    </label>
+    <div class="section-title">⚙️ Advanced Topics</div>
     <div class="section-content">
       <ul>
         <li><a href="advanced/config">Advanced Configuration</a></li>
@@ -156,10 +109,7 @@ Table of contents template:
   </div>
 
   <div class="section">
-    <input type="checkbox" id="api">
-    <label class="section-header" for="api">
-      <span><span class="emoji">🔌</span> API Reference</span>
-    </label>
+    <div class="section-title">🔌 API Reference</div>
     <div class="section-content">
       <ul>
         <li><a href="api/overview">API Overview</a></li>
@@ -170,10 +120,7 @@ Table of contents template:
   </div>
 
   <div class="section">
-    <input type="checkbox" id="troubleshooting">
-    <label class="section-header" for="troubleshooting">
-      <span><span class="emoji">🔍</span> Troubleshooting</span>
-    </label>
+    <div class="section-title">🔍 Troubleshooting</div>
     <div class="section-content">
       <ul>
         <li><a href="troubleshooting/common-issues">Common Issues</a></li>
