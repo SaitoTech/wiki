@@ -2,7 +2,7 @@
 title: dcm install test
 description: 
 published: true
-date: 2024-11-14T02:42:54.185Z
+date: 2024-11-14T02:44:15.393Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-13T20:09:07.715Z
@@ -12,123 +12,60 @@ dateCreated: 2024-11-13T20:09:07.715Z
 
 Table of contents template:
 <style>
-  .wiki-toc {
-    max-width: 800px;
-    margin: 20px;
-    line-height: 1.6;
+  .toc {
+    display: table;
+    border: 1px solid #a2a9b1;
+    background-color: #f8f9fa;
+    padding: 5px;
+    margin: 1em 0;
+    font-size: 95%;
   }
 
-  .wiki-toc h1 {
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-  }
-
-  .section {
-    margin: 15px 0;
-  }
-
-  .section-title {
-    font-size: 1.2em;
+  .toc-title {
+    text-align: center;
     font-weight: bold;
-    margin: 15px 0 10px 0;
-    color: #2c3e50;
+    margin: 0.5em 0;
   }
 
-  .section-content {
-    margin-left: 20px;
+  .toc ul {
+    list-style: none;
+    margin: 0.3em 0 0 1em;
+    padding: 0;
+    line-height: 1.4;
   }
 
-  .section-content ul {
-    margin: 5px 0;
-    padding-left: 20px;
+  .toc li {
+    margin: 0.1em 0;
   }
 
-  .section-content li {
-    margin: 5px 0;
-  }
-
-  .section-content a {
-    color: #3498db;
+  .toc a {
+    color: #0645ad;
     text-decoration: none;
   }
 
-  .section-content a:hover {
+  .toc a:hover {
     text-decoration: underline;
   }
 </style>
 
-<div class="wiki-toc">
-  <h1>📚 Documentation</h1>
-  
-  <div class="section">
-    <div class="section-title">🚀 Getting Started</div>
-    <div class="section-content">
+<div class="toc">
+  <div class="toc-title">Contents</div>
+  <ul>
+    <li>1. <a href="introduction">Getting Started</a>
       <ul>
-        <li><a href="introduction">Introduction</a></li>
-        <li><a href="quickstart">Quick Start Guide</a></li>
-        <li><a href="installation">Installation</a>
-          <ul>
-            <li><a href="installation#requirements">System Requirements</a></li>
-            <li><a href="installation#setup">Setup Instructions</a></li>
-          </ul>
-        </li>
+        <li>1.1 <a href="quickstart">Quick Start Guide</a></li>
+        <li>1.2 <a href="installation">Installation</a></li>
+        <li>1.3 <a href="requirements">System Requirements</a></li>
       </ul>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">📖 Core Concepts</div>
-    <div class="section-content">
+    </li>
+    <li>2. <a href="concepts">Core Concepts</a>
       <ul>
-        <li><a href="concepts/basics">Basic Principles</a></li>
-        <li><a href="concepts/architecture">Architecture</a></li>
-        <li><a href="concepts/components">Key Components</a>
-          <ul>
-            <li><a href="concepts/components#component-a">Component A</a></li>
-            <li><a href="concepts/components#component-b">Component B</a></li>
-          </ul>
-        </li>
+        <li>2.1 <a href="concepts/basics">Basic Principles</a></li>
+        <li>2.2 <a href="concepts/architecture">Architecture</a></li>
+        <li>2.3 <a href="concepts/components">Key Components</a></li>
       </ul>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">⚙️ Advanced Topics</div>
-    <div class="section-content">
-      <ul>
-        <li><a href="advanced/config">Advanced Configuration</a></li>
-        <li><a href="advanced/security">Security</a>
-          <ul>
-            <li><a href="advanced/security#auth">Authentication</a></li>
-            <li><a href="advanced/security#best-practices">Best Practices</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">🔌 API Reference</div>
-    <div class="section-content">
-      <ul>
-        <li><a href="api/overview">API Overview</a></li>
-        <li><a href="api/endpoints">Endpoints</a></li>
-        <li><a href="api/auth">Authentication</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">🔍 Troubleshooting</div>
-    <div class="section-content">
-      <ul>
-        <li><a href="troubleshooting/common-issues">Common Issues</a></li>
-        <li><a href="troubleshooting/faq">FAQs</a></li>
-        <li><a href="troubleshooting/support">Support</a></li>
-      </ul>
-    </div>
-  </div>
+    </li>
+  </ul>
 </div>
 
 ## Psuedo App Store - Dynamically Compiled Module Install
