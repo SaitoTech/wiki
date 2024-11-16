@@ -2,7 +2,7 @@
 title: Linux Installation
 description: Linux SLR Installation Instructions
 published: true
-date: 2024-10-31T23:41:52.232Z
+date: 2024-11-16T21:54:14.873Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -10,7 +10,7 @@ dateCreated: 2022-01-18T09:49:16.786Z
 
 # Linux Installation
 
-The instructions below are for developers building on Linux. We have separate installation instructions for [Mac users](https://wiki.saito.io/tech/installation/mac) and [Windows users](https://wiki.saito.io/en/tech/installation/windows).
+The instructions below are for developers building on Linux. We have separate installation instructions for [Mac users](./mac) and [Windows users](./windows).
 
 
 ### 1) Install Dependencies (Ubuntu 22.04 (LTS) x64)
