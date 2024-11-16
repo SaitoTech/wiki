@@ -2,7 +2,7 @@
 title: Linux Installation
 description: Linux SLR Installation Instructions
 published: true
-date: 2024-11-16T21:54:14.873Z
+date: 2024-11-16T21:54:36.147Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -82,6 +82,6 @@ Any changes can be compiled with `npm run nuke`. The final compiled file will re
 
 ### Compilation and Configuration
 
-- Visit the page [compiling and configuring](https://wiki.saito.io/tech/compile) for more information on setting up your SLR Node.
+- Visit the page [compiling and configuring](/tech/compile) for more information on setting up your SLR Node.
 
 
