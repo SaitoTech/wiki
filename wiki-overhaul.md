@@ -2,7 +2,7 @@
 title: dcm install test
 description: 
 published: true
-date: 2024-11-14T06:54:18.533Z
+date: 2024-11-16T22:09:19.734Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-13T20:09:07.715Z
@@ -42,19 +42,18 @@ Saito Applications are Saito Modules that have a user interface.
 
 "App Development" page that has links to everything an SLR dev needs in the order they will need them:
 
-1. Running a Node
-		- /tech/install
-    		- Saito-Rust				/tech/install/rust
-        - Saito-Lite-Rust		/tech/install/lite
+1. Running a Node:
+		- [/tech/install](/tech/install)
+    		- Saito-Rust				[/tech/install/rust](/tech/install/rust)
+        - Saito-Lite-Rust		[/tech/install/javascript](/tech/install/javascript)
 
  ( assumption : anyone coming here wants to download or install node software )
  ( goal : get to the point Saito available on localhost:12101 )
  
 
-2. Build Applications
-
-		/tech/applications/
-    /tech/tutorials
+2. Build Applications:
+	  [/tech/applications/](/tech/applications/)
+    [/tech/tutorials](/tech/tutorials)
 
 		- they need to 
     		- how to run a node but specifically SLR
@@ -68,10 +67,13 @@ Saito Applications are Saito Modules that have a user interface.
  ( goal : get to the point Saito available on localhost )
 
 
-3. Deploy Applications			/tech/applications/deploy
+3. Deploy Applications			[/tech/applications/deploy](/tech/applications/deploy)
 		- you can deploy your applications in various ways
     		- run a server that hosts them
         - compile them into dynamic modules
+        
+(this is the only existing **deploy** page currently https://wiki.saito.io/en/tech/javascript/deployment) 
+(this has info on **DCM 'deployment'** and more https://wiki.saito.io/en/tech/compile)
 
 4. Documentation
 	- core development section here, highly technical, no-one should click unless they are willing to wade through DOCUMENTATION, so the content is less critical
