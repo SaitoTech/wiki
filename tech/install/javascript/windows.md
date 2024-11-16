@@ -2,7 +2,7 @@
 title: Windows Installation
 description: 
 published: true
-date: 2024-11-16T21:57:32.195Z
+date: 2024-11-16T22:00:20.326Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-30T09:53:07.391Z
@@ -47,4 +47,6 @@ Once you have run `npm run dev` above it will take a few moments for the Saito s
 
 https://localhost:12101/arcade
 
-This will load the Saito Arcade - one of our default applications. If everything goes as plans, you now have a working version of Saito for use in local testing or development. Why not get take your next steps by checking out [our very first tutorial](https://wiki.saito.io/en/tech/tutorials/tutorial-1) which demonstrates how to build a simple application that attaches data to transactions and broadcasts them into the network.
+This will load the Saito Arcade - one of our default applications. If everything goes as plans, you now have a working version of Saito for use in local testing or development.
+
+[Tutorial 1](https://wiki.saito.io/en/tech/tutorials/01) demonstrates how to build a simple application that connects to the network and renders content.
