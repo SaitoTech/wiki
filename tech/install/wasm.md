@@ -2,7 +2,7 @@
 title: Saito WASM - Installation Instructions
 description: 
 published: true
-date: 2024-10-16T01:14:42.252Z
+date: 2024-11-16T21:51:19.822Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:35:18.101Z
@@ -20,7 +20,7 @@ Saito WASM is a version of the Rust core compiled into a portable library that c
 
 There are two steps to getting the Saito WASM library. The library must first be ```compiled``` from the Rust codebase. The compiled library must then be ```linked``` to the Saito Javascript codebase so that your local copy is used instead of the pre-compiled version hosted on NPM.
 
-The following instructions work for most Linux environments. **If you are using a Mac** you will need [these instructions](/tech/linking_installations_mac) on compiling and linking the WASM library under MacOS instead.
+The following instructions work for most Linux environments. **If you are using a Mac** you will need [these instructions](./wasm/linking_installations_mac) on compiling and linking the WASM library under MacOS instead.
 
 ```
 sudo apt-get update && sudo apt install build-essential pkg-config libssl-dev
