@@ -2,7 +2,7 @@
 title: Saito-Rust Bootstrap Script
 description: 
 published: true
-date: 2024-03-08T08:30:45.432Z
+date: 2024-11-16T21:48:12.790Z
 tags: 
 editor: markdown
 dateCreated: 2024-03-06T10:09:36.384Z
@@ -25,7 +25,7 @@ The script performs the following main tasks:
 
 
 ###  Configuring the Node
- Automatically configures the node. For manual node configuration instructions, please see [saito-rust-config](/tech/installation/saito-rust-config)
+ Automatically configures the node. For manual node configuration instructions, please see [saito-rust-config](/tech/install/rust/saito-rust-config)
 
 ### Issuance File Setup
 
