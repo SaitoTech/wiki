@@ -2,7 +2,7 @@
 title: Windows Installation
 description: 
 published: true
-date: 2024-10-31T23:10:01.265Z
+date: 2024-11-16T21:57:32.195Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-30T09:53:07.391Z
@@ -10,7 +10,7 @@ dateCreated: 2022-05-30T09:53:07.391Z
 
 # Windows Installation
 
-Windows is not currently the most supported platform to run an SLR node on. Windows users should consider [installing WSL](https://learn.microsoft.com/en-us/windows/wsl/install) if they would like to run Saito on Windows.
+This page contains instructions on how to download and install the NodeJS javascript client on Windows. For instructions about installation on Ubuntu Click [here](./linux). We have a Rust client under development with its own [Installation Instructions](../rust).
 
 #### Requires:
 
