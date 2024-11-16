@@ -2,15 +2,15 @@
 title: Mac Installation Instructions
 description: Installation Instructions -  Mac
 published: true
-date: 2022-07-08T01:06:09.634Z
+date: 2024-11-16T21:57:26.340Z
 tags: mac saito installation
 editor: markdown
 dateCreated: 2022-03-28T07:51:17.517Z
 ---
 
 # Mac Installation Instructions
-This page contains instructions on how to download and install the NodeJS javascript client on MacOs. For instructions about installation on Ubuntu <a href="https://wiki.saito.io/en/tech/installationt"> Click here</a>. We have a Rust client under development with its own <a href="https://wiki.saito.io/en/tech/installation-rust"> Installation Instructions</a>
 
+This page contains instructions on how to download and install the NodeJS javascript client on Windows. For instructions about installation on Ubuntu Click [here](./linux). We have a Rust client under development with its own [Installation Instructions](../rust).
 
 ## Requirements:
 
