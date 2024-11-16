@@ -2,7 +2,7 @@
 title: Mac Installation Instructions
 description: Installation Instructions -  Mac
 published: true
-date: 2024-11-16T21:57:26.340Z
+date: 2024-11-16T21:59:48.769Z
 tags: mac saito installation
 editor: markdown
 dateCreated: 2022-03-28T07:51:17.517Z
@@ -66,7 +66,7 @@ https://localhost:12101/arcade
 
 This will load the Saito Arcade - one of our default applications. If everything goes as plans, you now have a working version of Saito for use in local testing or development.
 
-(https://wiki.saito.io/en/tech/tutorials/tutorial-1) which demonstrates how to build a simple application that attaches data to transactions and broadcasts them into the network.
+[Tutorial 1](https://wiki.saito.io/en/tech/tutorials/01) demonstrates how to build a simple application that connects to the network and renders content.
 
 
 
