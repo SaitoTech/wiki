@@ -2,7 +2,7 @@
 title: Saito Javascript - Installation Instructions
 description: 
 published: true
-date: 2024-11-01T00:11:50.654Z
+date: 2024-11-16T21:40:16.833Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:41:59.352Z
@@ -14,7 +14,7 @@ dateCreated: 2023-10-13T08:41:59.352Z
 
 ## Installation Instructions
 
-Specific instructions for installing the necessary tools are available for [Linux](/tech/installation/javascript/linux), [Mac](/tech/installation/javascript/mac) and [Windows](/tech/installation/javascript/windows).
+Specific instructions for installing the necessary tools are available for [Linux](./javascript/linux), [Mac](/tech/installation/javascript/mac) and [Windows](/tech/installation/javascript/windows).
 
 ### Requirements:
 - Machine with at least 2GB RAM.
