@@ -2,7 +2,7 @@
 title: dcm install test
 description: 
 published: true
-date: 2024-11-16T22:09:19.734Z
+date: 2024-11-17T05:11:34.352Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-13T20:09:07.715Z
@@ -82,6 +82,7 @@ Saito Applications are Saito Modules that have a user interface.
   
   SUBPAGES;
 
+- Current page housing **config information**: https://wiki.saito.io/en/tech/compile
 
 2. Configure (not main menu, but own part of tree)
 	( too ambiguous to have as main menu )
@@ -99,7 +100,7 @@ Saito Applications are Saito Modules that have a user interface.
 
 
 3. Compiling. (not main menu, but own part of tree)
-	/tech/compile <--- "what vdo you want to compile?"
+	/tech/compile <--- "what do you want to compile?"
 		- Saito Rust				/tech/compile/saito-rust
     - Saito Wasm			/tech/compile/saito-rust
     - Saito JS			/tech/compile/saito-rust
