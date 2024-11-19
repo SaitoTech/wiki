@@ -2,7 +2,7 @@
 title: dcm install test
 description: 
 published: true
-date: 2024-11-19T07:04:43.452Z
+date: 2024-11-19T07:06:41.112Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-13T20:09:07.715Z
@@ -25,25 +25,25 @@ dateCreated: 2024-11-13T20:09:07.715Z
 
 ## SLR Developer Structure
 
- - /tech/install
- - /tech/install/rust
- - /tech/install/javascript
  - /tech/applications
+ - /tech/applications/deploy
  - /tech/tutorials/
  - /tech/tutorials/01 etc.
  - /tech/tutorials/02 etc.
- - /tech/applications
- - /tech/applications/deploy
- - /tech/config <--- "what do you want to configure"
- - /tech/config/server <--- configure config/options.conf
- - /tech/config/network <--- configure config/options.conf
- - /tech/config/applications <---- configure config/modules.config.js
- - /tech/config/settings <---- configure UI / wallet / apps
+ - /tech/install
+ - /tech/install/rust
+ - /tech/install/javascript
  - /tech/compile <--- "what do you want to compile?"
  - /tech/compile/saito-rust
  - /tech/compile/saito-lite-rust
  - /tech/compile/saito-wasm
  - /tech/compile/saito-js
+ - /tech/compile/applications
+ - /tech/config <--- "what do you want to configure"
+ - /tech/config/server <--- configure config/options.conf
+ - /tech/config/network <--- configure config/options.conf
+ - /tech/config/applications <---- configure config/modules.config.js
+ - /tech/config/settings <---- configure UI / wallet / apps
  
 
 1. Running a Node:
