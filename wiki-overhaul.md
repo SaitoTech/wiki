@@ -2,7 +2,7 @@
 title: dcm install test
 description: 
 published: true
-date: 2024-11-17T05:11:34.352Z
+date: 2024-11-19T07:04:43.452Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-13T20:09:07.715Z
@@ -10,45 +10,50 @@ dateCreated: 2024-11-13T20:09:07.715Z
 
 # Wiki Overhaul
 
+## Applications
 
-
-## <div id="app">Psuedo App Store - Dynamically Compiled Module Install</div>
-
-DCM applications should be installable form the wiki.
-
-1. Is it possible to host the files on the Wiki? [yes](/tutorial01.saito)
-2. Can any install steps be automated?
-
-**Problem:** Updating these app files is a pain.
-
-It would be nice if they were just hosted on Github and updated there - Wiki would provide a link to that folder in the repo.
-
-**Idea**:
-Move all mods into a seperate Github Repo.
-
-* This is how third-praty mods will be hosted already
-* Serves as a page for the app which is better suited than a Wiki page - [example](https://github.com/notable/notable)
-* That page is updated with the app
-* Wiki can link to those repos
-
-<!--An app can be hosted which fethes and installs from such a link, or installs a user uploaded file for more advanced users wishing to install trustlessly i.e. have access to source code.-->
+ - either we include the DCM modules in the WIKI (folders follow convention)
+ - or applications can link to Github, and modules get /bin directory for DCM txs
 
 ## <div id="mods">"Mod" vs "App" Language</div>
 ![apps-vs-mods.png](/apps-vs-mods.png)
 
-Saito Applications are Saito Modules that have a user interface.
+ - always use "application"
+ - i.e. applications are listed in the "modules" directory /mods
+ - i.e. applications are listed in the "modules" directory /mods
+ 
 
 ## SLR Developer Structure
 
-"App Development" page that has links to everything an SLR dev needs in the order they will need them:
+ - /tech/install
+ - /tech/install/rust
+ - /tech/install/javascript
+ - /tech/applications
+ - /tech/tutorials/
+ - /tech/tutorials/01 etc.
+ - /tech/tutorials/02 etc.
+ - /tech/applications
+ - /tech/applications/deploy
+ - /tech/config <--- "what do you want to configure"
+ - /tech/config/server <--- configure config/options.conf
+ - /tech/config/network <--- configure config/options.conf
+ - /tech/config/applications <---- configure config/modules.config.js
+ - /tech/config/settings <---- configure UI / wallet / apps
+ - /tech/compile <--- "what do you want to compile?"
+ - /tech/compile/saito-rust
+ - /tech/compile/saito-lite-rust
+ - /tech/compile/saito-wasm
+ - /tech/compile/saito-js
+ 
 
 1. Running a Node:
+
 		- [/tech/install](/tech/install)
     		- Saito-Rust				[/tech/install/rust](/tech/install/rust)
         - Saito-Lite-Rust		[/tech/install/javascript](/tech/install/javascript)
 
- ( assumption : anyone coming here wants to download or install node software )
- ( goal : get to the point Saito available on localhost:12101 )
+	 ( assumption : anyone coming here wants to download or install node software )
+ 	 ( goal : get to the point Saito available on localhost:12101 )
  
 
 2. Build Applications:
