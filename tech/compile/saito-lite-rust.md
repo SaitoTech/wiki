@@ -2,7 +2,7 @@
 title: Compile Saito-lite-Rust Apps
 description: Instructions for compiling Saito applications
 published: true
-date: 2024-11-20T03:53:25.597Z
+date: 2024-11-20T05:37:10.926Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T03:22:04.713Z
@@ -45,7 +45,7 @@ If this is not your first time compiling the software you can run `npm run compi
 npm start
 ```
 
-## Advanced Configuration
+## Compilation
 
 Running ```npm run nuke``` will create fresh versions of these configuration files from template files that are stored in the ```config``` directory. It will also compiles a compressed version of Saito from the ```modules.config.js``` that will be fed out to browsers which connect to the server and request the default Javascript.
 
