@@ -2,7 +2,7 @@
 title: Compile Saito-lite-Rust Apps
 description: Instructions for compiling Saito applications
 published: true
-date: 2024-11-20T05:37:10.926Z
+date: 2024-11-20T23:21:39.208Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T03:22:04.713Z
@@ -12,9 +12,9 @@ dateCreated: 2024-11-20T03:22:04.713Z
 
 When building applications with the [Saito-Lite-Rust](https://wiki.saito.io/en/tech/javascript) software, Javascript must first be compiled before it can ran on a *core-client* or served to *lite-clients* (like browsers).  The *core-client* is a full node and more specifically, an [*application node*](https://github.com/SaitoTech/saito-lite-rust). The [Saito-lite-Rust]() core-client is responsible for compiling and serving compiled applications to lite-clients such as the [apps](/tech/applications) on [Saito.io](Saito.io).
 
-## Config File
+## Compile List
 
-Application won't be compiled until the compile configuration file at `config/modules.config.js` lists it in the *core* or *lite* sections. The `core` section lists the modules that will run on your full node server. The `lite` section lists the modules that your server will compile and serve by default for any lite-clients that connect to it.
+Application won't be compiled until the compile configuration file at `config/modules.config.js` lists it in the *core* or *lite* sections. The `core` section lists the modules that will run on your full node server. The `lite` section lists the modules that your server will compile and serve by default for any lite-clients that connect to it (these apps can run without any central server once launched).
 
 - See the dedicated page for complete information on [module configuration](/tech/config/applications).
 
@@ -32,20 +32,64 @@ lite: [
     'myApp/myApp.js',
 ...
 ```
+The JavaScript bundle can created with either of the following commands:
 
-Then navigate to `/saito-lite-rust` and compile the Javascript bundle:
+Navigate to `/saito-lite-rust`.
+
+First-time compilation or a chain and databse reset (sometimes useful for debugging) can be achieved with:
 
 ```
 npm run nuke
 ```
 
-If this is not your first time compiling the software you can run `npm run compile` instead. Once compilation finishes, start Saito by running:
-
+To preserve data and just recompile the new JavaScript:
+```
+npm run compile
+``` 
+Once compilation finishes, start Saito by running:
 ```
 npm start
 ```
 
 ## Compilation
+
+As touched on above, Saito-lite-Rust compilation takes two primary forms:
+
+1. `npm run nuke` which clears out persistent data.
+2. `npm run compile` command which preserves all data except previously compiled JS.
+
+The compilation commands have their procedures explicitly defined in `scripts/install.js` - what follows is a summary.
+
+### Nuke
+
+Running `npm run nuke` will remove and reset the `/data` directory, which includes application databases, block and transaction data, bundler data and more. The full extent of the reset is defined in the following functions contained in `scripts/install.js`:
+```js
+reset_nonpersistent();
+reset_persistent();
+reset_bundler();
+```
+
+
+
+#### Configuration Files
+
+The following JS code pertaining to the `config/` folder is executed on `npm run nuke`.
+```js
+	if (!fs.existsSync('../config/modules.config.js')) {
+		copyDir('../config/modules.default.js', '../config/modules.config.js');
+	}
+
+	if (fs.existsSync('../config/options.conf')) {
+		copyDir('../config/options.conf', '../config/options');
+	}
+```
+
+
+ The [networking configuration](/tech/config/network) file `./config/options` is replaced with `./config/options.conf`, if the latter (`.conf` version) exists.
+
+If a `./config/modules.config.js` file does not exist, the *nuke* command will create one from the given default: `./config/modules.default.js`.
+
+<hr><hr>
 
 Running ```npm run nuke``` will create fresh versions of these configuration files from template files that are stored in the ```config``` directory. It will also compiles a compressed version of Saito from the ```modules.config.js``` that will be fed out to browsers which connect to the server and request the default Javascript.
 
