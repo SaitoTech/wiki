@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2024-11-16T21:52:27.531Z
+date: 2024-11-20T20:20:29.279Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
@@ -52,6 +52,7 @@ npm i -g wasm-pack
 ```
 CC=/opt/homebrew/opt/llvm/bin/clang AR=/opt/homebrew/opt/llvm/bin/llvm-ar wasm-pack build --target web --out-dir wasm_build/deps/pkg/
 ```
+If you run into a problem at this step, you may need to restart your computer so that clang can find cargo is listed on your PATH properly.
 
 #### 6. install
 ```
