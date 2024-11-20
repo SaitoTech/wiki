@@ -2,7 +2,7 @@
 title: Saito Tutorials
 description: How to Build Applications on Saito
 published: true
-date: 2024-11-20T03:05:45.705Z
+date: 2024-11-20T03:06:56.751Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-28T09:43:23.468Z
@@ -21,7 +21,7 @@ This tutorial series is designed to get you developing Saito applications quickl
 | #3          | [Receiving On-Chain Transactions](/tech/tutorials/03) | This module will listen on the blockchain for the transactions it sends and update the UI whenever they are confirmed. |
 | #4          | [Chat Monitor](/tech/tutorials/04) | A chatbot that listens for chat messages received on-chain, off-chain or through server relays, and responds accordingly. |
 | #5          | [Adding Menu Items](/tech/tutorials/05) | Inserts a link into several of the menu templates available for desktop and mobile. Shows the basics of inter-module communication. |
-| #6          | [Modifying CSS and Adding Overlays](/tech/tutorials/06) | Modify CSS entries webpages of existing applications. |
+| #6          | [Modifying CSS and Adding Overlays](/tech/tutorials/06) | Modify CSS (styling) and add overlays for any existing application. |
 | #7          | [Keyword-Filtering + Storage](/tech/tutorials/07) | Add user-defined keyword filtering rules to determine whether transactions should be permitted past content filters, and save/load those rules to persistent storage.  |
 | #8          | Advertising Module |  |
 | #9          | Drag-and-Drop and DOM Manipulation | This tutorial covers some very useful techniques for creating an manipulating the HTML used by applications to build and show UI elements. The shortcuts in this tutorial have saved us significant time. |
