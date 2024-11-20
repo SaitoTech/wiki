@@ -2,7 +2,7 @@
 title: Compiling Standalone Applications
 description: This page convers how to turn your module into an installable Saito Application
 published: true
-date: 2024-11-20T03:55:40.703Z
+date: 2024-11-20T03:56:50.856Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-27T09:25:06.675Z
@@ -11,8 +11,6 @@ dateCreated: 2024-09-27T09:25:06.675Z
 # Compiling Saito-lite-Rust Apps
 
 This page demonstrates the various methods of compiling and distributing Saito applications, including [compiling and serving directly](#appnode) from an *Application (serving) Full Node*, or dynamically compiled [standalone bundles](#distribution) which users can drag-and-drop install onto their clients.
-
-[Advanced configuration](#aconf) options are described at the bottom of the page.
 
 Even if you plan to use dynamically compiled standalone bundles, it is useful to follow the *Application Node Compile* steps below and run apps locally to quickly test and debug them.
 
@@ -91,10 +89,12 @@ A popup will appear to confirm installation. Confirm that you want to install th
 Your browser will unpack the application, save it in your wallet and refresh. Once your browser reloads it will load the application you have just installed along with all other modules. You can now toggle it on-or-off like any other module.
 
 
-## <div id="aconf">Advanced Configuration</div>
+
+```npm run compile```
 
 <!--
-Once you have installed Saito-Lite-Rust you will be ready to configure the server to run the applications you wish to support and provide them to browsers on-demand. This section covers these follow-on configuration steps. -->
+
+## <div id="aconf">Advanced Configuration</div>
 
 Saito uses two main configuration files. The first is ```config/options``` which specifies network configuration options like the IP address on which the server runs and the ports it should open and the peers to which it should connect. A second ```config/modules.config.js``` file specifies which modules should run on the server and any browsers that connect to it.
 
@@ -102,9 +102,6 @@ Running ```npm run nuke``` will create fresh versions of these configuration fil
 
 You can always reset your client by running the "nuke" command, but if you wish to change the applications supported on your server without resetting the blockchain, you can run the following instruction instead:
 
-```npm run compile```
-
-<!--
 ## Advanced Configuration
 
 Running ```npm run nuke``` will create fresh versions of these configuration files from template files that are stored in the ```config``` directory. It will also compiles a compressed version of Saito from the ```modules.config.js``` that will be fed out to browsers which connect to the server and request the default Javascript.
