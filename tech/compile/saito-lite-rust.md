@@ -2,7 +2,7 @@
 title: Compile Saito-lite-Rust Apps
 description: Instructions for compiling Saito applications
 published: true
-date: 2024-11-20T03:49:10.412Z
+date: 2024-11-20T03:53:25.597Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T03:22:04.713Z
@@ -14,11 +14,9 @@ When building applications with the [Saito-Lite-Rust](https://wiki.saito.io/en/t
 
 ## Config File
 
-Your application won't be compiled until the compile configuration file at `config/modules.config.js` lists it in the *core* or *lite* sections.
+Application won't be compiled until the compile configuration file at `config/modules.config.js` lists it in the *core* or *lite* sections. The `core` section lists the modules that will run on your full node server. The `lite` section lists the modules that your server will compile and serve by default for any lite-clients that connect to it.
 
-The `core` section lists the modules that will run on your full node server. The `lite` section lists the modules that your server will compile and serve by default for any lite-clients that connect to it.
-
-Below are the most basic instructions to compile, see the dedicated page for complete information on [module configuration](/tech/config/applications).
+- See the dedicated page for complete information on [module configuration](/tech/config/applications).
 
 ### Quickstart Compile
 
@@ -54,13 +52,9 @@ Running ```npm run nuke``` will create fresh versions of these configuration fil
 You can always reset your client by running the "nuke" command, but if you wish to change the applications supported on your server without resetting the blockchain, you can run the following instruction instead:
 
 ```npm run compile```
-
+<br>
 <!--
-
 Saito uses two main configuration files. The first is ```config/options``` which specifies network configuration options like the IP address on which the server runs and the ports it should open and the peers to which it should connect. A second ```config/modules.config.js``` file specifies which modules should run on the server and any browsers that connect to it.
-
-
-
 -->
 
 ### Advanced Usage of the `compile` Script
