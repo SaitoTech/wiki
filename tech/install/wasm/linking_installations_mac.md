@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2024-11-20T20:20:29.279Z
+date: 2024-11-20T20:35:29.805Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
@@ -52,7 +52,6 @@ npm i -g wasm-pack
 ```
 CC=/opt/homebrew/opt/llvm/bin/clang AR=/opt/homebrew/opt/llvm/bin/llvm-ar wasm-pack build --target web --out-dir wasm_build/deps/pkg/
 ```
-If you run into a problem at this step, you may need to restart your computer so that clang can find cargo is listed on your PATH properly.
 
 #### 6. install
 ```
@@ -63,10 +62,20 @@ npm install
 ```
 npm run build
 ```
-
+np
 #### 8. create symbolic link for saito-wasm
 ```
 npm link 
+```
+
+## Troubleshooting:
+
+If you get an error message about compiling to the wasm32-unknown-unknown target, try:
+
+```
+rustup target add wasm32-unknown-unknown
+cargo install wasm-pack
+cargo install wasm-opt
 ```
 
 ## Step 2: Bundle Saito WASM into NodeJS Package
