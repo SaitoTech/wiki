@@ -2,7 +2,7 @@
 title: Saito Tutorials
 description: How to Build Applications on Saito
 published: true
-date: 2024-10-20T02:38:24.725Z
+date: 2024-11-20T03:05:45.705Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-28T09:43:23.468Z
@@ -16,14 +16,14 @@ This tutorial series is designed to get you developing Saito applications quickl
 
 | Tutorial    | Title | Description |
 |:----------- |:----- |:----------- |
-| #1          | [Hello World](/tech/tutorials/01) | Build an application that installs into the User's wallet and alerts the user every time their wallet loads. This explains the structure of a Saito application, the basic information you should provide to users, and how to compile and distribute your applications. All of the other tutorials in this series assume that you understand the basics covered in this tutorial. |
-| #2          | [Sending Transactions and UI Components](/tech/tutorials/02) | This tutorial modifies the application we built in our first tutorial. This time we use a UI Component to display a button on the page and attach a click-event. When the button is clicked, this event fires and triggers a function inside our module that creates a transaction and sends it into the network. This tutorial teaches the basics of creating UI components and connecting them to functions in your core module. |
-| #3          | [Receiving On-Chain Transactions](/tech/tutorials/03) | This tutorial continues our basic application. Now in addition to sending a transaction, the module will listen on the blockchain for the transactions that we have created and update our UI whenever we receive one with the information that was delivered. At this point, our tutorials have now covered how to create a simple interface and send transactions and process them on receipt... |
-| #4          | [Chat Monitor](/tech/tutorials/04) | Build a chatbot that listens for chat messages received on-chain, off-chain and/or through server relays. Whenever a transaction is received, this module processes the transaction and decides how to respond based on some simple metrics. |
-| #5          | [Adding Menu Items](/tech/tutorials/05) | Build a module that inserts a link into several of the menus available for desktop and mobile users. If you're building an application and want to make it show up in the default menu list, this is the tutorial for you. |
-| #6          | [Modifying CSS and Adding Overlays](/tech/tutorials/06) | This module shows how to programmatically update/change/delete CSS entries and cover some basic techniques for modifying webpages that already exist even if they are provided by other modules. Then the rendering of a custom overlay is demonstrated. |
-| #7          | [Keyword-Filtering + Storage](/tech/tutorials/07) | Build an application that adds user-defined keyword filtering rules to determine whether transaction should be permitted past content filters, and then saves those rules to persistent storage.  |
+| #1          | [Hello World](/tech/tutorials/01) | A barebones application that alerts the user every time their wallet loads. Demonstrates basic structure and workflow. |
+| #2          | [Sending Transactions and UI Components](/tech/tutorials/02) | Adds a UI Component and  click-event which creates a transaction and sends it into the network. |
+| #3          | [Receiving On-Chain Transactions](/tech/tutorials/03) | This module will listen on the blockchain for the transactions it sends and update the UI whenever they are confirmed. |
+| #4          | [Chat Monitor](/tech/tutorials/04) | A chatbot that listens for chat messages received on-chain, off-chain or through server relays, and responds accordingly. |
+| #5          | [Adding Menu Items](/tech/tutorials/05) | Inserts a link into several of the menu templates available for desktop and mobile. Shows the basics of inter-module communication. |
+| #6          | [Modifying CSS and Adding Overlays](/tech/tutorials/06) | Modify CSS entries webpages of existing applications. |
+| #7          | [Keyword-Filtering + Storage](/tech/tutorials/07) | Add user-defined keyword filtering rules to determine whether transactions should be permitted past content filters, and save/load those rules to persistent storage.  |
 | #8          | Advertising Module |  |
 | #9          | Drag-and-Drop and DOM Manipulation | This tutorial covers some very useful techniques for creating an manipulating the HTML used by applications to build and show UI elements. The shortcuts in this tutorial have saved us significant time. |
-| #10          | Tic-Tac-Toe | This tutorial covers the basics of how to build a simple, simple game that shows up on the Saito Arcade and can be used. If you are interested in building games, this will provide a useful introduction to how games works generally.  |
+| #10          | Tic-Tac-Toe | Build a simple game which can be played securely peer-to-peer, and add that game to the Saito Arcade directory.  |
 
