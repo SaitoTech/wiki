@@ -2,7 +2,7 @@
 title: Compile Saito-lite-Rust Apps
 description: Instructions for compiling Saito applications
 published: true
-date: 2024-11-20T03:43:07.986Z
+date: 2024-11-20T03:46:58.052Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T03:22:04.713Z
@@ -49,11 +49,25 @@ If this is not your first time compiling the software you can run `npm run compi
 npm start
 ```
 
-## Advanced Usage of the `compile` Script
+## Advanced Configuration
+
+<!--
+
+Saito uses two main configuration files. The first is ```config/options``` which specifies network configuration options like the IP address on which the server runs and the ports it should open and the peers to which it should connect. A second ```config/modules.config.js``` file specifies which modules should run on the server and any browsers that connect to it.
+
+Running ```npm run nuke``` will create fresh versions of these configuration files from template files that are stored in the ```config``` directory. It will also compiles a compressed version of Saito from the ```modules.config.js``` that will be fed out to browsers which connect to the server and request the default Javascript.
+
+You can always reset your client by running the "nuke" command, but if you wish to change the applications supported on your server without resetting the blockchain, you can run the following instruction instead:
+
+```npm run compile```
+
+-->
+
+### Advanced Usage of the `compile` Script
 
 The `compile` script supports additional logging options, which can be specified using the `--loglevel` or `-l` flags. This feature allows you to set the desired log level for the compilation process.
 
-### Usage:
+#### Usage:
 
 To set a specific log level, use one of the following commands:
 
@@ -85,7 +99,7 @@ npm run compile -- -l warn
 
 ```
 
-### Javascript Client 'dev' Flag
+#### Javascript Client 'dev' Flag
 
 Both the `compile` and `nuke` scripts can be run with a `dev` flag:
 
