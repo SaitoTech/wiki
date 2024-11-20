@@ -2,7 +2,7 @@
 title: Compile Saito-lite-Rust Apps
 description: Instructions for compiling Saito applications
 published: true
-date: 2024-11-20T03:47:53.879Z
+date: 2024-11-20T03:49:10.412Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T03:22:04.713Z
@@ -10,9 +10,7 @@ dateCreated: 2024-11-20T03:22:04.713Z
 
 # Saito-lite-Rust Application Compilation
 
-When building applications with the [Saito-Lite-Rust](https://wiki.saito.io/en/tech/javascript) software, Javascript must first be compiled before it can ran on a *core-client* or served to *lite-clients* (like browsers). 
-
-The core-client is a full node and more specifically, an [*application node*](https://github.com/SaitoTech/saito-lite-rust). This software is responsible for compiling and serving compiled applications to lite-clients which can be seen in action when using the [apps](/tech/applications) on [Saito.io](Saito.io).
+When building applications with the [Saito-Lite-Rust](https://wiki.saito.io/en/tech/javascript) software, Javascript must first be compiled before it can ran on a *core-client* or served to *lite-clients* (like browsers).  The *core-client* is a full node and more specifically, an [*application node*](https://github.com/SaitoTech/saito-lite-rust). The [Saito-lite-Rust]() core-client is responsible for compiling and serving compiled applications to lite-clients such as the [apps](/tech/applications) on [Saito.io](Saito.io).
 
 ## Config File
 
