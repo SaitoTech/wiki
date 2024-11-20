@@ -2,13 +2,13 @@
 title: Compiling Standalone Applications
 description: This page convers how to turn your module into an installable Saito Application
 published: true
-date: 2024-11-20T03:54:20.210Z
+date: 2024-11-20T03:55:40.703Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-27T09:25:06.675Z
 ---
 
-# Compiling & Configuration
+# Compiling Saito-lite-Rust Apps
 
 This page demonstrates the various methods of compiling and distributing Saito applications, including [compiling and serving directly](#appnode) from an *Application (serving) Full Node*, or dynamically compiled [standalone bundles](#distribution) which users can drag-and-drop install onto their clients.
 
