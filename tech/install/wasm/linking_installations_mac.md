@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2024-11-21T05:42:05.098Z
+date: 2024-11-21T05:52:08.330Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
@@ -169,3 +169,8 @@ This step is completely optional, but if you're not sure that your machine is us
 
 Repeat Steps 1-3 above and when you run Saito-Lite-Rust you should see your log message printed instead of the default.
 
+
+
+## Troubleshooting:
+
+wasm-unknown-unknown issues - seee https://github.com/briansmith/ring/issues/1824
