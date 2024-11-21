@@ -2,7 +2,7 @@
 title: dcm install test
 description: 
 published: true
-date: 2024-11-21T20:33:58.978Z
+date: 2024-11-21T20:34:40.689Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-13T20:09:07.715Z
@@ -25,6 +25,9 @@ dateCreated: 2024-11-13T20:09:07.715Z
 
 
 ## SLR Developer Structure
+
+✔️ = page exists at specified location
+✔️✔️ = page is decently filled out
 
  - /tech/applications ✔️✔️
  - /tech/applications/deploy ✔️✔️
