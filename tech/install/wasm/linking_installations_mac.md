@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2024-11-21T05:26:30.327Z
+date: 2024-11-21T05:33:43.978Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
@@ -137,18 +137,7 @@ npm run go
 
 ## Step 4: Confirm Install Successful
 
-This step is completely optional, but if you're not sure that your machine is using your local copy of saito-js, you can check by doing the following:
+This step is completely optional, but if you're not sure that your machine is using your local copy of saito-js, you can check by looking for the initialize() function in the file ```/saito-rust-workspace/saito-wasm/src/saitowasm.rs``` and editing the call to info() somewhere around line 338 to print a custom message such as ```info!("initializing local copy of saito-wasm!");```. 
 
-#### 1. Modify Saito-Wasm Init Log
-
-Look for the initialize() function in the file ```/saito-rust-workspace/saito-wasm/src/saitowasm.rs``` and edit the call to info() to print a custom message such as ```info!("initializing local copy of saito-wasm!");```. This call should be somewhere around line 338 in the file.
-
-#### 2. Recompile Saito-Wasm
-
-Repeat Steps 1-3
-
-#### 3. Check Saito Log Output
-
-When Saito starts-up, you should see your log message printed instead of the default.
-
+Repeat Steps 1-3 above and when you run Saito-Lite-Rust you should see your log message printed instead of the default.
 
