@@ -1,8 +1,8 @@
 ---
-title: Compiling Standalone Applications
-description: This page convers how to turn your module into an installable Saito Application
+title: Compiling Saito
+description: Directory for all information regarding the compilation of Saito Software
 published: true
-date: 2024-11-21T20:21:27.465Z
+date: 2024-11-21T20:22:39.985Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-27T09:25:06.675Z
