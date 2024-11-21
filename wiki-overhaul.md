@@ -2,7 +2,7 @@
 title: dcm install test
 description: 
 published: true
-date: 2024-11-19T07:06:41.112Z
+date: 2024-11-21T20:33:58.978Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-13T20:09:07.715Z
@@ -21,29 +21,30 @@ dateCreated: 2024-11-13T20:09:07.715Z
  - always use "application"
  - i.e. applications are listed in the "modules" directory /mods
  - i.e. applications are listed in the "modules" directory /mods
- 
+
+
 
 ## SLR Developer Structure
 
- - /tech/applications
- - /tech/applications/deploy
- - /tech/tutorials/
- - /tech/tutorials/01 etc.
- - /tech/tutorials/02 etc.
- - /tech/install
- - /tech/install/rust
- - /tech/install/javascript
- - /tech/compile <--- "what do you want to compile?"
- - /tech/compile/saito-rust
- - /tech/compile/saito-lite-rust
- - /tech/compile/saito-wasm
+ - /tech/applications ✔️✔️
+ - /tech/applications/deploy ✔️✔️
+ - /tech/tutorials/ ✔️✔️
+ - /tech/tutorials/01 etc. ✔️✔️
+ - /tech/tutorials/02 etc. ✔️✔️
+ - /tech/install ✔️✔️
+ - /tech/install/rust ✔️✔️
+ - /tech/install/javascript ✔️✔️
+ - /tech/compile <--- "what do you want to compile?" ✔️
+ - /tech/compile/saito-rust ✔️
+ - /tech/compile/saito-lite-rust ✔️✔️
+ - /tech/compile/saito-wasm 
  - /tech/compile/saito-js
- - /tech/compile/applications
- - /tech/config <--- "what do you want to configure"
- - /tech/config/server <--- configure config/options.conf
- - /tech/config/network <--- configure config/options.conf
- - /tech/config/applications <---- configure config/modules.config.js
- - /tech/config/settings <---- configure UI / wallet / apps
+ - /tech/compile/applications ✔️✔️
+ - /tech/config <--- "what do you want to configure" ✔️✔️
+ - /tech/config/server <--- configure config/options.conf ✔️
+ - /tech/config/network <--- configure config/options.conf 
+ - /tech/config/applications <---- configure config/modules.config.js ✔️✔️
+ - /tech/config/settings <---- configure UI / wallet / apps ✔️
  
 
 1. Running a Node:
