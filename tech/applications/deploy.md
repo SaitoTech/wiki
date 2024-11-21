@@ -2,7 +2,7 @@
 title: Application Deployment
 description: Directory for the various ways apps can be deployed on the Saito Network
 published: true
-date: 2024-11-21T19:54:32.439Z
+date: 2024-11-21T20:05:43.554Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-21T19:54:32.439Z
@@ -20,3 +20,6 @@ Hosting applications from a Saito-lite-Rust Node entails deploying that node to 
 
 A standalone application requires no central server to run or be installed from. So long as the user has the compiled application file, they can run the application from any Saito-lite-Rust lite-client in the browser.
 
+Saito applications which run purely P2P will not be limited in functionality by this method of distribution, and it can also be used to modify apps which are served by a Saito-lite-Rust Node.
+
+- [Instructions](./deploy/dcm) on publishing a dynamically compiled standalone application.
