@@ -2,7 +2,7 @@
 title: Dynamically Compiled App Deployment
 description: Instructions for compiling and installing DCM, also known as, standalone applications
 published: true
-date: 2024-11-21T20:14:40.373Z
+date: 2024-11-21T20:25:51.174Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-21T20:05:12.071Z
