@@ -2,13 +2,13 @@
 title: Application Configuration
 description: Information on configuration settings for Saito-lite-Rust applications
 published: true
-date: 2024-11-20T03:59:10.585Z
+date: 2024-11-21T19:45:33.700Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T03:23:11.530Z
 ---
 
-# Application (Saito-lite-Rust) Configuration
+# Application Configuration for Saito-lite-Rust
 
 This page is dedicated to configuring how Saito applications are compiled, served and run on a [Saito-lite-Rust]() Node. It focuses on modifications which can be made to the `/config/modules.config.js` file.
 
