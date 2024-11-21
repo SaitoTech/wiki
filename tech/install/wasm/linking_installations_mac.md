@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2024-11-20T20:35:29.805Z
+date: 2024-11-21T05:26:30.327Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
@@ -62,7 +62,7 @@ npm install
 ```
 npm run build
 ```
-np
+
 #### 8. create symbolic link for saito-wasm
 ```
 npm link 
@@ -70,8 +70,7 @@ npm link
 
 ## Troubleshooting:
 
-If you get an error message about compiling to the wasm32-unknown-unknown target, try:
-
+If you run into a problem compiling or linking after installing software, please restart your machine. The following may also assist (restart after):
 ```
 rustup target add wasm32-unknown-unknown
 cargo install wasm-pack
@@ -131,5 +130,25 @@ npm link saito-js
 ```
 npm run go
 ```
+
+
+
+
+
+## Step 4: Confirm Install Successful
+
+This step is completely optional, but if you're not sure that your machine is using your local copy of saito-js, you can check by doing the following:
+
+#### 1. Modify Saito-Wasm Init Log
+
+Look for the initialize() function in the file ```/saito-rust-workspace/saito-wasm/src/saitowasm.rs``` and edit the call to info() to print a custom message such as ```info!("initializing local copy of saito-wasm!");```. This call should be somewhere around line 338 in the file.
+
+#### 2. Recompile Saito-Wasm
+
+Repeat Steps 1-3
+
+#### 3. Check Saito Log Output
+
+When Saito starts-up, you should see your log message printed instead of the default.
 
 
