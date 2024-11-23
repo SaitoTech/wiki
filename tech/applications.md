@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-11-23T01:52:12.041Z
+date: 2024-11-23T01:52:51.529Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -17,6 +17,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
 <style>
   .app_box {
   height: 250px;
+  width: 250px;
   }
 </style>
 
