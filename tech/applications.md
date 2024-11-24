@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-11-24T13:55:21.158Z
+date: 2024-11-24T14:02:49.467Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -27,7 +27,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
     <div class="app_box">
        <div class="app_img">
          <!--<img src="/red-square-menu.png" />-->
-         <img src="/rs-food-pic.png" />
+         <img src="/rs-food-pic-sq.png" />
        </div>
        <div class="app_title">RedSquare</div>
     </div>
