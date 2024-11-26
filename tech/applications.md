@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-11-26T21:10:49.188Z
+date: 2024-11-26T21:22:23.661Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -81,7 +81,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/tech/applications/fileshare">
     <div class="app_box">
       <div class="app_img">
-        <img src="/fileshare-ubuntu.png" />
+        <img src="/fileshare-sq.png" />
       </div>
       <div class="app_title">Fileshare</div>
     </div>
