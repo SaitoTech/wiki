@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-11-25T05:15:19.696Z
+date: 2024-11-26T21:10:49.188Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -45,7 +45,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/tech/applications/videocall">
     <div class="app_box">
        <div class="app_img">
-         <img src="/video-call-small.png" />
+         <img src="/video-call-woman.png" />
        </div>
        <div class="app_title">Video Calls</div>
     </div>
