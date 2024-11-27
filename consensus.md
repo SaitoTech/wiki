@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2024-10-25T05:12:09.372Z
+date: 2024-11-27T20:31:25.511Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -10,7 +10,7 @@ dateCreated: 2022-02-17T10:09:00.217Z
 
 # Saito Consensus
 
-Saito Consensus eliminates the [sybil attacks](/consensus/sybil-attacks),  [majoritarian attacks](/consensus/majoritarian-attacks),and several other [attack vectors](/consensus/attack-vectors) common in proof-of-work and proof-of-stake consensus mechanisms by correcting the collective action problems buried in their incentive structures. This page offers a brief introduction to how consensus works. Details on network [tokenomics](/tokenomics) are also available.
+Saito Consensus eliminates the [sybil attacks](/consensus/sybil-attacks) and  [majoritarian attacks](/consensus/majoritarian-attacks) common in proof-of-work and proof-of-stake consensus mechanisms by correcting the collective action problems buried in their incentive structures. This page offers a brief introduction to how consensus works.
 
 ## 1. HOW BLOCKS ARE PRODUCED
 
@@ -18,7 +18,7 @@ When users send transactions into the network they add cryptographic routing sig
 
 The amount of routing work in any transaction is derived from its transaction fee and this chain of signatures. It consists of the transaction fee halved with every hop beyond the first that the transaction has taken into the network. A transaction with a 10 SAITO fee offers 1st-hop nodes 10 units of routing work, 2nd-hop nodes 5 units of routing work, 3rd-hop nodes 2.5 units of routing work, and so on.
 
-Nodes gather transactions until they have enough routing work to meet a difficulty criteria maintained by consensus. We refer to this difficulty level as the "burn fee" as when the block is produced all of the transaction fees included in the block are burned. The difficulty level is automatically adjusted by consensus over time to keep blocktime constant as fee-throughput changes.
+Nodes gather transactions until they have enough routing work to meet a difficulty criteria maintained by consensus. We refer to this difficulty level as the "burn fee" as when the block is produced all of the transaction fees included in the block are burned. This "burn fee" is automatically adjusted by consensus over time to keep blocktime constant as fee-throughput changes.
 
 ## 2. HOW PAYMENTS ARE ISSUED
 
@@ -26,7 +26,7 @@ Once a block is produced miners start hashing to solve a mining puzzle. The puzz
 
 If a golden ticket for block N is included in the very next block (N+1), consensus issues a payout to the miner that found the solution and a random routing node who contributed to the previous block. The block producer is eligible to win this routing payout as the last hop in the routing path of every transation, but other nodes may win as well.
 
-A weighted lottery determines the winning routing node as follows. We hash the golden ticket solution again to choose a transaction from the block. The chance of each transaction  winning is weighted according to its share of all fees in the block. That hash is then hashed again to select a hop from the routing path of the winning transaction, with each hop weighted according to its share of work in the overall routing path. If a transaction with a 2-hop routing path and a 10 SAITO fee, the 1st-hop has a 10/5 chance of payout while the 2nd-hop has a 5/15 chance. In a transaction with a 3-hop routing path and a 10 SAITO fee the 1st-hop has a 10/17.5 chance of payout, while the 2nd-hop has a 5/17.5 chance of payout and the third has a 2.5/17.5 chance of payout, etc.
+A weighted lottery determines the winning routing node as follows. We hash the golden ticket solution again to choose a transaction from the block, with the chance of each transaction winning is weighted according to its share of all fees in the block. That hash is then hashed again to select a hop from the routing path of the winning transaction, with each hop weighted according to its share of work in the overall routing path. If a transaction with a 2-hop routing path and a 10 SAITO fee, the 1st-hop has a 10/5 chance of payout while the 2nd-hop has a 5/15 chance. In a transaction with a 3-hop routing path and a 10 SAITO fee the 1st-hop has a 10/17.5 chance of payout, while the 2nd-hop has a 5/17.5 chance of payout and the third has a 2.5/17.5 chance of payout, etc.
 
 This process repeats block by block. Nodes burn fees to produce blocks, and then burn hash to resurrect fees. If no golden ticket is found all of the fees from the previous block remain burned.
 
@@ -35,6 +35,8 @@ This process repeats block by block. Nodes burn fees to produce blocks, and then
 When a golden ticket is included in a block (N), calculate the winner of bock (N-1) as described above. If block N-1 did not contain a golden ticket, hash the golden ticket again to find and issue a router payout for block N-2.
 
 The missing "miner" payout from block N-2 may be collected by consensus and placed in a treasury that issues payouts to the oldest unspent UTXO in the blockchain as part of the ATR mechanism described below.
+
+Mining difficulty is adjusted to target one golden ticket every two blocks. If two blocks in a row contain golden tickets difficulty is increased. If two blocks in a row do not contain golden tickets difficulty is reduced.
 
 ## 4. AUTOMATIC TRANSACTION REBROADCASTING (ATR)
 
@@ -48,7 +50,7 @@ The UTXO may also be issued a staking payout on rebroadcasting. This ATR payout 
 
 Additional mechanisms which increase network robustness:
 
-* consensus can maintain a smoothed average of the fees included in each block over the last epoch. in the event that the block reward spikes well in excess of this smoothed average, the excess portion can be burned for good. This adds a deflationary burn which penalizes attackers who use their own tokens to attack the network.
+* consensus can maintain a smoothed average of the fees included in each block over the last epoch. in the event that the fees-in-block spike well in excess of this smoothed average, the excess portion can be burned for good. This adds a deflationary burn which penalizes attackers who use their own tokens to attack the network.
 
 * consensus can maintain a smoothed average of the fee-throughput to aggregate routing depth over the last epoch. in the event that this ratio decreases significantly, the block reward can automatically reduced with a deflationary burn. This adds a deflationary burn which penalizes attackers who use their own tokens to attack the network.
 
