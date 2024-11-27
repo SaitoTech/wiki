@@ -1,8 +1,8 @@
 ---
-title: Consensus
+title: the general grevious attack
 description: 
 published: true
-date: 2024-11-27T05:44:03.023Z
+date: 2024-11-27T05:46:55.969Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-27T05:19:30.273Z
@@ -10,7 +10,7 @@ dateCreated: 2024-11-27T05:19:30.273Z
 
 # The General Grievous Attack
 
-*Written by David Lancashire on August 21, 2024*
+![general_grievous.webp](/general_grievous.webp)*Written by David Lancashire on August 21, 2024*
 
 The opening battle in *Revenge of the Sith* involves a spectacular piece of double-intrigue by Chancellor Palpatine, who arranges his own abduction at the hands of General Grievous to create the pretext for a military escalation against the Separatists and his own ascension to Galactic Emperor. The move is also steeped in dramatic irony—the villains are attacking the Republic by running away and leaving it in peace.
 
