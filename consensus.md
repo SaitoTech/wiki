@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2024-11-27T20:31:25.511Z
+date: 2024-11-28T03:43:05.412Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -11,6 +11,12 @@ dateCreated: 2022-02-17T10:09:00.217Z
 # Saito Consensus
 
 Saito Consensus eliminates the [sybil attacks](/consensus/sybil-attacks) and  [majoritarian attacks](/consensus/majoritarian-attacks) common in proof-of-work and proof-of-stake consensus mechanisms by correcting the collective action problems buried in their incentive structures. This page offers a brief introduction to how consensus works.
+
+## OVERVIEW
+
+Saito Consensus is a game where nodes compete to *collect* fee-bearing transactions. Once they have enough they may produce a block. All of the fees in their block are destroyed, but we play a costly lottery that *may* resurrect the payouts while picking a random routing node to receive payout.
+
+The differences involve both the form of work nodes are asked to do to produce blocks and the way the payment is split between all of the nodes that contributed to the publication of the block. The result is a game that is profitable for honest nodes to play with other people's fees, but costly for attackers -- who are forced to attack the chain using their own money and lose more than they win.
 
 ## 1. HOW BLOCKS ARE PRODUCED
 
