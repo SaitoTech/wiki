@@ -1,14 +1,16 @@
 ---
-title: Untitled Page
+title: Technocratic Hubris: What Hayek Would Say About Bitcoin
 description: 
 published: true
-date: 2024-11-30T08:39:38.259Z
+date: 2024-11-30T08:40:54.237Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-30T08:39:38.259Z
 ---
 
 # Technocratic Hubris: What Hayek Would Say About Bitcoin
+
+![what-hayek-would.webp](/blog/what-hayek-would.webp)
 
 *Written by David Lancashire on December 29, 2021*
 
