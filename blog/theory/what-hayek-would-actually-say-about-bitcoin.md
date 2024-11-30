@@ -2,7 +2,7 @@
 title: Technocratic Hubris: What Hayek Would Say About Bitcoin
 description: 
 published: true
-date: 2024-11-30T08:40:54.237Z
+date: 2024-11-30T08:41:13.795Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-30T08:39:38.259Z
