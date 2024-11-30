@@ -1,14 +1,16 @@
 ---
-title: Untitled Page
+title: Tolerating Malicious Majorities – Advances in Distributed Consensus
 description: 
 published: true
-date: 2024-11-30T08:31:29.591Z
+date: 2024-11-30T08:33:08.130Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-30T08:31:29.591Z
 ---
 
 # Tolerating Malicious Majorities – Advances in Distributed Consensus
+
+![toleratiing-majorities.webp](/blog/toleratiing-majorities.webp)
 
 *Written by David Lancashire on April 24, 2023*
 
