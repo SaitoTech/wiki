@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2024-12-07T19:57:12.158Z
+date: 2024-12-07T20:11:13.418Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -30,15 +30,13 @@ The process of picking a winner is as follows. We hash the golden ticket solutio
 
 This process repeats block by block. Nodes burn fees to produce blocks, and then burn hash to resurrect fees. If no golden ticket is found all of the fees from the previous block remain burned.
 
-A naive implementation of the above would target a hashing difficulty that averages one golden ticket every two blocks. This can be done by increasing mining difficulty if two blocks in a row are found with golden tickets and decreasing mining difficulty if two blocks in a row are found without golden tickets. This ensures the cost to any node of getting paid averages half of the fees in the block, but achieves cost-of-attack at the cost of accepting significant deflationary pressure from the blocks whose fees are burned but never resurrected and redistributed by a golden ticket.
+A naive implementation of the above would target a hashing difficulty that averages one golden ticket every two blocks. This can be done by increasing mining difficulty if two blocks in a row are found with golden tickets and decreasing mining difficulty if two blocks in a row are found without golden tickets. This ensures the cost to any node of getting paid always averages half of the fees in the block, but achieves cost-of-attack at the cost of accepting significant deflationary pressure from the blocks whose fees are burned but never resurrected and redistributed by a golden ticket.
 
 ## 3. IMPROVING SECURITY AND PREVENTING DEFLATION
 
-When a golden ticket is included in a block (N), calculate the winner of bock (N-1) as described above. If block N-1 did not contain a golden ticket, we hash the golden ticket again to find and issue a router payout for block N-2. Block producers who wish to guarantee they recover the routing payout must now do a significantly larger amount of hashing as the difficulty of finding a single solution that pays out two blocks is larger than finding two successive solutions that each pay out a single block.
+When a golden ticket is included in a block (N), qw calculate the winner of bock (N-1) as described above. If block N-1 did not contain a golden ticket, we hash the golden ticket again to find and issue a router payout for block N-2. Block producers who wish to guarantee they recover the routing payout must now do a significantly larger amount of hashing as the difficulty of finding a single solution that pays out two blocks is larger than finding two successive solutions that each pay out a single block.
 
-The missing "miner" payout from block N-2 is collected by consensus and placed in a treasury that issues payouts to the oldest unspent UTXO in the blockchain as part of the ATR mechanism described below. We refer to these payouts as the ATR payouts -- they are directed to the holders of UTXO which are looping around the chain.
-
-If the unspent UTXO on the network are well distributed -- do not belong to the attacker -- the ATR payout makes fee-recapture more difficult for any attacker and further increases cost-of-attack on the network.
+The missing "miner" payout from block N-2 is collected by consensus and placed in a treasury that issues payouts to the oldest unspent UTXO in the blockchain as part of the ATR mechanism described below. We refer to these payouts as the ATR payouts -- they are directed to the holders of UTXO which are looping around the chain. If these unspent UTXO are well distributed -- a non-trivial amount do not belong to the attacker -- the ATR payout further increases cost-of-attack on the network. If all outstanding UTXO are in the possession of the attacker cost-of-attack is reduced but still exists.
 
 ## 4. AUTOMATIC TRANSACTION REBROADCASTING (ATR)
 
@@ -52,13 +50,11 @@ The UTXO may also be issued a staking payout on rebroadcasting. This ATR payout 
 
 Additional mechanisms which increase network robustness:
 
-* consensus can maintain a smoothed average of the fees included in each block over the last epoch. in the event that the fees-in-block spike well in excess of this smoothed average, the excess portion can be burned for good. This adds a deflationary burn which penalizes attackers who use their own tokens to attack the network, as attacks must necessarily push fee-throughput significantly about the pre-attack average.
+* consensus can maintain a smoothed average of the fees included in each block over the last epoch. in the event that the fees-in-block spike well in excess of this smoothed average, the excess portion can be burned. This adds a deflationary burn which penalizes attackers who use their own tokens to attack the network, as attacks must push fee-throughput significantly about the pre-attack average in any attempt to subvert the lottery.
 
-* consensus can maintain a smoothed average of the fee-throughput to aggregate routing depth over the last epoch. in the event that this ratio decreases significantly, the block reward can automatically reduced with a deflationary burn. This adds a deflationary burn which penalizes attackers who use their own tokens to attack the network.
+* consensus can requires all valid chains to contain N golden tickets over the last M blocks and declare forks unextendable unless they meet these minimal hashing requirements. This provides wrap-around spam-resistance at the cost of making halting attacks theoretically possible for attackers with unlimited hashpower.
 
-* consensus can requires all valid chains to contain N golden tickets over the last M blocks and declare forks unextendable unless they meet these minimal hashing requirements. This provides wrap-around spam-resistance to cash-only attacks at the cost of making halting attacks theoretically possible for attackers with unlimited hashpower.
-
-* routing policies at the block level can be added to incentivize nodes to following sensible routing policies and not spam the network or relay malicious blocks, while also speeding up relay speeds for valid blocks from honest producers.
+* routing policies at the block level can be added to incentivize nodes to follow sensible routing policies and not spam the network or relay malicious blocks, while also speeding up relay speeds for valid blocks from honest producers.
 
 * block producers can be required to affix tokens (making them unspendable for X blocks and ineligible for the ATR payout) when producing blocks. Social slashing of these locked tokens is possible in some situations, permitting even low fee-throughput chains to maintain a high cost-of-attack.
 
