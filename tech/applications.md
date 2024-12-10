@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-12-10T02:06:31.777Z
+date: 2024-12-10T02:13:50.748Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -142,7 +142,8 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/tech/applications/wuziqi">
     <div class="app_box">
       <div class="app_img">
-        <img src="https://saito.io/wuziqi/img/arcade/arcade.jpg" />
+        <!-- <img src="https://saito.io/wuziqi/img/arcade/arcade.jpg" /> -->
+        <img src="/wuziqi-sq.png" />
       </div>
       <div class="app_title">Wuziqi</div>
     </div>
