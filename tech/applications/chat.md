@@ -2,7 +2,7 @@
 title: Chat
 description: 
 published: true
-date: 2024-12-10T20:15:55.601Z
+date: 2024-12-10T20:21:48.965Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-09T04:44:07.894Z
@@ -14,9 +14,9 @@ dateCreated: 2023-03-09T04:44:07.894Z
 
 ![chat-aug-2024.png](/chat-aug-2024.png)
 
-Saito Chat is designed as both an on-chain and off-chain applications, while your browser will likely receive the majority of chat messages directly from other peers, it is also possible to send messages to other users fully on-chain. On-chain messages can also be used . this situation .All communications are quick and secure and involve the blockchain and your intended recipients - no middlemen. In the case of 
+Saito Chat is designed as both an on-chain and off-chain applications, while your browser will likely receive the majority of chat messages directly from other peers, it is also possible to send messages to other users fully on-chain. Communications are quick and secure and involve only the encrypted blockchain messages or messages directly to your recipients - no middlemen to trust for security.
 
-In addition to private chats, the Saito Chat module also supports public channels like the Saito Community Chat, which are public rooms in which all messages are unencrypted by default. The chat module is also easy to integrate with other applications. You can see it in the sidebar of RedSquare as well as access it within games to chat with fellow players.
+In addition to private chats, the Saito Chat module also supports public channels like the Saito Community Chat - public rooms in which all messages are unencrypted by default. The chat module is also easy to integrate with other applications. You can see it in the sidebar of [Red Square](/tech/applications/redsquare) as well as access it within [games](/tech/applications/arcade) to chat with fellow players.
 
 - Saito Chat [source code.](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/chat)
 
@@ -26,5 +26,5 @@ To add a friend to Saito Chat click on the "..." menu at the top-right of your C
 
 ![chat-private.png](/chat-private.png)
 
-It normally takes a minute or two for the network to update your wallet with the private key needed to securely communicate with your new contact, and their address will not be added to your Chat menu until this process is complete. The reason for the delay is that a cryptographic handshake is needed to generate the information to securely connect. If the person you are adding is not online, you will need to wait until they connect until their wallet can provide the information needed to connect you. Their wallet will receive your request as soon as they re-join the network.
+It normally takes a minute or two for the network to perform a key exchange needed to securely and efficiently communicate off-chain with your new contact. Their address will not be added to your Chat menu until this process is complete. If the person you are adding is not online, you will need to wait until they connect until their wallet can provide the information needed to connect you. Their wallet will receive your request as soon as they re-join the network.
 
