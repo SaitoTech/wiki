@@ -2,7 +2,7 @@
 title: Chat
 description: 
 published: true
-date: 2024-09-15T20:52:57.543Z
+date: 2024-12-10T20:15:55.601Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-09T04:44:07.894Z
@@ -10,9 +10,9 @@ dateCreated: 2023-03-09T04:44:07.894Z
 
 # Saito Chat
 
-![chat-aug-2024.png](/chat-aug-2024.png)
+[Saito Chat](https://saito.io/chat/) lets you send chat messages, images and more P2P to your friends on the Saito network. Once you have added a contact, your browser will perform a cryptographic handshake that will let you encrypt your messages to them with a private key that only the two of you know.
 
-[Saito Chat](https://saito.io/chat/) lets you send chat messages, images and more to your friends on the Saito network. Once you have added a contact, your browser will perform a cryptographic handshake that will let you encrypt your messages to them with a private key that only the two of you know.
+![chat-aug-2024.png](/chat-aug-2024.png)
 
 Saito Chat is designed as both an on-chain and off-chain applications, while your browser will likely receive the majority of chat messages directly from other peers, it is also possible to send messages to other users fully on-chain. On-chain messages can also be used . this situation .All communications are quick and secure and involve the blockchain and your intended recipients - no middlemen. In the case of 
 
