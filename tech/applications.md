@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-12-10T02:24:13.872Z
+date: 2024-12-10T02:27:38.720Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -125,7 +125,8 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/tech/applications/his">
     <div class="app_box">
        <div class="app_img">
-         <img src="https://staging.saito.io/his/img/arcade/arcade.jpg" />
+         <!--<img src="https://staging.saito.io/his/img/arcade/arcade.jpg" />-->
+         <img src="/his-sq.png" />
        </div>
        <div class="app_title">Here I Stand</div>
     </div>
