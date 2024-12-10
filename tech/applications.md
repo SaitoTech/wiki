@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-12-10T02:27:38.720Z
+date: 2024-12-10T02:32:26.035Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -107,7 +107,8 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/tech/applications/settlers">
     <div class="app_box">
        <div class="app_img">
-         <img src="https://saito.io/settlers/img/arcade/arcade.jpg" />
+         <!--<img src="https://saito.io/settlers/img/arcade/arcade.jpg" />-->
+         <img src="/settlers-sq.png" />
        </div>
        <div class="app_title">Settlers</div>
     </div>
