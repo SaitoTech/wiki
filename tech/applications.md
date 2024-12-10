@@ -2,7 +2,7 @@
 title: Saito Apps
 description: 
 published: true
-date: 2024-12-10T02:32:26.035Z
+date: 2024-12-10T02:36:22.438Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -155,7 +155,8 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/tech/applications/poker">
     <div class="app_box">
       <div class="app_img">
-        <img src="https://saito.io/poker/img/arcade/arcade.jpg" />
+        <!--<img src="https://saito.io/poker/img/arcade/arcade.jpg" />-->
+        <img src="/poker-sq.png" />
       </div>
       <div class="app_title">Poker</div>
     </div>
