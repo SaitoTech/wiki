@@ -2,7 +2,7 @@
 title: SaitoArcade
 description: 
 published: true
-date: 2024-12-14T09:15:12.190Z
+date: 2024-12-14T09:28:43.654Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-19T20:49:30.032Z
@@ -10,7 +10,7 @@ dateCreated: 2023-02-19T20:49:30.032Z
 
 # Arcade
 
-[Saito Arcade](https://saito.io/arcade/) is an open source gaming portal that runs as a fully-distributed peer-to-peer browser application. It serves as a hub for any installed game built with the Saito Game Engine - a system which allows trustless P2P games, even complex games, with advanced public key cryptography.
+[Saito Arcade](https://saito.io/arcade/) is an open source gaming portal that runs as a fully-distributed peer-to-peer browser application. It serves as a hub for any installed game built with the [Saito Game Engine](#mentalPoker) - a system which allows trustless P2P games, even complex games, with advanced public key cryptography.
 
 We believe that the Arcade and its games offer some of the richest, most enjoyable and advanced web3 gaming implementations across all of crypto gaming.
 
@@ -36,11 +36,15 @@ High quality games with significant followings often struggle to make money from
 
 Web 2 forces publishers to revert to selling physical editions, merchandise, access to lightly-veiled gambling boxes or tokens of questionable utility and origin. Saito blurs the line between developer and publisher through new and better business models which rid developers of the need to pay rent to centralized, digital storefronts.
 
-Saito Arcade, and Saito generally, is an open index of applications which any node, full or lite, can earn fees for serving to users. Open source developers can thus route their application's transactions into the network and earn the larger part of that fee. Developers can simply and permissionlessly become their own publishers. Saito [revolutionizes](https://medium.com/@0xluminous/the-future-of-open-source-software-7c77592f8f24) open source monetization.
+Saito Arcade, and Saito generally, is an open index of applications which any node, full or lite, can earn fees for serving to users. Open source developers can thus route their application's transactions into the network and earn the larger part of that fee. Developers can easily and permissionlessly become their own publishers with no middleman - not even a financial middleman.
 
-The best games may still gravitate towards free-to-play models, but alternative services and their monetization are not to be restricted: leader-boards, rankings, match-making services, and the like. Game designers on Saito have the freedom to experiment with different choices. Some games may be better off integrating decentralized advertising networks, or collecting micro-payments on a game-by-game or even a turn-by-turn basis.
+- Saito [revolutionizes](https://medium.com/@0xluminous/the-future-of-open-source-software-7c77592f8f24) open source monetization.
 
-### <div id="mentalPoker"> Mental Poker Techniques </div>
+The best games may still gravitate towards free-to-play models, but alternative services and their monetization are not to be restricted: leaderboards, ranking and match-making services, and more will attract fee-paying users. Game designers on Saito have the freedom to experiment with these services and monitization without asking permission.
+
+Some games may be better off integrating decentralized advertising networks, collecting micro-payments between games or rounds, while others can rely on donations, tournaments, [Swarmcasts](https://wiki.saito.io/en/tech/applications/swarmcast) - and all such services will lead to rewards for the nodes providing them!
+
+### <div id="mentalPoker"> Saito Game Engine </div>
 
 For question of how the Saito Game Engine allows multiple parties to fairly agree on the state of truly random elements necessary for many games on the arcade, the answer begins with [Mental Poker](https://people.csail.mit.edu/rivest/pubs/SRA81.pdf):
 
@@ -49,14 +53,16 @@ For question of how the Saito Game Engine allows multiple parties to fairly agre
     <img src="/mentalpoker.png" alt="Mental Poker; Adi Shamir, Ronald L. Rivest and Leanard M. Adleman; MASSACHUSETTS INSTITUTE OF TECHNOLOGY; ABSTRACT Can two potentially dishonest players play a fair game of poker without using any cards-for example, over the phone? This paper provides the following answers: 1. No. (Rigorous mathemmatical proof supplied.) 2. Yes. (Correct and complete protocol given.); Once there were two 'mental chess' experts who had become tired of their passtime. 'Let's play 'Mental Mpoker,' for variety' suggested one. 'Sure' said the other,' Just let me deal!'">
 </div>
 
-Indeed, the most direct use of the techniques which authors Rivest, Shamir and Adleman (RSA) devised are most directly employed and enhanced in Saito's very own, peer-to-peer, Web 3 Poker - available to [play](https://saito.io/arcade) on the arcade or to [audit](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/poker) on Github.
+Indeed, the most direct implementation of the techniques devised by Rivest, Shamir and Adleman (RSA) are seen, extended and enhanced in Saito's very own, peer-to-peer, Web 3 Poker - available to [play](https://saito.io/arcade) on the arcade or to [audit](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/poker) on Github.
 
-Mental Poker exploits the commutative properties of public key encryption schemes to encrypt and shuffle a deck of cards using the keys of each player, and then progressively decrypt card when they must be revealed. A more complete explanation can be sought via [Wikipedia](https://en.wikipedia.org/wiki/Mental_poker).
+Mental Poker exploits the commutative properties of public key encryption schemes to encrypt deck of cards using the keys of each player, and shuffle it while nobody is able to decrypt it. Cards can then be progressively decrypted by all players as determined by the game rules. A more complete explanation can be sought via [Wikipedia](https://en.wikipedia.org/wiki/Mental_poker).
 
-The Saito Arcade has taken the principles of Mental Poker and generalized and extended the technique to support several adversarial players and to encode and integrate arbitrary values which extend far past a simple game of Poker. Titles like *Twilight Struggle* and *Settlers of Saitoa* are two flagship examples.
+The Saito Arcade has taken the principles of Mental Poker and generalized the techniques to support several adversarial players and to encode and integrate arbitrary values which extend far past a simple game of Poker. Titles like [*Twilight Struggle*](/tech/applications/twilight) and [*Settlers of Saitoa*](/tech/applications/settlers) are two flagship examples of such extensions
 
 ## Games
 
-There is a good amount of games running on the Saito platform now and more to come that are currently in development. Some games have also been made by members of the community. All benefit from the broad suite of functionality available to all Saito Applications: text chats, video calls, integrated cryptocurrency support and more.
+There are already many well-crafted games running on the Saito platform with more to come that are currently in development. A few gamess have been made by members of the community - if you're interested in learning how to employ the Saito Game Engine, the team is happy to assist.
+
+All benefit games from the broad suite of integratable functionality available to all Saito Applications: text chats, video calls, integrated cryptocurrency support and more.
 
 For a full list of the games available in the Saito Arcade please see the [mods directory](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods). Links to some of the more popular games that are playable on the Arcade can also be found on the [applications](/tech/applications) page in our wiki.
