@@ -2,7 +2,7 @@
 title: Deploy Saito Instance
 description: 
 published: true
-date: 2024-09-17T08:01:03.088Z
+date: 2025-01-16T03:16:24.690Z
 tags: installation
 editor: markdown
 dateCreated: 2023-02-23T07:15:16.260Z
@@ -10,7 +10,7 @@ dateCreated: 2023-02-23T07:15:16.260Z
 
 # Deploy your Saito on a VPS or server - Ubuntu 22.04 (LTS) x64
 
-Be sure you've completed the [installation instructions](https://wiki.saito.io/en/tech/installation) and have a functioning [Saito Lite Rust Client](https://github.com/saitotech/saito-lite-rust) running on your machine before continuing.
+Be sure you've completed the [installation instructions](/tech/install/javascript) and have a functioning [Saito Lite Rust Client](https://github.com/saitotech/saito-lite-rust) running on your machine before continuing.
 
 <hr>
 
