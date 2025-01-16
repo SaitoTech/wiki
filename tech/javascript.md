@@ -2,7 +2,7 @@
 title: Run a Node
 description: 
 published: true
-date: 2024-10-25T05:49:18.719Z
+date: 2025-01-16T03:16:58.538Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -14,9 +14,9 @@ This page provides information for running a [Saito-Lite-Rust Node](https://gith
 
 If you are interested in protocol development, visit the page for our [Core Rust Node](/tech/rust).
 
-## [Installation](/tech/installation/javascript)
+## [Installation](/tech/install/javascript)
 
-See the [installation](/tech/installation/javascript) page for instructions on installing, configuring and building applications on Saito-Lite-Rust. It accommodates Linux, Mac and Windows.
+See the [installation](/tech/install/javascript) page for instructions on installing, configuring and building applications on Saito-Lite-Rust. It accommodates Linux, Mac and Windows.
 
 #### Requirements:
 - Machine with at least 2GB RAM.
@@ -34,9 +34,9 @@ Saito-Lite-Rust runs atop NodeJS. Instructions for installing are available for:
 - [Windows](/tech/installation/javascript/windows)
 -->
 
-## [Building Apps](/tech/building_apps)
+## [Building Apps](/tech/applications/building_apps)
 
-If you want to get started building applications, we recommend starting with our [tutorial series](/tech/building_apps) for new Application Developers.
+If you want to get started building applications, we recommend starting with our [tutorial series](/tech/applications/building_apps) for new Application Developers.
 
 Applications like the [Saito Arcade](https://saito.io/arcade) run inside the Saito Wallet, which receives on-chain and off-chain messages and passes them into the modules that are running inside the user wallet. See our [applications page](/tech/applications) for examples and descriptions of the Web 3 apps currently running on Saito.
 
