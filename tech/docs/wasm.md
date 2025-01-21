@@ -2,7 +2,7 @@
 title: Using Wasm in Saito
 description: How to using wasm inside Saito applications
 published: true
-date: 2025-01-21T22:18:28.127Z
+date: 2025-01-21T22:57:38.406Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-21T16:07:42.431Z
@@ -18,7 +18,7 @@ The WasmLoader is a utility module for loading and managing WebAssembly modules 
 
 ## Basic Usage in a Saito mod
 
-####  Before Usage, make sure all wasm files are in the /web directory of the saito module 
+####  Before Usage, make sure all wasm files are located in the /web directory of the saito module 
 *
 
 ### 1. Import the WasmLoader
