@@ -2,7 +2,7 @@
 title: Saito Documentation
 description: 
 published: true
-date: 2025-01-21T15:51:39.586Z
+date: 2025-01-21T15:52:20.782Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-29T21:33:20.620Z
@@ -32,7 +32,7 @@ UI Components and CSS Design specifications explain our standard approach for cr
 
 ## Network
 
-### [Network API](/tech/docs/network_api)
+### [Network API](/tech/docs/wasm)
 Interface with Saito nodes of all types via the networking API.
 
 ## Using Wasm in Saito Apps
