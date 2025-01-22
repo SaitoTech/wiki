@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-01-22T23:18:54.678Z
+date: 2025-01-22T23:21:27.740Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -26,7 +26,7 @@ If this is overwhelming, the team is happy to help. Use a pencil and paper and d
 
 ## Beginners Tutorials 
 
-See the complete [tutorial series](/tech/tutorials) after completing the basics:
+Browse the **[complete tutorial series](/tech/tutorials)** or start with the basics:
 
 | Tutorial    | Title | Description |
 |:----------- |:----- |:----------- |
@@ -43,11 +43,11 @@ If you've developed a Saito Application and are wondering how to distribute it t
 
 ## Documentation and External Resources
 
-Visit the [Saito Docs](https://wiki.saito.io/en/tech/docs) for detailed information about interfacing with the network and working with Saito Modules.
+Visit the [Saito Docs](https://wiki.saito.io/en/tech/docs) for technical information.
 
-If you are an advanced developer our directory of [reference modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) may be of use for those who want to build "standard" applications in the same style and approach as our default application suite.
+Check out our [reference modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) to see what Saito developed applications look like.
 
-You can also check out the community resource [Livedocs](https://github.com/mat888/saito-livedocs), which serves as a working demonstration and hackable template for basic Saito applications.
+Visit the community resource [Livedocs](https://github.com/mat888/saito-livedocs), which serves as a working demonstration and hackable template for basic Saito applications.
 
 <!--
 ## Misc.
