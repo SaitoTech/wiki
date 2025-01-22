@@ -2,42 +2,44 @@
 title: Saito Applications
 description: 
 published: true
-date: 2024-11-13T05:10:10.090Z
+date: 2025-01-22T23:18:54.678Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
 ---
 
-# Building Saito Applications
+# Building Apps
 
-If you are interested in building Saito applications, we have a [tutorial series](/tech/tutorials) for learning how to code apps. This page also contains instructions on how to install modules onto a server, and how to compile them into an form where users can install them on their wallet.
+Head to the [tutorial section](/tech/tutorials) to get started and see examples. Saito apps are primarily written in JavaScript, but also support Web Assembly - we recommend beginners stick with JS.
 
-<!-- ## Getting Started
+A [Saito Lite Rust Node](https://wiki.saito.io/tech/installation/javascript) (SLR) comes with many essential libraries and modules for writing  applications that interact both on-chain and P2P off-chain. Developers should first [install](https://wiki.saito.io/tech/installation/javascript) the SLR so they can compile, test and distribute their apps.
 
- For those interested in deploying a full node to the internet, we have [instructions](https://wiki.saito.io/tech/javascript/deployment) to do so.
+You can serve compiled Saito Apps to users either by hosting a live SLR node, or through *Dynamically Compiled Modules* which are compiled application files that users can install onto any Saito Client.
 
-If instead you want to compile and distribute applications without running infrastructure, check out the <a href=#compile>section below</a> on compilation, specifically [dynamic module compilation](https://wiki.saito.io/en/tech/compile#compiling-for-distribution).
+## Challenges in Web 3
 
-Then visit our [full tutorial series](/tech/tutorials) for new developers or jump in with the beginner lessons below:
+Saito is a true Web 3 network. Our in-house applications and provided developer tools **do not rely on a central server** (though that isn't disallowed). We encourage new developers to leverage our P2P and serverless model, but it can lead to confusion.
 
--->
+If you are a developer looking to break into Web 3, and you aren't sure how to reason about it, the most important question you should answer is: 'where is data stored or processed without a central server?' User cache, archive nodes, on-chain, a central databse - every option has tradeoffs worth understanding.
 
-## Tutorials for Beginners
+If this is overwhelming, the team is happy to help. Use a pencil and paper and draw a basic UI and how you expect it to operate - we'll be happy to get in touch directly and assist.
 
-In order to build and test Saito blockchain applications you first need to [install a Saito Lite Rust (SLR) node](https://wiki.saito.io/tech/installation/javascript).
+## Beginners Tutorials 
+
+See the complete [tutorial series](/tech/tutorials) after completing the basics:
 
 | Tutorial    | Title | Description |
 |:----------- |:----- |:----------- |
-| #1          | [Hello World](/tech/tutorials/01) | Build an application that installs into the User's wallet and alerts the user every time their wallet loads. This explains the structure of a Saito application, the basic information you should provide to users, and how to compile and distribute your applications. All of the other tutorials in this series assume that you understand the basics covered in this tutorial. |
-| #2          | [Sending Transactions and UI Components](/tech/tutorials/02) | This tutorial modifies the application we built in our first tutorial. This time we use a UI Component to display a button on the page and attach a click-event. When the button is clicked, this event first and calls a function inside our module that creates a transaction and sends it out into the network. This tutorial teaches the basics of creating UI components and connecting them to functions in your core module. |
+| #1          | [Hello World](/tech/tutorials/01) | A barebones application that alerts the user every time their wallet loads. Demonstrates basic structure and workflow. |
+| #2          | [Sending Transactions and UI Components](/tech/tutorials/02) | Adds a UI Component and click-event which creates a transaction and sends it into the network. |
 
-| ... | [More tutorials](/tech/tutorials) | See the complete [tutorial series](/tech/tutorials) for more advanced lessons.
+## <div id="compile"> Distributing Apps </div>
 
-## <div id="compile"> Compiling and Distributing </div>
+If you've developed a Saito Application and are wondering how to distribute it to users, there are currently two options:
 
-Once your application is built you can package it so that any wallet can install it by using our instructions on [compiling applications for drag-and-drop install](https://wiki.saito.io/en/tech/compile#compiling-for-distribution).
+1. [Compile](/tech/tutorials/01#installing-and-compiling) and host on an SLR node.
 
-
+2. [Compile and share a DCM file](https://wiki.saito.io/tech/compile/applications) for drag-and-drop installation.
 
 ## Documentation and External Resources
 
