@@ -2,13 +2,13 @@
 title: Using Wasm in Saito
 description: How to using wasm inside Saito applications
 published: true
-date: 2025-01-22T11:35:20.366Z
+date: 2025-01-22T11:43:08.359Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-21T16:07:42.431Z
 ---
 
-# WasmLoader Documentation
+- # WasmLoader Documentation
 
 ## Overview
 The WasmLoader is a utility module for loading and managing WebAssembly modules in your Saito application. It provides:
@@ -43,12 +43,16 @@ const importObject = {
 
 ```js
 // Load module
+onPeerHandshakeComplete(){
 const loader = new WasmLoader(app, mod);
 const instance = await loader.loadWasm('file_name.wasm', importObject);
 
 // Execute functions
 const result = instance.exports.yourFunction();
+}
 ```
+
+
 
 ### 4. Instance Management
 
