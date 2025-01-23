@@ -2,7 +2,7 @@
 title: Core
 description: 
 published: true
-date: 2025-01-23T20:55:22.964Z
+date: 2025-01-23T20:56:48.334Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-17T08:16:38.266Z
@@ -10,9 +10,9 @@ dateCreated: 2024-09-17T08:16:38.266Z
 
 # Core Development
 
-This page provides information on [Saito's Core Node](https://github.com/saitotech/saito-rust-workspace) software, targetted at developers who want to modify the core Saito protocol or client software - be it consensus code or the set of core functions that is exposed to the application layer.
+This page provides information on the full Saito Software Stack, including [Saito's Core Node](https://github.com/saitotech/saito-rust-workspace) software. Developers who want to audit or modify the core Saito protocol or client software should focus on *Saito Rust.*
 
-If you're looking to build applications, go [here](tech/applications/building_apps).
+If you're simply looking to build applications, go [here](tech/applications/building_apps).
 
 
 ## [Saito Rust](/tech/installation/rust)
