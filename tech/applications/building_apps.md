@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-01-22T23:24:22.123Z
+date: 2025-01-23T21:00:50.818Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -12,14 +12,14 @@ dateCreated: 2022-01-07T07:06:32.790Z
 
 Head to the **[tutorial section](/tech/tutorials)** to get started and see examples. Saito apps are primarily written in JavaScript, but also support Web Assembly - we recommend beginners stick with JS.
 
-A [Saito Lite Rust Node](https://wiki.saito.io/tech/installation/javascript) (SLR) comes with many essential libraries and modules for writing  applications that interact both on-chain and P2P off-chain. Developers should first **[install](https://wiki.saito.io/tech/installation/javascript)** the SLR so they can compile, test and distribute their apps.
+Developers should first **[install](https://wiki.saito.io/tech/installation/javascript)** the Saito Lite Rust Node so they can compile, test and distribute their apps. [SLR](https://wiki.saito.io/tech/installation/javascript) Nodes come with many essential libraries and modules for writing both on-chain and P2P off-chain application logic.
 
 ## Challenges in Web 3
-Our in-house applications and provided developer tools **do not rely on a central server** (though that isn't disallowed). We encourage new developers to leverage our P2P and serverless model.
+Our in-house applications and provided developer tools **do not rely on a central server** - you can if you want, but we encourage new developers to leverage Saito's P2P and serverless capabilities.
 
-If you are a developer looking to break into Web 3, the most important question you should answer is: 'where is data stored or processed without a central server?' User cache, archive nodes, on-chain, a central databse - every option has tradeoffs worth understanding.
+Web 3 developers must ask: "Where is data stored or processed without a central server?" User cache, archive nodes, on-chain, a central databse, a hybrid approach? Every option has tradeoffs worth understanding.
 
-If this is overwhelming, the team is happy to help. Use a pencil and paper and draw a basic UI and how you expect it to operate - we'll be happy to get in touch directly and assist.
+If this is overwhelming, the team is happy to help. Use a pencil and paper and draw a basic UI and how you expect it to operate - we'll be happy to get in touch directly and assist so long as you have a basic plan.
 
 ## Beginners Tutorials 
 
