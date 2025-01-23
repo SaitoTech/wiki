@@ -2,7 +2,7 @@
 title: Run a Node
 description: 
 published: true
-date: 2025-01-16T03:16:58.538Z
+date: 2025-01-23T21:07:01.683Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -10,13 +10,15 @@ dateCreated: 2024-10-15T23:32:31.744Z
 
 # Running a Node
 
-This page provides information for running a [Saito-Lite-Rust Node](https://github.com/SaitoTech/saito-lite-rust), which is typically the best option for hosting and developing [Web 3 applications on Saito](/tech/applications). See our page for [building applications](https://wiki.saito.io/en/tech/building_apps) once installation is complete.
+Learn how to run a [Saito-Lite-Rust (SLR) Node](https://github.com/SaitoTech/saito-lite-rust), necessary for building and hosting [Web 3 applications on Saito](/tech/applications).
 
-If you are interested in protocol development, visit the page for our [Core Rust Node](/tech/rust).
+See our section for [building applications](https://wiki.saito.io/en/tech/building_apps) once installation is complete.
+
+Note that an application serving Saito Node, or Saito Nodes generally, do not generate passive validator income like PoS. Saito rewards nodes which generate transaction fees through applications or wallet software, i.e. rewards require bringing value to users.
 
 ## [Installation](/tech/install/javascript)
 
-See the [installation](/tech/install/javascript) page for instructions on installing, configuring and building applications on Saito-Lite-Rust. It accommodates Linux, Mac and Windows.
+See the [installation](/tech/install/javascript) page for instructions on installing, configuring and building applications on Saito-Lite-Rust. SLR supports Linux, Mac and Windows.
 
 #### Requirements:
 - Machine with at least 2GB RAM.
@@ -26,20 +28,21 @@ See the [installation](/tech/install/javascript) page for instructions on instal
 - Saito-Lite-Rust - [Github](https://github.com/saitotech/saito-lite-rust)
 
 
+
 <!--
 Saito-Lite-Rust runs atop NodeJS. Instructions for installing are available for:
 
 - [Linux](/tech/installation/javascript/linux)
 - [Mac](/tech/installation/javascript/mac)
 - [Windows](/tech/installation/javascript/windows)
--->
+
 
 ## [Building Apps](/tech/applications/building_apps)
 
 If you want to get started building applications, we recommend starting with our [tutorial series](/tech/applications/building_apps) for new Application Developers.
 
 Applications like the [Saito Arcade](https://saito.io/arcade) run inside the Saito Wallet, which receives on-chain and off-chain messages and passes them into the modules that are running inside the user wallet. See our [applications page](/tech/applications) for examples and descriptions of the Web 3 apps currently running on Saito.
-
+-->
 ## [Deploy](/tech/javascript/deployment) Your Node
 Visit the [deploy instructions](/tech/javascript/deployment) to learn how to connect your Saito-Lite-Rust Node to the public internet.
   
@@ -58,14 +61,8 @@ Take your next steps into application development with [tutorial one](https://wi
 
 ## External References
 
-For more code and documentation please visit our public GitHub repository:
-
-https://github.com/saitotech
-
-This repository includes older branches and versions which are not being maintained. If you are interested in developing on the public site, please make sure you are using the latest two live repositories:
+Source code and more documentation available on our public GitHub repository:
 
 https://github.com/saitotech/saito-lite-rust
-( JavaScript )
-https://github.com/saitotech/saito-rust-workspace
-( Rust )
+
 
