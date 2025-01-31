@@ -2,7 +2,7 @@
 title: How to create ZK-enabled apps on Saito
 description: This documentation describes how to create and integrate ZK proofs on Saito application using ZK-Snarks
 published: true
-date: 2025-01-31T18:52:45.880Z
+date: 2025-01-31T19:42:28.481Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-31T18:45:46.925Z
@@ -60,20 +60,11 @@ Use our compilation script:
 chmod +x compile_circuit.sh
 
 ## Running the Script
-
-From your mod's directory:
-
-```bash
 # Navigate to mod directory
 cd mods/your_mod
 
 # Run compilation script for your circuit
-../../scripts/compile_circuit.sh zk/circuits/your_circuit
-
-From saito project root:
-# Run compilation script specifying path
-./scripts/compile_circuit.sh mods/your_mod/zk/circuits/your_circuit
-
+../../scripts/compile_circuit.sh circuit_name 
 ```
 **The script will:**
 1. Create necessary directories if they don't exist
