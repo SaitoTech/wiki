@@ -2,7 +2,7 @@
 title: How to create ZK-enabled apps on Saito
 description: This documentation describes how to create and integrate ZK proofs on Saito application using ZK-Snarks
 published: true
-date: 2025-01-31T19:42:28.481Z
+date: 2025-01-31T19:50:46.993Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-31T18:45:46.925Z
@@ -10,11 +10,11 @@ dateCreated: 2025-01-31T18:45:46.925Z
 
 # Saito and Zero-Knowledge Proof Integration Guide
 
-## Overview
+## 1: Overview
 
 This documentation describes how Saito integrates with zero-knowledge proofs (ZK proofs) to enable privacy-preserving applications while maintaining blockchain verifiability.
 
-## Architecture
+## 2: Architecture
 
 ### Components
 
@@ -37,15 +37,15 @@ This documentation describes how Saito integrates with zero-knowledge proofs (ZK
       └── circuit_final.zkey    # Proving parameters
       
    
-## Creating and Packaging Zero-Knowledge Proofs for Saito
+## 3: Creating and Packaging Zero-Knowledge Proofs for Saito
 
-## Prerequisites
+###  Prerequisites
 
 * [circom](https://docs.circom.io/) - For writing ZK circuits 
 * [snarkjs](https://github.com/iden3/snarkjs) - For proof generation and verification
 * Node.js environment
 
-## Steps
+###  Steps
 
 ### 1. Write the Circuit
 
@@ -53,7 +53,7 @@ For a detailed guide on creating circuits, refer to the [SnarkJS tutorial](https
 
 ### 2. Compile Circuit 
 
-Use our compilation script:
+Use our compilation script which is located in the root/scripts directory:
 
 ```bash
 # Make script executable
@@ -74,13 +74,13 @@ cd mods/your_mod
   * WASM and JS files → `build/your_circuit_js/`
   * Keys and other outputs → `output/`
 
-## Script Requirements
+### Script Requirements
 
 Make sure you have:
 * `input.json` file in your working directory
 * Circuit file named `your_circuit.circom` in the circuits folder
 
-## Generated Files
+### Generated Files
 
 The compilation produces several important files:
 * `your_circuit.wasm`: WebAssembly binary of your circuit
@@ -88,12 +88,45 @@ The compilation produces several important files:
 * `witness_calculator.js`: Core witness calculation logic
 * Supporting proof and verification files
 
-## Notes
+### Notes
 * The script requires execute permissions: `chmod +x scripts/compile-circuit.sh`
 * Make sure circom and snarkjs are installed globally
 * Keep `input.json` in the directory where you run the script
 
 
+
+## 3: Module Implementation
+
+Basic module structure with ZK integration:
+
+```javascript
+class YourModule extends ModTemplate {
+    constructor(app) {
+        super(app);
+        
+        // Load ZK components
+        this.vkey = require('./zk/output/verification_key.json');
+    }
+
+
+    // Generate and verify proofs
+    async generateProof(input) {
+        const { proof, publicSignals } = await snarkjs.groth16.fullProve(
+            input,
+             require('./zk/build/your_circuit_js/your_circuit.wasm'),
+             require('./zk/output/your_circuit_final.zkey')
+        );
+        return { proof, publicSignals };
+    }
+
+    async verifyProof(proof, publicSignals) {
+        return await snarkjs.groth16.verify(
+            this.vkey,
+            publicSignals,
+            proof
+        );
+    }
+}
 
 
 
