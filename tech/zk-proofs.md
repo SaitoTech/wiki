@@ -2,7 +2,7 @@
 title: How to create ZK-enabled apps on Saito
 description: This documentation describes how to create and integrate ZK proofs on Saito application using ZK-Snarks
 published: true
-date: 2025-01-31T18:45:46.925Z
+date: 2025-01-31T18:52:11.076Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-31T18:45:46.925Z
@@ -68,22 +68,39 @@ From your mod's directory:
 cd mods/your_mod
 
 # Run compilation script for your circuit
-../../../scripts/compile-circuit.sh zk/circuits/your_circuit
+../../scripts/compile_circuit.sh zk/circuits/your_circuit
 
 From saito project root:
 # Run compilation script specifying path
-./scripts/compile-circuit.sh mods/your_mod/zk/circuits/your_circuit
+./scripts/compile_circuit.sh mods/your_mod/zk/circuits/your_circuit
 
 ```
-**The script will**:
+**The script will:**
+1. Create necessary directories if they don't exist
+2. Compile circuit to WASM and generate supporting JavaScript files 
+3. Generate proving/verification keys
+4. Place all outputs in appropriate locations:
+  * WASM and JS files → `build/your_circuit_js/`
+  * Keys and other outputs → `output/`
 
-- Create necessary directories if they don't exist
-- Compile circuit to WASM and generate supporting JavaScript files
-- Generate proving/verification keys
-- Place all outputs in appropriate locations:
+## Script Requirements
 
-- WASM and JS files → build/your_circuit_js/
-- Keys and other outputs → output/
+Make sure you have:
+* `input.json` file in your working directory
+* Circuit file named `your_circuit.circom` in the circuits folder
+
+## Generated Files
+
+The compilation produces several important files:
+* `your_circuit.wasm`: WebAssembly binary of your circuit
+* `generate_witness.js`: Script for generating witnesses
+* `witness_calculator.js`: Core witness calculation logic
+* Supporting proof and verification files
+
+## Notes
+* The script requires execute permissions: `chmod +x scripts/compile-circuit.sh`
+* Make sure circom and snarkjs are installed globally
+* Keep `input.json` in the directory where you run the script
 
 
 
