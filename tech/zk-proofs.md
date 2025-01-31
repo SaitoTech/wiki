@@ -2,7 +2,7 @@
 title: How to create ZK-enabled apps on Saito
 description: This documentation describes how to create and integrate ZK proofs on Saito application using ZK-Snarks
 published: true
-date: 2025-01-31T18:52:11.076Z
+date: 2025-01-31T18:52:45.880Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-31T18:45:46.925Z
@@ -57,7 +57,7 @@ Use our compilation script:
 
 ```bash
 # Make script executable
-chmod +x compile-circuit.sh
+chmod +x compile_circuit.sh
 
 ## Running the Script
 
