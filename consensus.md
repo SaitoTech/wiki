@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2025-02-20T10:33:20.102Z
+date: 2025-03-11T11:55:48.928Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -10,21 +10,21 @@ dateCreated: 2022-02-17T10:09:00.217Z
 
 # Saito Consensus
 
-Saito Consensus is a distributed consensus mechanism provably secure against a specific type of [routing attack](/consensus/sybil-attacks) considered impossible to solve in other consensus mechanisms. It is also believed to be secure against the [majoritarian attacks](/consensus/majoritarian-attacks) common in proof-of-work and proof-of-stake mechanisms. This page offers a brief overview of how consensus works. We welcome [proposals](/consensus/proposals) to improve the way consensus works.
+Saito Consensus is a distributed consensus mechanism provably secure against a specific type of [routing attack](/consensus/sybil-attacks) considered impossible to solve in other consensus mechanisms. It is also believed to be secure against the [majoritarian attacks](/consensus/majoritarian-attacks) common in proof-of-work and proof-of-stake mechanisms. This page offers a brief overview of how consensus works.
 
 ## 1. HOW BLOCKS ARE PRODUCED
 
-When users send transactions into the network they add cryptographic routing signatures to these transactions specify the first-hop node(s) to which they are sending them. Nodes add similar signatures as they relay these transactions onwards to their own peers. As a result, all transactions ciculating on the network have an unforgeable record of the path they have taken into the network from their originating user to the node that holds them in its mempool.
+When users send transactions into the network they add cryptographic routing signatures which specify the first-hop node(s) to which they are sending their transactions. Nodes add similar signatures as they relay these transactions onwards to their own peers. As a result, all transactions ciculating on the network have an unforgeable record of the path they have taken into the network from their originating user to the node that holds them in its mempool.
 
 All unconfirmed transactions offer "routing work" to the nodes that possess them. The amount of routing work in any transaction consists of the transaction fee halved with every hop beyond the first that the transaction has taken into the network. A transaction with a 10 SAITO fee offers 1st-hop nodes 10 units of routing work, 2nd-hop nodes 5 units of routing work, 3rd-hop nodes 2.5 units of routing work, and so on.
 
-Nodes gather transactions until they have enough routing work to meet a difficulty criteria maintained by consensus. We refer to this difficulty level as the "burn fee" as when the block is produced all of the transaction fees included in the block are burned. This "burn fee" is automatically adjusted by consensus over time to keep blocktime constant as fee-throughput changes. If several blocks are produced in rapid succession the "burn fee" adjusts upwards to make it more expensive to produce blocks. And if a longer period passes without a block the "burn fee" is reduced.
+Nodes gather transactions in their mempool until they have enough routing work to meet a difficulty criteria maintained by consensus for the production of a block. We refer to this difficulty as the "burn fee" as when the block is produced all transaction fees in the block are burned. This "burn fee" is automatically adjusted by consensus to target a desired blocktime: If blocks are produced more rapidly the "burn fee" rises, and if blocks are produced more slowly the "burn fee" falls.
 
 ## 2. HOW PAYMENTS ARE ISSUED
 
-Once a block is produced all of the fees in the block are burned. This ensures that attackers who spend their own money to produce blocks always face a tax for doing so. Once a block has been published a cryptographic hashing puzzle starts that has the ability to resurrect and distribute the fees. This puzzle works similarly to proof-of-work -- the goal is to find a computationally difficult hash linked to the previous block -- except here the hashpower is determining whether the fees in the previous block will be resurrected and paid-out rather than who has the right to extend the chain. This ensures majority hash is not sufficient to control the chain.
+Once a block is produced all fees in the block are burned. A hashing competition then begins which may resurrect them. This competition works similarly to the hashing puzzle in proof-of-work, except that finding a solution controls whether the fees in the previous block will be resurrected and who will receive payment rather than who has the right to extend the chain.
 
-If a golden ticket for block N is included in the very next block (N+1), consensus issues a payout to the miner that found the solution and a random routing node who contributed to the previous block. The block producer is eligible to win this routing payout as the last hop in the routing path of every transation, but other nodes may win as well. The exact amount of the payout can vary, as under certain conditions where fee-throughput spikes rapidly the consensus mechanism will initiate a deflationary burn to ensure less is paid out than collected.
+If a golden ticket for block N is included in the very next block (N+1), consensus issues a payout to the miner that found the solution and a random routing node. The block producer is eligible to win as the last hop in the routing path of every transation, but other nodes may win as well.
 
 The process of picking a winner is as follows. We hash the golden ticket solution to choose a transaction from the block, with the chance of each transaction winning weighted according to its share of all fees in the block. That hash is then hashed again to select a hop from the routing path of the winning transaction, with each hop weighted according to its share of the total sum of routing work in the routing path. For a transaction with a 2-hop routing path and a 10 SAITO fee, the 1st-hop has a 10/5 chance of payout while the 2nd-hop has a 5/15 chance. In a transaction with a 3-hop routing path and a 10 SAITO fee the 1st-hop has a 10/17.5 chance of payout, while the 2nd-hop has a 5/17.5 chance of payout and the third has a 2.5/17.5 chance of payout, etc.
 
