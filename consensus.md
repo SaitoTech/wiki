@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2025-03-11T12:10:15.369Z
+date: 2025-03-11T12:16:09.161Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -49,13 +49,13 @@ The UTXO may also be issued a staking payout on rebroadcasting. This ATR payout 
 
 Additional mechanisms which increase network robustness:
 
-* consensus can maintain a smoothed average of the fees included in each block over the last epoch. in the event that the fees-in-block spike well in excess of this smoothed average, the excess portion can be burned. This adds a deflationary burn which penalizes attackers who use their own tokens to attack the network, as attacks must push fee-throughput significantly about the pre-attack average in any attempt to subvert the lottery.
+* consensus can easily maintain a smoothed average of the fees included in each block over the last epoch. in the event that the fees-in-block spike well in excess of this smoothed average, the excess portion can be burned. This provides an additional penalty for attackers who use their own tokens to self-generate routing-work in an attempt to outpace the honest chain.
 
-* consensus can requires all valid chains to contain N golden tickets over the last M blocks and declare forks unextendable unless they meet these minimal hashing requirements. This provides wrap-around spam-resistance at the cost of making halting attacks theoretically possible for attackers with unlimited hashpower.
+* consensus can require all valid chains to contain N golden tickets over the last M blocks. This provides wrap-around form of spam/sybil resistance at the cost of making halting attacks theoretically possible. Our production design requires 33% of blocks to have golden tickets.
 
-* routing policies at the block level can be added to incentivize nodes to follow sensible routing policies and not spam the network or relay malicious blocks, while also speeding up relay speeds for valid blocks from honest producers.
+* routing policies can be used to incentivize nodes to follow honest routing policies and not spam the network or relay malicious blocks / amplify block-flooding attacks. This approach may also be used to increase relaying speeds for valid blocks from honest producers.
 
-* block producers can be required to affix tokens (making them unspendable for X blocks and ineligible for the ATR payout) when producing blocks. Social slashing of these locked tokens is possible in some situations, permitting even low fee-throughput chains to maintain a high cost-of-attack.
+* block producers may be required to affix tokens (making them unspendable for X blocks and ineligible for the ATR payout) when producing blocks. Social slashing of these locked tokens is possible in some situations, permitting even low fee-throughput chains to maintain a high cost-of-attack.
 
 
 ### APPENDIX I: SAITO TERMINOLOGY
