@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2025-03-11T11:55:48.928Z
+date: 2025-03-11T12:08:26.668Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -26,17 +26,16 @@ Once a block is produced all fees in the block are burned. A hashing competition
 
 If a golden ticket for block N is included in the very next block (N+1), consensus issues a payout to the miner that found the solution and a random routing node. The block producer is eligible to win as the last hop in the routing path of every transation, but other nodes may win as well.
 
-The process of picking a winner is as follows. We hash the golden ticket solution to choose a transaction from the block, with the chance of each transaction winning weighted according to its share of all fees in the block. That hash is then hashed again to select a hop from the routing path of the winning transaction, with each hop weighted according to its share of the total sum of routing work in the routing path. For a transaction with a 2-hop routing path and a 10 SAITO fee, the 1st-hop has a 10/5 chance of payout while the 2nd-hop has a 5/15 chance. In a transaction with a 3-hop routing path and a 10 SAITO fee the 1st-hop has a 10/17.5 chance of payout, while the 2nd-hop has a 5/17.5 chance of payout and the third has a 2.5/17.5 chance of payout, etc.
+The lottery works as follows. We hash the mining solution to choose a transaction weighted by its share of overall fees in the block. We then hash the solution again to select a routing hop from the winning transaction, with each hop weighted by its share of routing work in the path. For a transaction with a 2-hop routing path and a 10 SAITO fee, the 1st-hop has a 10/5 chance of payout while the 2nd-hop has a 5/15 chance. In a transaction with a 3-hop routing path and a 10 SAITO fee the 1st-hop has a 10/17.5 chance of payout, while the 2nd-hop has a 5/17.5 chance of payout and the third has a 2.5/17.5 chance of payout, etc.
 
-This process repeats block by block. Nodes burn fees to produce blocks, and then burn hash to resurrect fees. If no golden ticket is found all of the fees from the previous block remain burned.
+This process repeats block by block. Nodes burn network tokens to produce blocks, and then burn hash to resurrect fees. Hashing difficulty adjusts upward if two blocks in a row are produced with golden tickets, and downwards if two blocks in a row are produced without golden tickets. This achieves cost-of-attack at the price of significant deflationary pressure from the blocks whose fees are burned but never resurrected and redistributed by a golden ticket.
 
-A naive implementation of the above would target a hashing difficulty that averages one golden ticket every two blocks. This can be done by increasing mining difficulty if two blocks in a row are found with golden tickets and decreasing mining difficulty if two blocks in a row are found without golden tickets. This ensures the cost to any node of getting paid always averages half of the fees in the block, but achieves cost-of-attack at the cost of accepting significant deflationary pressure from the blocks whose fees are burned but never resurrected and redistributed by a golden ticket.
 
 ## 3. IMPROVING SECURITY AND PREVENTING DEFLATION
 
-When a golden ticket is included in a block (N), qw calculate the winner of bock (N-1) as described above. If block N-1 did not contain a golden ticket, we hash the golden ticket again to find and issue a router payout for block N-2. Block producers who wish to guarantee they recover the routing payout must now do a significantly larger amount of hashing as the difficulty of finding a single solution that pays out two blocks is larger than finding two successive solutions that each pay out a single block.
+Security can be improved by using the same hash-solution to payout multiple blocks. When a golden ticket is included in a block (N), we calculate the winner of block (N-1) as described above. If block (N-1) did not contain a golden ticket, we hash the golden ticket again to find and issue a router payout for block (N-2).
 
-The missing "miner" payout from block N-2 is collected by consensus and placed in a treasury that issues payouts to the oldest unspent UTXO in the blockchain as part of the ATR mechanism described below. We refer to these payouts as the ATR payouts -- they are directed to the holders of UTXO which are looping around the chain. If these unspent UTXO are well distributed -- a non-trivial amount do not belong to the attacker -- the ATR payout further increases cost-of-attack on the network. If all outstanding UTXO are in the possession of the attacker cost-of-attack is reduced but still exists.
+Any missing "miner" payout from block (N-2) is collected by consensus and placed in a treasury. This treasury will issue payments to the unspent UTXO in the blockchain as part of the ATR mechanism described in the next section. If these unspent UTXO are well distributed, the ATR payout further increases cost-of-attack on the network as any attacker who is spending their own tokens to attack the network must redirect a portion to any users whose transactions they are censoring.
 
 ## 4. AUTOMATIC TRANSACTION REBROADCASTING (ATR)
 
