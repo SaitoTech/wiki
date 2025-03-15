@@ -2,7 +2,7 @@
 title: Run a Node
 description: 
 published: true
-date: 2025-01-23T21:07:01.683Z
+date: 2025-03-15T05:17:57.828Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -10,7 +10,11 @@ dateCreated: 2024-10-15T23:32:31.744Z
 
 # Running a Node
 
-Learn how to run a [Saito-Lite-Rust (SLR) Node](https://github.com/SaitoTech/saito-lite-rust), necessary for building and hosting [Web 3 applications on Saito](/tech/applications).
+Running a Saito node requires downloading our Rust software client and configuring it to run whichever modules you want installed on your node. This page describes the process of doing this. We assume a Linux or Mac system and basic familiarity with teh comand-line.
+
+For installation instructions, visit our page on installing our [Saito Rust](https://github.com/SaitoTech/saito-lite-rust) client. This page covers the process of downloading the software, installing any necessary dependencies, and configuring.
+
+Once you have installed the Rust client, we have a description of how to build and host [Web 3 applications on Saito](/tech/applications).
 
 See our section for [building applications](https://wiki.saito.io/en/tech/building_apps) once installation is complete.
 
