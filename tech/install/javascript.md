@@ -2,7 +2,7 @@
 title: Saito Javascript - Installation Instructions
 description: 
 published: true
-date: 2024-11-16T21:41:11.042Z
+date: 2025-04-03T06:42:46.219Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:41:59.352Z
@@ -82,7 +82,7 @@ Any changes can be compiled with `npm run nuke`. The final compiled file will re
 
 ### Compilation and Configuration
 
-- Visit the page [compiling and configuring](https://wiki.saito.io/tech/compile) for more information on setting up your SLR Node.
+- Visit the page [compiling and configuring](/tech/compile/saito-lite-rust) for more information on setting up your SLR Node.
 
 <br />
 
