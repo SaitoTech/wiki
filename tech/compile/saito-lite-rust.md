@@ -2,7 +2,7 @@
 title: Compile Saito-lite-Rust Apps
 description: Instructions for compiling Saito applications
 published: true
-date: 2024-11-20T23:21:39.208Z
+date: 2025-04-03T06:43:13.746Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T03:22:04.713Z
@@ -156,4 +156,4 @@ When this flag is used:
    being a concatenation of the source CSS). This makes CSS development
    slightly easier.
    
-The result is that many more files are downloaded by the client, but in-browser debugging is much easier
+The result is that many more files are downloaded by the client, but in-browser debugging is much easier.
