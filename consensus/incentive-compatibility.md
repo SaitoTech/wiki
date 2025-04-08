@@ -2,7 +2,7 @@
 title: Saito Consensus and Incentive Compatibility
 description: 
 published: true
-date: 2025-04-08T19:23:37.812Z
+date: 2025-04-08T19:32:16.781Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-07T19:21:22.502Z
@@ -10,7 +10,7 @@ dateCreated: 2025-04-07T19:21:22.502Z
 
 # Incentive Compatibility
 
-Saito Consensus is the first distributed consensus mechanism believed to be incentive compatible with the social choice rule of pareto optimality. It works by create a combinatorial auction that forces trade-offs between the various forms of utility that can be mediated through a blockchain:
+Saito Consensus is the first distributed consensus mechanism believed to be incentive compatible with the social choice rule of pareto optimality. It works by creating a combinatorial auction that forces trade-offs between the various forms of utility that can be mediated through a blockchain to affect the production and consumption of contending forms of utility simultaneously:
 
 1. **Blockspace**
 2. **Speed-of-Inclusion** 
