@@ -2,7 +2,7 @@
 title: Saito Consensus and Incentive Compatibility
 description: 
 published: true
-date: 2025-04-08T19:32:16.781Z
+date: 2025-04-08T19:32:54.769Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-07T19:21:22.502Z
@@ -14,7 +14,7 @@ Saito Consensus is the first distributed consensus mechanism believed to be ince
 
 1. **Blockspace**
 2. **Speed-of-Inclusion** 
-3. **Collusion Goods** (off-chain kickbacks)
+3. **Collusion Goods** (off-chain utility)
 
 Users reveal their private valuations for all three goods by manipulating two strategic levers: bid distribution (how the bid is broadcast into the network) and bid amount (the fee that is paid). These preferences are revealed indirectly in the way that transactions are submitted to the distributed auction.
 
