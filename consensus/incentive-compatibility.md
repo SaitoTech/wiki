@@ -2,7 +2,7 @@
 title: Saito Consensus and Incentive Compatibility
 description: 
 published: true
-date: 2025-04-08T19:32:54.769Z
+date: 2025-04-08T19:41:57.015Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-07T19:21:22.502Z
@@ -10,7 +10,7 @@ dateCreated: 2025-04-07T19:21:22.502Z
 
 # Incentive Compatibility
 
-Saito Consensus is the first distributed consensus mechanism believed to be incentive compatible with the social choice rule of pareto optimality. It works by creating a combinatorial auction that forces trade-offs between the various forms of utility that can be mediated through a blockchain to affect the production and consumption of contending forms of utility simultaneously:
+Saito Consensus is the first distributed consensus mechanism believed to be incentive compatible with the social choice rule of pareto optimality. It works by creating a combinatorial auction that forces trade-offs between the various forms of utility that can be mediated through a blockchain to hit the production and consumption of contending forms of utility simultaneously:
 
 1. **Blockspace**
 2. **Speed-of-Inclusion** 
@@ -18,7 +18,7 @@ Saito Consensus is the first distributed consensus mechanism believed to be ince
 
 Users reveal their private valuations for all three goods by manipulating two strategic levers: bid distribution (how the bid is broadcast into the network) and bid amount (the fee that is paid). These preferences are revealed indirectly in the way that transactions are submitted to the distributed auction.
 
-Producers reveal their competitive advantage at producing all three forms of utility through the optional decision to include their own fees in blocks, an act which -- if taken -- always increases the efficiency with which the network produces whatever forms of utility are favoured by honest users.
+Producers reveal their competitive advantage at inducing the inbound flow of transaction fees through the optional decision to include their own fees in blocks, an act which -- uniquely in this mechanism -- increases the efficiency with which the network produces the other forms of utility most favoured by honest users.
 
 The mechanism achieves incentive compatibility because users who dictate any two forms of utility must let the third be set at market rates by the most efficient producer, and the mechanism rewards producers who drive the network towards optimality by advantaging them in both the production of blocks and (later) collection of payments.
 
