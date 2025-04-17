@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-01-23T21:00:50.818Z
+date: 2025-04-17T05:19:48.387Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -12,7 +12,7 @@ dateCreated: 2022-01-07T07:06:32.790Z
 
 Head to the **[tutorial section](/tech/tutorials)** to get started and see examples. Saito apps are primarily written in JavaScript, but also support Web Assembly - we recommend beginners stick with JS.
 
-Developers should first **[install](https://wiki.saito.io/tech/installation/javascript)** the Saito Lite Rust Node so they can compile, test and distribute their apps. [SLR](https://wiki.saito.io/tech/installation/javascript) Nodes come with many essential libraries and modules for writing both on-chain and P2P off-chain application logic.
+Developers should first **[install](/tech/install/javascript)** the Saito Lite Rust Node so they can compile, test and distribute their apps. [SLR](https://github.com/SaitoTech/saito-lite-rust) Nodes come with many essential libraries and modules for writing both on-chain and P2P off-chain application logic.
 
 ## Challenges in Web 3
 Our in-house applications and provided developer tools **do not rely on a central server** - you can if you want, but we encourage new developers to leverage Saito's P2P and serverless capabilities.
