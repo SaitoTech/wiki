@@ -2,7 +2,7 @@
 title: Run a Node
 description: 
 published: true
-date: 2025-04-03T06:41:18.632Z
+date: 2025-04-17T06:11:05.074Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -16,7 +16,7 @@ For installation instructions, visit our page on installing our [Saito Rust](htt
 
 Once you have installed the Rust client, we have a description of how to build and host [Web 3 applications on Saito](/tech/applications).
 
-See our section for [building applications](https://wiki.saito.io/en/tech/building_apps) once installation is complete.
+See our section for [building applications](/tech/applications/building_apps) once installation is complete.
 
 Note that an application serving Saito Node, or Saito Nodes generally, do not generate passive validator income like PoS. Saito rewards nodes which generate transaction fees through applications or wallet software, i.e. rewards require bringing value to users.
 
@@ -47,8 +47,8 @@ If you want to get started building applications, we recommend starting with our
 
 Applications like the [Saito Arcade](https://saito.io/arcade) run inside the Saito Wallet, which receives on-chain and off-chain messages and passes them into the modules that are running inside the user wallet. See our [applications page](/tech/applications) for examples and descriptions of the Web 3 apps currently running on Saito.
 -->
-## [Deploy](/tech/javascript/deployment) Your Node
-Visit the [deploy instructions](/tech/javascript/deployment) to learn how to connect your Saito-Lite-Rust Node to the public internet.
+## Deploy Your Node
+Visit the [deploy instructions](/tech/applications/deploy/saito-lite-rust) to learn how to connect your Saito-Lite-Rust Node to the public internet.
   
 <!--
 ## Using Saito in your Browser
