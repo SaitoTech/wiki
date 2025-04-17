@@ -2,7 +2,7 @@
 title: Run a Node
 description: 
 published: true
-date: 2025-04-17T06:11:05.074Z
+date: 2025-04-17T06:11:35.808Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -20,7 +20,7 @@ See our section for [building applications](/tech/applications/building_apps) on
 
 Note that an application serving Saito Node, or Saito Nodes generally, do not generate passive validator income like PoS. Saito rewards nodes which generate transaction fees through applications or wallet software, i.e. rewards require bringing value to users.
 
-## [Installation](/tech/install/javascript)
+## Installation
 
 See the [installation](/tech/install/javascript) page for instructions on installing, configuring and building applications on Saito-Lite-Rust. SLR supports Linux, Mac and Windows.
 
