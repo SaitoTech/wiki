@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-02-20T09:51:23.793Z
+date: 2025-04-17T06:16:34.046Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -19,7 +19,7 @@ Saito is a layer-1 blockchain that fixes underlying incentive misalignments that
 
 The technical problems that Saito solves to accomplish this eliminates the ability for attackers to spend their own money to attack the network. Consensus drives the blockchain into an optimal configuration in which nodes that efficiently collect and process user-originated transactions make money, but nodes that attempt to push the network into a less efficient topology (such as by orphaning blocks or censoring transactions) lose money.
 
-If you are new to Saito, a great way to start learning about what we are building is our one-page description of [Saito Consensus](/consensus). You can also check out our project [roadmap](/roadmap) and [tokenomics](/roadmap), or visit our [applications](/applications) section to get a sense of what applications are running on the network. We also have instructions on how to [run a node](/tech/install) or [build applications](/en/tech/applications/building_apps).
+If you are new to Saito, a great way to start learning about what we are building is our one-page description of [Saito Consensus](/consensus). You can also check out our project [roadmap](/roadmap) and [tokenomics](/roadmap), or visit our [applications](/tech/applications) section to get a sense of what applications are running on the network. We also have instructions on how to [run a node](/tech/install) or [build applications](/en/tech/applications/building_apps).
 
 This wiki is a community-editable knowledge repository. If you'd like to contribute, you can find all pages stored in markdown in our [Saito Wiki Github Repository](https://github.com/saitotech/wiki).  
 
