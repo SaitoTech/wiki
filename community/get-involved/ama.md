@@ -2,7 +2,7 @@
 title: AMA and Cross Promotion
 description: 
 published: true
-date: 2025-02-28T20:33:29.483Z
+date: 2025-04-25T20:38:32.211Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-19T01:13:42.224Z
@@ -14,5 +14,5 @@ We love spreading the word about Saito, and we get a lot of requests of AMAs so 
 
 To be chosen by us, be be sure to:
 
-1. Reach out to us on [Red Square](saito.io/redsquare), not Telegram.
-2. Show engagement from your community about Saito on Red Square and X.
+1. Reach out to us on [Red Square](saito.io/redsquare) rather than Telegram.
+2. Show engagement from your community about Saito on Red Square and [X](https://x.com/SaitoOfficial).
