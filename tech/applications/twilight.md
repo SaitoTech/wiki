@@ -2,15 +2,33 @@
 title: Twilight Struggle
 description: Twilight Struggle on Saito
 published: true
-date: 2024-11-14T18:54:17.234Z
+date: 2025-05-13T18:10:36.305Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-22T11:12:21.027Z
 ---
 
+<div style="float:right; display: inline-block; border: 2px solid #ccc; border-radius: 8px; padding: 2rem; background-color: #f9f9f9; max-width: 200px; opacity:1; z-index:99999">
+  <h3 style="margin-top: 0;">📦 Download Twilight Struggle</h3>
+  <p>Download the latest version of the Twilight Struggle module and drag-and-drop it into your browser to install:</p>
+  <ul>
+    <li><a href="/downloads/twilight-struggle-windows.zip">Saito Module (.saito)</a></li>
+    <li><a href="/downloads/twilight-struggle-mac.dmg">source code (github)</a></li>
+  </ul>
+</div>
+
 # Twilight Struggle
 
 *"Now the trumpet summons us again, not as a call to bear arms –– but a call to bear the burden of a long twilight struggle..."* - John F. Kennedy
+
+<div style="border: 2px solid #ccc; border-radius: 8px; padding: 16px; background-color: #f9f9f9; max-width: 600px; margin: 20px 0;">
+  <h3 style="margin-top: 0;">📦 Download Twilight Struggle App</h3>
+  <p>Download the latest version of the Twilight Struggle module and drag-and-drop it into your browser account:</p>
+  <ul>
+    <li><a href="/downloads/twilight-struggle-windows.zip">Saito Module (.saito)</a></li>
+    <li><a href="/downloads/twilight-struggle-mac.dmg">source code (github)</a></li>
+  </ul>
+</div>
 
 Twilight Struggle soared into popular lists of the best boardgames ever released within a few years of its publication in 2012, and continues to be recognized as one of the most compelling two-player boardgames ever released, with near infinite replayability and strategic challenge. If you are new to the game, you will find Twilight Struggle an incredibly rewarding experience that justifies the minimal investment in time needed to learn the rules.
 <br>
