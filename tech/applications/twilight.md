@@ -2,15 +2,14 @@
 title: Twilight Struggle
 description: Twilight Struggle on Saito
 published: true
-date: 2025-05-13T18:24:20.639Z
+date: 2025-05-13T18:28:15.059Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-22T11:12:21.027Z
 ---
 
-<div style="float:right; display: inline-block; border: 2px solid #ccc; border-radius: 8px; padding: 2rem; background-color: #f9f9f9; max-width: 200px; opacity:1; z-index:99999;position:relative; margin: 0rem !important">
+<div style="float:right; display: inline-block; border: 2px solid #ccc; border-radius: 8px; padding: 1rem; background-color: #f9f9f9; max-width: 175px; opacity:1; z-index:99999;position:relative; margin: 0rem !important">
   <h3 style="margin-top: 0 !important;">📦 Download</h3>
-  <p>Drag-and-drop the latest version of the Twilight Struggle module::</p>
   <ul>
     <li><a href="/downloads/twilight-struggle.saito">Saito Module (.saito)</a></li>
     <li><a href="https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/twilight">source code (github)</a></li>
