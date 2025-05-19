@@ -2,7 +2,7 @@
 title: Saito Roadmap
 description: 
 published: true
-date: 2024-09-28T09:14:53.033Z
+date: 2025-05-19T17:31:01.827Z
 tags: 
 editor: markdown
 dateCreated: 2024-01-23T01:50:57.374Z
@@ -10,11 +10,15 @@ dateCreated: 2024-01-23T01:50:57.374Z
 
 # Development Roadmap
 
-The Saito Roadmap is divided into Four Eras which shift focus from development of the underlying software to distribution of usable apps and growth of an open public ecosystem. We have a separate page with information on [tokenomics](/tokenomics).
-
 <img style="width:100%; max-width: 900px; margin: 25px 0 0;" src="https://saito.tech/wp-content/uploads/2022/04/img_62556f349adbd.png">
 
-### Rust Consensus
+The Saito Roadmap is divided into Four Eras which shift focus from development of the underlying software to development of usable apps and growth of an open public ecosystem supported by a tradeable non-inflationary token. 
+
+Saito is rapidly approaching our third era of development, as applications are getting more polished, organic transaction volume (and application usage) is growing and our team focuses on making it easier to run nodes and build applications.
+
+Although the network is already at the point the best way to learn about it is to use it, we are keeping our description of the four eras below to provide historical context for development and a sense of what work still lies ahead.
+
+### Era #1 - Rust Consensus
 
 *April 2021 - December 2022 (finished)*
 
@@ -22,9 +26,9 @@ Our first era focused on the development of a standalone Rust-client to replace 
 
 Our first era also took us from our marketing launch in April 2021 through the vesting of roughly ~3 billion SAITO tokens, which constitute our current market supply. Vesting and distribution was completed by the end of this era, ushering in our current period of "zero inflation" and token stability.
 
-### Dawn of Persistence
+### Era #2 - Dawn of Persistence
 
-*January 2023 - December 2024 (expected)*
+*January 2023 - December 2025 (current)*
 
 Our Rust codebase has been upgraded into a binary form that can run in browsers and applications (WASM). 
 
@@ -37,6 +41,8 @@ Application development is focused on user growth via RedSquare, a P2P communica
 Tokens which migrate to the network become eligible to earn rewards. This payout is intended to stimulate development, assist with the testing of the ATR mechanism, and provide a subsidy to increase network security during periods of low transaction volume. Our zero-inflation token policy will otherwise continue until the third era.
 
 ### The Real Economy
+
+*September 2025 - December 2026*
 
 The network should have a nucleus of real organic usage around a core set of distributed P2P applications. We will leverage these to scale up our incentive design to incubate a scalable real-world Saito economy. With staking well-tested and token persistence a reality, incentive mechanisms for the release of additional tokens can be finalized, or the outstanding supply can be burned or released into the ATR mechanism in a Bitcoin-style 21-year programmatic release.
 
