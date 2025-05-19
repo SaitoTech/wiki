@@ -2,7 +2,7 @@
 title: Linux Installation
 description: Linux SLR Installation Instructions
 published: true
-date: 2025-05-19T13:02:17.607Z
+date: 2025-05-19T13:02:34.884Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
