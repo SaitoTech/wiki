@@ -2,7 +2,7 @@
 title: Twilight Struggle
 description: Twilight Struggle on Saito
 published: true
-date: 2025-05-19T07:35:05.920Z
+date: 2025-05-19T10:56:18.868Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-22T11:12:21.027Z
@@ -14,9 +14,9 @@ dateCreated: 2024-08-22T11:12:21.027Z
 		<div id="download" class="toc-header" style="margin-top: 0px !important;display: grid;grid-template-columns: min-content 1fr;align-items: start;">
 			<div class="header-box-title" style="width: max-content; float: left; display: relative;"> 📦 Download</div>
 			<ul class="header-box-links" style="display: flex; gap: 3rem; padding-top: 0rem; margin-left: 1rem;">
-				<li style="margin-top: 0px;"><a href="/downloads/twilight-struggle.saito" class="is-asset-link">Saito Module</a></li>
-				<li style="margin-top: 0px;"><a href="https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/twilight" class="">Source Code</a></li>
-				<li style="margin-top: 0px;"><a href="https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/twilight" class="">Installation Guide</a></li>
+				<li style="margin-top: 0px;"><a href="https://wiki.saito.io/tech/applications/mods/twilight.saito" class="is-asset-link">Saito Module</a></li>
+				<li style="margin-top: 0px;"><a href="https://github.com/SaitoTech/saito/tree/master/mods/twilight" class="">Source Code</a></li>
+				<li style="margin-top: 0px;"><a href="https://wiki.saito.io/tech/applications/install" class="">Installation Guide</a></li>
 			</ul>
 		</div>
 	</div>
