@@ -2,7 +2,7 @@
 title: Deploy Saito Instance
 description: 
 published: true
-date: 2025-05-19T17:10:56.026Z
+date: 2025-05-19T17:12:08.721Z
 tags: installation
 editor: markdown
 dateCreated: 2023-02-23T07:15:16.260Z
@@ -18,7 +18,7 @@ Before you start, be sure you've completed the [installation instructions](/inst
 
 ## Configuration
 
-Generate a custom options file make a `options.conf` in the `config/` folder with the following content; be sure to set your endpoint to your domain:
+Generate a custom options file that includes the host and port that you will expose publicly on your server -- make an `options.conf` in the `config/` folder with the following content; be sure to set your endpoint to your domain:
 ```
 {
 	"server":{
@@ -35,9 +35,9 @@ Generate a custom options file make a `options.conf` in the `config/` folder wit
 ```
 
 ## WebServer, reverse proxy and HTTPS
-Make sure to point your domain to your VPS or server.
+Make sure to point your domain to the same VPS or server that will run Saito.
 
-The following instructions will use ***NGINX*** as the webserver and secure it with Let's Encrypt. Alternatives webserver should follow the same logic, please refer to your service's manual/documentation.
+The following instructions assume you are using ***NGINX*** as your webserver and secure it with Let's Encrypt. Alternatives webservers should follow the same logic, please refer to your service's manual/documentation.
 
 ```
 sudo apt-get update
