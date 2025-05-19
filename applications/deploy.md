@@ -2,7 +2,7 @@
 title: Application Deployment
 description: Directory for the various ways apps can be deployed on the Saito Network
 published: true
-date: 2024-11-21T20:26:46.909Z
+date: 2025-05-19T15:24:29.456Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-21T19:54:32.439Z
