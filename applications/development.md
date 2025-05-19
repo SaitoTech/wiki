@@ -2,7 +2,7 @@
 title: Developing Saito Applications
 description: 
 published: true
-date: 2025-05-19T17:57:41.508Z
+date: 2025-05-19T18:06:06.051Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
@@ -10,22 +10,13 @@ dateCreated: 2022-01-07T07:06:32.790Z
 
 # Developing Saito Applications
 
-Want to get started building applications? This page assumes you have a local version of Saito running and know how to install applications onto it -- if you do not know how to do this the first step is to [install](/install) Saito locally so you have a development environment.
+Want to build Saito applications? The first thing to do is get a local version of Saito running and learn how to install applications -- if you do not know how to run a node the first step is to [install](/install) Saito locally so you have a development environment.
 
-Once your module is finished you can [compile it](/applications/develop) into a staHead to the **[tutorial section](/tech/tutorials)** for help getting started. Saito apps are primarily written in javascript, but can also support Web Assembly - we recommend beginners stick with JS.
+Once you have built an application, you can visit this page to learn how to [compile it](/applications/compile) into a standalone .saito file that users can drag-and-drop into their browsers and start using in seconds. Before we are ready for that we'll need to build an app though, which is the focus on this page...
 
-Compile your application to the **[tutorial section](/tech/tutorials)** to get started and see examples. Saito apps are primarily written in JavaScript, but also support Web Assembly - we recommend beginners stick with JS.
+## Tutorials 
 
-
-## Challenges in Web3
-
-Web3 developers must ask: "Where is data stored or processed without a central server?" User cache, archive nodes, on-chain, a central database, a hybrid approach? Every option has tradeoffs worth understanding.
-
-If this is overwhelming, the team is happy to help. Use a pencil and paper and draw a basic UI and how you expect it to operate - we'll be happy to get in touch directly and assist so long as you have a basic plan.
-
-## Beginners Tutorials 
-
-Browse the **[complete tutorial series](/tech/tutorials)** or start with the basics:
+We have a full **[tutorial series](/tech/tutorials)** that starts with the basics and works towards more advanced materials. If you would like to learn something that is not covered, drop by RedSquare and mention it:
 
 | Tutorial    | Title | Description |
 |:----------- |:----- |:----------- |
