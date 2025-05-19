@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2025-05-19T16:16:51.037Z
+date: 2025-05-19T17:13:53.117Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -10,7 +10,9 @@ dateCreated: 2024-10-15T23:32:31.744Z
 
 # Installing Saito
 
-This page assumes you want to run a node on the Saito network or develop Saito Apps. This page walks you through the process of installing the default Saito client. On a machine with standard dev-tools installed, the process should take about 10 minutes. If you are looking to install something else, we have an [overview](/install/overview) of several other Saito-related software packages.
+This page assumes you want to run a node on the Saito network or develop Saito Apps. This page walks you through the process of installing the default Saito client. On a machine with standard dev-tools installed, the process should take about 10 minutes. 
+
+NOTE: if you are looking to install some other Saito-related software package, the best place to start is our [overview](/install/overview) of several other Saito-related software packages. We also have a quick guide for those looking to [deploy](/install/deploy) Saito on a remote server instead of a local machine.
 
 ### Installation Requirements:
 
