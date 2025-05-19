@@ -2,7 +2,7 @@
 title: Twilight Struggle
 description: Twilight Struggle on Saito
 published: true
-date: 2025-05-19T04:37:58.633Z
+date: 2025-05-19T07:35:05.920Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-22T11:12:21.027Z
@@ -27,11 +27,12 @@ dateCreated: 2024-08-22T11:12:21.027Z
 
 *"Now the trumpet summons us again, not as a call to bear arms –– but a call to bear the burden of a long twilight struggle..."* - John F. Kennedy
 
-Twilight Struggle soared into popular lists of the best boardgames ever released within a few years of its publication in 2012, and continues to be recognized as one of the most compelling two-player boardgames ever released, with near infinite replayability and strategic challenge. If you are new to the game, you will find Twilight Struggle an incredibly rewarding experience that justifies the minimal investment in time needed to learn the rules.
+Twilight Struggle's popularity soared within a few years of its publication in 2012, and continues to be recognized as one of the most compelling two-player boardgames ever created, with near infinite replayability and strategic challenge. If you are new to the game, you will find Twilight Struggle an incredibly rewarding experience that justifies the minimal investment needed to learn the rules.
+
 <br>
 <img src="/ts.png" style="max-width: 600px;">
 
-The game itself is a strategic simulation of the Cold War in which one player assumes the role of the USSR and the other attempts to contain them as the US. The game takes place over 10 rounds in which the critical events of the Cold War may or may not be played depending on which cards and dealt and played to which player. Will Castro take Cuba? And will the powers fall into or manage nuclear brinkmanship? Every game is different.
+The game itself is a strategic simulation of the Cold War in which one player assumes the role of the USSR and the other attempts to contain them as the US. The game takes place over 10 rounds in which the critical events of the Cold War may or may not happen depending on which cards are dealt and played by which player. Will Castro take Cuba? Will the powers succumb or manage nuclear brinkmanship? Every game is different.
 
 The defining mechanic of Twilight Struggle is that as players must choose to use cards for the "events" described on them, or play those cards for points -- in which case the event will always fire if it is an "opponent" event. This results in a game of crisis management as players seek to dominate regions to score points from doing so, while defusing crises that can be triggered by their own actions. Will their opponents be able to take advantage of those weaknesses, or will they be struggling with crises of their own making? These sorts of calculations lie at the heart of the game.
 
