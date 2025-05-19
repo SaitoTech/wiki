@@ -2,7 +2,7 @@
 title: Windows Installation
 description: 
 published: true
-date: 2025-05-19T13:08:22.796Z
+date: 2025-05-19T13:10:15.234Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-30T09:53:07.391Z
@@ -18,3 +18,8 @@ This page contains instructions on how to download and install the default Saito
 * node.js (v.16+), npm (v6+)
 * typescript
 
+#### 1) Installation
+
+The following link provides a step-by-step guide on the prerequisites needed to install NodeJS on Windows machines. If you have a Windows machine and run into problems with the installation process, we welcome contact and will happily work with you to improve this section.
+
+https://www.geeksforgeeks.org/install-node-js-on-windows/
