@@ -2,7 +2,7 @@
 title: Network Configuration for Saito-lite-Rust
 description: Information on network configuration files and settings for deployed Saito-lite-Rust nodes.
 published: true
-date: 2024-11-20T04:10:39.991Z
+date: 2025-05-19T16:48:21.008Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T04:10:39.991Z
@@ -12,7 +12,7 @@ dateCreated: 2024-11-20T04:10:39.991Z
 
 The `config/options.conf` file specifies network configuration options like the IP address on which the server runs and the ports it should open and the peers to which it should connect.
 
-The template file which comes with a fresh install, `config/options.conf.template`, can be used as a starting point and refernce, and will look similar to this:
+The template file which comes with a fresh install, `config/options.conf.template`, can be used as a starting point and reference. It will look similar to this:
 
 ```json
 {
@@ -49,3 +49,19 @@ The template file which comes with a fresh install, `config/options.conf.templat
   "wallet": {}
 }
 ```
+
+You do not need to provide information for most of these fields. The most important are the following:
+
+```
+  "server": {
+    "host": "localhost",
+    "port": 12101,
+    "protocol": "http",
+    "endpoint": {
+      "host": "localhost",
+      "port": 12101,
+      "protocol": "http"
+    },
+```
+
+`host` and `port` indicate the address of the server as visible to the operating system and any local apps. If you are running Saito on a remote server you should provide the `host` and `port` that users will use to connect to the server as the `endpoint`. 
