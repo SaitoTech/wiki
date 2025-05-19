@@ -2,7 +2,7 @@
 title: Install
 description: Installation directory for various Saito clients
 published: true
-date: 2025-05-19T16:12:34.034Z
+date: 2025-05-19T16:13:38.909Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T02:40:42.538Z
@@ -52,4 +52,11 @@ The software in the Saito-Core repository is made available to the NodeJS javasc
 - [Github Repository](https://github.com/saitotech/saito/tree/master/rust/saito-wasm)
 
 - [Installation instructions](./install/saito-wasm)
+
+
+
+## Saito-JS
+
+This file contains the javascript handles for interacting with the WASM file produced by the Saito-WASM package. It works together with this package to define the interface through which javascript applications can send requests down to the core Rust data-layer and fetch results back.
+
 
