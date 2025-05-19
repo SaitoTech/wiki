@@ -2,15 +2,17 @@
 title: Deploy Saito Instance
 description: 
 published: true
-date: 2025-05-19T15:21:29.838Z
+date: 2025-05-19T17:10:56.026Z
 tags: installation
 editor: markdown
 dateCreated: 2023-02-23T07:15:16.260Z
 ---
 
-# Deploy your Saito on a VPS or server - Ubuntu 22.04 (LTS) x64
+# Deploy Saito on a VPS or server - Ubuntu 22.04 (LTS) x64
 
-Be sure you've completed the [installation instructions](/tech/install/javascript) and have a functioning [Saito Lite Rust Client](https://github.com/saitotech/saito-lite-rust) running on your machine before continuing.
+This page provides a quick guide to deploying Saito on a VPS or server. It will walk you through the process of handling the common supplemental problems like getting an SSL cert and customizing your configuration files so you can access your Saito install remotely instead of through localhost.
+
+Before you start, be sure you've completed the [installation instructions](/install) for the standard Saito client and have successfully installed [Saito](https://github.com/saitotech/saito) on your own machine before continuing. The rest of this write-up assumes basic familiarity with the process of doing so.
 
 <hr>
 
