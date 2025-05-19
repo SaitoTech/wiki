@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2025-05-19T12:58:19.037Z
+date: 2025-05-19T12:59:20.113Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -15,8 +15,6 @@ The default [Saito](https://github.com/saitotech/saito) client is programmed in 
 ## Installation Instructions
 
 This page describes the Specific instructions for installing the necessary tools are available for [Linux](./javascript/linux), [Mac](./javascript/mac) and [Windows](./javascript/windows).
-
-
 
 ### Requirements:
 
