@@ -2,7 +2,7 @@
 title: Poker
 description: 
 published: true
-date: 2025-05-19T13:56:37.136Z
+date: 2025-05-19T14:54:26.045Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-23T00:58:05.891Z
@@ -10,7 +10,7 @@ dateCreated: 2023-01-23T00:58:05.891Z
 
 # Saito Poker
 
-<img src="/poker-wide.png" style="maxwidth=600px;">
+<img src="/poker-wide.png" style="max-width=600px;">
 
 Saito Poker is an implementation of Texas Hold'em Poker that uses advanced cryptographic techniques to allow players to play the game in a provably-fair fashion without the need for a trusted third-party. It was the initial proof of concept for [Saito Web 3 Gaming](https://wiki.saito.io/tech/applications/arcade) and paved the way for a wide variety of games.
 
