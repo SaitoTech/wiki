@@ -2,13 +2,13 @@
 title: Network Configuration for Saito-lite-Rust
 description: Information on network configuration files and settings for deployed Saito-lite-Rust nodes.
 published: true
-date: 2025-05-19T16:55:21.734Z
+date: 2025-05-19T16:55:31.854Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T04:10:39.991Z
 ---
 
-# Network Configuration for Saito-lite-Rust
+# Saito Network Configuration
 
 The `config/options.conf` file specifies network configuration options like the IP address on which the server runs and the ports it should open and the peers to which it should connect. The template file `config/options.conf.template` will run a server at `http://localhost:12101` by default. You can rename or edit it as you'd like.
 
