@@ -2,7 +2,7 @@
 title: Settlers of Saitoa
 description: 
 published: true
-date: 2024-09-15T21:13:09.287Z
+date: 2025-05-19T13:55:38.310Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-29T19:34:11.091Z
