@@ -2,7 +2,7 @@
 title: Linux Installation
 description: Linux SLR Installation Instructions
 published: true
-date: 2025-05-19T13:02:34.884Z
+date: 2025-05-19T13:03:25.517Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-18T09:49:16.786Z
@@ -25,4 +25,4 @@ sudo apt-get install -y nodejs
 
 ### 2) Download Saito
 
-At this point, you should be ready to [install Saito](https://wiki.saito.io/install) using our standard instructions for Linux and Mac nodes. If you run into any problems that are not documented that require explanation, please contact the team so we can update hte documentation here.
+At this point, you should be ready to [install Saito](https://wiki.saito.io/install) using our standard instructions for Linux and Mac nodes. If you run into any problems that are not documented that require explanation, please contact the team so we can update the documentation here.
