@@ -1,23 +1,25 @@
 ---
-title: Saito Applications
+title: Developing Saito Applications
 description: 
 published: true
-date: 2025-05-19T15:20:06.745Z
+date: 2025-05-19T17:57:41.508Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T07:06:32.790Z
 ---
 
-# Building Apps
+# Developing Saito Applications
 
-Head to the **[tutorial section](/tech/tutorials)** to get started and see examples. Saito apps are primarily written in JavaScript, but also support Web Assembly - we recommend beginners stick with JS.
+Want to get started building applications? This page assumes you have a local version of Saito running and know how to install applications onto it -- if you do not know how to do this the first step is to [install](/install) Saito locally so you have a development environment.
 
-Developers should first **[install](/tech/install/javascript)** the Saito Lite Rust Node so they can compile, test and distribute their apps. [SLR](https://github.com/SaitoTech/saito-lite-rust) Nodes come with many essential libraries and modules for writing both on-chain and P2P off-chain application logic.
+Once your module is finished you can [compile it](/applications/develop) into a staHead to the **[tutorial section](/tech/tutorials)** for help getting started. Saito apps are primarily written in javascript, but can also support Web Assembly - we recommend beginners stick with JS.
 
-## Challenges in Web 3
-Our in-house applications and provided developer tools **do not rely on a central server** - you can if you want, but we encourage new developers to leverage Saito's P2P and serverless capabilities.
+Compile your application to the **[tutorial section](/tech/tutorials)** to get started and see examples. Saito apps are primarily written in JavaScript, but also support Web Assembly - we recommend beginners stick with JS.
 
-Web 3 developers must ask: "Where is data stored or processed without a central server?" User cache, archive nodes, on-chain, a central databse, a hybrid approach? Every option has tradeoffs worth understanding.
+
+## Challenges in Web3
+
+Web3 developers must ask: "Where is data stored or processed without a central server?" User cache, archive nodes, on-chain, a central database, a hybrid approach? Every option has tradeoffs worth understanding.
 
 If this is overwhelming, the team is happy to help. Use a pencil and paper and draw a basic UI and how you expect it to operate - we'll be happy to get in touch directly and assist so long as you have a basic plan.
 
