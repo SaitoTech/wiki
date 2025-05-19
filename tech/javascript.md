@@ -2,7 +2,7 @@
 title: Run a Node
 description: 
 published: true
-date: 2025-04-17T06:11:35.808Z
+date: 2025-05-19T10:21:52.495Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -10,36 +10,27 @@ dateCreated: 2024-10-15T23:32:31.744Z
 
 # Running a Node
 
-Running a Saito node requires downloading our Rust software client and configuring it to run whichever modules you want installed on your node. This page describes the process of doing this. We assume a Linux or Mac system and basic familiarity with the comand-line.
-
-For installation instructions, visit our page on installing our [Saito Rust](https://github.com/SaitoTech/saito-lite-rust) client. This page covers the process of downloading the software, installing any necessary dependencies, and configuring.
-
-Once you have installed the Rust client, we have a description of how to build and host [Web 3 applications on Saito](/tech/applications).
-
-See our section for [building applications](/tech/applications/building_apps) once installation is complete.
-
-Note that an application serving Saito Node, or Saito Nodes generally, do not generate passive validator income like PoS. Saito rewards nodes which generate transaction fees through applications or wallet software, i.e. rewards require bringing value to users.
-
-## Installation
-
-See the [installation](/tech/install/javascript) page for instructions on installing, configuring and building applications on Saito-Lite-Rust. SLR supports Linux, Mac and Windows.
+Running a Saito node requires downloading our a Saito client and configuring it to run any modules you wish. This page describes the first step in doing this -- downloading and installing the default Saito client. We assume a Linux or Mac system and basic familiarity with the comand-line.
 
 #### Requirements:
 - Machine with at least 2GB RAM.
 - Build tools: git, g++, make, python, tsc
 - Stack: node.js (v.16+), npm (v6+)
 - TypeScript
-- Saito-Lite-Rust - [Github](https://github.com/saitotech/saito-lite-rust)
+- https://github.com/saitotech/saito-lite-rust
 
 
+#### Installation Instructions:
 
-<!--
-Saito-Lite-Rust runs atop NodeJS. Instructions for installing are available for:
+Instructions for installing Saito are available for the following platforms:
 
 - [Linux](/tech/installation/javascript/linux)
 - [Mac](/tech/installation/javascript/mac)
 - [Windows](/tech/installation/javascript/windows)
 
+
+
+<!------
 
 ## [Building Apps](/tech/applications/building_apps)
 
@@ -63,10 +54,12 @@ Take your next steps into application development with [tutorial one](https://wi
 -->
 
 
-## External References
+## Looking for Something Else?
 
 Source code and more documentation available on our public GitHub repository:
 
-https://github.com/saitotech/saito-lite-rust
+https://github.com/saitotech/saito
+
+Tutorials on building applications are available in our section for [building applications](/tech/applications/building_apps) once installation is complete.
 
 
