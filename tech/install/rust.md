@@ -2,7 +2,7 @@
 title: Saito Rust - Installation Instructions
 description: 
 published: true
-date: 2025-05-19T13:47:50.350Z
+date: 2025-05-19T15:24:08.379Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:32:52.212Z
@@ -10,22 +10,13 @@ dateCreated: 2023-10-13T08:32:52.212Z
 
 # Saito Rust Installation
 
-This guide provides step-by-step instructions for setting up the Saito Rust client. There are two reasons that you might want to install this software instead of the NodeJS client :
+This guide provides step-by-step instructions for setting up the Saito Rust client. There are two main reasons you might want to install this software instead of the NodeJS client: (1) you wish to run a high-performance client without support for web3 apps, or (2) you wish to modify consensus-level code, and compile a version of your code to work with a custom NodeJS client.
 
- * you wish to run a high-performance client that will merely
-   route transactions and do not need to server web3 apps to 
-   visitors or provide a server-interface to web3 applications.
-   
- * you wish to modify consensus code, and compile a version of
-   your custom code so that it can be used by the NodeJS client
-   instead of the default version that NodeJS will fetch from 
-   the Saito repository.
+In short, if you do not know what you are doing here, you probably want to install our [regular client](/install) instead. The following instructions assume you are installing this client remotely on a Unix-style OS.
 
-This guide provides step-by-step instructions for setting up the Saito Rust client on a Linux and Mac environment. If you have not already installed a version of Saito this is not the client to start with. You should begin by installing the standard NodeJS version of Saito that supports browser-based applications.
+### Step 1: Download the Software
 
-### Step 1: Download the Softwaret
-
-Make sure you have a local copy of the Saito repository installed on your local machine or server. This is the same repository that contains the Saito NodeJS software. The Rust software is contained within this repository within the ```/rust``` subdirectory.
+Make sure you have a local copy of the Saito repository installed on your local machine or server. The Rust software packages that we will be compiling and running are contained in this repository within the ```/rust``` subdirectory.
 
 ````bash
 git clone https://github.com/saitotech/saito
