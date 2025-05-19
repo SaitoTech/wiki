@@ -2,13 +2,13 @@
 title: SaitoArcade
 description: 
 published: true
-date: 2024-12-14T09:28:43.654Z
+date: 2025-05-19T13:54:59.234Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-19T20:49:30.032Z
 ---
 
-# Arcade
+# Saito Arcade
 
 [Saito Arcade](https://saito.io/arcade/) is an open source gaming portal that runs as a fully-distributed peer-to-peer browser application. It serves as a hub for any installed game built with the [Saito Game Engine](#mentalPoker) - a system which allows trustless P2P games, even complex games, with advanced public key cryptography.
 
