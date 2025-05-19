@@ -2,7 +2,7 @@
 title: Network Configuration for Saito-lite-Rust
 description: Information on network configuration files and settings for deployed Saito-lite-Rust nodes.
 published: true
-date: 2025-05-19T16:48:21.008Z
+date: 2025-05-19T16:55:21.734Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T04:10:39.991Z
@@ -10,9 +10,7 @@ dateCreated: 2024-11-20T04:10:39.991Z
 
 # Network Configuration for Saito-lite-Rust
 
-The `config/options.conf` file specifies network configuration options like the IP address on which the server runs and the ports it should open and the peers to which it should connect.
-
-The template file which comes with a fresh install, `config/options.conf.template`, can be used as a starting point and reference. It will look similar to this:
+The `config/options.conf` file specifies network configuration options like the IP address on which the server runs and the ports it should open and the peers to which it should connect. The template file `config/options.conf.template` will run a server at `http://localhost:12101` by default. You can rename or edit it as you'd like.
 
 ```json
 {
@@ -33,23 +31,9 @@ The template file which comes with a fresh install, `config/options.conf.templat
     "block_fetch_batch_size": 10
   },
   "peers": [],
-  "spv_mode": false,
-  "browser_mode": false,
-  "blockchain": {
-    "last_block_hash": "0000000000000000000000000000000000000000000000000000000000000000",
-    "last_block_id": 0,
-    "last_timestamp": 0,
-    "genesis_block_id": 0,
-    "genesis_timestamp": 0,
-    "lowest_acceptable_timestamp": 0,
-    "lowest_acceptable_block_hash": "0000000000000000000000000000000000000000000000000000000000000000",
-    "lowest_acceptable_block_id": 0,
-    "fork_id": "0000000000000000000000000000000000000000000000000000000000000000"
-  },
   "wallet": {}
 }
 ```
-
 You do not need to provide information for most of these fields. The most important are the following:
 
 ```
@@ -65,3 +49,21 @@ You do not need to provide information for most of these fields. The most import
 ```
 
 `host` and `port` indicate the address of the server as visible to the operating system and any local apps. If you are running Saito on a remote server you should provide the `host` and `port` that users will use to connect to the server as the `endpoint`. 
+
+### Configuration Reference
+
+- host: IP address the server listens on. 127.0.0.1 for localhost.
+- port: Port number for the server. Default is 12101.
+- protocol: Network protocol, http in this case.
+- endpoint: Specifies the endpoint details, mirroring the server's configuration for external access.
+- verification_threads: Number of threads for processing verification tasks.
+- channel_size: Maximum number of queued tasks or messages.
+- stat_timer_in_ms: Interval for reporting stats or performing periodic checks.
+- reconnection_wait_time: Wait time before attempting reconnection in ms. Default is 10000.
+- thread_sleep_time_in_ms: Sleep time for background threads in ms
+- block_fetch_batch_size: Number of blocks fetched per batch during sync.
+
+### Peers Configuration
+- peers: An array of peer nodes the server will connect to.
+
+Note that each peer object includes host, port, protocol, and synctype. Since these connections will be made over-the-network, the `host` and `port` you provide for any peers should be the publicly-available information provided in *their* options.conf as an endpoint.
