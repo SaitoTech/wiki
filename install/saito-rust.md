@@ -2,7 +2,7 @@
 title: Saito Rust - Installation Instructions
 description: 
 published: true
-date: 2025-05-19T15:24:26.274Z
+date: 2025-05-19T15:43:33.254Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:32:52.212Z
@@ -31,7 +31,7 @@ cd saito/rust/scripts
 ./initial_setup.sh
 ````
 
-For a detailed explanation of what this script does, please refer to the [Rust bootstrap script documentation](./rust/rust-bootstrap-script). Our goal with this script is to make initial setup as painless as possible, so please contact our team if you have any problems running this script.
+For a detailed explanation of what this script does, please refer to the [Rust bootstrap script documentation](./saito-rust/setup-script). Our goal with this script is to make initial setup as painless as possible, so please contact our team if you have any problems running this script.
 
 #### Step 3: Run the Application
 
