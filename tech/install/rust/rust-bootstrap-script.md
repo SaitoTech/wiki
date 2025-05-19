@@ -2,13 +2,13 @@
 title: Saito-Rust Bootstrap Script
 description: 
 published: true
-date: 2025-05-19T15:41:38.452Z
+date: 2025-05-19T15:42:03.696Z
 tags: 
 editor: markdown
 dateCreated: 2024-03-06T10:09:36.384Z
 ---
 
-# Saito Rust Setup Script
+# Saito Rust Bootstrap/Setup Script
 
 This page documents the setup script for configuring a Saito Rust node. The script automates the otherwise process of configuring the environment, managing configuration files, installing dependencies, and starting the node. It is provided here as a reference.
 
