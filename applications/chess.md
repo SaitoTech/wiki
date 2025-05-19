@@ -2,7 +2,7 @@
 title: Chess
 description: 
 published: true
-date: 2024-09-15T21:23:18.758Z
+date: 2025-05-19T15:18:55.435Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-23T01:18:24.058Z
