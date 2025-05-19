@@ -2,7 +2,7 @@
 title: Saito WASM - Installation Instructions
 description: 
 published: true
-date: 2024-11-16T21:51:19.822Z
+date: 2025-05-19T15:35:10.473Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:35:18.101Z
@@ -10,7 +10,11 @@ dateCreated: 2023-10-13T08:35:18.101Z
 
 # Saito WASM
 
-Saito WASM is a version of the Rust core compiled into a portable library that can interact with other programming languages like javascript. To use Saito WASM you must first ```compile``` the code and then ```link``` it to your external application.
+First things first, if you do not know what WASM is you do not need this page and should look at installing the [default](/install) version of Saito instead. This version uses a version of the Saito WASM client that is precompiled and will support everything you need to run the software.
+
+The reason you will need to modify this code is if you want to modify the core Rust-defined code and add additional functions that apps written in other languages can use to interact with it -- sending data into the core software or fetching fata from it. The code in the ```/saito/rust/saito-wasm``` subdirectory is what handles this, and will need to be modified in this case.
+
+To make changes to Saito-WASM, you must first ```compile``` the code and then ```link``` it to your external application. This page contains instructions on how to do this.
 
 #### Requirements:
 
