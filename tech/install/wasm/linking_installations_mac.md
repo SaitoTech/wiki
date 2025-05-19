@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2024-11-21T05:52:08.330Z
+date: 2025-05-19T15:29:12.096Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
@@ -11,9 +11,9 @@ dateCreated: 2023-09-20T20:31:08.392Z
 
 # Mac (M1) Specific Installations
 
-This page assumes you are using a Mac with the M1 chip and want to compile a custom version of the Saito WASM library and have it used by a locally-compiled version of Saito Javascript. If you are trying to compile Saito on another OS please see our [standard installation guide](/tech/install/wasm).
+This page assumes you are using a Mac with the M1 chip and want to compile a custom version of the Saito WASM library and have it used by a locally-compiled version of Saito Javascript. If you are trying to compile Saito-WASM on another OS please see our [standard installation guide](/install/-saitowasm).
 
-NOTE: unless you know why you are doing this you probably don't need to do it at all! Our Saito Javascript repository (saito-lite-rust) comes bundled with a pre-compiled version of the WASM saito-js library included its package.json and will work without the need to compile or link anything locally. These steps are only necessary if you want to modify the Rust/Javascript code or debug core parts of the software from within javascript.
+PLEASE NOTE: unless you know why you are here you probably don't need to do this at all! The default version of Saito comes bundled with a pre-compiled version of this WASM library. This bundled library will work out-of-the-box without the need to compile or link anything locally. These steps are only necessary if you want to modify the core Rust software and use your custom changes within our standard NodeJS client.
 
 ## Prerequisites
 
@@ -23,7 +23,9 @@ Before starting, ensure:
 
 - homebrew is installed - [install](https://brew.sh/)
 
-- you have the [saito-lite-rust](https://github.com/SaitoTech/saito-lite-rust), and [saito-rust-workspace](https://github.com/SaitoTech/saito-rust-workspace) repositories cloned on your local machine and are capable of compiling them.
+- you have cloned the [saito repository](https://github.com/SaitoTech/saito) 
+
+- you can compile both the [NodeJS](/install) and [Rust](/install/saito-rust) clients
 
 
 ## Step 1. Compiling Saito WASM
