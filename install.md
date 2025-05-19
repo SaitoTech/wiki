@@ -2,28 +2,24 @@
 title: Install
 description: 
 published: true
-date: 2025-05-19T12:59:20.113Z
+date: 2025-05-19T15:53:57.740Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
 ---
 
-# Install Saito
+# Installing Saito
 
-The default [Saito](https://github.com/saitotech/saito) client is programmed in NodeJS and serves Saito applications to browsers. It also serves as a contact point on the network for other wallets and servers that form the P2P network. This page contains instructions on how to setup a default node. 
+This page assumes you want to run a node on the Saito network, or develop Saito Apps on your own machine. In both cases, the first step is to download and install the Saito software client. This page walks you through this process using the simplest method possible. The instructions below should take about 10 minutes start-to-finish.
 
-## Installation Instructions
-
-This page describes the Specific instructions for installing the necessary tools are available for [Linux](./javascript/linux), [Mac](./javascript/mac) and [Windows](./javascript/windows).
-
-### Requirements:
+### Installation Requirements:
 
 - Machine with at least 2GB RAM.
 - Build tools: git, g++, make, python, tsc
 - Stack: node.js (v.16+), npm (v6+)
 - TypeScript
 
-We have dedicated pages describing the process of installing these prerequisite tools for [Linux](/install/linux), [Mac](/install/mac) and [Windows](/install/windows).
+Most development machines will have these packages installed. If your machine does not we have dedicated pages describing the process of installing these tools for [Linux](/install/linux), [Mac](/install/mac) and [Windows](/install/windows).
 
 Once prerequisites are installed, the following instructions should be similar for Mac, Windows and the broader audience of Linux users; if you are not using Ubuntu, substitute in your package manager where appropriate.
 
