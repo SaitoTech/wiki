@@ -2,7 +2,7 @@
 title: Application Configuration
 description: Information on configuration settings for Saito-lite-Rust applications
 published: true
-date: 2024-11-21T19:45:33.700Z
+date: 2025-05-19T16:34:06.366Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T03:23:11.530Z
@@ -10,17 +10,19 @@ dateCreated: 2024-11-20T03:23:11.530Z
 
 # Application Configuration for Saito-lite-Rust
 
-This page is dedicated to configuring how Saito applications are compiled, served and run on a [Saito-lite-Rust]() Node. It focuses on modifications which can be made to the `/config/modules.config.js` file.
+This page describes how to customize the modules/applications running on a Saito node. This is useful if you want users who visit your server to have a default set of applications available and avoid their needing to download or install applications separately through their browser.
 
-## Module Configuration (modules.config.js)
+We assume you are running the [default saito client](/install). Once the server is running, you can customize the modules it supports by editing the `/config/modules.config.js` file.
 
-<!--
-Once you have installed Saito-Lite-Rust you will be ready to configure the server to run the applications you wish to support and provide them to browsers on-demand. This section covers these follow-on configuration steps. -->
+## Module Directory
 
-<!--
-Saito uses two main configuration files. The first is ```config/options``` which specifies network configuration options like the IP address on which the server runs and the ports it should open and the peers to which it should connect.-->
+Copy any modules that you want to provide to users by default into your local ```/mods``` directory. Unless you've been moving files around, this will be located at the ```/saito/node/mods/``` sub-directory in your local repository -- you'll see that this directory already contains a number of modules by default.
 
-The `config/modules.config.js` file specifies whether an application in the `mods/` folder should run on the server, the browsers connected to it, or both. The file is structured like this (though the default will be more heavily populated with applications):
+You can find many more in our own [Saito modules repository](https://github.com/SaitoTech/saito/tree/master/node/mods). If you aren't sure what kind of applications are available, considering browsing through the [applications](/applications) section of this wiki. 
+
+## Module Configuration
+
+The `config/modules.config.js` file contains two sections ```core``` and ```lite```. The  whether an application in the `mods/` folder should run on the server, the browsers connected to it, or both. The file is structured like this (though the default will be more heavily populated with applications):
 
 ```js
 module.exports = {
