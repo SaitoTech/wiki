@@ -2,7 +2,7 @@
 title: Saito Rust - Installation Instructions
 description: 
 published: true
-date: 2025-05-19T15:24:08.379Z
+date: 2025-05-19T15:24:26.274Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:32:52.212Z
