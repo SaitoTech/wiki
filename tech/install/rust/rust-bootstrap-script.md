@@ -2,37 +2,37 @@
 title: Saito-Rust Bootstrap Script
 description: 
 published: true
-date: 2024-11-16T21:48:12.790Z
+date: 2025-05-19T15:41:38.452Z
 tags: 
 editor: markdown
 dateCreated: 2024-03-06T10:09:36.384Z
 ---
 
-# Documentation for Saito Rust Setup Script
+# Saito Rust Setup Script
 
-This documentation covers the setup script for configuring a Saito Rust node. The script automates the process of configuring the environment, managing configuration files, installing dependencies, and starting the node.
+This page documents the setup script for configuring a Saito Rust node. The script automates the otherwise process of configuring the environment, managing configuration files, installing dependencies, and starting the node. It is provided here as a reference.
 
 ## Usage
-For executing the script, navigate to the script directory and launch ```initial_setup.sh```
+To execute the script, navigate to ```/saito/rust/saito-rust/scripts``` and launch ```initial_setup.sh```
 
 ## Overview
 The script performs the following main tasks:
 
-- Configures the Node
-- Creates Necessary Directories and Files
-- Installs Dependencies
-- Starts the node
+- configures the node
+- creates necessary directories and files
+- installs dependencies
+- starts the node
 
 
 ###  Configuring the Node
- Automatically configures the node. For manual node configuration instructions, please see [saito-rust-config](/tech/install/rust/saito-rust-config)
+Automatically configures the node. For manual node configuration instructions, please see [saito-rust](/install/saito-rust) installation page.
 
 ### Issuance File Setup
 
- Creates an issuance file from a template if it's missing.
+Creates an issuance file from a template if one is missing. The issuance file specifies which addresses receive tokens in the first block. After this block, no additional tokens may be added to the network.
 
 Key Operations:
-- Issuance file setup.
+- issuance file setup.
 
 
 ### Installing Dependencies
@@ -40,9 +40,9 @@ Key Operations:
 Detects the operating system (macOS or Linux) and runs the corresponding bootstrap script (bootstrap_mac.sh or bootstrap_linux.sh). These scripts are responsible for installing necessary software packages, ensuring Rust is installed, and setting up the environment for the Saito Rust project.
 
 Key Operations:
-- Operating system detection.
-- Execution of OS-specific bootstrap scripts.
-- Rust installation and environment setup.
+- operating system detection.
+- execution of OS-specific bootstrap scripts.
+- rust installation and environment setup.
 
 ### Starting the Node
 Prompts the user to start the node immediately after setup. If the user agrees, it starts the node
@@ -52,7 +52,7 @@ Prompts the user to start the node immediately after setup. If the user agrees, 
 - ``` bootstrap_linux.sh```
 - ``` bootstrap_mac.sh ```
 
-These scripts checks for and installs missing dependencies required for the Saito Rust project on Linux or mac systems. It includes checks for Rust installation, updates package lists, and installs various development tools and libraries.
+These scripts check for and installs missing dependencies required for the Saito Rust project on Linux or Mac systems. They include checks for Rust installation, updates package lists, and installs various development tools and libraries.
 
 
 
