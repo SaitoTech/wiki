@@ -2,7 +2,7 @@
 title: Windows Installation
 description: 
 published: true
-date: 2025-05-19T13:10:15.234Z
+date: 2025-05-19T13:23:50.404Z
 tags: 
 editor: markdown
 dateCreated: 2022-05-30T09:53:07.391Z
