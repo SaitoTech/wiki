@@ -1,8 +1,8 @@
 ---
-title: Run a Node
+title: Install
 description: 
 published: true
-date: 2025-05-19T11:27:07.167Z
+date: 2025-05-19T11:36:09.718Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
