@@ -2,14 +2,14 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2025-05-19T15:29:12.096Z
+date: 2025-05-19T15:35:51.687Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
 ---
 
 
-# Mac (M1) Specific Installations
+# Saito-WASM Mac (M1) Compilation Installations
 
 This page assumes you are using a Mac with the M1 chip and want to compile a custom version of the Saito WASM library and have it used by a locally-compiled version of Saito Javascript. If you are trying to compile Saito-WASM on another OS please see our [standard installation guide](/install/-saitowasm).
 
