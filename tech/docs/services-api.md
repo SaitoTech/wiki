@@ -2,7 +2,7 @@
 title: Services API
 description: Creating a Service for Better Cross-Node Interactivity
 published: true
-date: 2024-10-29T21:48:45.195Z
+date: 2025-05-20T03:13:54.446Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-08T04:49:26.175Z
