@@ -2,13 +2,13 @@
 title: Application Configuration
 description: Information on configuration settings for Saito-lite-Rust applications
 published: true
-date: 2025-05-19T16:44:21.903Z
+date: 2025-05-20T15:43:37.820Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T03:23:11.530Z
 ---
 
-# Application Configuration for Saito-lite-Rust
+# Configuring the Modules on Your Node
 
 This page describes how to customize the modules/applications running on a Saito node. This is useful if you want users who visit your server to have a default set of applications available and avoid their needing to download or install applications separately through their browser.
 
