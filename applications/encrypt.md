@@ -2,7 +2,7 @@
 title: Encrypt
 description: 
 published: true
-date: 2025-05-20T03:09:22.031Z
+date: 2025-05-20T03:09:36.469Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-20T03:09:22.031Z
@@ -20,11 +20,6 @@ The Saito encrypt application is a utility module that most browsers will expect
 For every website visited or application ran, the user will, ideally, achieve a succesful key exchange with the host which restricts the ability to read messages passed between the host and user to *only* the host and user. In the modern web browser, this is indicated to the user by some sort of lock symbol in the URL bar - if the key exchange fails or uses an outdated scheme, the browser will issue a dire warning.
 
 This isn't the entire story, however. A succesful key exchange by no means ensures a secure connection. There's one crucial step that, without, makes a key exchange hopeleslly insecure. If a [*Man-in-the-Middle* (MITM)](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) is able to intercept the key exchange, they can covertly listen in on and modify the communications of two parties who may believe they are secure.
-
-<figure>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Man_in_the_middle_attack.svg/1280px-Man_in_the_middle_attack.svg.png" style="border: 1px gray solid;">
-  <figcaption style="opacity: 80%; text-align: center;"> Simplified image of a Man-in-the-Middle Attack; Credit: <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack#/media/File:Man_in_the_middle_attack.svg">Wikipedia</a> </figcaption>
-  </figure>
 
 The crucial step to prevent a MITM Attack is *authentication -* this step gives some degree of assurance that the cryptographic keys involved in a key exchange belong to the rightful owners.
 
