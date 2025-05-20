@@ -2,22 +2,19 @@
 title: Module Conventions
 description: 
 published: true
-date: 2025-05-20T03:15:22.713Z
+date: 2025-05-20T03:45:02.083Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-01T07:01:10.324Z
 ---
 
-
-
-
 # Module Conventions:
 
-### Third Party Libraries:
+A lot of the more advanced functionality that Saito offers developers (dynamically compiled modules, event-handling, lite-client support) works best if developers follow simple guidelines.
 
-Third party libraries should not be used without review and team agreement.
+### Directory Location
 
-When third party libraries are added these should be hosted by the node and included in …web/saito/ 
+Modules should be placed in the ```/mods``` directory in a sub-directory that is plainly named with no spaces and no special characters. The application file should placed within this directory (eg. ```redsquare/redsquare.js```).
 
 
 ### CSS Files:
