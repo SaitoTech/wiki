@@ -2,46 +2,42 @@
 title: How to edit and contribute in wiki pages
 description: Process in updating and contributing in Saito Wiki
 published: true
-date: 2025-05-20T07:42:17.060Z
+date: 2025-05-20T07:55:03.053Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-06T08:28:26.977Z
 ---
 
-# Wiki Page Edit and Suggestions
+# Saito Wiki - How to Contribute
 
-## Via Email/Comment on the Page
+This wiki is a collaborative effort to help others understand what Saito Consensus is, why we need a non-excludable PKI network, and how people can run nodes and contribute to the network. If you see problems or have suggestions on how to improve it, here is how you can help us make updates.
+
+## Via Email/Comment
 
 Leave a comment on any page or email us at community@saito.io.
 
 ## Via Github
 
-**TL;DR** 
-Send a pull request to https://github.com/SaitoTech/wiki. 
+Clone the Saito Wiki
 
-### Full Instructions
-
-**Forking and Cloning the Wiki Repository**
-1. Visit https://github.com/SaitoTech/wiki
-1. Fork the Saito repository. This creates a copy of the repository under your github user account. ([How to Fork a Repository in Github](https://docs.github.com/en/get-started/quickstart/fork-a-repo))
-1. After succesfully forking to your github account, clone the forked repository on your local device by running the following code in the IDE (Integrated development environment) of your choice (e.g. [Visual Studio](https://visualstudio.microsoft.com/downloads/))
 ```git clone https://github.com/<YourUserName>/demo```
-4. Create a new branch on your forked repository
-```git checkout -b branch_name```
-5. Create a new remote for the upstream repository with the command
+
+Create a new branch for your edits
+
+```git checkout -b [branch_name]```
+
+Ensures our repository gets notified of your updates
+
 ```git remote add upstream https://github.com/SaitoTech/wiki.git```
-***Note***: this line of code ensures that the original repository is in sync with the forked repository 
 
-**Requesting for Pull Request on changes and approval** 
-1. Execute the following line of codes
-``` git add name_of_file or git add ``` 
-```git commit -m "add commit message here```
-```git push -u origin branch_name```
-2. Go to [Saito Pull Requests Queue](https://github.com/SaitoTech/wiki/pulls) to view your pull request
-1. Wait for the internal team to review and approve the changes
-1. If it has been approved, changes will automatically reflect on the wiki pages.
-1. You will receive an email notification from community@saito.tech on the result of the review
+You can find any file by examining its path and just looking for the properly-named markdown (.md) file at that location. You can create new files by following the same convention. After you make any edits to existing files or add new ones, make a **pull request** to submit your changes:
 
+```
+  git add [modified_file]
+  git commit -m "add commit message here"
+  git push -u origin [branch_name]
+```
 
+You will be able to see your request in the [Saito Pull Requests Queue](https://github.com/SaitoTech/wiki/pulls). Feel welcome to hit up a member of the community for us to fast-track the changes. You will receive an email notification from community@saito.tech with the result of the review.
 
-
+Don't be offput by the need for this review process. While it's unfortunate to need a complicated process for an open source project, these controls are needed to avoid scammers targetting our community and defrauding members of the general public.
