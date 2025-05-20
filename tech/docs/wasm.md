@@ -2,7 +2,7 @@
 title: Using Wasm in Saito
 description: How to using wasm inside Saito applications
 published: true
-date: 2025-01-22T11:43:08.359Z
+date: 2025-05-20T03:11:29.956Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-21T16:07:42.431Z
