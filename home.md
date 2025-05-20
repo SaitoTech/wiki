@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-04-17T06:16:34.046Z
+date: 2025-05-20T02:08:29.715Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -15,13 +15,14 @@ dateCreated: 2021-11-09T07:50:58.627Z
 .cls-1{fill:rgb(247, 31, 61);}
 </style>
 
-Saito is a layer-1 blockchain that fixes underlying incentive misalignments that exist in the consensus layers of all proof-of-work and proof-of-stake blockchains. The result of fixing these problems is that instead of paying for forms of work like mining and staking, the network pays the nodes that service users and route their transactionsa and fees into the network.
+Saito is a layer-1 blockchain that fixes fundamental incentive misalignments found in traditional proof-of-work and proof-of-stake mechanisms. Rather than paying for extractive forms of work like hashing or staking, Saito pays the nodes that feed data to users and route their transactions into the network.
 
-The technical problems that Saito solves to accomplish this eliminates the ability for attackers to spend their own money to attack the network. Consensus drives the blockchain into an optimal configuration in which nodes that efficiently collect and process user-originated transactions make money, but nodes that attempt to push the network into a less efficient topology (such as by orphaning blocks or censoring transactions) lose money.
+The result is a blockchain where cooperation is emergent even if some participants amass an outsized stake in the mechanism. Cooperation rather than adversarial conflict is emergent because the network incentives alone make attacking irrational: dishonest nodes that censor transactions, orphan blocks, or otherwise degrade performance expect to lose money.
 
-If you are new to Saito, a great way to start learning about what we are building is our one-page description of [Saito Consensus](/consensus). You can also check out our project [roadmap](/roadmap) and [tokenomics](/roadmap), or visit our [applications](/tech/applications) section to get a sense of what applications are running on the network. We also have instructions on how to [run a node](/tech/install) or [build applications](/en/tech/applications/building_apps).
+If you're new to Saito, we recommend starting with our one-page overview of [Saito Consensus](/consensus). You can also explore the [project roadmap](/roadmap), dig into our [tokenomics](/tokenomics), or browse the [applications](/applications) already running on the network. Our section for developers explains how to [run a node](/install) or [build your own apps](/tutorials).
 
-This wiki is a community-editable knowledge repository. If you'd like to contribute, you can find all pages stored in markdown in our [Saito Wiki Github Repository](https://github.com/saitotech/wiki).  
+This wiki is a community-maintained knowledge base. If you'd like to contribute, all pages are stored in markdown in our [Saito Wiki GitHub Repository]((https://github.com/saitotech/wiki).
+
 
 ## External Links
 
