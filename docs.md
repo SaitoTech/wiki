@@ -2,7 +2,7 @@
 title: Saito Documentation
 description: 
 published: true
-date: 2025-05-20T03:11:05.294Z
+date: 2025-05-20T03:28:41.139Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-29T21:33:20.620Z
@@ -10,25 +10,32 @@ dateCreated: 2024-10-29T21:33:20.620Z
 
 # Saito Documentation
 
+This section of the Saito Wiki contains documentation and reference materials for developers. If you are totally new to application development, we recommend that you start by visiting our [tutorial section](/tutorials) and seeing how a basic application is written.
+
 ## Saito Modules
 
-Saito modules are the standard way to develop, serve and run P2P applications. [Saito Lite Rust](https://wiki.saito.io/en/tech/javascript) allows users to easily run any P2P app on a browser lite-node and for full nodes to distribute these applications, provide service and earn transaction fees.
+Saito Applications (also known as modules) require a conceptual shift. The server-client model melts away as applications run simultaneously on all nodes. As unlike almost every other tech architecture in the space, applications do not use JSON-fetches and API-keys to fetch data from databases -- information requests are submitted in real-time over the network to peer nodes.
 
-### [Module Conventions](/tech/docs/module-conventions)
-General guideline and instructions for working with and creating Saito Modules. 
+### [General Conventions](/docs/modules)
+General guideline and instructions for working with and creating Saito Modules. This page focuses on what makes Saito modules truly web3 and different than what passes for "peer-to-peer" applications on other networks.
 
-### [Module API](/tech/docs/module-api)
-The Module API explains how to include and leverage functions which react to common blockchain, P2P and other events in your module.
+### [Module API](/docs/module-api)
+The Module API explains the functions that your module can include and extend to react to common events (inbound transactions, peer messages, chain-reorganizations, etc) and to store data and send messages to other peers on the network.
 
-### [Events API](/tech/docs/events-api)
-he Events API explain how to listen and respond to system-wide events that are triggered when events happen like a new block being found.
+### [Events API](/docs/events-api)
+Modules can communicate with each other by broadcasting events and listening for events broadcast by other modules. The Events API explains how to listen for these events and respond when they are triggered, such as running specific code when a user adds a friend's contact information to their wallet.
 
-### [Services API](/tech/docs/services-api)
-The Services API explains how peers can inform other peers that they can be queried for special types of data. 
+### [Services API](/docs/services-api)
+Services are used to provide data to other nodes on the network, such as sharing RedSquare transactions or providing DNS lookup services for peers. The Services API explains how peers can inform other peers that they can be queried for special types of data.
 
-### [UI Components and Templates](/tech/docs/ui-components) and [CSS Design](/tech/docs/saito-css)
+### [UI Components and Templates](/docs/ui-components) 
+Many Saito applications re-use the same UI components (Saito Overlay, Saito User, Saito Menu). This sections explains some of the UI Components that exists and how you can quickly and easily incorporate them in your own applications.
 
-UI Components and CSS Design specifications explain our standard approach for creating UI components that will work and look good regardless of the applications that users are running.
+### [CSS Design](/docs/saito-css)
+Want your application to "fit in" visually with the other applications in the Saito stack? This section of 
+YMany Saito applications re-use the same UI components (Saito Overlay, Saito User, Saito Menu). This sections explains some of the UI Components that exists and how you can quickly and easily incorporate them in your own applications.
+
+
 
 ## Network
 
