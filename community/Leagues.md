@@ -2,77 +2,37 @@
 title: Saito Leagues
 description: 
 published: true
-date: 2023-03-31T02:54:02.779Z
+date: 2025-05-20T08:12:27.656Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-17T05:39:45.930Z
 ---
 
 ![league_banner.png](/league_banner.png)
-# Saito Leagues
 
-The Saito Leagues are community-run recurring events that take place in the [Saito Arcade](/tech/applications/arcade).
+# Saito Game Nights
 
-Participants can join at any time. Players are assigned weekly matches but they can also choose to reach out to other participants to play matches and accumulate points. At the end of each season, the players with the most points qualify for the playoffs and play each other, tournament style.
-
-Currently, there are 3 Leagues taking place:
+The Saito Arcade is a place for new and experienced gamers to hang out, play new games, and participate in periodic tournaments. Different community-led activities happen at different times. Consider dropping by for:
 
 
-## Saito Chess League
+## Twilight Struggle - Mondays
 
-Already in its second season, the Saito Chess League was the first recurring league to be launched by the Saito Community Leagues Council.You can register by filling this [form](https://docs.google.com/forms/d/e/1FAIpQLSdnLw7ucg3eT-LCONK03I0NJT5UYN1nfVo74diAHJAQu9fvDQ/viewform).
+Twilight Struggle is one of the best boardgames ever created, and the Saito Arcade is frankly a bit of a TS-snakepit. The community has a number of really excellent players, and we tend to congregate for open games on Monday evenings (Asia-time).
 
-Following the success of the league’s first season, the Saito Chess Club was launched for players to come together and play unscheduled matches against other league participants and further raise their scores.
+## Red Imperium - Tuesdays
 
+Red Imperium is one of the more complicated games on the Saito Arcade. Games support up to 6 players and usually take 3-4 hours to complete. We host public games on Tuesday evening. They are fun. If you have the time for a game, feel welcome to drop by and join us.
 
+## Here I Stand - Wednesdays
 
-##### First Season Winners:
+Here I Stand is another fantastic game from GMT Games. Several of us have licenses to host games, and we usually congregate for a public game on Wednesday evening (newbies welcome). If you're a new playing looking to learn or trying to figure out if the game is worth the price (hint: yes), this is a great time to drop by and get your feet wet.
 
-Champion: Juan Carlos Huet
+## Saito Poker League - Thursdays
 
-Second Place: Steve Fomicron
+The Saito Poker League runs open tables on Thursday evenings. Up to six players can come and join our table, although there's really no limit on the amount of tables that we can run at one time. If you show up and a table is full just create a new table.
 
-Third Place: Keruzo
+## EGLD Gaming Nights - Fridays
 
-[Join Now!](https://docs.google.com/forms/d/e/1FAIpQLSdnLw7ucg3eT-LCONK03I0NJT5UYN1nfVo74diAHJAQu9fvDQ/viewform) And start playing today.
-
----
-
-
-
-## Saito Poker League
-
-The Poker League was launched soon after Chess’ and it’s currently entering its playoff stage. The Poker Nights are an integral component of this league. As a precursor to the Chess Club, it’s similarly structured and takes place from Thursday to Saturday.For the poker league. the registration will be done through a form in which players will submit their contact information.
-
-You can join the League at any time, it will only affect when you get your scheduled games and your ability to qualify for playoffs.  All players will receive a weekly scheduled game through email, you must make sure to contact your opponents to play these games and avoid penalties.
-
-Playoffs will be held every 2 months and will last a month between the top scorers in the league at that point, the players that didn’t qualify will start getting matched up for the next cycle.
-
-Players that do qualify for the playoffs will also receive matchups, but they will have extended deadlines.
-
-You can register through this [form](https://docs.google.com/forms/d/e/1FAIpQLSeJmQ-nVC4gveACcLaBtNUsPO3AacrwbgtO1P1-ccUdrwg7dg/viewform).
+Saito has received a lot of support from the EGLD community, and are trying to contribute back by running a dedicated EGLD Gaming Night. This event takes place every Friday, and gives EGLD members an opportunity to play each other in EGLD-staked games on the Saito Arcade. If you're a member of the EGLD community looking for poker nights or just some laid-back EGLD-friendly gaming, you are welcome to drop by.
 
 
-
-##### First Season Winners:
-
-Champion: Hedon
-
-Second Place: Nolsrac27
-
-Third Place: Saitodler
-
------
-
-
-## Saito Intro Imperium League
-
-Last but not least is the Red Imperium Introductory League. In contrast to the other leagues, this Introductory League takes a much more casual approach since its goal is to introduce new players to Red Imperium, a fascinating strategy game of galactic conquest.
-
-It is structured much like the Poker Nights and the Chess Club and takes place twice a week on a rotating schedule, this will be sent by email after you register for the league
-
-In this league, you'll play Red Imperium against experienced players to learn how to play the game or simply improve your skills at it. You can find the game schedule on the [Saito](https://twitter.com/SaitoOfficial) or [Duke's](https://twitter.com/Bet_on_TheDuke) Twitter pages
-
-Form for register [here](https://docs.google.com/forms/d/e/1FAIpQLSdJeMAccT3xDZYMl5CnXS3jzXJ3K-fEqshYEqRhmA92MAPF3Q/viewform)
-
-Please click [here](https://saito.io/league/?jid=26aabd8b4f864f73ab5ce7ce0b4b06415160be5433bba19a165bdba59a5172ed482e7219c9c1afe4d2345c67a34d9bacc08632f35c1be4073411a2a5d2544759) to join the League Rankings.
