@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2025-05-19T17:13:53.117Z
+date: 2025-05-20T07:41:56.424Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -29,7 +29,7 @@ Once prerequisites are installed, the following instructions should be similar f
 
 ```
 git clone https://github.com/saitotech/saito
-cd saito
+cd saito/node
 npm install
 ```
 
