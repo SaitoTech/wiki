@@ -2,7 +2,7 @@
 title: Saito Wallet
 description: Information about holding native Saito
 published: true
-date: 2025-05-20T09:40:16.647Z
+date: 2025-05-20T09:40:53.417Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-29T00:06:48.906Z
@@ -40,9 +40,9 @@ To backup your wallet, access the Saito Wallet menu (as seen below) by clicking 
 The buttons that allow you to backup your wallet are listed at the top of the overlay that will appear. Note that while you can save your private-key directly, if you wish to keep your friends list and any additional cryptographic keys your wallet has added (such as for other cryptocurrencies) you will need to use the "backup wallet" option, which will export that data in addition to your native Saito public and private-key.
 <br>
 
-<div style="text-align: center;">
-<img src="/wallet-backup-p2.png" alt="Image 1" style="width:45%;">
-<img src="/wallet-backup-p3.png" alt="Image 1" style="width:75%;">
+<div style="text-align: center;with:100%">
+<img src="/wallet-backup-p2.png" alt="Image 1" style="width:49%;">
+<img src="/wallet-backup-p3.png" alt="Image 1" style="width:49%;">
 </div>
 
 ### Hot Wallet
