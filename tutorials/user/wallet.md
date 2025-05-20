@@ -2,13 +2,13 @@
 title: Saito Wallet
 description: Information about holding native Saito
 published: true
-date: 2025-05-20T11:06:04.800Z
+date: 2025-05-20T11:06:14.112Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-29T00:06:48.906Z
 ---
 
-# Saito Wallet Helpo
+# Saito Wallet Help
 
 <ol>
   <li><a href="#native">Where is my Saito wallet?</a></li>
