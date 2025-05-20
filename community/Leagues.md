@@ -2,7 +2,7 @@
 title: Saito Leagues
 description: 
 published: true
-date: 2025-05-20T08:12:27.656Z
+date: 2025-05-20T08:12:40.116Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-17T05:39:45.930Z
@@ -10,10 +10,9 @@ dateCreated: 2022-12-17T05:39:45.930Z
 
 ![league_banner.png](/league_banner.png)
 
-# Saito Game Nights
+# Saito Community Game Nights
 
 The Saito Arcade is a place for new and experienced gamers to hang out, play new games, and participate in periodic tournaments. Different community-led activities happen at different times. Consider dropping by for:
-
 
 ## Twilight Struggle - Mondays
 
