@@ -2,7 +2,7 @@
 title: Saito Documentation
 description: 
 published: true
-date: 2025-05-20T03:36:45.976Z
+date: 2025-05-20T03:37:46.490Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-29T21:33:20.620Z
@@ -11,6 +11,8 @@ dateCreated: 2024-10-29T21:33:20.620Z
 # Saito Documentation
 
 This section of the Saito Wiki contains documentation and reference materials for developers. If you are totally new to application development, we recommend that you start by visiting our [tutorial section](/tutorials) and seeing how a basic application is written.
+
+Our documentation below falls into two sections. The first covers materials useful to application developers and those building software or services atop the network. The second covers reference material useful for those building the core client or working on the underlying protocol.
 
 ## Saito Applications
 
