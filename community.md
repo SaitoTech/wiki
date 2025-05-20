@@ -2,7 +2,7 @@
 title: Community Chat Groups and Resources
 description: Community Chat Groups and Resources
 published: true
-date: 2025-04-17T06:17:58.867Z
+date: 2025-05-20T08:17:21.875Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-23T08:16:57.540Z
@@ -10,14 +10,16 @@ dateCreated: 2022-03-23T08:16:57.540Z
 
 # Community Resources
 
-We encourage newcomers to visit [RedSquare](https://saito.io/redsquare) to find and chat with the Saito community. RedSquare is a peer-to-peer social media site. Not only can you ask questions or learn more about the network, but you can experience a genuine peer-to-peer social experience. You can also engage with community members through the Saito Community Chat app that runs on the [Saito Arcade](https://saito.io/arcade).
+Looking to connect with other Saitozens? One of the easiest ways is to visit [RedSquare](https://saito.io/redsquare) our peer-to-peer social media site. Not only can you ask questions or learn more about the network, but you can experience a genuine peer-to-peer social experience and get a better sense of why we think Saito so important.
 
 <br>
 <div style="height:400px;width:600px;overflow:hidden;">
   <img src="/red-square-feed.jpg">
 </div>
-  
- <br />
+
+Prefer gaming? Another popular way for community members to connect is to visit the [Saito Arcade](https://saito.io/arcade) and especially to participate in the various [game nights](/community/game_nights) and tournaments that the community hosts. Participating in group games is an excellent way to learn some of the more complicated strategy games available.
+
+<br />
   
 ## Off-Chain Communities
 
