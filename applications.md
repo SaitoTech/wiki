@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-05-20T04:55:34.952Z
+date: 2025-05-20T14:42:53.335Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -23,7 +23,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
 
 <div class="app_container">
 
-  <a href="/tech/applications/redsquare">
+  <a href="/applications/redsquare">
     <div class="app_box">
        <div class="app_img">
          <!--<img src="/red-square-menu.png" />-->
@@ -33,7 +33,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
     </div>
   </a>
   
-  <a href="/tech/applications/chat">
+  <a href="/applications/chat">
     <div class="app_box">
        <div class="app_img">
          <img src="/chat-nov-2024.png" />
@@ -42,7 +42,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
     </div>
   </a>
 
-  <a href="/tech/applications/videocall">
+  <a href="/applications/videocall">
     <div class="app_box">
        <div class="app_img">
          <img src="/video-call-woman.png" />
@@ -51,7 +51,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
     </div>
   </a>
 
-  <a href="/tech/applications/arcade">
+  <a href="/applications/arcade">
     <div class="app_box">
        <div class="app_img">
          <img src="/arcade-sq.png" />
@@ -60,7 +60,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
      </div>
   </a>
 
-  <a href="/tech/applications/wallet">
+  <a href="/applications/wallet">
     <div class="app_box">
        <div class="app_img">
          <img src="/waqllet-sq.png" />
@@ -69,7 +69,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
     </div>
   </a>
 
-  <a href="/tech/applications/swarmcast">
+  <a href="/applications/swarmcast">
     <div class="app_box">
       <div class="app_img">
         <img src="/swarmcast-small.png" />
@@ -78,7 +78,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
     </div>
   </a>
   
-  <a href="/tech/applications/fileshare">
+  <a href="/applications/fileshare">
     <div class="app_box">
       <div class="app_img">
         <img src="/fileshare-sq.png" />
@@ -94,7 +94,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
 <br/>
 <div class="app_container">
 
-  <a href="/tech/applications/twilight">
+  <a href="/applications/twilight">
     <div class="app_box">
        <div class="app_img">
          <!--<img src="https://saito.io/twilight/img/arcade/arcade.jpg" />-->
@@ -104,7 +104,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
     </div>
   </a>
 
-  <a href="/tech/applications/settlers">
+  <a href="/applications/settlers">
     <div class="app_box">
        <div class="app_img">
          <!--<img src="https://saito.io/settlers/img/arcade/arcade.jpg" />-->
@@ -114,7 +114,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
     </div>
   </a>
 
-  <a href="/tech/applications/imperium">
+  <a href="/applications/imperium">
     <div class="app_box">
        <div class="app_img">
          <img src="https://staging.saito.io/imperium/img/arcade/arcade.jpg" />
@@ -123,11 +123,10 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
      </div>
   </a>
 
-  <a href="/tech/applications/his">
+  <a href="/applications/his">
     <div class="app_box">
        <div class="app_img">
-         <!--<img src="https://staging.saito.io/his/img/arcade/arcade.jpg" />-->
-         <img src="/his-sq.png" />
+         <img src="https://staging.saito.io/his/img/arcade/arcade.jpg" />
        </div>
        <div class="app_title">Here I Stand</div>
     </div>
@@ -135,7 +134,6 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/tech/applications/chess">
     <div class="app_box">
       <div class="app_img">
-        <!--<img src="https://saito.io/chess/img/arcade/arcade.jpg" />-->
         <img src="/chess-sq.png" />
       </div>
       <div class="app_title">Chess</div>
@@ -145,7 +143,6 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/tech/applications/wuziqi">
     <div class="app_box">
       <div class="app_img">
-        <!-- <img src="https://saito.io/wuziqi/img/arcade/arcade.jpg" /> -->
         <img src="/wuziqi-sq.png" />
       </div>
       <div class="app_title">Wuziqi</div>
@@ -155,7 +152,6 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/tech/applications/poker">
     <div class="app_box">
       <div class="app_img">
-        <!--<img src="https://saito.io/poker/img/arcade/arcade.jpg" />-->
         <img src="/poker-sq.png" />
       </div>
       <div class="app_title">Poker</div>
@@ -166,5 +162,5 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
 
 ## Build Your Own Application?
 
-Developers can see our full list of [available modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) to get a sense of what it is possible to build atop Saito. We have a [tutorial series](https://wiki.saito.io/en/tutorials/dev) that explains how to get started building Saito applications, and encourage all developers seriously interested in putting together an application to contact the team for help getting started.
+Developers can see our full list of [available modules](https://github.com/saitotech/saito/tree/master/mods) to get a sense of what it is possible to build. We also have a [tutorial series](https://wiki.saito.io/en/tutorials/dev) that explains how to get started building Saito applications. Contact us anytime for help getting started!
 
