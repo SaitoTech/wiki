@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-05-19T15:20:16.723Z
+date: 2025-05-20T04:55:34.952Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -166,5 +166,5 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
 
 ## Build Your Own Application?
 
-Developers can see our full list of [available modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) to get a sense of what it is possible to build atop Saito. We have a [tutorial series](https://wiki.saito.io/en/tech/applications/building_apps) that explains how to get started building Saito applications, and encourage all developers seriously interested in putting together an application to contact the team for help getting started.
+Developers can see our full list of [available modules](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods) to get a sense of what it is possible to build atop Saito. We have a [tutorial series](https://wiki.saito.io/en/tutorials/dev) that explains how to get started building Saito applications, and encourage all developers seriously interested in putting together an application to contact the team for help getting started.
 
