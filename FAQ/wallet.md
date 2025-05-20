@@ -2,40 +2,34 @@
 title: Saito Wallet
 description: Information about holding native Saito
 published: true
-date: 2024-04-02T18:35:37.047Z
+date: 2025-05-20T09:36:31.874Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-29T00:06:48.906Z
 ---
 
-# Saito Wallet FAQs
+# Saito Wallet
 
 <ol>
-  <li><a href="#tokens">Does Saito have a native token?</a></li>
+  <li><a href="#tokens">Can I Stake Saito?</a></li>
   <li><a href="#native">Where is my native Saito wallet?</a></li>
   <li><a href="#wallet">Cold wallet for native tokens?</a></li>
 </ol>
 
-## <div id="tokens"> Wrapped Tokens and Bridging </div>
+## <div id="tokens"> Staking Saito?</div>
 
-The Saito token exists primarily in three forms: a wrapped [ERC20](https://etherscan.io/address/0xFa14Fa6958401314851A17d6C5360cA29f74B57B), a wrapped [BEP20](https://bscscan.com/address/0x3c6dad0475d3a1696b359dc04c99fd401be134da), and the native token. The wrapped tokens can be held on traditional wallets such as Metamask - in order to migrate wrapped tokens to a native Saito wallet, follow closely these [instructions](https://wiki.saito.io/en/tokenomics#migration-to-native-saito-token).
+A portion of the transaction fees collected by the network (25%) are pushed into a network treasury that is issued to users who leave their SAITO unspent each loop. While this is not a traditional form of staking, it means that you can earn revenue by purchasing tokens, leaving them unspent, and encouraging others to use the network in ways that generate transaction fees.
 
-<span style="font-weight:bold; font-size:18px">THERE IS NO NEED TO BRIDGE</span> - there will never be any event which forces users to bridge their wrapped tokens. Wrapped Saito tokens will remain valid indefinitely. Avoid scammers claiming otherwise.
-
-Before bridging, please take care to understand the token [persistence curve](https://wiki.saito.io/en/tokenomics#migration-to-native-saito-token) and what the *minimum* number of tokens is for the balance to stay intact. If less tokens are held than the curve designates for the date, they may be lost. See the [roadmap](https://wiki.saito.io/en/roadmap) for more information.
-
-![token_persistence_curve.png](/token_persistence_curve.png)
 
 ## <div id="native"> Wallet Backups </div>
 
-Upon loading into a [Saito Application](https://wiki.saito.io/en/tech/applications) such as [Red Square](https://saito.io/redsquare/) a native wallet is automatically generated and can be accessed from the hamburger menu in the top right; From here the native Saito balance and ability to send Saito tokens are exposed.
+The first time you load any [Saito Application](https://wiki.saito.io/applications) in your browser, a native wallet is created which can be accessed by clicking on the hamburger menu in the top-right corner of most applications. From here you can see your native Saito balance and your balance and send Saito to other addresses.
 
+This wallet is saved in the browser's cache and will be used repeatedly until it is purged or deleted. Because sometimes browsers like to purge cached content, users who hold non-trivial balances should **backup** their wallet. This involves extracting your private information from the browser so you can restore your wallet in the future.
 
-This wallet is saved in the browser's cache and should be loaded up for future sessions automatically. Users with any attachment to a Saito account are encouraged to find and execute the **backup** functions in this same menu.
+To backup your wallet, access the Saito Wallet menu (as seen below) by clicking the hamburger icon in the top right of the screen and hitting the 'Account' button.
 
-Saito wallets can be easily backed up from the settings menu. Access the menu (as seen below) but clicking the hamburger icon in the top right of the screen and hitting the 'account' button.
-
-From this menu the private key can be saved directly, or a more convenient file containing the private key and extra account information can be backed up. This file (as opposed to just the private key) will remember certain data, such as the shared secret keys of your contacts.
+The buttons that allow you to backup your wallet are listed at the top of the overlay that will appear. Note that while you can save your private-key directly, if you wish to keep your friends list and any additional cryptographic keys your wallet has added (such as for other cryptocurrencies) you will need to use the "backup wallet" option, which will export that data in addition to your native Saito public and private-key.
 <br>
 
 <div style="text-align: center;">
@@ -46,17 +40,13 @@ From this menu the private key can be saved directly, or a more convenient file 
 
 ### Hot Wallet
 
-One of the first differences users notice when using Saito for the first time is the lack of certain security rituals: creating a wallet and password, storing the seed phrase, and inputting credentials for signatures are not mandatory.
+One of the first differences users notice when using Saito for the first time is the lack of certain security rituals: creating a wallet and password, storing the seed phrase, and inputting credentials for signatures are not mandatory. Sometimes this can seem odd:
 
 > *I seem to automatically enter my Saito Wallet by clicking on https://saito.io/redsquare.  Is that correct?  Because I don't have to enter any password to access my wallet, it seems very insecure.  Any thoughts about this?*
 
-In the context of Saito's non-financial applications, these are intentional design decisions. Web 3 means users are digitally signing messages and transactions frequently - if users were required to input extra credentials for every digital signature, the user experience of many apps would degrade significantly.
+In the context of Saito's non-financial applications, these are intentional design decisions. Web3 users sign messages and transactions frequently - if users were required to input extra credentials for every digital signature, the usability of many apps would degrade significantly.
 
-The wallet used for day-to-day activities like [video calls](https://saito.io/videocall/) or [chat](https://saito.io/chat/) should not require significant amounts of Saito token to operate normally, and in fact, for the majority of the persistence curve timeline, most applications will remain free to use, requiring zero Saito tokens in a hot wallet.
-
-One of the visions for Saito is that anyone can use the open internet, Web 3, with so few tokens required that risk in losing that amount and the incentive to hack it becomes negligible. The wallet everyone uses for the day-to-day internet, need not be a source of anxiety or risk to those users.
-
-Hot wallets are inherently easier to use but less secure. Responsible Saito users are expected to keep a reasonable amount of tokens in their hot wallets at one time. Users who wish to use Saito as a secure token vault are encouraged to manage a cold wallet:
+The wallet used for day-to-day activities like [video calls](https://saito.io/videocall/) or [chat](https://saito.io/chat/) should not require significant amounts of Saito token to operate normally, and in fact, for most applications will effectively remain free to use, requiring zero Saito tokens in a hot wallet. Users who wish to use Saito as a secure token vault are encouraged to manage a cold wallet.
 
 ### <div id="wallet"> Cold Wallets </div>
 
