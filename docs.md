@@ -2,7 +2,7 @@
 title: Saito Documentation
 description: 
 published: true
-date: 2025-05-20T03:37:46.490Z
+date: 2025-05-20T04:05:34.577Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-29T21:33:20.620Z
@@ -36,7 +36,7 @@ Many Saito applications re-use the same UI components (Saito Overlay, Saito User
 ### [CSS Design](/docs/saito-css)
 Want your application to "fit in" visually with the other applications in the Saito stack? This section of our docs explains the standard CSS classes that are available to ALL applications by default. Using these can save time and effort when polishing the look-and-feel of an application.
 
-### [ZK-Proofs Support](/docs/zk-snarks)
+### [ZK-Proofs Support](/docs/zk-proofs)
 This section contains a quick tutorial on how to get ZK-Snarks working in your Saito Application. This is a useful approach for building privacy-protecting apps on the Saito tech stack.
 
 ### [Wasm Support](/docs/wasm)
