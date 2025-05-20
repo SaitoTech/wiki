@@ -2,7 +2,7 @@
 title: Saito Tutorials
 description: 
 published: true
-date: 2025-05-20T04:22:03.057Z
+date: 2025-05-20T04:24:07.400Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-20T04:13:45.846Z
@@ -12,12 +12,12 @@ dateCreated: 2025-05-20T04:13:45.846Z
 
 OK... so what do you want to do?
 
-### [Using Saito](/tutorials/using)
+### [User Tutorials](/tutorials/user)
 
-This section has visual HOWTO guides (with screenshots and walkthroughs!) explaining how to do common but maybe-not-obvious things like creating a wallet, backing up your wallet, installing modules, adding friends, sending and receiving SAITO or other cryptocurrencies, migrating tokens and much more...
+This section has HOWTO guides (with screenshots and walkthroughs!) that show how to do common things like creating a wallet, backing it up, installing modules, adding friends, sending and receiving SAITO, migrating tokens and much more...
 
 
-### [Build Applications](/tutorials/applications)
+### [Dev Tutorials](/tutorials/dev)
 
 Create an application, listen to the blockchain, send-and-receive transactions, save information in the wallet or an archive node, add fancy UI components that update when information is received, query peers for any relevant transactions they might have, and much much more.
 
