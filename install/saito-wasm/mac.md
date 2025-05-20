@@ -2,16 +2,16 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2025-05-19T15:35:51.687Z
+date: 2025-05-20T05:57:07.601Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
 ---
 
 
-# Saito-WASM Mac (M1) Compilation Installations
+# Saito-WASM Mac (M1) Compilation  and Linking Installations
 
-This page assumes you are using a Mac with the M1 chip and want to compile a custom version of the Saito WASM library and have it used by a locally-compiled version of Saito Javascript. If you are trying to compile Saito-WASM on another OS please see our [standard installation guide](/install/-saitowasm).
+This page assumes you are using a Mac with the M1 chip and want to compile a custom version of the Saito WASM library and have it used by a locally-compiled version of Saito Javascript. If you are trying to compile Saito-WASM on another OS please see our [standard installation guide](/install/saito-wasm).
 
 PLEASE NOTE: unless you know why you are here you probably don't need to do this at all! The default version of Saito comes bundled with a pre-compiled version of this WASM library. This bundled library will work out-of-the-box without the need to compile or link anything locally. These steps are only necessary if you want to modify the core Rust software and use your custom changes within our standard NodeJS client.
 
