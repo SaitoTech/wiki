@@ -2,7 +2,7 @@
 title: Saito Wallet
 description: Information about holding native Saito
 published: true
-date: 2025-05-20T09:36:31.874Z
+date: 2025-05-20T09:40:16.647Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-29T00:06:48.906Z
@@ -11,21 +11,29 @@ dateCreated: 2024-02-29T00:06:48.906Z
 # Saito Wallet
 
 <ol>
-  <li><a href="#tokens">Can I Stake Saito?</a></li>
-  <li><a href="#native">Where is my native Saito wallet?</a></li>
-  <li><a href="#wallet">Cold wallet for native tokens?</a></li>
+  <li><a href="#staking">How to stake Saito?</a></li>
+  <li><a href="#native">Where is my Saito wallet?</a></li>
+  <li><a href="#backup">How to backup my Saito wallet?</a></li>
+  <li><a href="#wallet">How to make a cold wallet?</a></li>
 </ol>
 
-## <div id="tokens"> Staking Saito?</div>
+## <div id="staking"> How to stake Saito?</div>
 
 A portion of the transaction fees collected by the network (25%) are pushed into a network treasury that is issued to users who leave their SAITO unspent each loop. While this is not a traditional form of staking, it means that you can earn revenue by purchasing tokens, leaving them unspent, and encouraging others to use the network in ways that generate transaction fees.
 
 
-## <div id="native"> Wallet Backups </div>
+## <div id="native"> Where is my Saito Wallet?</div>
 
 The first time you load any [Saito Application](https://wiki.saito.io/applications) in your browser, a native wallet is created which can be accessed by clicking on the hamburger menu in the top-right corner of most applications. From here you can see your native Saito balance and your balance and send Saito to other addresses.
 
 This wallet is saved in the browser's cache and will be used repeatedly until it is purged or deleted. Because sometimes browsers like to purge cached content, users who hold non-trivial balances should **backup** their wallet. This involves extracting your private information from the browser so you can restore your wallet in the future.
+
+<div style="text-align: center;">
+<img src="/wallet-backup-p1.png" alt="Image 1" style="width:45%;">
+</div>
+
+
+## <div id="backup"> How to backup my Saito Wallet?</div>
 
 To backup your wallet, access the Saito Wallet menu (as seen below) by clicking the hamburger icon in the top right of the screen and hitting the 'Account' button.
 
@@ -33,7 +41,6 @@ The buttons that allow you to backup your wallet are listed at the top of the ov
 <br>
 
 <div style="text-align: center;">
-<img src="/wallet-backup-p1.png" alt="Image 1" style="width:45%;">
 <img src="/wallet-backup-p2.png" alt="Image 1" style="width:45%;">
 <img src="/wallet-backup-p3.png" alt="Image 1" style="width:75%;">
 </div>
