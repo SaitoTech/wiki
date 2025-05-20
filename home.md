@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-05-20T02:18:46.744Z
+date: 2025-05-20T07:55:50.554Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -21,7 +21,7 @@ The result is a blockchain where cooperation is emergent even if some participan
 
 If you're new to Saito, we recommend starting with our one-page overview of [Saito Consensus](/consensus). You can also explore the [project roadmap](/roadmap), dig into our [tokenomics](/tokenomics), or browse the [applications](/applications) already running on the network. Our section for developers explains how to [run a node](/install) or [build your own apps](/tutorials).
 
-This wiki is a community-maintained knowledge base. If you'd like to contribute, all pages are stored in markdown in our [Saito Wiki GitHub Repository]((https://github.com/saitotech/wiki).
+This wiki is a community-maintained knowledge base. If you'd like to contribute, all pages are stored in markdown in our [Saito Wiki GitHub Repository]((https://github.com/saitotech/wiki). We have instructions on [how to contribute to the wiki](/community/wiki).
 
 
 ## External Links
