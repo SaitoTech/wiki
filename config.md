@@ -2,7 +2,7 @@
 title: Configure Saito-lite-Rust
 description: Directory for information on the various configuration files which dictate how a Saito-lite-Rust client operates.
 published: true
-date: 2025-05-20T15:18:36.269Z
+date: 2025-05-20T15:34:50.201Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T04:13:39.150Z
@@ -18,10 +18,9 @@ After [installing](/install) Saito you will be ready to configure the server. Th
 
 Almost anything you want to configure for Saito can be accomplished by editing one of these two files.
 
-
 ## Configuring Network
 
-
+```/config/options.conf``` is the template file used to configure your server. We have a dedicated page describing [how to configure this file](/config/network) to change your server settings. By default, this file will come pre-configured to start your Saito node on localhost at port 12101.
 
 
 ## Configuring Applications
