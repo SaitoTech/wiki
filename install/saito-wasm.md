@@ -2,7 +2,7 @@
 title: Saito WASM - Installation Instructions
 description: 
 published: true
-date: 2025-05-19T15:35:34.316Z
+date: 2025-05-20T05:54:50.517Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:35:18.101Z
@@ -22,9 +22,7 @@ To make changes to Saito-WASM, you must first ```compile``` the code and then ``
 
 #### Installation
 
-There are two steps to getting the Saito WASM library. The library must first be ```compiled``` from the Rust codebase. The compiled library must then be ```linked``` to the Saito Javascript codebase so that your local copy is used instead of the pre-compiled version hosted on NPM.
-
-The following instructions work for most Linux environments. **If you are using a Mac** you will need [these instructions](./saito-wasm/mac) on compiling and linking the WASM library under MacOS instead.
+There are two steps to getting the Saito WASM library. The library must first be ```compiled``` from the Rust codebase. The compiled library must then be ```linked``` to the Saito Javascript codebase so that your local copy is used instead of the pre-compiled version hosted on NPM. The following instructions work for most Linux environments.
 
 ```
 sudo apt-get update && sudo apt install build-essential pkg-config libssl-dev
@@ -33,4 +31,8 @@ cp saito-rust/configs/config.template.json saito-rust/configs/config.json
 cd saito-wasm
 wasm-pack build --debug --target browser
 ```
+
+Once you have compiled the software you can follow these instructions to (./saito-wasm/linking) link the binary version of the software you just compiled to your NodeJS version of Saito. This replaces the pre-compiled version of Saito that is used by the NodeJS version by default with the compiled version running on your machine.
+
+**NOTE** -- if you are using a Mac** you will need [these instructions](./saito-wasm/mac) on compiling and linking the WASM library under MacOS instead.
 
