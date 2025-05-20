@@ -2,7 +2,7 @@
 title: Saito WASM - Installation Instructions
 description: 
 published: true
-date: 2025-05-20T05:54:50.517Z
+date: 2025-05-20T06:05:19.804Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-13T08:35:18.101Z
@@ -10,9 +10,9 @@ dateCreated: 2023-10-13T08:35:18.101Z
 
 # Saito WASM
 
-First things first, if you do not know what WASM is you do not need this page and should look at installing the [default](/install) version of Saito instead. This version uses a version of the Saito WASM client that is precompiled and will support everything you need to run the software.
+If you do not know what WASM is you do not need this page and should install the [default](/install) version of Saito. This page describes how to compile a custom Saito WASM binary from the code on your computer. A pre-compiled version of this software is already available and used by default by the other clients.
 
-The reason you will need to modify this code is if you want to modify the core Rust-defined code and add additional functions that apps written in other languages can use to interact with it -- sending data into the core software or fetching fata from it. The code in the ```/saito/rust/saito-wasm``` subdirectory is what handles this, and will need to be modified in this case.
+This means the only reason you will need to modify this code is if you want to program  the core Rust-defined code and add additional functions that apps written in other languages can use to interact with it -- sending data into the core software or fetching fata from it. The code in the ```/saito/rust/saito-wasm``` subdirectory is what handles this, and will need to be modified in this case.
 
 To make changes to Saito-WASM, you must first ```compile``` the code and then ```link``` it to your external application. This page contains instructions on how to do this.
 
