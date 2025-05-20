@@ -2,7 +2,7 @@
 title: How to create ZK-enabled apps on Saito
 description: This documentation describes how to create and integrate ZK proofs on Saito application using ZK-Snarks
 published: true
-date: 2025-01-31T19:51:29.319Z
+date: 2025-05-20T04:05:23.453Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-31T18:45:46.925Z
