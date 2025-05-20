@@ -2,7 +2,7 @@
 title: HIS Tutorial
 description: 
 published: true
-date: 2025-05-20T08:52:21.362Z
+date: 2025-05-20T08:52:43.842Z
 tags: 
 editor: markdown
 dateCreated: 2024-04-20T08:11:24.441Z
