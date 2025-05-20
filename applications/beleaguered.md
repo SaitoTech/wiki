@@ -2,7 +2,7 @@
 title: Beleaguered Castle
 description: 
 published: true
-date: 2025-05-20T03:47:52.683Z
+date: 2025-05-20T03:48:18.860Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-20T03:47:52.683Z
@@ -11,7 +11,7 @@ dateCreated: 2025-05-20T03:47:52.683Z
 ## Beleaguered Castle
 
 <br>
-<imr src="/img/beleaguered.png" />
+<imr src="https://wiki.saito.io/img/beleaguered.png" />
 
 Beleaguered Castle is a patience or solitaire card game played with a deck of 52 playing cards.It is sometimes described as "Freecell without cells" because its gameplay is somewhat akin to the popular solitaire computer game of that name but without extra empty spaces to maneuver. Beleaguered Castle is also called Laying Siege and Sham Battle.
 
