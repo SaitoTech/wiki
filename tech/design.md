@@ -2,7 +2,7 @@
 title: Design
 description: 
 published: true
-date: 2024-02-15T05:49:37.312Z
+date: 2025-05-20T05:39:52.121Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-04T12:00:40.771Z
