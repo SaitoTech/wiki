@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-05-20T09:10:45.213Z
+date: 2025-05-20T14:58:35.649Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -19,7 +19,7 @@ Saito is a layer-1 blockchain that fixes fundamental incentive misalignments fou
 
 If you're new to Saito, we recommend starting with our one-page overview of [Saito Consensus](/consensus). You can also browse the [applications](/applications) already running on the network, explore the [project roadmap](/roadmap), or dig into our [tokenomics](/tokenomics). Developers are invited to read our pages covering how to [run nodes](/install) and [build applications](/tutorials).
 
-This wiki is a community-maintained knowledge base. If you'd like to contribute, all pages are stored in markdown in our [Saito Wiki GitHub Repository]((https://github.com/saitotech/wiki). We have instructions on [how to contribute to the wiki](/community/wiki).
+This wiki is a community-maintained knowledge base. If you'd like to contribute, we have instructions here on [how to contribute](/community/wiki).
 
 
 ## External Links
