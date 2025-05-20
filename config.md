@@ -2,7 +2,7 @@
 title: Configure Saito-lite-Rust
 description: Directory for information on the various configuration files which dictate how a Saito-lite-Rust client operates.
 published: true
-date: 2025-05-19T17:04:43.402Z
+date: 2025-05-20T15:18:36.269Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T04:13:39.150Z
@@ -10,22 +10,29 @@ dateCreated: 2024-11-20T04:13:39.150Z
 
 # Saito Configuration
 
-After [installing](/install) Saito you will be ready to configure the server to run the applications you wish to support. You can also configure it to run on a specific domain or IP address and use a specific publickey and much more. This section introduces the configuration steps.
+After [installing](/install) Saito you will be ready to configure the server. This involves editing the two main configuration files used by the node:
 
-## Configuration Files
+- `config/options` is the main configuration file, containing network configuration options like the IP address on which the server runs and the ports it should open and the peers to which it should connect. Once you have run Saito for the first time, this file will *also* contain the public and privatekey of your server -- you can backup your wallet by backing up this file.
 
-Saito uses two main configuration files. 
+- `config/modules.config.js` is the module configuration file, specifying which modules will run on the server (core) and which modules will be offered to any lite-clients that connect to the server (lite).
 
-- `config/options`
-- `config/modules.config.js`
+Almost anything you want to configure for Saito can be accomplished by editing one of these two files.
 
-`config/options` contains network configuration options like the IP address on which the server runs and the ports it should open and the peers to which it should connect. This file will *also* contain the public and privatekey of your server -- you can backup your server wallet anytime by backing up this file.
 
-`config/modules.config.js` specifies which modules will run on the server (core) and which modules will be served to any browsers that connect to it (lite).
+## Configuring Network
 
-## Compilation
 
-Compiling produces a compressed version of Saito which will include the modules listed in `modules.config.js` - this compiled Javascript is then served to browsers which connect to the server and request the default modules.
+
+
+## Configuring Applications
+
+You may remember the instruction we ran to compile Saito during our initial [install](/install):
+
+```
+npm run nuke
+```
+
+In addition to restorig Saito to a *factory-fresh* condition, this command compiles a compressed version of the Saito which will include any modules listed in `modules.config.js` as available for lite-clients. This compressed file will be served to any browsers which connect to the server and request a copy of the software.
 
 There are two primary compilation commands. 
 
