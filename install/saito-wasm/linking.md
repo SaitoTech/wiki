@@ -2,7 +2,7 @@
 title: Saito WASM installation / linking instructions
 description: 
 published: true
-date: 2025-05-20T05:55:40.848Z
+date: 2025-05-20T05:56:48.953Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-20T05:52:51.704Z
@@ -11,8 +11,7 @@ dateCreated: 2025-05-20T05:52:51.704Z
 
 # Saito Wasm - Linking Instructions
 
-
-#### If you're using a Mac with the M1 chip, you can find specific instructions [here](./saito-wasm/mac)
+#### If you're using a Mac with the M1 chip, you can find specific instructions [here](./mac)
 
 This guide provides a detailed walkthrough on how to link the saito-lite-rust repository to the saito-wasm locally via the saito-js wrapper. This process leverages the npm link command.
 
