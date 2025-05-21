@@ -2,7 +2,7 @@
 title: Configure Saito-lite-Rust
 description: Directory for information on the various configuration files which dictate how a Saito-lite-Rust client operates.
 published: true
-date: 2025-05-20T15:34:50.201Z
+date: 2025-05-21T22:14:20.342Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T04:13:39.150Z
@@ -31,7 +31,7 @@ You may remember the instruction we ran to compile Saito during our initial [ins
 npm run nuke
 ```
 
-In addition to restorig Saito to a *factory-fresh* condition, this command compiles a compressed version of the Saito which will include any modules listed in `modules.config.js` as available for lite-clients. This compressed file will be served to any browsers which connect to the server and request a copy of the software.
+In addition to restoring Saito to a *factory-fresh* condition, this command compiles a compressed version of the Saito which will include any modules listed in `modules.config.js` as available for lite-clients. This compressed file will be served to any browsers which connect to the server and request a copy of the software.
 
 There are two primary compilation commands. 
 
