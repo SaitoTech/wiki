@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2025-04-08T19:16:57.716Z
+date: 2025-05-21T07:12:08.507Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -14,9 +14,9 @@ Saito Consensus is a distributed consensus mechanism provably secure against a s
 
 ## 1. HOW BLOCKS ARE PRODUCED
 
-When users send transactions into the network they add cryptographic routing signatures which specify the first-hop node(s) to which they are sending their transactions. Nodes add similar signatures as they relay these transactions onwards to their own peers. As a result, all transactions ciculating on the network have an unforgeable record of the path they have taken into the network from their originating user to the node that holds them in its mempool.
+When users send transactions into the network they add cryptographic routing signatures which specify the first-hop node(s) to which they are sending their transactions. Nodes add similar signatures as they relay these transactions onwards to their own peers. As a result, all transactions ciculating on the network have an unforgeable record of the path they have travelled from their originating user to the node that holds a copy and seeks to include it in a block.
 
-All unconfirmed transactions offer "routing work" to the nodes that possess them. The amount of routing work in any transaction consists of the transaction fee halved with every hop beyond the first that the transaction has taken into the network. A transaction with a 10 SAITO fee offers 1st-hop nodes 10 units of routing work, 2nd-hop nodes 5 units of routing work, 3rd-hop nodes 2.5 units of routing work, and so on.
+All unconfirmed transactions offer "routing work" to the nodes that possess them. The amount of routing work consists of the transaction fee halved with every hop beyond the first that the transaction has travelled into the network. A transaction with a 10 SAITO fee offers 1st-hop nodes 10 units of routing work, 2nd-hop nodes 5 units of routing work, 3rd-hop nodes 2.5 units of routing work, and so on.
 
 Nodes gather transactions in their mempool until they have enough routing work to meet a difficulty criteria maintained by consensus for the production of a block. We refer to this difficulty as the "burn fee" as when the block is produced all transaction fees in the block are burned. This "burn fee" is automatically adjusted by consensus to target a desired blocktime: If blocks are produced more rapidly the "burn fee" rises, and if blocks are produced more slowly the "burn fee" falls.
 
