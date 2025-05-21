@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2025-05-21T07:16:59.263Z
+date: 2025-05-21T07:20:35.656Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -28,7 +28,7 @@ If a golden ticket for block N is included in the very next block (N+1), consens
 
 The lottery works as follows. We hash the mining solution to choose a transaction weighted by its share of overall fees in the block. We then hash the solution again to select a routing hop from the winning transaction, with each hop weighted by its share of routing work in the path. For a transaction with a 2-hop routing path and a 10 SAITO fee, the 1st-hop has a 10/5 chance of payout while the 2nd-hop has a 5/15 chance. In a transaction with a 3-hop routing path and a 10 SAITO fee the 1st-hop has a 10/17.5 chance of payout, while the 2nd-hop has a 5/17.5 chance of payout and the third has a 2.5/17.5 chance of payout, etc.
 
-This process repeats block by block. Nodes burn network tokens to produce blocks, and then burn hash to resurrect fees. Hashing difficulty adjusts upward if two blocks in a row are produced with golden tickets, and downwards if two blocks in a row are produced without golden tickets. This achieves cost-of-attack at the price of significant deflationary pressure from the blocks whose fees are burned but never resurrected and redistributed by a golden ticket.
+This process repeats block by block. Nodes burn in-network tokens to produce blocks, and then burn ex-network hash to resurrect them. Hashing difficulty adjusts upward if two blocks in a row are produced with golden tickets, and downwards if two blocks in a row are produced without golden tickets. This achieves cost-of-attack at the price of significant deflationary pressure from the blocks whose fees are burned but never resurrected and redistributed by a golden ticket.
 
 
 ## 3. IMPROVING SECURITY AND PREVENTING DEFLATION
