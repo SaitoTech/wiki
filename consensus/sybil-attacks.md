@@ -2,7 +2,7 @@
 title: Sybil Attacks
 description: 
 published: true
-date: 2025-05-21T07:56:19.294Z
+date: 2025-05-21T07:57:11.310Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
@@ -53,5 +53,4 @@ Put most plainly, with Saito Consensus nodes can *try* to sybil, but since the m
 
 ## Conclusion
 
-Saito Consensus offers a significant advance in distributed consensus. But don't take our word for it -- we encourage all readers to dig into the informational problems described on this page and work through how to address them using routing signatures.
-
+Saito Consensus offers a significant advance in distributed consensus. But you don't need to take our word for it -- we encourage all readers to dig into the mathematical paper above and see for yourself how cryptographic routing signatures can be used to universally punish the inefficiencies created by the presence of sybils in transaction routing paths.
