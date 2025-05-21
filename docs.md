@@ -2,7 +2,7 @@
 title: Saito Documentation
 description: 
 published: true
-date: 2025-05-21T22:40:33.690Z
+date: 2025-05-21T22:44:38.684Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-29T21:33:20.620Z
@@ -21,14 +21,6 @@ Saito Applications (also known as modules) requires a conceptual shift. The serv
 ### [General Conventions](/docs/modules)
 General guideline and instructions for working with and creating Saito Modules. This page focuses on what makes Saito modules truly web3 and different than what passes for "peer-to-peer" applications on other networks.
 
-### [Module API](/docs/module-api)
-The Module API explains the functions that your module can include and extend to react to common events (inbound transactions, peer messages, chain-reorganizations, etc) and to store data and send messages to other peers on the network.
-
-### [Events API](/docs/events-api)
-Modules can communicate with each other by broadcasting events and listening for events broadcast by other modules. The Events API explains how to listen for these events and respond when they are triggered, such as running specific code when a user adds a friend's contact information to their wallet.
-
-### [Services API](/docs/services-api)
-Services are used to provide data to other nodes on the network, such as sharing RedSquare transactions or providing DNS lookup services for peers. The Services API explains how peers can inform other peers that they can be queried for special types of data.
 
 ### [UI Components and Templates](/docs/ui-components) 
 Many Saito applications re-use the same UI components (Saito Overlay, Saito User, Saito Menu). This sections explains some of the UI Components that exists and how you can quickly and easily incorporate them in your own applications.
@@ -42,11 +34,17 @@ This section contains a quick tutorial on how to get ZK-Snarks working in your S
 ### [Wasm Support](/docs/wasm)
 This section contains guidelines on how to use external WASM libraries into your Saito Application. Useful if you want to incorporate third-party code that is only available as a WASM binary.
 
-## Network API
+## APIs
 
-The documentation in this section describes the network layer that underpins the Saito client. Since messages are passed between nodes in a binary format, this section is primarily intended for developers who wish to modify the core routing software or add additional features to the core network stack.
+### [Module API](/docs/module-api)
+The Module API explains the functions that your module can include and extend to react to common events (inbound transactions, peer messages, chain-reorganizations, etc) and to store data and send messages to other peers on the network.
+
+### [Events API](/docs/events-api)
+Modules can communicate with each other by broadcasting events and listening for events broadcast by other modules. The Events API explains how to listen for these events and respond when they are triggered, such as running specific code when a user adds a friend's contact information to their wallet.
+
+### [Services API](/docs/services-api)
+Services are used to provide data to other nodes on the network, such as sharing RedSquare transactions or providing DNS lookup services for peers. The Services API explains how peers can inform other peers that they can be queried for special types of data.
 
 ### [Network API](/docs/network-api)
-Interface with Saito nodes of all types via the networking API.
-
+Interface with Saito nodes of all types via the networking API. The network layer that underpins the Saito client. Since messages are passed between nodes in a binary format, this section is primarily intended for developers who wish to modify the core routing software or add additional features to the core network stack.
 
