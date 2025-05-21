@@ -2,7 +2,7 @@
 title: majoritarian-attacks
 description: 
 published: true
-date: 2025-05-21T11:09:54.542Z
+date: 2025-05-21T11:29:47.849Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -10,22 +10,23 @@ dateCreated: 2023-09-20T01:58:02.086Z
 
 # Eliminating 51% Attacks
 
-- Consult the [whitepaper](https://saito.io/saito-whitepaper.pdf) to learn the basics.
+The most common reason people consider the 51% attack impossible to solve is that well-known academic papers claim the problem is unsolvable. The most general way to see how Saito Consensus solves the problem is taking these papers seriously and realizing why they do not apply.
 
-- For a complete mathematical proof [see here](https://wiki.saito.io/consensus/math).
+- See our [technical overview](/consensus) of Saito Consensus
 
-- Official Blog [post](https://saito.tech/eliminating-51-attacks-in-proof-of-work-blockchains/) on the same subject.
+- For a complete mathematical proof [see here](https://wiki.saito.io/consensus/math)
 
+- Official Blog [post](https://saito.tech/eliminating-51-attacks-in-proof-of-work-blockchains/) on the same subject
 
-## Impossibility Proofs
+As such, while the three links above explanation how the soluiton works, in this section we review the two major classes of impossibility proofs that are used to argue that the problems Saito Consensus solves are unsolvable. Our goal is to show you the informational limitations of these results and why they do not apply to routing work mechanisms.
 
-The most common reason people consider the 51% attack impossible to solve is that well-known academic papers on the limits of distributed consensus claim this is the case. The fastest way to see how Saito Consensus avoids these problems is noticing the way it breaks the axiomatic assumptions of these results.
+<br>
 
 ### 1. Bracha and Toueg (1985)
 
 The paper *Asynchronous Consensus and Broadcast Protocols* by Bracha and Toueg (1985) is the most widely-cited proof that probabilistic protocols with **n** total participants can tolerate at most **(n-1)/2** malicious participants.
 
-Bracha and Toueg conceptualize consensus mechanisms as consisting of *processes* which can be programmed to behave honestly or maliciously. The foundation of their claim is that in permissionless mechanisms byzantine processes can do anything honest processes can do. If malicious nodes wish to prevent the network from achieving consensus, they need merely to propose the same number of "atomic steps" as the honest minority is proposing, stalemating consensus by preventing it from resolving on any particular outcome.
+Bracha and Toueg conceptualize consensus mechanisms as consisting of *processes* which behave honestly or maliciously. The foundation of their claim is that in permissionless mechanisms byzantine processes can do anything honest processes can do. If malicious nodes wish to prevent the network from achieving consensus, they need merely to propose the same number of "atomic steps" as the honest minority is proposing, stalemating consensus by preventing it from resolving on any particular outcome.
 
 > In an atomic step of the system, a process can try to receive a message, perform an arbitrarily long local computation, and then send a finite set of messages. The computation and the messages sent are prescribed by the protocol, that is, a function of the message received and the local state.
 
@@ -35,6 +36,7 @@ This assumption -- symmetrically costless participation -- was reasonable in the
 
 As a result, the assumption Bracha and Toueg make that all *processes* face the same cost structure does not apply to Saito Consensus. Honest nodes run the network using other people's money. Their costs of producing blocks are lower than those of attackers, and because they never include their own fees in blocks they never need reduce their share of the overall network. But attackers necessarily force themselves out majority control of network resources if they continue to orphan honest blocks. The network is capable of reducing 
 
+<br>
 
 ### 2. Dwork, Lynch, and Stockmeyer (1988)
 
@@ -51,15 +53,14 @@ The consensus mechanism continues to work exactly as promised -- imposing a quan
 
 ## How Saito Eliminates 51% Attacks
 
-### Routing Work
+The essence of eliminating 51% attacks is a technique for increasing the cost of orphaning a block above the cost of .
 
-The objective measure of work required for Saito block production is special in many ways, but the most relevant for eliminating the 51% attack is that work in Saito is *Block Agnostic -* that is, nodes are not forced to commit their work to a specific block or point in the chain's history.
+In the inner auction
 
-Whereas in other blockchains, consensus nodes must commit to the longest-known fork, consensus nodes in Saito can produce work and earn rewards *without even knowing* what the full blockchain looks like. This is achieved thanks to the fact that *routing work* (required for block production) is committed within individual transactions, not blocks.
+Saito Consensus achieves this as honest nodes make blocks entirely with fees collected from other users. Attackers are forced to spend their own money.
 
-In Saito, transactions are signed by senders such that the right to its claim rewards belong to the node it was sent to - nodes can further relay like this to share the rewards and increase the chance of the transction entering the next block. The more 'routing signatures' a transaction has, the less block work it can contribute. Relevant to 51% attacks, the important aspect of this system is that the source of valid block work, transaction fees, *do not require a commitment to any particular fork.*
+In equilibrium, spending their own money to produce blocks results in attackers . 
 
-- See [this](https://wiki.saito.io/en/consensus) article or the [whitepaper](https://saito.io/saito-whitepaper.pdf) for a complete description of routing work.
 
 ### Golden Ticket
 
