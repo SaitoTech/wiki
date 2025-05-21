@@ -2,7 +2,7 @@
 title: Network Configuration for Saito-lite-Rust
 description: Information on network configuration files and settings for deployed Saito-lite-Rust nodes.
 published: true
-date: 2025-05-19T17:05:35.501Z
+date: 2025-05-21T22:17:09.394Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T04:10:39.991Z
@@ -36,7 +36,7 @@ The `config/options.conf` file specifies network configuration options like the 
 ```
 You do not need to provide information for most of these fields. The most important are the following:
 
-```
+```json
   "server": {
     "host": "localhost",
     "port": 12101,
@@ -52,18 +52,18 @@ You do not need to provide information for most of these fields. The most import
 
 ### Configuration Reference
 
-- host: IP address the server listens on. 127.0.0.1 for localhost.
-- port: Port number for the server. Default is 12101.
-- protocol: Network protocol, http in this case.
-- endpoint: Specifies the endpoint details, mirroring the server's configuration for external access.
-- verification_threads: Number of threads for processing verification tasks.
-- channel_size: Maximum number of queued tasks or messages.
-- stat_timer_in_ms: Interval for reporting stats or performing periodic checks.
-- reconnection_wait_time: Wait time before attempting reconnection in ms. Default is 10000.
-- thread_sleep_time_in_ms: Sleep time for background threads in ms
-- block_fetch_batch_size: Number of blocks fetched per batch during sync.
+- `host`: IP address the server listens on. 127.0.0.1 for localhost.
+- `port`: Port number for the server. Default is 12101.
+- `protocol`: Network protocol, http in this case.
+- `endpoint`: Specifies the endpoint details, mirroring the server's configuration for external access.
+- `verification_threads`: Number of threads for processing verification tasks.
+- `channel_size`: Maximum number of queued tasks or messages.
+- `stat_timer_in_ms`: Interval for reporting stats or performing periodic checks.
+- `reconnection_wait_time`: Wait time before attempting reconnection in ms. Default is 10000.
+- `thread_sleep_time_in_ms`: Sleep time for background threads in ms
+- `block_fetch_batch_size`: Number of blocks fetched per batch during sync.
 
 ### Peers Configuration
-- peers: An array of peer nodes the server will connect to.
+- `peers`: An array of peer nodes the server will connect to.
 
-Note that each peer object includes host, port, protocol, and synctype. Since these connections will be made over-the-network, the `host` and `port` you provide for any peers should be the publicly-available information provided in *their* options.conf as an endpoint.
+Note that each peer object includes host, port, protocol, and synctype. Since these connections will be made over-the-network, the `host` and `port` you provide for any peers should be the publicly-available information provided in *their* `options.conf` as an endpoint.
