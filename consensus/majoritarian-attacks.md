@@ -2,7 +2,7 @@
 title: majoritarian-attacks
 description: 
 published: true
-date: 2025-05-21T12:36:04.034Z
+date: 2025-05-21T12:52:41.792Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -34,17 +34,17 @@ As a result, the assumptions in Bracha and Toueg simply do not apply to Saito Co
 
 ### 2. Dwork, Lynch, and Stockmeyer (1988)
 
-A second and related impossibility result comes from *Consensus in the presence of Partial Synchrony* by Dwork, Lynch, and Stockmeyer (1988) which examines how delays in communication affect consensus protocols. One of their key insights is that consensus cannot be guaranteed to resolve when block production capacity is evenly split between two partitions of the network.
+A related impossibility result is from *Consensus in the Presence of Partial Synchrony* by Dwork, Lynch, and Stockmeyer (1988). This paper examines how communication delays affect consensus protocols. One of its key insights is that consensus cannot be guaranteed when block production capacity is evenly split into two partitions.
 
-This argument is often used to claim that consensus systems cannot recover from "split-brain" situations or co-ordinated 50/50 attacks, yet these claims also fail to apply to Saito Consensus.
+This argument is often used to claim that consensus mechanisms cannot deter attackers from "split-brain" situations or 50/50 attacks. However these claims do not apply to Saito Consensus.
 
-The most obvious reason is that splitting block production resources evenly in a routing work mechanism requires absolute control over how each participant and node in the network communicates. It is not reasonable to require control of 100% of network participants in order to pull off an attack that involves mere majority. Nor is imposing such a situation compatible with the theoretical requirements of informational decentralization.
+The first reason is that splitting block production this way in Saito Consensus requires dictating how every participant in the network connects and communicates with others. This requires controlling 100% of network resources not a mere majority. Nor is the assumption this situation can persist compatible with the requirements of informational decentralization.
 
-We can try to salvage this attack by assuming our attacker already controls 50% of pre-attack fee-flow and is merely shifting their own resources to a private chain that they refuse to distribute to honest nodes in order to force them to extend a separate chain instead of happily extending the attacker's fork. This seems a more reasonable scenario since it requires the attacker to control a mere 50% of network fee-flow. Does this attack compromise Saito Consensus?
+We can salvage the attack by giving an attacker only 50% of network fee-flow and having them extend a private chain they refuse to disclose to honest nodes. This version of the attack sounds more plausible — it forces a split while requiring only half the network’s economic activity. But does it succeed?
 
-Unsurprisingly, while this attack may be theoretically possible in Saito Consensus, it is still economically irrational. Suddenly our attacker, who was previously spending 50% of their fee-flow producing golden tickets to unlock the remainder as routing payouts, is now spending 100% of their fee-flow to do the same. Not only has their cost-of-getting-paid doubled, it has consumed every penny of their potential profit, and that is without consideration for the economic costs of running the network infrastructure needed to collect the fees in the first palce.
+As consideration will show, the attacker who previously spent half of their income mining golden tickets to unlock the routing payout is now spending the entire block reward to mine golden tickets. Their cost of getting paid has doubled, and that is before any need to pay actual network costs. Consensus has succeeded in making this attack economically irrational.
 
-Whereas other mechanisms make the DLS attack costless to attackers, who can move honest transactions into their private chain and attempt to collect them as payments, in Saito Consensus this is not possible. Attackers are forced to operate at a loss and the consensus mechanisms continues to do its job of ensuring byzantine nodes face a quantifiable economic loss for attacking the network and its users.
+In contrast to other consensus mechanisms — where attackers can shift their work to private forks without direct penalty and even profit by moving transactions from the honest chain onto their fork — Saito punishes such behavior. Nodes that cooperate reduce their own cost of getting paid. Attacks that terminate this cooperation through partitioning or isolating nodes become self-defeating, and impose increasing economic losses on attackers.
 
 ### Conclusion
 
