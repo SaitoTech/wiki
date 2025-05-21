@@ -2,7 +2,7 @@
 title: Saito Documentation
 description: 
 published: true
-date: 2025-05-20T05:49:07.464Z
+date: 2025-05-21T22:40:33.690Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-29T21:33:20.620Z
@@ -46,7 +46,7 @@ This section contains guidelines on how to use external WASM libraries into your
 
 The documentation in this section describes the network layer that underpins the Saito client. Since messages are passed between nodes in a binary format, this section is primarily intended for developers who wish to modify the core routing software or add additional features to the core network stack.
 
-### [Network API](/docs/network)
+### [Network API](/docs/network-api)
 Interface with Saito nodes of all types via the networking API.
 
 
