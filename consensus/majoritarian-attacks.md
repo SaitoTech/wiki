@@ -2,7 +2,7 @@
 title: majoritarian-attacks
 description: 
 published: true
-date: 2025-05-22T03:03:42.469Z
+date: 2025-05-22T03:08:51.212Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -18,15 +18,13 @@ Given the [technical explanations](/consensus) of routing mechanisms elsewhere o
 
 ### 1. Bracha and Toueg (1985)
 
-The paper *Asynchronous Consensus and Broadcast Protocols* by Bracha and Toueg claims that in an asynchronous system with **n** total processes, at most **(n−1)/2** processes can be Byzantine for the network to reach consensus.
-
-The model they adopt assumes a network made up of processes that respond to messages:
+The paper *Asynchronous Consensus and Broadcast Protocols* by Bracha and Toueg claims that in an asynchronous system with **n** total processes, at most **(n−1)/2** processes can be Byzantine. Their proof is based on a network made up of processes that respond to inbound messages:
 
 > In an atomic step of the system, a process can try to receive a message, perform an arbitrarily long local computation, and then send a finite set of messages. The computation and the messages sent are prescribed by the protocol, that is, a function of the message received and the local state.
 
-Critically, all messages cost all processes the same amount to broadcast in this model. If that assumption holds, Bracha and Toueg are correct: a malicious majority can indefinitely stalemate an honest minority. But what if it costs malicious nodes more to send messages than it costs honest nodes? And what if they received back less of the resources required to send further messages?
+In this model, all messages cost the same amount to broadcast, thus allowing any malicious majority to indefinitely stalemate any honest minority. But what if it costs malicious nodes more to send Byzantine messages than it costs honest nodes to follow the protocol? And what if the cost paid is the loss of resources required to send further messages?
 
-Unlike Bracha and Toueg's model, routing work mechanisms force attackers to burn tokens to produce blocks, and they get less refunded when those blocks are orphaning other blocks. Not only must attackers spend their own tokens to attack the chain, but they must transfer resources in aggregate to the honest nodes. Over time, the UTXO set shifts away from the attackers, eroding their ability to continue the attack.
+Unlike Bracha and Toueg's model, routing work mechanisms force attackers to burn their own tokens to produce blocks, and refund them less back when those blocks orphan honest blocks. Not only must attackers spend their own tokens to attack the chain, but they must transfer tokens to honest nodes in proportion to the amount of honest blocks they orphan. Over time, this tax shifts control of the resources needed to propose further state transitions away from attackers, eroding their ability to continue the attack.
 
 As a result, the assumptions in Bracha and Toueg simply do not apply to Saito Consensus. Malicious nodes can extend the chain, but with every honest block they orphan they reduce their control of the resource that must be burned to propose blocks, pulling even a malicious majority back into minority status and rendering them -- eventually -- unable to continue the attack at all.
 
