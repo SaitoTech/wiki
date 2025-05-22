@@ -2,7 +2,7 @@
 title: majoritarian-attacks
 description: 
 published: true
-date: 2025-05-21T12:53:35.076Z
+date: 2025-05-22T03:03:42.469Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -10,9 +10,9 @@ dateCreated: 2023-09-20T01:58:02.086Z
 
 # Eliminating 51% Attacks
 
-Many people believe that the 51% attack is fundamentally unsolvable. This belief stems from widely cited academic papers that claim it is mathematically impossible to build consensus systems that majoritarian attacks. Saito Consensus proves otherwise.
+Many people believe that the 51% attack is fundamentally unsolvable. This belief stems from widely cited academic papers that claim it is mathematically impossible to build consensus systems that majoritarian attacks. Saito Consensus establishes it is possible to work around these.
 
-Given the [technical explanations](/consensus) of how Saito Consensus works elsewhere on this wiki, this page focuses on two of the most influential impossibility results in distributed systems: *Bracha and Toueg* (1985) and *Dwork, Lynch, and Stockmeyer* (1988). These papers form the intellectual foundation for claims that majority attacks are unsolvable. We'll show why these results do not apply to routing work mechanisms like Saito.
+Given the [technical explanations](/consensus) of routing mechanisms elsewhere on this wiki, this page focuses on explaining how Saito skirts the academic impossibility results which form the intellectual foundation for claims that majority attacks are unsolvable: *Bracha and Toueg* (1985) and *Dwork, Lynch, and Stockmeyer* (1988).
 
 <br>
 
