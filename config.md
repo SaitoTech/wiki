@@ -2,7 +2,7 @@
 title: Configure Saito-lite-Rust
 description: Directory for information on the various configuration files which dictate how a Saito-lite-Rust client operates.
 published: true
-date: 2025-05-22T05:49:24.751Z
+date: 2025-05-22T09:20:45.654Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T04:13:39.150Z
@@ -10,9 +10,9 @@ dateCreated: 2024-11-20T04:13:39.150Z
 
 # Saito Configuration
 
-After[installing](/install) Saito you will be ready to configure the server. This involves editing the two main configuration files used by the node:
+After [installing](/install) Saito you will be ready to configure the server. This involves editing the two main configuration files used by the node:
 
-- `config/modules.config.js` is the module configuration file, specifying which modules run on the server (core) and which modules are compiled for any lite-clients that connect to the server (lite).
+- `config/modules.config.js` specifies which modules run on the server (core) and which modules are compiled for any lite-clients that connect to the server (lite).
 
 - `config/options.conf` is the main configuration file, specifying the IP address on which the server runs and the ports it should open and the peers to which it should connect.  When you run Saito for the first time, this file is copied over into ```config/options``` which will contain your configuration options along with wallet information like the public and privatekey of your server -- you can backup your wallet anytime by backing up this file.
 
