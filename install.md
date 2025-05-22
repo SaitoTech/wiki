@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2025-05-22T05:31:38.199Z
+date: 2025-05-22T05:43:12.653Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -10,7 +10,7 @@ dateCreated: 2024-10-15T23:32:31.744Z
 
 # Installing Saito
 
-This page assumes you want to run a Saito node or develop Saito Apps using the default network client. If you are interested in running the command-line Rust client or another software package see our [overview](/install/overview) of all Saito-related resources.
+This page assumes you want to run the NodeJS Saito client (best for app hosting and development!). If you are interested in running the command-line Rust client or another software package see our [overview](/install/overview) of all Saito-related resources.
 
 ### Installation Requirements:
 
