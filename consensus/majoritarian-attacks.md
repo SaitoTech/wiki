@@ -2,7 +2,7 @@
 title: majoritarian-attacks
 description: 
 published: true
-date: 2025-05-22T09:55:40.295Z
+date: 2025-05-22T10:01:57.001Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -50,11 +50,11 @@ In contrast to other consensus mechanisms — where attackers can shift work to 
 
 ### Conclusion
 
-The foundational impossibility results in the 1980s developed out of the assumption that *processes* in computer systems do not face any internal cost for messaging, and thus *malicious processes* cannot be punished if they choose to send malicious messages or partition their communications in ways that cripples the ability for honest nodes to reach consensus.
+The foundational impossibility results computer scientists developed in the 1980s emerged out of the assumption that *processes* in computer systems were purely technical processes that could be costlessly manipulated by attackers. This resulted in the emergence of impossibility results based on the assumption that *malicious processes* could not be punished within consensus mechanisms as soon as they the same implicit "voting power" as honest nodes.
 
-This assumption remains true in proof-of-work and proof-of-stake mechanisms, since once those mechanisms are under majoritarian attack they lose the ability to asymmetrically punish attackers. But there is no theoretical reason to believe that these limitations are universal limitations.
+This assumption remains true in proof-of-work and proof-of-stake mechanisms, since those mechanisms lose the ability to punish attackers in majoritarian conditions. But there is no reason to consider this problem unsolvable.
 
-Saito Consensus creates an asymmetrical cost for sending messages. The most-efficient chain at including user-paid fees is the cheapest to produce and the most profitable for all participants to extend. This eliminates the majoritarian attack identified Bracha and Toueg (1985) which assumes that state transitions must be symmetrically costly for honest nodes and attackers to propose. 
+Saito Consensus eliminates the majoritarian attack identified Bracha and Toueg (1985) by imposing an asymmetrical cost for messages based on their content. The most-efficient chain at including user-paid fees is the cheapest to produce and the most profitable to extend. Attackers who orphan honest blocks necessarily push the network into a less efficient equilibrium in which their blocks are more costly to produce and the difference must be paid out of the attacker's own wallet.
 
-Partitioning the network into equal halves is also irrational and pushes attackers into loss. While it may be possible for attackers to force the network into a state of balanced stasis, it is not possible to do this without accepting losses. This breaks the arguments of Dwork, Lynch, and Stockmeyer (1988).
+Likewise, attacks attempting to partitioning the routing network into equal halves are also irrational. Leaving aside the question of whether attackers can force the network into two perfectly balanced halves, it is not possible to do this without accepting losses. This breaks the way Dwork, Lynch, and Stockmeyer (1988) are used to make impossibility claims about the unsolvability of the 51% attack.
 
