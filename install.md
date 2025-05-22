@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2025-05-20T15:10:14.817Z
+date: 2025-05-22T05:31:38.199Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -10,7 +10,7 @@ dateCreated: 2024-10-15T23:32:31.744Z
 
 # Installing Saito
 
-This page assumes you want to run a node on the Saito network or develop Saito Apps. If you are interested in another software package see our [overview](/install/overview) of all Saito-related projects. 
+This page assumes you want to run a Saito node or develop Saito Apps using the default network client. If you are interested in running the command-line Rust client or another software package see our [overview](/install/overview) of all Saito-related resources.
 
 ### Installation Requirements:
 
@@ -19,10 +19,12 @@ This page assumes you want to run a node on the Saito network or develop Saito A
 - Stack: node.js (v.16+), npm (v6+)
 - TypeScript
 
-Most development machines with NodeJS installed will have these packages available. If you are missing any we have dedicated pages to help you install these tools for [Linux](/install/linux), [Mac](/install/mac) and [Windows](/install/windows). Once you have NodeJS installed, continue with the instructions below.
+You will need a machine with NodeJS and Git installed. If you are missing either of these tools we have dedicated pages to help you install them for [Linux](/install/linux), [Mac](/install/mac) and [Windows](/install/windows). The remainder of this tutorial assumes you have both packages installed and are comfortable using the command-line.
 
 
 ### 1) Download Saito
+
+Clone the Saito repository and go into the ```node``` sub-directory. This is where the NodeJS version of Saito is located. Running ```npm install``` from here downloads all of the packages you will need to run your server, including a pre-compiled version of the Rust codebase located elsewhere in our repository.
 
 ```
 git clone https://github.com/saitotech/saito
@@ -37,17 +39,19 @@ npm install
 
 ### 2) Compile Saito
 
+The first instruction runs a script that compiles Saito into a compressed javascript file that can be served to browsers and contains the modules browsers will need to interact with it. The second starts the server:
+
 ```
 npm run nuke
 npm start
 ```
 
-After a few moments, you should see a large Saito ASCII logo appear on your screen. This indicates that Saito is running normally and you can move on to the next step.
+After a few moments, you should see a large Saito ASCII logo appear on your screen. This indicates that Saito is running normally and you can start using it!
 
 ### 3) Visit Saito in your Browser
 
-Once Saito has started-up you will see an animated Saito logo scroll across your terminal. That is the the sign that the server has started and is ready to receive requests. Congratulations! You can now open a browser and visit:
+Congratulations! You can now open a browser and visit:
 
 > http://localhost:12101
 
-If you are installing Saito on a remote server you will need to update your configuration files prior to running ```npm start```. We have a quick guide covering the configuration changes needed for remote deployment in this [deployment guide](/install/deploy).
+Note that if you are installing Saito on a remote server and cannot access the server through localhost you will need to update your [server configuration file](/configuration/wallet) prior to running ```npm start```. We have a quick guide covering the configuration changes needed for remote deployment in this [deployment guide](/install/deploy).
