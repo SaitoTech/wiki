@@ -2,7 +2,7 @@
 title: majoritarian-attacks
 description: 
 published: true
-date: 2025-05-22T03:08:51.212Z
+date: 2025-05-22T03:43:18.421Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -26,23 +26,25 @@ In this model, all messages cost the same amount to broadcast, thus allowing any
 
 Unlike Bracha and Toueg's model, routing work mechanisms force attackers to burn their own tokens to produce blocks, and refund them less back when those blocks orphan honest blocks. Not only must attackers spend their own tokens to attack the chain, but they must transfer tokens to honest nodes in proportion to the amount of honest blocks they orphan. Over time, this tax shifts control of the resources needed to propose further state transitions away from attackers, eroding their ability to continue the attack.
 
-As a result, the assumptions in Bracha and Toueg simply do not apply to Saito Consensus. Malicious nodes can extend the chain, but with every honest block they orphan they reduce their control of the resource that must be burned to propose blocks, pulling even a malicious majority back into minority status and rendering them -- eventually -- unable to continue the attack at all.
+As a result, the proof Bracha and Toueg offer does not apply to Saito Consensus. Malicious nodes can extend the chain, but the loss of in-network resources they face as a result will pull even a malicious majority back into minority status and render them -- eventually -- unable to continue the attack at all.
 
 <br>
 
 ### 2. Dwork, Lynch, and Stockmeyer (1988)
 
-A related impossibility result is from *Consensus in the Presence of Partial Synchrony* by Dwork, Lynch, and Stockmeyer (1988). This paper examines how communication delays affect consensus protocols. One of its key insights is that consensus cannot be guaranteed when block production capacity is evenly split into two partitions.
+A second impossibility result is from *Consensus in the Presence of Partial Synchrony* by Dwork, Lynch, and Stockmeyer (1988). This paper examines how communication delays affect consensus protocols. One of its key insights is that consensus cannot be guaranteed when block production capacity is evenly split into two partitions.
 
-This argument is often used to claim that consensus mechanisms cannot deter attackers from "split-brain" situations or 50/50 attacks. However these claims do not apply to Saito Consensus.
+This argument is often used to claim that consensus mechanisms cannot prevent "split-brain" situations or 50/50 splits, and thus consensus mechanisms cannot deter these splits. However these claims are incorrect when it comes to routing work.
 
-The first reason is that splitting block production this way in Saito Consensus requires dictating how every participant in the network connects and communicates with others. This requires controlling 100% of network resources not a mere majority. Nor is the assumption this situation can persist compatible with the requirements of informational decentralization.
+The first reason is that splitting block production this way in Saito Consensus requires dictating how every participant in the network connects and communicates. This is incompatible with the requirements of informational decentralization, and requires giving the attacker control over 100% of network resources not a mere majority. Calling this a majoritarian attack is misleading.
 
-We can salvage the attack by giving an attacker only 50% of network fee-flow and having them extend a private chain they refuse to disclose to honest nodes. This version of the attack sounds more plausible — it forces a split while requiring only half the network’s economic activity. But does it succeed?
+We can salvage the attack by giving an attacker control of merely 50% of network fee-flow and having them force a partiction by producing a private chain they refuse to disclose to honest nodes. This variant of the attack sounds more plausible — it forces a split while requiring only half the network’s economic activity. But does it succeed?
 
-As consideration will show, the attacker who previously spent half of their income mining golden tickets to unlock the routing payout is now spending the entire block reward to mine golden tickets. Their cost of getting paid has doubled, and that is before any need to pay actual network costs. Consensus has succeeded in making this attack economically irrational.
+To understand why it does not, remember that cost of unlocking payouts automatically adjusts upwards in Saito Consensus until it consumes half of fee-throughput. Yet this hashing difficulty does not fall automatically when fee-throughput drops. Any downward adjustment is only possible if multiple blocks are produced which are not paid-out at all.
 
-In contrast to other consensus mechanisms — where attackers can shift their work to private forks without direct penalty and even profit by moving transactions from the honest chain onto their fork — Saito punishes such behavior. Nodes that cooperate reduce their own cost of getting paid. Attacks that terminate this cooperation through partitioning or isolating nodes become self-defeating, and impose increasing economic losses on attackers.
+As a result, any attacker who shifts their work to extend a private chain increases their own cost of fee-unlock. Whereas our attacker producing 50% of blocks previously spent half of their income mining golden tickets to unlock the routing payout, they are now spending their entire block reward to recover any payments at all. The cost of getting paid has wiped out any potential profits, and that is before any need to pay actual network costs. Consensus has succeeded in making this attack economically irrational.
+
+In contrast to other consensus mechanisms — where attackers can shift work to private forks without direct penalty — routing work punishes such behavior. Nodes cooperate in part because doing so reduces their own cost of getting paid. Attacks that terminate such cooperation through network partitioning strategies are self-defeating, impose increasing economic losses on attackers.
 
 ### Conclusion
 
