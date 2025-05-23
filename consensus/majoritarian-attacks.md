@@ -2,7 +2,7 @@
 title: majoritarian-attacks
 description: 
 published: true
-date: 2025-05-22T10:01:57.001Z
+date: 2025-05-23T12:27:36.548Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -22,7 +22,7 @@ The paper *Asynchronous Consensus and Broadcast Protocols* by Bracha and Toueg c
 
 > In an atomic step of the system, a process can try to receive a message, perform an arbitrarily long local computation, and then send a finite set of messages. The computation and the messages sent are prescribed by the protocol, that is, a function of the message received and the local state.
 
-In this model, all messages cost the same amount to broadcast. Honest nodes respond with messages that promote consensus while Byzantine nodes respond in ways that prevent consensus. Nothing can stop malicious nodes from broadcasting messages that subvert consensus, allowing any malicious majority to indefinitely stalemate any honest minority.
+In this model, all messages cost the same amount to broadcast. Honest nodes respond with messages that promote consensus while Byzantine nodes respond in ways that prevent consensus. Nothing can stop malicious nodes from broadcasting messages that subvert consensus, and nothing can stop honest nodes from attempting to restore consensus. So whichever faction can send the most messages wins.
 
 But what if it costs malicious nodes more to send Byzantine messages than it costs honest nodes to broadcast honest messages? And what if the cost paid is the loss of resources required to send further messages?
 
