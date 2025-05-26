@@ -2,7 +2,7 @@
 title: Red Imperium
 description: Red Imperium is a Multiplayer Space Exploration and Conquest Game
 published: true
-date: 2025-05-19T11:20:22.742Z
+date: 2025-05-26T09:44:03.921Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-22T10:46:21.909Z
@@ -16,7 +16,7 @@ dateCreated: 2024-08-22T10:46:21.909Z
 			<ul class="header-box-links" style="display: flex; gap: 3rem; padding-top: 0rem; margin-left: 1rem;">
 				<li style="margin-top: 0px;"><a href="https://wiki.saito.io/tech/applications/mods/imperium.saito" class="is-asset-link">Saito Module</a></li>
 				<li style="margin-top: 0px;"><a href="https://github.com/SaitoTech/saito/tree/master/mods/imperium" class="">Source Code</a></li>
-				<li style="margin-top: 0px;"><a href="https://wiki.saito.io/tech/applications/install" class="">Installation Guide</a></li>
+				<li style="margin-top: 0px;"><a href="https://wiki.saito.io/applications/install" class="">Installation Guide</a></li>
 			</ul>
 		</div>
 	</div>
