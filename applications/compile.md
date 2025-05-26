@@ -2,7 +2,7 @@
 title: Dynamically Compiled App Deployment
 description: Instructions for compiling and installing DCM, also known as, standalone applications
 published: true
-date: 2025-05-26T09:32:16.658Z
+date: 2025-05-26T09:43:04.726Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-21T20:05:12.071Z
@@ -29,24 +29,4 @@ If you created the .ZIP file properly, you will see a popup showing you the name
 
 Click to compile your module and wait 20-30 seconds for package compilation to complete (be patient, as there is no progress indicator) - once finished, the tool will offer to save the package on your local machine. This is your .saito application file.
 
-
-## Installation
-
-To install a DCM module, click on the top-right menu in any Saito application and click on the Account button below your wallet balance. On the overlay that appears, look for the "+" button that shows up on the top-right of your installed modules.
-
-<br />
-<img src="/compile-03.png" style="width:600px" />
-
-Click on that add button and you'll see another drag-and-drop target. Drag the application package that you previously compiled into this window.
-
-<br />
-<img src="/compile-04.png" style="width:600px" />
-
-A popup will appear to confirm installation. Confirm that you want to install this application and click "Install" if so. 
-
-<br />
-<img src="/compile-05.png" style="width:600px" />
-
-Your browser will unpack the application, save it in your browser and refresh. Once your browser reloads it will load the application you have just installed along with all other modules. You can now toggle it on-or-off like any other module.
-
-NOTE: locally-installed applications will persist in your browser even if you nuke your wallet for a new identifiy and public/private keypair. To remove an installed DCM module for good, click on the *Clear Local Cache* option that is at the top of the Account overlay, next to the buttons used to backup your wallet.
+Looking to install a DCM module (*.saito)? We have a separate page with screenshots showing how to drag-and-drop them into your browser [right here](/applications/install).
