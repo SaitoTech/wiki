@@ -2,7 +2,7 @@
 title: Installing Saito Applications
 description: 
 published: true
-date: 2025-05-26T09:43:00.339Z
+date: 2025-05-26T09:48:01.153Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-26T09:43:00.339Z
@@ -10,7 +10,7 @@ dateCreated: 2025-05-26T09:43:00.339Z
 
 # Installing Saito Applications
 
-This page assumes you are a Saito user who wants to drag-and-drop a Saito module into your browser to install it, as similar to the .saito files that can be found in our [applications](/applications) section. If you are trying to install modules onto a server node, see our separate page for [server app-configuration](/config).
+This page assumes you are a Saito user who wants to drag-and-drop a Saito module into your browser to install it, like any of the .saito files listed in our [applications](/applications) section. If you are trying to install modules onto a server node, see our separate page for [server app-configuration](/config).
 
 To install a DCM module, click on the top-right menu in any Saito application and click on the Account button below your wallet balance. On the popup overlay that appears, look for the "+" button that shows up on the right-hand side above your list of installed modules.
 
