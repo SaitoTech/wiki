@@ -2,12 +2,13 @@
 title: Here I Stand
 description: Here I Stand - Wars of the Reformation - Saito Edition
 published: true
-date: 2025-05-26T12:13:02.263Z
+date: 2025-05-27T05:38:32.044Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-22T11:35:40.239Z
 ---
 
+![](/img/here_i_stand.png)
 
 <div style="display: block;border: 2px solid rgb(204, 204, 204);border-radius: 8px;padding: 0.5rem;background-color: rgb(249, 249, 249);opacity: 1;z-index: 99999;position: relative;margin-bottom: 1rem;max-width: max-content;padding-top: 1rem;padding-bottom: 1rem;padding-left: 1rem;padding-right: 1rem;">
 	<div class="header-box">
