@@ -2,7 +2,7 @@
 title: Paths of Glory
 description: 
 published: true
-date: 2025-05-27T06:16:28.445Z
+date: 2025-05-27T06:19:52.896Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-27T05:50:50.112Z
@@ -37,6 +37,6 @@ For players who love historical drama, high-stakes decision-making, and the thri
 
 ## About the Saito Edition
 
-The Saito Module of Paths of Glory is under development. We welcome feedback and patches from members of the community and hope that this current module can keep developing into a really engaging online experience.
+The Saito Module of Paths of Glory is a community project that is under casual development. The devs welcome feedback and patches from members of the community and hope to keep the module developing into a tight experience that makes the game much more enjoyable by automating away most of the complexity of managing in-person games.
 
 It would be remiss not to mention that the Saito Editio of Paths of Glory is also released under an open source license provided by GMT Games, which requires that one player in every game has purchased a copy. As fans of GMT Games, we remind players to kindly reward the company for their generosity and open-mindedness by purchasing a copy [here](https://www.gmtgames.com/p-921-paths-of-glory-deluxe-edition-2nd-printing.aspx).
