@@ -2,7 +2,7 @@
 title: SaitoArcade
 description: 
 published: true
-date: 2025-05-19T13:54:59.234Z
+date: 2025-06-21T03:49:30.300Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-19T20:49:30.032Z
@@ -17,7 +17,9 @@ We believe that the Arcade and its games offer some of the richest, most enjoyab
 - Arcade [source code.](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/arcade)
 
 <br>
-<img src="/arcade-updated.png" style="maxwidth: 600px;">
+
+
+<img src="/arcade-summer-2025.png" style="maxwidth: 600px;">
 
 The sophisticated cryptographic [techniques](#mentalPoker) ensure provably-fair gameplay without the need for a trusted third-party, and this allows multiplayer games without any server. Unlike other game engines with similar goals, Saito's supports more than two players and has been generalized to underpin any turn-based game, not just Poker.
 
