@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-06-24T05:11:39.171Z
+date: 2025-06-24T05:12:00.203Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -15,7 +15,7 @@ dateCreated: 2021-11-09T07:50:58.627Z
 .cls-1{fill:rgb(247, 31, 61);}
 </style>
 
-Saito sustainably powers the *Open Internet* and at massive scale.
+Saito sustainably powers the *Open Internet* at massive scale.
 
 This revolution is enabled by a layer-1 blockchain that fixes fundamental incentive misalignments found in traditional proof-of-work and proof-of-stake mechanisms. Rather than paying for extractive forms of work like hashing or staking, Saito pays the nodes that feed data to users and route their transactions into the network.
 
