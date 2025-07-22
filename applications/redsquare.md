@@ -2,15 +2,15 @@
 title: Red Square
 description: 
 published: true
-date: 2025-05-19T15:23:37.314Z
+date: 2025-07-22T18:04:40.847Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-23T00:47:55.328Z
 ---
 
-# Saito Red Square
+# RedSquare
   
-[Red Square](https://saito.io/redsquare/) is a P2P clone of Twitter that runs atop the Saito Network. Users can create posts, track and follow their peers, and leave comments or otherwise engage with other people's content.
+[Red Square](https://saito.io/redsquare/) is a decentralized Twitter clone that runs atop the Saito Network. Users can create posts, track and follow their peers, and leave comments or otherwise engage with other people's content.
 
 <!--In addition to Twitter-like functionality, [Red Square](/tech/applications/redsquare) includes a real-time chat functions (powered by Saito Chat), gaming portal (powered by Saito Arcade) and other gaming features like leaderboards. These demonstrate the power of Saito Modules to not only provide features, but add UI Components to other elements.-->
 
