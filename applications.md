@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-05-27T06:18:23.975Z
+date: 2025-07-22T15:34:54.765Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -10,7 +10,7 @@ dateCreated: 2022-12-21T01:40:41.364Z
 
 # Saito Applications
 
-Applications on Saito look and feel like traditional web apps, but run in a peer-to-peer swarm, with browsers connecting directly to each other to exchange data and falling back to the blockchain only when needed. Here are some web3 apps you can use on Saito today:
+Applications on Saito look and feel like traditional web apps, but run in a peer-to-peer swarm. Browser and install Saito applications you can install and start using today:
 
 <br/>
 
@@ -150,6 +150,16 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
      </div>
   </a>
 
+
+  <a href="/applications/quake3">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/img/quake3.jpg" />
+       </div>
+       <div class="app_title">Quake III</div>
+     </div>
+  </a>
+
   
   <a href="/tech/applications/wuziqi">
     <div class="app_box">
@@ -169,6 +179,16 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
     </div>
   </a>
 
+  
+  <a href="/tech/applications/scotland">
+    <div class="app_box">
+      <div class="app_img">
+        <img src="/scotland.png" />
+      </div>
+      <div class="app_title">Scotland Yard</div>
+    </div>
+  </a>
+  
 </div>
 
 ## Build Your Own Application?
