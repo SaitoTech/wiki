@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-07-22T15:34:54.765Z
+date: 2025-07-22T15:36:08.206Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -97,7 +97,6 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/applications/twilight">
     <div class="app_box">
        <div class="app_img">
-         <!--<img src="https://saito.io/twilight/img/arcade/arcade.jpg" />-->
          <img src="/ts-sq.png" />
        </div>
        <div class="app_title">Twilight Struggle</div>
@@ -107,7 +106,6 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/applications/settlers">
     <div class="app_box">
        <div class="app_img">
-         <!--<img src="https://saito.io/settlers/img/arcade/arcade.jpg" />-->
          <img src="/settlers-sq.png" />
        </div>
        <div class="app_title">Settlers</div>
@@ -161,7 +159,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   </a>
 
   
-  <a href="/tech/applications/wuziqi">
+  <a href="/applications/wuziqi">
     <div class="app_box">
       <div class="app_img">
         <img src="/wuziqi-sq.png" />
@@ -170,7 +168,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
     </div>
   </a>
 
-  <a href="/tech/applications/poker">
+  <a href="/applications/poker">
     <div class="app_box">
       <div class="app_img">
         <img src="/poker-sq.png" />
@@ -180,7 +178,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   </a>
 
   
-  <a href="/tech/applications/scotland">
+  <a href="/applications/scotland">
     <div class="app_box">
       <div class="app_img">
         <img src="/scotland.png" />
