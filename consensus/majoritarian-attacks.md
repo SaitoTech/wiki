@@ -2,7 +2,7 @@
 title: majoritarian-attacks
 description: 
 published: true
-date: 2025-07-23T09:59:31.488Z
+date: 2025-07-23T10:06:55.516Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -52,21 +52,19 @@ A [mathematical proof](https://github.com/SaitoTech/papers/blob/e32c51db6aae071a
 
 ### 4. Roughgarden and Shi (2020)
 
-A series of papers from Tim Roughgarden (Colombia) and Elaine Shi (Cornell) and others has emerged claiming the impossibility of building incentive compatible blockchains. Saito Consensus offers a self-evident counter-proof to these claims as an indirect mechanism that implements a welfare-optimizing social choice rule.
+A school of papers from Tim Roughgarden (Colombia) and Elaine Shi (Cornell) and others has emerged claiming the impossibility of building incentive compatible blockchains. Saito Consensus offers a self-evident counter-proof to these claims as an indirect mechanism that implements a welfare-optimizing social choice rule.
 
-The solution points to a fundamental problem with these papers: the presence of undisclosed preferences (such as the value of in-network collusion) which affect the fees offered by users. Undisclosed preferences prevents these models from meeting the basic requirements that Maskin establishes as necessary for achieving incentive compatibility, and renders their impossibility results tautological and non-binding on others mechanisms.
+The solution points to a fundamental problem with the models used to write these papers: the existence of relevant private preferences which are never revealed to the mechanism as required by implementation theory. Undisclosed preferences block these papers from meeting the requirements that Hurwicz, Maskin and Myerson establish as a prerequisite for achieving incentive compatibility, and renders their impossibility results tautological and non-binding on others mechanisms.
 
-A more subtle problem is that faithful implementation of any incentive compatible mechanism requires faithful preference disclosure as required by implementation theory. These papers assume that producers will be faithfully implementing, but do not provide a way for producers to reveal their preferences to the mechanism.
+A second and more subtle problem with these papers is that faithful implementation of any incentive compatible mechanism requires faithful preference disclosure. These papers assume that block producers will behave honestly when studying the incentives that users have to , but forget that competitive pressure from block producers can be used to induce users to bid honestly. The approach only makes sense if we forget that producers may have relevant supply-side preferences which much be disclosed to achieve incentive compatibility, as is the case in the kind of double auctions we see in blockchain generally.
 
 Saito Consensus handles both kinds of preference revelation indirectly: users reveal their willingness to collude through their bid distribution strategies, while producers reveal their competitive advantage in producing collusion goods through their willingness to include their own fee-bearing transactions in blocks.
 
 ### Conclusion
 
-The foundational impossibility results computer scientists developed in the 1980s emerged out of the assumption that *processes* in computer systems were purely technical processes that could be costlessly manipulated by attackers. This resulted in the emergence of impossibility results based on the assumption that *malicious processes* could not be punished within consensus mechanisms as soon as they the same implicit "voting power" as honest nodes.
+The foundational impossibility results that computer scientists and economists developed in the 1970s and 1980s emerged out of the assumption that *processes* in computer systems were purely technical processes that could be costlessly manipulated by attackers. This resulted in the emergence of impossibility results based on the assumption that *malicious processes* could not be punished within consensus mechanisms as soon as they the same implicit "voting power" as honest nodes.
 
-This assumption remains true in proof-of-work and proof-of-stake mechanisms, since those mechanisms lose the ability to punish attackers in majoritarian conditions. But there is no reason to consider this problem unsolvable.
+This assumption remains true in proof-of-work and proof-of-stake mechanisms, since those mechanisms lose the ability to punish attackers in majoritarian conditions. But there is no reason to consider this problem unsolvable. Subsequently impossibility results have not gone back to revisit the fundamentals examined in the 1980s, and have instead assumed that they must continue to hold, despite the shift to mechanisms that maintain their own unit-of-value and can punish participants without reference to external cost structures.
 
-Saito Consensus eliminates the majoritarian attack identified Bracha and Toueg (1985) by imposing an asymmetrical cost for messages based on their content. The most-efficient chain at including user-paid fees is the cheapest to produce and the most profitable to extend. Attackers who orphan honest blocks necessarily push the network into a less efficient equilibrium in which their blocks are more costly to produce and the difference must be paid out of the attacker's own wallet.
 
-Likewise, attacks attempting to partitioning the routing network into equal halves are also irrational. Leaving aside the question of whether attackers can force the network into two perfectly balanced halves, it is not possible to do this without accepting losses. This breaks the way Dwork, Lynch, and Stockmeyer (1988) are used to make impossibility claims about the unsolvability of the 51% attack.
 
