@@ -2,7 +2,7 @@
 title: majoritarian-attacks
 description: 
 published: true
-date: 2025-07-23T10:06:55.516Z
+date: 2025-07-23T10:08:06.057Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -59,6 +59,7 @@ The solution points to a fundamental problem with the models used to write these
 A second and more subtle problem with these papers is that faithful implementation of any incentive compatible mechanism requires faithful preference disclosure. These papers assume that block producers will behave honestly when studying the incentives that users have to , but forget that competitive pressure from block producers can be used to induce users to bid honestly. The approach only makes sense if we forget that producers may have relevant supply-side preferences which much be disclosed to achieve incentive compatibility, as is the case in the kind of double auctions we see in blockchain generally.
 
 Saito Consensus handles both kinds of preference revelation indirectly: users reveal their willingness to collude through their bid distribution strategies, while producers reveal their competitive advantage in producing collusion goods through their willingness to include their own fee-bearing transactions in blocks.
+
 
 ### Conclusion
 
