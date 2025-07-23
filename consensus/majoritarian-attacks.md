@@ -2,7 +2,7 @@
 title: majoritarian-attacks
 description: 
 published: true
-date: 2025-07-23T10:08:06.057Z
+date: 2025-07-23T10:30:15.318Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -54,12 +54,11 @@ A [mathematical proof](https://github.com/SaitoTech/papers/blob/e32c51db6aae071a
 
 A school of papers from Tim Roughgarden (Colombia) and Elaine Shi (Cornell) and others has emerged claiming the impossibility of building incentive compatible blockchains. Saito Consensus offers a self-evident counter-proof to these claims as an indirect mechanism that implements a welfare-optimizing social choice rule.
 
-The solution points to a fundamental problem with the models used to write these papers: the existence of relevant private preferences which are never revealed to the mechanism as required by implementation theory. Undisclosed preferences block these papers from meeting the requirements that Hurwicz, Maskin and Myerson establish as a prerequisite for achieving incentive compatibility, and renders their impossibility results tautological and non-binding on others mechanisms.
+The fundamental problem with these papers involve the existence of private preferences which affect transactions fees but are never revealed to the mechanism as required by implementation theory. Undisclosed preferences prevent these authors from meeting the requirements that Hurwicz, Maskin and Myerson establish as a prerequisite for proving the possibility or impossibility of incentive compatibility, rendering their impossibility claims tautological and non-binding.
 
-A second and more subtle problem with these papers is that faithful implementation of any incentive compatible mechanism requires faithful preference disclosure. These papers assume that block producers will behave honestly when studying the incentives that users have to , but forget that competitive pressure from block producers can be used to induce users to bid honestly. The approach only makes sense if we forget that producers may have relevant supply-side preferences which much be disclosed to achieve incentive compatibility, as is the case in the kind of double auctions we see in blockchain generally.
+A second problem involves these authors forgetting that the "faithful implementation" of any incentive compatible mechanism by definition requires the "faithful revelation" of relevant preferences. This problems applies to the treatment of block producers in these papers, who are explicitly forbidden from sharing information with the mechanism through the inclusion of self-generated transactions, thus blocking a form of competition (between users and producers) that the solution uses to induce users to pay the optimal fee. Prohibiting preference revelation violates the fundamental tenets of implementation theory.
 
-Saito Consensus handles both kinds of preference revelation indirectly: users reveal their willingness to collude through their bid distribution strategies, while producers reveal their competitive advantage in producing collusion goods through their willingness to include their own fee-bearing transactions in blocks.
-
+Saito Consensus handles both kinds of preference revelation indirectly: users reveal their willingness to collude through the fee they choose and their transaction distribution strategies, while producers reveal their own preferences through their willingness to include their own fee-bearing transactions in blocks and bundle privately-distributed transactions into blocks.
 
 ### Conclusion
 
