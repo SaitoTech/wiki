@@ -2,17 +2,17 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-07-23T14:55:53.417Z
+date: 2025-07-23T14:57:57.103Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
 ---
 
-# Eliminating Impossibility Results
+# Academic Impossibility Results
 
 Saito Consensus sidesteps several impossibility results that affect almost all other distributed consensus mechanisms. These allow the mechanism to achieve outcomes that are not possible with traditional approaches.
 
-Given the [technical explanations](/consensus) of routing mechanisms elsewhere on this wiki, this page focuses on explaining how Saito skirts the academic impossibility results which form the intellectual foundation for claims that problems like majority attacks and incentive compatibility are unsolvable.
+Given the [technical explanations](/consensus) of routing mechanisms elsewhere on this wiki, this page focuses on explaining how Saito sidesteps the academic impossibility results which form the intellectual foundation for academic claims that eliminating majoritarian attacks and achieving general incentive compatibility are unsolvable problems.
 
 <br>
 
