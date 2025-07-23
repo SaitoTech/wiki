@@ -2,7 +2,7 @@
 title: Development Roadmap
 description: 
 published: true
-date: 2025-07-23T18:31:54.061Z
+date: 2025-07-23T18:49:21.038Z
 tags: 
 editor: markdown
 dateCreated: 2025-07-23T15:19:04.692Z
@@ -10,9 +10,9 @@ dateCreated: 2025-07-23T15:19:04.692Z
 
 # History and Roadmap
 
-Saito Consensus was invented in the Spring of 2017. Early development focused on putting together a javascript prototype to confirm that the mechanism was implementable. Work building the network began in earnest in 2018, with an initial token sale to raise funding for further development in mid-2021.
+Saito Consensus was invented in the Spring of 2017. Early development focused on assembling a javascript prototype to confirm that the mechanism could be technically implemented. Work building the network began in earnest in 2018, with an initial token sale following in 2021 to raise funding for further development.
 
-The network is currently in a reasonably mature technical state, with a user-facing javascript lite-client, a suite of useful applications that leverage the network, and a scalable full node coded in the Rust programming language. Work is ongoing to improve the network client and the applications running atop the network.
+The network is currently in a reasonably developed technical state, with a user-facing javascript client, a scalable full-node coded in the Rust programming language, and a suite of useful applications that leverage distributed encryption to power everything from games to social media and communication apps.
 
 
 ### Looking Forward
