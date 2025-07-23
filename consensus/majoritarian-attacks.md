@@ -2,7 +2,7 @@
 title: majoritarian-attacks
 description: 
 published: true
-date: 2025-07-23T09:24:50.055Z
+date: 2025-07-23T09:59:31.488Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -43,31 +43,22 @@ So partitioning the network is not costless in the way that Dwork, Lynch, and St
 
 ### 4. On Bitcoin and Red Balloons (2011)
 
-A collaborative paper by Moshe Babaioff, Shahar Dobzinski, Sigal Oren, Aviv Zohar on  claims the impossibility of building distributed mechanisms which incentivize transaction propagation without also encouraging nodes to attack the payout mechanism. Their paper specifically asserts "that there are no reward schemes in which information propagation and no self-cloning is a dominant strategy." 
+An influential [academic paper](https://arxiv.org/pdf/1111.2626) by Moshe Babaioff, Shahar Dobzinski, Sigal Oren and Aviv Zohar has claimed the impossibility of building distributed mechanisms which incentivize transaction propagation. Their paper specifically asserts "that there are no reward schemes in which information propagation and no self-cloning is a dominant strategy."
 
-Saito Consensus avoids. The network offers a routing payout to P2P nodes that encourages them to share transactions with their peers, yet does not make self-cloning. The reason for this is that adding additional hops to transactions increases the deadweight loss the attacker must shoulder to publish blocks faster than it increases the attacker's claims on the fees contributed by other nodes in lottery payout.
+Saito Consensus solves this problem, offering a routing payout to P2P nodes that encourages nodes to share transactions with their peers, yet without make self-cloning rational. The solution works because adding hops to transactions decreases the value of those transactions for producing blocks, forcing the attacker to contribute and burn more of their own money in equilibrium than the attacker can expect to earn through an expanded claim on payout in the payment lottery.
 
-A [mathematical proof](/) that routing work solves this problem in a three-hop routing path. To date the routing-decay and probabilistic payout solution offered by Saito Cosnensus remains the only known solution to this problem.
+A [mathematical proof](https://github.com/SaitoTech/papers/blob/e32c51db6aae071a41b7e481d0f5ba6cd75ec12d/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf) that routing work solves this problem in a three-hop routing path. To date the routing-decay and probabilistic payout solution offered by Saito Cosnensus remains the only known solution to this problem.
 
 
+### 4. Roughgarden and Shi (2020)
 
-### 3. Roughgarden and Shi (1988)
+A series of papers from Tim Roughgarden (Colombia) and Elaine Shi (Cornell) and others has emerged claiming the impossibility of building incentive compatible blockchains. Saito Consensus offers a self-evident counter-proof to these claims as an indirect mechanism that implements a welfare-optimizing social choice rule.
 
-A series of papers from Tim Roughgarden (Colombia) and Elaine Shi (Cornell) claim the impossibility of building incentive compatible fee mechanisms.
+The solution points to a fundamental problem with these papers: the presence of undisclosed preferences (such as the value of in-network collusion) which affect the fees offered by users. Undisclosed preferences prevents these models from meeting the basic requirements that Maskin establishes as necessary for achieving incentive compatibility, and renders their impossibility results tautological and non-binding on others mechanisms.
 
-The academic papers in incentive compatibility assume the use of the Revelation 
+A more subtle problem is that faithful implementation of any incentive compatible mechanism requires faithful preference disclosure as required by implementation theory. These papers assume that producers will be faithfully implementing, but do not provide a way for producers to reveal their preferences to the mechanism.
 
-In Saito
-
-The paper *Consensus in the Presence of Partial Synchrony* by Dwork, Lynch, and Stockmeyer (1988) examines how communication delays affect consensus protocols. One of its key insights is that consensus cannot be guaranteed when block production capacity is evenly split into two factions.
-
-This is often used to claim that consensus mechanisms cannot prevent majoritarian attacks, as attackers who control 50% of network resources can always force a chain split by extending the shorter rather than longer of two competing network forks.
-
-This is not possible in Saito Consensus for several reasons. The first is that splitting block production in such a way in a routing mechanisms requires controlling how every participant in the network communicates, which is not possible in informationally decentralized mechanisms and requires giving the attacker control over 100% rather than a mere 50% of network resources.
-
-It is also not possible for attackers to trigger this by extending a private chain. To see why, remember that when attackers partition the network, they reduce the fee-throughput on their fork. The drop in fees reduces the income available to pay for hashing without reducing the difficulty of the mining puzzle. Any downward adjustment in the cost of getting paid is only possible if multiple blocks are left unsolved and their fees uncollected, imposing costs on the stealth fork.
-
-So partitioning the network is not costless in the way that Dwork, Lynch, and Stockmeyer assume it must be. In contrast to other consensus mechanisms — where attackers can "balance" competing chains without dictating peer connections and extend stealth chains at the same cost of public chains, Saito Consensus succeeds in making both types of network partitioning attacks irrational. 
+Saito Consensus handles both kinds of preference revelation indirectly: users reveal their willingness to collude through their bid distribution strategies, while producers reveal their competitive advantage in producing collusion goods through their willingness to include their own fee-bearing transactions in blocks.
 
 ### Conclusion
 
