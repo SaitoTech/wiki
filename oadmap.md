@@ -2,7 +2,7 @@
 title: Development Roadmap
 description: 
 published: true
-date: 2025-07-23T15:19:04.692Z
+date: 2025-07-23T15:50:28.612Z
 tags: 
 editor: markdown
 dateCreated: 2025-07-23T15:19:04.692Z
@@ -12,11 +12,11 @@ dateCreated: 2025-07-23T15:19:04.692Z
 
 Saito Consensus was invented in the Spring of 2017. Early development focused on putting together a javascript prototype to confirm that the mechanism was implementable. Work building the network began in earnest in 2018, with an initial token sale to raise funding for further development in mid-2021.
 
-The network is currently in a reasonably mature technical stage, with a user-facing javascript lite-client, a suite of useful applications that leverage the network, and a scalable full node coded in the Rust programming language. Work is ongoing to improve the network client and the applications running atop the network.
+The network is currently in a reasonably mature technical state, with a user-facing javascript lite-client, a suite of useful applications that leverage the network, and a scalable full node coded in the Rust programming language. Work is ongoing to improve the network client and the applications running atop the network.
 
 
 
-### The Real Economy
+### Looking Forward
 
 *September 2025 - December 2026*
 
