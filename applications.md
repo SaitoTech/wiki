@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-07-23T06:59:08.572Z
+date: 2025-07-23T07:00:16.613Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -19,7 +19,14 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   height: 220px;
   width: 220px;
   }
-  
+  .app_container {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 1rem;
+    row-gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 </style>
 
 <div class="app_container">
