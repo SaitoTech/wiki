@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2025-07-23T08:48:31.085Z
+date: 2025-07-23T10:45:53.078Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -10,7 +10,7 @@ dateCreated: 2022-02-17T10:09:00.217Z
 
 # Saito Consensus
 
-Saito Consensus is a distributed consensus mechanism provably secure against a specific type of [routing attack](/consensus/sybil-attacks) previously considered impossible to solve. This solution allows the network to issue a routing payment to nodes in the P2P network that can be used to solve a series of fundamental [economic coordination problems](/consensus/majoritarian-attacks). This page offers a brief overview of how the mechanism works.
+Saito Consensus is a distributed consensus mechanism provably secure against a specific type of [routing attack](/consensus/sybil-attacks) previously considered impossible to solve. This solution allows the network to issue a routing payment to nodes in the P2P network that can be used to solve a series of fundamental [academic impossibility results](/consensus/majoritarian-attacks). This page offers a brief overview of how the mechanism works.
 
 ## 1. HOW BLOCKS ARE PRODUCED
 
