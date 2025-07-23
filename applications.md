@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-07-22T18:02:39.669Z
+date: 2025-07-23T06:57:19.977Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -16,8 +16,8 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
 
 <style>
   .app_box {
-  height: 250px;
-  width: 250px;
+  height: 220px;
+  width: 220px;
   }
 </style>
 
@@ -86,13 +86,6 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
       <div class="app_title">Fileshare</div>
     </div>
   </a>
-
-</div>
-
-<p>In addition to those applications, Saito supports a number of great game that can be installed into the Saito Arcade. The Saito Game Engine that powers these games abstracts away the complicated cryptographic operations necessary to run provably-fair games on a distributed P2P network. </p>
-
-<br/>
-<div class="app_container">
 
   <a href="/applications/twilight">
     <div class="app_box">
