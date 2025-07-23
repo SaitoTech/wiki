@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-07-23T07:00:16.613Z
+date: 2025-07-23T07:08:48.713Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -10,7 +10,7 @@ dateCreated: 2022-12-21T01:40:41.364Z
 
 # Saito Applications
 
-Applications on Saito look and feel like traditional web apps, but run in a peer-to-peer swarm. Browse and install Saito applications you can install and start using today:
+Applications on Saito look and feel like traditional web apps, but run in a peer-to-peer swarm. Browse some of the many Saito applications you can install and start using today:
 
 <br/>
 
