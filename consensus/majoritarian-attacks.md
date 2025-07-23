@@ -2,7 +2,7 @@
 title: majoritarian-attacks
 description: 
 published: true
-date: 2025-07-23T10:30:15.318Z
+date: 2025-07-23T10:45:01.644Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
