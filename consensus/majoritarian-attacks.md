@@ -2,51 +2,72 @@
 title: majoritarian-attacks
 description: 
 published: true
-date: 2025-05-23T12:27:36.548Z
+date: 2025-07-23T09:24:50.055Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
 ---
 
-# Eliminating 51% Attacks
+# Eliminating Impossibility Results
 
-Many people believe that the 51% attack is fundamentally unsolvable. This belief stems from widely cited academic papers that claim it is mathematically impossible to build consensus systems that majoritarian attacks. Saito Consensus establishes it is possible to work around these.
+Saito Consensus sidesteps several impossibility results that affect almost all other distributed consensus mechanisms. These allow the mechanism to achieve outcomes that are not possible with traditional approaches.
 
-Given the [technical explanations](/consensus) of routing mechanisms elsewhere on this wiki, this page focuses on explaining how Saito skirts the academic impossibility results which form the intellectual foundation for claims that majority attacks are unsolvable: *Bracha and Toueg* (1985) and *Dwork, Lynch, and Stockmeyer* (1988).
+Given the [technical explanations](/consensus) of routing mechanisms elsewhere on this wiki, this page focuses on explaining how Saito skirts the academic impossibility results which form the intellectual foundation for claims that problems like majority attacks and incentive compatibility are unsolvable.
 
 <br>
 
 ### 1. Bracha and Toueg (1985)
 
-The paper *Asynchronous Consensus and Broadcast Protocols* by Bracha and Toueg claims that in an asynchronous system with **n** total processes, at most **(n−1)/2** processes can be Byzantine. Their proof assumes a network of processes that respond to inbound messages:
+The paper *Asynchronous Consensus and Broadcast Protocols* by Bracha and Toueg shows that in an asynchronous system with **n** total processes, at most **(n−1)/2** processes can be adversarial. Their model assumes a network of processes that receive and respond to network messages automatically:
 
 > In an atomic step of the system, a process can try to receive a message, perform an arbitrarily long local computation, and then send a finite set of messages. The computation and the messages sent are prescribed by the protocol, that is, a function of the message received and the local state.
 
-In this model, all messages cost the same amount to broadcast. Honest nodes respond with messages that promote consensus while Byzantine nodes respond in ways that prevent consensus. Nothing can stop malicious nodes from broadcasting messages that subvert consensus, and nothing can stop honest nodes from attempting to restore consensus. So whichever faction can send the most messages wins.
+In this model, nothing can stop malicious nodes from broadcasting messages that subvert consensus, and nothing can stop honest nodes from attempting to restore consensus. This creates tbe majoritarian vulnerability the paper arguesis impossible: whatever cohort can send the most messages wins.
 
-But what if it costs malicious nodes more to send Byzantine messages than it costs honest nodes to broadcast honest messages? And what if the cost paid is the loss of resources required to send further messages?
-
-Saito Consensus breaks the assumption Bracha and Toueg make that the cost of sending messages must be the same for honest and Byzantine nodes. It forces attackers to burn more tokens to propose their blocks, and refunds them less in network payouts when they do. Over time, this shifts control of the resources needed to extend the chain away from attackers, eroding their ability to continue the attack.
-
-The proof Bracha and Toueg offer is based on axiomatic assumptions that do not apply to Saito Consensus. Malicious nodes can extend the chain, but the punishment imposed for orphaning honest blocks will eventually pull even a malicious majority back into minority status and render them able to continue the attack.
+Saito Consensus avoids this problem because the cost of proposing a message depends on its content: adversarial messages cost more to propose and refund less in equilibrium than honest messages. Over time, this shifts control of the resources needed to broadcast messages extend the chain away from attackers and towards honest nodes.
 
 <br>
 
 ### 2. Dwork, Lynch, and Stockmeyer (1988)
 
-A second impossibility result is from *Consensus in the Presence of Partial Synchrony* by Dwork, Lynch, and Stockmeyer (1988). This paper examines how communication delays affect consensus protocols. One of its key insights is that consensus cannot be guaranteed when block production capacity is evenly split into two partitions.
+The paper *Consensus in the Presence of Partial Synchrony* by Dwork, Lynch, and Stockmeyer (1988) examines how communication delays affect consensus protocols. One of its key insights is that consensus cannot be guaranteed when block production capacity is evenly split into two factions.
 
-This argument is often used to claim that consensus mechanisms cannot prevent "split-brain" situations or 50/50 splits, because attackers who control 50% of network resources can always force a chain split.
+This is often used to claim that consensus mechanisms cannot prevent majoritarian attacks, as attackers who control 50% of network resources can always force a chain split by extending the shorter rather than longer of two competing network forks.
 
-There are two reasons this does not apply to Saito Consensus. The first is that splitting block production this way in a routing mechanisms requires dictating how every participant in the network communicates. This is not possible in informationally decentralized mechanisms, and requires giving the attacker control over 100% of network resources. Calling this a majoritarian attack is misleading.
+This is not possible in Saito Consensus for several reasons. The first is that splitting block production in such a way in a routing mechanisms requires controlling how every participant in the network communicates, which is not possible in informationally decentralized mechanisms and requires giving the attacker control over 100% rather than a mere 50% of network resources.
 
-But what if we give the attacker control of exactly half of network fee-flow and simply have them force a partiction by building a private chain they refuse to disclose to honest nodes. This forces a split without requiring the attacker to control the behavior of honest nodes. Can this attack succeed?
+It is also not possible for attackers to trigger this by extending a private chain. To see why, remember that when attackers partition the network, they reduce the fee-throughput on their fork. The drop in fees reduces the income available to pay for hashing without reducing the difficulty of the mining puzzle. Any downward adjustment in the cost of getting paid is only possible if multiple blocks are left unsolved and their fees uncollected, imposing costs on the stealth fork.
 
-To understand why not, remember that when attackers partition the network, they reduce the fee-throughput on their fork. The drop in fees reduces the income available to pay for golden tickets, but does not reduce the difficulty of finding those tickets. Any downward adjustment in the cost of getting paid is only possible if multiple blocks are produced whose burned fees are not paid-out at all. And those costs are concentrated on the attacker, who is producing the blocks whose fees must go uncaptured.
+So partitioning the network is not costless in the way that Dwork, Lynch, and Stockmeyer assume it must be. In contrast to other consensus mechanisms — where attackers can "balance" competing chains without dictating peer connections and extend stealth chains at the same cost of public chains, Saito Consensus succeeds in making both types of network partitioning attacks irrational. 
 
-So partitioning the network is not costless in the way that Dwork, Lynch, and Stockmeyer assume it must be. Any attacker who shifts to a private chain increases their cost of getting paid so much that the entire block reward must now be spent simply to recover any funds at all. In the production design, this cost actually rises above 100% of the block reward and results in direct losses.
 
-In contrast to other consensus mechanisms — where attackers can shift work to private forks without direct penalty — Saito Consensus succeeds in making network partitioning attacks irrational. 
+### 4. On Bitcoin and Red Balloons (2011)
+
+A collaborative paper by Moshe Babaioff, Shahar Dobzinski, Sigal Oren, Aviv Zohar on  claims the impossibility of building distributed mechanisms which incentivize transaction propagation without also encouraging nodes to attack the payout mechanism. Their paper specifically asserts "that there are no reward schemes in which information propagation and no self-cloning is a dominant strategy." 
+
+Saito Consensus avoids. The network offers a routing payout to P2P nodes that encourages them to share transactions with their peers, yet does not make self-cloning. The reason for this is that adding additional hops to transactions increases the deadweight loss the attacker must shoulder to publish blocks faster than it increases the attacker's claims on the fees contributed by other nodes in lottery payout.
+
+A [mathematical proof](/) that routing work solves this problem in a three-hop routing path. To date the routing-decay and probabilistic payout solution offered by Saito Cosnensus remains the only known solution to this problem.
+
+
+
+### 3. Roughgarden and Shi (1988)
+
+A series of papers from Tim Roughgarden (Colombia) and Elaine Shi (Cornell) claim the impossibility of building incentive compatible fee mechanisms.
+
+The academic papers in incentive compatibility assume the use of the Revelation 
+
+In Saito
+
+The paper *Consensus in the Presence of Partial Synchrony* by Dwork, Lynch, and Stockmeyer (1988) examines how communication delays affect consensus protocols. One of its key insights is that consensus cannot be guaranteed when block production capacity is evenly split into two factions.
+
+This is often used to claim that consensus mechanisms cannot prevent majoritarian attacks, as attackers who control 50% of network resources can always force a chain split by extending the shorter rather than longer of two competing network forks.
+
+This is not possible in Saito Consensus for several reasons. The first is that splitting block production in such a way in a routing mechanisms requires controlling how every participant in the network communicates, which is not possible in informationally decentralized mechanisms and requires giving the attacker control over 100% rather than a mere 50% of network resources.
+
+It is also not possible for attackers to trigger this by extending a private chain. To see why, remember that when attackers partition the network, they reduce the fee-throughput on their fork. The drop in fees reduces the income available to pay for hashing without reducing the difficulty of the mining puzzle. Any downward adjustment in the cost of getting paid is only possible if multiple blocks are left unsolved and their fees uncollected, imposing costs on the stealth fork.
+
+So partitioning the network is not costless in the way that Dwork, Lynch, and Stockmeyer assume it must be. In contrast to other consensus mechanisms — where attackers can "balance" competing chains without dictating peer connections and extend stealth chains at the same cost of public chains, Saito Consensus succeeds in making both types of network partitioning attacks irrational. 
 
 ### Conclusion
 
