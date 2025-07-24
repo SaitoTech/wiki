@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-06-24T05:12:00.203Z
+date: 2025-07-24T05:16:37.443Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -15,9 +15,9 @@ dateCreated: 2021-11-09T07:50:58.627Z
 .cls-1{fill:rgb(247, 31, 61);}
 </style>
 
-Saito sustainably powers the *Open Internet* at massive scale.
+Saito is a L1 blockchain that solves several fundamental theoretical problems at the intersection of computer science and economics. Key to the solution is the existence of a routing payout that pays the fee-collecting nodes in the network for the work they do attracting and servicing users.
 
-This revolution is enabled by a layer-1 blockchain that fixes fundamental incentive misalignments found in traditional proof-of-work and proof-of-stake mechanisms. Rather than paying for extractive forms of work like hashing or staking, Saito pays the nodes that feed data to users and route their transactions into the network.
+The ability to solve incentive misalignments that are insolvable in proof-of-work and proof-of-stake mechanisms makes Saito Consensus into a league of its own. Rather than paying for extractive forms of work like hashing or staking, Saito pays the nodes that feed data to users and route their transactions into the network. Scale and security increase organically as nodes compete to contribute rather than extract wealth from the network.
 
 If you're new to Saito, we recommend starting with our one-page overview of [Saito Consensus](/consensus). You can also browse the [applications](/applications) already running on the network, explore the [project roadmap](/roadmap), or dig into our [tokenomics](/tokenomics). Developers are invited to read our pages covering how to [run nodes](/install) and [build applications](/tutorials).
 
