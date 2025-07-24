@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-07-24T05:56:40.652Z
+date: 2025-07-24T05:57:46.414Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -41,9 +41,11 @@ The ability to solve incentive misalignments that are insolvable in proof-of-wor
         min-width: 150px;
         min-height: 150px;
         background-color: red;
+        border: 2px solid #000;
       "></div>
       <div style="
         border: 2px solid #000;
+        border-left: 0px;
         padding: 0.5rem;
         font-size: 1rem;
       ">Learn how Saito Consensus works with a simplified technical explanation of the consensus mechanism, along with a discussion of the the theoretical problems Saitos solves and the impossibility results it overcomes.</div>
@@ -71,9 +73,11 @@ The ability to solve incentive misalignments that are insolvable in proof-of-wor
         min-width: 150px;
         min-height: 150px;
         background-color: red;
+        border: 2px solid #000;
       "></div>
       <div style="
         border: 2px solid #000;
+        border-left: 0px;
         padding: 0.5rem;
         font-size: 1rem;
       ">Browse our Appstore showing the most popular applications running on the network, and download extra Saito modules that can be installed into your Saito browser.</div>
@@ -102,9 +106,11 @@ The ability to solve incentive misalignments that are insolvable in proof-of-wor
         min-width: 150px;
         min-height: 150px;
         background-color: red;
+        border: 2px solid #000;
       "></div>
       <div style="
         border: 2px solid #000;
+        border-left: 0px;
         padding: 0.5rem;
         font-size: 1rem;
       ">Learn how to use the network and get started developing NFTs and building applications or using your Saito Wallet. Also, instructions on how to install and run a local network client.</div>
