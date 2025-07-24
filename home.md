@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-07-24T05:46:57.553Z
+date: 2025-07-24T05:53:42.601Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -25,61 +25,94 @@ The ability to solve incentive misalignments that are insolvable in proof-of-wor
      display: flex;
      flex-direction: column;
      width: 80%;
- ">       
-  <div class="app_title" style="
-    margin-top: 1rem;
-    width: 225px;
-    position: relative;
-  ">Consensus</div>
+ ">   
+    <div class="app_title" style="
+      margin-top: 1rem;
+      width: 225px;
+      position: relative;
+    ">Learn Saito</div>
+    <div style="
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    ">       
+      <div class="" style="
+        margin-top: 1rem;
+        width: 150px;
+        height: 150px;
+        background-color: red;
+      "></div>
+      <div style="
+        border: 2px solid #000;
+        padding: 0.5rem;
+        font-size: 1rem;
+      ">Learn how Saito Consensus works with a simplified technical explanation of the consensus mechanism, along with a discussion of the the theoretical problems Saitos solves and the impossibility results it overcomes.</div>
+    </div>
+  </div>
+ 
   
   <div style="
      display: flex;
-     flex-direction: row;
-     width: 100%;
- ">       
-  <div class="" style="
-    margin-top: 1rem;
-    width: 150px;
-    height: 150px;
-    background-color: red;
-  "></div>
-  <div style="
-    border: 2px solid #000;
-    padding: 0.5rem;
-    font-size: 1rem;
-  ">Learn how Saito Consensus works with a simplified technical explanation of the consensus mechanism, along with a discussion of the the theoretical problems Saitos solves and the impossibility results it overcomes.</div>
+     flex-direction: column;
+     width: 80%;
+ ">   
+    <div class="app_title" style="
+      margin-top: 1rem;
+      width: 225px;
+      position: relative;
+    ">Applications</div>
+    <div style="
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    ">       
+      <div class="" style="
+        margin-top: 1rem;
+        width: 150px;
+        height: 150px;
+        background-color: red;
+      "></div>
+      <div style="
+        border: 2px solid #000;
+        padding: 0.5rem;
+        font-size: 1rem;
+      ">Browse our Appstore showing the most popular applications running on the network, and download extra Saito modules that can be installed into your Saito browser.</div>
+    </div>
   </div>
+ 
+
+  
+  <div style="
+     display: flex;
+     flex-direction: column;
+     width: 80%;
+ ">   
+    <div class="app_title" style="
+      margin-top: 1rem;
+      width: 225px;
+      position: relative;
+    ">Tutorials</div>
+    <div style="
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    ">       
+      <div class="" style="
+        margin-top: 1rem;
+        width: 150px;
+        height: 150px;
+        background-color: red;
+      "></div>
+      <div style="
+        border: 2px solid #000;
+        padding: 0.5rem;
+        font-size: 1rem;
+      ">Learn how to use the network and get started developing NFTs and building applications or using your Saito Wallet. Also, instructions on how to install and run a local network client.</div>
+    </div>
   </div>
  
 </div>
 
-  <div class="app_title" style="
-    margin-top: 1rem;
-    width: 225px;
-    position: relative;
-  ">Applications</div>
-  <div style="
-    border: 2px solid #000;
-    padding: 0.5rem;
-    width: 60%;
-    font-size: 1rem;
-  ">Browse our Appstore showing the most popular applications running on the network, and download extra Saito modules that can be installed into your Saito browser.</div>
-  
-  
-  <div class="app_title" style="
-    margin-top: 1rem;
-    width: 225px;
-    position: relative;
-  ">Developer</div>
-  <div style="
-    border: 2px solid #000;
-    padding: 0.5rem;
-    width: 60%;
-    font-size: 1rem;
-  ">Tutorials on how to build Saito Applications and distribute them to other users in the network. Also, instructions on how to install and run a Saito network client.</div>
-</div>
-</div>
-</div>
 
 In addition to the sections above, this wiki also contains information on our [project history and roadmap](/roadmap), details on the network [tokenomics](/tokenomics) and step-by-step [tutorials](/tutorials) on how to use the network. Or you can skip the documentation and just go [try out Saito directly](https://saito.io/redsquare).
 
