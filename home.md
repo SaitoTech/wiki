@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-07-24T05:41:22.763Z
+date: 2025-07-24T05:46:40.022Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -23,28 +23,35 @@ The ability to solve incentive misalignments that are insolvable in proof-of-wor
 
   <div style="
      display: flex;
+     flex-direction: column;
      width: 80%;
  ">       
-  <div class="" style="
-    margin-top: 1rem;
-    width: 225px;
-    height: 225px;
-    background-color: red;
-  "></div>
-   <div>
-   <div class="app_title" style="
+  <div class="app_title" style="
     margin-top: 1rem;
     width: 225px;
     position: relative;
   ">Consensus</div>
+  
+  <div style="
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+ ">       
+  <div class="" style="
+    margin-top: 1rem;
+    width: 150px;
+    height: 150px;
+    background-color: red;
+  "></div>
   <div style="
     border: 2px solid #000;
     padding: 0.5rem;
-    width: 60%;
     font-size: 1rem;
   ">Learn how Saito Consensus works with a simplified technical explanation of the consensus mechanism, along with a discussion of the the theoretical problems Saitos solves and the impossibility results it overcomes.</div>
-    </div>
-    
+  </div>
+  </div>
+ 
+</div>
 
   <div class="app_title" style="
     margin-top: 1rem;
