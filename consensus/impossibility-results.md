@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-07-24T06:43:39.545Z
+date: 2025-07-24T06:43:54.843Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -29,7 +29,7 @@ This problem is solved elegantly . In the process, Saito Consensus achieves ince
 
 <br>
 
-### 1. Bracha and Toueg (1985)
+### 2. Bracha and Toueg (1985)
 
 The paper *Asynchronous Consensus and Broadcast Protocols* by Bracha and Toueg shows that in an asynchronous system with **n** total processes, at most **(n−1)/2** processes can be adversarial. Their model assumes a network of processes that receive and respond to network messages automatically:
 
@@ -41,7 +41,7 @@ Saito Consensus avoids this problem because the cost of proposing a message depe
 
 <br>
 
-### 2. Dwork, Lynch, and Stockmeyer (1988)
+### 3. Dwork, Lynch, and Stockmeyer (1988)
 
 The paper *Consensus in the Presence of Partial Synchrony* by Dwork, Lynch, and Stockmeyer (1988) examines how communication delays affect consensus protocols. One of its key insights is that consensus cannot be guaranteed when block production capacity is evenly split into two factions.
 
@@ -63,7 +63,7 @@ Saito Consensus solves this problem, offering a routing payout to P2P nodes that
 A [mathematical proof](https://github.com/SaitoTech/papers/blob/e32c51db6aae071a41b7e481d0f5ba6cd75ec12d/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf) that routing work solves this problem in a three-hop routing path. To date the routing-decay and probabilistic payout solution offered by Saito Cosnensus remains the only known solution to this problem.
 
 
-### 4. Roughgarden and Shi (2020)
+### 5. Roughgarden and Shi (2020)
 
 A school of papers from Tim Roughgarden (Colombia) and Elaine Shi (Cornell) and others has emerged claiming the impossibility of building incentive compatible blockchains. Saito Consensus offers a self-evident counter-proof to these claims as an indirect mechanism that implements a welfare-optimizing social choice rule.
 
