@@ -2,7 +2,7 @@
 title: Development Roadmap
 description: 
 published: true
-date: 2025-07-24T06:50:17.824Z
+date: 2025-07-24T23:55:27.493Z
 tags: 
 editor: markdown
 dateCreated: 2025-07-23T15:19:04.692Z
@@ -16,7 +16,7 @@ The network is currently in a reasonably complete technical state, with a user-f
 
 ### Looking Forward
 
-Saito has a nucleus of real usage with a community accustomed to playing games, using our RedSquare social media platform and communicating with each other using our network's set of open source PKI applications. We will continue to support these applications while onboarding users.
+Saito has a nucleus of real usage with a community involved in playing games, using the RedSquare social media platform and communicating with each other using our network's suite of open source PKI applications. We will continue to support these applications while onboarding more users.
 
 In the coming year, with token persistence a reality and ATR payouts scaling with total network fee-throughput, core development will focus on finalizing consensus variables such the burn-fee algorithm, block time and advanced features like congestion algorithms in real-world network conditions. We expect updates and software patches to be applied to the rotating blockchain as is routinely done in other networks.
 
