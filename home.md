@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-07-24T05:17:51.208Z
+date: 2025-07-24T05:19:39.516Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -19,7 +19,17 @@ Saito is a L1 blockchain that solves several fundamental theoretical problems at
 
 The ability to solve incentive misalignments that are insolvable in proof-of-work and proof-of-stake mechanisms makes Saito Consensus into a league of its own. Rather than paying for extractive forms of work like hashing or staking, Saito pays the nodes that feed data to users and route their transactions into the network. Scale and security increase organically as nodes compete to contribute rather than extract wealth from the network.
 
+<script>
+.app_container {
+  max-width: 600px;
+  width: 600px;
+}
 
+.app_container a {
+  flex: 0 0 50%; /* each item takes 50% of the container */
+  box-sizing: border-box;
+}
+</script>
 <div class="app_container">
 
   <a href="/applications/redsquare">
