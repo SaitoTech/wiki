@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-07-24T06:09:58.767Z
+date: 2025-07-24T06:10:32.777Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -78,6 +78,7 @@ The ability to solve incentive misalignments that are insolvable in proof-of-wor
         min-width: 150px;
         min-height: 100px;
         background-color: red;
+        background-image: url('/img/empyrean_rose.png');
         border: 2px solid #000;
       "></div>
       <div style="
@@ -113,6 +114,7 @@ The ability to solve incentive misalignments that are insolvable in proof-of-wor
         min-width: 150px;
         min-height: 100px;
         background-color: red;
+        background-image: url('/img/empyrean_rose.png');
         border: 2px solid #000;
       "></div>
       <div style="
