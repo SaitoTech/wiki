@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-07-24T05:33:15.860Z
+date: 2025-07-24T05:33:58.014Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -22,7 +22,7 @@ The ability to solve incentive misalignments that are insolvable in proof-of-wor
 
   <div class="app_title" style="
     margin-top: 1rem;
-    width: max-content;
+    width: 225px;
     position: relative;
   ">Consensus</div>
   <div style="
@@ -35,7 +35,7 @@ The ability to solve incentive misalignments that are insolvable in proof-of-wor
 
   <div class="app_title" style="
     margin-top: 1rem;
-    width: max-content;
+    width: 225px;
     position: relative;
   ">Applications</div>
   <div style="
@@ -48,7 +48,7 @@ The ability to solve incentive misalignments that are insolvable in proof-of-wor
   
   <div class="app_title" style="
     margin-top: 1rem;
-    width: max-content;
+    width: 225px;
     position: relative;
   ">Developer</div>
   <div style="
