@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-07-24T05:20:02.148Z
+date: 2025-07-24T05:25:04.240Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -19,56 +19,26 @@ Saito is a L1 blockchain that solves several fundamental theoretical problems at
 
 The ability to solve incentive misalignments that are insolvable in proof-of-work and proof-of-stake mechanisms makes Saito Consensus into a league of its own. Rather than paying for extractive forms of work like hashing or staking, Saito pays the nodes that feed data to users and route their transactions into the network. Scale and security increase organically as nodes compete to contribute rather than extract wealth from the network.
 
-<script>
-.app_container {
-  max-width: 600px;
-  width: 600px;
-}
 
-.app_container a {
-  flex: 0 0 50%; /* each item takes 50% of the container */
-  box-sizing: border-box;
-}
-</script>
-<div class="app_container">
-
-  <a href="/applications/redsquare">
-    <div class="app_box">
-       <div class="app_img">
-         <img src="/rs-food-pic-sq.png" />
-       </div>
-       <div class="app_title">Consensus</div>
-    </div>
-  </a>
-
-  <a href="/applications/redsquare">
-    <div class="app_box">
-       <div class="app_img">
-         <img src="/rs-food-pic-sq.png" />
-       </div>
-       <div class="app_title">Applications</div>
-    </div>
-  </a>
-
-  <a href="/applications/redsquare">
-    <div class="app_box">
-       <div class="app_img">
-         <img src="/rs-food-pic-sq.png" />
-       </div>
-       <div class="app_title">Developers</div>
-    </div>
-  </a>
-
-  <a href="/applications/redsquare">
-    <div class="app_box">
-       <div class="app_img">
-         <img src="/rs-food-pic-sq.png" />
-       </div>
-       <div class="app_title">Community</div>
-    </div>
-  </a>
-
-</div>
+  <div class="app_title" style="
+    margin-top: 1rem;
+    width: max-content;
+    position: relative;"
+  >Consensus</div>
+ 
+  Learn how Saito Consensus works with a simplified technical explanation of the consensus mechanism, along with a discussion of the the theoretical problems Saitos solves and the impossibility results it overcomes.
+  
+  
+  <div class="app_title" style="
+    margin-top: 1rem;
+    width: max-content;
+    position: relative;"
+  >Applications</div>
+ 
+  Browse some of the more popular applications running on the network, and download extra Saito modules that can be installed into your Saito wallet by dragging-and-dropping them into your browser.
+  
+  
+  
 
 If you're new to Saito, we recommend starting with our one-page overview of [Saito Consensus](/consensus). You can also browse the [applications](/applications) already running on the network, explore the [project roadmap](/roadmap), or dig into our [tokenomics](/tokenomics). Developers are invited to read our pages covering how to [run nodes](/install) and [build applications](/tutorials).
 
