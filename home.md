@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-07-24T05:16:37.443Z
+date: 2025-07-24T05:17:51.208Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -18,6 +18,47 @@ dateCreated: 2021-11-09T07:50:58.627Z
 Saito is a L1 blockchain that solves several fundamental theoretical problems at the intersection of computer science and economics. Key to the solution is the existence of a routing payout that pays the fee-collecting nodes in the network for the work they do attracting and servicing users.
 
 The ability to solve incentive misalignments that are insolvable in proof-of-work and proof-of-stake mechanisms makes Saito Consensus into a league of its own. Rather than paying for extractive forms of work like hashing or staking, Saito pays the nodes that feed data to users and route their transactions into the network. Scale and security increase organically as nodes compete to contribute rather than extract wealth from the network.
+
+
+<div class="app_container">
+
+  <a href="/applications/redsquare">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/rs-food-pic-sq.png" />
+       </div>
+       <div class="app_title">Consensus</div>
+    </div>
+  </a>
+
+  <a href="/applications/redsquare">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/rs-food-pic-sq.png" />
+       </div>
+       <div class="app_title">Applications</div>
+    </div>
+  </a>
+
+  <a href="/applications/redsquare">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/rs-food-pic-sq.png" />
+       </div>
+       <div class="app_title">Developers</div>
+    </div>
+  </a>
+
+  <a href="/applications/redsquare">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/rs-food-pic-sq.png" />
+       </div>
+       <div class="app_title">Community</div>
+    </div>
+  </a>
+
+</div>
 
 If you're new to Saito, we recommend starting with our one-page overview of [Saito Consensus](/consensus). You can also browse the [applications](/applications) already running on the network, explore the [project roadmap](/roadmap), or dig into our [tokenomics](/tokenomics). Developers are invited to read our pages covering how to [run nodes](/install) and [build applications](/tutorials).
 
