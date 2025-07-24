@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-07-24T05:33:58.014Z
+date: 2025-07-24T05:35:12.274Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -19,7 +19,8 @@ Saito is a L1 blockchain that solves several fundamental theoretical problems at
 
 The ability to solve incentive misalignments that are insolvable in proof-of-work and proof-of-stake mechanisms makes Saito Consensus into a league of its own. Rather than paying for extractive forms of work like hashing or staking, Saito pays the nodes that feed data to users and route their transactions into the network. Scale and security increase organically as nodes compete to contribute rather than extract wealth from the network.
 
-
+<div style="display:flex;flex-wrap:wrap">
+  
   <div class="app_title" style="
     margin-top: 1rem;
     width: 225px;
@@ -28,7 +29,7 @@ The ability to solve incentive misalignments that are insolvable in proof-of-wor
   <div style="
     border: 2px solid #000;
     padding: 0.5rem;
-    width: 80%;
+    width: 49%;
     font-size: 1rem;
   ">Learn how Saito Consensus works with a simplified technical explanation of the consensus mechanism, along with a discussion of the the theoretical problems Saitos solves and the impossibility results it overcomes.</div>
   
@@ -41,7 +42,7 @@ The ability to solve incentive misalignments that are insolvable in proof-of-wor
   <div style="
     border: 2px solid #000;
     padding: 0.5rem;
-    width: 80%;
+    width: 49%;
     font-size: 1rem;
   ">Browse our Appstore showing the most popular applications running on the network, and download extra Saito modules that can be installed into your Saito browser.</div>
   
@@ -54,10 +55,11 @@ The ability to solve incentive misalignments that are insolvable in proof-of-wor
   <div style="
     border: 2px solid #000;
     padding: 0.5rem;
-    width: 80%;
+    width: 49%;
     font-size: 1rem;
   ">Tutorials on how to build Saito Applications and distribute them to other users in the network. Also, instructions on how to install and run a Saito network client.</div>
-  
+</div>
+
 In addition to the sections above, this wiki also contains information on our [project history and roadmap](/roadmap), details on the network [tokenomics](/tokenomics) and step-by-step [tutorials](/tutorials) on how to use the network. Or you can skip the documentation and just go [try out Saito directly](https://saito.io/redsquare).
 
 Want to help? This wiki is a community-maintained knowledge base. We could use help keeping our documentation updated, and improving the resources that exist here to help others understand why Saito matters and how they can help us build the world's most powerful and secure permissionless network -- we have a page here on [how to contribute](/community/wiki).
