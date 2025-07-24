@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-07-24T05:35:12.274Z
+date: 2025-07-24T05:35:53.594Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -19,7 +19,7 @@ Saito is a L1 blockchain that solves several fundamental theoretical problems at
 
 The ability to solve incentive misalignments that are insolvable in proof-of-work and proof-of-stake mechanisms makes Saito Consensus into a league of its own. Rather than paying for extractive forms of work like hashing or staking, Saito pays the nodes that feed data to users and route their transactions into the network. Scale and security increase organically as nodes compete to contribute rather than extract wealth from the network.
 
-<div style="display:flex;flex-wrap:wrap">
+<div style="margin-bottom:1rem;margin-top:1rem">
   
   <div class="app_title" style="
     margin-top: 1rem;
@@ -29,7 +29,7 @@ The ability to solve incentive misalignments that are insolvable in proof-of-wor
   <div style="
     border: 2px solid #000;
     padding: 0.5rem;
-    width: 49%;
+    width: 60%;
     font-size: 1rem;
   ">Learn how Saito Consensus works with a simplified technical explanation of the consensus mechanism, along with a discussion of the the theoretical problems Saitos solves and the impossibility results it overcomes.</div>
   
@@ -42,7 +42,7 @@ The ability to solve incentive misalignments that are insolvable in proof-of-wor
   <div style="
     border: 2px solid #000;
     padding: 0.5rem;
-    width: 49%;
+    width: 60%;
     font-size: 1rem;
   ">Browse our Appstore showing the most popular applications running on the network, and download extra Saito modules that can be installed into your Saito browser.</div>
   
@@ -55,7 +55,7 @@ The ability to solve incentive misalignments that are insolvable in proof-of-wor
   <div style="
     border: 2px solid #000;
     padding: 0.5rem;
-    width: 49%;
+    width: 60%;
     font-size: 1rem;
   ">Tutorials on how to build Saito Applications and distribute them to other users in the network. Also, instructions on how to install and run a Saito network client.</div>
 </div>
