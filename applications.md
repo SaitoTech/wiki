@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-07-28T09:24:45.951Z
+date: 2025-07-28T10:09:26.693Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -12,7 +12,7 @@ dateCreated: 2022-12-21T01:40:41.364Z
 
 Applications on Saito look and feel like traditional web apps, but run in a peer-to-peer swarm. Browse some of the many Saito applications you can install and start using today:
 
-<br/>
+<br />
 
 <style>
   .app_box {
@@ -117,7 +117,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
       <div class="app_img">
         <img src="/img/dreamscape.png" />
       </div>
-      <div class="app_title">Ethereuem</div>
+      <div class="app_title">Ethereum</div>
     </div>
   </a>
 
