@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-07-23T07:13:16.884Z
+date: 2025-07-28T08:19:00.298Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -30,15 +30,14 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
 </style>
 
 <div class="app_container">
-
-  <a href="/applications/redsquare">
+ 
+  <a href="/applications/arcade">
     <div class="app_box">
        <div class="app_img">
-         <!--<img src="/red-square-menu.png" />-->
-         <img src="/rs-food-pic-sq.png" />
+         <img src="/arcade-sq.png" />
        </div>
-       <div class="app_title">RedSquare</div>
-    </div>
+       <div class="app_title">Saito Arcade</div>
+     </div>
   </a>
   
   <a href="/applications/chat">
@@ -49,87 +48,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
        <div class="app_title">Saito Chat</div>
     </div>
   </a>
-
-  <a href="/applications/videocall">
-    <div class="app_box">
-       <div class="app_img">
-         <img src="/video-call-woman.png" />
-       </div>
-       <div class="app_title">Video Calls</div>
-    </div>
-  </a>
-
-  <a href="/applications/arcade">
-    <div class="app_box">
-       <div class="app_img">
-         <img src="/arcade-sq.png" />
-       </div>
-       <div class="app_title">Saito Arcade</div>
-     </div>
-  </a>
-
-  <a href="/applications/wallet">
-    <div class="app_box">
-       <div class="app_img">
-         <img src="/waqllet-sq.png" />
-       </div>
-       <div class="app_title">Saito Wallet</div>
-    </div>
-  </a>
-
-  <a href="/applications/swarmcast">
-    <div class="app_box">
-      <div class="app_img">
-        <img src="/swarmcast-small.png" />
-      </div>
-      <div class="app_title">Swarmcast</div>
-    </div>
-  </a>
   
-  <a href="/applications/fileshare">
-    <div class="app_box">
-      <div class="app_img">
-        <img src="/fileshare-sq.png" />
-      </div>
-      <div class="app_title">Fileshare</div>
-    </div>
-  </a>
-
-  <a href="/applications/twilight">
-    <div class="app_box">
-       <div class="app_img">
-         <img src="/ts-sq.png" />
-       </div>
-       <div class="app_title">Twilight Struggle</div>
-    </div>
-  </a>
-
-  <a href="/applications/settlers">
-    <div class="app_box">
-       <div class="app_img">
-         <img src="/settlers-sq.png" />
-       </div>
-       <div class="app_title">Settlers</div>
-    </div>
-  </a>
-
-  <a href="/applications/imperium">
-    <div class="app_box">
-       <div class="app_img">
-         <img src="https://staging.saito.io/imperium/img/arcade/arcade.jpg" />
-       </div>
-       <div class="app_title">Red Imperium</div>
-     </div>
-  </a>
-
-  <a href="/applications/his">
-    <div class="app_box">
-       <div class="app_img">
-         <img src="https://staging.saito.io/his/img/arcade/arcade.jpg" />
-       </div>
-       <div class="app_title">Here I Stand</div>
-    </div>
-  </a>
   
   <a href="/applications/chess">
     <div class="app_box">
@@ -140,6 +59,34 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
     </div>
   </a>
 
+  
+  <a href="/applications/fileshare">
+    <div class="app_box">
+      <div class="app_img">
+        <img src="/fileshare-sq.png" />
+      </div>
+      <div class="app_title">Fileshare</div>
+    </div>
+  </a>
+  
+  <a href="/applications/his">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="https://staging.saito.io/his/img/arcade/arcade.jpg" />
+       </div>
+       <div class="app_title">Here I Stand</div>
+    </div>
+  </a>
+  <a href="/applications/imperium">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="https://staging.saito.io/imperium/img/arcade/arcade.jpg" />
+       </div>
+       <div class="app_title">Red Imperium</div>
+     </div>
+  </a>
+
+  
   <a href="/applications/paths">
     <div class="app_box">
        <div class="app_img">
@@ -147,26 +94,6 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
        </div>
        <div class="app_title">Paths of Glory</div>
      </div>
-  </a>
-
-
-  <a href="/applications/quake3">
-    <div class="app_box">
-       <div class="app_img">
-         <img src="/img/quake3.jpg" />
-       </div>
-       <div class="app_title">Quake III</div>
-     </div>
-  </a>
-
-  
-  <a href="/applications/wuziqi">
-    <div class="app_box">
-      <div class="app_img">
-        <img src="/wuziqi-sq.png" />
-      </div>
-      <div class="app_title">Wuziqi</div>
-    </div>
   </a>
 
   <a href="/applications/poker">
@@ -178,6 +105,24 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
     </div>
   </a>
 
+    <a href="/applications/quake3">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/img/quake3.jpg" />
+       </div>
+       <div class="app_title">Quake III</div>
+     </div>
+  </a>
+
+  
+  <a href="/applications/redsquare">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/rs-food-pic-sq.png" />
+       </div>
+       <div class="app_title">RedSquare</div>
+     </div>
+  </a>
   
   <a href="/applications/scotland">
     <div class="app_box">
@@ -185,6 +130,61 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
         <img src="/img/scotland.jpg" />
       </div>
       <div class="app_title">Scotland Yard</div>
+    </div>
+  </a>
+  
+  <a href="/applications/settlers">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/settlers-sq.png" />
+       </div>
+       <div class="app_title">Settlers</div>
+    </div>
+  </a>
+
+   <a href="/applications/swarmcast">
+    <div class="app_box">
+      <div class="app_img">
+        <img src="/swarmcast-small.png" />
+      </div>
+      <div class="app_title">Swarmcast</div>
+    </div>
+  </a>
+  
+  <a href="/applications/twilight">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/ts-sq.png" />
+       </div>
+       <div class="app_title">Twilight Struggle</div>
+    </div>
+  </a>
+  
+  <a href="/applications/videocall">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/video-call-woman.png" />
+       </div>
+       <div class="app_title">Video Calls</div>
+    </div>
+  </a>
+
+  <a href="/applications/wallet">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/wallet-sq.png" />
+       </div>
+       <div class="app_title">Saito Wallet</div>
+    </div>
+  </a>
+
+
+  <a href="/applications/wuziqi">
+    <div class="app_box">
+      <div class="app_img">
+        <img src="/wuziqi-sq.png" />
+      </div>
+      <div class="app_title">Wuziqi</div>
     </div>
   </a>
   
