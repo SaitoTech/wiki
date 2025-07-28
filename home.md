@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-07-24T06:23:11.238Z
+date: 2025-07-28T06:33:16.521Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -19,118 +19,8 @@ Saito is a L1 blockchain that solves several fundamental theoretical problems at
 
 The ability to solve incentive misalignments that are insolvable in proof-of-work and proof-of-stake mechanisms makes Saito Consensus into a league of its own. Rather than paying for extractive forms of work like hashing or staking, Saito pays the nodes that feed data to users and route their transactions into the network. Scale and security increase organically as nodes compete to contribute rather than extract wealth from the network.
 
-<div style="margin-bottom:1rem;margin-top:1rem">
 
-  <div style="
-     display: flex;
-     flex-direction: column;
-     width: 80%;
- ">   
-    <div class="app_title" style="
-      margin-top: 1rem;
-      width: 195px;
-      height: auto;
-      position: relative;
-      font-size: 1.25rem;
-      padding: 0.5rem 0rem 0.5rem 1rem;
-    ">Learn Saito</div>
-    <div style="
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-    ">       
-      <div class="" style="
-        min-width: 150px;
-        min-height: 100px;
-        background-color: white;
-        background-image: url(/img/empyrean_rose.png);
-        background-size: cover;
-        border: 2px solid #000;
-      "></div>
-      <div style="
-        border: 2px solid #000;
-        border-left: 0px;
-        padding: 0.5rem;
-        font-size: 1rem;
-      ">Learn how Saito Consensus works with a simplified technical explanation of the consensus mechanism, along with a discussion of the the theoretical problems Saitos solves and the impossibility results it overcomes.</div>
-    </div>
-  </div>
- 
-  
-  <div style="
-     display: flex;
-     flex-direction: column;
-     width: 80%;
- ">   
-    <div class="app_title" style="
-      margin-top: 1rem;
-      width: 195px;
-      height: auto;
-      position: relative;
-      font-size: 1.25rem;
-      padding: 0.5rem 0rem 0.5rem 1rem;
-    ">Applications</div>
-    <div style="
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-    ">       
-      <div class="" style="
-        min-width: 150px;
-        min-height: 100px;
-        background-color: red;
-        background-image: url('/img/quake3.jpg');
-        background-size: cover;
-        border: 2px solid #000;
-      "></div>
-      <div style="
-        border: 2px solid #000;
-        border-left: 0px;
-        padding: 0.5rem;
-        font-size: 1rem;
-      ">Browse our Appstore showing the most popular applications running on the network, and download extra Saito modules that can be installed into your Saito browser.</div>
-    </div>
-  </div>
- 
-  <div style="
-     display: flex;
-     flex-direction: column;
-     width: 80%;
- ">   
-    <div class="app_title" style="
-      margin-top: 1rem;
-      width: 195px;
-      height: auto;
-      position: relative;
-      font-size: 1.25rem;
-      padding: 0.5rem 0rem 0.5rem 1rem;
-    ">Tutorials</div>
-    <div style="
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-    ">       
-      <div class="" style="
-        min-width: 150px;
-        min-height: 100px;
-        background-color: red;
-        background-image: url('/img/self-moderate.jpg');
-        background-size: cover;
-        border: 2px solid #000;
-      "></div>
-      <div style="
-        border: 2px solid #000;
-        border-left: 0px;
-        padding: 0.5rem;
-        font-size: 1rem;
-      ">Learn how to use the network and get started developing NFTs and building applications or using your Saito Wallet. Also, instructions on how to install and run a local network client.</div>
-    </div>
-  </div>
- 
-</div>
-
-
-In addition to the sections above, this wiki also contains information on our [project history and roadmap](/roadmap), details on the network [tokenomics](/tokenomics) and step-by-step [tutorials](/tutorials) on how to use the network. Or you can skip the documentation and just go [try out Saito directly](https://saito.io/redsquare).
+In addition to information the network and our applications, this wiki also contains information on our [project history and roadmap](/roadmap), details on the network [tokenomics](/tokenomics) and step-by-step [tutorials](/tutorials) on how to get started. Or you can skip the documentation and just go [try out Saito directly](https://saito.io/redsquare).
 
 Want to help? This wiki is a community-maintained knowledge base. We could use help keeping our documentation updated, and improving the resources that exist here to help others understand why Saito matters and how they can help us build the world's most powerful and secure permissionless network -- we have a page here on [how to contribute](/community/wiki).
 
