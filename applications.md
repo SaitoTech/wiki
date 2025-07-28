@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-07-28T10:32:18.701Z
+date: 2025-07-28T10:38:52.714Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -169,7 +169,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/applications/league">
     <div class="app_box">
        <div class="app_img">
-         <img src="/img/dreamscape.png" />
+         <img src="/img/league.png" />
        </div>
        <div class="app_title">Saito Leagues</div>
      </div>
@@ -178,7 +178,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/applications/library">
     <div class="app_box">
        <div class="app_img">
-         <img src="/img/dreamscape.png" />
+         <img src="/img/library.png" />
        </div>
        <div class="app_title">Saito Library</div>
      </div>
@@ -187,7 +187,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/applications/mahjong">
     <div class="app_box">
        <div class="app_img">
-         <img src="/img/dreamscape.png" />
+         <img src="/img/mahjong.png" />
        </div>
        <div class="app_title">Mahjong</div>
      </div>
