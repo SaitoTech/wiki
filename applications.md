@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-07-28T13:03:30.328Z
+date: 2025-07-28T13:05:02.636Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -354,7 +354,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/applications/shogun">
     <div class="app_box">
        <div class="app_img">
-         <img src="/settlers-sq.png" />
+         <img src="/img/shogun.jpg" />
        </div>
        <div class="app_title">Shogun</div>
     </div>
@@ -363,7 +363,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
    <a href="/applications/sol">
     <div class="app_box">
       <div class="app_img">
-        <img src="/img/dreamscape.png" />
+        <img src="/img/solana.png" />
       </div>
       <div class="app_title">Solana</div>
     </div>
