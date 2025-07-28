@@ -2,13 +2,13 @@
 title: Saito Blog
 description: 
 published: true
-date: 2025-07-28T09:21:22.445Z
+date: 2025-07-28T09:21:32.821Z
 tags: 
 editor: markdown
 dateCreated: 2025-07-28T09:21:22.445Z
 ---
 
-# Header
+# Saito Blog
 
 The Saito Blog module provides a way to write and publish blog posts across the Saito Network. Blog posts are published in transactions that are shared with peers either on-chain or saved in private Archive nodes and distributed peer-to-peer to connecting friends.
 
