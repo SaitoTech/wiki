@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-07-28T13:09:12.654Z
+date: 2025-07-28T13:09:40.372Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -436,7 +436,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/applications/wordblocks">
     <div class="app_box">
       <div class="app_img">
-        <img src="/img/wordblocks.png" />
+        <img src="/img/wordblocks.jpg" />
       </div>
       <div class="app_title">Wordblocks</div>
     </div>
