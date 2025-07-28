@@ -2,7 +2,7 @@
 title: Midnight Rogue
 description: 
 published: true
-date: 2025-07-28T11:34:15.640Z
+date: 2025-07-28T11:38:38.227Z
 tags: 
 editor: markdown
 dateCreated: 2025-07-28T11:34:15.640Z
