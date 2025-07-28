@@ -2,7 +2,7 @@
 title: Beleaguered Castle
 description: 
 published: true
-date: 2025-05-20T03:48:28.777Z
+date: 2025-07-28T09:16:22.370Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-20T03:47:52.683Z
@@ -13,12 +13,12 @@ dateCreated: 2025-05-20T03:47:52.683Z
 <br>
 <img src="/img/beleaguered.png" />
 
-Beleaguered Castle is a patience or solitaire card game played with a deck of 52 playing cards.It is sometimes described as "Freecell without cells" because its gameplay is somewhat akin to the popular solitaire computer game of that name but without extra empty spaces to maneuver. Beleaguered Castle is also called Laying Siege and Sham Battle.
+Beleaguered Castle is a solitaire variant played with a deck of 52 playing cards. It is sometimes described as "Freecell without Cells" because its gameplay is similar to that variant except without the empty spaces to maneuver. Beleaguered Castle is also sometimes called "Laying Siege" or "Sham Battle".
 
-Rules
+Rules:
 
-First, the player removes the aces from the deck and aligns them vertically without overlapping them to form the foundations. Then cards are dealt to the left and right of the aces, forming eight rows of six overlapping cards each, in a distinctive tableau layout with wings on either side of the foundations.
+Player remove all aces from the deck and places them vertically in the center of the board as depicted in the graphic above. The remainder of the cards are then dealt to the left and right of this center column, forming eight rows of six cards each. This forms a distinctive tableau layout with "wings" stretching away from the central column of aces.
 
-The top card of each row (the exposed card) is available for play either on the foundations or on any other row. The foundations are built up to kings by suit. Cards in the rows are built down in sequence regardless of suit. Once a row becomes empty, it can be filled by any card
+The top card in each row (the exposed card) can be placed on either the suite-appropriate ace (or any card atop it) or for shifting to another row regardless of suite. Once a row becomes empty, it can be filled by any card.
 
-The game is won when all of the cards are built onto the foundations
+The game is won when all cards have been shifted atop the aces.
