@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-07-28T13:05:44.831Z
+date: 2025-07-28T13:09:12.654Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -372,7 +372,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
    <a href="/applications/solitrio">
     <div class="app_box">
       <div class="app_img">
-        <img src="/img/dreamscape.png" />
+        <img src="/img/solitrio.png" />
       </div>
       <div class="app_title">Solitrio</div>
     </div>
@@ -382,7 +382,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
    <a href="/applications/spider">
     <div class="app_box">
       <div class="app_img">
-        <img src="/img/dreamscape.png" />
+        <img src="/img/spider.png" />
       </div>
       <div class="app_title">Spider Solitaire</div>
     </div>
@@ -409,7 +409,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/applications/trx">
     <div class="app_box">
        <div class="app_img">
-         <img src="/img/dreamscape.png" />
+         <img src="/img/trx.png" />
        </div>
        <div class="app_title">TRX</div>
     </div>
@@ -436,7 +436,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/applications/wordblocks">
     <div class="app_box">
       <div class="app_img">
-        <img src="/img/dreamscape.png" />
+        <img src="/img/wordblocks.png" />
       </div>
       <div class="app_title">Wordblocks</div>
     </div>
