@@ -2,7 +2,7 @@
 title: Saito Realms
 description: 
 published: true
-date: 2025-07-28T12:56:37.218Z
+date: 2025-07-28T12:57:04.869Z
 tags: 
 editor: markdown
 dateCreated: 2025-07-28T12:56:37.218Z
@@ -12,7 +12,7 @@ dateCreated: 2025-07-28T12:56:37.218Z
 
 Saito Realms is a Magic-style card-trading game under development by the Saito community. As with other games of its class, a standard game of Realm involves two players who face off as powerful summoners/mages. Each player has their own deck of cards, either one previously constructed or made from a limited pool of cards for the event.
 
-![009_dormant_predator.png](/saito_realm/009_dormant_predator.png =500x) ![001_magic_cube.png](/saito_realm/001_magic_cube.png =500x)
+![001_magic_cube.png](/saito_realm/001_magic_cube.png =500x)
 
 As a deck-building game, players will eventually be able to trade cards with each other to assemble better decks, and to stake cards on the outcome of games, letting the more skillful amass a competitive deck from his beaten peers.
 
