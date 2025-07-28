@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-07-28T13:26:52.846Z
+date: 2025-07-28T13:28:20.913Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -52,7 +52,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/applications/bazaar">
     <div class="app_box">
        <div class="app_img">
-         <img src="/img/dreamscape.png" />
+         <img src="/img/bazaar.png" />
        </div>
        <div class="app_title">Bazaar</div>
      </div>
@@ -193,16 +193,6 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
      </div>
   </a>
   
-  
-  <a href="/applications/midnight">
-    <div class="app_box">
-       <div class="app_img">
-         <img src="/img/dreamscape.png" />
-       </div>
-       <div class="app_title">Midnight</div>
-     </div>
-  </a>
-  
   <a href="/applications/mixin">
     <div class="app_box">
        <div class="app_img">
@@ -227,15 +217,6 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
          <img src="/img/nwasm.jpg" />
        </div>
        <div class="app_title">Nintendo64</div>
-     </div>
-  </a>
-
-  <a href="/applications/pandemic">
-    <div class="app_box">
-       <div class="app_img">
-         <img src="/img/dreamscape.png" />
-       </div>
-       <div class="app_title">Pandemic</div>
      </div>
   </a>
   
@@ -327,7 +308,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/applications/saitomania">
     <div class="app_box">
       <div class="app_img">
-        <img src="/img/dreamscape.png" />
+        <img src="/img/saitomania.jpg" />
       </div>
       <div class="app_title">SaitoMania</div>
     </div>
