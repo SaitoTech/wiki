@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-07-28T08:47:03.227Z
+date: 2025-07-28T09:04:57.280Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -211,7 +211,6 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
        <div class="app_title">Mixin</div>
      </div>
   </a>
-
   
   <a href="/applications/modtools">
     <div class="app_box">
@@ -219,6 +218,15 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
          <img src="/img/dreamscape.png" />
        </div>
        <div class="app_title">Saito Modtools</div>
+     </div>
+  </a>
+  
+  <a href="/applications/nwasm">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/img/dreamscape.png" />
+       </div>
+       <div class="app_title">Nintendo64</div>
      </div>
   </a>
 
