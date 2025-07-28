@@ -2,7 +2,7 @@
 title: SaitoArcade
 description: 
 published: true
-date: 2025-07-28T09:03:58.970Z
+date: 2025-07-28T09:05:31.323Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-19T20:49:30.032Z
@@ -11,6 +11,8 @@ dateCreated: 2023-02-19T20:49:30.032Z
 # Saito Arcade
 
 [Saito Arcade](https://saito.io/arcade/) is a core part of the Saito Game Engine. It is installed by default in most versions of Saito as it is needed for creating and joining games. Once you have installed the Saito Arcade, any games that are also installed in your wallet will appear in your list of playable games.
+
+<br />
 
 <img src="/arcade-summer-2025.png" style="maxwidth: 600px;">
 
