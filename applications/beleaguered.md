@@ -2,7 +2,7 @@
 title: Beleaguered Castle
 description: 
 published: true
-date: 2025-07-28T09:16:22.370Z
+date: 2025-07-28T09:16:29.153Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-20T03:47:52.683Z
@@ -15,7 +15,7 @@ dateCreated: 2025-05-20T03:47:52.683Z
 
 Beleaguered Castle is a solitaire variant played with a deck of 52 playing cards. It is sometimes described as "Freecell without Cells" because its gameplay is similar to that variant except without the empty spaces to maneuver. Beleaguered Castle is also sometimes called "Laying Siege" or "Sham Battle".
 
-Rules:
+**Rules:**
 
 Player remove all aces from the deck and places them vertically in the center of the board as depicted in the graphic above. The remainder of the cards are then dealt to the left and right of this center column, forming eight rows of six cards each. This forms a distinctive tableau layout with "wings" stretching away from the central column of aces.
 
