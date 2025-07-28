@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-07-28T08:37:33.414Z
+date: 2025-07-28T08:39:51.094Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -342,7 +342,44 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
        <div class="app_title">Settlers</div>
     </div>
   </a>
+  
+  <a href="/applications/shogun">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/settlers-sq.png" />
+       </div>
+       <div class="app_title">Shogun</div>
+    </div>
+  </a>
 
+   <a href="/applications/sol">
+    <div class="app_box">
+      <div class="app_img">
+        <img src="/img/dreamscape.png" />
+      </div>
+      <div class="app_title">Solana</div>
+    </div>
+  </a>
+  
+   <a href="/applications/solitrio">
+    <div class="app_box">
+      <div class="app_img">
+        <img src="/img/dreamscape.png" />
+      </div>
+      <div class="app_title">Solitrio</div>
+    </div>
+  </a>
+  
+  
+   <a href="/applications/spider">
+    <div class="app_box">
+      <div class="app_img">
+        <img src="/img/dreamscape.png" />
+      </div>
+      <div class="app_title">Spider Solitaire</div>
+    </div>
+  </a>
+  
    <a href="/applications/swarmcast">
     <div class="app_box">
       <div class="app_img">
@@ -358,6 +395,15 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
          <img src="/ts-sq.png" />
        </div>
        <div class="app_title">Twilight Struggle</div>
+    </div>
+  </a>
+  
+  <a href="/applications/trx">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/img/dreamscape.png" />
+       </div>
+       <div class="app_title">TRX</div>
     </div>
   </a>
   
@@ -378,7 +424,16 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
        <div class="app_title">Saito Wallet</div>
     </div>
   </a>
-
+  
+  <a href="/applications/wordblocks">
+    <div class="app_box">
+      <div class="app_img">
+        <img src="/img/dreamscape.png" />
+      </div>
+      <div class="app_title">Wordblocks</div>
+    </div>
+  </a>
+  
   <a href="/applications/wuziqi">
     <div class="app_box">
       <div class="app_img">
