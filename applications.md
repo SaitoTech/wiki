@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-07-28T11:46:40.851Z
+date: 2025-07-28T11:55:06.566Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -224,7 +224,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/applications/nwasm">
     <div class="app_box">
        <div class="app_img">
-         <img src="/img/dreamscape.png" />
+         <img src="/img/nwasm.jpg" />
        </div>
        <div class="app_title">Nintendo64</div>
      </div>
