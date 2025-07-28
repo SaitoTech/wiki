@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-07-28T11:57:10.503Z
+date: 2025-07-28T13:00:53.085Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -279,7 +279,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/applications/realms">
     <div class="app_box">
        <div class="app_img">
-         <img src="/img/dreamscape.png" />
+         <img src="/img/realms.png" />
        </div>
        <div class="app_title">Realms</div>
      </div>
@@ -308,7 +308,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/applications/registry">
     <div class="app_box">
        <div class="app_img">
-         <img src="/rs-food-pic-sq.png" />
+         <img src="/img/registry.png" />
        </div>
        <div class="app_title">Saito Registry</div>
      </div>
