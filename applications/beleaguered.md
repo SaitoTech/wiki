@@ -2,13 +2,13 @@
 title: Beleaguered Castle
 description: 
 published: true
-date: 2025-07-28T09:16:29.153Z
+date: 2025-07-28T11:13:59.381Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-20T03:47:52.683Z
 ---
 
-## Beleaguered Castle
+# Beleaguered Castle
 
 <br>
 <img src="/img/beleaguered.png" />
