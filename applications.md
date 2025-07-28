@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-07-28T08:21:22.138Z
+date: 2025-07-28T08:32:04.228Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -39,6 +39,51 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
        <div class="app_title">Saito Arcade</div>
      </div>
   </a>
+
+  <a href="/applications/archive">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/img/dreamscape.png" />
+       </div>
+       <div class="app_title">Saito Archive</div>
+     </div>
+  </a>
+
+  <a href="/applications/bazaar">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/img/dreamscape.png" />
+       </div>
+       <div class="app_title">Bazaar</div>
+     </div>
+  </a>
+  
+  <a href="/applications/beleaguered">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/img/dreamscape.png" />
+       </div>
+       <div class="app_title">Beleaguered</div>
+     </div>
+  </a>
+  
+  <a href="/applications/blackjack">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/img/dreamscape.png" />
+       </div>
+       <div class="app_title">Blackjack</div>
+     </div>
+  </a>
+ 
+  <a href="/applications/blog">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/img/dreamscape.png" />
+       </div>
+       <div class="app_title">Saito Blog</div>
+     </div>
+  </a>
   
   <a href="/applications/chat">
     <div class="app_box">
@@ -58,12 +103,48 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
     </div>
   </a>
 
+  <a href="/applications/encrypt">
+    <div class="app_box">
+      <div class="app_img">
+        <img src="/img/dreamscape.png" />
+      </div>
+      <div class="app_title">Saito Encrypt</div>
+    </div>
+  </a>
+  
+  <a href="/applications/eth">
+    <div class="app_box">
+      <div class="app_img">
+        <img src="/img/dreamscape.png" />
+      </div>
+      <div class="app_title">Ethereuem</div>
+    </div>
+  </a>
+
   <a href="/applications/fileshare">
     <div class="app_box">
       <div class="app_img">
         <img src="/fileshare-sq.png" />
       </div>
       <div class="app_title">Fileshare</div>
+    </div>
+  </a>
+ 
+  <a href="/applications/grafitti">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/img/dreamscape.png" />
+       </div>
+       <div class="app_title">Grafitti</div>
+    </div>
+  </a>
+  
+  <a href="/applications/hearts">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/imgdreamscape.png" />
+       </div>
+       <div class="app_title">Hearts</div>
     </div>
   </a>
   
@@ -75,6 +156,8 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
        <div class="app_title">Here I Stand</div>
     </div>
   </a>
+  
+  
   <a href="/applications/imperium">
     <div class="app_box">
        <div class="app_img">
