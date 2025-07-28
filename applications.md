@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-07-28T08:45:57.761Z
+date: 2025-07-28T08:47:03.227Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -249,26 +249,26 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
     </div>
   </a>
   
-    <a href="/applications/qrscanner">
+  <a href="/applications/qrscanner">
     <div class="app_box">
        <div class="app_img">
          <img src="/img/dreamscape.png" />
        </div>
        <div class="app_title">QR Scanner</div>
-     </div>
+    </div>
   </a>
 
   
-    <a href="/applications/quake3">
+  <a href="/applications/quake3">
     <div class="app_box">
        <div class="app_img">
          <img src="/img/quake3.jpg" />
        </div>
        <div class="app_title">Quake III</div>
      </div>
-  </a>
+   </a>
 
-    <a href="/applications/realms">
+  <a href="/applications/realms">
     <div class="app_box">
        <div class="app_img">
          <img src="/img/dreamscape.png" />
