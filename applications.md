@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-07-28T10:16:36.308Z
+date: 2025-07-28T10:16:52.077Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -79,7 +79,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
   <a href="/applications/blog">
     <div class="app_box">
        <div class="app_img">
-         <img src="/img/blog2.png" />
+         <img src="/img/blog.png" />
        </div>
        <div class="app_title">Saito Blog</div>
      </div>
