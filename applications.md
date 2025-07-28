@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-07-28T08:19:00.298Z
+date: 2025-07-28T08:21:22.138Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -49,7 +49,6 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
     </div>
   </a>
   
-  
   <a href="/applications/chess">
     <div class="app_box">
       <div class="app_img">
@@ -59,7 +58,6 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
     </div>
   </a>
 
-  
   <a href="/applications/fileshare">
     <div class="app_box">
       <div class="app_img">
@@ -86,7 +84,6 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
      </div>
   </a>
 
-  
   <a href="/applications/paths">
     <div class="app_box">
        <div class="app_img">
@@ -177,7 +174,6 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
        <div class="app_title">Saito Wallet</div>
     </div>
   </a>
-
 
   <a href="/applications/wuziqi">
     <div class="app_box">
