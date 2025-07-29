@@ -2,7 +2,7 @@
 title: Saito Blog
 description: 
 published: true
-date: 2025-07-28T10:01:20.689Z
+date: 2025-07-29T21:46:25.259Z
 tags: 
 editor: markdown
 dateCreated: 2025-07-28T09:21:22.445Z
@@ -13,7 +13,7 @@ dateCreated: 2025-07-28T09:21:22.445Z
 <br>
 <img src="/img/blog1.png" />
 
-The Saito Blog module provides a way to write and publish blog posts across the Saito Network. Blog posts are published in transactions that are shared with peers either on-chain or saved in private Archive nodes and distributed peer-to-peer to connecting friends.
+The Saito Blog module provides a way to write and publish blog posts across the Saito Network. Blog posts are published in transactions that are shared with peers either on-chain or saved in private [Archive](/applications/archive) nodes and distributed peer-to-peer to connecting friends.
 
 When viewers attempt to read a blog post, their local browser client sends a request for the related blog post to their peers in the network, which returns the blog-transaction to their browser, validates it, and displays the blog post. If you wish to ensure that a blog post is always publicly visible, you should publish it on-chain so that it is available to most of the archive nodes servicing users across the network.
 
