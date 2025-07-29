@@ -2,7 +2,7 @@
 title: Settlers of Saitoa
 description: 
 published: true
-date: 2025-05-19T13:55:38.310Z
+date: 2025-07-29T21:45:13.083Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-29T19:34:11.091Z
@@ -17,7 +17,7 @@ dateCreated: 2023-01-29T19:34:11.091Z
   
 The goal of the game is to reach ten victory points, but this can be customized. The two-player game also has some unique customizations designed to make victory harder. Once a player has an entrenched lead, the local bandit ("Robin Hood") will typically favour them over their opponent out of sense of natural justice.
 
-Settlers of Saitoa [source code.](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/settlers)
+Settlers of Saitoa [source code.](https://github.com/SaitoTech/saito/tree/master/node/mods/settlers)
   
 ## How to Play  
   
