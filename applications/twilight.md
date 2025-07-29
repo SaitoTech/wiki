@@ -2,12 +2,11 @@
 title: Twilight Struggle
 description: Twilight Struggle on Saito
 published: true
-date: 2025-05-26T09:46:51.819Z
+date: 2025-07-29T21:44:51.048Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-22T11:12:21.027Z
 ---
-
 
 <div style="display: block;border: 2px solid rgb(204, 204, 204);border-radius: 8px;padding: 0.5rem;background-color: rgb(249, 249, 249);opacity: 1;z-index: 99999;position: relative;margin-bottom: 1rem;max-width: max-content;padding-top: 1rem;padding-bottom: 1rem;padding-left: 1rem;padding-right: 1rem;">
 	<div class="header-box">
@@ -27,7 +26,7 @@ dateCreated: 2024-08-22T11:12:21.027Z
 
 *"Now the trumpet summons us again, not as a call to bear arms –– but a call to bear the burden of a long twilight struggle..."* - John F. Kennedy
 
-Twilight Struggle's popularity soared within a few years of its publication in 2012, and continues to be recognized as one of the most compelling two-player boardgames ever created, with near infinite replayability and strategic challenge. If you are new to the game, you will find Twilight Struggle an incredibly rewarding experience that justifies the minimal investment needed to learn the rules.
+Twilight Struggle's popularity soared within a few years of its publication in 2005, and continues to be recognized as one of the most compelling two-player boardgames ever created, with near infinite replayability and strategic challenge. If you are new to the game, you will find Twilight Struggle an incredibly rewarding experience that justifies the minimal investment needed to learn the rules.
 
 <br>
 <img src="/ts.png" style="max-width: 600px;">
@@ -42,4 +41,4 @@ The defining mechanic of Twilight Struggle is that as players must choose to use
 
 In addition to the standard and optional game-modes that are popular, the Saito Edition of Twilight Struggle also supports a number of custom game modes. One of the best is our "Community Edition" that includes a large number of new cards which can enter gameplay and change the strategic balance of the game. If you're an experienced player looking for something new we'd encourage giving the Community Edition a try.
 
-It would be remiss not to mention that the Saito Editio of Twilight Struggle is released under an open source license provided by GMT Games, which requires that one player in every game has purchased a copy. As fans of GMT Games, we remind players to kindly reward the company for their generosity and open-mindedness by purchasing a copy [here](https://www.amazon.com/GMT-Games-Twilight-Struggle-Deluxe/dp/B0060L6EE4).
+It would be remiss not to mention that the Saito Edition of Twilight Struggle is released under an open source license provided by GMT Games, which requires that one player in every game has purchased a copy. As fans of GMT Games, we remind players to kindly reward the company for their generosity and open-mindedness by purchasing a copy [here](https://www.amazon.com/GMT-Games-Twilight-Struggle-Deluxe/dp/B0060L6EE4).
