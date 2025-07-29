@@ -2,7 +2,7 @@
 title: SaitoArcade
 description: 
 published: true
-date: 2025-07-28T09:05:31.323Z
+date: 2025-07-29T21:46:37.289Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-19T20:49:30.032Z
@@ -18,7 +18,7 @@ dateCreated: 2023-02-19T20:49:30.032Z
 
 The games supported by the Saito Arcade all use the Saito Game Engine, allowing for sophisticated cryptographic [techniques](#mentalPoker) that allow players to cooperatively shuffle and deal cards, make simultaneous moves, and communicate securely without the need for a central server. The Saito Arcade is designed to support games that have up to six players.
 
-For these reasons the [Web3 Foundation](https://web3.foundation/) has recognized the Saito Game Engine as a [open standard](https://github.com/w3f/Grants-Program/blob/master/applications/saito-game-protocol-and-engine.md) for open games.
+For these reasons the [Web3 Foundation](https://web3.foundation/) has recognized the Saito Game Engine as an [open standard](https://github.com/w3f/Grants-Program/blob/master/applications/saito-game-protocol-and-engine.md) for open games.
 
 > I like this idea and think it provides something REALLY valuable to the ecosystem, and takes blockchain gaming in a very different (and good!) direction
 > - *[Bill Laboon](https://github.com/w3f/Grants-Program/pull/73#issuecomment-713638248), Head of Education and Grants at Web3 Foundation*
@@ -35,8 +35,8 @@ The Saito Arcade offers the most practical implementation of the techniques devi
 
 Mental Poker exploits the commutative properties of public key encryption schemes to encrypt deck of cards using the keys of each player, and shuffle it while nobody is able to decrypt it. Cards can then be progressively decrypted by all players as determined by the game rules. A more complete explanation can be sought via [Wikipedia](https://en.wikipedia.org/wiki/Mental_poker).
 
-The Saito Arcade has taken the principles of Mental Poker and generalized the techniques to support several adversarial players and to encode and integrate arbitrary values which extend far past a simple game of Poker. Titles like [*Twilight Struggle*](/tech/applications/twilight) and [*Settlers of Saitoa*](/tech/applications/settlers) are two flagship examples of such extensions
+The Saito Arcade has taken the principles of Mental Poker and generalized the techniques to support several adversarial players and to encode and integrate arbitrary states extending far past a simple game of Poker. Titles like [*Twilight Struggle*](/tech/applications/twilight) and [*Settlers of Saitoa*](/tech/applications/settlers) are two flagship examples of such extensions
 
 ## Games
 
-For a full list of the games available in the Saito Arcade please see the [mods directory](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods). Links to downloadable versions of some of the more playable games can also be found on the [applications](/applications) page in our wiki.
+For a full list of the games available in the Saito Arcade please see the [mods directory](https://github.com/SaitoTech/saito/tree/master/node/mods). Links to downloadable versions of some of the more playable games can also be found on the [applications](/applications) page in our wiki.
