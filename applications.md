@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-07-28T13:43:31.490Z
+date: 2025-07-30T09:12:24.398Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -36,7 +36,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
        <div class="app_img">
          <img src="/arcade-sq.png" />
        </div>
-       <div class="app_title">Saito Arcade</div>
+       <div class="app_title">Arcade</div>
      </div>
   </a>
 
@@ -45,7 +45,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
        <div class="app_img">
          <img src="/img/archive.jpg" />
        </div>
-       <div class="app_title">Saito Archive</div>
+       <div class="app_title">Archive</div>
     </div>
   </a>
 
@@ -81,7 +81,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
        <div class="app_img">
          <img src="/img/blog.png" />
        </div>
-       <div class="app_title">Saito Blog</div>
+       <div class="app_title">Blog</div>
      </div>
   </a>
   
@@ -90,7 +90,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
        <div class="app_img">
          <img src="/chat-nov-2024.png" />
        </div>
-       <div class="app_title">Saito Chat</div>
+       <div class="app_title">Chat</div>
     </div>
   </a>
   
@@ -108,7 +108,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
       <div class="app_img">
         <img src="/img/encrypt.jpg" />
       </div>
-      <div class="app_title">Saito Encrypt</div>
+      <div class="app_title">Encrypt</div>
     </div>
   </a>
   
@@ -162,7 +162,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
        <div class="app_img">
          <img src="/img/league.png" />
        </div>
-       <div class="app_title">Saito Leagues</div>
+       <div class="app_title">Leagues</div>
      </div>
   </a>
 
@@ -171,7 +171,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
        <div class="app_img">
          <img src="/img/library.png" />
        </div>
-       <div class="app_title">Saito Library</div>
+       <div class="app_title">Library</div>
      </div>
   </a>
   
@@ -198,7 +198,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
        <div class="app_img">
          <img src="/img/modtools.jpg" />
        </div>
-       <div class="app_title">Saito Modtools</div>
+       <div class="app_title">Modtools</div>
      </div>
   </a>
   
@@ -282,7 +282,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
        <div class="app_img">
          <img src="/img/registry.png" />
        </div>
-       <div class="app_title">Saito Registry</div>
+       <div class="app_title">Registry</div>
      </div>
   </a>
   
@@ -292,7 +292,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
        <div class="app_img">
          <img src="/rs-food-pic-sq.png" />
        </div>
-       <div class="app_title">Saito Relay</div>
+       <div class="app_title">Relay</div>
      </div>
   </a>
    
@@ -401,7 +401,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
        <div class="app_img">
          <img src="/img/wallet.png" />
        </div>
-       <div class="app_title">Saito Wallet</div>
+       <div class="app_title">Wallet</div>
     </div>
   </a>
   
