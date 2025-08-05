@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-08-05T19:08:52.033Z
+date: 2025-08-05T19:13:13.364Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -36,20 +36,9 @@ A second problem with these papers is that many require block producers to "fait
 Saito Consensus handles both kinds of preference revelation indirectly: users reveal their willingness to collude through both the fee they choose and their transaction distribution strategies (which indicate the existence of a welfare-increasing trade between the user and at least one block producer), while producers reveal their private cost structures through their willingness to include their own fee-bearing transactions in blocks and bundle privately-distributed transactions into blocks.
 
 
-### 1. Leonid Hurwicz (1972)
-
-Hurwicz's seminal paper *The Design of Mechanisms for Resource Allocation* pointed out that in informationally decentralized mechanisms where communication between agents is needed prior to resource allocation, only mechanisms that can induce participants to share their private preferences truthfully can be considered *incentive compatible* (i.e. robust to strategic manipulation by rational agents).
-
-> These results show that the difficulty is due not to our lack of inventiveness, but to a fundamental conflict among such mechanism attributes as the optimality of equilibria, incentive-compatibility of the rules, and the requirements of informa- tional decentralization. Concessions must be made in at least one of these directions.
-
-The trap Hurwicz identified exists because he assumed speech itself must be costless -- and realized that if lying cannot be punished outside the mechanism then the messages circulating within the mechanism must be truthful for agents to form rational strategies on the basis of rational price/expectations.
-
-This problem is solved elegantly in routing work because the transfer of proposals involves a cost which is asymmetrically higher for false speech in equilibrium. In the process, Saito Consensus achieves incentive compatibility by fulfilling the requirements Hurwicz establishes for incentive compatibility with through its indirect and decomposable implementation of a decentralized optimization process he termed the "Greed Process".
-
-
 <br>
 
-### 2. Bracha and Toueg (1985)
+### 3. Bracha and Toueg (1985)
 
 The paper *Asynchronous Consensus and Broadcast Protocols* by Bracha and Toueg shows that in an asynchronous system with **n** total processes, at most **(n−1)/2** processes can be adversarial. Their model assumes a network of processes that receive and respond to network messages automatically:
 
@@ -61,7 +50,17 @@ Saito Consensus avoids this problem because the cost of proposing a message depe
 
 <br>
 
-### 3. Dwork, Lynch, and Stockmeyer (1988)
+### 4. Leonid Hurwicz (1972)
+
+Hurwicz's seminal paper *The Design of Mechanisms for Resource Allocation* pointed out that in informationally decentralized mechanisms where communication between agents is needed prior to resource allocation, only mechanisms that can induce participants to share private preferences truthfully can be considered *incentive compatible* (i.e. robust to strategic manipulation by rational agents).
+
+> These results show that the difficulty is due not to our lack of inventiveness, but to a fundamental conflict among such mechanism attributes as the optimality of equilibria, incentive-compatibility of the rules, and the requirements of informa- tional decentralization. Concessions must be made in at least one of these directions.
+
+The trap Hurwicz identified exists where speech itself is costless. This problem is solved elegantly in routing work because the publishing of proposals necessarily involves a cost which is asymmetrically higher for false speech (state transitions which arbitrarily reduce efficiency) in equilibrium. In the process, Saito Consensus achieves incentive compatibility by fulfilling the requirements Hurwicz establishes for incentive compatibility with through its indirect and decomposable implementation of a decentralized optimization process he termed the "Greed Process".
+
+<br>
+
+### 5. Dwork, Lynch, and Stockmeyer (1988)
 
 The paper *Consensus in the Presence of Partial Synchrony* by Dwork, Lynch, and Stockmeyer (1988) examines how communication delays affect consensus protocols. One of its key insights is that consensus cannot be guaranteed when block production capacity is evenly split into two factions.
 
