@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-08-05T15:19:33.663Z
+date: 2025-08-05T19:08:52.033Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -15,6 +15,26 @@ Saito Consensus sidesteps several impossibility results that affect almost all o
 Given the [technical explanation](/consensus) of consensus elsewhere in this wiki, this page simply highlights how Saito avoids being trapped by the classic impossibility results in economics and computer science which form the intellectual foundation for most beliefs that these problems are not possible. It should be noted that this is not an argument that the conclusions of these papers are wrong **within the bounds of their assumptions** -- merely that their results are not binding on routing mechanisms as the assumptions of their arguments do not apply to routing mechanisms.
 
 <br>
+
+### 1. On Bitcoin and Red Balloons (2011)
+
+An influential [academic paper](https://arxiv.org/pdf/1111.2626) by Moshe Babaioff, Shahar Dobzinski, Sigal Oren and Aviv Zohar has claimed the impossibility of building distributed mechanisms which incentivize transaction propagation. Their paper specifically asserts "that there are no reward schemes in which information propagation and no self-cloning is a dominant strategy."
+
+Saito Consensus solves this problem, offering a routing payout to P2P nodes that encourages nodes to share transactions with their peers, yet without make self-cloning rational. The solution works because adding hops to transactions decreases the value of those transactions for producing blocks, forcing the attacker to contribute and burn more of their own money in equilibrium than the attacker can expect to earn through an expanded claim on payout in the payment lottery.
+
+A [mathematical proof](https://github.com/SaitoTech/papers/blob/e32c51db6aae071a41b7e481d0f5ba6cd75ec12d/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf) that routing work solves this problem in a three-hop routing path. To date the routing-decay and probabilistic payout solution offered by Saito Cosnensus remains the only known solution to this problem.
+
+
+### 2. Roughgarden and Shi (2020)
+
+A school of papers from Tim Roughgarden (Colombia) and Elaine Shi (Cornell) and others has emerged claiming the impossibility of building incentive compatible blockchains. Saito Consensus offers a self-evident counter-proof to these claims as an indirect mechanism that implements a welfare-optimizing social choice rule.
+
+These impossibility results assume all blockchains must be reducible to direct mechanisms in which incentive compatibility with the desired social choice rule requires only the direct revelation by users of the value of blockspace. Yet transaction fee levels are clearly affected by time-preference and opportunities for collusion with other participants. The presence of these undisclosed preferences prevent their arguments from meeting the requirements Hurwicz, Maskin and Myerson establish as necessary for proving the possibility or impossibility of incentive compatibility across blockchain mechanisms generally.
+
+A second problem with these papers is that many require block producers to "faithfully implement" protocols, which implies "faithful revelation" of all relevant private preferences. Yet block producers in these models are also explicitly forbidden from including self-generated transactions in blocks. Prohibiting this form of preference revelation leads to impossibility results as undisclosed preferences block achieving incentive compatibility under the standard assumptions of implementation theory.
+
+Saito Consensus handles both kinds of preference revelation indirectly: users reveal their willingness to collude through both the fee they choose and their transaction distribution strategies (which indicate the existence of a welfare-increasing trade between the user and at least one block producer), while producers reveal their private cost structures through their willingness to include their own fee-bearing transactions in blocks and bundle privately-distributed transactions into blocks.
+
 
 ### 1. Leonid Hurwicz (1972)
 
@@ -53,25 +73,6 @@ It is also not possible for attackers to trigger this by extending a private cha
 
 So partitioning the network is not costless in the way that Dwork, Lynch, and Stockmeyer assume it must be. In contrast to other consensus mechanisms — where attackers can "balance" competing chains without dictating peer connections and extend stealth chains at the same cost of public chains, Saito Consensus succeeds in making both types of network partitioning attacks irrational. 
 
-
-### 4. On Bitcoin and Red Balloons (2011)
-
-An influential [academic paper](https://arxiv.org/pdf/1111.2626) by Moshe Babaioff, Shahar Dobzinski, Sigal Oren and Aviv Zohar has claimed the impossibility of building distributed mechanisms which incentivize transaction propagation. Their paper specifically asserts "that there are no reward schemes in which information propagation and no self-cloning is a dominant strategy."
-
-Saito Consensus solves this problem, offering a routing payout to P2P nodes that encourages nodes to share transactions with their peers, yet without make self-cloning rational. The solution works because adding hops to transactions decreases the value of those transactions for producing blocks, forcing the attacker to contribute and burn more of their own money in equilibrium than the attacker can expect to earn through an expanded claim on payout in the payment lottery.
-
-A [mathematical proof](https://github.com/SaitoTech/papers/blob/e32c51db6aae071a41b7e481d0f5ba6cd75ec12d/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf) that routing work solves this problem in a three-hop routing path. To date the routing-decay and probabilistic payout solution offered by Saito Cosnensus remains the only known solution to this problem.
-
-
-### 5. Roughgarden and Shi (2020)
-
-A school of papers from Tim Roughgarden (Colombia) and Elaine Shi (Cornell) and others has emerged claiming the impossibility of building incentive compatible blockchains. Saito Consensus offers a self-evident counter-proof to these claims as an indirect mechanism that implements a welfare-optimizing social choice rule.
-
-These impossibility results assume all blockchains that are direct mechanisms where the only good under auction is blockspace. Their arguments collapse given the existence of private preferences which affect transactions fees in all such mechanisms which are never revealed to their models as required by implementation theory. Undisclosed preferences prevent their meeting the requirements Hurwicz, Maskin and Myerson established as necessary for proving the possibility or impossibility of incentive compatibility, rendering the impossibility claims tautological and non-binding.
-
-A second problem is the models forget that "faithful implementation" of any incentive compatible mechanism by its participants requires their "faithful revelation" of all relevant preferences. Yet block producers in these papers are explicitly forbidden from including self-generated transactions in blocks. Prohibiting this form of preference revelation not surprisingly leads to impossibility results as it is necessary in all mechanisms that achieve incentive compatibility.
-
-Saito Consensus handles both kinds of preference revelation indirectly: users reveal their willingness to collude through both the fee they choose and their transaction distribution strategies (which indicate the existence of a welfare-increasing trade between the user and at least one block producer), while producers reveal their private cost structures through their willingness to include their own fee-bearing transactions in blocks and bundle privately-distributed transactions into blocks.
 
 ### Conclusion
 
