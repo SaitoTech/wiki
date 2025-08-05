@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-07-24T06:43:54.843Z
+date: 2025-08-05T15:19:33.663Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -12,19 +12,19 @@ dateCreated: 2023-09-20T01:58:02.086Z
 
 Saito Consensus sidesteps several impossibility results that affect almost all other distributed consensus mechanisms. These allow the mechanism to achieve outcomes that are not possible with traditional approaches.
 
-Given the [technical explanations](/consensus) of routing mechanisms elsewhere on this wiki, this page focuses on explaining how Saito sidesteps the academic impossibility results which form the intellectual foundation for academic claims that eliminating majoritarian attacks and achieving general incentive compatibility are unsolvable problems.
+Given the [technical explanation](/consensus) of consensus elsewhere in this wiki, this page simply highlights how Saito avoids being trapped by the classic impossibility results in economics and computer science which form the intellectual foundation for most beliefs that these problems are not possible. It should be noted that this is not an argument that the conclusions of these papers are wrong **within the bounds of their assumptions** -- merely that their results are not binding on routing mechanisms as the assumptions of their arguments do not apply to routing mechanisms.
 
 <br>
 
 ### 1. Leonid Hurwicz (1972)
 
-Hurwicz's seminal paper *The Design of Mechanisms for Resource Allocation* revolutionized economics by pointing out that in informationally decentralized mechanisms where communication between agents is needed prior to resource allocation, only mechanisms that can induce participants to share their private preferences truthfully can be considered *incentive compatible* (robust to strategic manipulation by rational agents):
+Hurwicz's seminal paper *The Design of Mechanisms for Resource Allocation* pointed out that in informationally decentralized mechanisms where communication between agents is needed prior to resource allocation, only mechanisms that can induce participants to share their private preferences truthfully can be considered *incentive compatible* (i.e. robust to strategic manipulation by rational agents).
 
 > These results show that the difficulty is due not to our lack of inventiveness, but to a fundamental conflict among such mechanism attributes as the optimality of equilibria, incentive-compatibility of the rules, and the requirements of informa- tional decentralization. Concessions must be made in at least one of these directions.
 
-The trap Hurwicz identified exists because he understood speech itself to be costless -- and realized that if lying cannot be punished outside the mechanism then the messages circulating within the mechanism be truthful if the mechanism is to be able to calculate socially optimal outcomes.
+The trap Hurwicz identified exists because he assumed speech itself must be costless -- and realized that if lying cannot be punished outside the mechanism then the messages circulating within the mechanism must be truthful for agents to form rational strategies on the basis of rational price/expectations.
 
-This problem is solved elegantly . In the process, Saito Consensus achieves incentive compatibility by fulfilling the requirements Hurwicz establishes for incentive compatibility with through its indirect and decomposable implementation of a decentralized optimization process he termed the "Greed Process".
+This problem is solved elegantly in routing work because the transfer of proposals involves a cost which is asymmetrically higher for false speech in equilibrium. In the process, Saito Consensus achieves incentive compatibility by fulfilling the requirements Hurwicz establishes for incentive compatibility with through its indirect and decomposable implementation of a decentralized optimization process he termed the "Greed Process".
 
 
 <br>
@@ -35,9 +35,9 @@ The paper *Asynchronous Consensus and Broadcast Protocols* by Bracha and Toueg s
 
 > In an atomic step of the system, a process can try to receive a message, perform an arbitrarily long local computation, and then send a finite set of messages. The computation and the messages sent are prescribed by the protocol, that is, a function of the message received and the local state.
 
-In this model, nothing can stop malicious nodes from broadcasting messages that subvert consensus, and nothing can stop honest nodes from attempting to restore consensus. This creates tbe majoritarian vulnerability the paper arguesis impossible: whatever cohort can send the most messages wins.
+In this model, nothing can stop malicious nodes from broadcasting messages that subvert consensus, and nothing can stop honest nodes from attempting to restore consensus. This creates tbe majoritarian vulnerability the paper argues is impossible to overcome: achieving consensus is a voting problem and whatever cohort can send the most messages wins.
 
-Saito Consensus avoids this problem because the cost of proposing a message depends on its content: adversarial messages cost more to propose and refund less in equilibrium than honest messages. Over time, this shifts control of the resources needed to broadcast messages extend the chain away from attackers and towards honest nodes.
+Saito Consensus avoids this problem because the cost of proposing a message depends on its content: adversarial messages cost more to propose or refund less in equilibrium than honest messages. Over time, this shifts control of the resources needed to broadcast messages extend the chain away from attackers and towards honest nodes.
 
 <br>
 
