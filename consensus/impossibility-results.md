@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-08-06T19:48:13.953Z
+date: 2025-08-06T19:48:44.864Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -76,20 +76,7 @@ We can take a step further by conceptualizing Saito Consensus as a combinatorial
 
 Saito Consensus induces an emergens that the strategic information that users publishing of proposals necessarily involves a cost which is asymmetrically higher for false speech (state transitions which arbitrarily reduce efficiency) in equilibrium. In the process, Saito Consensus achieves incentive compatibility by fulfilling the requirements Hurwicz establishes for incentive compatibility with through its indirect and decomposable implementation of a decentralized optimization process he termed the "Greed Process".
 
-<br>
-
-### 6. Dwork, Lynch, and Stockmeyer (1988)
-
-The paper *Consensus in the Presence of Partial Synchrony* by Dwork, Lynch, and Stockmeyer (1988) examines how communication delays affect consensus protocols. One of its key insights is that consensus cannot be guaranteed when block production capacity is evenly split into two factions.
-
-This is often used to claim that consensus mechanisms cannot punish majoritarian attacks, as attackers who control 50% of network resources can always force a chain split by extending the shorter rather than longer of two competing forks.
-
-This is not possible in Saito Consensus for several reasons. The first is that splitting block production in such a way in a routing mechanisms requires controlling how every participant in the network communicates, which is not possible in informationally decentralized mechanisms and requires giving the attacker control over 100% rather than a mere 50% of network resources. And the network requires the assumption of informational decentralization.
-
-It is also not possible for attackers to trigger this by extending a private chain. To see why, remember that when attackers partition the network, they reduce the fee-throughput on their fork. The drop in fees reduces the income available to pay for hashing without reducing the difficulty of the mining puzzle. Any downward adjustment in the cost of getting paid is only possible if multiple blocks are left unsolved and their fees uncollected, imposing costs on the stealth fork.
-
-So partitioning the network is not costless in the way that Dwork, Lynch, and Stockmeyer assume it must be. In contrast to other consensus mechanisms — where attackers can "balance" competing chains without dictating peer connections and extend stealth chains at the same cost of public chains, Saito Consensus succeeds in making both types of network partitioning attacks irrational. 
-
+<br> 
 
 ### Conclusion
 
