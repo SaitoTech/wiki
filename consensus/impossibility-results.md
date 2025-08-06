@@ -2,13 +2,13 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-08-06T19:52:02.155Z
+date: 2025-08-06T19:52:12.034Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
 ---
 
-# Academic Impossibility Results
+# Classic Impossibility Results
 
 Saito Consensus sidesteps several impossibility results that affect other distributed consensus mechanisms. These allow the mechanism to achieve outcomes that are not possible with traditional approaches.
 
