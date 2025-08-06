@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-08-06T12:11:55.811Z
+date: 2025-08-06T12:20:45.448Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -33,7 +33,7 @@ A school of papers from Tim Roughgarden (Colombia) and Elaine Shi (Cornell) and 
 
 These impossibility results assume all blockchains must be reducible to direct mechanisms in which incentive compatibility with the desired social choice rule requires only the revelation by users of their private valuation for transaction inclusion. And yet blockchains are combinatorial mechanisms that distribute at least three types of utility (transaction inclusion, speed-to-inclusion and collusion goods) in exchange for a single transaction fee. The fact that users have private valuations for these additional undisclosed forms of utility is what frustrates the achievement of incentive compatibility in these models, but thus also prevents them from meeting the requirements Hurwicz, Maskin and Myerson establish for proving the possibility or impossibility of achieving incentive compatibility across blockchain mechanisms generally.
 
-A second problem with these results is that their authors require block producers to "faithfully implement" mechanisms, yet overlook that faithful implementation of any incentive compatible mechanism necessarily requires "faithful revelation" of all relevant private preferences. This pushes these papers into self-contradiction, as they also explicitly prohibit block producers from engaging in such forms of preference revelation through an additional and entirely arbitrary prohibition on their including self-generated transactions in blocks. As those familiar with Saito Consensus will know, the inclusion of such self-generated transactions is a form of preference revelation for block producers in our mechanism, and a form of competition for blockspace that forces users to pay higher fees and avoid certain bid-shading strategies. This prohibition thus forces Saito Consensus out-of-model, as meeting the criteria for achieving impossibility becomes impossible.
+A second problem with these results is that their authors require block producers to "faithfully implement" mechanisms, yet overlook that faithful implementation of any incentive compatible mechanism necessarily requires "faithful revelation" of all relevant private preferences. This pushes these papers into self-contradiction, as they also explicitly prohibit block producers from engaging in such forms of preference revelation through an additional and entirely arbitrary prohibition on their including self-generated transactions in blocks. As those familiar with Saito Consensus will know, the inclusion of such self-generated transactions is a form of preference revelation for block producers in our mechanism, and a form of competition for blockspace that forces users to act with greater strategic care: bid too lower and producers will switch from sellers to buyers because of their own time-preference! This limitation thus forces Saito Consensus out-of-model, as meeting the criteria for achieving impossibility becomes impossible.
 
 Finally, we observe that these papers do not properly identify their social choice rule. While they implicitly adopt the social choice rule of the Vickrey auction ("efficient allocation") this social choice rule cannot be used in mechanisms where the supply of the good being distributed is subject to strategic manipulation. Switching to the more appropriate model for two-sided auctions ("efficient allocation and production") forces us into requiring higher-dimensional preference revelation as multidimensional forms of utility come into play and both supply and demand-side preferences must be disclosed for any direct mechanism to implement welfare-optimal outcomes.
 
@@ -56,7 +56,7 @@ Saito Consensus avoids this problem because the cost of proposing a message depe
 
 ### 4. Roger B. Myerson and Mark A. Satterthwaite (1983)
 
-The paper *Efficient Mechanisms for Bilateral Trading* by Roger B. Myerson and Mark A. Satterthwaite prove that it is impossible to achieve incentive compatibility in any bilateral trading (direct) mechanism, with results that are extensible through the Revelation Principle to any indirect mechanism that can be reduced to a direct mechanism.
+The paper *Efficient Mechanisms for Bilateral Trading* by Roger B. Myerson and Mark A. Satterthwaite prove that it is impossible to achieve incentive compatibility in any bilateral trading (direct) mechanism, with results that are extensible through the Revelation Principle to any two-sided mechanism with multiple participants that can be reduced to a direct mechanism.
 
 Saito Consensus is an indirect mechanism that is not reducible to a direct mechanism via the Revelation Principle. This impossibility emerges because conversion would require agents to reveal their supply and demand preferences at all prices levels for an effectively infinite combination of collusion and in-network goods on an infinitely granular time preference curve.
 
