@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-08-06T12:26:50.401Z
+date: 2025-08-06T12:47:57.640Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -31,7 +31,7 @@ We have a [mathematical proof](https://github.com/SaitoTech/papers/blob/e32c51db
 
 A school of papers from Tim Roughgarden (Colombia) and Elaine Shi (Cornell) and others has emerged claiming the general impossibility of building incentive compatible blockchains. Saito Consensus offers a self-evident counter-proof to these claims as an indirect mechanism that implements a welfare-optimizing social choice rule.
 
-These impossibility results assume all blockchains must be reducible to direct mechanisms in which incentive compatibility with the desired social choice rule requires only the revelation by users of their private valuation for transaction inclusion. And yet blockchains are combinatorial mechanisms that distribute at least three types of utility (transaction inclusion, speed-to-inclusion and collusion goods) in exchange for a single transaction fee. The fact that users have private valuations for these additional undisclosed forms of utility is what frustrates the achievement of incentive compatibility in these models, but thus also prevents them from meeting the requirements Hurwicz, Maskin and Myerson establish for proving the possibility or impossibility of achieving incentive compatibility across blockchain mechanisms generally.
+These impossibility results assume all blockchains must be reducible to direct mechanisms in which incentive compatibility with the desired social choice rule requires only the revelation by users of their private valuation for transaction inclusion. And yet blockchains are combinatorial mechanisms that distribute at least three types of utility (transaction inclusion, speed-to-inclusion and collusion goods) in exchange for a single transaction fee that is non-scalar with regards to the private valuation of blockspace but scalar in combination over all three goods. The fact that users have private valuations for these additional co-minglying and undisclosed forms of utility is what frustrates the achievement of incentive compatibility in these models, but thus also prevents them from meeting the requirements Hurwicz, Maskin and Myerson establish for proving the impossibility of achieving incentive compatibility across blockchain mechanisms generally.
 
 A second problem with these results is that their authors require block producers to "faithfully implement" mechanisms, yet overlook that faithful implementation of any incentive compatible mechanism necessarily requires "faithful revelation" of all relevant private preferences. This pushes these papers into self-contradiction, as they also explicitly prohibit block producers from engaging in such forms of preference revelation through an additional and entirely arbitrary prohibition on their including self-generated transactions in blocks. As those familiar with Saito Consensus will know, the inclusion of such self-generated transactions is a form of preference revelation for block producers in our mechanism, and a form of competition for blockspace that forces users to act with greater strategic care: bid too lower and producers will switch from sellers to buyers because of their own time-preference! This limitation thus forces Saito Consensus out-of-model, as meeting the criteria for achieving impossibility becomes impossible.
 
