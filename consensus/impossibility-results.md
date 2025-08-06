@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-08-06T12:20:45.448Z
+date: 2025-08-06T12:26:50.401Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -21,7 +21,7 @@ Please see our [technical explanation](/consensus) of consensus for a descriptio
 
 An influential [academic paper](https://arxiv.org/pdf/1111.2626) by Moshe Babaioff, Shahar Dobzinski, Sigal Oren and Aviv Zohar has claimed the impossibility of building distributed mechanisms which incentivize transaction propagation. Their paper specifically asserts that "there are no reward schemes in which information propagation and no self-cloning is a dominant strategy."
 
-Saito Consensus solves this problem, offering a routing payout to P2P nodes that encourages nodes to share transactions with their peers, yet does not make self-cloning rational. The solution works because adding hops to transactions decreases the value of those transactions for producing blocks, reducing the expected income of the attacker by more than the attacker can expect to earn through the expanded claim on payout from an additional routing hop. One assumption that Saito Consensus breaks from this paper is the requirement that all nodes have an equal probability and thus cost of producing blocks.
+Saito Consensus solves this problem, offering a routing payout to P2P nodes that encourages nodes to share transactions with their peers, yet does not make self-cloning rational. The solution works because adding hops to transactions decreases the usefulness of those transactions for producing blocks, reducing the expected income of the attacker by more than the attacker can expect to earn through the expanded claim on payout from an additional routing hop. One assumption that Saito Consensus breaks from this paper is the requirement that all nodes have an equal probability and thus cost of producing blocks.
 
 We have a [mathematical proof](https://github.com/SaitoTech/papers/blob/e32c51db6aae071a41b7e481d0f5ba6cd75ec12d/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf) that routing work solves this problem in a three-hop routing path. To our knowledge the routing-decay and probabilistic payout solution offered by Saito Cosnensus remains the only known solution to this problem.
 
