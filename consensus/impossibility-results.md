@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-08-07T07:56:34.940Z
+date: 2025-08-07T07:58:09.273Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
