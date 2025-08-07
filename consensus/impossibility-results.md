@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-08-07T07:58:09.273Z
+date: 2025-08-07T08:00:45.484Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -50,9 +50,9 @@ The paper *Asynchronous Consensus and Broadcast Protocols* by Bracha and Toueg s
 
 > In an atomic step of the system, a process can try to receive a message, perform an arbitrarily long local computation, and then send a finite set of messages. The computation and the messages sent are prescribed by the protocol, that is, a function of the message received and the local state.
 
-In this model, nothing can stop malicious nodes from broadcasting messages that subvert consensus, and nothing can stop honest nodes from attempting to restore consensus. This creates the majoritarian vulnerability the paper argues is impossible to overcome: achieving consensus is a voting problem and whatever cohort can send the most messages wins.
+In Saito Consensus the cost of proposing a block depends on the contents of its transaction set. Consensus makes it faster and less expensive to propose blocks that contain more welfare efficient set of transactions.
 
-In Saito Consensus the cost of proposing a block depends on the contents of its transaction set. Producers may be including and burning their own money at a loss depending on the strategy chosen. As a consequence, some messages cost more to propose in equilibrium than others. It is no longer possible to assume that messages which reduce the overall efficiency of fee-throughput are symmetrically costly to those which do not.
+As a consequence, different state transitions cost different amounts to propose. It is no longer possible to assume that messages which reduce the overall efficiency of fee-throughput are symmetrically costly to those which are not.
 
 <br>
 
