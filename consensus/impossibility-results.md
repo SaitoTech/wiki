@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-08-07T08:02:47.382Z
+date: 2025-08-07T15:42:58.190Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -50,9 +50,9 @@ The paper *Asynchronous Consensus and Broadcast Protocols* by Bracha and Toueg s
 
 > In an atomic step of the system, a process can try to receive a message, perform an arbitrarily long local computation, and then send a finite set of messages. The computation and the messages sent are prescribed by the protocol, that is, a function of the message received and the local state.
 
-In Saito Consensus the cost of proposing a block depends on the contents of its transaction set. Consensus makes it faster and less expensive to propose blocks that contain more welfare efficient set of transactions.
+In Saito Consensus the cost of proposing a block depends on the contents of its transaction set. The refund available for proposal also depends on the contents of the transaction set. And these two variables move in ways that make it faster and less expensive to propose blocks that contain more welfare efficient set of transactions.
 
-As a consequence, different state transitions cost different amounts to propose. It is no longer possible to assume that messages which reduce the overall efficiency of fee-throughput are symmetrically costly to those which are not.
+As a consequence, biasing block production towards economic efficiency forces all attacks which orphan or exclude competitive work to shift the network into a lower state of a form of efficiency measurable within the network. With this adjustment used as an input to regulate (reduce) payouts, it is no longer true that messages which reduce the overall efficiency of fee-throughput are symmetrically costly to those which are not.
 
 <br>
 
@@ -62,7 +62,7 @@ The paper *Efficient Mechanisms for Bilateral Trading* by Roger B. Myerson and M
 
 Saito Consensus is an indirect mechanism that is not reducible to a direct mechanism via the Revelation Principle. This impossibility emerges because conversion would require agents to reveal their supply and demand preferences at all prices levels for an effectively infinite combination of collusion and in-network goods and on an infinitely granular time preference curve.
 
-The informational problem that makes conversion impossible is not just the extreme multi-dimensionality of utility available for trade in the mechanism. It also emerges from the fact that individual preference curves end up being jagged and discontinuous because of the potential for participants to shift temporarily at arbitrary points between being producers and consumers of different goods, creating jagged spikes that cannot be assumed not to exist if agents have not fully revealed their preference. The fact that the "hinge" good that permits granular trade-offs to be made efficiently is infinitely granular (time preference) then blocks generalizing assumptions that could otherwise assist in compressing the preference space.
+The informational problem that makes conversion impossible is not just the extreme multi-dimensionality of utility available for trade in the mechanism. It also emerges from the way the individual preference curves end up jagged and discontinuous because of the potential for participants to shift temporarily at arbitrary points between being producers and consumers of different combinations of goods, creating jagged spikes that cannot be assumed not to exist if agents have not fully revealed their preference. The fact that the "hinge" good that permits granular trade-offs to be made efficiently is infinitely granular (time preference) then blocks generalizing assumptions that could otherwise assist in compressing the preference space.
 
 
 ### 5. Leonid Hurwicz (1972)
