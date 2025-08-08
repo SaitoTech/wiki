@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-08-08T04:01:39.192Z
+date: 2025-08-08T04:02:34.127Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -41,7 +41,7 @@ A second problem with this approach occurs when models based on this approach re
 
 Finally, we observe that many papers skip properly identifying their social choice rule. While they implicitly adopt the rule of the Vickrey auction ("efficient allocation") this rule cannot be used in mechanisms where the supply of the good being distributed is subject to strategic manipulation, as this introduces problems with interdependent valuations that thwart the theoretical possibility of incentive compatibility.
 
-Switching to the more appropriate model for two-sided auctions ("efficient allocation and production") forces us into requiring higher-dimensional preference revelation as multidimensional forms of utility come into play and both supply and demand-side preferences must be disclosed for any direct mechanism to implement welfare-optimal outcomes.
+Switching to the more appropriate rule for two-sided auctions ("efficient allocation and production") forces us into requiring higher-dimensional preference revelation as both supply and demand-side preferences must be disclosed for any direct mechanism to implement welfare-optimal outcomes.
 
 Saito Consensus handles both forms of preference revelation indirectly: users reveal their bundled preference for three forms of utility through both the fee they choose and their transaction broadcast strategies (which indicate the existence of a welfare-increasing cooperative trade between the user and at least one block producer). Producers reveal their private cost structures through their willingness to include their own fee-bearing transactions in blocks, effectively redirecting surplus profits from the sale of collusion goods into a subsidy for either the welfare-improving forms of speed or collusion utility more highly valued by counterparties in the mechanism.
 
