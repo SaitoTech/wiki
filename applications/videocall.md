@@ -2,7 +2,7 @@
 title: Video Call
 description: 
 published: true
-date: 2025-07-29T21:44:21.894Z
+date: 2025-08-08T02:46:31.279Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-27T03:22:36.662Z
@@ -23,7 +23,7 @@ Just create the call and share the link with a friend and enjoy the fully featur
   
 <img src="/saito-talk.jpg" style="maxwidth: 600px;">
 
-All audio and video calls also come with dedicated chat channels, and support standard features like sharing presentations. You can also [swarmcast](/tech/applications/swarmcast) your video calls to turn private calls into realtime public broadcasts.
+All audio and video calls also come with dedicated chat channels, and support standard features like sharing presentations. You can also [Swarmcast](/applications/swarmcast) your video calls to turn private calls into realtime public broadcasts.
 
 Video Call can be accessed directly via the above link or through the slide-in menu that is visible in [Red Square](https://saito.io/redsquare/) and other applications.
 
