@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-07-30T09:12:24.398Z
+date: 2025-08-08T22:28:39.205Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -266,16 +266,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
        <div class="app_title">RedSquare</div>
      </div>
   </a>
-  
-  
-  <a href="/applications/redsquare">
-    <div class="app_box">
-       <div class="app_img">
-         <img src="/rs-food-pic-sq.png" />
-       </div>
-       <div class="app_title">RedSquare</div>
-     </div>
-  </a>
+ 
   
   <a href="/applications/registry">
     <div class="app_box">
