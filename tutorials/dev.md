@@ -2,7 +2,7 @@
 title: Dev Tutorials
 description: 
 published: true
-date: 2025-05-20T05:36:16.701Z
+date: 2025-08-12T02:33:05.080Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-20T04:25:44.616Z
@@ -12,7 +12,7 @@ dateCreated: 2025-05-20T04:25:44.616Z
 
 These tutorials are written as step-by-step guides for developers who want to get started building real peer-to-peer applications. The first tutorial builds an extremely simple app. The remainder cover specific topics – you can look for one that tackles a problem similar to one you want to solve and use it as a starting point.
 
-Remember that the list of [Saito modules](https://github.com/saitotech/saito/tree/master/mods) are also quasi-tutorials. If you know an application that provides a feature you want to implement, you can usually learn how to do it from checking that application's source code.
+Remember that the list of [Saito modules](https://github.com/saitotech/saito/tree/master/node/mods) are also quasi-tutorials. If you know an application that provides a feature you want to implement, you can usually learn how to do it from checking that application's source code.
 
 | Tutorial    | Title | Description |
 |:----------- |:----- |:----------- |
