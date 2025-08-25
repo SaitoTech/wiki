@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2025-05-22T05:43:12.653Z
+date: 2025-08-25T07:20:57.967Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -14,7 +14,7 @@ This page assumes you want to run the NodeJS Saito client (best for app hosting 
 
 ### Installation Requirements:
 
-- Machine with at least 2GB RAM.
+- Machine with at least 4GB RAM.
 - Build tools: git, g++, make, python, tsc
 - Stack: node.js (v.16+), npm (v6+)
 - TypeScript
