@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-08-26T04:07:20.357Z
+date: 2025-08-26T04:24:44.325Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -29,15 +29,15 @@ We have a [mathematical proof](https://github.com/SaitoTech/papers/blob/e32c51db
 
 ### 2. Roughgarden and Shi (2020)
 
-A number of papers from Tim Roughgarden (Colombia) and Elaine Shi (Cornell) claim the general impossibility of building incentive compatible blockchains. The original paper from Shi is correct in the sense that it limits its conclusions to direct mechanisms in which the transaction fee pays for only a single (non-combinatorial) form of value, although it remains questionable how valid this assumption is as a model of blockchain given that fees in blockchains are non-scalar payments for a bundle of utility (blockspace, security, off-chain collusion goods) whose total amount of each depends on the strategic behavior of other participants.
+A number of papers from Tim Roughgarden (Colombia) and Elaine Shi (Cornell) claim the general impossibility of building incentive compatible blockchains. The original paper from Shi is less problematic because it limits its conclusions to direct mechanisms in which the transaction fee pays for only a single (non-combinatorial) form of value, invalidating it as a model for blockchains given that fees in such mechanisms are non-scalar payments intended to induce provision of a combinatorial bundle of utility (blockspace, security, off-chain collusion goods).
 
-Subsequent papers expanded the scope of analysis to mechanisms in which collusion was possible and the transaction fee could suddenly be manipulated to purchase multiple forms of value, such as through private sale. It is these secondary claims that are challenged by Saito Consensus, as an indirect combinatorial auction that implements a welfare-optimizing social choice rule.
+Subsequent papers dropped the requirement for "single-paramater" fee and expanded the scope of analysis to mechanisms in which multiple forms of utility existed. It is these secondary claims that are explicitly invalidated by Saito Consensus.
 
-The underlying assumption in these papers that Saito skirts is the idea that blockchains without the single-parameter limitation (one fee paying for one good) must be reducible to direct mechanisms in which incentive compatibility requires users to reveal their private valuation for transaction inclusion explicitly and in isolation. This is not the case in Saito Consensus as the bid encodes valuations for three types of utility: transaction inclusion, speed-to-inclusion and collusion goods.
+The reason Saito avoids the problems identified in these papers is that it is not reducible to a direct mechanism in which incentive compatibility requires users to reveal their private valuation for blockspace explicitly and in isolation. In Saito Consensus -- as in other blockchains -- the bid expresses a joint valuation across three types of utility: the valuation of transaction inclusion, its speed-of-confirmation, and any utility available to the user through collusion with block producers.
 
-The fact that users have private valuations for co-mingled forms of utility is technically why the Roughgarden and Shi papers find incentive compatibility impossible to achieve in theory. Under implementation theory, non-scalar pvaluations cannot be informationally reduced to a single-dimensional bid, breaking the requirements of monotonocity needed to achieve incentive compatibility. Incentive compatibility becomes impossible due to underlying mathematical indeterminancy.
+The fact that users have private valuations for at least three co-mingled forms of utility is why the Roughgarden and Shi papers find incentive compatibility impossible to achieve in theory. What they fail to see is that -- mathematically -- the existence of non-scalar valuations that cannot be informationally reduced to single-dimensional monotonic bids makes their models inconsistent with the requirements of implementation theory. Their results therefore do not hold; they arise from applying single-parameter conditions outside their domain of validity.
 
-Saito Consensus eliminates this problem by shifting to a indirect combinatorial auction in which the non-scalar bid *combines* with broadcast strategy to encode user preferences over outcomes obliquely through action-in-mechanism.
+Saito Consensus eliminates this problem by shifting to a indirect combinatorial auction in which the non-scalar bid *combines* with broadcast strategy to encode user preferences over multidimensional outcomes obliquely through action-in-mechanism.
 
 A second problem with this school of papers exists because they require block producers to "faithfully implement" incentive compatible mechanisms while overlooking that faithful implementation of any incentive compatible mechanism necessarily requires "faithful revelation" of all relevant private preferences by all relevant actors. This oversight pushes these papers into internal-contradiction, as they explicitly prohibit block producers from revealing preferences through the strategy in which it occurs in Saito Consensus (the inclusion of self-generated transactions in blocks).
 
