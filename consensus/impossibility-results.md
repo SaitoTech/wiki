@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-08-26T07:58:02.921Z
+date: 2025-08-26T08:00:05.179Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -31,9 +31,9 @@ We have a [mathematical proof](https://github.com/SaitoTech/papers/blob/e32c51db
 
 A number of papers from Tim Roughgarden (Colombia) and Elaine Shi (Cornell) claim the general impossibility of building incentive compatible blockchains. The very first paper from Shi is technically corrct as it limits its analysis to direct mechanisms in which the transaction fee pays for only a single (non-combinatorial) form of value. This same focus invalidates it as a model for blockchains where fees express a joint valuation over a combinatorial bundle of utility (on-chain blockspace and security, speed-of-confirmation, off-chain collusion goods).
 
-Subsequent papers dropped the requirement for "single-paramater" fee and expanded the scope of analysis to mechanisms in which multiple forms of utility existed. It is these secondary claims that are explicitly invalidated by Saito Consensus.
+In subsequent papers both authors dropped the requirement for "single-paramater" fees and expanded their scope of analysis to mechanisms with multiple forms of utility. It is these secondary claims that are explicitly invalidated by Saito Consensus, whose structure also points to fundamental theoretical problems with these papers.
 
-The reason Saito avoids the problems identified in these papers is that it is not reducible to a direct mechanism in which incentive compatibility requires users to reveal their private valuation for blockspace explicitly and in isolation. In Saito Consensus -- as in other blockchains -- the bid expresses a joint valuation across three types of utility: the valuation of transaction inclusion, its speed-of-confirmation, and any utility available to the user through collusion with block producers.
+Specifically, Saito Consensus shows it is possible to design consensus mechanisms that are are not reducible to direct mechanisms in which incentive compatibility requires users to reveal their private valuation for only a single form of utility: blockspace. In routing work mechanisms, the fee continues to provide a joint valuation across three types of utility: the valuation of transaction inclusion, its speed-of-confirmation, and any utility available to the user through collusion with block producers.
 
 The fact that users have private valuations for at least three co-mingled forms of utility is why the Roughgarden and Shi papers find incentive compatibility impossible to achieve in theory. What they fail to see is that -- mathematically -- the existence of non-scalar valuations that cannot be informationally reduced to single-dimensional monotonic bids makes their models inconsistent with the requirements of implementation theory. Their results therefore do not hold; they arise from applying single-parameter conditions outside their domain of validity.
 
