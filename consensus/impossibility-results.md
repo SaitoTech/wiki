@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-08-26T04:31:08.497Z
+date: 2025-08-26T07:58:02.921Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -29,7 +29,7 @@ We have a [mathematical proof](https://github.com/SaitoTech/papers/blob/e32c51db
 
 ### 2. Roughgarden and Shi (2020)
 
-A number of papers from Tim Roughgarden (Colombia) and Elaine Shi (Cornell) claim the general impossibility of building incentive compatible blockchains. The original paper from Shi is less problematic because it limits its conclusions to direct mechanisms in which the transaction fee pays for only a single (non-combinatorial) form of value, invalidating it as a model for blockchains given that fees in such mechanisms are non-scalar payments intended to induce provision of a combinatorial bundle of utility (blockspace, security, off-chain collusion goods).
+A number of papers from Tim Roughgarden (Colombia) and Elaine Shi (Cornell) claim the general impossibility of building incentive compatible blockchains. The very first paper from Shi is technically corrct as it limits its analysis to direct mechanisms in which the transaction fee pays for only a single (non-combinatorial) form of value. This same focus invalidates it as a model for blockchains where fees express a joint valuation over a combinatorial bundle of utility (on-chain blockspace and security, speed-of-confirmation, off-chain collusion goods).
 
 Subsequent papers dropped the requirement for "single-paramater" fee and expanded the scope of analysis to mechanisms in which multiple forms of utility existed. It is these secondary claims that are explicitly invalidated by Saito Consensus.
 
