@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-08-26T04:24:44.325Z
+date: 2025-08-26T04:31:08.497Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -79,12 +79,9 @@ Hurwicz's seminal paper *The Design of Mechanisms for Resource Allocation* point
 
 > These results show that the difficulty is due not to our lack of inventiveness, but to a fundamental conflict among such mechanism attributes as the optimality of equilibria, incentive-compatibility of the rules, and the requirements of informa- tional decentralization. Concessions must be made in at least one of these directions.
 
-In Saito Consensus, the "pre-exchange messaging step" that is needed for agents to form price expectations is mediated through the blockchain itself and can only be manipulated through the sending of fee-bearing messages. This act of publishing price-affecting signals is free for genuine consumers of those forms of utility, but -- due to the way consensus works -- expensive for those who have non-genuine purchase intent. We see that "false speech"  (spending your own money to manipulate price signals or supply) is more costly than speech which pushes the network towards an efficient price level where overall demand and supply is set only by genuine demand/supply preferences from other agents.
+In Saito Consensus, the "pre-exchange messaging step" that is needed for agents to form price expectations and thus strategies is mediated through the blockchain itself and can only be manipulated through the sending of fee-bearing messages. And the cost that the publisher of this message must pay increases if it pushes the network into a less efficient equilibrium.
 
-We can take a step further by conceptualizing Saito Consensus as a combinatorial auction for three goods (blockspace, time-to-settlement, ande collusion goods). As above, the mechanism can be seen to pull the price of the first two goods into equilibrium. The price of the third class of goods is then pulled into alignment through the mechanism because the mechanism itself forces it into an inverse relationship with the other two goods. Even those the mechanism cannot  a separate process known abstractly as Hurwicz' Greed Process, in which welfare-improving proposals (for collusion goods) 
-
-
-Saito Consensus induces an emergens that the strategic information that users publishing of proposals necessarily involves a cost which is asymmetrically higher for false speech (state transitions which arbitrarily reduce efficiency) in equilibrium. In the process, Saito Consensus achieves incentive compatibility by fulfilling the requirements Hurwicz establishes for incentive compatibility with through its indirect and decomposable implementation of a decentralized optimization process he termed the "Greed Process".
+The cost of speech now depends on the content of the message. An asymmetrically higher cost is charged for false speech (state transitions which push us away from welfare-optimal outcomes), undermining the impossibility of implementing those equilibria in informationally decentralized conditions. Saito Consensus achieves incentive compatibility by fulfilling the requirements Hurwicz establishes through the indirect and decomposable optimization process he referred to generally as the "Greed Process".
 
 <br> 
 
