@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-08-09T21:33:02.810Z
+date: 2025-08-26T04:07:20.357Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -29,15 +29,19 @@ We have a [mathematical proof](https://github.com/SaitoTech/papers/blob/e32c51db
 
 ### 2. Roughgarden and Shi (2020)
 
-A number of papers from Tim Roughgarden (Colombia) and Elaine Shi (Cornell) has emerged claiming the general impossibility of building incentive compatible blockchains. The original paper from Shi is correct in the sense that it limits its conclusions to direct mechanisms in which the transaction fee pays for only a single (non-combinatorial) form of value.
+A number of papers from Tim Roughgarden (Colombia) and Elaine Shi (Cornell) claim the general impossibility of building incentive compatible blockchains. The original paper from Shi is correct in the sense that it limits its conclusions to direct mechanisms in which the transaction fee pays for only a single (non-combinatorial) form of value, although it remains questionable how valid this assumption is as a model of blockchain given that fees in blockchains are non-scalar payments for a bundle of utility (blockspace, security, off-chain collusion goods) whose total amount of each depends on the strategic behavior of other participants.
 
 Subsequent papers expanded the scope of analysis to mechanisms in which collusion was possible and the transaction fee could suddenly be manipulated to purchase multiple forms of value, such as through private sale. It is these secondary claims that are challenged by Saito Consensus, as an indirect combinatorial auction that implements a welfare-optimizing social choice rule.
 
-The underlying assumption that Saito skirts is the idea that blockchains without the single-parameter limitation (one fee paying for one good) must be reducible to direct mechanisms in which incentive compatibility requires users to reveal their private valuation for transaction inclusion. This is not the case in Saito Consensus as the bid encodes valuations for at least three types of utility: transaction inclusion, speed-to-inclusion and collusion goods.
+The underlying assumption in these papers that Saito skirts is the idea that blockchains without the single-parameter limitation (one fee paying for one good) must be reducible to direct mechanisms in which incentive compatibility requires users to reveal their private valuation for transaction inclusion explicitly and in isolation. This is not the case in Saito Consensus as the bid encodes valuations for three types of utility: transaction inclusion, speed-to-inclusion and collusion goods.
 
-The fact that users have private valuations for co-mingled forms of utility is technically why these later papers find incentive compatibility impossible to achieve, as non-scalar private valuations cannot be informationally revealed as a single-dimensional monotonic bid. The shift to a indirect combinatorial auction in which this non-scalar bid *combines* with broadcast strategy to encode multiple preferences obliquely is the reason Saito Consensus avoids these problems.
+The fact that users have private valuations for co-mingled forms of utility is technically why the Roughgarden and Shi papers find incentive compatibility impossible to achieve in theory. Under implementation theory, non-scalar pvaluations cannot be informationally reduced to a single-dimensional bid, breaking the requirements of monotonocity needed to achieve incentive compatibility. Incentive compatibility becomes impossible due to underlying mathematical indeterminancy.
 
-A second problem with this approach occurs when models based on this approach require block producers to "faithfully implement" incentive compatible mechanisms in order to study the incentives facing users, yet overlook that faithful implementation of any incentive compatible mechanism necessarily requires "faithful revelation" of all relevant private preferences. This tension pushes these models into internal-contradiction, as they explicitly prohibit block producers from engaging in the forms of preference revelation used by producers in Saito Consensus. Incentive compatibility requires users to face competition for blockspace from producers: bid too low and producers will switch from being sellers to buyers of blockspace because of their desire to purchase faster transaction inclusion!
+Saito Consensus eliminates this problem by shifting to a indirect combinatorial auction in which the non-scalar bid *combines* with broadcast strategy to encode user preferences over outcomes obliquely through action-in-mechanism.
+
+A second problem with this school of papers exists because they require block producers to "faithfully implement" incentive compatible mechanisms while overlooking that faithful implementation of any incentive compatible mechanism necessarily requires "faithful revelation" of all relevant private preferences by all relevant actors. This oversight pushes these papers into internal-contradiction, as they explicitly prohibit block producers from revealing preferences through the strategy in which it occurs in Saito Consensus (the inclusion of self-generated transactions in blocks).
+
+This oversight pushes the solution out-of-model and invites failures. Incentive compatibility requires users to face competition for blockspace from producers: bid too low and producers will switch from being sellers to buyers of blockspace because of their desire to purchase faster transaction inclusion! And this is only possible in a combinatorial auction, since producers must be bidding for a form of utility that is different from the one they are selling when they produce a block.
 
 Finally, we observe that many papers skip properly identifying their social choice rule. While they implicitly adopt the rule of the Vickrey auction ("efficient allocation") this rule cannot be used in mechanisms where the supply of the good being distributed is subject to strategic manipulation, as this introduces problems with interdependent valuations that thwart the theoretical possibility of incentive compatibility.
 
