@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-08-27T05:26:49.243Z
+date: 2025-08-27T05:28:41.264Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -66,7 +66,7 @@ The paper *Efficient Mechanisms for Bilateral Trading* by Roger B. Myerson and M
 
 Saito Consensus is an indirect mechanism that is not reducible to a direct mechanism via the Revelation Principle. This impossibility emerges because conversion would require agents to reveal their supply and demand preferences at all prices levels for an effectively infinite combination of collusion and in-network goods and on an infinitely granular time preference curve.
 
-The informational problem that makes conversion impossible is not just the extreme multi-dimensionality of utility available for trade in the mechanism. It also emerges from the way the individual preference curves end up jagged and discontinuous because of the potential for participants to shift temporarily at arbitrary points between being producers and consumers of different combinations of goods, creating jagged spikes that cannot be assumed not to exist if agents have not fully revealed their preference. The fact that the "hinge" good that permits granular trade-offs to be made efficiently is infinitely granular (time preference) then blocks generalizing assumptions that could otherwise assist in compressing the preference space.
+The informational problem that makes conversion impossible is not just the extreme multi-dimensionality of the preferences which must be revealed to the mechanism. It also emerges from the way the individual preference curves end up jagged and discontinuous because of the potential for participants to shift temporarily at arbitrary points between being producers and consumers of different combinations of goods, creating jagged spikes that cannot be assumed not to exist if agents have not fully revealed their preference. The fact that the "hinge" good that permits the trade-offs to be made efficiently is infinitely granular (time preference) then blocks generalizing assumptions that could otherwise assist in compressing the preference space into a finite representation.
 
 
 ### 5. Leonid Hurwicz (1972)
