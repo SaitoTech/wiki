@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-08-27T05:28:41.264Z
+date: 2025-08-27T05:49:26.773Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -10,9 +10,9 @@ dateCreated: 2023-09-20T01:58:02.086Z
 
 # Impossibility Results
 
-Saito Consensus sidesteps several impossibility results that affect other consensus mechanisms. These allow the mechanism to achieve outcomes that are not possible with traditional approaches.
+Saito Consensus sidesteps several impossibility results that affect other consensus mechanisms and are often treated as defining general limitation on all distributed consensus mechanisms.
 
-Please see our [technical explanation](/consensus) of consensus for a description of the mechanism itself. This page highlights how Saito avoids being bound by the classic impossibility results from economics and computer science which limit most other designs. It should be noted that this is not an argument that these papers are wrong **within the bounds of their assumptions** -- merely that these assumptions are not binding on routing mechanisms as routing mechanisms ellude their limitations or avoid the informational problems which throw the models into internal contradiction and thus impossibility.
+Given that our [technical explanation](/consensus) of consensus outlines the mechanism itself, this page highlights how Saito avoids being bound by the following classic impossibility results from economics and computer science. It should be noted that this is not an argument that these papers are wrong **within the bounds of their assumptions** -- merely that routing mechanisms avoid the informational problems which create the underlying conditions for impossibility.
 
 
 <br>
