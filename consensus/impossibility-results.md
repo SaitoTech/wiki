@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-08-27T05:14:45.930Z
+date: 2025-08-27T05:22:21.622Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -37,13 +37,13 @@ Specifically, Saito Consensus shows the existence of consensus mechanisms that a
 
 A second more fundamental problem is the assumption of these models that block producers can "faithfully implement" incentive compatible mechanisms without also revealing their own relevant preferences to the mechanism. This is inconsistent with the requirements of implementation theory since "faithful implementation" requires "truthful preference revelation" in any incentive compatible mechanism. This oversight pushes these papers into internal-contradiction, as they explicitly prohibit block producers from revealing preferences through the strategy in which it occurs in Saito Consensus (the inclusion of self-generated transactions in blocks).
 
-This oversight pushes the solution out-of-model and invites failures. Incentive compatibility requires users to face competition for blockspace from producers: bid too low and producers will switch from being sellers to buyers of blockspace because of their desire to purchase faster transaction inclusion! And this is only possible in a combinatorial auction, since producers must be bidding for a form of utility that is different from the one they are selling when they produce a block.
+This oversight pushes the solution out-of-model. In Saito Consensus users are motivated to bid honestly by competition from producers: bid too low and producers will switch from being sellers to buyers of blockspace because of their desire to purchase faster transaction inclusion! This solution is only possible in a combinatorial auction -- another reason for the observed failure of single-parameter models -- as producers must be bidding for a form of utility that is different from the one they are selling when they produce a block.
 
-Finally, we observe that many papers skip properly identifying their social choice rule. While they implicitly adopt the rule of the Vickrey auction ("efficient allocation") this rule cannot be used in mechanisms where the supply of the good being distributed is subject to strategic manipulation, as this introduces problems with interdependent valuations that thwart the theoretical possibility of incentive compatibility.
+On a closing note, we observe that most papers in this area fail to properly identify their social choice rule. While they implicitly adopt the rule of the Vickrey auction ("efficient allocation") this rule cannot be implemented in any mechanisms where the supply of the good being distributed is subject to strategic manipulation, as this introduces problems with "interdependent valuations" that block incentive compatibility with that specific social choice rule.
 
-Switching to the more appropriate rule for two-sided auctions ("efficient allocation and production") forces us into requiring higher-dimensional preference revelation as both supply and demand-side preferences must be disclosed for any direct mechanism to implement welfare-optimal outcomes.
+Switching to the appropriate social choice rule for two-sided auctions ("efficient allocation and production") with variable supply of utility forces us into requiring higher-dimensional preference revelation as both supply and demand-side preferences must be disclosed for any direct mechanism to implement welfare-optimal outcomes. We are once again reminded that the form of preference revelation forbidden from block producers in these models is required to achieve incentive compatibility.
 
-Saito Consensus handles both forms of preference revelation indirectly: users reveal their bundled preference for three forms of utility through both the fee they choose and their transaction broadcast strategies (which indicate the existence of a welfare-increasing cooperative trade between the user and at least one block producer). Producers reveal their private cost structures through their willingness to include their own fee-bearing transactions in blocks, effectively redirecting surplus profits from the sale of collusion goods into a subsidy for either the welfare-improving forms of speed or collusion utility more highly valued by counterparties in the mechanism.
+We observe that Saito Consensus handles both forms of preference revelation indirectly: users reveal their preferences through both the fee they choose and their transaction broadcast strategies (private strategies indicate the existence of a welfare-increasing trade between the user and at least one block producer). Producers reveal their own preferences through their willingness to include their own fee-bearing transactions in blocks, effectively redirecting surplus profits from the sale of collusion goods into a subsidy for welfare-improving forms of speed valued more highly by other agents in the mechanism in equilibrium.
 
 
 <br>
