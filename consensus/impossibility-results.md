@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-08-27T05:22:21.622Z
+date: 2025-08-27T05:26:49.243Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -54,9 +54,9 @@ The paper *Asynchronous Consensus and Broadcast Protocols* by Bracha and Toueg s
 
 > In an atomic step of the system, a process can try to receive a message, perform an arbitrarily long local computation, and then send a finite set of messages. The computation and the messages sent are prescribed by the protocol, that is, a function of the message received and the local state.
 
-In Saito Consensus the cost of proposing a block depends on the contents of its transaction set. The refund available for proposal also depends on the contents of the transaction set. And these two variables move in ways that make it faster and less expensive to propose blocks that contain more welfare efficient set of transactions.
+In Saito Consensus the cost of proposing a block varies for different node in the network. And the probabiliy of winning the payment available to routing nodes also varies for block producers based on the efficiency with which they have sourced the transactions included in the block. These two costs do not move in unison for all nodes in the network, and making it faster and less expensive for nodes to propose blocks that contain more welfare efficient set of transactions.
 
-As a consequence, biasing block production towards economic efficiency forces all attacks which orphan or exclude competitive work to shift the network into a lower state of a form of efficiency measurable within the network. With this adjustment used as an input to regulate (reduce) payouts, it is no longer true that messages which reduce the overall efficiency of fee-throughput are symmetrically costly to those which are not.
+It stops being that messages which reduce the overall efficiency of fee-throughput are symmetrically costly to those which do not.
 
 <br>
 
