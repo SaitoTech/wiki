@@ -2,7 +2,7 @@
 title: Saito Wallet
 description: Information about holding native Saito
 published: true
-date: 2025-05-20T11:06:14.112Z
+date: 2025-09-07T00:58:29.851Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-29T00:06:48.906Z
@@ -20,7 +20,7 @@ dateCreated: 2024-02-29T00:06:48.906Z
 
 The first time you run a [Saito Application](https://wiki.saito.io/applications) in your browser, a Saito wallet will be created inside your browser which can be accessed by clicking on the hamburger menu in the top-right corner. From here you can see your Saito balance and network address.
 
-This wallet used repeatedly until your browser cache is purged or deleted. To avoid loss of funds, users who hold non-trivial balances should **backup** their wallet. This involves extracting your private information from the browser as a file you can use to restore it in the future.
+This wallet and its addresses are used repeatedly until your browser cache is purged or deleted. To avoid loss of funds, users who hold non-trivial balances should **backup** their wallet. This involves extracting your private information from the browser as a file you can use to restore it in the future.
 
 <div style="text-align: center;margin-top:1rem">
 <img src="/wallet-backup-p1.png" alt="Image 1" style="width:80%;">
@@ -42,13 +42,14 @@ The easiest way to backup your wallet is simply to copy the private-key somewher
 
 ## <div id="native"> How to make a Cold Wallet?</div>
 
-One of the first differences users notice when using Saito for the first time is the lack of certain security rituals: creating a wallet and password, storing the seed phrase, and inputting credentials for signatures are not mandatory. Sometimes this can seem odd:
+One difference users notice when using Saito for the first time is the lack of certain security rituals: creating a wallet and password, storing the seed phrase, and inputting credentials for signatures are not mandatory. Sometimes this can seem odd:
 
 > *I seem to automatically enter my Saito Wallet by clicking on https://saito.io/redsquare.  Is that correct?  Because I don't have to enter any password to access my wallet, it seems very insecure.  Any thoughts about this?*
 
-Providing total control to users is an intentional design decision -- many PKI applications require the ability for the wallet to quickly sign and send data to peers. If users are required to input extra credentials for every digital signature, the usability of these applications would degrade significantly. For this reason, we recommend those unfamiliar with Saito or unsure of the security of the applications they are installing not to keep large amounts of SAITO in a hot wallet. Cold wallets may be created as follows:
+Providing total control to users is an intentional design decision -- many PKI applications require the ability for the wallet to quickly sign and send data to peers. If users are required to input extra credentials for every digital signature, the usability of these applications would degrade significantly. 
+For this reason, we recommend those unfamiliar with Saito or unsure of the security of the applications they are installing not to keep large amounts of SAITO in a hot wallet. Cold wallets may be created as follows:
 
-Using a browser (easiest):
+A simple and easy cold wallet:
 
 <ol>
   <li>Create a Saito Wallet and backup its private and public key.</li>
