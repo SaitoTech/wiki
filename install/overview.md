@@ -2,7 +2,7 @@
 title: Install
 description: Installation directory for various Saito clients
 published: true
-date: 2025-05-19T16:13:38.909Z
+date: 2025-09-09T13:44:42.366Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T02:40:42.538Z
@@ -23,7 +23,7 @@ The 'official' Saito-Lite client is written in NodeJS and designed to run web3 a
 
 - [Github Repository](https://github.com/saitotech/saito/tree/master/node)
 
-- [Installation instructions](./install/javascript)
+- [Installation instructions](./javascript)
 
 
 ## Saito-Core
@@ -32,7 +32,7 @@ Embedded within the Saito application above is a special core of Rust-software w
 
 - [Github Repository](https://github.com/saitotech/saito/tree/master/rust/saito-core)
 
-- [Installation instructions](./install/saito-core)
+- [Installation instructions](./saito-core)
 
 
 ## Saito-Rust
@@ -41,7 +41,7 @@ This distribution contains a pure Rust implementation of Saito Consensus in the 
 
 - [Github Repository](https://github.com/saitotech/saito/tree/master/rust/saito-rust)
 
-- [Installation instructions](./install/saito-rust)
+- [Installation instructions](./saito-rust)
 
 
 
@@ -51,7 +51,7 @@ The software in the Saito-Core repository is made available to the NodeJS javasc
 
 - [Github Repository](https://github.com/saitotech/saito/tree/master/rust/saito-wasm)
 
-- [Installation instructions](./install/saito-wasm)
+- [Installation instructions](./saito-wasm)
 
 
 
