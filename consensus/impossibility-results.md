@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-09-11T04:26:28.238Z
+date: 2025-09-11T04:47:14.601Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -28,11 +28,11 @@ We have a [mathematical proof](https://github.com/SaitoTech/papers/blob/e32c51db
 
 ### 2. Roughgarden and Shi (2020)
 
-A number of papers from Tim Roughgarden (Colombia) and Elaine Shi (Cornell) claim the impossibility of building incentive compatible blockchains. While the very first paper from Shi is technically correct, it limits its analysis to direct mechanisms in which the transaction fee pays for a single (non-combinatorial) form of value, invalidating it as a model for blockchains where the fee is a non-scalar value that expresses joint preferences over a combinatorial bundle of utility (on-chain blockspace and security, speed-of-confirmation, availability of off-chain collusion goods).
+Various papers from Tim Roughgarden (Colombia) and Elaine Shi (Cornell) and others claim the impossibility of building incentive compatible blockchains. The very first paper from Shi is technically correct, but limits its analysis to direct mechanisms in which the transaction fee pays for a single (non-combinatorial) form of value, invalidating it as a model for blockchains where the fee is a non-scalar value that expresses a combined valuation for a combinatorial bundle of utility (blockspace and security, speed-of-confirmation, and any form of off-chain utility offered in exchange for the exclusive right to collect the fee).
 
-In subsequent papers authors dropped their requirement for "single-parameter" fees and applied their model to mechanisms with "collusion goods" (possibility of off-chain payments), declaring the impossibility of achieving incentive compatibility in more general mechanisms. These claims are explicitly invalidated by Saito Consensus, whose solution points directly to fundamental theoretical problems which make the conclusions of these papers unsupportable in theory or practice.
+The fact that transaction fees are "non-scalar" values renders the conclusions of these papers unsupportable. Having co-mingled valuations breaks assumptions about the monotonicity of the fee (the idea that a higher fee reflect a higher valuation for any particular kind of utility) and prevents the use of implementation theory to draw the conclusions the authors offer.
 
-Specifically, Saito Consensus shows the existence of consensus mechanisms that are are not reducible to direct mechanisms at all, and in which incentive compatibility does not require users to reveal their private valuation for only a single form of utility. In routing work mechanisms, the fee is a non-scalar value that expresses a joint valuation across multiple types of utility. The true valuation the user has for any particular kind of good is never revealed directly to the mechanism, as is common in other indirect mechanisms of its class.
+The papers are also incorrect to claim that all consensus mechanisms must be reducible to the class of direct mechanisms they purport to model. In routing work mechanisms, the fee expresses a joint valuation across multiple types of utility. The true valuation the user has for any particular kind of utility is never revealed directly to the mechanism. And it is mathematically impossible to convert the mechanism to a direct mechanism.
 
 A second more fundamental problem is the assumption of these models that block producers can "faithfully implement" incentive compatible mechanisms without also revealing their own relevant preferences to the mechanism. This is inconsistent with the requirements of implementation theory since "faithful implementation" requires "truthful preference revelation" in any incentive compatible mechanism. This oversight pushes these papers into internal-contradiction, as they explicitly prohibit block producers from revealing preferences through the strategy in which it occurs in Saito Consensus (the inclusion of self-generated transactions in blocks).
 
