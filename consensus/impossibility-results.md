@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-09-11T05:24:57.148Z
+date: 2025-09-11T08:24:04.692Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -30,7 +30,7 @@ We have a [mathematical proof](https://github.com/SaitoTech/papers/blob/e32c51db
 
 Various papers from Tim Roughgarden (Colombia) and Elaine Shi (Cornell) have claimed for several years that it is impossible to build incentive compatible blockchains. The very first paper from Shi is technically correct, but is non-applicable as it limits its analysis to direct mechanisms in which the transaction fee pays for a single (non-combinatorial) form of value.
 
-This first problem invalidates the paper as a general impossibility result since in blockchains the transaction fee is explicitly a non-scalar value that expresses a joint preference over a combinatorial bundle of utility. Specifically, it expressed a joint valuation for the kinds of utility that can be negotiated through the fee: blockspace, speed-of-confirmation, and any off-chain utility ("collusion goods") that can be negotiated by offering peers exclusive access to the transaction.
+This first problem invalidates the paper as a general impossibility result since in blockchains the transaction fee is explicitly a non-scalar value that expresses a joint preference over a combinatorial bundle of utility. Specifically, fees are payments for multiple types of utility: blockspace, speed-of-confirmation, as well as off-chain utility ("collusion goods") that can be negotiated by offering peers exclusive access to the transaction.
 
 The fact that transaction fees are "non-scalar" breaks these papers -- such co-mingled valuations prevent us making assumptions about the monotonicity of the fee that are needed to study direct mechanisms in implementation theory and invoke techniques like the Revelation Principle that depend upon them. What the authors are technically observing in their impossibility results is the result of this lack of monotonicity.
 
