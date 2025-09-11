@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-09-11T05:21:20.612Z
+date: 2025-09-11T05:24:57.148Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -62,9 +62,9 @@ This breaks the assumption in this paper that all messages are symmetrically cos
 
 The paper *Efficient Mechanisms for Bilateral Trading* by Roger B. Myerson and Mark A. Satterthwaite prove that it is impossible to achieve incentive compatibility in any bilateral trading (direct) mechanism, with results that are extensible through the Revelation Principle to any two-sided mechanism with multiple participants that can be reduced to a direct mechanism.
 
-Saito Consensus is an indirect mechanism that is not reducible to a direct mechanism via the Revelation Principle. This impossibility emerges because conversion would require agents to reveal their supply and demand preferences at all prices levels for an effectively infinite combination of collusion and in-network goods and on an infinitely granular time preference curve.
+Saito Consensus is an indirect mechanism that is not reducible to a direct mechanism via the Revelation Principle. This impossibility emerges because conversion would require agents to reveal their supply and demand preferences at all prices levels for an effectively infinite combination of collusion and in-network goods and along an infinitely granular time preference curve.
 
-The informational problem that makes conversion impossible is not just the extreme multi-dimensionality of the preferences which must be revealed to the mechanism. It also emerges from the way the individual preference curves end up jagged and discontinuous because of the potential for participants to shift temporarily at arbitrary points between being producers and consumers of different combinations of goods, creating jagged spikes that cannot be assumed not to exist if agents have not fully revealed their preference. The fact that the "hinge" good that permits the trade-offs to be made efficiently is infinitely granular (time preference) then blocks generalizing assumptions that could otherwise assist in compressing the preference space into a finite representation.
+The informational problem that makes conversion impossible is not just the extreme multi-dimensionality of the preferences which must be revealed to the mechanism. It also emerges from the way the jagged and discontinuous indifferent curves created by multidimensional forms of utility combine with the possibility of regime shift on each (buyers becoming sellers and vice-versa) to create the potential for jagged spikes that cannot be assumed not to exist if agents have not fully revealed their preferences. The fact that the "hinge" good that permits all trade-offs to be made efficiently is infinitely granular (time preference) consequently blocks generalizing assumptions that could assist in compressing the preference space into a finite representation that could be theoretically revealed to a direct mechanism.
 
 
 ### 5. Leonid Hurwicz (1972)
