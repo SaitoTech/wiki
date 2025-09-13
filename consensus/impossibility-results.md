@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-09-11T08:24:04.692Z
+date: 2025-09-13T11:17:40.020Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -10,7 +10,7 @@ dateCreated: 2023-09-20T01:58:02.086Z
 
 # Impossibility Results
 
-Saito Consensus sidesteps several impossibility results that affect other consensus mechanisms and are often treated as defining general limitation on all distributed consensus mechanisms. 
+Saito Consensus sidesteps several impossibility results that affect other consensus mechanisms and are often treated as theoretical limits on all distributed consensus mechanisms. 
 
 The solution suggests general strategies exist for achieving incentive compatibility in informationally decentralized mechanisms, and offers a rebuttal to the following frequently-cited impossibility results from economics and computer science, showing that while these papers may be correct **within the bounds of their assumptions** -- those assumptions are not universally binding on distributed consensus mechanisms.
 
