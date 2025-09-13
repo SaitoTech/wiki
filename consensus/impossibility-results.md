@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-09-13T12:10:47.934Z
+date: 2025-09-13T12:15:19.256Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -30,9 +30,9 @@ We have a [mathematical proof](https://github.com/SaitoTech/papers/blob/e32c51db
 
 A school of academics led by Tim Roughgarden (Columbia) and Elaine Shi (Cornell) argue it is impossible to build incentive-compatible blockchains. Saito Consensus provides a direct counterexample, exposing several fundamental problems with the assumptions underlying these papers.
 
-The first such problem involves the assumption the transaction fee is a scalar that reflects only the bidder’s private valuation for blockspace. This is wrong. Transaction fees are non-scalar values that express a joint preference over a multi-dimensional bundle of utility: they can be adjusted to buy more or less blockspace, to affect inclusion times, and/or to secure off-chain benefits (“collusion goods”) that peers may provide in return for the exclusive right to put the transaction on-chain.
+The first major problem involves the assumption that the transaction fee is a scalar value that reflects only the bidder’s private valuation for blockspace. This is clearly incorrect. Transaction fees are non-scalar values that express a joint preference over a multi-dimensional bundle of utility: they can be adjusted to buy more or less blockspace, to affect inclusion times, and/or to secure off-chain benefits (“collusion goods”) that peers may provide in return for the exclusive access to the transaction.
 
-Because fees are non-scalar, they lack the monotonicity required for the application of implementation theory in the way these papers attempt. In order to paper over this problem, the models deliberately hide the relevant private preferences that users have for speed-of-inclusion and for collusion goods from the mechanism, creating internal contradictions since we cannot have incentive compatibility without truthful preference revelation of all valuations that affect fee-levels chosen.
+Because fees are non-scalar, they lack the monotonicity required to invoke implementation theory in the way these papers attempt. Worse, the models attempt to hide this problem by acknowledging the fact that collusion is possible, yet never asking users or producers to reveal their valuations for these forms of available utility to the mechanism. The presence of undisclosed but relevant preferences is the underlying source of the impossibility results found by these papers. They are the product of the internal contradictions in the models themselves, since -- as Maksin observes -- incentive compatibility is impossible without full and truthful preference revelation.
 
 A second and deeper flaw is the assumption that block producers can faithfully implement incentive-compatible mechanisms without revealing their own private preferences. This contradiction ("faithful implementation" without "faithful revelation") is worsened by these models prohibiting producers from inserting their own transactions in blocks -- expressly preventing them from communicating with the consensus mechanism.
 
