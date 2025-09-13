@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-09-13T12:15:19.256Z
+date: 2025-09-13T12:15:30.329Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -32,7 +32,7 @@ A school of academics led by Tim Roughgarden (Columbia) and Elaine Shi (Cornell)
 
 The first major problem involves the assumption that the transaction fee is a scalar value that reflects only the bidder’s private valuation for blockspace. This is clearly incorrect. Transaction fees are non-scalar values that express a joint preference over a multi-dimensional bundle of utility: they can be adjusted to buy more or less blockspace, to affect inclusion times, and/or to secure off-chain benefits (“collusion goods”) that peers may provide in return for the exclusive access to the transaction.
 
-Because fees are non-scalar, they lack the monotonicity required to invoke implementation theory in the way these papers attempt. Worse, the models attempt to hide this problem by acknowledging the fact that collusion is possible, yet never asking users or producers to reveal their valuations for these forms of available utility to the mechanism. The presence of undisclosed but relevant preferences is the underlying source of the impossibility results found by these papers. They are the product of the internal contradictions in the models themselves, since -- as Maksin observes -- incentive compatibility is impossible without full and truthful preference revelation.
+Because fees are non-scalar, they lack the monotonicity required to invoke implementation theory in the way these papers attempt. Worse, the models attempt to hide this problem by acknowledging the fact that collusion is possible, yet never asking users or producers to reveal their valuations for these forms of available utility to the mechanism. The presence of undisclosed but relevant preferences is the underlying source of the impossibility results found by these papers. They are the product of the internal contradictions in the models themselves, since -- as Maksin observes -- incentive compatibility is impossible in direct mechanisms without adequate and truthful preference revelation.
 
 A second and deeper flaw is the assumption that block producers can faithfully implement incentive-compatible mechanisms without revealing their own private preferences. This contradiction ("faithful implementation" without "faithful revelation") is worsened by these models prohibiting producers from inserting their own transactions in blocks -- expressly preventing them from communicating with the consensus mechanism.
 
