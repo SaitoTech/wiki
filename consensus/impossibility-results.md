@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-09-13T13:27:06.820Z
+date: 2025-09-13T13:31:48.055Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -32,11 +32,11 @@ A school of academics led by Tim Roughgarden (Columbia) and Elaine Shi (Cornell)
 
 The first major problem involves the assumption that the transaction fee is a scalar value that reflects only the bidder’s private valuation for blockspace. This is clearly incorrect. Transaction fees are non-scalar values that express a joint preference over a multi-dimensional bundle of utility: they can be adjusted to buy more or less blockspace, faster or slower inclusion, and/or to secure off-chain benefits (“collusion goods”) that peers may provide in return for exclusive access to the transaction.
 
-Because transaction fees are non-scalar in practice, they lack the property of monotonicity these models assert they must have in order to prove incentive compatibility impossible. The resulting impossibility proofs therefore fail on straightforward grounds of model misspecification: they do not actually capture the mechanisms they claim to analyze.
+Because transaction fees are non-scalar in practice, they lack the property of monotonicity these models assert they must have as a pre-requisite for proving it is impossible to achieve incentive compatibility generally. The impossibility results therefore fail on straightforward grounds of model misspecification: they do not actually capture the mechanisms they claim to analyze.
 
-Worse, while these papers explicitly acknowledge that other types of utility exist (such as through the incentives that participants have to collude with each other) they never ask users or producers to reveal their valuations for these additional forms of utility truthfully as required by implementation theory. This throws the models into open contradiction: they invoke the framework for incentive compatibility provided by Maskin (2002) yet fail to follow its basic requirements for full and adequate preference revelation.
+Worse, while these papers explicitly acknowledge that other types of utility exist (such as through the incentives that participants have to collude with each other) their models never ask agents to reveal their valuations for these additional forms of utility truthfully as required by implementation theory. This throws the papers themselves into open contradiction: they invoke the framework for incentive compatibility provided by Maskin (2002) while failing to follow its most basic requirements for preference revelation.
 
-Even if we overlook this problem and agree to treat the transaction fee as a scalar value that can at least theoretically reflect the truthful valuation that a user has for blockspace, the security-levels and amount of blockspace provided by TFMs in aggregate clearly varies based on the strategies chosen by agents within the mechanism. This means the amount of utility available for purchase through the mechanism cannot be known in advance, which introduces the problem of "interdependent valuations" under which it is not possible to make any assumptions about the truthfulness of even a scalar fee.
+Even if we overlook this problem and agree to treat the transaction fee as a scalar value that can at least theoretically reflect the truthful valuation that users have for blockspace, the security-levels and amount of blockspace provided by any TFM clearly depends on the strategies chosen by agents within the mechanism. This means the amount of utility available for purchase through the mechanism cannot be known in advance, which introduces the problem of "interdependent valuations" under which it is not possible to make any assumptions about the truthfulness of even a scalar fee.
 
 A second and more subtle flaw is the assumption that block producers can faithfully implement incentive-compatible protocols without needing to reveal their own private preferences to those protocols. This contradiction ("faithful implementation" without "faithful revelation") is overlooked by these models, which then make matters worse by explicitly forbidding producers from including self-generated transaction in blocks. This violates the requirement that incentive compatible mechanisms not prohibit preference revelation from agents to the mechanism.
 
