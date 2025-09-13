@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-09-13T13:44:22.251Z
+date: 2025-09-13T13:48:12.211Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -32,7 +32,7 @@ A school of academics led by Tim Roughgarden (Columbia) and Elaine Shi (Cornell)
 
 The first major problem involves the assumption that the transaction fee is a scalar value that reflects only the bidder’s private valuation for blockspace. This is clearly incorrect. Transaction fees are non-scalar values that express a joint preference over a multi-dimensional bundle of utility: they can be adjusted to buy more or less blockspace, faster or slower inclusion, and/or to secure off-chain benefits (“collusion goods”) that peers may provide in return for exclusive access to the transaction.
 
-Because transaction fees are non-scalar in practice, they lack the property of monotonicity these models assert they must have as a pre-requisite for proving it is impossible to achieve incentive compatibility generally. The impossibility results therefore fail on straightforward grounds of model misspecification: they do not actually capture the mechanisms they claim to analyze.
+Because transaction fees are non-scalar in practice, they lack the property of monotonicity these models assert they must have as a pre-requisite for proving it is impossible to achieve incentive compatibility generally. The impossibility results therefore fail on straightforward grounds of model misspecification: they do not accurately capture the properties of the mechanisms they claim to analyze.
 
 Worse, while these papers explicitly acknowledge that other types of utility exist (such as incentives to collude) their models never ask agents to reveal their valuations for these additional forms of utility as required by implementation theory. This pushes the models beyond misspecification and into open contradiction: they invoke the framework for incentive compatibility provided by Maskin (2002) without following its most basic requirements for truthful preference revelation.
 
