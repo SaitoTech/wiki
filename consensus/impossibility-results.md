@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-09-13T12:50:29.365Z
+date: 2025-09-13T13:00:42.210Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -32,7 +32,9 @@ A school of academics led by Tim Roughgarden (Columbia) and Elaine Shi (Cornell)
 
 The first major problem involves the assumption that the transaction fee is a scalar value that reflects only the bidder’s private valuation for blockspace. This is clearly incorrect. Transaction fees are non-scalar values that express a joint preference over a multi-dimensional bundle of utility: they can be adjusted to buy more or less blockspace, faster or slower inclusion, and/or to secure off-chain benefits (“collusion goods”) that peers may provide in return for exclusive access to the transaction.
 
-Because transaction fees are non-scalar, they lack the property of monotonicity these models assert they must have as a prerequisite to proving they lack. Worse, while the authors acknowledge that other types of utility exist and often drive users and producers to collude, they never ask either to reveal their valuations for these goods to the mechanism as explicitly required by implementation theory. This failure to follow the basic requirements outlined by Maskin throws the Roughgarden and Shi models into open contradiction. The presence of undisclosed but relevant preferences is the first cause of the impossibility results found by these models.
+Because transaction fees are non-scalar, they lack the property of monotonicity these models assert they must have. Worse, while these papers acknowledge that other types of utility exist through their implicit recognition that agents have incentives to collude, they never ask either users or producers to reveal their valuations for these goods as required by implementation theory. This failure to follow the basic requirements outlined by Maskin for incentive compatibility throws the Roughgarden and Shi models into open contradiction.
+
+Even if we overlook this problem and agree to treat the transaction fee as a scalar value that can at least theoretically reflect the truthful valuation that a user has for blockspace, the security-levels and amount of blockspace provided in aggregate depends in TFMs on the strategies chosen by agents within the mechanism. This means that the amount of utility available for purchase depends on the outcome of the mechanism, which introduces the problem of "interdependent valuations" in mechanism design, under which condition it is not possible to make assumptions about the truthfulness of even scalar values.
 
 A second and deeper flaw is the assumption that block producers can faithfully implement incentive-compatible protocols without needing to reveal their own private preferences to those protocols. This contradiction ("faithful implementation" without "faithful revelation") is overlooked by the authors, who then make matters worse by explicitly forbidding producers from including self-generated transaction in blocks. It appears not to occur to any of these writers that incentive compatible mechanisms cannot prohibit preference revelation from agents to the mechanism.
 
