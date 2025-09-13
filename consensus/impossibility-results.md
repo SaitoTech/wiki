@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-09-13T12:23:17.700Z
+date: 2025-09-13T12:28:57.778Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -32,9 +32,9 @@ A school of academics led by Tim Roughgarden (Columbia) and Elaine Shi (Cornell)
 
 The first major problem involves the assumption that the transaction fee is a scalar value that reflects only the bidder’s private valuation for blockspace. This is clearly incorrect. Transaction fees are non-scalar values that express a joint preference over a multi-dimensional bundle of utility: they can be adjusted to buy more or less blockspace, faster or slower inclusion, and/or to secure off-chain benefits (“collusion goods”) that peers may provide in return for exclusive access to the transaction.
 
-Because transaction fees are non-scalar, they lack the property of monotonicity these papers assert they must have. Worse, the authors acknowledge these other forms of utility exist, they never ask users or producers to reveal their valuations for them to the mechanism. This throws the Roughgarden and Shi models into open contradiction. The presence of undisclosed but relevant preferences is the underlying source of the impossibility results found by these papers.
+Because transaction fees are non-scalar, they lack the property of monotonicity these papers assert they must have. Worse, while the authors acknowledge that other types of utility exist and often drive users and producers to collude, they never ask either to reveal their valuations for these goods to the mechanism as explicitly required by Maskin (2002). This failure to follow the requirements of implementation theory throws the Roughgarden and Shi models into open contradiction. The presence of undisclosed but relevant preferences is the underlying source of the impossibility results found by their authors.
 
-A second and deeper flaw is the assumption that block producers can faithfully implement incentive-compatible protocols without needing to reveal their own private preferences to those protocols. This contradiction ("faithful implementation" without "faithful revelation") is overlooked by the authors, and worsened by their explicitly prohibiting producers from inserting transaction in blocks. The authors appear to believe this prohibition means that block producers will faithfully implement the mechanism, whereas in fact it prevents them from doing so.
+A second and deeper flaw is the assumption that block producers can faithfully implement incentive-compatible protocols without needing to reveal their own private preferences to those protocols. This contradiction ("faithful implementation" without "faithful revelation") is again overlooked by the authors, who then make matters worse by explicitly forbidding producers from including self-generated transaction in blocks. It never appears to occur to any of these papers that incentive compatible mechanisms cannot prohibit information disclosure from agents to the mechanism.
 
 Saito Consensus shows how combinatorial auctions can fix this problem and implement incentive compatible fee mechanisms: users are motivated to bid honestly exactly because competition to purchase blockspace exists from producers: bid too low and producers will switch from being sellers to buyers of blockspace and out-bid them in their own demand-side auction. Fascinatingly, this solution is only possible because the transaction fee is non-scalar and the blockchain is a combinatorial auction -- producers must have a rational reason to purchase blockspace that is different from that motivating users.
 
