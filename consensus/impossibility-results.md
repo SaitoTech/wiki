@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-09-13T12:02:34.671Z
+date: 2025-09-13T12:10:47.934Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -28,13 +28,13 @@ We have a [mathematical proof](https://github.com/SaitoTech/papers/blob/e32c51db
 
 ### 2. Roughgarden and Shi (2020)
 
-A school of academics led by Tim Roughgarden (Colombia) and Elaine Shi (Cornell) claim it is impossible to build incentive compatible blockchains. Saito Consensus invalidates these papers with a direct counter-example that highlights several fundamental problems with the assumptions underlying these papers.
+A school of academics led by Tim Roughgarden (Columbia) and Elaine Shi (Cornell) argue it is impossible to build incentive-compatible blockchains. Saito Consensus provides a direct counterexample, exposing several fundamental problems with the assumptions underlying these papers.
 
-This first issue is the choice of these papers to treat the transaction fee as a non-scalar value that expresses only the bidder's private valuation for blockspace. This is obviously incorrect: the fee is a non-scalar value that can be manipulated to purchase more-or-less blockspace, faster-or-slower inclusion times, as well as various forms of off-chain utility ("collusion goods") that can be bought by offering peers exclusive access to the transaction itself.
+The first such problem involves the assumption the transaction fee is a scalar that reflects only the bidder’s private valuation for blockspace. This is wrong. Transaction fees are non-scalar values that express a joint preference over a multi-dimensional bundle of utility: they can be adjusted to buy more or less blockspace, to affect inclusion times, and/or to secure off-chain benefits (“collusion goods”) that peers may provide in return for the exclusive right to put the transaction on-chain.
 
-The fact that transaction fees are "non-scalar" prevents them from having the property of "monotonicity" needed to use implementation theory in the way in which these papers do it. The fact that private preferences for "collusion goods" exist which are never revealed to the mechanism also throws them into internal contradiction. Their impossibility results are a result of co-mingled but unmodelled preferences which affect agent strategies within the mechanism but are never shared with the mechanism as required by Maskin (2002).
+Because fees are non-scalar, they lack the monotonicity required for the application of implementation theory in the way these papers attempt. In order to paper over this problem, the models deliberately hide the relevant private preferences that users have for speed-of-inclusion and for collusion goods from the mechanism, creating internal contradictions since we cannot have incentive compatibility without truthful preference revelation of all valuations that affect fee-levels chosen.
 
-A second more fundamental problem is the assumption that block producers can "faithfully implement" incentive compatible mechanisms without "faithfully revealing" their own private preferences to the mechanism. This contradiction goes seemingly unnoticed by the authors, to the point they see no problem actually forbidding producers from inserting self-generated transactions in blocks.
+A second and deeper flaw is the assumption that block producers can faithfully implement incentive-compatible mechanisms without revealing their own private preferences. This contradiction ("faithful implementation" without "faithful revelation") is worsened by these models prohibiting producers from inserting their own transactions in blocks -- expressly preventing them from communicating with the consensus mechanism.
 
 Saito Consensus shows how combinatorial auctions can fix this problem and implement incentive compatible fee mechanisms: users are motivated to bid honestly exactly because competition to purchase blockspace exists from producers: bid too low and producers will switch from being sellers to buyers of blockspace and out-bid them in their own demand-side auction. Fascinatingly, this solution is only possible because the transaction fee is non-scalar and the blockchain is a combinatorial auction -- producers must have a rational reason to purchase blockspace that is different from that motivating users.
 
