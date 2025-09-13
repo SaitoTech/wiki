@@ -2,7 +2,7 @@
 title: Impossibility Results
 description: 
 published: true
-date: 2025-09-13T13:38:10.777Z
+date: 2025-09-13T13:44:22.251Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T01:58:02.086Z
@@ -34,9 +34,9 @@ The first major problem involves the assumption that the transaction fee is a sc
 
 Because transaction fees are non-scalar in practice, they lack the property of monotonicity these models assert they must have as a pre-requisite for proving it is impossible to achieve incentive compatibility generally. The impossibility results therefore fail on straightforward grounds of model misspecification: they do not actually capture the mechanisms they claim to analyze.
 
-Worse, while these papers explicitly acknowledge that other types of utility exist (such as through the incentives that participants have to collude with each other) their models never ask agents to reveal their valuations for these additional forms of utility truthfully as required by implementation theory. This throws the papers themselves into open contradiction: they invoke the framework for incentive compatibility provided by Maskin (2002) while failing to follow its most basic requirements for preference revelation.
+Worse, while these papers explicitly acknowledge that other types of utility exist (such as incentives to collude) their models never ask agents to reveal their valuations for these additional forms of utility as required by implementation theory. This pushes the models beyond misspecification and into open contradiction: they invoke the framework for incentive compatibility provided by Maskin (2002) without following its most basic requirements for truthful preference revelation.
 
-Even if we overlook this problem and agree to treat the transaction fee as a scalar value that can at least theoretically reflect the truthful valuation that users have for blockspace, the security-levels and amount of blockspace provided by any TFM clearly depends on the strategies chosen by agents within the mechanism. This means the amount of utility available for purchase through the mechanism cannot be known in advance, which introduces the classic problem of "interdependent valuations" under which it is not possible to make any assumptions about the truthfulness of even a scalar fee.
+Even if we overlook this problem and agree to treat the transaction fee as a scalar value that can at least theoretically reflect the truthful valuation that users have for blockspace, the security-levels and amount of blockspace provided by any TFM clearly change based on the strategies chosen by agents within the mechanism. This means the amount of utility available for purchase through the mechanism cannot be known in advance, and we have the classic problem of "interdependent valuations" under which it is not possible to make any assumptions about the truthfulness of even a scalar fee.
 
 A second and more subtle flaw is the assumption that block producers can faithfully implement incentive-compatible protocols without needing to reveal their own private preferences to those protocols. This contradiction ("faithful implementation" without "faithful revelation") is overlooked by these models, which then make matters worse by explicitly forbidding producers from including self-generated transaction in blocks. This restriction violates the requirement that we do not prohibit agents from revealing preferences to the mechanism.
 
