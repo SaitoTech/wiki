@@ -2,7 +2,7 @@
 title: Deploy Saito Instance
 description: 
 published: true
-date: 2025-05-19T17:12:08.721Z
+date: 2025-09-22T14:04:06.896Z
 tags: installation
 editor: markdown
 dateCreated: 2023-02-23T07:15:16.260Z
@@ -14,7 +14,11 @@ This page provides a quick guide to deploying Saito on a VPS or server. It will 
 
 Before you start, be sure you've completed the [installation instructions](/install) for the standard Saito client and have successfully installed [Saito](https://github.com/saitotech/saito) on your own machine before continuing. The rest of this write-up assumes basic familiarity with the process of doing so.
 
-<hr>
+## Quick Deploy Script
+Please read the below and the [Installation Guide](/install/) so you understand the steps undertaken, but if you just want to get a node running, use this:
+**[Quick Deploy Script for Ubuntu 24.04](https://gist.github.com/arpee/22cec55b8e74c09c2e17e5a42eead6cf)**.
+
+---
 
 ## Configuration
 
