@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2025-08-25T07:20:57.967Z
+date: 2025-09-22T14:09:44.226Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -11,6 +11,13 @@ dateCreated: 2024-10-15T23:32:31.744Z
 # Installing Saito
 
 This page assumes you want to run the NodeJS Saito client (best for app hosting and development!). If you are interested in running the command-line Rust client or another software package see our [overview](/install/overview) of all Saito-related resources.
+
+
+## Quick Deploy Script
+Please read the below and the  [deployment guide](/install/deploy) so you understand the steps undertaken, but if you just want to get a node running, use this:
+**[Quick Deploy Script for Ubuntu 24.04](https://gist.github.com/arpee/22cec55b8e74c09c2e17e5a42eead6cf)**.
+
+---
 
 ### Installation Requirements:
 
@@ -34,6 +41,14 @@ npm install
 
 **Note:** if ```npm install``` fails to install a module, you may need to install `python-is-python3` to work around the problem. On Ubuntu this can be done with ```sudo apt-get install python-is-python3```.
 
+#### Quick Unbunto 24.04 instructions:
+```
+apt install npm
+git clone https://github.com/saitotech/saito
+cd saito/node
+npm install
+```
+
 <br />
 
 
@@ -45,6 +60,8 @@ The first instruction runs a script that compiles Saito into a compressed javasc
 npm run nuke
 npm start
 ```
+
+For detailed instructions on compiling the node.js stack refer to the [Compilation Guide](/install/compile).
 
 After a few moments, you should see a large Saito ASCII logo appear on your screen. This indicates that Saito is running normally and you can start using it!
 
