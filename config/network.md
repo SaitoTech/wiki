@@ -2,21 +2,37 @@
 title: Network Configuration for Saito-lite-Rust
 description: Information on network configuration files and settings for deployed Saito-lite-Rust nodes.
 published: true
-date: 2025-11-03T06:56:53.840Z
+date: 2025-11-03T07:16:36.139Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T04:10:39.991Z
 ---
 
-# Saito Network Configuration
+# Saito Node Configuration
 
 Saito nodejs nodes keep all their configuration and operating data in `config/options`.
 
-## Minimal configuration
+## Minimal Configuration
 
-If no configuration is present the `compile` script will copy [a template config file](https://github.com/SaitoTech/saito/blob/master/node/config/.template.options.conf)
+If no configuration is present the `compile` script will copy [a template config file](https://github.com/SaitoTech/saito/blob/master/node/config/.template.options.conf) to `config/options`.
 
-The `config/options.conf` file specifies network configuration options like the IP address on which the server runs and the ports it should open and the peers to which it should connect. The template file `config/options.conf.template` will run a server at `http://localhost:12101` by default. You can rename or edit it as you'd like.
+This file contains minimal information for the node to run locally, responding on [http://localhost:12101](http://localhost:12101)
+
+## Network Configuration
+
+**Exposing your node**
+
+The server url (protocol + host + port) is the local address and port of the node. This can usually be left unchanged.
+
+The endpoint url is the address at which browsers and other nodes will connect to you. This is used when the public address or domain name for the node differs from local, for instance when behind a proxy or NAT.
+
+**Connecting to other nodes**
+
+The each peer in the peers collection is the endpoint url for a node on the network you want to connect to. This will be provided by them.
+The `synctype` value determins the type of blocks requested from the peer. `lite` merkelerized blocks containing only relevant transactions or `full` blocks.
+
+## Wallet Configuration
+
 
 
 ### User Editable Configuration
