@@ -2,7 +2,7 @@
 title: Network Configuration for Saito-lite-Rust
 description: Information on network configuration files and settings for deployed Saito-lite-Rust nodes.
 published: true
-date: 2025-11-03T07:34:56.740Z
+date: 2025-11-03T07:39:32.458Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T04:10:39.991Z
@@ -40,8 +40,11 @@ Once this is created it is persistent.
 * To backup the wallet simply backup the `config/options` file.
 * To encrypt the wallet, add a `SAITO_PASS` environment variable. This will cause the node to encrypt it's options on each save.
 
-Full configuration
+## All Configuration Values
 
+The bulk of Saito's configuration is written by the node but exposed in the `config/options` file. There are two main sections.
+
+Consensus information defaults to the values on the Saito Network. Blocks will be rejected by nodes on the network if they don't match the consensus variables of the exisitng chain. Do not edit consenus values unless you are running a test network or developing locally and want, for example, faster block times.
 
 ### User Editable Configuration
 
