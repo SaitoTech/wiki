@@ -2,7 +2,7 @@
 title: Saito NFTs
 description: Non-Fungible Saito Tokens and Apps
 published: true
-date: 2025-11-06T10:50:40.234Z
+date: 2025-11-06T11:05:08.441Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-06T10:50:40.234Z
@@ -167,8 +167,66 @@ Thiis code replaces any files named "red_back.png" with the file linked in the r
 })();
 ```
 
+### Dynamic Image Replacement (embedded)
 
+Almost exactly the same as above, except the image is embedded in the NFT itself as a data:image binary file. The contents need to be updated with whatever image is desired as a replacement...
 
+```
+const replacement_image = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUg....`;
+
+(() => {
+  const replacement = replacement_image;
+  const targetName = "red_back.png";
+
+  const isTarget = (url) => {
+    if (!url) return false;
+    if (url.includes(replacement)) return false;
+    const clean = url.replace(/^url\((['"]?)(.*?)\1\)$/i, "$2");
+    return clean.split("/").pop() === targetName;
+  };
+
+  const fixImg = (img) => {
+    try {
+      if (isTarget(img.getAttribute("src"))) img.src = replacement;
+      else if (isTarget(img.src)) img.src = replacement;
+    } catch {}
+  };
+
+  const fixBg = (el) => {
+    try {
+      const bg = el.style?.backgroundImage;
+      if (bg && isTarget(bg)) el.style.backgroundImage = `url("${replacement}")`;
+    } catch {}
+  };
+
+  document.querySelectorAll("img").forEach(fixImg);
+  document.querySelectorAll("[style]").forEach(fixBg);
+
+  new MutationObserver((muts) => {
+    for (const m of muts) {
+      if (m.addedNodes?.length) {
+        m.addedNodes.forEach((n) => {
+          if (n.nodeType !== 1) return;
+          if (n.tagName === "IMG") fixImg(n);
+          n.querySelectorAll?.("img").forEach(fixImg);
+          if (n.hasAttribute?.("style")) fixBg(n);
+          n.querySelectorAll?.("[style]").forEach(fixBg);
+        });
+      }
+      if (m.type === "attributes") {
+        if (m.attributeName === "src" && m.target.tagName === "IMG") fixImg(m.target);
+        if (m.attributeName === "style") fixBg(m.target);
+      }
+    }
+  }).observe(document.body, {
+    childList: true,
+    subtree: true,
+    attributes: true,
+    attributeFilter: ["src", "style"],
+  });
+})();
+
+```
 
 
 
