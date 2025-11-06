@@ -2,7 +2,7 @@
 title: Saito NFTs
 description: Non-Fungible Saito Tokens and Apps
 published: true
-date: 2025-11-06T11:23:34.832Z
+date: 2025-11-06T11:41:10.583Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-06T10:50:40.234Z
@@ -228,5 +228,126 @@ const replacement_image = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUg....`;
 
 ```
 
+### CSS Insertion
+
+You can insert arbitrary CSS into NFTs by creating a CSS NFT or putting the stylesheet into txmsg.data.css. Here is an example of a simple Matrix enter-the-rabbithole theme:
+
+```
+:root {
+  --saito-bg: #000 !important;
+  --saito-text: #00ff9c !important;
+  --saito-muted: #003b2f !important;
+  --saito-border: #005533 !important;
+  --saito-hover: #00cc88 !important;
+  --saito-accent: #00ffcc !important;
+  --saito-primary: #00ff88 !important;
+  --saito-secondary: #007755 !important;
+}
+
+body, .saito-container, .saito-main, .saito-sidebar {
+  background-color: var(--saito-bg) !important;
+  color: var(--saito-text) !important;
+  font-family: 'Courier New', monospace !important;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 2px #009966;
+}
+
+a, .saito-link {
+  color: var(--saito-accent) !important;
+  text-decoration: none !important;
+}
+a:hover, .saito-link:hover {
+  color: var(--saito-hover) !important;
+  text-shadow: 0 0 8px var(--saito-hover);
+}
+
+.saito-header, .saito-footer, .saito-toolbar {
+  background-color: #001a12 !important;
+  border-bottom: 1px solid var(--saito-border) !important;
+  box-shadow: 0 0 10px #002a1a inset;
+}
+
+.saito-card, .saito-modal, .saito-overlay {
+  background-color: #000 !important;
+  border: 1px solid var(--saito-border) !important;
+  box-shadow: 0 0 20px #002a1a, inset 0 0 10px #001a0f;
+  color: var(--saito-text) !important;
+}
+
+input, textarea, select {
+  background-color: #000 !important;
+  color: var(--saito-text) !important;
+  border: 1px solid var(--saito-border) !important;
+  outline: none !important;
+  padding: 6px 10px;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--saito-primary) !important;
+  box-shadow: 0 0 10px var(--saito-primary);
+}
+
+button, .saito-button {
+  background: linear-gradient(180deg, #002b1b, #000) !important;
+  color: var(--saito-primary) !important;
+  border: 1px solid var(--saito-border) !important;
+  border-radius: 4px !important;
+  padding: 6px 14px !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 10px #003b24;
+}
+button:hover, .saito-button:hover {
+  background: linear-gradient(180deg, #004b2b, #000) !important;
+  border-color: var(--saito-primary) !important;
+  box-shadow: 0 0 15px var(--saito-primary);
+  color: #00ffaa !important;
+}
+button:active, .saito-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 5px var(--saito-secondary) inset;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--saito-border);
+}
+.saito-highlight, mark {
+  background-color: #002a1a !important;
+  color: var(--saito-primary) !important;
+  border-radius: 2px;
+  padding: 0 3px;
+}
+
+@keyframes matrix-glow {
+  0%, 100% { text-shadow: 0 0 2px #009966, 0 0 4px #00ffcc; }
+  50% { text-shadow: 0 0 8px #00ffcc, 0 0 16px #00ff88; }
+}
+.matrix-glow { animation: matrix-glow 2s infinite alternate; }
+
+@keyframes matrix-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.matrix-cursor::after {
+  content: "_";
+  animation: matrix-cursor 1s infinite;
+  color: var(--saito-accent);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #000;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--saito-secondary);
+  border-radius: 4px;
+}
+
+::selection {
+  background-color: var(--saito-accent);
+  color: #000;
+}
+```
 
 
