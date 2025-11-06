@@ -2,7 +2,7 @@
 title: Saito NFTs
 description: Non-Fungible Saito Tokens and Apps
 published: true
-date: 2025-11-06T11:22:50.901Z
+date: 2025-11-06T11:23:34.832Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-06T10:50:40.234Z
@@ -10,7 +10,7 @@ dateCreated: 2025-11-06T10:50:40.234Z
 
 # Saito NFTs
 
-Saito offers the most flexible NFTs, including programmatic NFTs that contain images, javascript, css and a lot more. This page offers a quick reference for developers and users who want to create their own custom NFTs.
+Saito supports programmatic NFTs that contain images, javascript, css and a lot more. This page offers a quick code-reference for developers and users who want to copy-and-paste their own custom NFTs.
 
 
 ### Dynamic Image Replacement
