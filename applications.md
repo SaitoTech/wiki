@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-11-06T11:26:03.732Z
+date: 2025-11-07T10:28:04.618Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -10,7 +10,7 @@ dateCreated: 2022-12-21T01:40:41.364Z
 
 # Saito Applications
 
-Applications on Saito look and feel like traditional web apps, but run in a peer-to-peer swarm. Browse some of the many Saito applications you can install and start using today, or learn about how to [code and install NFT applications](/en/nfts):
+Applications on Saito look and feel like traditional web apps, but run in a peer-to-peer swarm. Browse some of the many Saito applications you can install and start using today, or learn about how to [code and install programmatic NFTs](/en/nfts):
 
 <br />
 
