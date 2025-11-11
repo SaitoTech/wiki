@@ -2,7 +2,7 @@
 title: Saito NFTs
 description: Non-Fungible Saito Tokens and Apps
 published: true
-date: 2025-11-06T11:41:10.583Z
+date: 2025-11-11T11:35:57.330Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-06T10:50:40.234Z
@@ -350,4 +350,78 @@ hr {
 }
 ```
 
+
+### Mixin Module Crypto
+
+This NFT adds an additional Mixin-supported web3 crypto to the browser wallet. There are 500 of them! Which one do you want running your browser?
+
+```
+let mixin_mod = this.app.modules.returnModule("Mixin");
+if (!mixin_mod) return;
+
+let MixinModule = mixin_mod.MixinModule;
+if (!MixinModule) {
+  console.error("MixinModule not available on Mixin");
+  return;
+}
+
+//
+// crypto definition
+//
+const cryptoConfig = {
+  appname:     "NEAR",
+  name:        "NEAR",
+  slug:        "near",
+  ticker:      "NEAR",
+  description: "Adds support for Mixin-powered NEAR transfers on the Saito Network",
+  categories:  "Utility Cryptocurrency Finance",
+  asset_id:    "97e3c2c1-9967-3a59-9b25-b30bc2045bbb",
+  chain_id:    "43d61dcd-e413-450d-80b8-101d5e903357",
+};
+
+//
+// instantiate crypto module
+//
+let crypto_module = new MixinModule(
+  this.app,
+  mixin_mod,
+  cryptoConfig.ticker,
+  cryptoConfig.asset_id,
+  cryptoConfig.chain_id
+);
+
+//
+// fetch metadata + install
+//
+let info = await crypto_module.returnNetworkInfo();
+crypto_module.price_usd = info?.price_usd ?? 0;
+
+await crypto_module.installModule(mixin_mod.app);
+
+//
+// attach to mixin runtime state
+//
+if (!Array.isArray(mixin_mod.crypto_mods)) {
+  mixin_mod.crypto_mods = [];
+}
+
+mixin_mod.crypto_mods.push(crypto_module);
+this.app.modules.mods.push(crypto_module);
+
+//
+// auto-activate if possible
+//
+if (mixin_mod.account_created) {
+  if (crypto_module.isActivated()) {
+    await mixin_mod.fetchSafeUtxoBalance();
+  } else if (crypto_module.address) {
+    crypto_module.activate();
+  }
+}
+
+//
+// notify UI / app
+//
+this.app.connection.emit("header-update-crypto");
+```
 
