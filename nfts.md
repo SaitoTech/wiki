@@ -2,7 +2,7 @@
 title: Saito NFTs
 description: Non-Fungible Saito Tokens and Apps
 published: true
-date: 2025-11-11T11:50:09.020Z
+date: 2025-11-11T11:50:20.565Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-06T10:50:40.234Z
@@ -356,7 +356,7 @@ hr {
 This NFT adds an additional Mixin-supported web3 crypto to the browser wallet. There are 500 of them! Which one do you want running your browser? reference: https://api.mixin.one/network/assets/top?kind=NORMAL
 ```
 let mixin_mod = this.app.modules.returnModule("Mixin");
-if (!mixin_mod) return;
+if (!mixin_mod) { return; }
 
 let MixinModule = mixin_mod.MixinModule;
 if (!MixinModule) {
