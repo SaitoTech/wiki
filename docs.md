@@ -2,7 +2,7 @@
 title: Saito Documentation
 description: 
 published: true
-date: 2025-11-11T17:20:01.935Z
+date: 2025-11-12T10:23:41.356Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-29T21:33:20.620Z
@@ -39,6 +39,8 @@ This section contains guidelines on how to use external WASM libraries into your
 ### [Transaction API](/docs/transactions)
 The Module API explains the functions that your module can include and extend to react to common events (inbound transactions, peer messages, chain-reorganizations, etc) and to store data and send messages to other peers on the network.
 
+### [Scripting API](/docs/scripting)
+The Scripting API explains the basics needed to start writing Saito Scripts that your modules and NFTs can include to enable advanced forms of cryptographic validation like multi-sig support and token-ownership validation.
 
 ### [Module API](/docs/module-api)
 The Module API explains the functions that your module can include and extend to react to common events (inbound transactions, peer messages, chain-reorganizations, etc) and to store data and send messages to other peers on the network.
