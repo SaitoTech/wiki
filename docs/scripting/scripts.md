@@ -2,15 +2,17 @@
 title: Saito Scripts
 description: A description of Saito Scripts and how to create them....
 published: true
-date: 2025-11-12T11:45:21.103Z
+date: 2025-11-13T09:29:03.261Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-12T11:45:21.103Z
 ---
 
-# Saito Scripts - Writing Scripts
+> # Saito Scripts - Writing Scripts
+{.is-info}
 
-Saito Scripts are provided in JSON form, as in the example below. This is intended to provide a HUMAN-READABLE way.
+
+Saito Scripts are provided in JSON form, as in the example below. This is intended to provide a HUMAN-READABLE way of encoding scripts. If you are interested you can use our [Script Generator](/scripting/scripts/generate) to create these more complicated script forms as part of the Saito Scriptorium..
 
 ```
 {
