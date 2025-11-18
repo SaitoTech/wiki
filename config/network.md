@@ -2,7 +2,7 @@
 title: Network Configuration for Saito-lite-Rust
 description: Information on network configuration files and settings for deployed Saito-lite-Rust nodes.
 published: true
-date: 2025-11-12T07:11:17.363Z
+date: 2025-11-18T17:08:08.650Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T04:10:39.991Z
@@ -39,6 +39,27 @@ Once this is created it is persistent.
 
 * To backup the wallet simply backup the `config/options` file.
 * To encrypt the wallet, add a `SAITO_PASS` environment variable. This will cause the node to encrypt it's options on each save.
+
+
+## Joining the Saito Network (Running a production node)
+
+The Saito project runs two nodes specifically designed to provide blocks. These are:
+
+`eames.saito.io` and `arthur.saito.io`
+
+| Eames (USA)  ||
+| --- | --- | 
+| host | eames.saito.io | 
+| port | 443 | 
+| protocol | https | 
+
+
+| Arthur (EU) | | 
+| --- | --- |
+| host | arthur.saito.io | 
+| port | 443 | 
+| protocol | https | 
+
 
 ## All Configuration Values
 
