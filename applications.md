@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-11-19T08:34:52.172Z
+date: 2025-11-19T08:38:07.738Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -278,6 +278,16 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
     </div>
   </a>
   
+
+  <a href="/applications/scripting">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/img/scriptorium.jpg" />
+       </div>
+       <div class="app_title">Scriptorium</div>
+    </div>
+  </a>
+
   <a href="/applications/scotland">
     <div class="app_box">
       <div class="app_img">
@@ -359,6 +369,17 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
        <div class="app_title">TRX</div>
     </div>
   </a>
+ 
+  
+  <a href="/applications/vault">
+    <div class="app_box">
+       <div class="app_img">
+         <img src="/img/vault.jpg" />
+       </div>
+       <div class="app_title">Vault</div>
+    </div>
+  </a>
+
   
   <a href="/applications/videocall">
     <div class="app_box">
