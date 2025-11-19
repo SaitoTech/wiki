@@ -2,7 +2,7 @@
 title: Network Configuration for Saito-lite-Rust
 description: Information on network configuration files and settings for deployed Saito-lite-Rust nodes.
 published: true
-date: 2025-11-19T03:31:29.366Z
+date: 2025-11-19T08:21:33.502Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T04:10:39.991Z
@@ -38,7 +38,7 @@ If no wallet data exists on start the node will auto generate a public/private k
 Once this is created it is persistent.
 
 * To backup the wallet simply backup the `config/options` file.
-* To encrypt the wallet, add a `SAITO_PASS` environment variable. This will cause the node to encrypt it's options on each save.
+* To encrypt the wallet, add a `SAITO_PASS` environment variable. This will cause the node to encrypt its options on each save.
 
 
 ## Joining the Saito Network (Running a production node)
