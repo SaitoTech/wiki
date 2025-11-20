@@ -2,7 +2,7 @@
 title: Deploy Saito Instance
 description: 
 published: true
-date: 2025-09-22T14:04:06.896Z
+date: 2025-11-20T02:33:07.594Z
 tags: installation
 editor: markdown
 dateCreated: 2023-02-23T07:15:16.260Z
@@ -17,6 +17,8 @@ Before you start, be sure you've completed the [installation instructions](/inst
 ## Quick Deploy Script
 Please read the below and the [Installation Guide](/install/) so you understand the steps undertaken, but if you just want to get a node running, use this:
 **[Quick Deploy Script for Ubuntu 24.04](https://gist.github.com/arpee/22cec55b8e74c09c2e17e5a42eead6cf)**.
+
+Once you have run the script your node will be running and you can [configure it](/en/config/network) to run locally or [connect it to the Saito network](/en/config/network#joining-the-saito-network-running-a-production-node)
 
 ---
 
