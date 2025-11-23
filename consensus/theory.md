@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-23T15:52:49.960Z
+date: 2025-11-23T16:05:03.011Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -19,7 +19,7 @@ We offer below (1) a short statement of the core solution, (2) a compact overvie
 
 Saito changes the economics of permissionless consensus by making **harmful state transitions more expensive to propose than honest ones**. Concretely, the protocol achieves this by coupling block-proposal costs to the efficiency of fee collection, and using a Dutch clock auction to emergently position the most efficiently-funded blocks in the network into a chain which represents the most efficiently-funded chain.
 
-This coupling between speed-of-extension and efficiency-of-fee-collection creates a persistent cost asymmetry that asymmetrically penalizes attackers, as orphaning honest blocks now requires attackers to overcome the efficiency gap between the more efficient block they wish to orphan and the resources available to them. Overcoming this disadvantage is only possible if the attacker or attackers spend their own money to generate routing work and contribute it to a payment lottery that will issue partial payouts only in expectation.
+This creates a persistent cost asymmetry: to orphan an honest block, attackers must cover the efficiency gap between their own fee-collection and that of the honest block they are trying to replace. Doing so requires attackers to spend their own money to manufacture routing work and enter a payout lottery that returns value only in expectation, not deterministically.
 
 This single structural change shifts the attainable set of equilibrium deviations and opens a class of implementable outcomes that are infeasible under symmetric-cost models such as standard POW and POS mechanisms. 
 
@@ -31,7 +31,7 @@ Modern impossibility results in **both** distributed systems and mechanism desig
 
 - **Symmetric proposal costs.** most models treat the cost of proposing a block as identical in expectation between adversarial and honest nodes.
 - **Invisible routing contribution.** Traditional designs cannot reliably observe who forwarded or relayed transactions; mempool visibility is local and unverifiable.
-- **Zero-sum local competition.** Analyses typically assume agents nodes on the same routing path are in direct zero-sum conflict for a fixed fee, which creates incentives to hoard or sybil routing paths to capture a larger share, instead of cooperate to improve the outcomes of all nodes on the routing path relative to competing routing paths.
+- **Zero-sum local competition.** Zero-sum local competition. Analyses typically assume that nodes on the same routing path are in zero-sum conflict over a fixed fee, which creates incentives to hoard or sybil routing paths to capture a larger share.
 
 These assumptions underlie many standard results in distributed systems and mechanism design (e.g., Bracha–Toueg / Dwork–Lynch–Stockmeyer style constraints, and impossibility statements about incentive-compatible information propagation). Saito relaxes (1) and (2) in a way that invalidates the reductive step used in many impossibility proofs, allowing different implementability claims.
 
@@ -47,7 +47,7 @@ These assumptions underlie many standard results in distributed systems and mech
 
 5. **Asymmetric-cost equilibria.** Because proposal cost depends on routing efficiency, and honest blocks are selected for efficiency, coalitions that attempt to orphan honest work must pay strictly more than honest extenders, contributing their own funds to the blockchain to mimic the efficiency of an honest node. 
 
-6. Because this asymmetry persists as long as at least one honest node is more efficient at producing one honest block in equilibrium, the asymmetry persists across a wide range of resource distributions and continues to be capable of punishing strategic deviation even in the face of majoritarian attackers (it does not collapse when one coalition controls a large fraction of fees/hash/stake).
+6. **Majoritarian Tolerance.** This asymmetry persists whenever at least one honest node can produce an honest block more efficiently than an attacker can mimic, meaning the cost gap holds across a wide range of resource distributions, including cases where an attacker controls a large fraction of the network.
 
 Taken together, these elements induce an informationally decentralized mechanism in which (a) the efficiency of fee-collection is observable, (b) sybil-style manipulations are punished economically, and (c) majoritarian deviations become loss-making in expectation.
 
