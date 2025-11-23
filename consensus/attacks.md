@@ -2,7 +2,7 @@
 title: Technical Attacks
 description: How Saito Consensus improves defense against common technical attacks
 published: true
-date: 2025-11-23T15:13:05.725Z
+date: 2025-11-23T15:13:39.828Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T14:08:23.537Z
@@ -45,9 +45,8 @@ As a result:
 
 Fixing this restores the economic security that POW and POS lose when a single coalition gains majority control: the ability of users to increase cost-of-attack on their own transactions by waiting for more confirmations.
 
----
 
-# 2. Sybil Attacks
+## 2. Sybil Attacks
 
 A sybil attack occurs when an adversary creates multiple identities in a permissionless network. In Saito, sybilling is economically irrational because the consensus mechanism imposes an implicit tax on every extra routing hop:
 
@@ -72,7 +71,7 @@ For a formal economic proof of sybil-resistance and a more academic treatment of
 
 ---
 
-# 3. Censorship Attacks
+## 3. Censorship Attacks
 
 Censorship attacks occur when a node or coalition selectively drops, delays, or refuses to include user transactions. They can also be used to describe situations in which block producers refuse to accept valid blocks proposed by competitors.
 
@@ -99,9 +98,8 @@ The attacker who deliberately censors an honest block transfers to himself a hig
 
 In short, censorship in Saito is not merely discouraged — it is structurally **unprofitable** for attackers, whose act of censorship increases their costs and reduces their income available to pay.
 
----
 
-# Summary
+## Summary
 
 Saito’s defense against attacks is grounded in protocol-level economics:
 
