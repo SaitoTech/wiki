@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-11-23T09:38:34.108Z
+date: 2025-11-23T09:50:45.841Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -17,11 +17,7 @@ dateCreated: 2021-11-09T07:50:58.627Z
 
 Saito is a Layer-1 blockchain that pays the nodes in the peer-to-peer network instead of miners or stakers. While this may sound like a narrow technical fix, the solution Saito proposes addresses a longstanding problem at the intersection of computer science and economics.
 
-This Wiki explains what these problems are, the kind of applications we can build by fixing them, and how you can help build and run the network. If you’re new to Saito and want to try it out, you can skip this site entirely and explore the live network here:
-
-👉 https://saito.io
-
-Otherwise, what you’re looking for probably depends on what brings you to Saito.
+This Wiki explains what these problems are, the kind of applications we can build by fixing them, and how you can help build and run the network. If you’re new to Saito and want to try it out, you can skip this site entirely and explore the [live network](https://saito.io). Otherwise....
 
 ## Users
 
@@ -31,7 +27,7 @@ Learn what Saito is, explore applications, and try things out.
 - **Applications you can use today** → *[Applications](#)*  
 - **Smart NFTs and tokens** → *[Smart NFTs](#)*  
 
-Crypto OG? If you remember what blockchain was like when things were smaller and less corporate, the **nft recipes** section is worth a visit. It shows how Saito lets you do things that aren’t possible on other chains, and may even turn you into a developer without you realizing it!
+Crypto OG? If you remember what blockchain was like when things were smaller and more hands-on, our **nft recipes** section showcases things Saito can do that other chains simply can't -- and may even turn you into a developer before you realize it!
 
 
 ## Developers 
@@ -43,7 +39,7 @@ Learn to set-up nodes and build applications that run directly on-chain.
 - **Transaction formats and routing** → *[Technical Reference](#)*  
 - **Examples and tutorials** → *[Tutorials](#)*  
 
-Tired of asking for permission? Saito’s developer experience removes the usual friction devs face. There's no need to  are no compilers, no DSLs, no API-keys. separate contract languages—just code, running where users actually are.
+Bonus? Saito doesn't use smart contracts. You write a module, share it with users, and your application immediately becomes part of the network.
 
 ....
 
@@ -59,7 +55,7 @@ Our research sections assumes familiarity with distributed systems, collective a
 
 👉 *Go to the [Theory & Research Section](#)*
 
-Iconoclast? Be sure to visit out page on how Saito skirts the classic impossibility results that affect other blockchain mechanisms. This is cutting-edge stuff that is not widely understood yet in academia and industry.
+What's new? Saito introduces asymmetric proposal costs: malicious state transitions are more expensive to propose than honest ones, so truth-telling is cheaper than misreporting in expectation.
 
 - - - - - 
 
