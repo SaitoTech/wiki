@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-23T16:05:03.011Z
+date: 2025-11-23T16:07:13.233Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -17,7 +17,7 @@ We offer below (1) a short statement of the core solution, (2) a compact overvie
 
 ## #1. Asymmetrically Costly Action-in-Mechanism
 
-Saito changes the economics of permissionless consensus by making **harmful state transitions more expensive to propose than honest ones**. Concretely, the protocol achieves this by coupling block-proposal costs to the efficiency of fee collection, and using a Dutch clock auction to emergently position the most efficiently-funded blocks in the network into a chain which represents the most efficiently-funded chain.
+Saito changes the economics of permissionless consensus by making **harmful state transitions more expensive to propose than honest ones**. Concretely, the protocol ties the cost of proposing a block to how efficiently a node has collected fees. Because more efficiently funded blocks cost less to extend, the network naturally converges on a longest chain built from these blocks.
 
 This creates a persistent cost asymmetry: to orphan an honest block, attackers must cover the efficiency gap between their own fee-collection and that of the honest block they are trying to replace. Doing so requires attackers to spend their own money to manufacture routing work and enter a payout lottery that returns value only in expectation, not deterministically.
 
