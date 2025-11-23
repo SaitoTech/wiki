@@ -2,7 +2,7 @@
 title: Technical Attacks
 description: How Saito Consensus improves defense against common technical attacks
 published: true
-date: 2025-11-23T15:13:39.828Z
+date: 2025-11-23T15:18:16.174Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T14:08:23.537Z
@@ -67,7 +67,7 @@ This produces two immediate consequences:
 In short: it is always more profitable for agents to participate in routing mechanisms under one identity as the mechanism has a bias towards informational efficiency and compact routing paths. This bias is expressed as an indirect tax on both non-cooperative behavior as well as deliberately inefficient routing strategies.
 
 For a formal economic proof of sybil-resistance and a more academic treatment of the underlying economics, see  
-**→ [A Simple Proof of Sybil-Proofness](/consensus/theory/sybil-proof)**.
+**→ [A Simple Proof of Sybil-Proofness](/consensus/sybil-attacks)**.
 
 ---
 
