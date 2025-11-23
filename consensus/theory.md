@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-23T17:45:34.541Z
+date: 2025-11-23T17:53:34.810Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -65,12 +65,13 @@ And because their costs are certain but payouts fractional and probabilistic, th
 
 ---
 
-## Roadmap:
+## More Information:
 
+The following section contain links to subpages that discuss the specific papers and impossibility results mentioned above, demonstrating exactly where the results apply to routing work mechanisms, and where the results do not.
 
-
-**Start here**
-- `/consensus/theory/intro.md` — this page (overview and navigation)
+**Start with Saito**
+- [A Simple Proof of Sybil-Proof (Lancashire, Parris, 2023)](https://github.com/SaitoTech/papers/tree/e32c51db6aae071a41b7e481d0f5ba6cd75ec12d/sybil)
+mathematical proof of sybil-proofness of the mechanism, containing the Hurwicz' "formula" for the mechanism in five succinct bullet points on its first page.
 
 **Distributed-systems context**
 - `/consensus/theory/distributed-systems.md` — precise relation to FLP, Bracha–Toueg, DLS; which model axioms we change
