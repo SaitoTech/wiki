@@ -2,7 +2,7 @@
 title: Technical Attacks
 description: How Saito Consensus improves defense against common technical attacks
 published: true
-date: 2025-11-23T14:16:33.246Z
+date: 2025-11-23T15:01:02.063Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T14:08:23.537Z
@@ -27,58 +27,47 @@ The underlying problem thus appears when reorganizing the chain is *not more exp
 - majority coalitions can cheaply create competing chains  
 - double-spends and deep reorganizations become economically rational 
 
-Saito removes this attack by ensuring it is also costly (in expectation) to produce blocks that orphan more efficiently-produced blocks from the honest chain.
+Saito removes this attack by ensuring it is also costly (in expectation) to produce blocks that push more efficiently-produced blocks off what would otherwise be the honest chain.
 
-The technical reason this problem is solvable is because block production requires burning the routing work embodied in the transactions included in the blockchain by default, and only resurrecting those fees in the event that a golden ticket is solved. This means:
+The solution is easiest to see by considering what happens when an attacker simply ignores blocks produced by other nodes, and extends a fork without accepting any contributions from other participants.
 
-- an honest node extending the chain pays the **equilibrium cost** (the burn fee)
-- any attacker trying to orphan such a block must burn **all the routing work suppressed by the attack**, which is **strictly greater**  
+In this case, the fee-throughput of the network drops (there must be at least one transaction in the honest block that was not available to the attacker if their block was produced second). While this lowers the fee throughput of the attacker's fork, the cost of hashing golden tickets (unlocking payouts) remains at the pre-attack equilibrium level.
 
-This inequality holds even when the attacker controls a majority of network resources.
+In short, attackers are able to burn a smaller amount of fees to continue extending the chain. But the relative cost of capturing those fees (hashing costs as a percentage of total fees available for payout) spikes significantly, as the overall hashing burden is spread over fewer transaction fees that do not belong to the attacker or attacking coalition.
+
+Attackers are strictly better not orphaning blocks, and maximize their profitability when they permit other honest nodes to contribute fees to the chain. This inequality holds up to the point the attacker holds 100% of the first-hop fee throughput flowing into the network, i.e. in any situation characterized by informational decentralization.
 
 As a result:
 
-- reorganizations are possible but **always costly**  
 - costless reorganizations are impossible  
 - majoritarian attacks lose money in expectation  
 - controlling 51% (or even 99%) does not permit a profitable attack  
 
-This property restores the economic security that PoW and PoS lose when a single coalition gains majority control.
+Fixing this restores the economic security that POW and POS lose when a single coalition gains majority control: the ability of users to increase cost-of-attack on their own transactions by waiting for more confirmations.
 
 ---
 
 # 2. Sybil Attacks
 
-A sybil attack occurs when an adversary creates multiple identities to manipulate reward distribution or distort network structure. In permissionless networks, sybil resistance requires that creating extra identities provides no economic advantage.
+A sybil attack occurs when an adversary creates multiple identities in a permissionless network. In Saito, sybilling is economically irrational because the consensus mechanism imposes an implicit tax on every extra routing hop:
 
-Saito addresses sybil attacks at two layers:
+- each hop halves the routing work available to all later hops
 
-## (a) Routing-Layer Sybils
+- deeper paths pay the same burn cost while providing less routing work in equilibrium
 
-Attackers may attempt to insert unnecessary hops into the routing path to appear as additional contributors of work.
+- and including high-hop transactions is strictly more expensive for block producers
 
-Saito prevents this because:
+Any dilution of routing-work increases the share of the block reward that is distributed to non-routers for the block containing the sybilled transaction. This creates an implicit tax on routers who pad their transactions with unnecessary hops. Any sybil that clones itself in the routing path makes that path worse for itself.
 
-- every hop in a routing path **dilutes the value** available to all hops following it  
-- routing signatures reveal the full forwarding path  
-- unnecessary hops reduce total profitability for the entire path  
-- nodes therefore **purge parasitic peers**, since keeping them lowers their own yield  
+This produces two immediate consequences:
 
-A routing-layer sybil is not invisible and is not profitable. Nodes have straightforward economic incentives to route around and exclude such identities.
+ - Sybils that collude must pass messages between identities, forcing them to burn more tokens to produce blocks than a single efficient identity would need to burn ceteris paribus.
 
-## (b) Identity Splitting by Block Producers
+ - Sybils that do not collude compile fees inefficiently, since they cannot benefit from inbound transaction flow that would be available to "both" nodes if they produced blocks under a shared public key.
 
-Block producers may attempt to split into multiple identities to bias payout selection or increase expected revenue.
+In short: it is always more profitable for agents to participate in routing mechanisms under one identity as the mechanism has a bias towards informational efficiency and compact routing paths. This bias is expressed as an indirect tax on both non-cooperative behavior as well as deliberately inefficient routing strategies.
 
-This provides no benefit because:
-
-- only **observed routing work** determines the share of rewards  
-- routing work is tied to transaction fees collected from users, not to identity count  
-- splitting identities does not increase routing work and therefore does not increase expected payout  
-
-Sybil strategies fail because Saito pays only for **real, observable contribution**, not for the number of identities presenting it.
-
-For a formal economic proof of sybil resistance, see  
+For a formal economic proof of sybil-resistance and a more academic treatment of the underlying economics, see  
 **→ [A Simple Proof of Sybil-Proofness](/consensus/theory/sybil-proof)**.
 
 ---
