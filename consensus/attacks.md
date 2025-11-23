@@ -2,7 +2,7 @@
 title: Technical Attacks
 description: How Saito Consensus improves defense against common technical attacks
 published: true
-date: 2025-11-23T15:01:02.063Z
+date: 2025-11-23T15:13:05.725Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T14:08:23.537Z
@@ -74,29 +74,30 @@ For a formal economic proof of sybil-resistance and a more academic treatment of
 
 # 3. Censorship Attacks
 
-Censorship attacks occur when a node or coalition selectively drops, delays, or refuses to include user transactions. In many blockchains this can be profitable for block producers seeking MEV, fee extraction, or strategic advantage.
+Censorship attacks occur when a node or coalition selectively drops, delays, or refuses to include user transactions. They can also be used to describe situations in which block producers refuse to accept valid blocks proposed by competitors.
 
-In Saito, censorship is **self-punishing** due to the structure of routing work and the ATR (Automatic Transaction Rebroadcast) mechanism.
+In Saito, censorship is **self-punishing** due to the structure of routing work. We briefly review the two technical mechanisms that punish censorship of user-transactions and producer-blocks respectively.
 
-### Why Censorship Fails in Saito
+### Transaction Censorship
 
 1. **Censorship lowers block-producer profitability.**  
-   Block producers earn routing work by including user-sourced transactions.  
-   Dropping transactions directly reduces the routing work they can burn to create blocks, making them less competitive.
+   Block producers earn routing work and payouts by including user-sourced transactions. Dropping fee-competitive transactions makes them less efficient at producing blocks and less profitable in the payout lottery.
 
 2. **Censored transactions accumulate ATR payouts.**  
-   If a user’s UTXO cannot be moved because it is censored, it will eventually receive ATR payouts.  
-   These payouts come from the fees collected by block producers — meaning **censorship transfers money to the censored user**.
+   If a user’s UTXO cannot be moved because a transaction containing it is censored, this transaction will eventually receive ATR payouts. These payouts come from the fees collected by the attackers, meaning **censorship transfers money from the attacker to the censored user** while reducing the attacker's own share of ATR payouts.
 
 3. **Competitive routing dominates censoring routes.**  
-   Routing nodes earn by forwarding traffic.  
-   Withholding or delaying transactions destroys the value of their routing work.  
-   Honest routing paths outcompete censoring paths because forwarding increases revenue, while dropping transactions reduces it.
+   Routing nodes earn by forwarding traffic. Withholding or delaying transactions destroys the competitiveness of the routing path. Honest routing paths emergently outcompete censoring paths because forwarding increases revenue, while dropping transactions reduces it.
 
-4. **Coalitions cannot sustain censorship without sustained losses.**  
-   A coalition attempting to starve a user must forgo block revenue, increase ATR liabilities, and reduce its own routing income.
+### Block Censorship
 
-Censorship in Saito is therefore not merely discouraged — it is structurally **unprofitable**.
+Routing signatures prohibit attackers from moving transactions sourced by other routing nodes into their own blocks. This means that attackers who refuse to permit honest nodes to contribute blocks lower the honest fee-throughput of the network.
+
+While the cost in routing-work to produce blocks quickly recovers from the fall in fee-throughput, the difficulty of unlocking payouts cannot fall until multiple blocks go unsolved and unpaid.
+
+The attacker who deliberately censors an honest block transfers to himself a higher cost of collecting the fees he is already collecting in payment, in perpetuity, unless he is willing to let the blocks he is proposing go unpaid, in which case he loses money that way.
+
+In short, censorship in Saito is not merely discouraged — it is structurally **unprofitable** for attackers, whose act of censorship increases their costs and reduces their income available to pay.
 
 ---
 
@@ -104,11 +105,12 @@ Censorship in Saito is therefore not merely discouraged — it is structurally *
 
 Saito’s defense against attacks is grounded in protocol-level economics:
 
-- **Majoritarian attacks** fail because orphaning is more expensive than extending.  
-- **Sybil attacks** fail because unnecessary identities decrease profitability and routing signatures expose contribution.  
-- **Censorship attacks** fail because they reduce the attacker’s own block-production competitiveness and transfer value to the victim.
+- **Majoritarian attacks** fail because orphaning honest blocks is more expensive than extending the longest chain.
+- **Sybil attacks** fail because redundant identities decrease profitability and routing signatures expose inefficiency.  
+- **Censorship attacks** fail because they reduce the attacker’s competitiveness at making blocks (transaction censorship) or getting paid (block orphaning).
 
-These properties arise directly from Saito’s routing-work consensus, independent of any social coordination or external assumptions.
+All three solutions arise directly from Saito’s use of cryptographically signed routing paths, independent of any need for external social coordination or benefits/penalities.
 
-For deeper theoretical discussion, see the  
-**→ [Academic Introduction](/consensus/theory)**.
+-----
+
+For deeper theoretical discussion of these three topics as relates to the existing distributed systems literature, see our [academic introduction](/consensus/theory).
