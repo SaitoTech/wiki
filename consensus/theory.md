@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-23T18:12:42.656Z
+date: 2025-11-23T18:24:11.927Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -76,27 +76,11 @@ With appropriate design parameters, this inherent efficiency gap makes adversari
 The following section contain links to subpages that discuss the specific papers and impossibility results mentioned above, demonstrating exactly which results apply and do not apply to routing work mechanisms.
 
 **Start with Saito**
-- [A Simple Proof of Sybil-Proof (Lancashire, Parris, 2023)](https://github.com/SaitoTech/papers/tree/e32c51db6aae071a41b7e481d0f5ba6cd75ec12d/sybil)
-mathematical proof of sybil-proofness of the mechanism, containing the Hurwicz' "formula" for the mechanism in five succinct bullet points on its first page.
+- [A Simple Proof of Sybil-Proof](https://github.com/SaitoTech/papers/tree/e32c51db6aae071a41b7e481d0f5ba6cd75ec12d/sybil) (Lancashire, Parris, 2023)
+mathematical proof of sybil-proofness of the mechanism, containing Hurwicz' *formula* for the mechanism in five succinct bullet points on its first page.
 
 
-**Mechanism-design & economics**
-- `/consensus/theory/revelation-principle.md` — Foundations Note: why standard direct-mechanism reductions fail when supply and feasibility are endogenous
-- `/consensus/theory/asymmetric-cost.md` — formal development of cost-asymmetry and its implementability consequences
-- `/consensus/theory/collective-action.md` — free-rider and tragedy-of-the-commons framing for routing work
-
-
-**Distributed-Systems**
-- `/consensus/theory/distributed-systems.md` — precise relation to FLP, Bracha–Toueg, DLS; which model axioms we change
-- `/consensus/theory/consensus-properties.md` — safety, liveness, economic finality (informal → formal)
-
-
-**Supplementary & References**
-- `/consensus/theory/math-appendix.md` — formal lemmas, notation, and proofs
-- `/consensus/theory/bibliography.md` — selected literature (Bracha–Toueg, Dwork–Lynch–Stockmeyer, Babaioff et al., Hurwicz, Maskin, etc.)
-
-
-## What Saito does *not* claim
+## Final Note: what Saito does *not* claim
 
 A final comment To keep the academic case clean, we explicitly list limitations:
 
@@ -107,16 +91,9 @@ A final comment To keep the academic case clean, we explicitly list limitations:
 - Physical-layer attacks (eclipse, long-term censorship at the ISP level) remain out of scope for the protocol; it merely addresses profitable economic and technical deviations within the mechanism.
 
 
----
-
 ## Quick path for specialists
 
 - Mechanism designers: start with `/consensus/theory/revelation-principle.md` then read `/consensus/theory/asymmetric-cost.md`.  
 - Distributed-systems theorists: start with `/consensus/theory/distributed-systems.md` then `/consensus/theory/consensus-properties.md`.  
 - Crypto-economists: read `/consensus/theory/sybil-proof.md` and `/consensus/theory/majoritarian-attacks.md`.
 
----
-
-### References & further reading
-
-See the bibliography page for canonical references and the technical papers linked from the subpages. Key starting points include: Babaioff et al. (*On Bitcoin and Red Balloons*), Dwork–Lynch–Stockmeyer, Bracha–Toueg, Hurwicz (revelation principle), and our sybil-proof paper.
