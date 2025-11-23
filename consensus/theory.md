@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-23T16:07:13.233Z
+date: 2025-11-23T17:45:34.541Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -12,44 +12,56 @@ dateCreated: 2025-11-23T15:28:21.939Z
 
 This page is intended as a concise, discipline-neutral introduction to **Saito Consensus** for readers with training in mechanism design, economics, or distributed systems. It exists to provide a clean map of the intellectual claims, and an understanding where Saito is and is not bound by standard impossibility results.
 
-We offer below (1) a short statement of the core solution, (2) a compact overview of how it connects to classical problems in computer science and economics, and (3) a roadmap of subpages that contain more detailed discussions of existing arguments, proofs, and mechanisms which are closely related to this innovation.
+The rest of this page contains four sections: (1) a short description of what is theoretically new in Saito—namely, its use of asymmetrically costly state transitions; (2) a brief explanation of the classical impossibility claims in economics and computer science that assume such asymmetry cannot exist; (3) a compact account of how Saito makes the solution possible in spite of those claims; and (4) a guide to the subpages that examine specific results in more depth, showing where Saito relaxes their assumptions or avoids being bound by them entirely.
 
 
-## #1. Asymmetrically Costly Action-in-Mechanism
+## #1. What is New (asymmetrical costs)
 
 Saito changes the economics of permissionless consensus by making **harmful state transitions more expensive to propose than honest ones**. Concretely, the protocol ties the cost of proposing a block to how efficiently a node has collected fees. Because more efficiently funded blocks cost less to extend, the network naturally converges on a longest chain built from these blocks.
 
-This creates a persistent cost asymmetry: to orphan an honest block, attackers must cover the efficiency gap between their own fee-collection and that of the honest block they are trying to replace. Doing so requires attackers to spend their own money to manufacture routing work and enter a payout lottery that returns value only in expectation, not deterministically.
+This creates a persistent cost asymmetry: to orphan an honest block, attackers must cover the efficiency gap between their own fee-collection work and that of the honest block they are trying to orphan. Doing so requires attackers to spend their own money to produce blocks and subject it to a payout lottery that returns value only in expectation, not deterministically.
 
-This single structural change shifts the attainable set of equilibrium deviations and opens a class of implementable outcomes that are infeasible under symmetric-cost models such as standard POW and POS mechanisms. 
+This single structural change shifts the set of profitable deviations and opens a class of implementable outcomes that are infeasible under symmetric-cost models such as standard POW and POS mechanisms. 
+
+
+## #2. Classic Impossibility Claims
+
+Existing impossibility results in both distributed systems and economics rely on a set of background assumptions that are almost never questioned — including the assumption that **asymmetrically costly state transitions cannot be implemented in a permissionless setting.**
+
+Saito not only relaxes this assumption, but the technical changes that allow it to do so (the addition of cryptographically-signed routing paths to informationally decentralized mechanism) put it in direct tension with two additional assumptions that are also taken as axiomatic in much of the literature. These three assumptions are:
+
+- **Symmetric proposal costs:** most models treat the cost of proposing a block or state transition or publishing another equilibrium-affecting message as identical in expectation between adversarial and honest nodes.
+
+- **Unobservable Contribution:** traditional models assume the mechanism cannot observe or verify which agents performed value-creating actions, and therefore cannot condition costs or rewards on those actions.
+
+- **Exogenous Feasibility:** models assume that the feasibility and cost of proposing a state transition are fixed and independent of the topology or efficiency of the message-passing substrate.
+
+In computer science these assumptions underlie many standard results in distributed systems and mechanism design. Bracha–Toueg (1985) uses the assumption to assert maximum theoretical tolerance of distributed systems to adversraial actors, Dwork–Lynch–Stockmeyer (1988) uses it for partial synchrony assumptions in symmetric-cost models, while Babaioff et al. (2012) explicitly declare a topological impossibility claim in a paper on routing payouts.
+
+In economics, the parallel assumption appears in the mainstream mechanism design literature. Beginning with Hurwicz (1972) and developed through Myerson, Maskin, and Holmström, the Revelation Principle is built on the premise that all messages are costless to send, and any mechanism that claims to implement an outcome must tolerate the existence of unverifiable and cost-free misreports.
+
+
+The impossibility results that follow in both fields flow directly from this assumption, and merit revisiting exactly because Saito relaxes (1) and (2) in a way that invalidates the reductive step used in their impossibility claims, allowing different implementability claims in Saito-class mechanisms.
 
 ---
 
-## #2. Impossibility Results
+## #3. Technical Implementation
 
-Modern impossibility results in **both** distributed systems and mechanism design emerge from three assumptions that are left unchallenged in most models:
+What exactly is new about Saito-class mechanisms, at the level of mechanism primitives, that creates the asymmetry described in Section 1 and justifies relaxing the assumptions imposed on us in Section 2? Several factors predominate:
 
-- **Symmetric proposal costs.** most models treat the cost of proposing a block as identical in expectation between adversarial and honest nodes.
-- **Invisible routing contribution.** Traditional designs cannot reliably observe who forwarded or relayed transactions; mempool visibility is local and unverifiable.
-- **Zero-sum local competition.** Zero-sum local competition. Analyses typically assume that nodes on the same routing path are in zero-sum conflict over a fixed fee, which creates incentives to hoard or sybil routing paths to capture a larger share.
+1. **Routing signatures and observable forwarding.** Every transaction carries a cryptographic record of its forwarding path. The protocol can therefore verify, for each node, its observable contribution to the collection of fee-bearing transactions for eventual burning and resurrection through the costly payout lottery.
 
-These assumptions underlie many standard results in distributed systems and mechanism design (e.g., Bracha–Toueg / Dwork–Lynch–Stockmeyer style constraints, and impossibility statements about incentive-compatible information propagation). Saito relaxes (1) and (2) in a way that invalidates the reductive step used in many impossibility proofs, allowing different implementability claims.
+2. **Routing-work accounting.** Fees are decomposed into position-weighted routing work. These weights can be used in isolation or summed to create variable ratios that diverge as routing paths increase in length. The growing divergence between the cost of proposing blocks (regulated by the former) and the expected payout (regulated by the latter) is exploited to impose losses on deviating agents in off-equilibrium paths. Costs become higher and guaranteed while refunds are lower (in expectation) and uncertain.
 
----
+3. **Topology Drives Feasibility.** Saito creates an endogenous, monotonic, mechanism-level ordering over routing paths that makes inefficient (or sybil-inflated) paths strictly dominated because unnecessary message-passing raises costs faster than they raise expected reward.
 
-## #3. Saito What Saito does (technical innovations, compact)
+These three factors drive the emergence of the asymetrically-costly proposals highlighted in Section #1.
 
-1. **Routing signatures and observable forwarding.** Every transaction carries a cryptographic record of its forwarding path. The protocol can therefore measure, for each node, its observable contribution to the propagation of fee-bearing transactions and which exact fees it contributed to collecting for the network.
+Because proposal cost depends on routing efficiency, and the longest chain is selected for efficiency, coalitions that attempt to orphan honest blocks must mimic the efficiency of the blocks they are orphaning, which requires contributing more of their own funds to blocks (and the immediately burn) than honest extenders needed to do so contribute to theirs.
 
-2. **Routing-work accounting.** Fees are decomposed into position-weighted routing work. These weights are exploited by consensus both as inputs to determining block-proposal eligibility as well as to calculating probabilistic payout odds. This accounting reduces block-proposal cost for *efficient* fee-collectors.
+The orphaning of the block also immediately refunds any burned tokens belonging to the orphaned producer triggered by that block. So orphaning not only imposes costs on attackers, but refunds costs paid by honest nodes.
 
-3. **Implicit tax on inefficient paths.** Deep-hop transactions provide less routing work per unit fee while still contributing to the fixed burn required to recapture payments; this imposes an implicit protocol-level penalty on unnecessary hops (i.e., on sybil-style path inflation).
-
-5. **Asymmetric-cost equilibria.** Because proposal cost depends on routing efficiency, and honest blocks are selected for efficiency, coalitions that attempt to orphan honest work must pay strictly more than honest extenders, contributing their own funds to the blockchain to mimic the efficiency of an honest node. 
-
-6. **Majoritarian Tolerance.** This asymmetry persists whenever at least one honest node can produce an honest block more efficiently than an attacker can mimic, meaning the cost gap holds across a wide range of resource distributions, including cases where an attacker controls a large fraction of the network.
-
-Taken together, these elements induce an informationally decentralized mechanism in which (a) the efficiency of fee-collection is observable, (b) sybil-style manipulations are punished economically, and (c) majoritarian deviations become loss-making in expectation.
+And because their costs are certain but payouts fractional and probabilistic, the attackers suffer losses in expectation on a known portion of the fees-in-block. With proper design, this implicit tax can be increased to the point it outweighs any benefits the producer can gain from orphaning the honest block, creating a cost gap for attackers that holds across a wide range of resource distributions, including cases where an attacker controls a large fraction of the network.
 
 ---
 
