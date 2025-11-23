@@ -2,7 +2,7 @@
 title: Technical Attacks
 description: How Saito Consensus improves defense against common technical attacks
 published: true
-date: 2025-11-23T14:08:23.537Z
+date: 2025-11-23T14:16:33.246Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T14:08:23.537Z
@@ -10,31 +10,29 @@ dateCreated: 2025-11-23T14:08:23.537Z
 
 # Attacks on Permissionless Consensus
 
-Permissionless blockchains must defend against a number of new attack vectors. These attacks exploit the ability of participants to participate under many identities, collude with other participants in the network, or arbitrarily censor other users. This page reviews these attack vectors and describes, technically, how Saito addresses them.
+Permissionless blockchains must defend against a number of attack vectors. These attacks exploit the ability of agents in such mechanisms to participate under many identities and collude with other agents. This page reviews these attack vectors and describes, technically, how Saito addresses them.
 
-Readers interested in the underlying economic and theoretical foundations of these attacks should notice that several academic papers exist which argue that some of these problems are unsolvable. For a discussion of these results with a more academic explanation of why they do not bind Saito, please see our page on [academic introduction](/consensus/theory).
+Readers interested in a more academic treatment of these problems should note that multiple academic papers exist which assert that some of these problems are unsolvable. For a discussion of these results with an academic explanation of why they do not bind Saito, please see our page on [academic introduction](/consensus/theory).
 
 
 ## 1. Majoritarian Attacks
 
-The **51% attack** is often described as the ability to re-organize the blockchain. This definition is misleading: the property that disappears at the 51% control point in Bitcoin is the fact that such attacks are economically costly to attackers in expectation.
+The **51% attack** is often described as the ability to re-organize the blockchain. This definition is misleading: the property that disappears at the 51% control point in Bitcoin is not whether the blockchain can be reorgnized but whether the mechanism provides an economic deterrent against such attempts.
 
-Saito eliminates majoritarian attacks in this sense -- it cannot prohibit participants from burning money to attack the network, but it guarantees that any attempt to increase their share of blocks on the longest chain (a variable that must increase when honest blocks are orphaned) requires the orphaning party to bear losses in expectation.
+Saito eliminates majoritarian attacks in this sense -- it guarantees that any attempt by even a majoritarian coalition to increase their share of blocks on the longest chain (a share that must increase when honest blocks are orphaned, as at least one honest block must be replaced by an attacker block) requires the orphaning party or adversarial coalition to bear losses in expectation.
 
-The real problem appears when reorganizing the chain is *not more expensive than extending it*. This is what makes majority attacks feasible in Proof-of-Work and Proof-of-Stake systems:
+The underlying problem thus appears when reorganizing the chain is *not more expensive than extending it* or *the cost of producing all blocks are identical in expectation*, such that it costs the same amount for an attacker to orphan a block that it took the honest node to produce it originally. This symmetry of chain-extension costs is what makes majoritarian attacks feasible in Proof-of-Work and Proof-of-Stake systems:
 
 - orphaning honest blocks costs no more than building on them  
 - majority coalitions can cheaply create competing chains  
-- double-spends and deep reorganizations become economically rational  
+- double-spends and deep reorganizations become economically rational 
 
-Saito removes this property.
+Saito removes this attack by ensuring it is also costly (in expectation) to produce blocks that orphan more efficiently-produced blocks from the honest chain.
 
-### Saito’s Guarantee: orphaning is always more expensive than extending.
+The technical reason this problem is solvable is because block production requires burning the routing work embodied in the transactions included in the blockchain by default, and only resurrecting those fees in the event that a golden ticket is solved. This means:
 
-Because block production requires burning the routing work embodied in the transactions included in the blockchain:
-
-- an honest node extending the chain pays the **equilibrium cost** (the burn fee)  
-- an attacker trying to orphan a block must burn **all the routing work suppressed by the attack**, which is **strictly greater**  
+- an honest node extending the chain pays the **equilibrium cost** (the burn fee)
+- any attacker trying to orphan such a block must burn **all the routing work suppressed by the attack**, which is **strictly greater**  
 
 This inequality holds even when the attacker controls a majority of network resources.
 
