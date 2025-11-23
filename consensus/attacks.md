@@ -2,16 +2,17 @@
 title: Saito: Attacks and Defenses
 description: 
 published: true
-date: 2022-01-07T04:49:30.209Z
+date: 2025-11-23T13:41:13.644Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-07T04:49:27.823Z
 ---
 
-# Attacking Saito
+# Attack Vectors
 
-Saito is secure against classes of attack which have no defense mechanisms in other blockchains. This document explains how these defense mechanisms work, since they can be non-obvious to those new to how Saito works.
+Saito is secure against classes of attack which have no defense mechanisms in other blockchains. This page briefly describes which common attacks against which Saito Consensus improves security, from the perspective of technical defenses.
 
+For a description of how traditional impossibility results related to these attacks are avoided, see the page on [academic theory](/consensus/theory).
 
 ## 1. SYBIL ATTACKS
 
