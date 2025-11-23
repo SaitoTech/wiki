@@ -2,13 +2,13 @@
 title: Saito Consensus - Implementation Details
 description: 
 published: true
-date: 2025-11-23T13:09:17.825Z
+date: 2025-11-23T13:09:29.377Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T13:09:17.825Z
 ---
 
-## Saito Consensus Implementation Details
+# Saito Consensus Implementation Notes
 
 The description of Saito Consensus offered as our starting point for understanding the mechanism is a "pure" version that has several drawbacks: deflation is required to maintain security in equilibrium, cash-only attacks are possible, and extremely rich attackers may try to bias lottery payouts through strategies that radically increase the amount of SAITO passing through the lottery.
 
