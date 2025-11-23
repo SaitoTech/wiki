@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2025-11-23T12:32:18.971Z
+date: 2025-11-23T12:44:20.501Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -10,18 +10,11 @@ dateCreated: 2022-02-17T10:09:00.217Z
 
 # Saito Consensus
 
-Saito Consensus is a distributed consensus mechanism provably secure against a specific type of [routing attack](/consensus/sybil-attacks) previously considered impossible to solve. This solution allows the network to issue a routing payment. 
+Saito Consensus is a blockchain consensus mechanism provably secure against many [economic attacks](/consensus/sybil-attacks) previously considered impossible to solve. This page gives a succinct technical explanation of how the consensus mechanism works.
 
-What follows is a high-level description of how Saito Consensus works. Readers with a deeper understanding of economics, distributed systems and mechanism design should visit our academic introduction, which explains how Saito achieves the "holy grail" in mechanism design as an distributed mechanism with an asymmetrical cost of state transitions.
+For readers with backgrounds in mechanism design and distributed systems, we have a deeper introduction that explains the theoretical problems that Saito solves in each domain and shows *how* the mechanism is able to solve these problems and where the mechanism is and is not bound by traditional impossibiliy results.
 
-
-## Technical Overview
-
-This page gives an technical overview of how Saito Consensus works. While this explains **how** the mechanism works, it does not explain **why** it works, or how it solves the problems that we've r It explains **how** the mechanism works but not **why** it works. 
-
-
-
-The existence of this routing payment can be leveraged to sidestep several traditional [impossibility results](/consensus/impossibility-results) in economics and computer science. This page offers a brief overview of how the mechanism works.
+The remainder of this page gives an technical overview of how Saito Consensus works, starting from the perspective of a user who sends a transaction into the network.
 
 ### 1. HOW BLOCKS ARE PRODUCED
 
