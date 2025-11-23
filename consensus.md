@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2025-08-25T08:06:24.834Z
+date: 2025-11-23T12:32:18.971Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -10,9 +10,20 @@ dateCreated: 2022-02-17T10:09:00.217Z
 
 # Saito Consensus
 
-Saito Consensus is a distributed consensus mechanism provably secure against a specific type of [routing attack](/consensus/sybil-attacks) previously considered impossible to solve. This solution allows the network to issue a routing payment. The existence of this routing payment can be leveraged to sidestep several traditional [impossibility results](/consensus/impossibility-results) in economics and computer science. This page offers a brief overview of how the mechanism works.
+Saito Consensus is a distributed consensus mechanism provably secure against a specific type of [routing attack](/consensus/sybil-attacks) previously considered impossible to solve. This solution allows the network to issue a routing payment. 
 
-## 1. HOW BLOCKS ARE PRODUCED
+What follows is a high-level description of how Saito Consensus works. Readers with a deeper understanding of economics, distributed systems and mechanism design should visit our academic introduction, which explains how Saito achieves the "holy grail" in mechanism design as an distributed mechanism with an asymmetrical cost of state transitions.
+
+
+## Technical Overview
+
+This page gives an technical overview of how Saito Consensus works. While this explains **how** the mechanism works, it does not explain **why** it works, or how it solves the problems that we've r It explains **how** the mechanism works but not **why** it works. 
+
+
+
+The existence of this routing payment can be leveraged to sidestep several traditional [impossibility results](/consensus/impossibility-results) in economics and computer science. This page offers a brief overview of how the mechanism works.
+
+### 1. HOW BLOCKS ARE PRODUCED
 
 When users send transactions into the network they add cryptographic routing signatures which specify the first-hop node(s) to which they are sending their transactions. Nodes add similar signatures as they relay these transactions onwards to their own peers. As a result, all transactions included in blocks contain an unforgeable record of the path they have travelled from their originating user to the node that included it in a block.
 
@@ -20,7 +31,7 @@ Nodes compete to collect transactions to secure a kind of "routing work" that is
 
 Consensus adjusts the amount of "routing work" that nodes needs to propose blocks to target a desired blocktime: if blocks are produced more rapidly the "burn fee" rises, and if blocks are produced more slowly the "burn fee" falls. This difficulty criteria is known as the "burn fee" as once the block is produced all of the fees paid by the transactions within it are burned. This establishes a baseline cost that must be paid in equilibrium to propose a block.
 
-## 2. HOW NODES ARE PAID
+### 2. HOW NODES ARE PAID
 
 Once a block is produced a hashing competition begins. The competition works similarly to the mining puzzle in proof-of-work, except that instead of competing for the right to produce blocks, miners are competing for the right to resurrect and distribute the fees that were burned in the previous block.
 
@@ -30,7 +41,7 @@ The lottery first selects a transaction from the block, with each transaction we
 
 This process repeats block by block. Nodes burn in-network tokens to produce blocks, and then burn ex-network hash to resurrect them. Hashing difficulty adjusts upward if two blocks in a row are produced with golden tickets, and downwards if two blocks in a row are produced without golden tickets. This basic implementation achieves cost-of-attack at the price of significant deflationary pressure from the blocks whose fees are burned but never resurrected and redistributed by a golden ticket.
 
-## 3. AUTOMATIC TRANSACTION REBROADCASTING (ATR)
+### 3. AUTOMATIC TRANSACTION REBROADCASTING (ATR)
 
 ATR divides the blockchain into epochs of N blocks. Once a block falls out of the current epoch, its unspent transaction outputs (UTXO) become unspendable. But any UTXO which meet rebroadcast criteria must be re-included in the next block in ATR transactions. These transactions include the original transaction as embedded data, but provide new UTXO spendable by the original address.
 
@@ -38,7 +49,7 @@ The criteria for rebroadcasting is that the UTXO is unspent and contains enough 
 
 The UTXO may also be issued a staking payout on rebroadcasting. This ATR payout improves cost-of-attack by pulling fees away from attackers who spend their own money to produce blocks. It also improves censorship-resistance because attackers who prevent users from making transactions are forcing them into a state where the attacker must transfer them income. In addition to the economic and security benefits of this approach, we note that permissionless and permanent data storage finally becomes possible and economically sustainable through this mechanism. Anyone who wants the blockchain to store their data in perpetuity need only attach a large enough UTXO that the ATR payout issued matches or is greater than the ATR fee collected.
 
-## 4. MISCELLANEOUS IMPLEMENTATION DETAILS
+### 4. MISCELLANEOUS IMPLEMENTATION DETAILS
 
 The above description is a "pure" version of routing work that has several drawbacks: deflation is required to maintain security in equilibrium, cash-only attacks are possible, and extremely rich attackers may try to bias lottery payouts through strategies that radically increase the 
 
