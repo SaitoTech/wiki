@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-23T18:24:11.927Z
+date: 2025-11-23T18:28:27.705Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -12,7 +12,7 @@ dateCreated: 2025-11-23T15:28:21.939Z
 
 This page is intended as a concise, discipline-neutral introduction to **Saito Consensus** for readers with training in mechanism design, economics, or distributed systems. It exists to provide a clean map of the intellectual claims, and an understanding of where Saito is and is not bound by standard impossibility results.
 
-We do this in four sections, offering: (1) a short description of what is theoretically new in Saito - its creation of asymmetrically costly state transitions; (2) a brief explanation of the classical impossibility claims in economics and computer science that assume such asymmetry cannot exist; (3) a compact account of how Saito makes the solution possible in spite of those claims; and (4) a guide to the subpages that examine specific results in more depth, showing where Saito relaxes their assumptions or avoids being bound by them entirely.
+We do this in four sections, offering: (1) a short description of what is theoretically new in Saito -- asymmetrically costly state transitions; (2) a brief review of the classical impossibility claims in economics and computer science that assert such asymmetry cannot exist; (3) a compact account of how Saito makes the solution nonetheless possible; and (4) a guide to the subpages that examine these specific results in more depth, showing where Saito relaxes their assumptions or avoids being bound by them entirely.
 
 
 ## #1. What is New (asymmetrical costs)
