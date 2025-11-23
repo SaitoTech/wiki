@@ -2,7 +2,7 @@
 title: What is Saito
 description: An ELI5 description of what Saito Consensus is and why it matters...
 published: true
-date: 2025-11-23T10:51:54.600Z
+date: 2025-11-23T10:58:26.273Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T10:51:54.600Z
@@ -26,7 +26,7 @@ If you are interested in learning more about these economic problems, we have se
 
 Instead of paying for *extractive* forms of work like mining or staking, Saito makes the *contributive* work of "collecting fees" objectively observable in a decentralized environment by adding cryptographic routing signatures to transactions. Instead of hashing or staking for the right to produce blocks, we play a game where nodes that collect more money from users have an advantage producing blocks.
 
-As a result of this change, the nodes that contribute the most value to the network now produce the most blocks. And whenever a block is distributed, all of the nodes that receive the block can see who did the work of collecting the fees. Consensus can distribute the block reward to one of those nodes. Problem solved, right?
+As a result of this change, the nodes that contribute the most value to the network now produce the most blocks. And whenever a block is distributed, all of the nodes that receive the block can see who did the work of collecting the fees. Consensus can distribute the block reward to one of those nodes or divide it between the block producer and the routing nodes to keep both parties happy and well-fed. Problem solved, right?
 
 Except it isn't -- because all we have done is replace our earlier problem with a much harder one. As long as the node that produces any block has a chance of collecting the fees it contributes, it suddenly has an incentive to add "fake transactions" to blocks to improve its chance of producing the next block. And it is suddenly rational for routing ndoes to add fake "routing hops" to the transactions they forward so that they have a greater chance of collecting any payment that is sent to routing nodes.
 
@@ -34,48 +34,11 @@ Both forms of cheating make the solution unworkable. They seem to throw us back 
 
 And this is the real problem that Saito fixes.
 
-### How Saito Fixes this Problem
+### How Saito Fixes *Those* Problems
 
+Saito prevents attackers from spending their own money to attack consensus by making it more expensive for them to do that than use the transaction fees that honest users have routed to them. This
 
-
-But the 
-
-
-  whoever produces the block gets the right to collect the fees from how do we know that the transactions and fees that nodes are claiming to have collected didn't come from them?
-
-
-pays a transaction fee, pays the nodes that actually deliver transactions into the network. When earnings depend on contributing to the network rather than extracting from it, incentives shift in a healthier direction. (If you want more background, we have pages on the **Free-Rider Problem** and the **Tragedy of the Commons**.)
-
----
-
-## How Saito Fixes This Problem
-
-The key change is simple: **Saito pays for the work the network actually needs.**
-
-Nodes earn income by delivering transactions and bringing in the fees users are paying. This means:
-
-- earnings come from serving users  
-- the network’s incentives point outward, toward value creation  
-- nodes have reason to route and relay rather than extract  
-
-This fixes the core mispricing that causes extraction in other blockchains.
-
----
-
-## But This Creates a Secondary Problem
-
-If nodes earn money for helping the network, nothing stops them from trying to **use that money to buy block production**. A successful node could try to dominate consensus by outspending others, or a group of nodes could pool fees to seize control of block creation.
-
-In other words:  
-solving extraction by paying for routing work introduces a new incentive to attack consensus.
-
----
-
-## How Saito Fixes *Those* Problems
-
-Saito prevents earnings from being used to attack the chain by making harmful deviations **more expensive than honest behavior**.
-
-This asymmetry is the foundation of Saito consensus:
+The solution is mind-bending and ingenius. In the language of mechanism design, Saito makes harmful deviations **more expensive than honest behavior**, creating an asymmetrical cost of extending the chain that is the foundation of a new class of scalable consensus. In Saito-class mechanisms:
 
 - **It costs more to orphan a block than to build on it.**  
 - **This remains true even if you control a majority of network resources.**  
@@ -83,17 +46,21 @@ This asymmetry is the foundation of Saito consensus:
 
 Because deviation is privately costly, coalitions can’t profit by reorganizing the chain or spending their earnings to dominate production. The system favors cooperation by design.
 
+More importantly, 
+
 ---
 
-## What This Gives Us
+### What This Gives Us
 
 With aligned incentives and cost-asymmetric transitions, Saito exhibits properties that are difficult or impossible for traditional blockchains:
 
-- **51% attacks become unprofitable** — majority coalitions lose money by deviating.  
-- **Spam and state-bloat attacks are costly** — harmful state is expensive to add.  
-- **Sybil identities don’t help attackers** — extra nodes don’t earn extra reward.  
-- **Routing incentives are sustainable** — nodes earn for delivering data.  
-- **On-chain applications become practical** — social networks, marketplaces, games, chat, and video all run smoothly.  
-- **Blockspace supply adjusts naturally** — the network expands or contracts with demand.
+- **51% attacks become unprofitable**
+- **spam and state-bloat attacks are costly**
+- **sybil identities don’t help attackers**
+- **routing infrastructure is sustainable**
+- **on-chain applications self-fund**
+
+The biggest shift in the network is that fees can now securely flow to the nodes that collect them from users, and the network itself starts to organically respond to whatever value it provides users.
+
 
 Saito is what a blockchain looks like when the core incentives are aligned with the work required to operate the network.
