@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-11-23T09:51:47.936Z
+date: 2025-11-23T11:53:00.212Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -17,15 +17,15 @@ dateCreated: 2021-11-09T07:50:58.627Z
 
 Saito is a Layer-1 blockchain that pays the nodes in the peer-to-peer network instead of miners or stakers. While this may sound like a narrow technical fix, the solution Saito proposes addresses a longstanding problem at the intersection of computer science and economics.
 
-This Wiki explains what these problems are, the kind of applications we can build by fixing them, and how you can help build and run the network. If you’re new to Saito and want to try it out, you can skip this site entirely and explore the [live network](https://saito.io). Otherwise....
+This Wiki explains what these problems are, the kind of applications we can build by fixing them, and how you can help build and run the network. If you’re new to Saito and want to try it out, you can skip this site entirely and explore the [live network](https://saito.io).
 
-## Users
+## For Users
 
 Learn what Saito is, explore applications, and try things out.
 
-- **What is Saito** → *[Introduction](#)*  
-- **Applications you can use today** → *[Applications](#)*  
-- **Smart NFTs and tokens** → *[Smart NFTs](#)*  
+- **What is Saito** → *[Introduction](/consensus/about)*  
+- **Applications you can use today** → *[Applications](/applications)*  
+- **Smart NFTs and tokens** → *[Smart NFTs](/nfts)*  
 
 Crypto OG? If you remember what blockchain was like when things were smaller and more hands-on, our **nft recipes** section showcases things Saito can do that other chains simply can't -- and may even turn you into a developer before you realize it!
 
