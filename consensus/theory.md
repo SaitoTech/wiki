@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-23T18:08:31.097Z
+date: 2025-11-23T18:12:42.656Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -53,23 +53,21 @@ Three structural features stand out:
 
 1. **Routing Signatures and Observable Forwarding:** every transaction carries a cryptographically-verifiable record of its forwarding path. This makes the contribution of each node in the path observable in a way that is impossible in traditional permissionless systems. The mechanism can now condition both costs and rewards on verifiable contribution rather than unverifiable claims.
 
-2. **Diverging Routing-work Operators:** Each fee-bearing transaction can be decomposed into a position-weighted metric. And the result can be evaluated through two valuation operators:
-- a local operator that determines individual cost of proposal
-- a cumulative operator that determines share of social payout
-
-As routing paths lengthen, these two valuation functions diverge:
-the marginal cost of proposing a block rises faster than the marginal expected payout.
-This divergence gives the mechanism a lever with which to impose strictly higher costs—and strictly lower expected rewards—on inefficient forwarding or sybil-inflated paths.
+2. **Diverging Routing-work Operators:** Each fee-bearing transaction is decomposed into position-weighted routing work. This single dataset can be evaluated through two valuation operators, which diverge as path-length grows, giving the mechanism a lever with which to impose higher costs lower rewards for nodes in inefficient or sybil-inflated routing paths.
 
 3. **Topology Drives Feasibility.** Saito creates an endogenous, monotonic, mechanism-level ordering over routing paths that makes inefficient (or sybil-inflated) paths strictly dominated because unnecessary message-passing raises costs faster than they raise expected reward.
 
-These three factors drive the emergence of the asymetrically-costly proposals highlighted in Section #1.
+Taken together, these primitives produce the asymmetrically costly state transitions described in Section #1. Proposal cost is tied directly to routing efficiency, while the chain-selection process favors blocks whose routing paths minimize inefficiency.
 
-Because proposal cost depends on routing efficiency, and the longest chain is selected for efficiency, coalitions that attempt to orphan honest blocks must mimic the efficiency of the blocks they are orphaning, which requires contributing more of their own funds to blocks (and the immediately burn) than honest extenders needed to do so contribute to theirs.
+As a result:
 
-The orphaning of the block also immediately refunds any burned tokens belonging to the orphaned producer triggered by that block. So orphaning not only imposes costs on attackers, but refunds costs paid by honest nodes.
+- A coalition attempting to orphan an honest block must mimic the honest block’s efficiency, which requires spending more of its own funds than the honest block producer had to spend.
 
-And because their costs are certain but payouts fractional and probabilistic, the attackers suffer losses in expectation on a known portion of the fees-in-block. With proper design, this implicit tax can be increased to the point it outweighs any benefits the producer can gain from orphaning the honest block, creating a cost gap for attackers that holds across a wide range of resource distributions, including cases where an attacker controls a large fraction of the network.
+- The attacker’s costs are certain, while his expected refunds are fractional and probabilistic.
+
+- Orphaning also refunds the honest producer’s costs while leaving the attacker with sunk, unrecoverable expenses on their own proposed chain.
+
+With appropriate design parameters, this inherent efficiency gap makes adversarial reorganization loss-making in expectation even when attackers control a large fraction of the network’s resources. This is the economic core of Saito-class consensus.
 
 ---
 
