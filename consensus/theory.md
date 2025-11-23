@@ -2,17 +2,17 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-23T17:53:34.810Z
+date: 2025-11-23T18:08:31.097Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
 ---
 
-# Theory & Research — Saito Consensus
+# Theory & Research
 
-This page is intended as a concise, discipline-neutral introduction to **Saito Consensus** for readers with training in mechanism design, economics, or distributed systems. It exists to provide a clean map of the intellectual claims, and an understanding where Saito is and is not bound by standard impossibility results.
+This page is intended as a concise, discipline-neutral introduction to **Saito Consensus** for readers with training in mechanism design, economics, or distributed systems. It exists to provide a clean map of the intellectual claims, and an understanding of where Saito is and is not bound by standard impossibility results.
 
-The rest of this page contains four sections: (1) a short description of what is theoretically new in Saito—namely, its use of asymmetrically costly state transitions; (2) a brief explanation of the classical impossibility claims in economics and computer science that assume such asymmetry cannot exist; (3) a compact account of how Saito makes the solution possible in spite of those claims; and (4) a guide to the subpages that examine specific results in more depth, showing where Saito relaxes their assumptions or avoids being bound by them entirely.
+We do this in four sections, offering: (1) a short description of what is theoretically new in Saito - its creation of asymmetrically costly state transitions; (2) a brief explanation of the classical impossibility claims in economics and computer science that assume such asymmetry cannot exist; (3) a compact account of how Saito makes the solution possible in spite of those claims; and (4) a guide to the subpages that examine specific results in more depth, showing where Saito relaxes their assumptions or avoids being bound by them entirely.
 
 
 ## #1. What is New (asymmetrical costs)
@@ -47,11 +47,19 @@ The impossibility results that follow in both fields flow directly from this ass
 
 ## #3. Technical Implementation
 
-What exactly is new about Saito-class mechanisms, at the level of mechanism primitives, that creates the asymmetry described in Section 1 and justifies relaxing the assumptions imposed on us in Section 2? Several factors predominate:
+What, precisely, is new about Saito-class mechanisms at the level of mechanism primitives and how do these primitives create the asymmetry introduced in Section #1 while relaxing the assumptions of the papers listed in Section #2?
 
-1. **Routing signatures and observable forwarding.** Every transaction carries a cryptographic record of its forwarding path. The protocol can therefore verify, for each node, its observable contribution to the collection of fee-bearing transactions for eventual burning and resurrection through the costly payout lottery.
+Three structural features stand out:
 
-2. **Routing-work accounting.** Fees are decomposed into position-weighted routing work. These weights can be used in isolation or summed to create variable ratios that diverge as routing paths increase in length. The growing divergence between the cost of proposing blocks (regulated by the former) and the expected payout (regulated by the latter) is exploited to impose losses on deviating agents in off-equilibrium paths. Costs become higher and guaranteed while refunds are lower (in expectation) and uncertain.
+1. **Routing Signatures and Observable Forwarding:** every transaction carries a cryptographically-verifiable record of its forwarding path. This makes the contribution of each node in the path observable in a way that is impossible in traditional permissionless systems. The mechanism can now condition both costs and rewards on verifiable contribution rather than unverifiable claims.
+
+2. **Diverging Routing-work Operators:** Each fee-bearing transaction can be decomposed into a position-weighted metric. And the result can be evaluated through two valuation operators:
+- a local operator that determines individual cost of proposal
+- a cumulative operator that determines share of social payout
+
+As routing paths lengthen, these two valuation functions diverge:
+the marginal cost of proposing a block rises faster than the marginal expected payout.
+This divergence gives the mechanism a lever with which to impose strictly higher costs—and strictly lower expected rewards—on inefficient forwarding or sybil-inflated paths.
 
 3. **Topology Drives Feasibility.** Saito creates an endogenous, monotonic, mechanism-level ordering over routing paths that makes inefficient (or sybil-inflated) paths strictly dominated because unnecessary message-passing raises costs faster than they raise expected reward.
 
@@ -67,43 +75,39 @@ And because their costs are certain but payouts fractional and probabilistic, th
 
 ## More Information:
 
-The following section contain links to subpages that discuss the specific papers and impossibility results mentioned above, demonstrating exactly where the results apply to routing work mechanisms, and where the results do not.
+The following section contain links to subpages that discuss the specific papers and impossibility results mentioned above, demonstrating exactly which results apply and do not apply to routing work mechanisms.
 
 **Start with Saito**
 - [A Simple Proof of Sybil-Proof (Lancashire, Parris, 2023)](https://github.com/SaitoTech/papers/tree/e32c51db6aae071a41b7e481d0f5ba6cd75ec12d/sybil)
 mathematical proof of sybil-proofness of the mechanism, containing the Hurwicz' "formula" for the mechanism in five succinct bullet points on its first page.
 
-**Distributed-systems context**
-- `/consensus/theory/distributed-systems.md` — precise relation to FLP, Bracha–Toueg, DLS; which model axioms we change
-- `/consensus/theory/consensus-properties.md` — safety, liveness, economic finality (informal → formal)
 
 **Mechanism-design & economics**
 - `/consensus/theory/revelation-principle.md` — Foundations Note: why standard direct-mechanism reductions fail when supply and feasibility are endogenous
 - `/consensus/theory/asymmetric-cost.md` — formal development of cost-asymmetry and its implementability consequences
 - `/consensus/theory/collective-action.md` — free-rider and tragedy-of-the-commons framing for routing work
 
-**Security /攻撃 revisited as economic deviations**
-- `/consensus/theory/sybil-proof.md` — *A Simple Proof of Sybil-Proofness*: rigorous statement and proof sketch; assumptions and limits
-- `/consensus/theory/majoritarian-attacks.md` — reframe 51% as *costless orphaning*; formal cost bounds
-- `/consensus/theory/censorship.md` — ATR and incentive paths that convert censorship into an economic liability
 
-**Supplementary & references**
+**Distributed-Systems**
+- `/consensus/theory/distributed-systems.md` — precise relation to FLP, Bracha–Toueg, DLS; which model axioms we change
+- `/consensus/theory/consensus-properties.md` — safety, liveness, economic finality (informal → formal)
+
+
+**Supplementary & References**
 - `/consensus/theory/math-appendix.md` — formal lemmas, notation, and proofs
 - `/consensus/theory/bibliography.md` — selected literature (Bracha–Toueg, Dwork–Lynch–Stockmeyer, Babaioff et al., Hurwicz, Maskin, etc.)
 
----
 
 ## What Saito does *not* claim
 
-To keep the academic case clean, we explicitly list limitations:
+A final comment To keep the academic case clean, we explicitly list limitations:
 
-- Saito does **not** prevent all reorganizations; it prevents *costless* reorganizations (i.e., reorganizations that are not strictly more expensive than honest extension).
+- Saito does **not** prevent all reorganizations; it merely prevents *costless* reorganizations in expectation in equilibrium.
 
-- Saito does **not** eliminate all coordination risks, it merely provides agents with the ability to model the cost-of-attack on the mechanism and develop strategies based on that understanding. 
+- Saito does **not** eliminate all coordination risks, it merely provides agents with the ability to model the cost-of-deviation of counterparties interacting with it through the mechanism and develop strategies based on that model.
 
-- Physical-layer attacks (eclipse, long-term censorship at the ISP level) remain out of scope for the protocol alone and require network-layer defenses.
+- Physical-layer attacks (eclipse, long-term censorship at the ISP level) remain out of scope for the protocol; it merely addresses profitable economic and technical deviations within the mechanism.
 
-Being explicit about these limits is essential for clear assessment and for formal models.
 
 ---
 
@@ -115,18 +119,6 @@ Being explicit about these limits is essential for clear assessment and for form
 
 ---
 
-## Next steps (how this section will be completed)
-
-1. Convert each bullet above to a full subpage with formal definitions and proofs.  
-2. Add a short technical appendix describing protocol primitives used in proofs (routing signatures, routing-work formula, ATR rules).  
-3. Publish a self-contained Foundations Note (revelation-principle limitations) and a companion short paper summarizing the sybil-proof proof for non-specialists.
-
----
-
 ### References & further reading
 
 See the bibliography page for canonical references and the technical papers linked from the subpages. Key starting points include: Babaioff et al. (*On Bitcoin and Red Balloons*), Dwork–Lynch–Stockmeyer, Bracha–Toueg, Hurwicz (revelation principle), and our sybil-proof paper.
-
----
-
-*If you want, I can now draft the individual subpage for one of the following (pick one): the Foundations Note on the Revelation Principle, the Sybil-Proof proof sketch, or the Majoritarian Attacks formal page.*
