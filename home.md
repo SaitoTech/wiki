@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-08-26T04:47:58.920Z
+date: 2025-11-23T09:36:58.019Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -15,20 +15,53 @@ dateCreated: 2021-11-09T07:50:58.627Z
 .cls-1{fill:rgb(247, 31, 61);}
 </style>
 
-Saito is a L1 blockchain that solves several theoretical problems at the intersection of computer science and economics. Key to the solution is the existence of an unsybillable routing payout that rewards the fee-collecting nodes in the network for the work they do attracting and servicing users. A description of how the consensus mechanism works can be [found here](/consensus).
+Saito is a Layer-1 blockchain that pays the nodes in the peer-to-peer network instead of miners or stakers. While this may sound like a narrow technical fix, the solution Saito proposes addresses a longstanding problem at the intersection of computer science and economics.
 
-The ability to correct incentive misalignments that are insolvable in proof-of-work and proof-of-stake mechanisms puts Saito Consensus into a league of its own. Rather than paying for extractive forms of work like hashing or staking, Saito pays the nodes that feed data to users and route their transactions into the network. Nodes suddenly compete to contribute rather than extract wealth from the network.
+This Wiki explains what these problems are, the kind of applications we can build by fixing them, and how you can help build and run the network. If you’re new to Saito and want to try it out, you can skip this site entirely and explore the live network here:
+
+👉 https://saito.io
+
+Otherwise, what you’re looking for probably depends on what brings you to Saito.
+
+## Users
+
+Learn what Saito is, explore applications, and try things out.
+
+- **What is Saito** → *[Introduction](#)*  
+- **Applications you can use today** → *[Applications](#)*  
+- **Smart NFTs and tokens** → *[Smart NFTs](#)*  
+
+Crypto OG? If you remember what blockchain was like when things were smaller and less corporate, the **nft recipes** section is worth a visit. It shows how Saito lets you do things that aren’t possible on other chains, and may even turn you into a developer without you realizing it!
 
 
-In addition to information the network and our applications, this wiki also contains information on our [project history and roadmap](/roadmap), details on the network [tokenomics](/tokenomics) and step-by-step [tutorials](/tutorials) on how to get started. Or you can skip the documentation and just go [try out Saito directly](https://saito.io/redsquare).
+## Developers 
+
+Learn to set-up nodes and build applications that run directly on-chain.
+
+- **How to run a node** → *[Node Setup](#)*  
+- **How to build modules** → *[Developer Guide](#)*  
+- **Transaction formats and routing** → *[Technical Reference](#)*  
+- **Examples and tutorials** → *[Tutorials](#)*  
+
+Tired of asking for permission? Saito’s developer experience removes the usual friction devs face. There's no need to  are no compilers, no DSLs, no API-keys. separate contract languages—just code, running where users actually are.
+
+....
+
+
+## Theorists
+
+Our research sections assumes familiarity with distributed systems, collective action problems, and mechanism design. Here you can find material on how Saito works at a deeper level.
+
+- **How Saito consensus works** → *[Consensus Overview](#)*  
+- **Routing incentives and fee circulation** → *[Routing & Incentives](#)*  
+- **Endogenous supply and resource balance** → *[Mechanism Design Notes](#)*  
+- **Sybil resistance and deviation analysis** → *[Security & Economics](#)*  
+
+👉 *Go to the [Theory & Research Section](#)*
+
+Iconoclast? Be sure to visit out page on how Saito skirts the classic impossibility results that affect other blockchain mechanisms. This is cutting-edge stuff that is not widely understood yet in academia and industry.
+
+- - - - - 
 
 Want to help? This wiki is a community-maintained knowledge base. We could use help keeping our documentation updated, and improving the resources that exist here to help others understand why Saito matters and how they can help us build the world's most powerful and secure permissionless network -- we have a page here on [how to contribute](/community/wiki).
-
-
-## External Links
-
-[Saito Whitepaper](https://saito.io/saito-whitepaper.pdf)
-[Saito Redsquare](https://saito.io/redsquare/)
-[Saito Arcade](https://saito.io/arcade/)
-[How to Buy Saito](https://wiki.saito.io/en/tokenomics#where-to-buy-saito)
 
