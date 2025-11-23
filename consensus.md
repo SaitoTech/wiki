@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2025-11-23T13:13:03.017Z
+date: 2025-11-23T13:37:32.139Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -45,7 +45,5 @@ The UTXO may also be issued a staking payout on rebroadcasting. This ATR payout 
 
 ### IN CLOSING
 
-Readers show note the above description is a "pure" version of routing work that has several drawbacks: deflation is required to maintain security in equilibrium, cash-only attacks are possible, and extremely rich attackers may try to bias lottery payouts through strategies that radically spike fee-throughput.
-
-The production implementation of Saito eliminates these attacks through simple modifications which can be found in our page on [implementation nodes](/consensus/implementation-notes). 
+For details on implementation refinements and security mitigations, see our [implementation nodes](/consensus/implementation-notes).
 
