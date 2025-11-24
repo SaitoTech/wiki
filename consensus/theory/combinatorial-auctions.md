@@ -2,7 +2,7 @@
 title: Saito and Combinatorial Auction Theory
 description: 
 published: true
-date: 2025-11-24T18:55:53.637Z
+date: 2025-11-24T18:59:21.726Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T16:07:02.685Z
@@ -94,10 +94,12 @@ Reducing the size of the transaction or shifting to private broadcast increases 
 
 ## 4. Incentive Alignment Through Revealed Preference
 
-The fact that changes to bidding and broadcast strategy increases welfare for users in expectation allows routing mechanism to guarantee in expectation that:
+Rational users will make changes to their bidding and broadcast strategies only when they expect those changes to be welfare-increasing in expectation. This corresponds to Hurwicz' requirement that agents (locally) make welfare-increasing proposals.
+
+The fact that the chain itself aggregates those proposals into the most-efficient combination of proposals and uses those to adjust pricing in equilibrium then provides selective pressure which allows routing mechanism to guarantee in expectation that:
 
 - actions that raise welfare are cheap or profitable  
 - actions that lower welfare are costly or punished  
-- deviation gains correspond to missing welfare-improving trades
+- deviations correspond to missed welfare-improving trades
 
-Thus, routing-work mechanisms indirectly implement **efficient combinatorial trade**—without needing direct revelation, without a central auctioneer, and without reconstructing infinite-dimensional preference maps.
+Thus, routing-work mechanisms indirectly implement **efficient combinatorial trade** without needing direct revelation, without needing a central auctioneer, and without reconstructing infinite-dimensional preference maps.
