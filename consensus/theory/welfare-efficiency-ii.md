@@ -2,7 +2,7 @@
 title: Implementing Welfare Efficiency via Saito Consensus
 description: 
 published: true
-date: 2025-11-24T21:57:47.497Z
+date: 2025-11-24T22:01:28.534Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T21:04:59.989Z
@@ -20,9 +20,10 @@ dateCreated: 2025-11-24T21:04:59.989Z
 
 Saito Consensus is built around a simple insight taken directly from classical implementation theory: **actions with observable consequences can serve as messages in a mechanism**. 
 
-The purpose of this page is twofold. We first show that achieving welfare optimality requires an expansion of the message space beyond costless type reports. We then show that how Saito implements this permits the mechanism to naturally filter out welfare-reducing deviations.
+The purpose of this page is twofold. We first show that achieving welfare optimality requires an expansion of the message space beyond costless type reports. We then show that how Saito implements this permits the mechanism to naturally filter out welfare-reducing deviations. 
 
 This provides a conceptual way to understand how Saito can implement a welfare efficient outcome as a decentralized mechanism. We start by conceptualizing a version of the mechanism with the smallest possible message space.
+
 
 ## 1. The Baseline Mechanism
 
@@ -38,7 +39,7 @@ Likewise, without the ability to take joint action in the assembling of portfoli
 
 ## 2. Expanding the Message Space
 
-Implementing a welfare-efficient equilibrium requires our mechanism to offer a way for agents to make welfare-increasing trade-offs. This requires an expansion in the message space in which actions can carry welfare-relevant information. But to ensure that only welfare-increasing proposals dominate in equilibrium, the use of this expanded part of the message space must be costly.
+Implementing a welfare-efficient equilibrium requires our mechanism to offer a way for agents to make welfare-increasing trade-offs. This requires an expansion in the message space in which actions can carry welfare-relevant information. But to ensure that only welfare-increasing proposals dominate in equilibrium, the use of this expanded part of the message space must be costly, because only costly messages can filter the infinite preference space down to welfare-improving proposals.
 
 Saito accomplishes this by adding cryptographic routing signatures to transactions. As Hurwicz emphasized, and as we discuss in our page on [direct and indirect mechanisms](/consensus/theory/indirect-mechanisms), this mechanistic expansion fits the strict requirements of implementation theory for messages within decentralized mechanisms:
 
