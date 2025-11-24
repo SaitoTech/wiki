@@ -2,7 +2,7 @@
 title: Saito and Combinatorial Auction Theory
 description: 
 published: true
-date: 2025-11-24T19:03:55.533Z
+date: 2025-11-24T19:06:27.637Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T16:07:02.685Z
@@ -62,43 +62,40 @@ The same principle is in play in Saito Consensus. Instead of asking users to rep
 
 Broadcast strategy combines with bidding strategy to allow Saito to function as a revealed-preference mechanism. Agents do not communicate their types directly; instead, they choose broadcast strategies that are optimal given their private valuations, and the mechanism infers only the information necessary for allocation from the resulting network-level observables. This aligns precisely with the role of actions in indirect mechanism design as articulated by Hurwicz and formalized in modern implementation theory: when full type revelation is impossible, the mechanism must structure incentives such that *behavioral signals* substitute for explicit reports.
 
-
 ## Technical Implementation
 
-Readers interested in the protocol-level details should consult our simplified network description at [/consensus]. Below we provide a more abstract explanation of how Saito manages the combinatorial allocation problem. It does this by creating a three-way trilemma between blockspace, time and collusion utility, and allowing agents to navigate it by tweaking their: (i) **broadcast strategy** and (ii) **bidding choice**.
+Readers interested in the protocol-level details should consult our simplified network description at [/consensus]. Below we provide an abstract explanation of how Saito manages the combinatorial allocation problem by creating a three-way trade-off between blockspace, time, and collusion utility, and allowing agents to navigate it by adjusting their: (i) **broadcast strategy** and (ii) **bidding choice**.
 
-### starting with a Dutch Clock Auction...
+### we start with a Dutch Clock Auction...
 
-Saito Consensus uses an iterating Dutch clock auction to regulate block production. The cost of producing a block adjusts to keep production constant in equilibrium, which  means the *burn fee* variable that determines the price of block production acts as a continuous market price for transaction inclusion over time.
+Saito Consensus uses an iterating Dutch clock auction to regulate block production. The cost of producing a block adjusts to keep production constant in equilibrium, which means the *burn fee* variable that determines the price of block production acts as a continuous market price for transaction inclusion over time.
 
-Any user who requires immediate fulfillment can always pay the current price and obtain inclusion directly by producing a block themselves. Users who prefer cheaper inclusion or leveraging their bid to secure collusion utility must instead enter the portfolio-bidding process, and navigate a trilemma that the mechanism creates between all three classes of utility through their choice of broadcast and bidding behavior.
+Any user who requires immediate fulfillment can always pay the current price and obtain inclusion directly by producing a block themselves. Users who prefer cheaper inclusion, or who wish to leverage their bid to secure collusion utility, instead enter the portfolio-bidding process and navigate the trilemma the mechanism creates between all three classes of utility through their choice of broadcast and bidding behavior.
 
-### creates the essential trilemma...
+### then add the potential for collusion...
 
-The *burn fee* locks the price of space/time for agents who have no desire for collusion utility, cooperating with other agents to compile a competitive bid opens the possibility of collusion, as the routing payout (refund) offered by the mechanism is transferred in expectation to the node that submits the winning portfolio.
+The *burn fee* locks in the price of space/time for agents who have no desire for collusion utility. Cooperating with other agents to compile a competitive portfolio bid opens the possibility of collusion, as the routing payout (refund) offered by the mechanism is transferred in expectation to the node that submits the winning portfolio.
 
 Saito manages this by making **broadcast strategy** a strategic choice within the mechanism. When users seek to cooperate in the submission of portfolio bids, multi-broadcast ensures forward propagation through the sybil-proof properties of the mechanism, ensuring any bid reaches the maximum number of nodes as quickly as possible.
 
-More restricted distribution is necessary for the purchase of "collusion utility" as reducing competition for collection of the fee is necessary to afford the producer a higher marginal profitability in expectation, which is needed to rationally justify the provision of additional forms of collusion utility in return.
+More restricted distribution is necessary for the purchase of "collusion utility," since reducing competition for fee collection increases the expected profitability of any single producer. That higher surplus is what rationally justifies the provision of additional forms of collusion utility in return.
 
-This creates a three-way tradeoff (trilemma) where the sybil-proof properties of the mechanism turn broadcast strategy into an observable indicator of preference for collusion goods. More importantly, because every form of utility can be traded-off against any other, at any arbitrary fee level, agents have strategies to granularly optimize their welfare:
+This creates a three-way tradeoff (trilemma) where the sybil-proof properties of the mechanism turn broadcast strategy into an observable indicator of preference for collusion goods. More importantly, because every form of utility can be traded off against any other, at any arbitrary fee level agents have strategies to granularly optimize their welfare:
 
-- More Space
-Agents can accept slower confirmation in expectation, or shift a larger portion of their fee to public broadcast strategy.
+- **More Space**  
+  Agents can accept slower confirmation in expectation, or shift a larger portion of their fee to public broadcast strategy.
 
-- Faster Inclusion
-Agents can reduce the size of their transactions, or ask colluding producers to divest a portion of their surplus to self-generate routing work and speed up their production of blocks, trading some collusion utility for faster-inclusion.
+- **Faster Inclusion**  
+  Agents can reduce the size of their transactions, or ask cooperating producers to allocate part of their surplus to generate additional routing work and speed up block production, trading some collusion utility for faster inclusion.
 
-- More Side-Benefits
-Reducing the size of the transaction or shifting to private broadcast increases the profitability of the block producer, enabling more side-benefits.
+- **More Side-Benefits**  
+  Reducing the size of the transaction or shifting to private broadcast increases the profitability of the block producer, enabling more side-benefits.
 
 In short:
 
-- adjust fee → space/time tradeoff
-- adjust broadcast → time/collusion tradeoff
+- adjust fee → space/time tradeoff  
+- adjust broadcast → time/collusion tradeoff  
 - adjust transaction size → space/collusion tradeoff
-
-
 
 ## 4. Incentive Alignment Through Revealed Preference
 
