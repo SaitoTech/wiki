@@ -2,7 +2,7 @@
 title: Direct and Indirect Mechanisms in Implementation Theory
 description: 
 published: true
-date: 2025-11-24T04:39:30.139Z
+date: 2025-11-24T04:40:04.950Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T04:20:25.573Z
@@ -64,8 +64,5 @@ Once the Revelation Principle fails, a large number of impossibility results tha
 
 - **Bracha–Toueg (1985) and Dwork–Lynch–Stockmeyer (1988)**  
   Byzantine impossibility results that assume message-only communication and prohibit the use of action-generated incentives.
-
-- **Transaction Fee Market (TFM) Results in the Computer Science Literature**  
-  These models treat blockspace as a single-parameter private good and assume direct-revelation environments with independent valuations, assumptions violated by routing-work mechanisms.
 
 Each of these papers is discussed more thoroughly elsewhere in the Wiki. 
