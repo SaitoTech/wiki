@@ -2,7 +2,7 @@
 title: Introduction to Saito for Theorists
 description: 
 published: true
-date: 2025-11-24T09:35:00.976Z
+date: 2025-11-24T09:48:00.084Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T09:35:00.976Z
@@ -24,7 +24,7 @@ This creates a persistent cost asymmetry: to orphan an honest block, attackers m
 This single structural change shifts the set of profitable deviations and opens a class of implementable outcomes that are infeasible under symmetric-cost models such as standard POW and POS mechanisms. 
 
 
-## #2. Classic Impossibility Claims
+## #2. Isn't that Impossible?
 
 Existing impossibility results in both distributed systems and economics rely on a set of background assumptions that are almost never questioned — including the assumption that **asymmetrically costly state transitions cannot be implemented in a permissionless setting.**
 
