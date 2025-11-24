@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-24T01:48:21.597Z
+date: 2025-11-24T01:52:37.078Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -72,14 +72,14 @@ With appropriate design parameters, this inherent efficiency gap makes adversari
 
 The following section contain links to specific documents or - in the case of academic impossibility claims - to subpages that discuss the specific pimpossibility results in order to show directly which results apply and do not apply to routing work mechanisms.
 
-**Start with Saito**
+**Core Saito Documents**
 - [A Simple Proof of Sybil-Proof](https://github.com/SaitoTech/papers/tree/e32c51db6aae071a41b7e481d0f5ba6cd75ec12d/sybil) (Lancashire, Parris, 2023)
-mathematical proof of sybil-proofness of the mechanism, also useful for containing Hurwicz' *formula* for the mechanism in five succinct bullet points on its first page.
+This paper shows mathematical proof of sybil-proofness of Saito Consensus as a routing mechanism, and is also useful for containing Hurwicz' *formula* for the mechanism in five succinct bullet points on its first page.
 - [Saito Whitepaper](https://saito.io/saito-whitepaper.pdf) (Lancashire, Parris, 2018)
 original whitepaper, providing a brief explanation of the Tragedy of the Commons and Free Rider problems instantiate in most blockchains, and how routing work eliminates both problems on the incentive level, unleashing emergent scale and incentive compatibility.
 
 **Economics and Mechanism Design**
-- Direct and Indirect Mechanisms in Implementation Theory
+- [Direct and Indirect Mechanisms in Implementation Theory](/consensus/theory/indirect-mechanisms)
 This page explains how mechanism design distinguishes between *messages* (cheap, unverifiable statements) and *actions* (costly or verifiable behaviors). Routing-work mechanisms expand the message space to include actions that carry real economic cost, breaking the symmetry assumptions that Hurwicz identified as central to classical impossibility results.
 
 - Hurwicz, Maskin, Myerson and the Revelation Principle
