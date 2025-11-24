@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-24T09:53:07.664Z
+date: 2025-11-24T19:27:17.404Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -28,7 +28,7 @@ original whitepaper, providing a brief explanation of the Tragedy of the Commons
 - [Direct and Indirect Mechanisms in Implementation Theory](/consensus/theory/indirect-mechanisms)
 This page explains how mechanism design distinguishes between *messages* (cheap, unverifiable statements) and *actions* (costly or verifiable behaviors). Routing-work mechanisms expand the message space to include actions that carry real economic cost, breaking the symmetry assumptions that Hurwicz identified as central to classical impossibility results.
 
-- Myerson–Satterthwaite & Green–Laffont Applicability
+- [Myerson–Satterthwaite & Green–Laffont Applicability](/consensus/theory/welfare-efficiency)
 This page examines the conditions required for implementing welfare-efficient equilibria in informationally decentralized mechanisms, focusing on the bilateral-trade (Myerson–Satterthwaite) and public-good (Green–Laffont) impossibility theorems. Routing-work mechanisms violate core assumptions—such as free deviations and type-report-only messages—and therefore fall outside the scope of these impossibility claims.
 
 - [Welfare-Improving Trade Lemmas (Combinatorial Auction Theory](/consensus/theory/combinatorial-auctions)
