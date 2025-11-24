@@ -2,7 +2,7 @@
 title: Bracha and Toueg
 description: 
 published: true
-date: 2025-11-24T23:31:21.068Z
+date: 2025-11-24T23:35:37.595Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T23:31:21.068Z
@@ -41,58 +41,42 @@ This impossibility result is driven by one factor:
 
 **Byzantine processes can equivocate freely without penalty**
 
-The underlying reason that costless equivocation is so damaging is simple. Because bad actors can send different, conflicting messages to different recipients without penalty, honest processes cannot distinguish delay from deception and cannot coordinate to punish deceivers.
 
 ## 2. Why the Bracha–Toueg Assumptions Fail in Saito
 
-Routing-work mechanisms like Saito Consensus break the core symmetry that Bracha–Toueg rely on:
+The underlying reason that costless equivocation is so damaging in this model is simple. Because bad actors can send different, conflicting messages to different recipients without penalty, honest processes cannot distinguish delay from deception and coordinate to punish deceivers.
 
-### **A. Messages are not free.**
-
-Proposing different blocks create **different economic costs** which must be borne by the proposer, depending on:
+And this is why routing-work mechanisms like Saito Consensus break the core symmetry that Bracha–Toueg, since proposing different blocks creates **different economic costs** which must be borne by the proposer, depending on:
 
 - the set of transactions included in the block
 - the way in which they were routed into the network
 - if any fees involved were contributed by the proposer
 
-### **B. Equivocation is economically asymmetric.**  
-
-Sending different “views of the chain” to different peers is *not free*:
+Sending different “views of the chain” to different peers is also *not free*:
 
 - it requires burning money to propose fraudulent blocks, or
 - it destroys the sender’s expected routing payout, or
 - it provokes competitive block production that lowers profit, or 
 - it changes the price of block creation or fee unlock in a way that is harmful to the equivocator.
 
-### **C. The environment creates real, observable consequences.**  
-
-Because Saito uses **costly, behavior-generated signals**, the act of producing, forwarding, or withholding transactions:
-
-- changes the actor’s economic payoff,  
-- changes the payoffs of others,  
-- and is **verifiable** through cryptographic signatures and chain state.
-
-This breaks the “all deviations are free” assumption which drives the impossibility proof.
+These changes fundamentally break the “all deviations are free” assumption which drives the impossibility proof, and make the proof non-binding on Saito Consensus.
 
 
 ## 3. Conclusion
 
-In Saito Consensus a Byzantine actor can still misbehave — but they cannot do so *for free*, since every deviation consumes real resources. And that means they cannot do it in perpetuity.
-
-Bracha–Toueg proves a powerful impossibility — but only for systems where:
+Bracha–Toueg proves a powerful impossibility result — but only for systems where:
 
 - all deviations are costless,  
 - messages carry no economic meaning,  
 - Byzantine actors face no penalty,  
 - and honest actors cannot distinguish malice from delay.
 
-Routing-work mechanisms like Saito eliminate these assumptions.  
-They operate in an **action-based economic environment** where:
+Routing-work mechanisms like Saito eliminate these assumptions by switching to an **action-based economic environment** where:
 
 - equivocation is expensive,  
 - honest behavior is rewarded,  
 - the network conditions outcomes on real, verifiable work,  
 - and the symmetry needed for classical impossibility results is absent.
 
-Therefore, **Bracha–Toueg does not apply to Saito Consensus**, just as [Myerson–Satterthwaite and Green–Laffont](/consensus/theory/welfare-efficiency) do not apply in the economic domain.
+As such, **Bracha–Toueg does not apply to Saito Consensus** in the computer science domain, just as [Myerson–Satterthwaite and Green–Laffont](/consensus/theory/welfare-efficiency) do not apply in the economic domain.
 
