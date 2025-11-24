@@ -2,7 +2,7 @@
 title: Saito and Combinatorial Auction Theory
 description: 
 published: true
-date: 2025-11-24T18:55:48.708Z
+date: 2025-11-24T18:55:53.637Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T16:07:02.685Z
@@ -91,8 +91,6 @@ Agents can reduce the size of their transactions, or ask colluding producers to 
 
 - More Side-Benefits
 Reducing the size of the transaction or shifting to private broadcast increases the profitability of the block producer, enabling more side-benefits.
-
----
 
 ## 4. Incentive Alignment Through Revealed Preference
 
