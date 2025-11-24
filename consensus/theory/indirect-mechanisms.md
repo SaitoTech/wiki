@@ -2,7 +2,7 @@
 title: Direct and Indirect Mechanisms in Implementation Theory
 description: 
 published: true
-date: 2025-11-24T04:43:44.692Z
+date: 2025-11-24T04:47:04.832Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T04:20:25.573Z
@@ -12,10 +12,13 @@ dateCreated: 2025-11-24T04:20:25.573Z
 
 ### Relevant Papers
 
-- Hurwicz (1972, 1979): *On Incentive Compatibility and Informational Decentralization* 
-- Maskin (1977, 1999): *Nash Implementation and the Revelation Principle*  
-- Myerson (1979, 1982): *Incentive Compatibility and Mechanism Design*  
-- Jackson (2001): *A Crash Course in Implementation Theory*
+- Hurwicz, L. (1972). *On Informationally Decentralized Systems*.  
+- Maskin, E. (1977). *Nash Equilibrium and Welfare Optimality*.  
+- Myerson, R. (1979). *Incentive Compatibility and the Bargaining Problem*.  
+- Hurwicz, L. (1979). *On Allocations Attainable Through Nash Equilibria*.  
+- Myerson, R. (1982). *Optimal Coordination Mechanisms in Generalized Principal–Agent Problems*.  
+- Maskin, E. (1999). *Nash Implementation*.  
+- Jackson, M. (2001). *A Crash Course in Implementation Theory*.  
 
 
 
