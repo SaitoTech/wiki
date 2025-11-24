@@ -2,7 +2,7 @@
 title: Saito and Combinatorial Auction Theory
 description: 
 published: true
-date: 2025-11-24T17:17:21.286Z
+date: 2025-11-24T17:46:48.592Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T16:07:02.685Z
@@ -48,55 +48,38 @@ In our section on [direct and indirect mechanisms](/consensus/theory/indirect-me
 
 And we finally observe that the mechanism is **permissionless** as it has no fixed set of participants, no trusted auctioneer, and does not depend for its security on underlying algorithms which exploit quorum-based algorithms. Anyone may participate in the mechanism on equal terms provided they are willing to follow the protocol for participating in the auction.
 
+## The Solution Requires Indirect, Action-Based Mechanisms
+
+The significance of Saito Consensus as an indirect mechanism becomes more obvious once the limitations of direct mechanisms in combinatorially.
+
+Once blockchains are understood as offering users a bundle of heterogeneous goods, it becomes clear that no direct mechanism can elicit the full valuation information required to implement an efficient allocation. A direct mechanism would need each agent to report its valuation over every possible bundle of (blockspace × time × collusion) utility. Because the number of bundles grows combinatorially -- and because preferences over time and side-benefits are continuous and unbounded -- the type space is infinite.
+
+Indirect mechanisms handle infinite preference spaces gracefully, by filtering the set of revelant preferences prior to revelation. This is why Hurwicz (1972. 1979) explicitly allows actions with observable consequences to be treated as signals in a message space.
+
+Jackson (2001) similarly notes that indirect mechanisms rely on *behavioral strategies* rather than type reports, and points out that the equilibrium behavior of participants “encodes” the private information relevant to the social choice rule being implemented, which can be high-dimensional. In auction theory, this idea also appears in the interpretation of bidding as a form of revealed preference: Milgrom and Weber (1982) show that ascending auctions elicit marginal valuations through sequences of observable bids, while Parkes (2001, 2006) and Ausubel and Milgrom (2002) generalize this insight to iterative and proxy-based combinatorial auctions in which actions, rather than full type reports, provide the mechanism with the information needed to handle allocation.
+
+The same principle is in play in Saito Consensus. Instead of asking users to report an exponentially large preference map covering their valuations for all possible bundles of blockspace, time, and collusion goods, the mechanism turns **broadcast strategy** into an action-in-mechanism that affects allocation outcomes. Users with different valuations will prefer different broadcast strategies, which signal: how urgently they desire inclusion and whether they are using their bid in a collusive side-deal that involves the delivery of potentially unobservable forms of utility.
+
+Broadcast strategy combines with bidding strategy to allow Saito to function as a revealed-preference mechanism. Agents do not communicate their types directly; instead, they choose broadcast strategies that are optimal given their private valuations, and the mechanism infers only the information necessary for allocation from the resulting network-level observables. This aligns precisely with the role of actions in indirect mechanism design as articulated by Hurwicz and formalized in modern implementation theory: when full type revelation is impossible, the mechanism must structure incentives such that *behavioral signals* substitute for explicit reports.
+
+## Technical Implementation
+
+Readers interested in the technical implementation of Saito Consensus should view our simplified description of [how the network works](/consensus). This section provides a brief explanation of how Saito Consensus manages combinatorial optimization in the presence of only two information signals: broadcast and bidding strategies.
+
+Observe first that the "burn fee" adjusts in equilibrium to create a market price for blockspace/time that allows users to optimize their bidding strategies for those two forms of utility. The non-stop iterating Dutch Clock Auction that regulates block production allows users to optimize their bids only within a single block, but ad infinitum over the life of the chain itself.
+
+Much like a "posted price" model, the market price for blockspace can be calculated on a per byte basis. Users who desire faster or slower inclusion can adjust their bids appropriately and only take action if they believe that fulfillment is rational in expectation.
 
 
 
 
 
+. While the mechanism can only promise fulfillment of inclusion **in expectation** that is enough to achieve incentive compatibility as strategies are preferred in expectation.
 
 
 
-Traditional direct-revelation models require agents to report their full valuation over all possible bundles of goods. In a multi-good environment, these valuations grow combinatorially; when the goods include time, ordering, or strategic topology, the preference domain becomes infinite-dimensional. Direct mechanisms are therefore infeasible. Routing work succeeds because it uses **behavior-generated signals** to reveal only the margins of preference that matter for efficient allocation.
 
 
-
-Any mechanism that attempts to express these preferences using direct revelation would require agents to report valuations over an exponentially large bundle space. Standard mechanism design calls this **combinatorial preference revelation**, and it is known to be infeasible in general.
-
-Routing work avoids this problem.
-
----
-
-## 2. Direct Revelation is Impossible in Combinatorial Settings
-
-In classical mechanism design, direct mechanisms assume:
-
-1. Agents report a **type**
-2. The designer computes the outcome from these reports
-3. All strategic deviations are modeled as *misreports*
-
-But in combinatorial environments, an agent's type must encode:
-
-- a valuation function over all subsets of goods  
-- cross-bundle interactions  
-- time-sensitive utilities  
-- topology-sensitive opportunities  
-- non-quasilinear utilities  
-- dependencies on other agents’ actions (e.g., collusion or fake tx)
-
-Even without time preferences, this is already a well-known impossibility:  
-**direct combinatorial auctions require exponentially many reports**.
-
-Once time preferences and topology enter the picture, the type space becomes **infinite-dimensional**.
-
-Maskin’s implementation framework would require full type disclosure to simulate indirect behavior with direct messages. For routing work, this means:
-
-> a direct mechanism would require agents to report an infinite-dimensional valuation map.
-
-Such a mechanism is not merely impractical; it is **undefined** under classical direct-revelation frameworks.
-
-Routing work succeeds because it never asks agents to report these valuations. It uses their **behavior** to reveal only the part of their valuations relevant to equilibrium.
-
----
 
 ## 3. Routing Work as a Distributed Double Auction
 
