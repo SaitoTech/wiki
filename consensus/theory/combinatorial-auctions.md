@@ -2,7 +2,7 @@
 title: Saito and Combinatorial Auction Theory
 description: 
 published: true
-date: 2025-11-24T18:59:21.726Z
+date: 2025-11-24T19:03:55.533Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T16:07:02.685Z
@@ -92,6 +92,14 @@ Agents can reduce the size of their transactions, or ask colluding producers to 
 - More Side-Benefits
 Reducing the size of the transaction or shifting to private broadcast increases the profitability of the block producer, enabling more side-benefits.
 
+In short:
+
+- adjust fee → space/time tradeoff
+- adjust broadcast → time/collusion tradeoff
+- adjust transaction size → space/collusion tradeoff
+
+
+
 ## 4. Incentive Alignment Through Revealed Preference
 
 Rational users will make changes to their bidding and broadcast strategies only when they expect those changes to be welfare-increasing in expectation. This corresponds to Hurwicz' requirement that agents (locally) make welfare-increasing proposals.
@@ -102,4 +110,4 @@ The fact that the chain itself aggregates those proposals into the most-efficien
 - actions that lower welfare are costly or punished  
 - deviations correspond to missed welfare-improving trades
 
-Thus, routing-work mechanisms indirectly implement **efficient combinatorial trade** without needing direct revelation, without needing a central auctioneer, and without reconstructing infinite-dimensional preference maps.
+Thus, routing-work mechanisms indirectly implement efficient combinatorial trade. We invite readers interested in a formal justification of this claim along with a discussion of Myerson-Satterthwaite and the related literature to visit our page on [Myerson–Satterthwaite & Green–Laffont Applicability](/consensus/theory/welfare-efficiency)
