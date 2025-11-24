@@ -2,7 +2,7 @@
 title: Saito and Combinatorial Auction Theory
 description: 
 published: true
-date: 2025-11-24T19:11:14.977Z
+date: 2025-11-24T19:17:07.135Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T16:07:02.685Z
@@ -50,7 +50,7 @@ And we finally observe that the mechanism is **permissionless** as it has no fix
 
 ## The Solution Requires Indirect, Action-Based Mechanisms
 
-The significance of Saito Consensus as an indirect mechanism becomes more obvious once the limitations of direct mechanisms in combinatorially.
+The significance of Saito Consensus as an indirect mechanism becomes more obvious once the limitations of direct mechanisms in combinatorial environments are understood.
 
 Once blockchains are understood as offering users a bundle of heterogeneous goods, it becomes clear that no direct mechanism can elicit the full valuation information required to implement an efficient allocation. A direct mechanism would need each agent to report its valuation over every possible bundle of (blockspace × time × collusion) utility. Because the number of bundles grows combinatorially -- and because preferences over time and side-benefits are continuous and unbounded -- the type space is infinite.
 
