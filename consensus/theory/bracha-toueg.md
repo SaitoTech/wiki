@@ -2,7 +2,7 @@
 title: Bracha and Toueg
 description: 
 published: true
-date: 2025-11-24T23:35:37.595Z
+date: 2025-11-24T23:38:04.834Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T23:31:21.068Z
@@ -46,11 +46,12 @@ This impossibility result is driven by one factor:
 
 The underlying reason that costless equivocation is so damaging in this model is simple. Because bad actors can send different, conflicting messages to different recipients without penalty, honest processes cannot distinguish delay from deception and coordinate to punish deceivers.
 
-And this is why routing-work mechanisms like Saito Consensus break the core symmetry that Bracha–Toueg, since proposing different blocks creates **different economic costs** which must be borne by the proposer, depending on:
+This is precisely why routing-work mechanisms like Saito Consensus break the core symmetry that Bracha–Toueg rely on: proposing different blocks creates **different economic costs** which must be borne by the proposer, depending on:
 
 - the set of transactions included in the block
 - the way in which they were routed into the network
 - if any fees involved were contributed by the proposer
+- if any fees which should be present are excluded
 
 Sending different “views of the chain” to different peers is also *not free*:
 
