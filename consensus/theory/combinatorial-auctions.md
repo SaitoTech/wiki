@@ -2,7 +2,7 @@
 title: Saito and Combinatorial Auction Theory
 description: 
 published: true
-date: 2025-11-24T16:07:02.685Z
+date: 2025-11-24T17:09:30.653Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T16:07:02.685Z
@@ -17,49 +17,40 @@ To our knowledge, no existing mechanism falls into this class. Traditional combi
 This positions Saito as a new class of distributed mechanism. In the page that follows, we outline why Saito Consensus meets the criteria for a PICDA and why the shift to an indirect mechanism allows Saito to implement efficient combinatorial allocation in environments where classical direct-revelation and single-good mechanisms fail.
 
 
+## The Multi-Good Nature of Blockspace
+
+Saito Consensus is a **combinatorial auction** in the sense that users bid a single value to purchase a combinatorial bundle of utility that consists of three essential types of utility:
+
+- **blockspace** (in bytes)  
+- **speed-of-inclusion** (in time)  
+- **collusion utility** (in side-benefits)
+
+The value that agents assign to these goods are behind Hurwicz' veil of privacy and are known only to the agents themselves, which gives the resulting optimization challenge the structure of a **combinatorial valuation** problem. The mechanism must be designed to handle:
+
+- **Heterogeneous goods.**  
+  Agents value multiple distinct forms of utility (blockspace, time, collusion) that are neither substitutes nor complements in simple ways.
+
+- **Non-quasilinear utilities.**  
+  Payments do not cleanly separate from utility as trade-offs between all three classes of goods interact with monetary transfers in non-linear ways.
+
+- **Cross-good interactions.**  
+  The marginal value of one good (e.g., blockspace) depends on the amount of another (e.g., time), making valuations non-separable.
+
+- **Exponential type space.**  
+  The set of possible bundles grows combinatorially, so reporting full valuations requires exponential (or, with time, infinite) information.
+
+- **Strategic bundle formation.**  
+  Agents may pursue side-benefits, cross-good trades, or collusion bundles, which form part of the preference domain and influence bidding behavior.
+
+In addition to this, Saito Consensus is a **double auction** as every participant may be a seller as well as buyer of utility, trading unobservable forms of utility in side-deals in exchange for access to transaction flow and the ability to profit from the production and creation of blocks in the blockchain.
 
 
 
-incentives are induced by routing costs.
 
-This distinction matters because blockspace is not a single good. Agents simultaneously value (i) quantity of blockspace, (ii) time-to-inclusion and ordering, and (iii) utility from strategic or collusive relationships. These interact combinatorially, making direct revelation infeasible: a direct mechanism would require users to report an exponentially large, and in some dimensions infinite, valuation map over heterogeneous bundles. Saito avoids this impossibility by using **revealed preference through costly action**—forwarding, delaying, or injecting transactions—to expose only the marginal valuations relevant to equilibrium.
-
-As a result, Saito exhibits properties that are traditionally difficult or impossible to achieve in combinatorial environments:
-
-- **Welfare efficiency.**  
-  The mechanism implements efficient trades across multiple goods because profitable deviations correspond only to welfare-improving reallocations in an expanded preference domain.
-
-- **Incentive compatibility without dominant-strategy truthfulness (no DSIC requirement).**  
-  Agents do not report types. Instead, they reveal preferences through costly behavior, so incentive compatibility arises from the structure of feasible actions rather than from strategy-proofness constraints.
-
-- **No trusted auctioneer.**  
-  Clearing, pricing, and allocation emerge from the network itself. Routing paths, block production opportunities, and propagation patterns jointly reconstruct the role traditionally played by a centralized combinatorial auctioneer.
-
-These features place Saito in a new and previously unstudied class of mechanisms: a permissionless, indirect, combinatorial double auction with endogenous price discovery. The remainder of this page explains how routing work produces revealed-preference signals and why direct revelation is impossible in this environment, and shows how these properties allow Saito to achieve efficient, incentive-aligned outcomes in settings where classical mechanisms fail.
-
-
-
-.
 
 Traditional direct-revelation models require agents to report their full valuation over all possible bundles of goods. In a multi-good environment, these valuations grow combinatorially; when the goods include time, ordering, or strategic topology, the preference domain becomes infinite-dimensional. Direct mechanisms are therefore infeasible. Routing work succeeds because it uses **behavior-generated signals** to reveal only the margins of preference that matter for efficient allocation.
 
-This page explains the connection between combinatorial auctions and routing work, why direct mechanisms are impossible in this setting, and how Saito implements price discovery indirectly through actions rather than reports.
 
----
-
-## 1. The Multi-Good Nature of Blockspace
-
-Blockspace is not a single homogeneous commodity. In routing-work mechanisms, users and nodes care about:
-
-- **quantity of blockspace** (bytes)  
-- **time-to-inclusion** (latency, deadlines, urgency)  
-- **position within a block** (MEV, ordering, causality)  
-- **collusion goods** (self-generated tx, sybil bundles)  
-- **local routing opportunities** (topological advantage, propagation speed)
-
-These are **distinct goods**, often substitutes or complements, and they interact across time, topology, and node identity. The resulting preference domain has the structure of a **combinatorial valuation** problem:
-
-> each agent values *bundles* of heterogeneous goods whose marginal utilities depend on the actions of others.
 
 Any mechanism that attempts to express these preferences using direct revelation would require agents to report valuations over an exponentially large bundle space. Standard mechanism design calls this **combinatorial preference revelation**, and it is known to be infeasible in general.
 
