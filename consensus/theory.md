@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-24T01:45:50.374Z
+date: 2025-11-24T01:48:21.597Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -95,12 +95,21 @@ This page examines the conditions required for implementing welfare-efficient eq
 This page shows that the correct analytic lens for routing mechanisms is the combinatorial double-auction literature. It establishes that any profitable deviation corresponds to a missed welfare-improving trade, and that such trades require costly message-space expansion. As a result, routing-work mechanisms are incentive-aligned: only welfare-improving deviations are profitable.
 
 **Computer Science**
-- Bracha–Toueg (1985)
-- Dwork–Lynch–Stockmeyer (1988)
-- GKL / Long-Range Attacks
-- Sybil-Proofness / Red Balloons
-- Common Proof Errors in Blockchain Security (optional but recommended)
 
+- Bracha–Toueg (1985)
+This page reviews the Bracha–Toueg impossibility result for reliable broadcast in asynchronous systems with Byzantine faults. The theorem assumes that malicious nodes can equivocate freely and without cost. Routing-work mechanisms violate this assumption by imposing asymmetric economic cost on state equivocation, and therefore operate outside the model in which the impossibility result is proven.
+
+- Dwork–Lynch–Stockmeyer (1988)
+This page examines the partial-synchrony model of DLS and its implications for consensus. Classical DLS results treat equivocation and message fabrication as free actions for Byzantine actors, whereas routing-work mechanisms make such actions economically dominated. Understanding this distinction clarifies why routing-work consensus does not rely on the timing or failure assumptions in DLS.
+
+- GKL / Long-Range Attacks
+This page discusses the Garay–Kiayias–Leonardos (GKL) model and related analyses of longest-chain protocols, including long-range attacks. These results assume security derives from randomized leader selection and honest-majority properties of chain growth. Routing-work mechanisms do not depend on longest-chain selection, and their security does not rest on these assumptions, placing them outside the scope of GKL-style analyses.
+
+- Sybil-Proofness / Red Balloons
+This page explains the logic behind sybil-proofness and the Red Balloons problem, showing why sybil creation defines the only meaningful channel for multi-path strategic deviation. It summarizes the structure of the Lancashire–Parris sybil-proofness proof and explains how sybil cost bounds deviation incentives in routing-work mechanisms.
+
+- Common Proof Errors in Blockchain Security 
+This page reviews common modeling mistakes in blockchain security analyses that routing work mechanisms show are not universally valid, such as the assumption of costless fake message creation, unverifiable actions, or unlimited adversarial communication channels. It highlights how breaking these assumptions break real-world applicability of many classical results and shows how routing-work mechanisms explicitly control these deviation channels.
 
 
 
