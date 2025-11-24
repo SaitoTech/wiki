@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-23T18:28:27.705Z
+date: 2025-11-24T01:22:23.454Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -40,10 +40,8 @@ In computer science these assumptions underlie many standard results in distribu
 
 In economics, the parallel assumption appears in the mainstream mechanism design literature. Beginning with Hurwicz (1972) and developed through Myerson, Maskin, and Holmström, the Revelation Principle is built on the premise that all messages are costless to send, and any mechanism that claims to implement an outcome must tolerate the existence of unverifiable and cost-free misreports.
 
-
 The impossibility results that follow in both fields flow directly from this assumption, and merit revisiting exactly because Saito relaxes (1) and (2) in a way that invalidates the reductive step used in their impossibility claims, allowing different implementability claims in Saito-class mechanisms.
 
----
 
 ## #3. Technical Implementation
 
@@ -69,15 +67,34 @@ As a result:
 
 With appropriate design parameters, this inherent efficiency gap makes adversarial reorganization loss-making in expectation even when attackers control a large fraction of the network’s resources. This is the economic core of Saito-class consensus.
 
----
 
 ## More Information:
 
-The following section contain links to subpages that discuss the specific papers and impossibility results mentioned above, demonstrating exactly which results apply and do not apply to routing work mechanisms.
+The following section contain links to specific documents or - in the case of academic impossibility claims - to subpages that discuss the specific pimpossibility results in order to show directly which results apply and do not apply to routing work mechanisms.
 
 **Start with Saito**
 - [A Simple Proof of Sybil-Proof](https://github.com/SaitoTech/papers/tree/e32c51db6aae071a41b7e481d0f5ba6cd75ec12d/sybil) (Lancashire, Parris, 2023)
-mathematical proof of sybil-proofness of the mechanism, containing Hurwicz' *formula* for the mechanism in five succinct bullet points on its first page.
+mathematical proof of sybil-proofness of the mechanism, also useful for containing Hurwicz' *formula* for the mechanism in five succinct bullet points on its first page.
+- [Saito Whitepaper](https://saito.io/saito-whitepaper.pdf) (Lancashire, Parris, 2018)
+original whitepaper, providing a brief explanation of the Tragedy of the Commons and Free Rider problems instantiate in most blockchains, and how routing work eliminates both problems on the incentive level, unleashing emergent scale and incentive compatibility.
+
+**Economics and Mechanism Design**
+- Hurwicz (truthful speech vs. lying)
+- Maskin, Myerson and the Revelation Principle
+- TFM Modelling Error
+- Myerson–Satterthwaite & Green–Laffont Applicability
+- Welfare-Improving Trade Lemmas (Combinatorial Auction Theory)
+
+**Computer Science**
+- Bracha–Toueg (1985)
+- Dwork–Lynch–Stockmeyer (1988)
+- GKL / Long-Range Attacks
+- Sybil-Proofness / Red Balloons
+- Common Proof Errors in Blockchain Security (optional but recommended)
+
+- [A Simple Proof of Sybil-Proof](https://github.com/SaitoTech/papers/tree/e32c51db6aae071a41b7e481d0f5ba6cd75ec12d/sybil) (Lancashire, Parris, 2023)
+mathematical proof of sybil-proofness of the mechanism, also useful for containing Hurwicz' *formula* for the mechanism in five succinct bullet points on its first page.
+
 
 
 ## Final Note: what Saito does *not* claim
