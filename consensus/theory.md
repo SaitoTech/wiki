@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-24T19:51:03.927Z
+date: 2025-11-24T22:13:17.437Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -30,6 +30,9 @@ This page explains how mechanism design distinguishes between *messages* (cheap,
 
 - [Myerson–Satterthwaite & Green–Laffont Applicability](/consensus/theory/welfare-efficiency)
 This page examines the conditions required for implementing welfare-efficient equilibria in informationally decentralized mechanisms, focusing on the bilateral-trade (Myerson–Satterthwaite) and public-good (Green–Laffont) impossibility theorems. Routing-work mechanisms violate core assumptions—such as free deviations and type-report-only messages—and therefore fall outside the scope of these impossibility claims.
+
+- [How Saito Implements a Welfare-Efficient Equilibrium](/consensus/theory/welfare-efficiency-ii)
+This page explains how Saito achieves welfare efficiency using costly, action-based signals instead of type reports. Routing signatures create a filtered message space in which only welfare-increasing deviations are rational, allowing the mechanism to aggregate decentralized proposals into Pareto-efficient outcomes without violating classical impossibility results.
 
 - [Welfare-Improving Trade Lemmas (Combinatorial Auction Theory](/consensus/theory/combinatorial-auctions)
 This page shows that the correct analytic lens for routing mechanisms is the combinatorial double-auction literature. It establishes that any profitable deviation corresponds to a missed welfare-improving trade, and that such trades require costly message-space expansion. As a result, routing-work mechanisms are incentive-aligned: only welfare-improving deviations are profitable.
