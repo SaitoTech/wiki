@@ -2,7 +2,7 @@
 title: Implementing Welfare Efficiency via Saito Consensus
 description: 
 published: true
-date: 2025-11-24T22:01:28.534Z
+date: 2025-11-24T22:07:46.619Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T21:04:59.989Z
@@ -39,7 +39,7 @@ Likewise, without the ability to take joint action in the assembling of portfoli
 
 ## 2. Expanding the Message Space
 
-Implementing a welfare-efficient equilibrium requires our mechanism to offer a way for agents to make welfare-increasing trade-offs. This requires an expansion in the message space in which actions can carry welfare-relevant information. But to ensure that only welfare-increasing proposals dominate in equilibrium, the use of this expanded part of the message space must be costly, because only costly messages can filter the infinite preference space down to welfare-improving proposals.
+Implementing a welfare-efficient equilibrium requires our mechanism to offer a way for agents to make welfare-increasing trade-offs. This requires an expansion in the message space in which actions can carry welfare-relevant information. But in order for welfare-increasing proposals to dominate in equilibrium, the actions within this expanded part of the message space must impose real opportunity costs.
 
 Saito accomplishes this by adding cryptographic routing signatures to transactions. As Hurwicz emphasized, and as we discuss in our page on [direct and indirect mechanisms](/consensus/theory/indirect-mechanisms), this mechanistic expansion fits the strict requirements of implementation theory for messages within decentralized mechanisms:
 
@@ -55,9 +55,9 @@ More importantly, routing signatures impose a real cost on agents within the mec
 
 In our baseline mechanism, the only participant eligible for the routing payout is the creator of the single transaction in the block. Users can treat the routing payout as a refund in expectation.
 
-But once we have the ability to generate portfolio bids, signing a transaction to a peer provides them with a probabilistic chance of collecting the routing payout. This dilutes the sender's claim on the routing payout: the refund that would otherwise accrue exclusively to them is now shared probabilistically with that peer, which means that routing creates a real opportunity cost and is only rational when the expected gain from joint action exceeds the refund value surrendered.
+But once we have the ability to generate portfolio bids, signing a transaction to a peer provides them with a probabilistic chance of collecting the routing payout. This dilutes the sender's claim on the routing payout: the refund that would otherwise accrue exclusively to them is now shared probabilistically with that peer, which means that routing creates a real opportunity cost and is only rational when the expected gain from joint action exceeds the refund value surrendered. Since nothing in the mechanism compensates a sender for a lost share of the refund, any routing choice that reduces joint welfare produces a strictly worse payoff for the sender.
 
-While benefits can be communally negotiated, cooperation can never force a loss on participantss, as the original sender can always submit the shared transaction directly to the mechanism to bid directly for a block.
+Nonetheless, while benefits can be communally negotiated, offering cooperation can never force a loss on participants, as the original sender can always submit their shared transaction directly to the mechanism to bid directly for a block.
 
 This creates a dynamic where the only situation in which participants will route transactions to other peers is if the cost of doing so (reduced claim on the probabilistic refund) is exceeded by the welfare-increasing gain enabled through joint action within the mechanism.
 
