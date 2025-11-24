@@ -2,7 +2,7 @@
 title: Dwork-Lynch-Stockmeyer
 description: 
 published: true
-date: 2025-11-24T23:48:06.095Z
+date: 2025-11-24T23:57:35.675Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T23:40:21.395Z
@@ -10,7 +10,7 @@ dateCreated: 2025-11-24T23:40:21.395Z
 
 # Dwork–Lynch–Stockmeyer (1988)
 
-Dwork, Lynch, and Stockmeyer’s 1988 paper (“*Consensus in the Presence of Partial Synchrony*”) establishes one of the most influential impossibility results in distributed systems, showing that **deterministic consensus is impossible in a fully asynchronous setting with even one faulty process.**
+Dwork, Lynch, and Stockmeyer’s 1988 paper (“*Consensus in the Presence of Partial Synchrony*”) establishes one of the most influential impossibility results in distributed systems, showing that **deterministic consensus is impossible in a fully asynchronous setting** unless the system eventually behaves with a degree of synchrony — but with even one faulty process such synchrony cannot be guaranteed.
 
 Saito Consensus does not evade this impossibility result so much as live outside the scope of its applicability completely as a non-deterministic mechanism. Since this is a point that is often overlooked by those working on distributed systems, this page provides a quick review of why exactly this result does not apply.
 
@@ -21,7 +21,7 @@ Critically, the DLS model assumes:
 - where every state transition and message output is **fully determined** by the protocol and prior inputs,  
 - and no **exogenous, strategic, or utility-driven actions** enter the system.
 
-Saito Consensus is not bound by these results as it is not a deterministic protocol in the DLS sense. It is an open, permissionless economic mechanism in which:
+Saito Consensus is not bound by these results as it is not a "deterministic" protocol in the DLS sense. It is an open, permissionless economic mechanism in which:
 
 - anyone can introduce a new transaction at any time,  
 - anyone can choose different routing strategies,  
