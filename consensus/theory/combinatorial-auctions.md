@@ -2,7 +2,7 @@
 title: Saito and Combinatorial Auction Theory
 description: 
 published: true
-date: 2025-11-24T19:06:27.637Z
+date: 2025-11-24T19:11:14.977Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T16:07:02.685Z
@@ -68,13 +68,13 @@ Readers interested in the protocol-level details should consult our simplified n
 
 ### we start with a Dutch Clock Auction...
 
-Saito Consensus uses an iterating Dutch clock auction to regulate block production. The cost of producing a block adjusts to keep production constant in equilibrium, which means the *burn fee* variable that determines the price of block production acts as a continuous market price for transaction inclusion over time.
+Saito Consensus uses an iterating Dutch-clock–style price process to regulate block production. This functions analogously to a continuous descending price clock, exposing the marginal value of immediate inclusion at each moment. Simultaneously, the cost of producing a block adjusts automatically to keep the pace of block production constant in equilibrium, which means the *burn fee* variable that determines the price of block production acts as a continuous market price for transaction inclusion over time.
 
 Any user who requires immediate fulfillment can always pay the current price and obtain inclusion directly by producing a block themselves. Users who prefer cheaper inclusion, or who wish to leverage their bid to secure collusion utility, instead enter the portfolio-bidding process and navigate the trilemma the mechanism creates between all three classes of utility through their choice of broadcast and bidding behavior.
 
 ### then add the potential for collusion...
 
-The *burn fee* locks in the price of space/time for agents who have no desire for collusion utility. Cooperating with other agents to compile a competitive portfolio bid opens the possibility of collusion, as the routing payout (refund) offered by the mechanism is transferred in expectation to the node that submits the winning portfolio.
+The *burn fee* locks in the price of space/time for agents who have no desire for collusion utility. Any mechanism that requires joint action to compile a competitive bid necessarily creates opportunities for collusion, since concentrated surplus can be shared among cooperating participants.  Cooperating with other agents to compile a competitive portfolio bid thus opens the possibility of collusion, as the routing payout (refund) offered by the mechanism is available for collective redistribution. 
 
 Saito manages this by making **broadcast strategy** a strategic choice within the mechanism. When users seek to cooperate in the submission of portfolio bids, multi-broadcast ensures forward propagation through the sybil-proof properties of the mechanism, ensuring any bid reaches the maximum number of nodes as quickly as possible.
 
