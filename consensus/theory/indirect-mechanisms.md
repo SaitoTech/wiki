@@ -2,7 +2,7 @@
 title: Direct and Indirect Mechanisms in Implementation Theory
 description: 
 published: true
-date: 2025-11-24T04:47:04.832Z
+date: 2025-11-24T04:47:22.245Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T04:20:25.573Z
@@ -13,11 +13,11 @@ dateCreated: 2025-11-24T04:20:25.573Z
 ### Relevant Papers
 
 - Hurwicz, L. (1972). *On Informationally Decentralized Systems*.  
-- Maskin, E. (1977). *Nash Equilibrium and Welfare Optimality*.  
-- Myerson, R. (1979). *Incentive Compatibility and the Bargaining Problem*.  
 - Hurwicz, L. (1979). *On Allocations Attainable Through Nash Equilibria*.  
-- Myerson, R. (1982). *Optimal Coordination Mechanisms in Generalized Principal–Agent Problems*.  
+- Maskin, E. (1977). *Nash Equilibrium and Welfare Optimality*.  
 - Maskin, E. (1999). *Nash Implementation*.  
+- Myerson, R. (1979). *Incentive Compatibility and the Bargaining Problem*.  
+- Myerson, R. (1982). *Optimal Coordination Mechanisms in Generalized Principal–Agent Problems*.  
 - Jackson, M. (2001). *A Crash Course in Implementation Theory*.  
 
 
