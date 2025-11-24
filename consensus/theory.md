@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-24T09:47:03.053Z
+date: 2025-11-24T09:53:07.664Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -28,16 +28,10 @@ original whitepaper, providing a brief explanation of the Tragedy of the Commons
 - [Direct and Indirect Mechanisms in Implementation Theory](/consensus/theory/indirect-mechanisms)
 This page explains how mechanism design distinguishes between *messages* (cheap, unverifiable statements) and *actions* (costly or verifiable behaviors). Routing-work mechanisms expand the message space to include actions that carry real economic cost, breaking the symmetry assumptions that Hurwicz identified as central to classical impossibility results.
 
-- Hurwicz, Maskin, Myerson and the Revelation Principle
-This page clarifies the scope of the Revelation Principle and why routing mechanisms like Saito cannot be collapsed into direct, report-only mechanisms. Classical impossibility results assume that strategic behavior can be represented as alternative type reports; routing-work mechanisms violate this assumption because incentives depend on actions, not just messages. Understanding this limitation is essential for seeing why classical impossibility results do not bind routing-work mechanisms.
-
-- Roughgarden, Shi and TFM Modelling Error
-This page reviews the modeling assumptions used in the transaction-fee mechanism (TFM) literature, a branch of computer science studying incentive compatibility in blockchains. It shows that these models embed inconsistent assumptions about message spaces, deviations, and collusion, making their results inapplicable under standard implementation theory.
-
 - Myerson–Satterthwaite & Green–Laffont Applicability
 This page examines the conditions required for implementing welfare-efficient equilibria in informationally decentralized mechanisms, focusing on the bilateral-trade (Myerson–Satterthwaite) and public-good (Green–Laffont) impossibility theorems. Routing-work mechanisms violate core assumptions—such as free deviations and type-report-only messages—and therefore fall outside the scope of these impossibility claims.
 
-- Welfare-Improving Trade Lemmas (Combinatorial Auction Theory)
+- [Welfare-Improving Trade Lemmas (Combinatorial Auction Theory](/consensus/theory/combinatorial-auctions)
 This page shows that the correct analytic lens for routing mechanisms is the combinatorial double-auction literature. It establishes that any profitable deviation corresponds to a missed welfare-improving trade, and that such trades require costly message-space expansion. As a result, routing-work mechanisms are incentive-aligned: only welfare-improving deviations are profitable.
 
 **Computer Science**
@@ -57,6 +51,9 @@ This page explains the logic behind sybil-proofness and the Red Balloons problem
 - Common Proof Errors in Blockchain Security 
 This page reviews common modeling mistakes in blockchain security analyses that routing work mechanisms show are not universally valid, such as the assumption of costless fake message creation, unverifiable actions, or unlimited adversarial communication channels. It highlights how breaking these assumptions break real-world applicability of many classical results and shows how routing-work mechanisms explicitly control these deviation channels.
 
+
+- Roughgarden, Shi and TFM Modelling Error
+This page reviews the modeling assumptions used in the transaction-fee mechanism (TFM) literature, a branch of computer science studying incentive compatibility in blockchains. It shows that these models embed inconsistent assumptions about message spaces, deviations, and collusion, making their results inapplicable under standard implementation theory.
 
 
 ## Final Note: what Saito does *not* claim
