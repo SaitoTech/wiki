@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-24T23:11:55.285Z
+date: 2025-11-24T23:18:22.297Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -39,7 +39,7 @@ This page shows that the correct analytic lens for routing mechanisms is the com
 
 **Computer Science**
 
-- Bracha–Toueg (1985)
+- [Bracha–Toueg](/consensus/theory/bracha-toueg) (1985)
 This page reviews the Bracha–Toueg impossibility result for reliable broadcast in asynchronous systems with Byzantine faults. The theorem assumes that malicious nodes can equivocate freely and without cost. Routing-work mechanisms violate this assumption by imposing asymmetric economic cost on state equivocation, and therefore operate outside the model in which the impossibility result is proven.
 
 - Dwork–Lynch–Stockmeyer (1988)
