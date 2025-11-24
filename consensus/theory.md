@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-24T23:18:22.297Z
+date: 2025-11-24T23:39:30.544Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -42,7 +42,7 @@ This page shows that the correct analytic lens for routing mechanisms is the com
 - [Bracha–Toueg](/consensus/theory/bracha-toueg) (1985)
 This page reviews the Bracha–Toueg impossibility result for reliable broadcast in asynchronous systems with Byzantine faults. The theorem assumes that malicious nodes can equivocate freely and without cost. Routing-work mechanisms violate this assumption by imposing asymmetric economic cost on state equivocation, and therefore operate outside the model in which the impossibility result is proven.
 
-- Dwork–Lynch–Stockmeyer (1988)
+- [Dwork–Lynch–Stockmeyer](/consensus/theory/dwork-lynch-stockmeyer) (1988)
 This page examines the partial-synchrony model of DLS and its implications for consensus. Classical DLS results treat equivocation and message fabrication as free actions for Byzantine actors, whereas routing-work mechanisms make such actions economically dominated. Understanding this distinction clarifies why routing-work consensus does not rely on the timing or failure assumptions in DLS.
 
 - GKL / Long-Range Attacks
