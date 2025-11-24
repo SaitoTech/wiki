@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-24T19:27:17.404Z
+date: 2025-11-24T19:51:03.927Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -65,11 +65,4 @@ A final comment To keep the academic case clean, we explicitly list limitations:
 - Saito does **not** eliminate all coordination risks, it merely provides agents with the ability to model the cost-of-deviation of counterparties interacting with it through the mechanism and develop strategies based on that model.
 
 - Physical-layer attacks (eclipse, long-term censorship at the ISP level) remain out of scope for the protocol; it merely addresses profitable economic and technical deviations within the mechanism.
-
-
-## Quick path for specialists
-
-- Mechanism designers: start with `/consensus/theory/revelation-principle.md` then read `/consensus/theory/asymmetric-cost.md`.  
-- Distributed-systems theorists: start with `/consensus/theory/distributed-systems.md` then `/consensus/theory/consensus-properties.md`.  
-- Crypto-economists: read `/consensus/theory/sybil-proof.md` and `/consensus/theory/majoritarian-attacks.md`.
 
