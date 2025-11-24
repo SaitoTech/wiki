@@ -2,13 +2,13 @@
 title: Saito and Combinatorial Auction Theory
 description: 
 published: true
-date: 2025-11-24T17:09:30.653Z
+date: 2025-11-24T17:17:21.286Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T16:07:02.685Z
 ---
 
-# Combinatorial Auctions
+# A New Class of Distributed Mechanism
 
 Saito Consensus is a **Permissionless Indirect Combinatorial Double Auction (PICDA)** which clears a multi-good market through behavior-generated price signals rather than type reports, and without the need for a trusted auctioneer or dominant-strategy truthful bidding. 
 
@@ -17,7 +17,7 @@ To our knowledge, no existing mechanism falls into this class. Traditional combi
 This positions Saito as a new class of distributed mechanism. In the page that follows, we outline why Saito Consensus meets the criteria for a PICDA and why the shift to an indirect mechanism allows Saito to implement efficient combinatorial allocation in environments where classical direct-revelation and single-good mechanisms fail.
 
 
-## The Multi-Good Nature of Blockspace
+## A Permissionless Indirect Combinatorial Double Auction (PICDA)
 
 Saito Consensus is a **combinatorial auction** in the sense that users bid a single value to purchase a combinatorial bundle of utility that consists of three essential types of utility:
 
@@ -43,6 +43,14 @@ The value that agents assign to these goods are behind Hurwicz' veil of privacy 
   Agents may pursue side-benefits, cross-good trades, or collusion bundles, which form part of the preference domain and influence bidding behavior.
 
 In addition to this, Saito Consensus is a **double auction** as every participant may be a seller as well as buyer of utility, trading unobservable forms of utility in side-deals in exchange for access to transaction flow and the ability to profit from the production and creation of blocks in the blockchain.
+
+In our section on [direct and indirect mechanisms](/consensus/theory/indirect-mechanisms) we explain why Saito is an action-in-mechanism indirect mechanism that cannot even in theory be reduced to a direct mechanism via the Revelation Principle.
+
+And we finally observe that the mechanism is **permissionless** as it has no fixed set of participants, no trusted auctioneer, and does not depend for its security on underlying algorithms which exploit quorum-based algorithms. Anyone may participate in the mechanism on equal terms provided they are willing to follow the protocol for participating in the auction.
+
+
+
+
 
 
 
