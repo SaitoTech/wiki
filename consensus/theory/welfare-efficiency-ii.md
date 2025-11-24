@@ -2,13 +2,13 @@
 title: Implementing Welfare Efficiency via Saito Consensus
 description: 
 published: true
-date: 2025-11-24T21:04:59.989Z
+date: 2025-11-24T21:57:47.497Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T21:04:59.989Z
 ---
 
-# Message Space Expansion and Costly Signals in Saito Consensus
+# Welfare-Increasing Costly Signals in Saito Consensus
 
 ### Relevant Papers
 - Hurwicz (1972, 1979), *On Informational Decentralization*  
@@ -38,96 +38,49 @@ Likewise, without the ability to take joint action in the assembling of portfoli
 
 ## 2. Expanding the Message Space
 
-Implementing a welfare-efficient equilibrium requires our mechanism to offer a way for agents to make welfare-increasing trade-offs different forms of utility provisioned through the mechanism. This requires an expansion in the message space.
+Implementing a welfare-efficient equilibrium requires our mechanism to offer a way for agents to make welfare-increasing trade-offs. This requires an expansion in the message space in which actions can carry welfare-relevant information. But to ensure that only welfare-increasing proposals dominate in equilibrium, the use of this expanded part of the message space must be costly.
 
-Saito accomplishes this by adding cryptographic routing signatures to transactions. As Hurwicz emphasized, and as we discuss in our page on [direct and indirect mechanisms](/consensus/theory/indirect-mechanisms), messages need not be costless type reports:  
+Saito accomplishes this by adding cryptographic routing signatures to transactions. As Hurwicz emphasized, and as we discuss in our page on [direct and indirect mechanisms](/consensus/theory/indirect-mechanisms), this mechanistic expansion fits the strict requirements of implementation theory for messages within decentralized mechanisms:
 
 - they may be observable consequences of actions,
 - they may encode costs or opportunity costs,  
 - they may reflect strategic choices within the mechanism
 
-The cryptographic routing signatures Saito adds create  environmental traces that are verifiable within the mechanism. And because the mechanism conditions rewards based on these signals (such as issuing routing payouts to particular nodes) these signals become part of the **message space**.
+Cryptographic routing signatures create environmental traces that are verifiable within the mechanism. And because the mechanism conditions rewards based on these signals (such as issuing routing payouts to particular nodes) these signals become part of the **message space**.
 
-This expansion of the message space is not like the expansion of the message space in a direct mechanism, however, as exploiting it requires agents to bear a known cost. The existence of this cost is what penalizes welfare-reducing trades.
+More importantly, routing signatures impose a real cost on agents within the mechanism, one that allows them to offer welfare-increasing trades that the counterparty can and will only settle if the gain is mutually beneficial.
 
-# 3. Routing is Costly?
+## 3. Routing is Costly?
 
 In our baseline mechanism, the only participant eligible for the routing payout is the creator of the single transaction in the block. Users can treat the routing payout as a refund in expectation.
 
-Once we have the ability to generate portfolio bids, sharing a transaction with a peer provides them with a probabilistic chance of collecting the routing payout, which is a potential cost for the transaction originator and a potential benefit for the recipient. It is the fact that this cost can never be welfare-reducing (the original user can still use the same UTXO to produce a block)
+But once we have the ability to generate portfolio bids, signing a transaction to a peer provides them with a probabilistic chance of collecting the routing payout. This dilutes the sender's claim on the routing payout: the refund that would otherwise accrue exclusively to them is now shared probabilistically with that peer, which means that routing creates a real opportunity cost and is only rational when the expected gain from joint action exceeds the refund value surrendered.
+
+While benefits can be communally negotiated, cooperation can never force a loss on participantss, as the original sender can always submit the shared transaction directly to the mechanism to bid directly for a block.
+
+This creates a dynamic where the only situation in which participants will route transactions to other peers is if the cost of doing so (reduced claim on the probabilistic refund) is exceeded by the welfare-increasing gain enabled through joint action within the mechanism.
+
+And powerfully, the mechanism allows each form of utility it offers to be traded off against the others through these mechanisms. The trilemma it creates gives agents a continuous space of costly actions through which they can express high-dimensional private preferences. Optimization is possible because expressing richer preferences always involves a sacrifice in at least one utility dimension, preserving the principle that welfare-increasing signals are cheap, but welfare-decreasing ones are expensive.
 
 
-expectation of payout to other nodes. 
-The addition of cryptographic routing signatures and the ability of producers to create portfolio bids expands the message space. We move from a mechanism that collects a simple fee report to one with a multi-dimensional message space:
+## Conclusion: Welfare-Increasing Deviations Are the Only Profitable Ones
 
-- fee
-- broadcast scope
-- timing, self-routing, collusion structure, portfolio formation)
+In equilibrium, every profitable deviation corresponds to a welfare-improving trade, because routing is only rational when the sender and receiver jointly benefit, Saito fulfills Hurwicz’s requirement that decentralized mechanisms identify and implement precisely the proposals that increase welfare.
 
+Attempts to exploit the expanded message space in ways that reduce welfare fail endogenously. Any routing choice that does not generate compensating gains through cooperative action simply destroys refund value and increases cost, or forces participants to fallback on non-cooperative strategies to prevent loss.
 
-This expanded space is what allows Saito to capture high-dimensional preferences.
+As a result, the mechanism never enables new profitable deviations that reduce welfare. The opportunity cost created by expanded competition over the routing payout ensures that any harmful deviation results in a strictly worse payoff. As a result, Saito enlarges the set of possible improvements without enlarging the set of profitable harmful actions.
 
----
+## Final Synthesis
 
-# 4. Why Expressing These Messages Requires Costly Actions
+Saito’s welfare-efficiency rests on four core insights:
 
-It is essential to distinguish between:
+- message-space expansion allows welfare-increasing proposals
 
-- **the expanded message space**, which is just a set of possible signals, and  
-- **actions taken within that space**, which may be costly.
+- costliness ensures only such proposals survive equilibrium.
 
-The message space itself is not costly to define.  
-What is costly are the actions that generate messages inside it.
+- routing signatures provide verifiable signals needed to distinguish genuine proposals from empty reports.
 
-Examples:
+- the chain aggregates these proposals into Pareto-efficient outcomes.
 
-- Strong broadcast incurs greater opportunity cost in routing.  
-- Private broadcast reduces competition but increases time risk.  
-- Routing signatures require work and forgo alternative refunds.  
-- Coordinating a portfolio bid redistributes surplus and requires joint action.  
-- Producing a block privately forfeits routing income.  
-
-Thus:
-
-> **High-dimensional preferences can only be expressed by sacrificing one form of utility to obtain another.**
-
-This is made possible by the mechanism’s inherent **trilemma**:
-
-- blockspace vs. time  
-- time vs. collusion utility  
-- collusion utility vs. blockspace  
-
-The trilemma ensures that richer signals cannot appear unless a user has preferences strong enough to justify the cost.
-
----
-
-# 5. Welfare-Relevant Features of the Expanded Message Space
-
-Because expression of a high-dimensional preference requires real expenditure or opportunity cost, Saito naturally filters messages:
-
-- If expressing a preference **increases the user’s welfare**, the user will bear the cost.  
-- If expressing it **reduces welfare**, the user will not take the action.  
-- If expressing it is **welfare-neutral**, the mechanism’s dynamics often drive such signals out of equilibrium.
-
-This implements a form of **welfare-improving revealed preference**:
-
-- costly signals appear only when they correspond to welfare-improving deviations,  
-- welfare-reducing deviations are automatically suppressed,  
-- the chain aggregates the surviving actions into efficient combinations.
-
-This structure is why routing-work mechanisms can implement efficient combinatorial allocation in decentralized environments where full type revelation is infeasible.
-
----
-
-# 6. Summary
-
-- A *message space* is the set of signals the mechanism can condition outcomes on.  
-- In Saito, many messages are produced by **actions** with **verifiable consequences**.  
-- Expanding the message space allows users to express preferences over blockspace, time, and collusion goods.  
-- But expressing these higher-dimensional messages requires **real economic cost**.  
-- This ensures that only **welfare-improving** deviations are expressed in equilibrium.  
-- The mechanism therefore implements **Pareto-efficient allocations relative to the informational topology of the network**.
-
-This forms the conceptual basis for Saito’s welfare-efficiency claims.
-
----
+This lets Saito implement decentralized welfare efficiency without violating classical impossibility results. The solution emerges precisely because it operates in an indirect, action-based domain outside the limits of direct mechanisms and their limitations.
