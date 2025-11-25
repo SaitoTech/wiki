@@ -2,7 +2,7 @@
 title: Transaction Fee Mechanisms
 description: 
 published: true
-date: 2025-11-25T15:36:40.374Z
+date: 2025-11-25T15:43:44.336Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-25T09:50:59.671Z
@@ -24,7 +24,7 @@ dateCreated: 2025-11-25T09:50:59.671Z
 
 - [Barriers to Collusion-resistant Transaction Fee Mechanisms](https://arxiv.org/abs/2402.08564) - Yotam Gafnim, Aviv Yaish (2024)
 
-A school of primarily American academics, led by Elaine Shi (Cornell) and Tim Roughgarden (Columbia), has produced a series of papers arguing that incentive-compatible blockchains, or “transaction fee mechanisms,” cannot be designed under certain formal assumptions.
+A line of academic work, led by Elaine Shi (Cornell) and Tim Roughgarden (Columbia), has produced a series of papers arguing that incentive-compatible blockchains, or “transaction fee mechanisms,” cannot be designed under certain formal assumptions.
 
 Mixing concepts from computer science and implementation theory, this literature is relevant to Saito Consensus for two reasons. The first is that several of its stated impossibility results directly contradict the guarantees of the Saito protocol. Second, the terminology introduced in these works -- most prominently UIC, MIC, side-contract-proofness, and OCA-proofness -- has become influential in industry and is frequently treated as though it aligns with implementation theory.
 
@@ -42,7 +42,7 @@ In the remainder of this page, we cover these errors briefly.
 
 The TFM papers attempt to study incentive compatibility within the confines of an artificially constrained game. When analyzing user strategies, they assume miner honesty; when analyzing miner strategies, they assume user honesty. By cleaving the strategy space in this way, their model excludes the possibility that both sides may respond in strategically complex ways that punish deviations by the other.
 
-This ommission is significant, as it excludes the possibility of mechanisms that delivers incentive compatibility not through structural constraints on agent behavior but through the threat of credible punishments from opposing parties.
+This ommission is consequential, as it excludes the possibility of mechanisms that delivers incentive compatibility not through structural constraints on agent behavior but through the threat of credible punishments from opposing parties.
 
 
 ## 2. Improper Reduction
@@ -53,18 +53,18 @@ For this to work the direct mechanism must preserve the full strategic environme
 
 The TFM papers fail this requirement, invoking the Revelation Principle in a manner that **shrinks the strategy space rather than preserves it**. Actions that are acknowledged to be feasible and affect outcomes in the real mechanism -- such as the insertion of fake transactions in blocks, or side-contract payments from users to miners -- are removed entirely from the strategy space in the reduced mechanism.
 
-As a result, while these papers invoke the Revelation Principle to generate a simplified game form, the game form generated shows a change in the set of possible outcomes, and thus in the set of implementable equilibria. This shift destroys the equivalence the Revelation Principle is meant to guarantee, and which provides the basis for generalizing impossibility results back from the reduced-game to the original environment and full-form mechanism.
+As a result, while these papers invoke the Revelation Principle to generate a simplified game form, the game form generated shows a change in the set of possible outcomes, and thus in the set of implementable equilibria. This shift breaks the equivalence the Revelation Principle is meant to guarantee, and which provides the basis for generalizing impossibility results back from the reduced-game to the original environment and full-form mechanism.
 
 ## 3. Dimensional Collapse
 
 The TFM papers typically ask users to share their private valuations for “blockspace” with the mechanism as their form of truthful preference revelation. Yet additional forms of utility -- preferences for timing, transaction ordering, MEV protection, or even the benefits of collusion -- are acknowledged as factors that affect strategic behavior.
 
-This vacillation between acknowledging a multi-dimensional reality and suppressing it creates internal contradictions that are never resolved. Classical single-parameter assumptions are needed to ensure monotonicity assumptions or apply Myerson’s Lemma. But unrevealed preferences are exploited to justify agent preferences for off-equilibrium deviations.
+This vacillation between acknowledging a multi-dimensional reality and suppressing it introduces internal contradictions. Classical single-parameter assumptions are needed to ensure monotonicity assumptions or apply Myerson’s Lemma. But unrevealed preferences are needed to justify agent preferences for off-equilibrium deviations.
 
 
 ## Summary
 
 Although the TFM literature adopts the language of incentive compatibility, the way it models incentive compatibility and collusion-resilience is not aligned with the formal requirements of economic theory.
 
-The differences break the conditions that Hurwicz, Maskin, and Myerson establish for studying the implementability of social choice rules. As a result, foundational results like the Revelation Principle cannot be invoked to generalize about implementability. What remains is simply an analysis of equilibrium behavior inside a specific mechanism with arbitrarily restricted message spaces.
+The differences break the conditions that Hurwicz, Maskin, and Myerson establish for studying the implementability of social choice rules. As a result, foundational results like the Revelation Principle cannot be invoked to generalize about implementability. What remains is simply an analysis of equilibrium behavior inside a specific mechanism with restricted message spaces.
 
