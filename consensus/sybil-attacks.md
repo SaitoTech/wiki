@@ -2,7 +2,7 @@
 title: Sybil Attacks
 description: 
 published: true
-date: 2025-11-25T03:06:16.511Z
+date: 2025-11-25T03:08:03.746Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
@@ -45,9 +45,9 @@ Saito Consensus is the first consensus mechanism that solves this problem. It ac
 
 The [mathematical paper](https://github.com/SaitoTech/papers/blob/main/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf) linked above provides a rigorous proof of this. It demonstrates that the expected income from the payout lottery *falls* for all nodes that add an unnecessary hop to a routing path. The solution is possible because Saito Consensus does not work the way *Babaioff* and his colleagues assume blockchains must work. Specifically, *Babaioff* makes two critical assumptions about how blockchains work that do not apply to Saito Consensus.
 
-The first assumption *On Bitcoin and Red Balloons* makes is that consensus mechanisms must afford all nodes the same cost for proposing blocks. This assumption is true in proof-of-work and proof-of-stake mechanisms. But it breaks in Saito Consensus as cost of producing a block depends on the efficiency of the routing paths the block producer is proposing to include in the block. If two competing nodes have the same set of transactions the one with the more efficiently-routed set will produce a block faster and more cheaply than its competitor.
+The first assumption *On Bitcoin and Red Balloons* makes is that consensus mechanisms must afford all nodes the same probability of proposing the next block. This assumption is true in proof-of-work and proof-of-stake mechanisms. But it breaks in Saito Consensus as cost of producing a block depends on the efficiency of the routing paths the block producer is leveraging to produce the block. If two competing nodes have access to the same set of transactions the one with the more efficiently-routed set will produce a block faster and more cheaply than its competitor.
 
-*On Bitcoin and Red Balloons* also assumes that nodes on a routing path face a zero-sum conflict for collection of the fee. But in Saito Consensus the nodes on any routing path do not face a zero-sum conflict to collect the fee. They are engaged in a zero-sum conflict with nodes on competing routing paths. The cooperative and efficient sharing of transaction flows is mutually beneficial as it benefits nodes which share while penalizing those which hoard. This reverses the collective action problem which makes the .
+The assumption that nodes on a routing path face a zero-sum conflict for collection of the fee also does not apply in Saito Consensus either. The cooperative and efficient sharing of transaction flows is mutually beneficial as it benefits nodes which share while penalizing those which hoard. This reverses the collective action problem which makes the .
 
 These two assumptions: (1) all nodes face the same cost of producing blocks, (2) nodes on a routing path face zero-sum conflict over fee collection are buried in the *On Bitcoin and Red Balloons* paper but are the source of its impossibility claims. They are accepted uncritically in part because they describe how the Bitcoin network functions. Yet neither of these assumptions apply to routing work mechanisms, and the trade-offs they force on other networks vanish in informationally decentralized payment mechanisms that are not subject to this specific problem.
 
