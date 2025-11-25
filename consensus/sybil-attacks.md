@@ -2,7 +2,7 @@
 title: Sybil Attacks
 description: 
 published: true
-date: 2025-05-21T09:13:35.884Z
+date: 2025-11-25T02:53:59.773Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
@@ -10,7 +10,13 @@ dateCreated: 2023-09-12T04:54:16.592Z
 
 # Sybil Attacks
 
-Saito Consensus is the first consensus mechanism that is known to be sybil-proof. A mathematical proof of this claim is available in the paper [*A Simple Proof of Sybil Proof.*](https://github.com/SaitoTech/papers/blob/main/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf). Since the economic problem this solves is non-obvious, this page provides a non-technical introduction to what the sybil problem is and how Saito Consensus solves it.
+Sybil attacks are one of the core economic challenges in decentralized systems. In 2011, Babaioff, Dobzinski, Oren, and Zohar formalized this in their paper "On Bitcoin and Red Balloons", which claimed to prove that no reward scheme can simultaneously incentivize information propagation while also detering self-cloning. This result has since been widely interpreted as offering a fundamental limitation on incentive design.
+
+Saito Consensus breaks this limitation. It is the first known consensus mechanism that is provably sybil-proof, with these properties formally established in the paper [*A Simple Proof of Sybil Proof.*](https://github.com/SaitoTech/papers/blob/main/sybil/A_Simple_Proof_of_Sybil_Proof_Lancashire-Parris_2023.pdf).
+
+The purpose of this page is to explain -- in non-technical terms -- what the Red Balloons impossibility result is and why it does not apply to Saito-class routing mechanisms. Following that, we explain why the solution Saito offers to this specific routing problem generalizes to provide protection against other attacks associated with cheap identity creation in permissionless mechanisms.
+
+
 
 ## An Impossible Problem?
 
