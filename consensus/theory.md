@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-25T15:49:38.729Z
+date: 2025-11-25T15:50:10.448Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -51,7 +51,7 @@ This page explains the logic behind sybil-proofness and the Red Balloons problem
 - Common Proof Errors in Blockchain Security 
 This page reviews common modeling mistakes in blockchain security analyses that routing work mechanisms show are not universally valid, such as the assumption of costless fake message creation, unverifiable actions, or unlimited adversarial communication channels. It highlights how breaking these assumptions break real-world applicability of many classical results and shows how routing-work mechanisms explicitly control these deviation channels.
 
-- Roughgarden, Shi and TFM Modelling Error
+- [Roughgarden, Shi and TFM Modelling Errors](/consensus/theory/transaction-fee-mechanisms)
 This page reviews the modeling assumptions used in the transaction-fee mechanism (TFM) literature and shows how inconsistencies in how these models handle preferences and message spaces prevent their results from generalizing into valid impossibility results under standard implementation theory.
 
 ## Final Note: what Saito does *not* claim
