@@ -2,7 +2,7 @@
 title: Sybil Attacks
 description: 
 published: true
-date: 2025-11-25T02:53:59.773Z
+date: 2025-11-25T03:06:16.511Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
@@ -17,21 +17,29 @@ Saito Consensus breaks this limitation. It is the first known consensus mechanis
 The purpose of this page is to explain -- in non-technical terms -- what the Red Balloons impossibility result is and why it does not apply to Saito-class routing mechanisms. Following that, we explain why the solution Saito offers to this specific routing problem generalizes to provide protection against other attacks associated with cheap identity creation in permissionless mechanisms.
 
 
-
 ## An Impossible Problem?
 
-> Many large decentralized systems rely on information propagation to ensure their
-proper function... [we show] that there are no reward schemes in which information
-propagation and no self-cloning is a dominant strategy.
-<br>-Moshe Babaioff, Microsoft Research
+> Many large decentralized systems rely on information propagation to ensure their proper function... [we show] that there are no reward schemes in which information propagation and no self-cloning is a dominant strategy.
+<br>-*Moshe Babaioff, Microsoft Research*
 
 A major economic problem in blockchains is that nodes in possession of fee-bearing transactions do not have an incentive to share these transactions with their peers. Why share transactions with potential competitors? Increasing the number of people with the ability to put a transaction into a block is irrational if it lowers your own chance of collecting the fee.
 
-This problem is solvable if we pay nodes to share. But adding such a payout creates a separate problem: once routing nodes get paid for sending transactions to block producers, what is stopping these nodes from adding fake routing hops to transactions to increase their share of the routing path and increase their chance of winning the routing payout?
+This problem is solvable if we pay nodes to share. But adding such a payout creates a separate problem: once routing nodes are paid for forwarding transactions to their peers, what is stopping them from adding "fake" routing hops to transactions to increase their share of the routing path and increase their chance of winning any routing payout?
 
-This is the problem Moshe Babaioff and his colleagues examined in their paper *[On Bitcoin and Red Ballons](https://arxiv.org/abs/1111.2626)* and concluded was impossible to solve, arguing that there are no reward schemes that can incentivize *information propagation* that do not also incentivize *self-cloning*. If you pay nodes to share, Moshe reasons, you must also incentivize them to route their transactions through fake identities to maximize their chance of winning any routing payout.
+This is the problem Moshe Babaioff and his colleagues examined in their paper *[On Bitcoin and Red Ballons](https://arxiv.org/abs/1111.2626)*. After examining the problem, the authors concluded that no reward scheme exists that can make “honestly forward” a dominant strategy while simultaneously discouraging "self-cloning". If you pay nodes to share, Moshe reasons, you must also incentivize them to use fake identities to maximize their chance of receiving any routing payout.
 
 ## A Groundbreaking Solution
+
+What often goes unnoticed is that the claims of these authors only hold under the specific assumptions they make when framing the problem. These assumptions are drawn from an examination of Bitcoin and do not apply to all possible decentralized mechanisms. Specifically, the authors assume:
+
+- all nodes have equal probability of proposing the next block**
+- all nodes have the same cost of proposing the next block**
+- routing decisions do not affect leader selection or cost
+- all routing payouts induce zero-sum conflict over a routing path**
+
+Under these assumptions forwarding a transaction can only ever decrease the income of the node that shares, as it provides other nodes with a statistical chance at collecting the fee without affecting its own cost for participating in the system.
+
+## How Saito Addresses Sybilling
 
 Saito Consensus is the first consensus mechanism that solves this problem. It achieves this by penalizing the economic inefficiency associated with sybil hops. Nodes that add unnecessary routing hops to transactions increase their cost of producing blocks faster than they increase their expected income from the expanded claims on the routing payout. Sybilling remains technically possible, but becomes strictly irrational.
 
