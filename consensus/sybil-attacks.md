@@ -2,7 +2,7 @@
 title: Sybil Attacks
 description: 
 published: true
-date: 2025-11-25T03:18:24.291Z
+date: 2025-11-25T03:38:06.190Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-12T04:54:16.592Z
@@ -55,10 +55,47 @@ These two assumptions: (1) all nodes face the same probability and cost of produ
 
 While Saito Consensus solves the very specific problem in the Babaioff paper. It also offers a more general solution to sybil attack generally. To understand how, consider [Wikipedia](https://en.wikipedia.org/wiki/Sybil_attack)'s definition of a sybil attack as "a type of attack on a computer network in which an attacker subverts the service's reputation system by creating a large number of pseudonymous identities and uses them to gain a disproportionately large influence."
 
-All sybil attacks involve attackers who use pseudoanonymous identities to increase their expected incomes. In Saito Consensus this becomes generally irrational because the routing paths that are embedded within transactions are a measure of the efficiency with which the network is burning money. Faking this metric using pseudoanonymous identities is only possible those identities are willing to burn money. But since both identities are controlled by the attacker this implies that the attacker must be irrational.
+Understood properly, this points to Saito offering a general solution to sybil-attacks that manifest in other domains as well. And the reason for this is that, in Saito, identity inflation also results in an increase in the measured inefficiency of the network and forces an inefficient money-burn on the nodes responsible for the inefficiency.
 
-Put most plainly, with Saito Consensus nodes can *try* to sybil, but doing so increases the costs of producing blocks and lowers the expected profitability of doing so in ways that make sybilling far more costly than following protocol rules and sharing unconfirmed transactions efficiently with other nodes on the network. Sybilling becomes a strictly dominated strategy.
+The key innovation in Saito Consensus is that **block-production cost depends on routing-path efficiency**. Routing paths embedded into transactions encode how efficiently the network is collecting tokens, and submits those tokens into a payout lottery that requires burning a substantial amount of the fees collected. As such, adding fake identities to those paths:
 
-## Conclusion
+- increases the length of the path,  
+- slows block production,  
+- raises the cost of producing a block, and  
+- raises the cost of collecting other people's money
 
-Saito Consensus offers a significant advance in distributed consensus. But you don't need to take our word for it -- we encourage all readers to dig into the mathematical paper above and see for yourself how cryptographic routing signatures can be used to universally punish the inefficiencies created by the presence of sybils in transaction routing paths.
+Crucially, if the attacker controls *all* the sybil identities, the harm falls entirely on the attacker themselves. This is why the formal proof in *A Simple Proof of Sybil Proof* (Lancashire & Parris, 2023) shows:
+
+> **The expected routing payout strictly decreases for any node that inserts an unnecessary hop.**
+
+
+### Why this generalizes far beyond routing
+
+Saito’s protection against sybilling does not depend on the specific structure of the routing payout, but emerges from the structural economics of how the network quantifies the value contributed by nodes and encourages only economically-productive forms of cooperation.
+
+And this general principle holds across attack surfaces:
+
+- **Operating many block-producers**  
+  - Splits access to transaction flow and forces unncessary cross-node transfers, making each identity less competitive at block production.
+
+- **Creating many routing identities**  
+  - Lengthens routing paths and increases burn cost faster than it increases expected reward.
+
+- **Adding "fake transactions" to blocks**
+  - Imitates a real user, but subjects the imitator to the costs a real user would face in the mechanism, namely the unrecoveralb eburning of a portion of their fee.
+
+Essentially, Saito offers a generalizable solution to sybil-attacks because **income-earning power is tied to efficient economic behavior** not identity count. And the requirement for distinct identities to communicate to cooperate/collude subjects those nodes to the implicit tax the network assigns to work-transfers across routing networks.
+
+### Sybilling becomes a strictly dominated strategy
+
+In Saito, every sybil attacks shares a common property:
+
+> **It makes the attacker strictly worse off than following the protocol.**
+
+This is stronger than merely preventing one particular routing-path attack. It ensures that:
+
+- honest participation is always profit-maximizing,  
+- sybilling is always profit-decreasing,  
+- and cooperative sharing of transactions is strategically stable.
+
+This positions Saito as the first consensus mechanism in which **sybilling is irrational in the general mechanism-design sense**, not just prohibited by ad-hoc rules.
