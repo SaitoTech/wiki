@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-25T02:34:34.121Z
+date: 2025-11-25T02:46:27.172Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -45,10 +45,7 @@ This page reviews the Bracha–Toueg impossibility result for reliable broadcast
 - [Dwork–Lynch–Stockmeyer](/consensus/theory/dwork-lynch-stockmeyer) (1988)
 This page examines the partial-synchrony model of DLS and its implications for consensus. Classical DLS results treat equivocation and message fabrication as free actions for Byzantine actors, whereas routing-work mechanisms make such actions economically dominated. Understanding this distinction clarifies why routing-work consensus does not rely on the timing or failure assumptions in DLS.
 
-- [GKL / Long-Range Attacks](/consensus/theory/long-range-attacks)
-This page discusses the Garay–Kiayias–Leonardos (GKL) model and related analyses of longest-chain protocols, including long-range attacks. These results assume security derives from randomized leader selection and honest-majority properties of chain growth. Routing-work mechanisms do not depend on longest-chain selection, and their security does not rest on these assumptions, placing them outside the scope of GKL-style analyses.
-
-- Sybil-Proofness / Red Balloons
+- [Sybil-Proofness / Red Balloons](/consensus/sybil-attacks)
 This page explains the logic behind sybil-proofness and the Red Balloons problem, showing why sybil creation defines the only meaningful channel for multi-path strategic deviation. It summarizes the structure of the Lancashire–Parris sybil-proofness proof and explains how sybil cost bounds deviation incentives in routing-work mechanisms.
 
 - Common Proof Errors in Blockchain Security 
