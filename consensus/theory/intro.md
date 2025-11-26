@@ -2,7 +2,7 @@
 title: Introduction to Saito for Theorists
 description: 
 published: true
-date: 2025-11-24T09:48:00.084Z
+date: 2025-11-26T13:24:07.996Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T09:35:00.976Z
@@ -28,7 +28,7 @@ This single structural change shifts the set of profitable deviations and opens 
 
 Existing impossibility results in both distributed systems and economics rely on a set of background assumptions that are almost never questioned — including the assumption that **asymmetrically costly state transitions cannot be implemented in a permissionless setting.**
 
-Saito not only relaxes this assumption, but the technical changes that allow it to do so (the addition of cryptographically-signed routing paths to informationally decentralized mechanism) put it in direct tension with two additional assumptions that are also taken as axiomatic in much of the literature. These three assumptions are:
+Saito not only relaxes this assumption, but the technical changes that allow it to do so (the addition of cryptographically-signed routing paths to informationally decentralized mechanism) put it in direct tension with three additional assumptions that are also taken as axiomatic in much of the literature. These three assumptions are:
 
 - **Symmetric proposal costs:** most models treat the cost of proposing a block or state transition or publishing another equilibrium-affecting message as identical in expectation between adversarial and honest nodes.
 
