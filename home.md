@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-11-26T11:22:39.440Z
+date: 2025-11-26T11:24:09.427Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -47,7 +47,7 @@ Bonus? Saito doesn't use smart contracts. You write a module, share it with user
 Our research sections assumes familiarity with distributed systems, collective action problems, and mechanism design. Here you can find material on how Saito works at a deeper level.
 
 - **How Saito consensus works** → *[Consensus Overview](/consensus)*  
-- **What is New in Theory** → *[Academic Introsuction(/consensus/theory)*
+- **What is New in Theory** → *[Academic Introduction](/consensus/theory)*
 
 - **Sybil Resistance and Punishing Deviation** → *[Security & Economics](/consensus/theory/sybil-attacks)*  
 
