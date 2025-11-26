@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-11-26T11:25:21.062Z
+date: 2025-11-26T11:25:47.019Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -51,7 +51,7 @@ Our research sections assumes familiarity with distributed systems, collective a
 
 - **Sybil Resistance and Punishing Deviation** → *[Security & Economics](/consensus/theory/sybil-attacks)*  
 
-👉 *Go to the [Theory & Research Section](#)*
+
 
 What's new? Saito introduces asymmetric proposal costs: malicious state transitions are more expensive to propose than honest ones, so truth-telling is cheaper than misreporting in expectation.
 
