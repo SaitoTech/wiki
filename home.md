@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-11-26T11:24:09.427Z
+date: 2025-11-26T11:25:21.062Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -34,9 +34,9 @@ Crypto OG? If you remember what blockchain was like when things were smaller and
 
 Learn to set-up nodes and build applications that run directly on-chain.
 
-- **How to run a node** → *[Node Setup](#)*  
-- **How to build modules** → *[Developer Guide](#)*  
-- **Transaction formats and routing** → *[Technical Reference](#)*  
+- **How to run a node** → *[Node Setup](/install)*  
+- **What can we Build** → *[Applications](/applications)*  
+
 - **Examples and tutorials** → *[Tutorials](#)*  
 
 Bonus? Saito doesn't use smart contracts. You write a module, share it with users, and your application immediately becomes part of the network.
