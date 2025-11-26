@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-25T15:50:10.448Z
+date: 2025-11-26T07:42:07.100Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -12,7 +12,7 @@ dateCreated: 2025-11-23T15:28:21.939Z
 
 This section provides an organized overview of the theoretical foundations of Saito Consensus. It is intended for economists, mechanism designers, and computer scientists who wish to understand how routing-work fits into established academic frameworks and why classical impossibility results do not bind the mechanism.
 
-We recommend starting with our [academic introduction](/consensus/theory/intro), which explains what is new about Saito Consensus (hint: asymmetrical costs). The sections below then position Saito in the context of specific theoretical findings to show how it is possible for a decentralized mechanism like Saito to implement a welfare efficient social choice rule.
+We recommend starting with our [high-level overview](/consensus/theory/intro), which explains what is new about Saito Consensus (hint: asymmetrical costs). The sections below then position Saito in the context of specific theoretical findings to show how it is possible for a decentralized mechanism like Saito to implement a welfare efficient social choice rule.
 
 **Core Saito Documents**
 
