@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-28T03:29:38.864Z
+date: 2025-11-28T04:09:59.084Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -47,6 +47,10 @@ This page examines the partial-synchrony model of DLS and its implications for c
 
 - [Sybil-Proofness / Red Balloons](/consensus/sybil-attacks)
 This page explains the logic behind sybil-proofness and the Red Balloons problem, showing why sybil creation defines the only meaningful channel for multi-path strategic deviation. It summarizes the structure of the Lancashire–Parris sybil-proofness proof and explains how sybil cost bounds deviation incentives in routing-work mechanisms.
+
+
+- [Censorship Resistance / Taxing Fee-Exclusion](/consensus/censorship)
+This page explains why routing work has properties of strong censorship-resistance that other mechanisms lack: attackers who censor transactions push the set of available work to competitors while reducing their own profitability in proposing state transitions and recapturing the costs of doing so in equilibrium.
 
 - Common Proof Errors in Blockchain Security 
 This page reviews common modeling mistakes in blockchain security analyses that routing work mechanisms show are not universally valid, such as the assumption of costless fake message creation, unverifiable actions, or unlimited adversarial communication channels. It highlights how breaking these assumptions break real-world applicability of many classical results and shows how routing-work mechanisms explicitly control these deviation channels.
