@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-26T07:42:07.100Z
+date: 2025-11-28T03:29:38.864Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -34,7 +34,7 @@ This page examines the conditions required for implementing welfare-efficient eq
 - [How Saito Implements a Welfare-Efficient Equilibrium](/consensus/theory/welfare-efficiency-ii)
 This page explains how Saito achieves welfare efficiency using costly, action-based signals instead of type reports. Routing signatures create a filtered message space in which only welfare-increasing deviations are rational, allowing the mechanism to aggregate decentralized proposals into Pareto-efficient outcomes without violating classical impossibility results.
 
-- [Welfare-Improving Trade Lemmas (Combinatorial Auction Theory](/consensus/theory/combinatorial-auctions)
+- [Welfare-Improving Trade Lemmas (Combinatorial Auction Theory)](/consensus/theory/combinatorial-auctions)
 This page shows that the correct analytic lens for routing mechanisms is the combinatorial double-auction literature. It establishes that any profitable deviation corresponds to a missed welfare-improving trade, and that such trades require costly message-space expansion. As a result, routing-work mechanisms are incentive-aligned: only welfare-improving deviations are profitable.
 
 **Computer Science**
