@@ -2,7 +2,7 @@
 title: Saito and Combinatorial Auction Theory
 description: 
 published: true
-date: 2025-11-24T19:17:07.135Z
+date: 2025-11-29T07:08:25.967Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T16:07:02.685Z
@@ -14,7 +14,7 @@ Saito Consensus is a **Permissionless Indirect Combinatorial Double Auction (PIC
 
 To our knowledge, no existing mechanism falls into this class. Traditional combinatorial double auctions (e.g., Wurman, Wellman & Walsh 1998; Parkes 2001; de Vries & Vohra 2003) are centralized and rely on explicit bid submission, while the indirect combinatorial mechanisms in the literature -- primarily iterative or ascending proxy auctions (Milgrom 2000; Ausubel & Milgrom 2002; Parkes 2006) -- still require a trusted auctioneer to collect bids, compute prices, and manage rounds.
 
-This positions Saito as a new class of distributed mechanism. In the page that follows, we outline why Saito Consensus meets the criteria for a PICDA and why the shift to an indirect mechanism allows Saito to implement efficient combinatorial allocation in environments where classical direct-revelation and single-good mechanisms fail.
+In the page that follows, we outline why Saito Consensus meets the criteria for a PICDA and why the shift to an indirect mechanism allows Saito to implement efficient combinatorial allocation in environments where classical direct-revelation and single-good mechanisms fail.
 
 
 ## A Permissionless Indirect Combinatorial Double Auction (PICDA)
