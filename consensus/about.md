@@ -2,7 +2,7 @@
 title: What is Saito
 description: An ELI5 description of what Saito Consensus is and why it matters...
 published: true
-date: 2025-11-23T11:51:41.344Z
+date: 2025-12-01T11:40:44.374Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T10:51:54.600Z
@@ -24,7 +24,7 @@ Without the ability to provision their own infrastructure, other networks drift 
 - nodes that only stake / hash accumulate money  
 - extractors reinvest to dominate block production  
 
-Consensus changes from a protocol that supports the network to a that cripples it, by transferring wealth from economic productive nodes (paying for infrastructure, collecting fees) to extractive nodes.
+Consensus changes from a protocol that supports the network to one that cripples it, by transferring wealth from economic productive nodes (paying for infrastructure, collecting fees) to extractive nodes.
 
 As we explain in our separate pages on the **Tragedy of the Commons** and the **Free-Rider Problem**, the only rational response for infrastructure providers is to restrict access to the transactions they are collecting for the network, and create business models which monetize the willingness of users to pay fees before their transactions ever hit the consensus layer of the blockchain.
 
