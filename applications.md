@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-11-19T09:12:51.904Z
+date: 2025-12-02T04:43:12.484Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -10,7 +10,7 @@ dateCreated: 2022-12-21T01:40:41.364Z
 
 # Saito Applications
 
-Applications on Saito look and feel like traditional web apps, but run in a peer-to-peer swarm. Browse some of the many Saito applications you can install and start using today, or learn about how to [code and install programmatic NFTs](/en/nfts):
+Applications on Saito look and feel like traditional web apps, but run on top of the Saito API and unlock the power of distributed web3 architecture. Browse some of the many Saito applications you can install and start using today if you clone our repo, or <a href="#build">learn about making your own application</a>
 
 <br />
 
@@ -420,6 +420,7 @@ Applications on Saito look and feel like traditional web apps, but run in a peer
 </div>
 
 ## Build Your Own Application?
+<div id="build"></div>
 
-Developers can see our full list of [available modules](https://github.com/saitotech/saito/tree/master/mods) to get a sense of what it is possible to build. We also have a [tutorial series](https://wiki.saito.io/en/tutorials/dev) that explains how to get started building Saito applications. Contact us anytime for help getting started!
+Developers can see our full list of [available modules](https://github.com/saitotech/saito/tree/master/mods) to get a sense of what it is possible to build. We also have a [tutorial series](https://wiki.saito.io/en/tutorials/dev) that explains how to get started building Saito applications. Learn how to [code and install programmatic NFTs](/en/nfts). Contact us anytime for help getting started!
 
