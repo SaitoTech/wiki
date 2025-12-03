@@ -2,7 +2,7 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-03T12:46:06.425Z
+date: 2025-12-03T12:55:41.464Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
@@ -19,15 +19,15 @@ The purpose of this note is to explain how Saito Consensus constructs a  welfare
 
 The underlying source of the impossibility results that drive conventional wisdom in implementation theory is a specific modeling assumption: that agents cannot face higher costs for sending messages that induce deviations from welfare-optimal outcomes.
 
-This assumption is so deeply embedded in implementation theory that for decades it attracted no scrutiny. Perhaps driven by a tendency to analogize communication to ordinary speech, Hurwicz (1972) embedded it in his seminal paper when conceptualizing all statements as equally cheap to express. Maskin’s work on Nash implementation then cemented it by abstracting away communication costs completely, assuming agents could send any messages, message spaces were unrestricted, and all messages were equally easy to transmit.
+This assumption is so deeply embedded in implementation theory that for decades it attracted virtually no scrutiny. Perhaps driven by a tendency to analogize communication to ordinary speech, Hurwicz (1972) embedded it in his seminal paper when conceptualizing all statements as equally cheap to express. Maskin’s work on Nash implementation then cemented it by abstracting away communication costs completely, assuming agents could send any messages, message spaces were unrestricted, and all messages were equally easy to transmit.
 
 Myerson’s development of the Revelation Principle then pushed the assumption further out of sight.  By showing that any implementable indirect mechanism could be represented as a direct mechanism in which agents simply report their types, Myerson re-centered the study of incentive compatibility on the study of direct mechanisms, in which all messages take the form of type reports, and nothing in the formalism distinguishes one message from another or allows their costs to differ.
 
 Although indirect mechanisms remained known that could not be reduced to direct mechanisms under the Revelation Principle, because their incentives were not describable entirely through type reports, they were often regarded as being shaped by forces that were not easily quantifiable and called for formalization. But as soon as any element of such an indirect mechanism became amenable to formalization, it was necessarily incorporated into a type space, which had the effect of forcing it into a model that assumed costless speech.
 
-In this way, the Revelation Principle created a quiet gravitational well. Because it could only observe variables in mechanisms compatible with the requirements of Myerson-Maskin, and because such mechanisms could not manipulate cost of messaging, the framework effectively precluded the possibility of observing types that could affect the cost of messaging within the mechanism itself.
+In this way, the Revelation Principle created a quiet gravitational well. Because it could only observe variables in mechanisms compatible with the requirements of Myerson-Maskin, and because such mechanisms could not manipulate cost of messaging, the framework effectively blinded theorists to the possibility that agents' preferences could endogenously affect the cost of communicating within the mechanism itself.
 
-Reinforcing the framework, a structurally similar assumption -- treating communication as symmetric and frictionless -- then took root independently across several economic and computational subfields. In bilateral trade, the Myerson–Satterthwaite theorem presumes that agents can misstate valuations without facing any penalty for doing so. In strategic communication, Crawford–Sobel model all messages as costless and commitment‑free, ensuring that only coarse partitions of information can be credibly conveyed. And in distributed consensus theory, impossibility results such as Bracha-Toueg depend on the assumption that agents can issue arbitrary proposals at identical cost, thwarting convergence on a single consistent state.
+This blind spot was reinforced as similar assumptions proved analytically useful in driving meaningful discoveries independently across several economic and computational subfields. In bilateral trade, the Myerson–Satterthwaite theorem presumes that agents can misstate valuations without facing any penalty for doing so. In strategic communication, Crawford–Sobel model all messages as costless and commitment‑free, ensuring that only coarse partitions of information can be credibly conveyed. And in distributed consensus theory, impossibility results such as Bracha-Toueg depend on the assumption that agents can issue arbitrary proposals at identical cost, thwarting convergence on a single consistent state.
 
 In all of these papers, mechanisms are modeled as having frictionless messages that carry no commitments, impose no costs, and do not alter continuation payoffs. Once this is recognized, the impossibility results they produce become clear artifacts of this modeling choice. Yet nothing in informational decentralization itself requires communication to be costless. The symmetry and frictionlessness of the message space are assumptions of the canonical models, not necessities of the environment.
 
