@@ -2,7 +2,7 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-03T16:50:07.336Z
+date: 2025-12-03T17:00:52.775Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
@@ -50,11 +50,58 @@ Broadcast Strategies within the mechanism now permit agents to trade-off **conti
 
 - **forwarding changes the utility bundle:** cooperation not only affects speed-of-settlment, but allows participants to engage in side-deals in exchange for bid-flow, such as extending additional private benefits ("collusion goods") in exchange for exclusive access to proposals.
 
-- **forwarding changes the degree of competition:** the decision to share exclusively with one peer or broadcast to multiple peers affects the expected profitability of the recipients and thus their own broadcast strategies.
+- **forwarding changes the degree of competition:** the decision to share exclusively with one peer or broadcast to multiple peers affects the expected profitability of the recipients and thus their own broadcast strategies and willingness to provide collusion goods.
 
-The message space is no longer symmetric. A three directional trade-off / trilemma is pulled into being that allows agents to trade their **continuation value** for other forms of utility. There is not only a cost paid for messaging, but it is paid in terms of the other forms of utility available through the mechanism.
+The message space is no longer symmetric. A three directional trade-off / trilemma is pulled into being that allows agents to trade their **continuation value** for other forms of utility. We not only have a cost paid for messaging, but it is paid in terms of the other forms of utility available through the mechanism.
 
-### 3.3 Mechanism Overview (informal specification)
+
+## Section 4. Welfare Efficient Outcomes
+
+The mechanics described in Section 3 make proposals that are consistent with welfare-efficient allocations uniquely attractive to participants.
+
+For clarity, 
+
+**Lemma 1. All welfare-increasing trades require cooperation and therefore continuation-value sacrifice.**
+
+We define a welfare-increasing trade as any reallocation among Goods A, B, and C that strictly increases an agent’s utility given their private preferences.
+
+Under the clearing rules of the mechanism, unilateral deviations cannot improve an agent’s allocation of A or B. Any welfare-increasing deviation must therefore involve participation in a portfolio bid, which necessarily expands the routing path. This expansion dilutes the agent’s continuation value by reducing their expected claim on the routing payout / refund. Every welfare-increasing trade thus carries a built-in continuation-value cost that the agent must accept in order to receive the immediate benefit.
+
+**Lemma 2. Profitable deviations must be welfare-increasing trades.**
+
+Because all deviations sacrifice some dimension of utility-in-mechanism, no agent can strictly improve their payoff without engaging in a subjective welfare-increasing trade across Goods A (blockspace), B (time preference), and C (collusion-utility). A deviation is profitable if and only if the agent values the marginal gain (e.g., the collusion utility secured from private broadcast) more than the marginal loss (e.g., slower settlement from limited competition). Thus any profitable deviation must correspond to a genuine welfare-increasing trade from the agent’s perspective.
+
+**Lemma 3. Continuation-value losses exceed gains for all non-efficient deviations.**
+
+Continuation value represents an agent’s ability to purchase any mix of A, B, and C in future rounds of the iterating auction. Routing-work dilution reduces this continuation value proportionally. As a result, any deviation that does not create a genuine welfare improvement imposes a strict net loss: the reduction in continuation value outweighs any short-term benefit gained from the deviation. Such deviations are irrational in intertemporal expectation.
+
+**Theorem. Pareto-Sufficient Efficient Implementation.**
+
+Given the mechanism’s fixed rules, observability of routing paths, and common-knowledge continuation-value incentives, the only deviations consistent with intertemporal optimization are those that correspond to genuine welfare-increasing trades. All other deviations collapse under the weight of their continuation-value losses. Hence the mechanism implements an allocation that is Pareto-sufficient: efficient given the topological structure of communication within the mechanism, rational agents converge to proposals consistent with the welfare-efficient allocation, even under informational decentralization.
+
+NOTE: efficiency can be improved from the *Pareto sufficient* baseline if agents use the opportunity to publish information on their pricing and availability of collusion goods via the inclusion of proposals as a form of price broadcasting.
+
+For an intuitive understanding of how optimization is possible, note that because cooperation improves current utility but reduces continuation value, rational agents must balance **short-term gains** in Goods A, Good B, and Good C. against **long-term losses** in their ability to purchase those same goods in the future.
+
+In other mechanisms this trade-off becomes insolvable because there is no way to optimize consumption across multiple time-frames. But with routing work long-term time-preference can be manipulated directly within the mechanism through the trade-offs portfolio bids allow agents to construct between Good A and Good C.
+
+Granular forms of optimization are possible because agents who trade Good B for Good A or Good C, are delaying their consumption of utility in the same way that they would by collecting a refund for use in a later round in the iterating auction. Trade-offs between all goods become possible to optimize within the current bid or within the iterated game. In this environment, portfolio bids that maximize expected welfare survive; since optimizing within each round of the auction is equivalent in expectation to optimizing across multiple rounds.
+
+## Section 5. Stability Through Incentives
+
+The most beneficial strategy for all participants is to maximize the gains available from cooperating with other agents while minimizing the losses that the need to cooperate forces on them.
+
+When all agents follow this strategy:
+
+- welfare-increasing trades propagate forward,
+
+- inefficient deviations collapse,
+
+- and the mechanism drives short-term and long-term time preference into equilibrium.
+
+The outcome that remains is the one in which all agents forward and adopt proposals consistent with the welfare-efficient allocation. Efficiency emerges not by assumption or revelation, but because the mechanism embeds the incentive gradient needed to restrict profitable deviations exclusively to genuine welfare improvements.
+
+# Appendix
 
 Now that we have described why the mechanism works in theory, we provide a brief informal specification of how such a mechanism can be implemented in practice.
 
@@ -109,50 +156,3 @@ The mechanism operates through the following components:
 - Invalid or inconsistent routing paths render both the proposal and any bundle containing it invalid.
 
 - A simple longest-chain rule selects among competing bundles.
-
-## Section 4. The Rationality of Efficient Implementation
-
-The mechanics described in Section 3 do more than eliminate the possibility of “cheap talk” reports required by conventional impossibility results. They also make proposals that are consistent with welfare-efficient allocations uniquely attractive to participants.
-
-To understand why, we define a welfare-increasing trade as any reallocation among Goods A, B, and C that strictly increases an agent’s utility according to their own preferences. We then show that all profitable deviations within the mechanism must take the form of a cooperative portfolio bid. We offer this argument as a series of lemmas leading to a general result:
-
-For clarity, 
-
-**Lemma 1. All welfare-increasing trades require cooperation and therefore continuation-value sacrifice.**
-
-Under the clearing rules of the mechanism, unilateral deviations cannot improve an agent’s allocation of A or B. Any welfare-increasing deviation must therefore involve participation in a portfolio bid, which necessarily expands or modifies the routing path. This expansion dilutes the agent’s continuation value, defined as the expected future purchasing power derived from refund eligibility. Every welfare-increasing trade thus carries a built-in continuation-value cost that the agent must accept in order to receive the immediate benefit.
-
-**Lemma 2. Profitable deviations must be welfare-increasing trades.**
-
-Because deviations necessarily sacrifice some dimension of utility-in-mechanism, no agent can strictly improve their payoff without engaging in a subjective welfare-increasing trade across Goods A (blockspace), B (time preference), and C (collusion-utility). A deviation is profitable if and only if the agent values the marginal gain (e.g., the collusion utility secured from private broadcast) more than the marginal loss in the other goods (e.g., slower settlement). Thus any profitable deviation must correspond to a genuine welfare-increasing trade from the agent’s perspective.
-
-**Lemma 3. Continuation-value losses exceed gains for all non-efficient deviations.**
-
-Continuation value represents an agent’s ability to purchase any mix of A, B, and C in future rounds of the iterating auction. Routing-work dilution reduces this continuation value proportionally. As a result, any deviation that does not create a genuine welfare improvement imposes a strict net loss: the reduction in continuation value outweighs any short-term benefit gained from the deviation. Such deviations are irrational in intertemporal expectation.
-
-**Theorem. Pareto-Sufficient Efficient Implementation.**
-
-Given the mechanism’s fixed rules, observability of routing paths, and common-knowledge continuation-value incentives, the only deviations consistent with intertemporal optimization are those that correspond to genuine welfare-increasing trades. All other deviations collapse under the weight of their continuation-value losses. Hence the mechanism implements an allocation that is Pareto-sufficient: efficient given the topological structure of communication within the mechanism, rational agents converge to proposals consistent with the welfare-efficient allocation, even under informational decentralization.
-
-NOTE: efficiency can be improved from the *Pareto sufficient* baseline if agents use the opportunity to publish information on their pricing and availability of collusion goods via the inclusion of proposals as a form of price broadcasting.
-
-For an intuitive understanding of how optimization is possible, note that because cooperation improves current utility but reduces continuation value, rational agents must balance **short-term gains** in Goods A, Good B, and Good C. against **long-term losses** in their ability to purchase those same goods in the future.
-
-In other mechanisms this trade-off becomes insolvable because there is no way to optimize consumption across multiple time-frames. But with routing work long-term time-preference can be manipulated directly within the mechanism through the trade-offs portfolio bids allow agents to construct between Good A and Good C.
-
-Granular forms of optimization are possible because agents who trade Good B for Good A or Good C, are delaying their consumption of utility in the same way that they would by collecting a refund for use in a later round in the iterating auction. Trade-offs between all goods become possible to optimize within the current bid or within the iterated game. In this environment, portfolio bids that maximize expected welfare survive; since optimizing within each round of the auction is equivalent in expectation to optimizing across multiple rounds.
-
-## Section 5. Stability Through Incentives
-
-The most beneficial strategy for all participants is to maximize the gains available from cooperating with other agents while minimizing the losses that the need to cooperate forces on them.
-
-When all agents follow this strategy:
-
-- welfare-increasing trades propagate forward,
-
-- inefficient deviations collapse,
-
-- and the mechanism drives short-term and long-term time preference into equilibrium.
-
-The outcome that remains is the one in which all agents forward and adopt proposals consistent with the welfare-efficient allocation. Efficiency emerges not by assumption or revelation, but because the mechanism embeds the incentive gradient needed to restrict profitable deviations exclusively to genuine welfare improvements.
-
