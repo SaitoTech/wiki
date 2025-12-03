@@ -2,7 +2,7 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-03T12:58:38.845Z
+date: 2025-12-03T13:00:50.764Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
@@ -35,7 +35,7 @@ And it is this assumption that Saito violates, by introducing endogenous message
 
 ## Section 3: Asymmetry through Broadcast Strategy
 
-The basic idea behind Saito's solution is simple: when a mechanism can make an agent’s **continuation value** depend on the content of their proposals, messages stop being costless and the symmetry that drives classical impossibility results disappears.
+The basic idea behind Saito's solution is simple: when a mechanism can make an agent’s **continuation value** -- their expected future purchasing power -- depend on the content of their proposals, messages stop being costless and the symmetry that drives classical impossibility results disappears.
 
 ### 3.1 Technical Requirements
 
