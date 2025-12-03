@@ -2,7 +2,7 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-03T12:29:57.250Z
+date: 2025-12-03T12:38:37.976Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
@@ -25,9 +25,9 @@ Myerson’s development of the Revelation Principle then pushed the assumption f
 
 Although indirect mechanisms remained known that could not be reduced to direct mechanisms under the Revelation Principle, because their incentives were not describable entirely through type reports, they were often regarded as being shaped by forces that were not easily quantifiable and called for formalization. But as soon as any element of such an indirect mechanism became amenable to formalization, it was necessarily incorporated into a type space, which had the effect of forcing it into a model that assumed costless speech.
 
-In this way, the Revelation Principle created a quiet gravitational well that has excluded. Because it could only observe variables in mechanisms compatible with the requirements of Myerson-Maskin, and because such mechanisms could not manipulate cost of messaging, the framework effectively foreclosed the possibility of finding a solution that showed a structurally mediated cost of communication within the mechanism itself.
+In this way, the Revelation Principle created a quiet gravitational well. Because it could only observe variables in mechanisms compatible with the requirements of Myerson-Maskin, and because such mechanisms could not manipulate cost of messaging, the framework effectively precluded the possibility of observing types that could affect the cost of messaging within the mechanism itself.
 
-The assumption of costless message then spread out into economic sub-fields. In bilateral trade, the Myerson–Satterthwaite theorem presumes that agents can misstate valuations without facing any penalty for doing so. In strategic communication, Crawford–Sobel model all messages as costless and commitment‑free, ensuring that only coarse partitions of information can be credibly conveyed. And in distributed consensus theory, impossibility results such as Bracha-Toueg depend on the assumption that agents can issue arbitrary proposals at identical cost, thwarting convergence on a single consistent state.
+Reinforcing the framework, a structurally similar assumption -- treating communication as symmetric and frictionless -- then took root independently across several economic and computational subfields. In bilateral trade, the Myerson–Satterthwaite theorem presumes that agents can misstate valuations without facing any penalty for doing so. In strategic communication, Crawford–Sobel model all messages as costless and commitment‑free, ensuring that only coarse partitions of information can be credibly conveyed. And in distributed consensus theory, impossibility results such as Bracha-Toueg depend on the assumption that agents can issue arbitrary proposals at identical cost, thwarting convergence on a single consistent state.
 
 In all of these papers, mechanisms are modeled as having frictionless messages that carry no commitments, impose no costs, and do not alter continuation payoffs. Once this is recognized, the impossibility results they produce become clear artifacts of this modeling choice. Yet nothing in informational decentralization itself requires communication to be costless. The symmetry and frictionlessness of the message space are assumptions of the canonical models, not necessities of the environment.
 
@@ -137,7 +137,9 @@ The mechanism operates through the following components:
 
 The mechanics described in Section 3 do more than eliminate the possibility of “cheap talk” reports required by conventional impossibility results. They also make proposals that are consistent with welfare-efficient allocations uniquely attractive to participants.
 
-To understand why, observe that all profitable deviations from baseline engagement with the mechanism must take the form of cooperative portfolio bids. We can offer this argument as a series of lemmas leading to a general result:
+To understand why, we define a welfare-increasing trade as any reallocation among Goods A, B, and C that strictly increases an agent’s utility according to their own preferences. We then observe that all profitable deviations within the mechanism must take the form of cooperative portfolio bids. We can offer this argument as a series of lemmas leading to a general result:
+
+For clarity, 
 
 **Lemma 1. Profitable deviations must be welfare-increasing trades.**
 
