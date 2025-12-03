@@ -2,7 +2,7 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-03T14:04:56.022Z
+date: 2025-12-03T14:05:19.059Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
@@ -177,5 +177,5 @@ When all agents follow this strategy:
 
 - and the mechanism drives short-term and long-term time preference into equilibrium.
 
-The equilibrium that remains is the one in which all agents forward and adopt proposals consistent with the welfare-efficient allocation. Efficiency emerges not by assumption or revelation, but because the mechanism embeds the incentive gradient needed to restrict profitable deviations exclusively to genuine welfare improvements.
+The outcome that remains is the one in which all agents forward and adopt proposals consistent with the welfare-efficient allocation. Efficiency emerges not by assumption or revelation, but because the mechanism embeds the incentive gradient needed to restrict profitable deviations exclusively to genuine welfare improvements.
 
