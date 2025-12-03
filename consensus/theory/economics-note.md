@@ -2,7 +2,7 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-03T13:46:04.672Z
+date: 2025-12-03T13:53:26.115Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
@@ -31,7 +31,7 @@ This blind spot was reinforced as similar assumptions proved analytically useful
 
 In all of these papers, mechanisms are modeled as having frictionless messages that carry no commitments, impose no costs, and do not alter continuation payoffs. Once this is recognized, the impossibility results they produce become clear artifacts of this modeling choice. Yet nothing in informational decentralization itself requires communication to be costless. The symmetry and frictionlessness of the message space are assumptions of the canonical models, not necessities of the environment.
 
-And it is this assumption that Saito violates, by introducing endogenous message costs that create deviation externalities. While the mechanism permits welfare-improving trades to occur, it forces all such trades to reduce the agent’s probability of receiving a conditional refund, causing a cascading loss that only minimized if agents shift toward proposals consistent with efficient play. In the next section we outline how this is possible in theory.
+And it is this assumption that Saito violates, by introducing endogenous message costs that create deviation externalities. While the mechanism permits welfare-improving trades to occur, it forces all such trades to reduce the agent’s probability of receiving a conditional refund, imposing losses that are only minimized when agents shift toward proposals consistent with efficient play. In the next section we outline how this is possible in theory.
 
 ## Section 3: Asymmetry through Broadcast Strategy
 
@@ -67,7 +67,7 @@ These three components form a causal chain: portfolio bids create meaningful coo
 
 - **forwarding changes payoff odds:** any transfer affecting the number of agents identifiable in the routing path changes the expected profitability of all participants in the system, and the sender loses some probability of receiving the conditional refund while the receiver gains some.
 
-- **forwarding changes the utility bundle:** not only through the speed-advantage the underlying mechanism offers to portfolio bids, but through the newfound ability of participates to engage in side-deals in exchange for bid-flow, such as buyers who extend additional private benefits ("collusion goods") in return for payout odds on routing paths.
+- **forwarding changes the utility bundle:** not only through the speed-advantage the underlying mechanism offers to portfolio bids, but through the newfound ability of participants to engage in side-deals in exchange for bid-flow, such as buyers who extend additional private benefits ("collusion goods") in return for payout odds on routing paths.
 
 - **forwarding changes strategic incentives:** because forwarding increases the receiver’s refund eligibility and reduces the sender’s own, the sender must weigh benefits of independent submission against the long-term sacrifice in continuation value gained from participating in a cooperative bid.
 
@@ -135,7 +135,7 @@ The mechanism operates through the following components:
 
 The mechanics described in Section 3 do more than eliminate the possibility of “cheap talk” reports required by conventional impossibility results. They also make proposals that are consistent with welfare-efficient allocations uniquely attractive to participants.
 
-To understand why, we define a welfare-increasing trade as any reallocation among Goods A, B, and C that strictly increases an agent’s utility according to their own preferences. We then observe that all profitable deviations within the mechanism must take the form of cooperative portfolio bids. We can offer this argument as a series of lemmas leading to a general result:
+To understand why, we define a welfare-increasing trade as any reallocation among Goods A, B, and C that strictly increases an agent’s utility according to their own preferences. We then show that all profitable deviations within the mechanism must take the form of a cooperative portfolio bid. We offer this argument as a series of lemmas leading to a general result:
 
 For clarity, 
 
