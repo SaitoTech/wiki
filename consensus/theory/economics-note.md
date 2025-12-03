@@ -2,7 +2,7 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-03T16:28:11.418Z
+date: 2025-12-03T16:39:39.097Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
@@ -37,21 +37,20 @@ The sharing of proposals is made visible through the use of cryptographic routin
 
 (c) Routing Payouts / Conditional Refunds
 
-The mechanism finally adjusts utility based on these signatures. Not only do portfolio bids have a clear advantage in the Dutch-clock clearing rule, but a portion of the succesful bid is awarded to one participant drawn from the routing paths of the winning proposal. Cooperation improves bid competitiveness but increases competition for the refund, linking messaging strategy directly to continuation value.
+The mechanism finally adjusts utility based on these signatures. In addition to portfolio bids having an advantage in the Dutch-clock clearing rule, a portion of the succesful bid is awarded to one participant drawn from the routing paths of the winning bid, creating an outbound payment that serves as **continuation value** for future rounds of the mechanism.
+
+These technical components form our causal chain: portfolio bids make cooperation valuable, routing signatures make it observable, and routing payouts convert that observability into continuation value. 
 
 
+## Section 2: Endogenous Costs
 
-### 3.2 Broadcast Strategy
+Strategies within the mechanism now permit agents to trade-off **continuation value** for other forms of utility:
 
-These three components form a causal chain: portfolio bids create meaningful cooperative value, routing signatures make that cooperation observable, and routing payouts convert that observability into differential continuation value. This is sufficient to make broadcast strategy a payoff-relevant action:
+- **forwarding changes payoff odds:** any transfer affecting the number of agents identifiable in the routing path changes the expected profitability of all participants in the path, and the sender cedes some probability of receiving the conditional refund to the receiver.
 
-- **forwarding changes payoff odds:** any transfer affecting the number of agents identifiable in the routing path changes the expected profitability of all participants in the system, and the sender loses some probability of receiving the conditional refund while the receiver gains some.
+- **forwarding changes the utility bundle:** cooperation not only speeds up fractional bids, but allows participants to engage in side-deals in exchange for bid-flow, such as inducing receivers to extend additional private benefits ("collusion goods") in exchange for expanded claims on the routing payout.
 
-- **forwarding changes the utility bundle:** not only through the speed-advantage the underlying mechanism offers to portfolio bids, but through the newfound ability of participants to engage in side-deals in exchange for bid-flow, such as buyers who extend additional private benefits ("collusion goods") in return for payout odds on routing paths.
-
-- **forwarding changes strategic incentives:** because forwarding increases the receiver’s refund eligibility and reduces the sender’s own, the sender must weigh benefits of independent submission against the long-term sacrifice in continuation value gained from participating in a cooperative bid.
-
-With these three dynamics, choosing to cooperate with other agents becomes a strategic choice. Some choices increase continuation value; others dilute it. The degree of competition for the inputs to creating portfolio bids also changes the supply-side calculus of those providing utility within the mechanism. Private broadcast reduces competition, slowing inclusion but making side-deals more profitable. Public broadcast sacrifices collusion utility as more participants compete to assemble portfolio bids.
+- **forwarding changes the degree of competition:** the decision to share exclusively with one peer or broadcast publicly to multiple peers affects the expected profitability of the proposal to its intended recipient.
 
 A three directional trade-off / trilemma is pulled into being that creates a directional incentive structure absent from classical models. The message space is no longer symmetric. The cost of making any proposal must be expressed in terms of which other form of in-mechanism utility the bidder wishes to sacrifice. And with broadcast strategy now affecting cost and utility across multiple dimensions, the "cheap talk" assumption supporting the impossibility results in Section 2 collapses on the most fundamental level.
 
