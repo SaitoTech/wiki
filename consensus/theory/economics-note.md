@@ -2,7 +2,7 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-03T14:09:29.473Z
+date: 2025-12-03T16:28:11.418Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
@@ -10,56 +10,36 @@ dateCreated: 2025-12-03T07:25:55.513Z
 
 # Saito Economics Note
 
-The puzzle is straightforward: if agents can freely misreport in an informationally-decentralized mechanism, then incentive compatibility should not be possible, and no mechanism should be able to implement efficient outcomes.
+The puzzle is straightforward: if agents can freely misreport preferences in an informationally decentralized mechanism, incentive compatibility should be impossible and no mechanism should implement efficient outcomes. Yet Saito Consensus does exactly this. How?
 
-The purpose of this note is to explain how Saito Consensus constructs a  welfare-efficient informationally decentralized mechanism, starting with the observation that impossibility results are driven by an assumption Saito violates: the expectation of costless messaging within the mechanism.
+## Section 1: The Impossibility Results
+
+The impossibility results that dominate implementation theory rest on a specific modeling assumption: that agents do not face higher costs for sending messages that induce deviations from welfare-optimal outcomes.
+
+This assumption became entrenched early. Hurwicz (1972) treated all statements as equally cheap to express; Maskin then abstracted communication costs entirely; and Myerson’s Revelation Principle pushed the field toward studying direct mechanisms in which type reports are the only messages and are costless by construction. The standard framework thus only recognizes mechanisms compatible with Myerson–Maskin symmetry, creating a powerful blind spot.
+
+The same assumption appears across foundational results in economics and computer science. Myerson–Satterthwaite assumes agents can misreport without penalty; Crawford–Sobel models all messages as costless and commitment-free; and distributed-systems impossibility results such as Bracha–Toueg treat all proposals as equally feasible. In all of these settings, messages carry no commitments, impose no costs, and do not affect continuation payoffs.
+
+Yet there is nothing in decentralization that requires communication to be costless. And Saito's design shows it is possible to break this assumption by adding endogenous message costs that rise with the suboptimality of the message being shared. The next section explains how this is accomplished in theory.
 
 
-## Section 1: The Impossibility Results Problem
+## Section 2: Endogenous Costs
 
-The underlying source of the impossibility results that drive conventional wisdom in implementation theory is a specific modeling assumption: that agents cannot face higher costs for sending messages that induce deviations from welfare-optimal outcomes.
+Implementing endogenous messaging costs requires three properties: (i) messaging choices must affect agent utility within the mechanism, (ii) the mechanism must observe the choices they make, and (iii) the mechanism must adjust the **continuation value** for each agent on they choices they make. Saito accomplishes this using three components:
 
-This assumption is so deeply embedded in implementation theory that for decades it attracted virtually no scrutiny. Perhaps driven by a tendency to analogize communication to ordinary speech, Hurwicz (1972) embedded it in his seminal paper when conceptualizing all statements as equally cheap to express. Maskin’s work on Nash implementation then cemented it by abstracting away communication costs completely, assuming agents could send any messages, message spaces were unrestricted, and all messages were equally easy to transmit.
+(a) Portfolio Bids
 
-Myerson’s development of the Revelation Principle then pushed the assumption further out of sight.  By showing that any implementable indirect mechanism could be represented as a direct mechanism in which agents simply report their types, Myerson re-centered the study of incentive compatibility on the study of direct mechanisms, in which all messages take the form of type reports, and nothing in the formalism distinguishes one message from another or allows their costs to differ.
+Agents may cooperate by assembling portfolio bids -- bundles that combine multiple proposals into a single submission that competes with individual bids. Cooperation increases utility by improving the competitiveness of the joint bid, giving agents an incentive to share proposals prior to submission.
 
-Although indirect mechanisms remained known that could not be reduced to direct mechanisms under the Revelation Principle, because their incentives were not describable entirely through type reports, they were often regarded as being shaped by forces that were not easily quantifiable and called for formalization. But as soon as any element of such an indirect mechanism became amenable to formalization, it was necessarily incorporated into a type space, which had the effect of forcing it into a model that assumed costless speech.
+(b) Cryptographic Routing Signatures
 
-In this way, the Revelation Principle created a quiet gravitational well. Because it could only observe variables in mechanisms compatible with the requirements of Myerson-Maskin, and because such mechanisms could not manipulate cost of messaging, the framework effectively blinded theorists to the possibility that agents' preferences could endogenously affect the cost of communicating within the mechanism itself.
+The sharing of proposals is made visible through the use of cryptographic routing signatures which add a routing path to proposals. The chain-of-signatures make pre-submission sharing visible to the mechanism, recording who forwarded the proposal and who received it in what order.
 
-This blind spot was reinforced as similar assumptions proved analytically useful in driving meaningful discoveries independently across several economic and computational subfields. In bilateral trade, the Myerson–Satterthwaite theorem analyzes environments where agents can misstate valuations without facing any penalty for doing so. In strategic communication, Crawford–Sobel model all messages as costless and commitment‑free, ensuring that only coarse partitions of information can be credibly conveyed. And in distributed consensus theory, impossibility results such as Bracha-Toueg rely on symmetry assumptions that treat all proposals as equally feasible to issue, preventing the protocol from distinguishing cooperative from adversarial messaging patterns.
+(c) Routing Payouts / Conditional Refunds
 
-In all of these papers, mechanisms are modeled as having frictionless messages that carry no commitments, impose no costs, and do not alter continuation payoffs. Once this is recognized, the impossibility results they produce become clear artifacts of this modeling choice. Yet nothing in informational decentralization itself requires communication to be costless. The symmetry and frictionlessness of the message space are assumptions of the canonical models, not necessities of the environment.
+The mechanism finally adjusts utility based on these signatures. Not only do portfolio bids have a clear advantage in the Dutch-clock clearing rule, but a portion of the succesful bid is awarded to one participant drawn from the routing paths of the winning proposal. Cooperation improves bid competitiveness but increases competition for the refund, linking messaging strategy directly to continuation value.
 
-And it is this assumption that Saito violates, by introducing endogenous message costs that create deviation externalities. While the mechanism permits welfare-improving trades to occur, it forces all such trades to reduce the agent’s probability of receiving a conditional refund, imposing losses that are only minimized when agents shift toward proposals consistent with efficient play. In the next section we outline how this is possible in theory.
 
-## Section 3: Asymmetry through Broadcast Strategy
-
-The basic idea behind Saito's solution is simple: when a mechanism can make an agent’s **continuation value** -- their expected future purchasing power -- depend on the content of their proposals, messages stop being costless and the symmetry that drives classical impossibility results disappears.
-
-### 3.1 Technical Requirements
-
-Implementing broadcast strategy requires three structural changes to a mechanism. The way in which bidders broadcast messages must affect their utility, the mechanism must be able to observe their choices, and it must condition continuation value on its observation. Three techniques enable this in Saito:
-
-**(a) Portfolio Bids**
-
-The mechanism first creates conditions under which cooperation changes the utility an agent receives from the mechanism. This is done by allowing participants to cooperate in assembling portfolio bids, group submissions that combine many smaller proposals into a larger bundle which competes with non-cooperative bids.
-
-The dynamic is analogous to a factory which prioritizes larger orders: buyers who want faster service can pool their orders to benefit from faster speeds otherwise unavailable to buyers at their price level. This creates an incentive for participants to share messages prior to submitting orders, an informational process which can become made visible to the mechanism using cryptographic routing signatures. 
-
-**(b) Cryptographic Routing Signatures**
-
-The mechanism enforces visibility of portfolio bids by requiring agents to affix routing signatures when forwarding proposals. These signatures do not constrain the content of a proposal; they simply authorize the recipient to include it when compiling a portfolio bid.
-
-Any cryptographic chain-of-signatures that authorizes action-in-mechanism also serves as a verifiable record of the authorized players. As such, this minimal informational structure makes collaboration visible to the mechanism itself, which can observe the participants involved, the order in which they acted, and the efficiency with which they cooperated directly from the routing paths themselves.
-
-**(c) Routing Payouts / Conditional Refunds**
-
-Access to this information then allows the mechanism to modify utility, by using the information contained in these routing paths to adjust auction preference, and to offer a conditional refund whose payout varies in expectation based on the contents of those paths.
-
-Auction preference can be modified through the use of Dutch Clocks that give collaborative bids an inherent advantage in meeting bidding targets over individual bidders. The mechanism may be also break ties by preferring proposals with a more efficient set of routing paths, or by modifying the group-bid based on the length of routing path needed to assemble it.
-
-A conditional refund may also be offered to any participant recorded in any routing path. While the size of the refund may vary based on other factors, the degree of competition for collecting such a payout depends entirely on the messaging strategies of participants. Cooperating bring benefits, but also increases competition for payouts.
 
 ### 3.2 Broadcast Strategy
 
