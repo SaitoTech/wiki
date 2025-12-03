@@ -2,7 +2,7 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-03T14:05:19.059Z
+date: 2025-12-03T14:08:58.478Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
@@ -45,7 +45,7 @@ Implementing broadcast strategy requires three structural changes to a mechanism
 
 The mechanism first creates conditions under which cooperation changes the utility an agent receives from the mechanism. This is done by allowing participants to cooperate in assembling portfolio bids, group submissions that combine many smaller proposals into a larger bundle which competes with non-cooperative bids.
 
-The dynamic is analogous to a factory which prioritizes larger orders: buyers who want faster service can pool their orders to benefit from faster speeds otherwise unavailable to buyers at their price level. This creates a need for participants to share messages prior to submitting orders, an informational process which can become made visible to the mechanism using cryptographic routing signatures. 
+The dynamic is analogous to a factory which prioritizes larger orders: buyers who want faster service can pool their orders to benefit from faster speeds otherwise unavailable to buyers at their price level. This creates an incentive for participants to share messages prior to submitting orders, an informational process which can become made visible to the mechanism using cryptographic routing signatures. 
 
 **(b) Cryptographic Routing Signatures**
 
