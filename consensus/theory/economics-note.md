@@ -2,7 +2,7 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-03T12:55:41.464Z
+date: 2025-12-03T12:58:38.845Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
@@ -27,7 +27,7 @@ Although indirect mechanisms remained known that could not be reduced to direct 
 
 In this way, the Revelation Principle created a quiet gravitational well. Because it could only observe variables in mechanisms compatible with the requirements of Myerson-Maskin, and because such mechanisms could not manipulate cost of messaging, the framework effectively blinded theorists to the possibility that agents' preferences could endogenously affect the cost of communicating within the mechanism itself.
 
-This blind spot was reinforced as similar assumptions proved analytically useful in driving meaningful discoveries independently across several economic and computational subfields. In bilateral trade, the Myerson–Satterthwaite theorem presumes that agents can misstate valuations without facing any penalty for doing so. In strategic communication, Crawford–Sobel model all messages as costless and commitment‑free, ensuring that only coarse partitions of information can be credibly conveyed. And in distributed consensus theory, impossibility results such as Bracha-Toueg depend on the assumption that agents can issue arbitrary proposals at identical cost, thwarting convergence on a single consistent state.
+This blind spot was reinforced as similar assumptions proved analytically useful in driving meaningful discoveries independently across several economic and computational subfields. In bilateral trade, the Myerson–Satterthwaite theorem analyzes environments where agents can misstate valuations without facing any penalty for doing so. In strategic communication, Crawford–Sobel model all messages as costless and commitment‑free, ensuring that only coarse partitions of information can be credibly conveyed. And in distributed consensus theory, impossibility results such as Bracha-Toueg rely on symmetry assumptions that treat all proposals as equally feasible to issue, preventing the protocol from distinguishing cooperative from adversarial messaging patterns.
 
 In all of these papers, mechanisms are modeled as having frictionless messages that carry no commitments, impose no costs, and do not alter continuation payoffs. Once this is recognized, the impossibility results they produce become clear artifacts of this modeling choice. Yet nothing in informational decentralization itself requires communication to be costless. The symmetry and frictionlessness of the message space are assumptions of the canonical models, not necessities of the environment.
 
