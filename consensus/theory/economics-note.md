@@ -2,7 +2,7 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-03T13:00:50.764Z
+date: 2025-12-03T13:46:04.672Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
@@ -129,8 +129,6 @@ The mechanism operates through the following components:
 
 - Invalid or inconsistent routing paths render both the proposal and any bundle containing it invalid.
 
-- Agents may create unlimited identities, but sybil attacks require sybils to communicate in order to carry out attacks, which reduces the continuation value through routing-work dilution.
-
 - A simple longest-chain rule selects among competing bundles.
 
 ## Section 4. The Rationality of Efficient Implementation
@@ -165,11 +163,11 @@ In other mechanisms this trade-off becomes insolvable because there is no way to
 
 Granular forms of optimization are possible because agents who trade Good B for Good A or Good C, are delaying their consumption of utility in the same way that they would by collecting a refund for use in a later round in the iterating auction. Trade-offs between all goods become possible to optimize within the current bid or within the iterated game. In this environment, portfolio bids that maximize expected welfare survive; since optimizing within each round of the auction is equivalent in expectation to optimizing across multiple rounds.
 
-## Section 5. Efficiency is the Unique Equilibrium
+## Section 5. Stability Through Incentives
 
-The net effect is that the most beneficial strategy for all participants is to maximize the gains available from cooperating with other agents while minimizing the continuation-value losses forced upon them by the need to cooperate.
+The most beneficial strategy for all participants is to maximize the gains available from cooperating with other agents while minimizing the losses that the need to cooperate forces on them.
 
-This strategy uniquely navigates the trade-off between short-term utility since the speed at which Good A and Good C can be consumed is subject to strategic manipulation via both bidding and broadcast strategy within the portfolio manipulation process.
+Whatever strategy maximizes short-term gains against long-term losses while permitting granular trade-offs against time-preference in both domains uniquely navigates the trade-off.
 
 When all agents follow this strategy:
 
@@ -180,8 +178,4 @@ When all agents follow this strategy:
 - and the mechanism drives short-term and long-term time preference into equilibrium.
 
 The equilibrium that remains is the one in which all agents forward and adopt proposals consistent with the welfare-efficient allocation. Efficiency emerges not by assumption or revelation, but because the mechanism embeds the incentive gradient needed to restrict profitable deviations exclusively to genuine welfare improvements.
-
-The result is that efficient implementation becomes achievable even under conditions of informational decentralization.
-
-
 
