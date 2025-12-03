@@ -2,7 +2,7 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-03T12:15:28.842Z
+date: 2025-12-03T12:29:57.250Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
@@ -133,7 +133,7 @@ The mechanism operates through the following components:
 
 - A simple longest-chain rule selects among competing bundles.
 
-## 4. The Emergence of Efficient Implementation
+## Section 4. The Rationality of Efficient Implementation
 
 The mechanics described in Section 3 do more than eliminate the possibility of “cheap talk” reports required by conventional impossibility results. They also make proposals that are consistent with welfare-efficient allocations uniquely attractive to participants.
 
@@ -155,41 +155,19 @@ Continuation value represents an agent’s future ability to purchase any mix of
 
 Given the mechanism’s fixed rules, observability of routing paths, and common-knowledge continuation-value incentives, the only deviations consistent with intertemporal optimization are those that correspond to genuine welfare-increasing trades. All other deviations collapse under the weight of their continuation-value losses. Hence the mechanism implements an allocation that is Pareto-sufficiently efficient: conditional on the actual structure of communication and cooperation, rational agents converge to proposals consistent with the welfare-efficient allocation, even under informational decentralization.
 
+NOTE: efficiency can be improved from the *Pareto sufficient* baseline if agents use the opportunity to publish information on their pricing and availability of collusion goods via the inclusion of proposals as a form of price broadcasting.
 
+For an intuitive understanding of how optimization is possible, note that because cooperation improves current utility but reduces continuation value, rational agents must balance **short-term gains** in Goods A, Good B, and Good C. against **long-term losses** in their ability to purchase those same goods in the future.
 
-### 4.1 All Efficient Improvements Require Portfolio Bids
+In other mechanisms this trade-off becomes insolvable because there is no way to optimize consumption across multiple time-frames. But with routing work long-term time-preference can be manipulated directly within the mechanism through the trade-offs portfolio bids allow agents to construct between Good A and Good C.
 
-Any profitable deviation must improve an agent’s expected allocation; it must correspond to a welfare-increasing trade. Yet under the settlement rules of the mechanism, unilateral bids cannot improve an agent’s allocation: the only way to secure a more favorable outcome is through the  construction of portfolio bids.
+Granular forms of optimization are possible because agents who trade Good B for Good A or Good C, are delaying their consumption of utility in the same way that they would by collecting a refund for use in a later round in the iterating auction. Trade-offs between all goods become possible to optimize within the current bid or within the iterated game. In this environment, portfolio bids that maximize expected welfare survive; since optimizing within each round of the auction is equivalent in expectation to optimizing across multiple rounds.
 
-As we explained in Section 3, the availability of different broadcast strategies allow participants to propose granular trade-offs between the three classes of goods managed by the mechanism:
+## Section 5. Efficiency is the Unique Equilibrium
 
-- Good A: the item under auction
+The net effect is that the most beneficial strategy for all participants is to maximize the gains available from cooperating with other agents while minimizing the continuation-value losses forced upon them by the need to cooperate.
 
-- Good B: time preference
-
-- Good C: collusion-utility
-
-Yet these benefits are not free, since any participant who participates in a portfolio bid reduces their continuation value by sacrificing a claim on the routing payout.
-
-Thus, every welfare-increasing deviation necessarily involves an internal sacrifice: agents can improve their utility only by accepting a reduction in their future continuation value. Deviations that do not improve immediate utility by enough to offset  expected future losses are loss-making and irrational in expectation.
-
-This means that all profitable deviations must take the form of welfare-increasing trades, and all such welfare-increasing trades require agents to expose themselves to reduced continuation value as the cost of cooperation. The point of optimal consumption is thus when 
-
-### 4.2 Broadcast Strategy Optimizes Against Time
-
-Because cooperation improves current utility but reduces continuation value, rational agents must balance **short-term gains** in Goods A, Good B, and Good C. against long-term losses in their ability to purchase those same goods at arbitrary points in the future.
-
-In other mechanisms this trade-off becomes insolvable. But with routing work it can be efficiently priced within the mechanism itself, since the time-preference dynamics that govern the consumption of all goods can be manipulated directly within the mechanism through the trade-offs portfolio bids allow agents to propose between all competing forms of utility, balancing:
-
-- **immediate time-preference** (internal to portfolio bids), and
-
-- **future continuation value** (external through continuation payouts)
-
-Because broadcast strategy mediates both present and future time-preference, it becomes the optimizing tool agents use to navigate and optimize  trade-offs. Trade-offs can be managed within the current bid or within the portfolio-construction game, as each agent broadcasts proposals in the manner that maximizes their combined current-utility and continuation-value payoff. Portfolio bids that maximize expected welfare survive; inefficient deviations do not.
-
-### 4.3 Efficiency Emerges as the Unique Equilibrium
-
-The net effect is that the most beneficial strategy for all participants is to maximize the gains from cooperative portfolio bids while minimizing their continuation-value losses. This strategy uniquely navigates the trade-off between short-term utility composition and long-term continuation value.
+This strategy uniquely navigates the trade-off between short-term utility since the speed at which Good A and Good C can be consumed is subject to strategic manipulation via both bidding and broadcast strategy within the portfolio manipulation process.
 
 When all agents follow this strategy:
 
@@ -199,9 +177,9 @@ When all agents follow this strategy:
 
 - and the mechanism drives short-term and long-term time preference into equilibrium.
 
-The equilibrium that remains is the one in which all rational agents forward and adopt proposals consistent with the welfare-efficient allocation. Efficiency emerges not by assumption or revelation, but because the mechanism embeds the incentive gradient needed to restrict profitable deviations exclusively to genuine welfare improvements.
+The equilibrium that remains is the one in which all agents forward and adopt proposals consistent with the welfare-efficient allocation. Efficiency emerges not by assumption or revelation, but because the mechanism embeds the incentive gradient needed to restrict profitable deviations exclusively to genuine welfare improvements.
 
-The result is that efficient implementation becomes achievable even under informational decentralization.
+The result is that efficient implementation becomes achievable even under conditions of informational decentralization.
 
 
 
