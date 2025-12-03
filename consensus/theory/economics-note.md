@@ -2,7 +2,7 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-03T16:39:39.097Z
+date: 2025-12-03T16:50:07.336Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
@@ -42,17 +42,17 @@ The mechanism finally adjusts utility based on these signatures. In addition to 
 These technical components form our causal chain: portfolio bids make cooperation valuable, routing signatures make it observable, and routing payouts convert that observability into continuation value. 
 
 
-## Section 2: Endogenous Costs
+## Section 3: Broadcast Strategies
 
-Strategies within the mechanism now permit agents to trade-off **continuation value** for other forms of utility:
+Broadcast Strategies within the mechanism now permit agents to trade-off **continuation value** for other forms of utility:
 
-- **forwarding changes payoff odds:** any transfer affecting the number of agents identifiable in the routing path changes the expected profitability of all participants in the path, and the sender cedes some probability of receiving the conditional refund to the receiver.
+- **forwarding changes payoff odds:** any transfer affecting the number of agents identifiable in any routing path changes the expected profitability of all participants, and cedes some probability of receiving the conditional refund from the sender to the receiver.
 
-- **forwarding changes the utility bundle:** cooperation not only speeds up fractional bids, but allows participants to engage in side-deals in exchange for bid-flow, such as inducing receivers to extend additional private benefits ("collusion goods") in exchange for expanded claims on the routing payout.
+- **forwarding changes the utility bundle:** cooperation not only affects speed-of-settlment, but allows participants to engage in side-deals in exchange for bid-flow, such as extending additional private benefits ("collusion goods") in exchange for exclusive access to proposals.
 
-- **forwarding changes the degree of competition:** the decision to share exclusively with one peer or broadcast publicly to multiple peers affects the expected profitability of the proposal to its intended recipient.
+- **forwarding changes the degree of competition:** the decision to share exclusively with one peer or broadcast to multiple peers affects the expected profitability of the recipients and thus their own broadcast strategies.
 
-A three directional trade-off / trilemma is pulled into being that creates a directional incentive structure absent from classical models. The message space is no longer symmetric. The cost of making any proposal must be expressed in terms of which other form of in-mechanism utility the bidder wishes to sacrifice. And with broadcast strategy now affecting cost and utility across multiple dimensions, the "cheap talk" assumption supporting the impossibility results in Section 2 collapses on the most fundamental level.
+The message space is no longer symmetric. A three directional trade-off / trilemma is pulled into being that allows agents to trade their **continuation value** for other forms of utility. There is not only a cost paid for messaging, but it is paid in terms of the other forms of utility available through the mechanism.
 
 ### 3.3 Mechanism Overview (informal specification)
 
