@@ -2,7 +2,7 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-03T14:08:58.478Z
+date: 2025-12-03T14:09:29.473Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
@@ -166,8 +166,6 @@ Granular forms of optimization are possible because agents who trade Good B for 
 ## Section 5. Stability Through Incentives
 
 The most beneficial strategy for all participants is to maximize the gains available from cooperating with other agents while minimizing the losses that the need to cooperate forces on them.
-
-Whatever strategy maximizes short-term gains against long-term losses while permitting granular trade-offs against time-preference in both domains uniquely navigates the trade-off.
 
 When all agents follow this strategy:
 
