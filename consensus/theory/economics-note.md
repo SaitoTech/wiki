@@ -2,7 +2,7 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-03T07:38:37.187Z
+date: 2025-12-03T10:55:34.554Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
@@ -12,16 +12,16 @@ dateCreated: 2025-12-03T07:25:55.513Z
 
 The puzzle is straightforward: if agents can freely misreport in an informationally-decentralized mechanism, then incentive compatibility should not be possible, and no mechanism should be able to implement efficient outcomes.
 
-The purpose of this note is to explains how Saito Consensus constructs an informationally decentralized mechanism that implements a welfare-efficient social choice rule, despite standard economic intuition suggesting this is not possible. 
+The purpose of this note is to explain how Saito Consensus constructs a  welfare-efficient informationally decentralized mechanism, starting with the observation that impossibility results are driven by an assumption it violates: the expectation of costless messaging within the mechanism.
 
 
 ## Section 1: The Underlying Problem
 
-The underlying source of the impossibility results that drive conventional wisdom in implementation theory is a specific modeling assumption: that agents cannot face higher costs for sending messages that induce deviations from welfare-optimal outcomes. Under this assumption, deviations are cheap and efficient implementation becomes impossible.
+The underlying source of the impossibility results that drive conventional wisdom in implementation theory is a specific modeling assumption: that agents cannot face higher costs for sending messages that induce deviations from welfare-optimal outcomes.
 
-Saito breaks this assumption by introducing endogenous message costs that create deviation externalities. Specifically, while the mechanism permits welfare-improving trades to occur, it forces trades that deviate from the welfare-efficient allocation to reduce the agent’s probability of receiving a conditional refund by more than they can gain through the trade. This loss of expected income lowers continuation value and discourages deviation. Rational agents shift toward proposals consistent with efficient play.
+Saito breaks this assumption by introducing endogenous message costs that create deviation externalities. Specifically, while the mechanism permits welfare-improving trades to occur, it forces all such trades to reduce the agent’s probability of receiving a conditional refund. This loss of expected income lowers continuation value and discourages deviation, forcing rational agents to shift toward proposals consistent with efficient play.
 
-The remainder of this paper explains how this transforms the incentive environment: the feasible deviation set collapses, profitable misreports disappear, and the strategic configurations that drive classical impossibility results cannot be sustained in equilibrium. We nonetheless start with a short review of the economic literature to confirm underlying impossibility results are indeed caused by costless messaging.
+We can see The remainder of this paper explains how this transforms the incentive environment: the feasible deviation set collapses, profitable misreports disappear, and the strategic configurations that drive classical impossibility results cannot be sustained in equilibrium. We nonetheless start with a short review of the economic literature to confirm underlying impossibility results are indeed caused by costless messaging.
 
 ## Section 2: "Cheap Talk" Impossibility Results
 
@@ -87,12 +87,95 @@ Some forwarding choices increase continuation value; others dilute it. Private b
 
 A three directional trade-off / trilemma is pulled into being that creates a directional incentive structure absent from classical models. The message space is no longer symmetric. And with broadcast strategy now affecting both cost and utility across multiple dimensions,  the "cheap talk" assumption supporting the impossibility results discussed in Section 2 collapses on the most fundamental level.
 
+## Mechanism Overview (informal specification)
+
+Now that we have described why the mechanism works in theory, we provide a brief informal specification of how such a mechanism can be implemented in practice.
+
+The mechanism manages the allocation of a potentially divisible good (blockspace) whose availability is determined endogenously each round. Agents submit proposals (transactions) that specify a non-scalar fee and may be combined with others into portfolio bids. These proposals move through a decentralized network, and the manner in which they are forwarded and bundled determines both (i) their likelihood of successful allocation and (ii) each participant’s continuation value through a conditional refund.
+
+The mechanism operates through the following components:
+
+**1. Proposals and Utility Composition**
+
+- Each agent submits a proposal containing a transaction and a non-scalar fee.
+
+- Fees map into three components of utility: allocation of the divisible good (A), expected speed or time preference (B), and the potential for side-payments or collusion-utility (C).
+
+- Proposals may be forwarded or submitted directly. Forwarding is optional but strategically relevant.
+
+**2. Routing Signatures and Observable Cooperation**
+
+- When a proposal is forwarded, the forwarding agent appends the receiver’s identity and a cryptographic authorization signature.
+
+- The resulting routing path is immutable: nodes cannot remove or shorten paths without invalidating the proposal.
+
+- A proposal’s routing path provides an observable record of cooperative information-sharing used later to determine continuation value.
+
+**3. Portfolio Bids**
+
+- Any agent may submit its own proposal as an individual bid or assemble multiple proposals into a portfolio bid.
+
+- Portfolio bids combine the cooperative value of their constituent proposals and may include both genuine transactions and agent-generated placeholder proposals.
+
+- The mechanism imposes no restrictions on which proposals can be bundled, except that the submitting agent always appears as the final entry on the routing path for any proposal it submits.
+
+**4. Clearing Rule via a Dutch Clock**
+
+- The mechanism maintains an endogenous “difficulty” or burn fee that adjusts to target a desired block production interval.
+
+- A candidate bundle (individual or portfolio) clears when the cumulative “routing work” it contains exceeds the current difficulty threshold.
+
+- Routing work is computed as the fee of each proposal, halved once per hop beyond the first in its routing path, and aggregated across all proposals in the bundle.
+
+- Faster clearing requires higher cumulative fees or more efficient cooperation; ineffective cooperation increases the routing-work discount.
+
+**5. Conditional Refund and Continuation Value**
+
+- In each successfully cleared bundle, 50% of all proposal fees are destroyed, and 50% form a conditional refund pool.
+
+- A costly lottery selects one proposal, weighted by its fee’s contribution to the bundle.
+
+- A second lottery selects one participant from that proposal’s routing path, weighted by each participant’s proportional contribution to the proposal’s routing work.
+
+- The selected participant receives the entire conditional refund.
+
+Expected continuation value therefore depends on the structure of routing paths: forwarding dilutes a sender’s share of routing work but increases opportunities for cooperation.
+
+**6. Validity, Observability, and Permissionlessness**
+
+- The mechanism observes the full routing path of every proposal and the full composition of every portfolio bid.
+
+- Invalid or inconsistent routing paths render both the proposal and any bundle containing it invalid.
+
+- Agents may create unlimited identities, but sybil attacks require sybils to communicate in order to carry out attacks, which reduces the continuation value through routing-work dilution.
+
+- A simple longest-chain rule selects among competing bundles.
 
 ## 4. The Emergence of Efficient Implementation
 
 The structural changes described in Section 3 do more than eliminate the “cheap talk” assumption required by the impossibility results in Section 2. They also make proposals that are consistent with welfare-efficient allocations uniquely attractive to participants.
 
 In this section, we show why this is the case: why all profitable deviations must take the form of cooperative portfolio bids, and how the internal trade-offs portfolio bids invite users to manage make the welfare-efficient equilibrium uniquely stable.
+
+4. The Emergence of Efficient Implementation
+
+The structural changes described in Section 3 do more than eliminate the “cheap talk” assumption required by the impossibility results in Section 2. They also make proposals that are consistent with welfare-efficient allocations uniquely attractive to participants. The key steps in this argument are three observations about deviations in this mechanism.
+
+**Lemma 1. Profitable deviations must be welfare-increasing trades.**
+
+Because unilateral deviations in broadcast strategy necessarily sacrifice some dimension of utility-in-mechanism, no agent can strictly improve their payoff without engaging in a subjective welfare-increasing trade across Goods A (allocation), B (time preference), and C (collusion-utility). A deviation is profitable if and only if the agent values the marginal gain (e.g., collusion utility from private broadcast) more than the marginal loss in the other goods (e.g., slower settlement or reduced blockspace access). Thus any profitable deviation must correspond to a genuine welfare-increasing trade from the agent’s perspective.
+
+**Lemma 2. All welfare-increasing trades require cooperation and therefore continuation-value sacrifice.**
+
+Under the clearing rules of the mechanism, unilateral deviations cannot improve an agent’s allocation of A or B. Any welfare-increasing deviation must therefore involve participation in a portfolio bid, which necessarily expands or modifies the routing path. This expansion dilutes the agent’s expected share of future conditional refunds. Every welfare-increasing trade thus carries a built-in continuation-value cost that the agent must accept in order to receive the immediate benefit.
+
+**Lemma 3. Continuation-value losses exceed gains for all non-efficient deviations.**
+
+Continuation value represents an agent’s future ability to purchase any mix of A, B, and C across rounds of the iterating auction. Routing-work dilution reduces this continuation value proportionally. As a result, any deviation that does not create a genuine welfare improvement imposes a strict net loss: the reduction in continuation value outweighs any short-term benefit gained from the deviation. Such deviations are irrational in intertemporal expectation.
+
+**Theorem. Pareto-Sufficient Efficient Implementation.**
+
+Given the mechanism’s fixed rules, observability of routing paths, and common-knowledge continuation-value incentives, the only deviations consistent with intertemporal optimization are those that correspond to genuine welfare-increasing trades. All other deviations collapse under the weight of their continuation-value losses. Hence the mechanism implements an allocation that is Pareto-sufficiently efficient: conditional on the actual structure of communication and cooperation, rational agents converge to proposals consistent with the welfare-efficient allocation, even under informational decentralization.
 
 ### 4.1 All Efficient Improvements Require Portfolio Bids
 
