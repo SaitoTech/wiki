@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-11-28T04:09:59.084Z
+date: 2025-12-03T07:16:28.490Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -19,10 +19,16 @@ We recommend starting with our [high-level overview](/consensus/theory/intro), w
 - [Academic Introduction to Saito Consensus](/consensus/theory/intro)
 This page provides an overview of what is **new** about Saito Consensus -- the ability to design mechanisms with an **asymmetrical cost**. This page explains why this matters, shows directly what technical features in Saito enable the shift, and establish Saito Consensus as a new class of informationally distributed mechanism.
 
+- [Portfolio Bids and Broadcast Strategies](/consensus/theory/economics-note)
+original whitepaper, providing a brief explanation of the Tragedy of the Commons and Free Rider problems instantiate in most blockchains, and how routing work eliminates both problems on the incentive level, unleashing emergent scale and incentive compatibility.
+
 - [A Simple Proof of Sybil-Proof](https://github.com/SaitoTech/papers/tree/e32c51db6aae071a41b7e481d0f5ba6cd75ec12d/sybil) (Lancashire, Parris, 2023)
 This paper shows mathematical proof of sybil-proofness of Saito Consensus as a routing mechanism, and is also useful for containing Hurwicz' *formula* for the mechanism in five succinct bullet points on its first page.
+
 - [Saito Whitepaper](https://saito.io/saito-whitepaper.pdf) (Lancashire, Parris, 2018)
 original whitepaper, providing a brief explanation of the Tragedy of the Commons and Free Rider problems instantiate in most blockchains, and how routing work eliminates both problems on the incentive level, unleashing emergent scale and incentive compatibility.
+
+
 
 **Economics and Mechanism Design**
 - [Direct and Indirect Mechanisms in Implementation Theory](/consensus/theory/indirect-mechanisms)
