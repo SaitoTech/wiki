@@ -2,7 +2,7 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-03T12:38:37.976Z
+date: 2025-12-03T12:46:06.425Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
@@ -141,21 +141,21 @@ To understand why, we define a welfare-increasing trade as any reallocation amon
 
 For clarity, 
 
-**Lemma 1. Profitable deviations must be welfare-increasing trades.**
+**Lemma 1. All welfare-increasing trades require cooperation and therefore continuation-value sacrifice.**
 
-Because unilateral deviations in broadcast strategy necessarily sacrifice some dimension of utility-in-mechanism, no agent can strictly improve their payoff without engaging in a subjective welfare-increasing trade across Goods A (blockspace), B (time preference), and C (collusion-utility). A deviation is profitable if and only if the agent values the marginal gain (e.g., the collusion utility from private broadcast) more than the marginal loss in the other goods (e.g., slower settlement or reduced blockspace). Thus any profitable deviation must correspond to a genuine welfare-increasing trade from the agent’s perspective.
+Under the clearing rules of the mechanism, unilateral deviations cannot improve an agent’s allocation of A or B. Any welfare-increasing deviation must therefore involve participation in a portfolio bid, which necessarily expands or modifies the routing path. This expansion dilutes the agent’s continuation value, defined as the expected future purchasing power derived from refund eligibility. Every welfare-increasing trade thus carries a built-in continuation-value cost that the agent must accept in order to receive the immediate benefit.
 
-**Lemma 2. All welfare-increasing trades require cooperation and therefore continuation-value sacrifice.**
+**Lemma 2. Profitable deviations must be welfare-increasing trades.**
 
-Under the clearing rules of the mechanism, unilateral deviations cannot improve an agent’s allocation of A or B. Any welfare-increasing deviation must therefore involve participation in a portfolio bid, which necessarily expands or modifies the routing path. This expansion dilutes the agent’s expected share of future conditional refunds. Every welfare-increasing trade thus carries a built-in continuation-value cost that the agent must accept in order to receive the immediate benefit.
+Because deviations necessarily sacrifice some dimension of utility-in-mechanism, no agent can strictly improve their payoff without engaging in a subjective welfare-increasing trade across Goods A (blockspace), B (time preference), and C (collusion-utility). A deviation is profitable if and only if the agent values the marginal gain (e.g., the collusion utility secured from private broadcast) more than the marginal loss in the other goods (e.g., slower settlement). Thus any profitable deviation must correspond to a genuine welfare-increasing trade from the agent’s perspective.
 
 **Lemma 3. Continuation-value losses exceed gains for all non-efficient deviations.**
 
-Continuation value represents an agent’s future ability to purchase any mix of A, B, and C in future rounds of the iterating auction. Routing-work dilution reduces this continuation value proportionally. As a result, any deviation that does not create a genuine welfare improvement imposes a strict net loss: the reduction in continuation value outweighs any short-term benefit gained from the deviation. Such deviations are irrational in intertemporal expectation.
+Continuation value represents an agent’s ability to purchase any mix of A, B, and C in future rounds of the iterating auction. Routing-work dilution reduces this continuation value proportionally. As a result, any deviation that does not create a genuine welfare improvement imposes a strict net loss: the reduction in continuation value outweighs any short-term benefit gained from the deviation. Such deviations are irrational in intertemporal expectation.
 
 **Theorem. Pareto-Sufficient Efficient Implementation.**
 
-Given the mechanism’s fixed rules, observability of routing paths, and common-knowledge continuation-value incentives, the only deviations consistent with intertemporal optimization are those that correspond to genuine welfare-increasing trades. All other deviations collapse under the weight of their continuation-value losses. Hence the mechanism implements an allocation that is Pareto-sufficiently efficient: conditional on the actual structure of communication and cooperation, rational agents converge to proposals consistent with the welfare-efficient allocation, even under informational decentralization.
+Given the mechanism’s fixed rules, observability of routing paths, and common-knowledge continuation-value incentives, the only deviations consistent with intertemporal optimization are those that correspond to genuine welfare-increasing trades. All other deviations collapse under the weight of their continuation-value losses. Hence the mechanism implements an allocation that is Pareto-sufficient: efficient given the topological structure of communication within the mechanism, rational agents converge to proposals consistent with the welfare-efficient allocation, even under informational decentralization.
 
 NOTE: efficiency can be improved from the *Pareto sufficient* baseline if agents use the opportunity to publish information on their pricing and availability of collusion goods via the inclusion of proposals as a form of price broadcasting.
 
