@@ -2,7 +2,7 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-04T07:03:12.425Z
+date: 2025-12-04T07:07:59.648Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
@@ -10,7 +10,7 @@ dateCreated: 2025-12-03T07:25:55.513Z
 
 # Saito Economics Note
 
-The puzzle is straightforward: if agents can freely misreport preferences in an informationally decentralized mechanism, incentive compatibility should be impossible and no mechanism should implement efficient outcomes. Yet Saito Consensus does exactly this. How?
+The puzzle is straightforward: if agents can freely misreport preferences in an informationally decentralized mechanism, incentive compatibility should be impossible and no mechanism should implement efficient outcomes. Yet Saito Consensus does this. How?
 
 ## Section 1: The Impossibility Results
 
