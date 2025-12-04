@@ -2,7 +2,7 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-04T00:57:05.947Z
+date: 2025-12-04T07:03:12.425Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
@@ -16,59 +16,61 @@ The puzzle is straightforward: if agents can freely misreport preferences in an 
 
 The impossibility results that dominate implementation theory rest on a specific modeling assumption: that agents do not face higher costs for sending messages that induce deviations from welfare-optimal outcomes.
 
-This assumption became entrenched early. Hurwicz (1972) treated all statements as equally cheap to express; Maskin then abstracted communication costs entirely; and Myerson’s Revelation Principle pushed the field toward studying direct mechanisms in which type reports are the only messages and are costless by construction. The standard framework thus only recognizes mechanisms compatible with Myerson–Maskin symmetry, creating a powerful blind spot.
+This assumption became entrenched early. Hurwicz (1972) treated all statements as equally cheap to express; Maskin then abstracted communication costs entirely; and Myerson’s Revelation Principle pushed the field toward studying direct mechanisms in which type reports are the only messages and are costless by construction. The standard framework evolved to analyze mechanisms compatible with Myerson–Maskin symmetry, creating a powerful blind spot.
 
-The same assumption appears across foundational results in economics and computer science. Myerson–Satterthwaite assumes agents can misreport without penalty; Crawford–Sobel models all messages as costless and commitment-free; and distributed-systems impossibility results such as Bracha–Toueg treat all proposals as equally feasible. In all of these settings, messages carry no commitments, impose no costs, and do not affect continuation payoffs.
+Other foundational results in economics and computer science have consequently reinforced the assumption. Myerson–Satterthwaite assumes agents can misreport without penalty; Crawford–Sobel models all messages as costless and commitment-free; and distributed-systems impossibility results such as Bracha–Toueg treat all proposals as equally feasible. In each of these settings, messages carry no commitments, impose no costs, and do not affect continuation payoffs.
 
-Yet there is nothing in decentralization that requires communication to be costless. And Saito's design shows it is possible to break this assumption by adding endogenous message costs that rise with the suboptimality of the message being shared. The next section explains how this is accomplished in theory.
-
+Yet there is nothing in decentralization that requires communication to be costless. And Saito shows how to break this assumption: by adding endogenous message costs that rise with the suboptimality of the message being shared. The next section explains how these endogenous costs can be created.
 
 ## Section 2: Endogenous Costs
 
-Implementing endogenous messaging costs requires three properties: (i) messaging choices must affect agent utility within the mechanism, (ii) the mechanism must observe the choices they make, and (iii) the mechanism must adjust the **continuation value** for each agent on they choices they make. Saito accomplishes this using three components:
+Implementing endogenous messaging costs requires three properties: (i) messaging choices must affect agent utility within the mechanism, (ii) the mechanism must observe the choices agents make, and (iii) the mechanism must adjust the **continuation value** for each agent dependent on they choices they make. Saito implements this in three steps:
 
 (a) Portfolio Bids
 
-Agents may cooperate by assembling portfolio bids -- bundles that combine multiple proposals into a single submission that competes with individual bids. Cooperation increases utility by improving the competitiveness of the joint bid, giving agents an incentive to share proposals prior to submission.
+Agents may cooperate by assembling portfolio bids -- bundles that combine multiple proposals into a joint submission that competes with individual bids. Cooperation increases utility by improving the competitiveness of the joint bid, giving agents an incentive to share proposals prior to submission.
 
 (b) Cryptographic Routing Signatures
 
-The sharing of proposals is made visible through the use of cryptographic routing signatures which add a routing path to proposals. The chain-of-signatures make pre-submission sharing visible to the mechanism, recording who forwarded the proposal and who received it in what order.
+The sharing of proposals is made visible through the use of cryptographic routing signatures. The chain-of-signatures created by pre-submission sharing becomes visible to the mechanism in the resulting routing path, which records who forwarded which proposal to whom and who received it in what order.
 
 (c) Routing Payouts / Conditional Refunds
 
-The mechanism finally adjusts utility based on these signatures. In addition to portfolio bids having an advantage in the Dutch-clock clearing rule, a portion of the succesful bid is awarded to one participant drawn from the routing paths of the winning bid, creating an outbound payment that serves as **continuation value** for future rounds of the mechanism.
+The mechanism finally adjusts utility based on these signatures, awarding a portion of the succesful bid to one participant drawn from the routing paths of the winning submission, creating an outbound payment that serves as **continuation value** for future rounds of the mechanism.
 
-These technical components form our causal chain: portfolio bids make cooperation valuable, routing signatures make it observable, and routing payouts convert that observability into continuation value. 
+These technical components form our causal chain: portfolio bids make cooperation valuable, routing signatures make it observable, and routing payouts convert that observability into a form of continuation value allocated by the mechanism.
 
 
 ## Section 3: Broadcast Strategies
 
-Because every additional hop in a routing path adds another potential claimant to the conditional refund, sharing a proposal with any peer necessarily reduces the sender’s **continuation value**. Rational senders will only accept this loss if cooperating increases their current-period utility in some other dimension -- blockspace allocation (A), settlement speed (B), or collusion utility (C).
+Because every additional hop in a routing path adds another potential claimant to the conditional refund, sharing a proposal with any peer necessarily imposes a cost; it reduces the sender’s **continuation value**. Rational senders will only accept this loss if cooperating increases their utility in a more highly-valued dimension: blockspace allocation (A), settlement speed (B), or collusion utility (C) in the classic mechanism.
 
-Broadcast strategy is the mechanism by which agents can accomplish this. By choosing how widely or narrowly a proposal is distributed, agents shape the competitive environment in which portfolio bids are assembled and thereby influence both (i) the probability of fast inclusion and (ii) the extent to which the conditional refund can be cooperatively redirected. Namely:
+Broadcast strategy is the mechanism by which agents accomplish this. By choosing how widely or narrowly a proposal is distributed, agents shape the competitive environment in which portfolio bids are assembled and thereby influence both (i) the probability of fast inclusion and (ii) the expected profitability of message recipients.
 
-- **Public broadcast:** trades continuation value for faster inclusion (Good B). Routing a proposal to multiple recipients increases competition among them to include it in a portfolio bid. Each recipient has an incentive to forward-propagate the proposal to secure a position in the routing path of the eventual winner, accelerating settlement for the sender.
+Two strategies are available which optimize for different forms of utility, namely:
 
-- **Private broadcast:** trades continuation value for collusion utility (Good C) or increased blockspace (Good A). Routing exclusively to a single recipient minimizes competitive pressure, giving that recipient a stronger claim on the conditional refund and enabling them to convert part of their expected payout into a private benefit offered in return for the sender.
+- **Public broadcast:** trades continuation value for faster inclusion (Good B). Routing a proposal to multiple recipients increases competition between them to include it in a portfolio bid. This gives each recipient an incentive to forward-propagate the proposal to secure a position in the routing path of the eventual winner, accelerating settlement for the sender.
 
-These dynamics create a three-way trade-off among Goods A, B, and C. This breaks the symmetry of the message space: every forwarding decision imposes a real continuation-value cost, which agents justify by pursuing whichever dimension of utility yields the highest marginal gain.
+- **Private broadcast:** trades continuation value for collusion utility (Good C) or increased blockspace (Good A). Routing exclusively to a single recipient minimizes competitive pressure, giving the recipient a larger expected claim on the conditional refund and enabling them to convert a portion into a private benefit offered in return for the sender.
 
+These dynamics permit three-way trade-offs between Goods A, B, and C. This breaks the symmetry of the message space: every forwarding decision imposes a real cost, which agents justify by pursuing whichever dimension of utility yields the highest marginal gain.
+
+This implies that any profitable deviation must involve a deliberate trade of continuation value for Good A, Good B, or Good C. We now formalize this by characterizing which deviations are feasible, which are genuinely welfare-improving, and how continuation-value losses restrict all others.
 
 
 ## Section 4. Welfare Efficient Outcomes
 
 The mechanics described in Section 3 make proposals that are consistent with welfare-efficient allocations uniquely attractive to participants. In review:
 
-**Lemma 1. All welfare-increasing trades require cooperation and therefore continuation-value sacrifice.**
+**Lemma 1. All welfare-increasing trades require cooperation and therefore sacrifice continuation value.**
 
 A welfare-increasing trade is any reallocation among Goods A, B, and C that strictly increases an agent’s utility given their private preferences.
 
-Under the clearing rules of the mechanism, unilateral deviations cannot improve an agent’s allocation of A or B and C (collusion goods) are unavailable. Any welfare-increasing deviation must therefore involve participation in a portfolio bid, which necessarily expands the routing path, reducing the bidder's expected claim on the routing payout / refund. Every welfare-increasing trade thus carries a built-in continuation-value cost that the agent must accept in order to receive the immediate benefit.
+Under the clearing rules of the mechanism, non-portfolio bids cannot adjust an agent’s allocation of A or B, while C (collusion goods) are unavailable. Any welfare-increasing deviation must therefore involve participation in a portfolio bid, which necessarily expands the routing path, reducing the bidder's expected claim on the routing payout / refund. Every welfare-increasing trade thus carries a built-in continuation-value cost that the agent must accept in order to receive the immediate benefit.
 
 **Lemma 2. Profitable deviations must be welfare-increasing trades.**
 
-Because all deviations sacrifice some dimension of utility-in-mechanism, no agent can strictly improve their payoff without engaging in a subjective welfare-increasing trade across Goods A (blockspace), B (time preference), and C (collusion-utility). A deviation is profitable if and only if the agent values the marginal gain (e.g., the collusion utility secured from private broadcast) more than the marginal loss (e.g., slower settlement from limited competition). Thus any profitable deviation must be a genuine welfare-increasing trade from the agent’s perspective.
+Because all deviations sacrifice some dimension of utility-in-mechanism, no agent can strictly improve their payoff without engaging in a subjective welfare-increasing trade across Goods A (blockspace), B (time preference), and C (collusion-utility). A deviation is profitable if and only if the agent values the marginal gain (e.g., the collusion utility secured from private broadcast) more than the marginal loss. Thus any profitable deviation must be a genuine welfare-increasing trade from the agent’s perspective.
 
 **Lemma 3. Continuation-value losses exceed gains for all non-efficient deviations.**
 
@@ -81,17 +83,9 @@ Given the mechanism’s fixed rules, observability of routing paths, and common-
 
 ## Section 5. Conclusion
 
-The most beneficial strategy for all participants is to maximize the gains available from cooperation with others while minimizing the losses that the need to cooperate forces on them.
+The dominant strategy for all participants is to maximize the gains available from cooperation while minimizing the continuation-value losses cooperation entails. When all agents behave this way, welfare-increasing trades propagate through the mechanism, inefficient deviations collapse, and short-term and long-term preferences come into alignment.
 
-When all agents follow this strategy, the longest-chain strategy ensures the most efficiently compiled (lowest in continuation loss) bundle of proposals re-inforce each other:
-
-- welfare-increasing trades propagate forward,
-
-- inefficient deviations collapse,
-
-- and the mechanism drives short-term and long-term preferences into equilibrium.
-
-The outcome that remains is the one in which all agents emergently adopt strategies consistent with the welfare-efficient allocation. Efficiency emerges not by assumption or revelation, but because the mechanism embeds the incentive gradient needed to restrict profitable deviations exclusively to genuine welfare improvements.
+The resulting outcome is the unique allocation in which all agents adopt proposals consistent with the welfare-efficient allocation. Efficiency emerges not from revelation or centralized information, but from an incentive gradient that restricts profitable deviations to actions that increase welfare.
 
 
 # Appendix - Implementation Specification
