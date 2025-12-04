@@ -2,7 +2,7 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-04T00:06:38.003Z
+date: 2025-12-04T00:57:05.947Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
@@ -44,17 +44,16 @@ These technical components form our causal chain: portfolio bids make cooperatio
 
 ## Section 3: Broadcast Strategies
 
-Broadcast strategies now permit agents to trade off **continuation value** against other forms of utility inside the mechanism:
+Because every additional hop in a routing path adds another potential claimant to the conditional refund, sharing a proposal with any peer necessarily reduces the sender’s **continuation value**. Rational senders will only accept this loss if cooperating increases their current-period utility in some other dimension -- blockspace allocation (A), settlement speed (B), or collusion utility (C).
 
- - **Forwarding redistributes continuation value:** any change to a routing path alters each participant’s probability of receiving the conditional refund, transferring continuation value from the sender to the receiver.
+Broadcast strategy is the mechanism by which agents can accomplish this. By choosing how widely or narrowly a proposal is distributed, agents shape the competitive environment in which portfolio bids are assembled and thereby influence both (i) the probability of fast inclusion and (ii) the extent to which the conditional refund can be cooperatively redirected. Namely:
 
- - **Forwarding alters competitive conditions:** sharing with one peer versus broadcasting to many changes the recipients’ expected payoff and their willingness to provide collusion goods (Good C).
+- **Public broadcast:** trades continuation value for faster inclusion (Good B). Routing a proposal to multiple recipients increases competition among them to include it in a portfolio bid. Each recipient has an incentive to forward-propagate the proposal to secure a position in the routing path of the eventual winner, accelerating settlement for the sender.
 
- - **Public broadcast trades continuation value for faster inclusion:** routing a proposal to multiple recipients induces them to forward-propagate to raise their own refund share, increasing competition and improving the sender’s allocation in Good A (settlement speed).
+- **Private broadcast:** trades continuation value for collusion utility (Good C) or increased blockspace (Good A). Routing exclusively to a single recipient minimizes competitive pressure, giving that recipient a stronger claim on the conditional refund and enabling them to convert part of their expected payout into a private benefit offered in return for the sender.
 
- - **Private broadcast trades inclusion speed for collusion goods:** routing exclusively to a single peer reduces competitive pressure for fast inclusion, increasing that peer’s expected profitability and enabling exclusive side-payments (Good C).
+These dynamics create a three-way trade-off among Goods A, B, and C. This breaks the symmetry of the message space: every forwarding decision imposes a real continuation-value cost, which agents justify by pursuing whichever dimension of utility yields the highest marginal gain.
 
-These dynamics create a three-way trade-off among Goods A, B, and C. Every messaging choice imposes a real cost which may be assigned to whichever dimension of utility the bidder values least at the margin. The message space is therefore no longer symmetric.
 
 
 ## Section 4. Welfare Efficient Outcomes
