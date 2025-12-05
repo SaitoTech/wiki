@@ -2,33 +2,33 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-04T07:07:59.648Z
+date: 2025-12-05T04:31:49.664Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
 ---
 
-# Saito Economics Note
+# Signalling Costs and Welfare Efficiency
 
 The puzzle is straightforward: if agents can freely misreport preferences in an informationally decentralized mechanism, incentive compatibility should be impossible and no mechanism should implement efficient outcomes. Yet Saito Consensus does this. How?
 
 ## Section 1: The Impossibility Results
 
-The impossibility results that dominate implementation theory rest on a specific modeling assumption: that agents do not face higher costs for sending messages that induce deviations from welfare-optimal outcomes.
+The results that assert impossibility in implementation theory rest on a specific modeling assumption: that agents do not face higher costs for sending messages that induce deviations from welfare-optimal outcomes.
 
 This assumption became entrenched early. Hurwicz (1972) treated all statements as equally cheap to express; Maskin then abstracted communication costs entirely; and Myerson’s Revelation Principle pushed the field toward studying direct mechanisms in which type reports are the only messages and are costless by construction. The standard framework evolved to analyze mechanisms compatible with Myerson–Maskin symmetry, creating a powerful blind spot.
 
-Other foundational results in economics and computer science have consequently reinforced the assumption. Myerson–Satterthwaite assumes agents can misreport without penalty; Crawford–Sobel models all messages as costless and commitment-free; and distributed-systems impossibility results such as Bracha–Toueg treat all proposals as equally feasible. In each of these settings, messages carry no commitments, impose no costs, and do not affect continuation payoffs.
+Later results in economics and computer science have since reinforced the assumption. Myerson–Satterthwaite assumes agents can misreport without penalty; Crawford–Sobel models all messages as costless and commitment-free; and distributed-systems impossibility results such as Bracha–Toueg treat all proposals as equally feasible. In each of these settings, messages carry no commitments, impose no costs, and do not affect continuation payoffs.
 
-Yet there is nothing in decentralization that requires communication to be costless. And Saito shows how to break this assumption: by adding endogenous message costs that rise with the suboptimality of the message being shared. The next section explains how these endogenous costs can be created.
+Yet there is nothing in decentralization that requires communication to be costless. And Saito breaks this assumption: adding endogenous message costs that penalize agents in proportion to the suboptimality of the message they share. The next section explains how these endogenous costs are created.
 
 ## Section 2: Endogenous Costs
 
-Implementing endogenous messaging costs requires three properties: (i) messaging choices must affect agent utility within the mechanism, (ii) the mechanism must observe the choices agents make, and (iii) the mechanism must adjust the **continuation value** for each agent dependent on they choices they make. Saito implements this in three steps:
+Inplementing endogenous messaging costs require three steps: (i) messaging choices must affect agent utility within the mechanism, (ii) the mechanism must observe the choices agents make, and (iii) the mechanism must adjust the **continuation value** for each agent dependent on their choices. Saito implement this with three techniques:
 
 (a) Portfolio Bids
 
-Agents may cooperate by assembling portfolio bids -- bundles that combine multiple proposals into a joint submission that competes with individual bids. Cooperation increases utility by improving the competitiveness of the joint bid, giving agents an incentive to share proposals prior to submission.
+Agents may cooperate by assembling portfolio bids -- bundled bids that combine multiple proposals into a joint submission that competes with individual bids. Cooperation increases utility by improving the competitiveness of the joint bid, giving agents an incentive to share proposals prior to submission.
 
 (b) Cryptographic Routing Signatures
 
