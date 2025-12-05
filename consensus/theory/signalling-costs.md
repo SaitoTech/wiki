@@ -2,7 +2,7 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-05T04:31:49.664Z
+date: 2025-12-05T08:47:46.471Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
@@ -24,51 +24,51 @@ Yet there is nothing in decentralization that requires communication to be costl
 
 ## Section 2: Endogenous Costs
 
-Inplementing endogenous messaging costs require three steps: (i) messaging choices must affect agent utility within the mechanism, (ii) the mechanism must observe the choices agents make, and (iii) the mechanism must adjust the **continuation value** for each agent dependent on their choices. Saito implement this with three techniques:
+Inplementing endogenous messaging costs requires three steps: (i) messaging choices must affect the composition of utility delivered by the mechanism, (ii) the mechanism must observe the choices agents make, and (iii) the mechanism must adjust the **continuation value** for each agent dependent on their choices. Saito implements this by combining three techniques:
 
-(a) Portfolio Bids
+**(a) Portfolio Bids**
 
-Agents may cooperate by assembling portfolio bids -- bundled bids that combine multiple proposals into a joint submission that competes with individual bids. Cooperation increases utility by improving the competitiveness of the joint bid, giving agents an incentive to share proposals prior to submission.
+Agents may cooperate by assembling portfolio bids -- bundled bids that combine multiple proposals into a joint submission that competes with individual bids. Cooperation increases utility by improving the competitiveness of the joint bid in an underlying Dutch clock auction, giving agents an incentive to share proposals prior to submission.
 
-(b) Cryptographic Routing Signatures
+**(b) Cryptographic Routing Signatures**
 
-The sharing of proposals is made visible through the use of cryptographic routing signatures. The chain-of-signatures created by pre-submission sharing becomes visible to the mechanism in the resulting routing path, which records who forwarded which proposal to whom and who received it in what order.
+The sharing of proposals is made visible through the use of cryptographic routing signatures. The chain-of-signatures created by pre-submission sharing becomes visible to the mechanism in the resulting routing paths, which are connected to proposals and record who forwarded which proposal to whom and who received it in what order.
 
-(c) Routing Payouts / Conditional Refunds
+**(c) Routing Payouts / Conditional Refunds**
 
-The mechanism finally adjusts utility based on these signatures, awarding a portion of the succesful bid to one participant drawn from the routing paths of the winning submission, creating an outbound payment that serves as **continuation value** for future rounds of the mechanism.
+The mechanism finally adjusts utility based on these signatures, awarding a portion of the succesful bid to a participant drawn from the routing paths of the winning submission. This refund or routing payout creates an outbound payment that serves as **continuation value** for future rounds of the mechanism.
 
-These technical components form our causal chain: portfolio bids make cooperation valuable, routing signatures make it observable, and routing payouts convert that observability into a form of continuation value allocated by the mechanism.
+These technical components form our causal chain: portfolio bids make cooperation valuable, routing signatures make it observable, and routing payouts split the continuation value it creates between the participants.
 
 
-## Section 3: Broadcast Strategies
+## Section 3: The Emergence of Broadcast Strategies
 
-Because every additional hop in a routing path adds another potential claimant to the conditional refund, sharing a proposal with any peer necessarily imposes a cost; it reduces the sender’s **continuation value**. Rational senders will only accept this loss if cooperating increases their utility in a more highly-valued dimension: blockspace allocation (A), settlement speed (B), or collusion utility (C) in the classic mechanism.
+Because every additional hop in a routing path adds another potential claimant for the conditional refund, sharing a proposal with any peer necessarily imposes a cost; it reduces the sender’s **continuation value**. Rational senders will only accept this loss if cooperating increases their utility in a more highly-valued dimension: blockspace allocation (A), settlement speed (B), or collusion utility (C) in the classic mechanism.
 
 Broadcast strategy is the mechanism by which agents accomplish this. By choosing how widely or narrowly a proposal is distributed, agents shape the competitive environment in which portfolio bids are assembled and thereby influence both (i) the probability of fast inclusion and (ii) the expected profitability of message recipients.
 
-Two strategies are available which optimize for different forms of utility, namely:
+Two strategies dominate depending on which form of utility the agent prefers:
 
-- **Public broadcast:** trades continuation value for faster inclusion (Good B). Routing a proposal to multiple recipients increases competition between them to include it in a portfolio bid. This gives each recipient an incentive to forward-propagate the proposal to secure a position in the routing path of the eventual winner, accelerating settlement for the sender.
+- **Public broadcast:** trades continuation value for faster inclusion (Good B). This works because routing a proposal to multiple recipients increases competition between them to include it in a portfolio bid. This gives each recipient an incentive to forward-propagate the proposal to secure a position in the routing path of the winning portfolio bid, accelerating settlement for the sender.
 
-- **Private broadcast:** trades continuation value for collusion utility (Good C) or increased blockspace (Good A). Routing exclusively to a single recipient minimizes competitive pressure, giving the recipient a larger expected claim on the conditional refund and enabling them to convert a portion into a private benefit offered in return for the sender.
+- **Private broadcast:** routing exclusively to a single recipient reduces competitive pressure, giving the recipient a larger expected claim on the conditional refund and enabling rational strategies that convert a portion of the expected refund into a private benefit (more blockspace or collusion utility) that can be offered in return for the sender.
 
-These dynamics permit three-way trade-offs between Goods A, B, and C. This breaks the symmetry of the message space: every forwarding decision imposes a real cost, which agents justify by pursuing whichever dimension of utility yields the highest marginal gain.
+These dynamics permit three-way trade-offs between Goods A, B, and C. This breaks the symmetry of the message space: every forwarding decision imposes a real cost, which agents justify by increasing whichever dimension of utility yields the highest marginal gain.
 
-This implies that any profitable deviation must involve a deliberate trade of continuation value for Good A, Good B, or Good C. We now formalize this by characterizing which deviations are feasible, which are genuinely welfare-improving, and how continuation-value losses restrict all others.
+Any profitable deviation must involve a deliberate trade of continuation value for Good A, Good B, or Good C. We now formalize this by characterizing which deviations are feasible, and showing that rational proposals are limited to the set of genuinely welfare-improving ones.
 
 
 ## Section 4. Welfare Efficient Outcomes
 
-The mechanics described in Section 3 make proposals that are consistent with welfare-efficient allocations uniquely attractive to participants. In review:
+The mechanics described in Section 3 make proposals that are consistent with welfare-efficient allocations uniquely attractive to participants.
 
 **Lemma 1. All welfare-increasing trades require cooperation and therefore sacrifice continuation value.**
 
 A welfare-increasing trade is any reallocation among Goods A, B, and C that strictly increases an agent’s utility given their private preferences.
 
-Under the clearing rules of the mechanism, non-portfolio bids cannot adjust an agent’s allocation of A or B, while C (collusion goods) are unavailable. Any welfare-increasing deviation must therefore involve participation in a portfolio bid, which necessarily expands the routing path, reducing the bidder's expected claim on the routing payout / refund. Every welfare-increasing trade thus carries a built-in continuation-value cost that the agent must accept in order to receive the immediate benefit.
+Under the clearing rules of the mechanism, non-portfolio bids cannot adjust an agent’s allocation of A or B, while C (collusion goods) are unavailable. Any welfare-increasing deviation must therefore involve participation in a portfolio bid, which necessarily expands the routing path, reducing the bidder's expected claim on the routing payout. Every welfare-increasing trade thus carries a built-in continuation-value cost that must be accepted in order to receive the immediate benefit.
 
-**Lemma 2. Profitable deviations must be welfare-increasing trades.**
+**Lemma 2. All profitable deviations must be welfare-increasing trades.**
 
 Because all deviations sacrifice some dimension of utility-in-mechanism, no agent can strictly improve their payoff without engaging in a subjective welfare-increasing trade across Goods A (blockspace), B (time preference), and C (collusion-utility). A deviation is profitable if and only if the agent values the marginal gain (e.g., the collusion utility secured from private broadcast) more than the marginal loss. Thus any profitable deviation must be a genuine welfare-increasing trade from the agent’s perspective.
 
