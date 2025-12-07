@@ -2,7 +2,7 @@
 title: Transaction Fee Mechanisms
 description: 
 published: true
-date: 2025-12-07T10:12:40.477Z
+date: 2025-12-07T10:15:22.743Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-25T09:50:59.671Z
@@ -26,7 +26,7 @@ dateCreated: 2025-11-25T09:50:59.671Z
 
 A line of academic work, led by Elaine Shi (Cornell) and Tim Roughgarden (Columbia), has produced a series of papers arguing that incentive-compatible blockchains, or “transaction fee mechanisms,” cannot be designed under certain formal assumptions.
 
-This literature is relevant to Saito Consensus as several of its stated impossibility results directly contradict the guarantees of the Saito protocol. This page explains why these papers do not provide grounds for general claims about what is possible in distributed consensus. The issue is not the mathematical correctness of their theorems within their formal models; it is that the models themselves have three systemic problems that prevent their conclusions from holding even within their own restricted settings. The problems are:
+This page explains why these papers do not provide grounds for general claims about what is possible in distributed consensus. The issue is not the mathematical correctness of their theorems within their formal models; it is that the models themselves have three systemic problems that prevent their conclusions from holding even within their own restricted settings. The problems are:
 
 - **off-equilibrium path exclusion:**  pruning strategically-relevant deviations through which mechanisms can enforce honest behavior via credible deterrence;
 
@@ -36,7 +36,7 @@ This literature is relevant to Saito Consensus as several of its stated impossib
 
 ## 1. Off-Equilibrium Path Exclusion
 
-When analyzing user strategies, the TFM papers assume miner honesty; when analyzing miner strategies, they assume user honesty. By cleaving the strategy space in this way, their model excludes mechanisms that deliver incentive compatibility through the threat of credible punishments from opposing parties in mutually off-equilibrium paths.
+When analyzing user strategies, the TFM papers assume miner honesty; when analyzing miner strategies, they assume user honesty. By cleaving the strategy space in this way, their model excludes mechanisms that deliver incentive compatibility through the threat of credible punishments in off-equilibrium paths.
 
 ## 2. Improper Reduction
 
