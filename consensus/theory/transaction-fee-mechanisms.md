@@ -2,7 +2,7 @@
 title: Transaction Fee Mechanisms
 description: 
 published: true
-date: 2025-11-25T15:43:44.336Z
+date: 2025-12-07T06:05:53.541Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-25T09:50:59.671Z
@@ -42,7 +42,7 @@ In the remainder of this page, we cover these errors briefly.
 
 The TFM papers attempt to study incentive compatibility within the confines of an artificially constrained game. When analyzing user strategies, they assume miner honesty; when analyzing miner strategies, they assume user honesty. By cleaving the strategy space in this way, their model excludes the possibility that both sides may respond in strategically complex ways that punish deviations by the other.
 
-This ommission is consequential, as it excludes the possibility of mechanisms that delivers incentive compatibility not through structural constraints on agent behavior but through the threat of credible punishments from opposing parties.
+This ommission is consequential, as it excludes the possibility of mechanisms that deliver incentive compatibility not through structural constraints on agent behavior but through the threat of credible punishments from opposing parties.
 
 
 ## 2. Improper Reduction
