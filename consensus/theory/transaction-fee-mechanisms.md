@@ -2,7 +2,7 @@
 title: Transaction Fee Mechanisms
 description: 
 published: true
-date: 2025-12-07T10:15:22.743Z
+date: 2025-12-08T04:24:12.777Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-25T09:50:59.671Z
@@ -36,11 +36,11 @@ This page explains why these papers do not provide grounds for general claims ab
 
 ## 1. Off-Equilibrium Path Exclusion
 
-When analyzing user strategies, the TFM papers assume miner honesty; when analyzing miner strategies, they assume user honesty. By cleaving the strategy space in this way, their model excludes mechanisms that deliver incentive compatibility through the threat of credible punishments in off-equilibrium paths.
+When analyzing user strategies, the TFM papers assume miner honesty; when analyzing miner strategies, they assume user honesty. By cleaving the strategy space in this way, their model excludes mechanisms that deliver incentive compatibility or affect in-equilibrium outcomes through the threat of credible punishments in off-equilibrium paths.
 
 ## 2. Improper Reduction
 
-The Revelation Principle states that if some outcome can be implemented by **any** mechanism, then there exists a **direct mechanism** equivalent. Myerson requires the direct mechanism to preserve the full strategic environment of the original game. The model must be able to implement all successful as well as unsuccessful equilibria.
+The Revelation Principle states that if some outcome can be implemented by **any** mechanism, then there exists a **direct mechanism** equivalent. Myerson requires the direct mechanism to preserve the full strategic environment of the original game. The model must be able to implement all successful as well as unsuccessful equilibria. All preferences expressable in the full game must remain expressable in the reduced-form game.
 
 The TFM papers fail this requirement, invoking the Revelation Principle in a manner that **shrinks the strategy space rather than preserves it**. Actions that are acknowledged to be feasible and strategically-relevant in the real mechanism -- such as the insertion of fake transactions by miners or side-contract payments from users to miners -- are removed entirely from the strategy space in the reduced mechanism.
 
@@ -50,12 +50,12 @@ This shift breaks the equivalence the Revelation Principle is meant to guarantee
 
 The TFM papers ask users to share their private valuations for “blockspace” with the mechanism. Yet additional forms of utility -- preferences for timing, transaction ordering, MEV protection, side-payments and other benefits of collusion -- are acknowledged as factors that affect strategic behavior.
 
-This vacillation between acknowledging a multi-dimensional reality and suppressing it introduces internal contradictions. Classical single-parameter assumptions are needed to ensure monotonicity assumptions or apply Myerson’s Lemma. But unrevealed preferences are needed to justify agent preferences for off-equilibrium deviations.
+This vacillation between acknowledging a multi-dimensional reality and suppressing it introduces internal contradictions. Classical single-parameter assumptions are needed to ensure monotonicity assumptions or apply Myerson’s Lemma. But unrevealed preferences are invoked to justify agent preferences for off-equilibrium deviations.
 
 
 ## Summary
 
-Although the TFM literature adopts the language of incentive compatibility, the way it models incentive compatibility and collusion-resilience is not aligned with the formal requirements of economic theory.
+Although the TFM literature adopts the language of incentive compatibility, the way it models incentive compatibility and collusion-resilience is not aligned with the formal requirements of economics.
 
 The differences break the conditions that Hurwicz, Maskin, and Myerson establish for studying the implementability of social choice rules. As a result, foundational results like the Revelation Principle cannot be invoked to generalize about implementability. What remains is simply an analysis of equilibrium behavior inside specific models with restricted message spaces.
 
