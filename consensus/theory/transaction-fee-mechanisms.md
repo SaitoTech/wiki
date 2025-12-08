@@ -2,7 +2,7 @@
 title: Transaction Fee Mechanisms
 description: 
 published: true
-date: 2025-12-08T04:24:12.777Z
+date: 2025-12-08T04:31:10.756Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-25T09:50:59.671Z
@@ -36,7 +36,7 @@ This page explains why these papers do not provide grounds for general claims ab
 
 ## 1. Off-Equilibrium Path Exclusion
 
-When analyzing user strategies, the TFM papers assume miner honesty; when analyzing miner strategies, they assume user honesty. By cleaving the strategy space in this way, their model excludes mechanisms that deliver incentive compatibility or affect in-equilibrium outcomes through the threat of credible punishments in off-equilibrium paths.
+When analyzing user strategies, the TFM papers assume miner honesty; when analyzing miner strategies, they assume user honesty. By cleaving the strategy space in this way, their model excludes mechanisms that deliver incentive compatibility or change preferred in-equilibrium outcomes through the threat of credible punishments in off-equilibrium paths.
 
 ## 2. Improper Reduction
 
