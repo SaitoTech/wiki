@@ -2,7 +2,7 @@
 title: Saito NFTs
 description: Non-Fungible Saito Tokens and Apps
 published: true
-date: 2025-12-09T04:46:11.940Z
+date: 2025-12-09T14:04:55.557Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-06T10:50:40.234Z
@@ -441,4 +441,178 @@ if (mixin_mod.account_created) {
 //
 this.app.connection.emit("saito-header-update-crypto");
 ```
+</details>
+
+### Add Keyboard Shortcuts to RedSquare
+
+This nft adds keyboard shortcuts to the Saito UI including show balance and quick open send.
+
+<details><summary>Add Keyboard Shortcuts to RedSquare Recipe</summary>
+
+```
+  // Keyboard shortcut handler:
+// - Press "/" then a key for navigation shortcuts
+// - Press "?" alone (when not typing) to open help
+// All actions log to the console.
+
+(function () {
+  let slashMode = false;
+
+  const log = (...args) => console.log("[KS]", ...args);
+
+  const isTextEntryElement = (el) => {
+    if (!el) return false;
+    const tag = el.tagName;
+    if (!tag) return false;
+    if (tag === 'INPUT' || tag === 'TEXTAREA') return true;
+    if (el.isContentEditable) return true;
+    return false;
+  };
+
+  const safeClickById = (id) => {
+    const el = document.getElementById(id);
+    if (el && typeof el.click === 'function') {
+      log(`clicking #${id}`);
+      el.click();
+    } else {
+      log(`element #${id} not found`);
+    }
+  };
+
+  const safeClickSelector = (selector) => {
+    const el = document.querySelector(selector);
+    if (el && typeof el.click === 'function') {
+      log(`clicking ${selector}`);
+      el.click();
+    } else {
+      log(`element ${selector} not found`);
+    }
+  };
+
+  const showBalanceMessage = () => {
+    const amountEl = document.querySelector('.balance-amount');
+    const selectEl = document.querySelector('.wallet-select-crypto');
+
+    if (!amountEl || !selectEl || !selectEl.selectedOptions?.[0]) {
+      log("balance elements missing — cannot show balance");
+      return;
+    }
+
+    const cryptoSymbol = selectEl.selectedOptions[0].value;
+
+    const html = `
+      <div class="site-message-balance">
+        ${amountEl.outerHTML}
+        <div>${cryptoSymbol}</div>
+      </div>
+    `;
+
+    log("showing balance");
+    if (typeof siteMessage === 'function') siteMessage(html);
+  };
+
+  const keyboardShortcutsHelpHtml = `
+    <div class="keyboard-shortcuts-help">
+      <h2>Keyboard Shortcuts</h2>
+      <p>Press keys (when no text field has focus):</p>
+      <ul>
+        <li><strong>?</strong> – Show this help</li>
+        <li><strong>/ w</strong> – Show wallet</li>
+        <li><strong>/ p</strong> – New post</li>
+        <li><strong>/ h</strong> – Go to home</li>
+        <li><strong>/ n</strong> – Open notifications</li>
+        <li><strong>/ s</strong> – Send / withdraw</li>
+        <li><strong>/ b</strong> – Show wallet balance</li>
+      </ul>
+    </div>
+  `.trim();
+
+  const showHelp = () => {
+    log("showing help");
+    if (typeof salert === 'function') salert(keyboardShortcutsHelpHtml);
+  };
+
+  document.addEventListener('keydown', function (e) {
+    // Modifier keys cancel slash mode
+    if (e.ctrlKey || e.metaKey || e.altKey) {
+      log("modifier key pressed — cancelling slash mode");
+      slashMode = false;
+      return;
+    }
+
+    const typing = isTextEntryElement(document.activeElement);
+
+    // === HELP KEY (press ? alone) ===
+    if (!typing && e.key === '?') {
+      log("help key '?' pressed");
+      showHelp();
+      slashMode = false;
+      e.preventDefault();
+      return;
+    }
+
+    // === SLASH ACTIVATION ===
+    if (!slashMode) {
+      if (!typing && e.key === '/') {
+        slashMode = true;
+        log("slash mode activated");
+        e.preventDefault();
+      } else if (typing) {
+        log("typing detected — ignoring key", e.key);
+      }
+      return;
+    }
+
+    // === PROCESS KEY AFTER "/" ===
+    slashMode = false;
+    const key = e.key.toLowerCase();
+    log(`slash+${key} triggered`);
+
+    switch (key) {
+      case 'w':
+        log("shortcut: wallet");
+        safeClickById('saito-header-menu-toggle');
+        e.preventDefault();
+        break;
+
+      case 'p':
+        log("shortcut: post");
+        safeClickSelector('.tweet-button');
+        e.preventDefault();
+        break;
+
+      case 'h':
+        log("shortcut: home");
+        safeClickSelector('.redsquare-menu-home');
+        e.preventDefault();
+        break;
+
+      case 'n':
+        log("shortcut: notifications");
+        safeClickSelector('.redsquare-menu-notifications');
+        e.preventDefault();
+        break;
+
+      case 's':
+        log("shortcut: send");
+        safeClickById('wallet-btn-withdraw');
+        e.preventDefault();
+        break;
+
+      case 'b':
+        log("shortcut: balance");
+        showBalanceMessage();
+        e.preventDefault();
+        break;
+
+      default:
+        log(`unused shortcut: /${key}`);
+        break;
+    }
+  });
+})();
+
+```
+
+
 </details>
