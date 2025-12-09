@@ -2,7 +2,7 @@
 title: Saito NFTs
 description: Non-Fungible Saito Tokens and Apps
 published: true
-date: 2025-12-09T14:50:39.613Z
+date: 2025-12-09T14:56:28.706Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-06T10:50:40.234Z
@@ -10,9 +10,9 @@ dateCreated: 2025-11-06T10:50:40.234Z
 
 # Saito NFTs
 
-Saito supports Smart NFTs that have embedded images, code, css and so much more. Unlike other networks where smart contracts store all of the functionality of NFTs, in Saito you can actually build NFTs that don't need smart contracts at all. This makes Saito hands-down the most powerful platform for NFT development.
+Saito is hands-down the most powerful platform for NFT development. Not only can you build powerful NFTs that come with css, javascript, images, embedded-programs and much more, but you can build NFTs directly from your browser wallet.
 
-This page offers a quick list of "recipes" you can copy-and-paste into your wallet to get started building NFTs.
+This page shows how easy it is to start developing NFTs with some simple examples that you can copy-and-paste into your own browser. All of the examples on this page will work DIRECTLY. If you want to test out NFTs, we recommend grabbing some tokens from the [testnet faucet](https://staging.saito.io/faucet) and then copying and pasting these examples directly into your browser to see how they work!
 
 
 
@@ -540,7 +540,7 @@ hr {
   </details>
 
   <details>
-    <summary>Add Javascript to a CSS Theme </summary>
+    <summary>BONUS - add Javascript to any CSS Theme </summary>
 
 This isn't a full recipe, but it shows how to combine JS and CSS into a single NFT. To create this DEMO RECIPE go to the CREATE NFT overlay and select "JSON" from the NFT-TYPE dropdown. Couldn't be easier!
 
