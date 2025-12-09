@@ -2,7 +2,7 @@
 title: Saito NFTs
 description: Non-Fungible Saito Tokens and Apps
 published: true
-date: 2025-11-12T04:37:59.878Z
+date: 2025-12-09T04:35:07.867Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-06T10:50:40.234Z
@@ -16,6 +16,9 @@ Saito supports programmatic NFTs that contain images, javascript, css and a lot 
 ### Dynamic Image Replacement
 
 Thiis code replaces any files named "red_back.png" with the file linked in the replacement variable. If you provide your own image you can now use it to play cards in any of the Saito card games (which use red_back.png as the card background filename)
+
+<details>
+  <summary>Dynamic Image Replacement Recipe </summary>
 
 ```
 (() => {
@@ -166,11 +169,17 @@ Thiis code replaces any files named "red_back.png" with the file linked in the r
   console.log("red_back.png -> purple_back replacement active");
 })();
 ```
+  </details>
+  
+
 
 ### Dynamic Image Replacement (embedded)
 
 Almost exactly the same as above, except the image is embedded in the NFT itself as a data:image binary file. The contents need to be updated with whatever image is desired as a replacement...
 
+  <details>
+  <summary>Dynamic Image Replacement (embedded) Recipe </summary>
+  
 ```
 const replacement_image = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUg....`;
 
@@ -227,11 +236,15 @@ const replacement_image = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUg....`;
 })();
 
 ```
+  </details>
 
 ### CSS Insertion
 
 You can insert arbitrary CSS into NFTs by creating a CSS NFT or putting the stylesheet into txmsg.data.css. Here is an example of a simple Matrix enter-the-rabbithole theme:
 
+  <details>
+    <summary>CSS Insertion Recipe </summary>
+  
 ```
 :root {
   --saito-bg: #000 !important;
@@ -349,11 +362,16 @@ hr {
   color: #000;
 }
 ```
-
+  
+  </details>
 
 ### Mixin Module Crypto
 
 This NFT adds an additional Mixin-supported web3 crypto to the browser wallet. There are 500 of them! Which one do you want running your browser? reference: https://api.mixin.one/network/assets/top?kind=NORMAL
+
+  <details>
+  <summary>Dynamic Image Replacement Recipe </summary>
+
 ```
 let mixin_mod = this.app.modules.returnModule("Mixin");
 if (!mixin_mod) { return; }
@@ -423,4 +441,4 @@ if (mixin_mod.account_created) {
 //
 this.app.connection.emit("saito-header-update-crypto");
 ```
-
+</details>
