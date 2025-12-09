@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2025-09-22T14:09:44.226Z
+date: 2025-12-09T02:55:23.673Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -10,7 +10,29 @@ dateCreated: 2024-10-15T23:32:31.744Z
 
 # Installing Saito
 
-This page assumes you want to run the NodeJS Saito client (best for app hosting and development!). If you are interested in running the command-line Rust client or another software package see our [overview](/install/overview) of all Saito-related resources.
+This page assumes you want to run the NodeJS Saito node (best for app hosting and development!). If you are interested in running the command-line Rust client or another software package see our [overview](/install/overview) of all Saito-related resources.
+
+
+If you are unsure what you want to do read [Running a Saito Node](running_a_node) for more information.
+
+# Options
+
+Install a local development node (Get started for module development) SEE BELLOW
+
+[Install a Web Node](/install-web) (Can run modules like chat, redsquare and videocall)
+
+Intsall a rust rouding node (Heavy duty routing node with no front end) TBD
+
+## Requirements
+
+* A computer/server with 4GB of RAM and two modern processor cores.
+* A connection with 5MB/s download capacity
+
+To share blocks:
+* Public IP address or domain name. (We use and recommend [Lets Encrypt](https://letsencrypt.org/) for SSL certificates.
+* A constant 5MB/s connection (both directions) to the internet.
+
+*Note: these requirements, particularly bandwidth, will increase as network throughput increases.*
 
 
 ## Quick Deploy Script
