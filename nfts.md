@@ -2,7 +2,7 @@
 title: Saito NFTs
 description: Non-Fungible Saito Tokens and Apps
 published: true
-date: 2025-12-09T14:42:18.703Z
+date: 2025-12-09T14:44:36.788Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-06T10:50:40.234Z
@@ -622,11 +622,16 @@ this.app.connection.emit("saito-header-update-crypto");
   
 ## Advanced NFTs
 
-
   <details>
-    <summary>Combine JS CSS Theme -- The Matrix Recipe </summary>
+    <summary>Combine Javascript AND CSS -- The Matrix Recipe </summary>
 
-CSS NFTs let you re-skin ALL SAITO APPS by injecting the CSS you provide in the NFT into the application. You can use this to re-theme existing applications, or even add new features. This example switches the NFT holder to a follow-the-rabbit dark-mode Matrix theme:
+This isn't a full recipe, but it shows how to combine JS and CSS into a single NFT, so that you can add functionality and applications and UI panels and style them however you'd like. To create this DEMO RECIPIE select "JSON" from the NFT-TYPE dropdown in the CREATE NFT overlay:
 
 ```
-:root {
+{
+  js : `alert("Hello World!")` ,
+  css : `#saito-header { background : #000; }`
+}
+```
+  </details>
+    
