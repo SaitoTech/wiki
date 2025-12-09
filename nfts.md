@@ -2,7 +2,7 @@
 title: Saito NFTs
 description: Non-Fungible Saito Tokens and Apps
 published: true
-date: 2025-12-09T19:58:54.959Z
+date: 2025-12-09T20:02:55.561Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-06T10:50:40.234Z
@@ -177,7 +177,7 @@ This page has a list of simple examples you can copy-and-paste into your own bro
 
 
   <details>
-  <summary>Replace Images with Embedded Images<</summary>
+  <summary>Replace Images with Embedded Images</summary>
     
       This recipe is similar to the one above (swap out any image for one you prefer) but shows how to do this using an image that is embedded in the NFT. This makes the NFT larger, but eliminates the need to fetch content from another server.
   
