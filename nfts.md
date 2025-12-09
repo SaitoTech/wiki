@@ -2,7 +2,7 @@
 title: Saito NFTs
 description: Non-Fungible Saito Tokens and Apps
 published: true
-date: 2025-12-09T14:45:00.763Z
+date: 2025-12-09T14:50:39.613Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-06T10:50:40.234Z
@@ -537,9 +537,21 @@ hr {
   color: #000;
 }
 ```
-  
   </details>
 
+  <details>
+    <summary>Add Javascript to a CSS Theme </summary>
+
+This isn't a full recipe, but it shows how to combine JS and CSS into a single NFT. To create this DEMO RECIPE go to the CREATE NFT overlay and select "JSON" from the NFT-TYPE dropdown. Couldn't be easier!
+
+```
+{
+  js : `alert("Hello World!")` ,
+  css : `#saito-header { background : #000; }`
+}
+```
+  </details>
+    
   
 ## Web3 Cryptocurrencies
   
@@ -620,18 +632,3 @@ this.app.connection.emit("saito-header-update-crypto");
   
   
   
-## Advanced NFTs
-
-  <details>
-    <summary>Combine Javascript AND CSS -- The Matrix Recipe </summary>
-
-This isn't a full recipe, but it shows how to combine JS and CSS into a single NFT, so that you can add functionality and applications and UI panels and style them however you'd like. To create this DEMO RECIPIE select "JSON" from the NFT-TYPE dropdown in the CREATE NFT overlay:
-
-```
-{
-  js : `alert("Hello World!")` ,
-  css : `#saito-header { background : #000; }`
-}
-```
-  </details>
-    
