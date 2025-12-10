@@ -2,7 +2,7 @@
 title: Saito NFTs
 description: Non-Fungible Saito Tokens and Apps
 published: true
-date: 2025-12-10T04:48:16.980Z
+date: 2025-12-10T06:23:52.886Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-06T10:50:40.234Z
@@ -413,7 +413,7 @@ This recipe shows how to add new keyboard shortcuts to Saito. While this NFT is 
   
   
   <details>
-    <summary>Add New Menu Item to Saito Header Menu</summary>
+    <summary>Add Menu Item to Saito Header</summary>
     
     This creates and adds a module that does nothing except respond to the respondTo() request the header makes that asks which modules want to list in the Saito Header. It also provides a function that will be run when the menu item is clicked.
     
@@ -449,6 +449,60 @@ let demo_mod = this.app.modules.createAndAddTemplateModule("DemoMod", {
 this.app.connection.emit("saito-header-render"); 
 ```
   </details>
+  
+  
+  
+  
+  
+  <details>
+    <summary>Show an NFT-Created Overlay</summary>
+    
+    We create a button in the menu that shows an NFT-created overlay when clicked. We also show how to load/save information used by this NFT in the wallet. This demonstrates how to create Saito-UI elements within NFTs.
+    
+```
+
+
+let demo_mod_click = function(app) {
+  let ov = new demo_mod.app.browser.components.SaitoOverlay(app, demo_mod);
+  ov.show(`
+    <div class="demo_mod_btn" style="padding: 1.5rem; height: 80vh; width: 80vw; max-height: 1000px; max-width: 1200px"><h1>Demo NFT Overlay</h1>Why not click the button?<p></p><button class="demo_mod_btn" class="saito-primary-button" style="margin-left:0px">Click Me!</button></div>
+  `);
+  document.querySelector(".demo_mod_btn").onclick = (e) => {
+    app.options.nftapps.demo_mod.clicks++;
+    alert("Total Clicks: " + app.options.nftapps.demo_mod.clicks);
+    app.storage.saveOptions();          
+  }
+}
+
+var demo_mod = this.app.modules.createAndAddTemplateModule("DemoMod", {
+  initialize : async function() {
+     if (!this.app.options.nftapps) { this.app.options.nftapps = {}; }
+     if (!this.app.options.nftapps.demo_mod) { this.app.options.nftapps.demo_mod = {}; }
+     if (!this.app.options.nftapps.demo_mod.clicks) { this.app.options.nftapps.demo_mod.clicks = 0; }
+  },
+  respondTo: function (type = '', obj) {
+    if (type == "saito-header") {
+      return [{
+        text: "Demo",
+        icon: this.icon || "fas fa-bullhorn",
+        rank: 10,
+        callback: function (app, id) {
+          demo_mod_click(app);
+        },
+      }];
+    }
+    return null;
+  }
+
+});
+
+//
+// re-render header
+//
+this.app.connection.emit("saito-header-render"); 
+```
+  </details>
+  
   
 ## CSS NFTS
 
