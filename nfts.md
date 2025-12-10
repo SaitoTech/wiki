@@ -2,7 +2,7 @@
 title: Saito NFTs
 description: Non-Fungible Saito Tokens and Apps
 published: true
-date: 2025-12-09T20:02:55.561Z
+date: 2025-12-10T04:48:16.980Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-06T10:50:40.234Z
@@ -10,9 +10,9 @@ dateCreated: 2025-11-06T10:50:40.234Z
 
 # Saito NFTs
 
-Saito lets you build NFTs that come with css, javascript, images, embedded-programs and much more, and lets you build them directly from your browser wallet.
+Saito lets you build NFTs that combine css, javascript, images, embedded-programs and much more. It also lets you build them directly from your browser wallet -- no more smart contracts.
 
-This page has a list of simple examples you can copy-and-paste into your own browser to get started. If you want to test out NFTs without the need for mainnet tokens, we recommend grabbing some tokens from the [testnet faucet](https://staging.saito.io/faucet) and then copying and pasting these examples directly into your browser on staging to see how they work!
+This page has many simple examples you can try out to get started. If you'd like to test them out for free, we recommend grabbing some tokens from the [Saito testnet faucet](https://staging.saito.io/faucet). You can then copy-and-paste these examples directly into your browser on staging to see how they work! Remember to "enable" any programmatic NFTs after your wallet receives them.
 
 
 
