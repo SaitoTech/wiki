@@ -2,7 +2,7 @@
 title: Saito Consensus - Broadcast Strategy and Messaging Costs
 description: 
 published: true
-date: 2025-12-05T08:47:46.471Z
+date: 2025-12-10T04:56:43.776Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-03T07:25:55.513Z
@@ -18,7 +18,7 @@ The results that assert impossibility in implementation theory rest on a specifi
 
 This assumption became entrenched early. Hurwicz (1972) treated all statements as equally cheap to express; Maskin then abstracted communication costs entirely; and Myerson’s Revelation Principle pushed the field toward studying direct mechanisms in which type reports are the only messages and are costless by construction. The standard framework evolved to analyze mechanisms compatible with Myerson–Maskin symmetry, creating a powerful blind spot.
 
-Later results in economics and computer science have since reinforced the assumption. Myerson–Satterthwaite assumes agents can misreport without penalty; Crawford–Sobel models all messages as costless and commitment-free; and distributed-systems impossibility results such as Bracha–Toueg treat all proposals as equally feasible. In each of these settings, messages carry no commitments, impose no costs, and do not affect continuation payoffs.
+Later results in economics and computer science have reinforced this assumption. Myerson–Satterthwaite assumes agents can misreport without penalty; Crawford–Sobel models all messages as costless and commitment-free; and distributed-systems impossibility results such as Bracha–Toueg treat all proposals as equally feasible. In each of these settings, messages carry no commitments, impose no costs, and do not affect continuation payoffs.
 
 Yet there is nothing in decentralization that requires communication to be costless. And Saito breaks this assumption: adding endogenous message costs that penalize agents in proportion to the suboptimality of the message they share. The next section explains how these endogenous costs are created.
 
