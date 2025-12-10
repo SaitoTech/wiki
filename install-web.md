@@ -2,7 +2,7 @@
 title: Installing and Configuring a Web Node
 description: 
 published: true
-date: 2025-12-09T02:56:55.302Z
+date: 2025-12-10T01:09:07.361Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-09T02:56:55.302Z
@@ -107,8 +107,115 @@ sudo git pull
 
 Initialize/reset the Saito node environment.
 
+#### Edit `config/options` to match your domain and join the network:
+
+```
+nano config/options
+```
+
+<details>
+  <summary>Minimal `options/config` for public ip and to join mainnet`</summary>
+
+```json
+{
+  "server": {                                // node local and remote ip information
+    "host": "localhost",                     // local host name or ip
+    "port": 12101,                           // local port 
+    "protocol": "http",                      // local protocol [http/https]
+    "endpoint": {                            // external address to connect to this node on (usually reverse proxied)
+      "host": "your.domain.com",       // external host name
+      "port": 443,                           // external port (usually 443 for ssl/https and 80 for unencrypted connections)
+      "protocol": "http"                     // external protocol [http,https]
+    },
+  "peers": [                                 // ip/host information for other nodes - this should be provided to you by the peer
+    {
+      "host": "eames.saito.io",              // Saito public node one
+      "port": 443,                           // peer's port
+      "protocol": "https",                   // peer's connection protocol
+      "synctype": "full"                     // determines if the node requests full (complete) or lite (merkelerized with only relevant transactions) blocks
+    },
+      "host": "arthur.saito.io",             // Saito public node one
+      "port": 443,                           // peer's port
+      "protocol": "https",                   // peer's connection protocol
+      "synctype": "full"                     // determines if the node requests full (complete) or lite (merkelerized with only relevant transactions) blocks
+    }
+  ]
+}
+```
+  
+</details>
+
+
+
+This is a minimal configuration that will let lite nodes (browsers) connect to you and connect you to nodes that will share blocks with you.
+
+This configuration will autogenerate a wallet for the node.
+
+[Further configuration is possible](https://wiki.saito.io/en/config/network) though not recommended.
+
+#### Pick which modules to run
+
+Edit the `config/modules.config.js` file to include the necessary modules.
+
+
+<details>
+  <summary>Example modules.config.js</summary>
+  
+```
+  module.exports = {
+  core: [
+    "admin/admin.js",
+    "arcade/arcade.js",
+    "archive/archive.js",
+    "chat/chat.js",
+    "encrypt/encrypt.js",
+    "explorer/explorer.js",
+    "poker/poker.js",
+    "qrscanner/qrscanner.js",
+    "redsquare/redsquare.js",
+    "registry/registry.js",
+    "relay/relay.js",
+    "settings/settings.js",
+    "settlers/settlers.js",
+    "solitrio/solitrio.js",
+    "spam/spam.js",
+    "status/status.js",
+    "stun/stun.js",
+    "wordblocks/wordblocks.js",
+    "wuziqi/wuziqi.js"
+  ],
+  lite: [
+    "admin/admin.js",
+    "arcade/arcade.js",
+    "archive/archive.js",
+    "chat/chat.js",
+    "encrypt/encrypt.js",
+    "poker/poker.js",
+    "qrscanner/qrscanner.js",
+    "redsquare/redsquare.js",
+    "registry/registry.js",
+    "relay/relay.js",
+    "settings/settings.js",
+    "settlers/settlers.js",
+    "solitrio/solitrio.js",
+    "status/status.js",
+    "stun/stun.js",
+    "wordblocks/wordblocks.js",
+    "wuziqi/wuziqi.js"
+  ]
+};
+
+```  
+  
+</details>  
+
+Some moduels only run on the node, these can be added to the `core` section. Likewise modules that run only in the browser can be placed only in the `lite` section.
+
+Adding a new modules is as simple as editig this file, [compiling](/install/compile), and restarting (`pm2 restart all`).
+
+#### Initialise the environment
+
 ```bash
-cd /opt/saito/node
 sudo npm run nuke
 ```
 
@@ -118,8 +225,14 @@ sudo npm run nuke
 
 Create a new nginx site for your domain. Replace `your.domain.com` with your own:
 
-```bash
-sudo tee /etc/nginx/sites-available/your.domain.com > /dev/null << 'EOF'
+```
+nano /etc/nginx/sites-available/your.domain.com
+```
+
+<details>
+  <summary>Basic NGINX reverse proxy configuration</summary>
+  
+```nginx
 server {
     listen 80;
     server_name your.domain.com www.your.domain.com;
@@ -162,8 +275,10 @@ server {
         proxy_request_buffering off;
     }
 }
-EOF
+
 ```
+</details>
+
 
 ---
 
@@ -212,7 +327,8 @@ sudo systemctl restart nginx
 
 PM2 ensures Saito runs continuously and starts on boot.
 
-Create the PM2 ecosystem config:
+<details>
+  <summary>Create the PM2 ecosystem config</summary>
 
 ```bash
 cd /opt/saito/node
@@ -224,7 +340,7 @@ module.exports = {
     instances: 1,
     exec_mode: 'fork',
     watch: false,
-    max_memory_restart: '2G',
+    max_memory_restart: '8G',
     error_file: './logs/err.log',
     out_file: './logs/out.log',
     log_file: './logs/saito.log',
@@ -233,6 +349,28 @@ module.exports = {
 };
 EOF
 ```
+</details>
+
+Saito logs can be verbose, we recommend adding log rotation.
+
+<details>
+  <summary>Install pm2 logrotate and configure</summary>
+
+  ```
+  # Install the PM2 logrotate module
+  pm2 install pm2-logrotate
+
+  # Optional: configure rotation settings
+  pm2 set pm2-logrotate:max_size 10M
+  pm2 set pm2-logrotate:retain 30
+  pm2 set pm2-logrotate:compress true
+  pm2 set pm2-logrotate:dateFormat "YYYY-MM-DD_HH-mm-ss"
+
+  # Reload PM2 to apply logrotate settings
+  pm2 restart all
+  ```
+  
+</details>
 
 Create log directory:
 
@@ -247,6 +385,8 @@ sudo pm2 start ecosystem.config.js
 sudo pm2 save
 sudo pm2 startup systemd -u root --hp /root
 ```
+
+
 
 ---
 
