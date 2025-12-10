@@ -2,7 +2,7 @@
 title: Saito NFTs
 description: Non-Fungible Saito Tokens and Apps
 published: true
-date: 2025-12-10T06:23:52.886Z
+date: 2025-12-10T06:30:43.899Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-06T10:50:40.234Z
@@ -240,7 +240,7 @@ const replacement_image = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUg....`;
   </details>
 
   
-<details><summary>Add Keyboard Shortcuts to Saito Applications</summary>
+<details><summary>Add Keyboard Shortcuts</summary>
 
 This recipe shows how to add new keyboard shortcuts to Saito. While this NFT is designed for RedSquare, you can use this code to add new functionality to ANY APPLICATION you want! Or even ALL OF THEM!
   
@@ -413,7 +413,7 @@ This recipe shows how to add new keyboard shortcuts to Saito. While this NFT is 
   
   
   <details>
-    <summary>Add Menu Item to Saito Header</summary>
+    <summary>Add Clickable Menu Item</summary>
     
     This creates and adds a module that does nothing except respond to the respondTo() request the header makes that asks which modules want to list in the Saito Header. It also provides a function that will be run when the menu item is clicked.
     
@@ -455,7 +455,7 @@ this.app.connection.emit("saito-header-render");
   
   
   <details>
-    <summary>Show an NFT-Created Overlay</summary>
+    <summary>Show an Overlay</summary>
     
     We create a button in the menu that shows an NFT-created overlay when clicked. We also show how to load/save information used by this NFT in the wallet. This demonstrates how to create Saito-UI elements within NFTs.
     
