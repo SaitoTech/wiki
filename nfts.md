@@ -2,7 +2,7 @@
 title: Saito NFTs
 description: Non-Fungible Saito Tokens and Apps
 published: true
-date: 2025-12-11T06:48:04.733Z
+date: 2025-12-11T20:05:42.358Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-06T10:50:40.234Z
@@ -414,9 +414,9 @@ This recipe shows how to add new keyboard shortcuts to Saito. While this NFT is 
   
   <details>
     <summary>Add Clickable Menu Item</summary>
-    
-    This creates and adds a module that does nothing except respond to the respondTo() request the header makes that asks which modules want to list in the Saito Header. It also provides a function that will be run when the menu item is clicked.
-    
+
+  This creates and adds a module that does nothing except respond to the respondTo() request the header makes that asks which modules want to list in the Saito Header. It also provides a function that will be run when the menu item is clicked.
+
 ```
 
 //
