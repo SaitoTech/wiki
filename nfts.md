@@ -2,7 +2,7 @@
 title: Saito NFTs
 description: Non-Fungible Saito Tokens and Apps
 published: true
-date: 2025-12-11T20:05:42.358Z
+date: 2025-12-11T20:22:26.915Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-06T10:50:40.234Z
@@ -450,9 +450,7 @@ this.app.connection.emit("saito-header-render");
 ```
   </details>
   
-  
-  
-  
+
   
   <details>
     <summary>Show an Overlay</summary>
