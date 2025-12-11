@@ -2,7 +2,7 @@
 title: Saito NFTs
 description: Non-Fungible Saito Tokens and Apps
 published: true
-date: 2025-12-11T20:24:04.787Z
+date: 2025-12-11T20:26:26.066Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-06T10:50:40.234Z
@@ -19,10 +19,9 @@ This page has many simple examples you can try out to get started. If you'd like
 ## Javascript NFTs
 
 <details>
-  <summary>Replace Images with External Images </summary>
-
+<summary>Replace Images with External Images </summary>
 This recipe replaces any images named "red_back.png" with another file. If you provide your own image you can use it in any of the card games on the Saito Arcade (which use red_back.png as the default card background). You can use this approach to swap out logos too!
-
+  
 ```
 (() => {
   const replacement = "https://saito.io/saito/img/arcade/cards/purple_back.png";
@@ -172,13 +171,11 @@ This recipe replaces any images named "red_back.png" with another file. If you p
   console.log("red_back.png -> purple_back replacement active");
 })();
 ```
-  </details>
+</details>
   
 
-
-  <details>
-  <summary>Replace Images with Embedded Images</summary>
-
+<details>
+<summary>Replace Images with Embedded Images</summary>
 This recipe is similar to the one above (swap out any image for one you prefer) but shows how to do this using an image that is embedded in the NFT. This makes the NFT larger, but eliminates the need to fetch content from another server.
   
 ```
@@ -237,13 +234,12 @@ const replacement_image = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUg....`;
 })();
 
 ```
-  </details>
+</details>
 
   
-<details><summary>Add Keyboard Shortcuts</summary>
-
+<details>
+<summary>Add Keyboard Shortcuts</summary>
 This recipe shows how to add new keyboard shortcuts to Saito. While this NFT is designed for RedSquare, you can use this code to add new functionality to ANY APPLICATION you want! Or even ALL OF THEM!
-  
 ```
 // Keyboard shortcut handler:
 // - Press "/" then a key for navigation shortcuts
@@ -412,10 +408,9 @@ This recipe shows how to add new keyboard shortcuts to Saito. While this NFT is 
 
   
   
-  <details>
-    <summary>Add Clickable Menu Item</summary>
-
-  This creates and adds a module that does nothing except respond to the respondTo() request the header makes that asks which modules want to list in the Saito Header. It also provides a function that will be run when the menu item is clicked.
+<details>
+<summary>Add Clickable Menu Item</summary>
+This creates and adds a module that does nothing except respond to the respondTo() request the header makes that asks which modules want to list in the Saito Header. It also provides a function that will be run when the menu item is clicked.
 
 ```
 
@@ -448,18 +443,15 @@ let demo_mod = this.app.modules.createAndAddTemplateModule("DemoMod", {
 //
 this.app.connection.emit("saito-header-render"); 
 ```
-  </details>
+</details>
   
 
   
-  <details>
-    <summary>Show an Overlay</summary>
-
+<details>
+<summary>Show an Overlay</summary>
 We create a button in the menu that shows an NFT-created overlay when clicked. We also show how to load/save information used by this NFT in the wallet. This demonstrates how to create Saito-UI elements within NFTs.
     
 ```
-
-
 let demo_mod_click = function(app) {
   let ov = new demo_mod.app.browser.components.SaitoOverlay(app, demo_mod);
   ov.show(`
@@ -499,14 +491,13 @@ var demo_mod = this.app.modules.createAndAddTemplateModule("DemoMod", {
 //
 this.app.connection.emit("saito-header-render"); 
 ```
-  </details>
+</details>
   
   
 ## CSS NFTS
 
-  <details>
-    <summary>Custom CSS Theme -- The Matrix Recipe </summary>
-
+<details>
+<summary>Custom CSS Theme -- The Matrix Recipe </summary>
 CSS NFTs let you re-skin ALL SAITO APPS by injecting the CSS you provide in the NFT into the application. You can use this to re-theme existing applications, or even add new features. This example switches the NFT holder to a follow-the-rabbit dark-mode Matrix theme:
 
 ```
@@ -626,11 +617,10 @@ hr {
   color: #000;
 }
 ```
-  </details>
+</details>
 
-  <details>
-    <summary>BONUS - add Javascript to any CSS Theme </summary>
-
+<details>
+<summary>BONUS - add Javascript to any CSS Theme </summary>
 This isn't a full recipe, but it shows how to combine JS and CSS into a single NFT. To create this DEMO RECIPE go to the CREATE NFT overlay and select "JSON" from the NFT-TYPE dropdown. Couldn't be easier!
 
 ```
@@ -639,13 +629,13 @@ This isn't a full recipe, but it shows how to combine JS and CSS into a single N
   css : `#saito-header { background : #000; }`
 }
 ```
-  </details>
+</details>
     
   
 ## Web3 Cryptocurrencies
   
-  <details><summary>Add Support for Mixin Crypto </summary>
-
+<details>
+<summary>Add Support for Mixin Crypto </summary>
 This recipie shows how to add any Mixin-supported web3 crypto to the browser wallet, where it can then be used with any of the Arcade Games or other apps running on Saito, There are [more than 500 cryptos to choose from](https://api.mixin.one/network/assets/top?kind=NORMA) -- install this NFT to make any of them a first class citizen on Saito!
 
 ```
