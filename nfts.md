@@ -2,7 +2,7 @@
 title: Saito NFTs
 description: Non-Fungible Saito Tokens and Apps
 published: true
-date: 2025-12-11T20:22:26.915Z
+date: 2025-12-11T20:24:04.787Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-06T10:50:40.234Z
@@ -454,8 +454,8 @@ this.app.connection.emit("saito-header-render");
   
   <details>
     <summary>Show an Overlay</summary>
-    
-    We create a button in the menu that shows an NFT-created overlay when clicked. We also show how to load/save information used by this NFT in the wallet. This demonstrates how to create Saito-UI elements within NFTs.
+
+We create a button in the menu that shows an NFT-created overlay when clicked. We also show how to load/save information used by this NFT in the wallet. This demonstrates how to create Saito-UI elements within NFTs.
     
 ```
 
