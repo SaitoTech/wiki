@@ -2,7 +2,7 @@
 title: Saito NFTs
 description: Non-Fungible Saito Tokens and Apps
 published: true
-date: 2025-12-10T06:30:43.899Z
+date: 2025-12-11T06:48:04.733Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-06T10:50:40.234Z
@@ -20,8 +20,8 @@ This page has many simple examples you can try out to get started. If you'd like
 
 <details>
   <summary>Replace Images with External Images </summary>
-  
-  This recipe replaces any images named "red_back.png" with another file. If you provide your own image you can use it in any of the card games on the Saito Arcade (which use red_back.png as the default card background). You can use this approach to swap out logos too!
+
+This recipe replaces any images named "red_back.png" with another file. If you provide your own image you can use it in any of the card games on the Saito Arcade (which use red_back.png as the default card background). You can use this approach to swap out logos too!
 
 ```
 (() => {
@@ -178,8 +178,8 @@ This page has many simple examples you can try out to get started. If you'd like
 
   <details>
   <summary>Replace Images with Embedded Images</summary>
-    
-      This recipe is similar to the one above (swap out any image for one you prefer) but shows how to do this using an image that is embedded in the NFT. This makes the NFT larger, but eliminates the need to fetch content from another server.
+
+This recipe is similar to the one above (swap out any image for one you prefer) but shows how to do this using an image that is embedded in the NFT. This makes the NFT larger, but eliminates the need to fetch content from another server.
   
 ```
 const replacement_image = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUg....`;
