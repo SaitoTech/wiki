@@ -2,7 +2,7 @@
 title: Obstacles to Welfare Efficiency in Informationally Decentralized Mechanisms
 description: 
 published: true
-date: 2025-11-24T19:50:37.274Z
+date: 2025-12-15T13:21:09.095Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T19:49:02.527Z
@@ -12,7 +12,7 @@ dateCreated: 2025-11-24T19:49:02.527Z
 
 Saito Consensus implements outcomes that are **Pareto-efficient relative to the informational and topological constraints of the network**. We have a page that [demonstrates this](/consensus/theory/welfare-efficiency), showing that the only profitable deviations available to participants correspond to welfare-improving trades.
 
-Offering a welfare-efficient informationally decentralized mechanism is a significant claim: classical mechanism design asserts that decentralized, budget-balanced, incentive-compatible mechanisms cannot generally implement efficient outcomes. The purpose of this page is therefore to explain why the canonical impossibility results—particularly Myerson–Satterthwaite for bilateral trade and Green–Laffont for public goods—**do not apply** to routing-work mechanisms like Saito.
+Offering a welfare-efficient informationally decentralized mechanism is a significant claim: classical mechanism design asserts that decentralized, budget-balanced, incentive-compatible mechanisms cannot generally implement efficient outcomes. The purpose of this page is therefore to explain why the canonical impossibility results -- particularly Myerson–Satterthwaite for bilateral trade and Green–Laffont for public goods -- **do not apply** to routing-work mechanisms.
 
 ### Relevant Papers
 - Myerson & Satterthwaite (1983), *Efficient Mechanisms for Bilateral Trading*  
@@ -60,22 +60,22 @@ The takeaway mirrors the bilateral-trade impossibility: when mechanisms rely exc
 
 Both the Myerson–Satterthwaite and Green–Laffont impossibility results rely on a set of structural assumptions that **do not hold** in Saito Consensus:
 
-1. **Direct-revelation communication**  
+1. **direct-revelation communication**  
    Agents communicate only by sending costless reports of private types.
 
-2. **Free deviations**  
+2. **free deviations**  
    Every deviation is modeled as a costless alternative message, without behavioral or economic consequence.
 
-3. **Quasilinear utilities**  
+3. **quasilinear utilities**  
    Utility is strictly value minus payment; non-price utility dimensions (time, routing surplus, collusion utility) are excluded.
 
-4. **No verifiable or costly actions**  
+4. **no verifiable or costly actions**  
    Mechanisms cannot condition outcomes on observable behavior in the environment.
 
-5. **Finite-dimensional type spaces**  
+5. **finite-dimensional type spaces**  
    Agents have well-defined valuations over a finite set of outcomes, and all relevant information must be reportable.
 
-These assumptions define the narrow domain in which the impossibility results are valid.
+These assumptions define the limits within which the impossibility results are valid.
 
 ---
 
@@ -105,8 +105,8 @@ Because these assumptions fail, the classical impossibility results simply **do 
 
 ## 4. Implication
 
-This page does not attempt to prove that Saito Consensus is welfare efficient. For a positive account of how routing work implements welfare-improving allocation, please see **[Welfare-Improving Trade Lemmas](/consensus/theory/welfare-efficiency)**.
+This page does not attempt to prove that Saito Consensus is welfare efficient. For a positive account of how routing work implements welfare-improving allocation, see **[Welfare-Improving Trade Lemmas](/consensus/theory/welfare-efficiency)**.
 
-What we have shown here is more basic: the Myerson–Satterthwaite and Green–Laffont family of impossibility results **do not bind the mechanism**. The conventional wisdom—derived from these theorems—that efficient decentralized mechanisms are impossible under informational constraints does not apply to Saito.
+What we have shown here is more basic: the Myerson–Satterthwaite and Green–Laffont family of impossibility results **do not bind the mechanism**. The conventional wisdom -- derived from these theorems -- that efficient decentralized mechanisms are impossible under informational constraints does not apply to Saito.
 
-Routing-work mechanisms operate in a richer domain, with costly action-generated signals, behavioral message spaces, non-quasilinear utility, and infinite-dimensional choice environments. The classical impossibility results simply do not speak to mechanisms of this form.
+Routing-work mechanisms operate in a richer domain, with costly action-generated signals, behavioral message spaces, non-quasilinear utility, and infinite-dimensional choice environments. The outcomes of these mechanisms must be examined independently of these two classical impossibility results.
