@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-12-05T04:27:14.884Z
+date: 2025-12-15T06:59:25.684Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -18,6 +18,9 @@ We recommend starting with our [high-level overview](/consensus/theory/intro), w
 
 - [Academic Introduction to Saito Consensus](/consensus/theory/intro)
 This page provides an overview of what is **new** about Saito Consensus -- the ability to design mechanisms with an **asymmetrical cost**. This page explains why this matters, shows directly what technical features in Saito enable the shift, and establish Saito Consensus as a new class of informationally distributed mechanism.
+
+- [Saito is an Indirect Mechanism](/consensus/theory/indirect-mechanism)
+Saito is a special kind of mechanism known in economics as an "indirect mechanism" -- a kind of mechanism that is not even in theory reducible to a direct mechanism under the Revelation Principle. This allows Saito to solve problems that other blockchain mechanisms cannot even solve in theory. This page explains why convertibility is impossible.
 
 - [Broadcast Strategy and Signalling Costs](/consensus/theory/signalling-costs)
 A brief explanation of how portfolio bids and routing payments create Broadcast Strategy as a new kind of primitive in mechanism design, one that allows Saito to avoid being bound by classical impossibility results in implementation theory.
