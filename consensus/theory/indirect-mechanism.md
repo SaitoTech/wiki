@@ -2,7 +2,7 @@
 title: Saito and the Revelation Principle
 description: Why Saito is not convertible to a direct mechanism under the Revelation Principle
 published: true
-date: 2025-12-15T10:21:53.444Z
+date: 2025-12-15T10:22:49.982Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-15T09:14:18.734Z
@@ -89,4 +89,4 @@ This problem combines with the fact that time is a continuously variable dimensi
 - impossible to elicit in practice,
 - unverifiable by the mechanism.
 
-Reduction is known to be impossible in settings in which preferences cannot be compactly expressed or reported without loss as in this situation. These difficulties are central to the literature on multi-dimensional screening and non-linear pricing (Rochet and Choné; Armstrong), and in the foundational work on the communication limits of mechanisms (Hurwicz; Mount and Reiter; Milgrom). Saito operates squarely in this class of informationally-explosive environments where preferences cannot be compactly expressed even in theory, pushing it outside the domain in which revelation-based arguments are possible.
+Reduction is known to be impossible in settings in which preferences cannot be compactly expressed or reported without loss as in this situation. These difficulties are central to the literature on multi-dimensional screening and non-linear pricing (Rochet and Choné, 1998; Armstrong, 1996, 2016), and in the foundational work on the communication limits of mechanisms (Hurwicz, 1972; Mount and Reiter, 1974; Milgrom, 1981). Saito operates squarely in this class of informationally-explosive environments where preferences cannot be compactly expressed even in theory, pushing it outside the domain in which revelation-based arguments are possible.
