@@ -2,7 +2,7 @@
 title: Saito and the Revelation Principle
 description: Why Saito is not convertible to a direct mechanism under the Revelation Principle
 published: true
-date: 2025-12-15T10:02:44.215Z
+date: 2025-12-15T10:21:53.444Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-15T09:14:18.734Z
@@ -71,44 +71,22 @@ Saito Consensus violates all three of these requirements:
 
 As a result, replacing routing with direct reporting necessarily changes the incentive structure of the network and the set of outcomes that any direct mechanism could find implementable, which breaks the equivalent of the direct mechanism required for the correct functioning of the Revelation Principle.
 
-These failures are documented to break the Revelation Principle in economic studies of costly-communication and constrained message spaces and costly communication (Renou and Tomala), in models where strategic actions precede or replace reporting (Maskin, 1992; Dasgupta and Maskin, 2000), and in the literature on limited observability (Attar et al, 2025), which show that indirect mechanisms characterized by the kinds of privacy embedded in routing decisions can make equilibria implementable which are impossible to implement with full and truthful reporting of all agent preferences. 
+These failures are documented to invalidate revelation-based reduction in studies of constrained message spaces and costly communication (Renou and Tomala), in models where strategic actions precede or replace reporting (Maskin, 1992; Dasgupta and Maskin, 2000), and in the literature on limited observability and information design (Holmström; Green and Laffont; Bergemann and Morris) and broadcast privacy (Attar et al., 2025). The latter shows that indirect mechanisms exploiting privacy and partial observability can, in some cases, implement equilibria that are impossible to achieve with full and truthful revelation of all agents’ preferences.
 
-Pillar 3: Infinite Combinatorial Complexity of Preferences
+# Pillar 3: Infinite Combinatorial Complexity
 
-Saito involves multiple interacting goods:
+In Saito users submit bids for a bundle of goods involving three main forms of interacting utility:
 
-blockspace,
+ - blockspace
+ - speed-of-inclusion
+ - collusion utility
 
-time-to-inclusion,
+These three forms of utility are not quasilinear, can each be traded-off against another through a change in bidding or broadcast strategy. As such, participants technically need to reveal their "full preference maps" to any direct mechanism, covering any theoretically possible bundle of these three forms of utility.
 
-privacy,
+This problem combines with the fact that time is a continuously variable dimension to create an infinite number of combinations of utility, and the need for the mechanism to analyse and order them. Applying the Revelation Principle consequently require participants to report preference maps which are:
 
-collusion opportunities,
+- infinite-dimensional in theory,
+- impossible to elicit in practice,
+- unverifiable by the mechanism.
 
-continuation value,
-
-risk and uncertainty.
-
-These goods are not quasilinear, trade off against one another, and include time as a continuously variable dimension. A participant’s “preference” is therefore not a single value, but a preference map over infinitely many combinations of goods, timing, and routing outcomes.
-
-Applying the Revelation Principle would require participants to report this entire preference map. Such reports would be:
-
-infinite-dimensional in theory,
-
-impossible to elicit in practice,
-
-and unverifiable by the mechanism.
-
-This limitation is well known in mechanism design: direct revelation breaks down with non-quasilinear utilities, multi-dimensional goods, and continuous choice spaces. Saito simply operates in that region.
-
-Summary
-
-The Revelation Principle is a powerful tool, but it applies only when its assumptions hold. In Saito they do not, because:
-
-Time is endogenous, variable, and payoff-relevant.
-
-Preferences are expressed through costly, feasibility-altering actions, including privacy-preserving exclusion.
-
-Preferences are infinitely multi-dimensional and cannot be fully reported.
-
-These features place Saito outside the class of mechanisms to which revelation-based impossibility results apply. This is not a novel claim about the Revelation Principle itself, but a recognition—supported by existing academic work—that its scope does not include mechanisms with endogenous feasibility, costly action-based signaling, privacy, and continuous multi-dimensional trade-offs.
+Reduction is known to be impossible in settings in which preferences cannot be compactly expressed or reported without loss as in this situation. These difficulties are central to the literature on multi-dimensional screening and non-linear pricing (Rochet and Choné; Armstrong), and in the foundational work on the communication limits of mechanisms (Hurwicz; Mount and Reiter; Milgrom). Saito operates squarely in this class of informationally-explosive environments where preferences cannot be compactly expressed even in theory, pushing it outside the domain in which revelation-based arguments are possible.
