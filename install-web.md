@@ -2,7 +2,7 @@
 title: Installing and Configuring a Web Node
 description: 
 published: true
-date: 2025-12-10T01:09:07.361Z
+date: 2025-12-15T00:55:14.450Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-09T02:56:55.302Z
@@ -90,6 +90,7 @@ Clone the Saito repository into `/opt` and install dependencies.
 ```bash
 cd /opt
 sudo git clone https://github.com/saitotech/saito
+git checkout prod
 cd saito/node
 sudo npm install
 ```
@@ -98,6 +99,7 @@ If the folder already exists:
 
 ```bash
 cd /opt/saito
+git checkout prod
 sudo git pull
 ```
 
