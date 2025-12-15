@@ -2,7 +2,7 @@
 title: Obstacles to Welfare Efficiency in Informationally Decentralized Mechanisms
 description: 
 published: true
-date: 2025-12-15T13:21:09.095Z
+date: 2025-12-15T13:30:28.327Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T19:49:02.527Z
