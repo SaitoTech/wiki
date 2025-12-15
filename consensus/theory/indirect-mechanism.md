@@ -2,7 +2,7 @@
 title: Saito and the Revelation Principle
 description: Why Saito is not convertible to a direct mechanism under the Revelation Principle
 published: true
-date: 2025-12-15T12:15:48.298Z
+date: 2025-12-15T12:17:30.532Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-15T09:14:18.734Z
@@ -14,7 +14,9 @@ Many impossibility results in mechanism design rely on the Revelation Principle,
 
 In situations where the Revelation Principle can be used to draw equivalence between direct and indirect mechanisms, the technique allows economists to prove the general impossibility of achieving certain outcomes involving efficiency, incentive compatibility, and welfare—optimality from an examination of only the direct mechanism. This is important as while mechanisms that are not reducible under the Revelation Principle are rare, they do exist and are not subject to many common impossibility results.
 
-As such, since the non-convertibility of Saito under the Revelation Principle is a valuable property of the mechanism, this page explains specifically why Saito operates outside the domain in which the Revelation Principle applies. Readers should note that the claim is not that the Revelation Principle is incorrect, but that its assumptions do not hold in the setting in which Saito operates, and that revelation-based reductions are not possible with routing mechanisms. 
+As such, since the non-convertibility of Saito under the Revelation Principle is a valuable property of the mechanism, this page explains specifically why Saito operates outside the domain in which the Revelation Principle applies. Readers should note that the claim is not that the Revelation Principle is incorrect, but that its assumptions do not hold in the setting in which Saito operates, and that revelation-based reductions are not possible with routing mechanisms.
+
+Non-convertibility is driven by three informational properties of routing mechanisms: the endogeneity of time, costly action-in-mechanism, and infinite-sized preference maps.
 
 ## Pillar 1: Time is Endogenous, Variable, and Payoff-Relevant
 
@@ -73,7 +75,7 @@ As a result, replacing routing with direct reporting necessarily changes the inc
 
 These failures are documented to invalidate revelation-based reduction in studies of constrained message spaces and costly communication (Renou and Tomala), in models where strategic actions precede or replace reporting (Maskin, 1992; Dasgupta and Maskin, 2000), and in the literature on limited observability and information design (Holmström; Green and Laffont; Bergemann and Morris) and broadcast privacy (Attar et al., 2025). The latter shows that indirect mechanisms exploiting privacy and partial observability can, in some cases, implement equilibria that are impossible to achieve with full and truthful revelation of all agents’ preferences.
 
-# Pillar 3: Infinite Combinatorial Complexity
+## Pillar 3: Infinite Combinatorial Complexity
 
 In Saito users submit bids for a bundle of goods involving three main forms of interacting utility:
 
