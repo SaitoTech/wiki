@@ -2,7 +2,7 @@
 title: Saito and Combinatorial Auction Theory
 description: 
 published: true
-date: 2025-11-29T07:08:25.967Z
+date: 2025-12-15T13:36:46.869Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T16:07:02.685Z
@@ -64,7 +64,7 @@ Broadcast strategy combines with bidding strategy to allow Saito to function as 
 
 ## Technical Implementation
 
-Readers interested in the protocol-level details should consult our simplified network description at [/consensus]. Below we provide an abstract explanation of how Saito manages the combinatorial allocation problem by creating a three-way trade-off between blockspace, time, and collusion utility, and allowing agents to navigate it by adjusting their: (i) **broadcast strategy** and (ii) **bidding choice**.
+Readers interested in the protocol-level details should consult our [simplified network description](/consensus). Below we provide an abstract explanation of how Saito manages the combinatorial allocation problem by creating a three-way trade-off between blockspace, time, and collusion utility, and allowing agents to navigate it by adjusting their: (i) **broadcast strategy** and (ii) **bidding choice**.
 
 ### we start with a Dutch Clock Auction...
 
