@@ -2,7 +2,7 @@
 title: Obstacles to Welfare Efficiency in Informationally Decentralized Mechanisms
 description: 
 published: true
-date: 2025-12-15T13:30:28.327Z
+date: 2025-12-15T13:32:03.154Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T19:49:02.527Z
@@ -10,7 +10,7 @@ dateCreated: 2025-11-24T19:49:02.527Z
 
 # Myerson–Satterthwaite & Green–Laffont Applicability
 
-Saito Consensus implements outcomes that are **Pareto-efficient relative to the informational and topological constraints of the network**. We have a page that [demonstrates this](/consensus/theory/welfare-efficiency), showing that the only profitable deviations available to participants correspond to welfare-improving trades.
+Saito Consensus implements outcomes that are **Pareto-efficient relative to the informational and topological constraints of the network**. We have a page that [demonstrates this](/consensus/theory/combinatorial-auctions), showing that the only profitable deviations available to participants correspond to welfare-improving trades.
 
 Offering a welfare-efficient informationally decentralized mechanism is a significant claim: classical mechanism design asserts that decentralized, budget-balanced, incentive-compatible mechanisms cannot generally implement efficient outcomes. The purpose of this page is therefore to explain why the canonical impossibility results -- particularly Myerson–Satterthwaite for bilateral trade and Green–Laffont for public goods -- **do not apply** to routing-work mechanisms.
 
