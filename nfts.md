@@ -2,7 +2,7 @@
 title: Saito NFTs
 description: Non-Fungible Saito Tokens and Apps
 published: true
-date: 2025-12-11T20:26:26.066Z
+date: 2025-12-17T16:08:33.146Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-06T10:50:40.234Z
@@ -239,9 +239,11 @@ const replacement_image = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUg....`;
   
 <details>
 <summary>Add Keyboard Shortcuts</summary>
-This recipe shows how to add new keyboard shortcuts to Saito. While this NFT is designed for RedSquare, you can use this code to add new functionality to ANY APPLICATION you want! Or even ALL OF THEM!
+This recipe shows how to add new keyboard shortcuts to Saito. While this NFT is designed for RedSquare, you can use this code to add new functionality to any application you want, or possible all of them.
+
 ```
-// Keyboard shortcut handler:
+
+  Keyboard shortcut handler:
 // - Press "/" then a key for navigation shortcuts
 // - Press "?" alone (when not typing) to open help
 // All actions log to the console.
