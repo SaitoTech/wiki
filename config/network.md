@@ -2,7 +2,7 @@
 title: Network Configuration for Saito-lite-Rust
 description: Information on network configuration files and settings for deployed Saito-lite-Rust nodes.
 published: true
-date: 2025-11-19T08:21:33.502Z
+date: 2025-12-22T01:48:33.779Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T04:10:39.991Z
@@ -95,6 +95,7 @@ Consensus information defaults to the values on the Saito Network. Blocks will b
       "synctype": "full"                     // determines if the node requests full (complete) or lite (merkelerized with only relevant transactions) blocks
     }
   ],
+  "defaultModule":"<modulename>",            // set the module that will appear at / on the nodes web interface (nodejs only)
   "wallet": {                                // public and private key are generated on first run if not manually set.
     "publicKey": "",                         // the public key for the node's wallet
     "privateKey": ""                         // the private key for the node's wallet
