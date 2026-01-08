@@ -2,7 +2,7 @@
 title: Applications on Testnet
 description: 
 published: true
-date: 2026-01-08T08:52:21.834Z
+date: 2026-01-08T08:55:51.753Z
 tags: 
 editor: markdown
 dateCreated: 2026-01-08T08:52:21.834Z
