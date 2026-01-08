@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2025-12-05T04:17:54.117Z
+date: 2026-01-08T16:13:19.773Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -10,11 +10,9 @@ dateCreated: 2022-02-17T10:09:00.217Z
 
 # Saito Consensus
 
-Saito Consensus is a blockchain consensus mechanism that provides protection against a range of [technical attacks](/consensus/attacks) previously considered to be unsolvable in permissionless networks. This page gives a succinct explanation of how the mechanism works.
+Readers with backgrounds in economics, distributed systems, and mechanism design are encouraged to visit our [theory section](/consensus/theory), which connects the problems Saito addresses to the literature in each field and shows where Saito is and is not constrained by traditional impossibility results.
 
-Readers with backgrounds in economics, distributed systems, and mechanism design are encouraged to visit our [theory section](/consensus/theory), which connects the problems Saito addresses to the literature in each field and explains what the solution means -- where Saito is and is not constrained by traditional impossibility results.
-
-The remainder of this page offers a technical overview of the protocol starting from the perspective of a user who sends a transaction they want included in the blockchain.
+The remainder of this page offers a technical overview of the protocol starting from the perspective of a user who sends a transaction they want included in the blockchain. It explains first how blocks are produced and then covers how the fees are securely redistributed to the fee-collecting nodes in the network.
 
 
 ### 1. HOW BLOCKS ARE PRODUCED
