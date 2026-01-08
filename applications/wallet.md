@@ -2,7 +2,7 @@
 title: Saito Wallet
 description: Cryptocurrencies in Saito
 published: true
-date: 2025-07-29T21:44:04.377Z
+date: 2025-09-30T17:54:47.148Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-22T15:17:12.953Z
@@ -11,6 +11,8 @@ dateCreated: 2024-08-22T15:17:12.953Z
 # Saito Wallet
 
 The Saito Wallet adds support for multiple non-Saito cryptocurrencies to the Saito Wallet and automatically integrates them into the broader Saito ecosystem.
+
+Tips for [backing up a Saito wallet](/tutorials/user/wallet).
 
 <br />
 <img src="/wallet.png" style="max-width: 600px;">
