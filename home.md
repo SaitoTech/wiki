@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2025-12-08T04:43:06.621Z
+date: 2026-01-08T15:15:42.888Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -15,45 +15,27 @@ dateCreated: 2021-11-09T07:50:58.627Z
 .cls-1{fill:rgb(247, 31, 61);}
 </style>
 
-Saito is a Layer-1 blockchain that pays the nodes in the peer-to-peer network instead of miners or stakers. While this may sound like a narrow technical fix, the way Saito implements the payout solves a longstanding problem at the intersection of computer science and economics.
+This wiki is a public library of knowledge about Saito Consensus and the Saito network. It offers explanations of how the network works, our design philosophy, and technical information needed to setup a node or start building applications on the network. 
 
-This Wiki explains what this problem is, the kind of applications we can build by fixing it, and how you participate in Saito by running nodes and using the network. If you’re new to Saito and want to try it out, you can skip this site entirely and visit the [live network](https://saito.io).
+**Why does Saito matter?** 
 
-## Users
+For the le: build a decentralized blockchain that punishes attackers and rewards the honest infrastructure that keeps the network running. Not just any infrastructure, but the specific kinds that increase fee-throughput. When more fee-throughput is possible, more fees flow into network. When we can use this to raise the cost-of-attack while also increasing scalability? Suddenly we no longer need to sacrifice security to achieve scalability, or vice versa. The economic substructure.
 
-Learn what Saito is, explore applications, and try things out.
+Saito solves this problem: it creates a decentralized blockchain that punishes attackers while rewarding the honest nodes that run the applications and nodes that service users and keep fees flowing into the network. When fees go to these nodes -- not just miners and stakers -- it suddenly becomes rational for peer-to-peer nodes to provide more data-throughput, And as more fees flow through the network in return, this further raises the cost of attack and increases the scalability of the network.
 
-- **What is Saito** → *[Introduction](/consensus/about)*  
-- **Applications you can use today** → *[Applications](/applications)*  
-- **Smart NFTs and tokens** → *[Smart NFTs](/nfts)*  
+The ability to identify and pay these routing nodes is core to the solution that Saito offers. Because this approach falls outside many assumptions in mainstream blockchain theory -- including several well-known impossibility results in computer science -- it requires clear explanation. The Saito Wiki exists to provide it.
 
-Crypto OG? If you remember what blockchain was like when things were smaller and more hands-on, our **nft recipes** section showcases things Saito can do that other chains simply can't -- and may even turn you into a developer before you realize it!
+**Users:**
 
+If you’re new to Saito and want to try it out, you can skip this site entirely and visit the [live network](https://saito.io). Users are also encouraged to check out our list of *[Applications](/applications)*  running on the network, as well as our section on *[Smart NFTs](/nfts)*  and the things you can do with them.
 
-## Developers 
+**Developers:**
 
-Learn to set-up nodes and build applications that run directly on-chain.
+If you are interested in running a node or building applications, you can visit our *[node installationS](/install)* instructions, checkout examples of the *[applications](/applications)* that others are building, and see our list of *[tutorials](/tutorials)* for help getting started.
 
-- **How to run a node** → *[Node Setup](/install)*  
-- **What can we Build** → *[Applications](/applications)*  
+**Theoretists:**
 
-- **Examples and tutorials** → *[Tutorials](/tutorials)*  
-
-Bonus? Saito doesn't use smart contracts. You write a module, share it with users, and your application immediately becomes part of the network.
-
-
-## Theorists
-
-Our research sections assumes familiarity with distributed systems, collective action problems, and mechanism design. Here you can find material on how Saito works at a deeper level.
-
-- **How Saito consensus works** → *[Consensus Overview](/consensus)*  
-- **What is New in Theory** → *[Academic Introduction](/consensus/theory)*
-
-- **Sybil Resistance and Punishing Deviation** → *[Security & Economics](/consensus/theory/sybil-attacks)*  
-
-
-
-What's new? Saito introduces asymmetric proposal costs: malicious state transitions are more expensive to propose than honest ones, so truth-telling is cheaper than misreporting in expectation.
+For the more academically minded, our research section assumes familiarity with distributed systems, collective action problems, and mechanism design. Here you can find material on how Saito works at a deeper level, including descriptions of *[how Saito Consensus works](/consensus)*, how it relates to existing research in both *[economics and computer science](/consensus/theory)*, as well as dedicated pages on Saito-specific solutions such as the approach the network pioneers to punishing *[sybil attacks](/consensus/theory/sybil-attacks)* without sacrificing permissionless routing.
 
 - - - - - 
 
