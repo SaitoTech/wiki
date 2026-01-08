@@ -2,7 +2,7 @@
 title: Saito Stack
 description: Self-Publishing on Saito
 published: true
-date: 2025-12-30T04:28:10.032Z
+date: 2026-01-08T08:33:02.716Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-30T04:28:10.032Z
@@ -19,87 +19,43 @@ Stack is designed as an open-source alternative to platforms such as Substack, M
 
 ---
 
-## Design Goals
+## Writing Help
 
-Saito Stack is built around a small number of strict design principles:
+To create a header, start a new paragraph with Markdown heading markers and press Enter:
 
-### Content Ownership  
-All posts are authored and published as cryptographically signed transactions. Creators retain direct authorship and control over their content without platform-level ownership or censorship.
+\# Header 1
+\#\# Header 2
+\#\#\# Header 3
 
-### Deterministic Publishing  
-What the author sees in the editor is exactly what gets published. There is no server-side rewriting, hidden mutation, or post-processing of content.
+When you press Enter, the leading # markers are removed automatically and the line is converted into the appropriate header. You can use similar keyboard shortcuts to provide bullet points:
 
-### Permissioned Access  
-Stack supports both free and paid content using cryptographic access control, rather than centralized accounts or platform-enforced paywalls.
+\* bullet points
+\- bullet points
 
-### Peer-to-Peer Availability  
-Content is cached and served by peers on the Saito network. There is no single hosting provider and no single point of failure.
+Once you enter a single bullet point, the system will permit you to continue simply by pressing Enter. Pressing Enter on an empty bullet point will terminate the bullet point object and return you to a fresh paragraph.
 
----
+Quotes work similarly:
 
-## Architecture Overview
+\> your quote here
 
-Each post is published as a Saito transaction containing:
+Code blocks also work 
 
-- `content` — Markdown representation of the post body  
-- `image` — A single teaser or header image used for previews  
-- `images[]` — Embedded content images referenced by the Markdown  
-- additional metadata (title, timestamp, tags, etc.)
+\`\`\`
+the content of the code block here
+\`\`\`
 
-This design permits posts to be verified, cached, and served by any peer on the network. Users can publish their posts directly into the peer-to-peer network or indirect via inclusion in the blockchain.
+Images may be dragged directly into the blog post. You will observe a "placement line" appear where the image will be displayed if "dropped" into the text at that point. Adjust your 
 
----
+The code needed to update is complicated as it has different kinds of edge-cases. If you run into problems that affect your ability to write or edit posts, please flag them for us. Most issues that surface these days come from complicated edits that break the expectations of the software. A quick workaround if you run into trouble is to move to a new paragraph or reload the page to reset the javascript.
 
-## Drafts and Editor Sessions
+## Publishing Help
 
-Stack distinguishes carefully between drafts and published posts.
+All posts are published as cryptographically-signed transactions. Creators retain direct authorship and control over their content without platform-level ownership or censorship. Any images or other content required to view the post is included in the transaction.
 
-- Drafts exist only as local recovery artifacts.
-- Editor sessions are explicit and intent-based (resume, select, or create new).
-- Publishing consumes the active draft and ends the session.
-- Drafts are never silently overwritten or implicitly reused.
+When publishing a blog post, set its access restrictions as "Public" if you wish members of the general public to be able to read it. If you set your access restrictions as "Private" or "Subscription" access will be limited
 
-This design prevents accidental data loss and makes editor behavior fully explainable.
+Publishers should note that unless they are encrypting your underlying content or publishing onto private archive nodes, it will always be possible for users and network owners to retrieve their content by syncing the full blockchain. While Saito servers generally respect access controls, if users wish perfect control over their content it is recommended to use a private archive server.
 
----
-
-## Image Handling
-
-Stack separates image structure from image storage:
-
-- Markdown content contains **references** to images.
-- The actual image payloads are stored in the transaction’s `images[]` array.
-- When rendering a post, image references are resolved against `images[]`.
-
-This keeps content clean, deterministic, and extensible to future storage backends.
-
----
-
-## URL-Based Navigation
-
-Stack supports canonical, shareable URLs that map directly to content:
-
-- `/stack/<publicKey>`  
-  Displays the list of published posts for a creator.
-
-- `/stack/<publicKey>/<transactionSignature>`  
-  Loads and displays a specific blog post.
-
-When content is loaded via URL, Stack shows a loading state while fetching data from local archives or network peers and fails gracefully if content cannot be retrieved.
-
----
-
-## Monetization and Access Control
-
-Stack supports both free and paid content tiers:
-
-- Free posts are accessible to all readers.
-- Paid posts require cryptographic proof of subscription.
-- Access enforcement happens at the content level, not via centralized accounts.
-
-This allows creators to monetize directly without intermediaries.
-
----
 
 ## Relationship to the Saito Network
 
@@ -111,11 +67,3 @@ Saito Stack is not a standalone application layered on top of a blockchain. It i
 - Built-in cryptographic identity
 
 Stack demonstrates how application-layer publishing can be implemented without centralized servers while remaining usable and familiar to end users.
-
----
-
-## Status
-
-Saito Stack is under active development and evolving alongside the Saito ecosystem. It serves both as a production publishing tool and as a reference implementation for building rich, peer-to-peer applications on Saito.
-
----
