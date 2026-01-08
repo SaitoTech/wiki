@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2025-12-30T04:19:57.925Z
+date: 2026-01-08T07:53:44.147Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -282,7 +282,7 @@ Applications on Saito look and feel like traditional web apps, but run on top of
   <a href="/applications/scripting">
     <div class="app_box">
        <div class="app_img">
-         <img src="/img/scriptorium.jpg" />
+         <img src="/img/scripting.jpg" />
        </div>
        <div class="app_title">Scriptorium</div>
     </div>
