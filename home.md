@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2026-01-08T15:49:32.383Z
+date: 2026-01-08T15:59:59.457Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -15,25 +15,24 @@ dateCreated: 2021-11-09T07:50:58.627Z
 .cls-1{fill:rgb(247, 31, 61);}
 </style>
 
-Saito Wiki is the public library of knowledge about Saito Consensus and the Saito network.
-It explains how the network works, the economic and theoretical principles behind the design, and the practical information needed to run a node or build applications. Everything here exists to make the architecture transparent: what the network is doing, why it works, and where the difficult problems actually lie.
+Saito Wiki is the public library of knowledge about Saito Consensus and the Saito network. It explains how the network works, the economic and theoretical principles behind its design, and the practical information needed to run a node or build applications. Everything here exists to make the architecture transparent: what the network is doing, why it works, and how the difficult problems are solved.
 
 **Why Saito Matters**
 
-Modern blockchains rely on economic designs that underfund the work required to keep the network alive. In proof-of-work blockchains like Bitcoin, fees flow to miners who burn hashpower rather than the peer-to-peer nodes who run the network. In proof-of-stake networks like Ethereum, rewards accrue to capital holders regardless of whether they provide useful infrastructure. In both designs, the system pays the wrong actors for the wrong activities and hopes the network will scale anyway.
+Modern blockchains rely on economic designs that underfund the work needed to keep the network alive. In proof-of-work networks like Bitcoin, fees flow to miners who burn hashpower rather than the peer-to-peer nodes which run the network. In proof-of-stake networks like Ethereum, rewards accrue to capital holders regardless of whether they help collect the fees they are paid for their efforts. In both designs, the system pays the wrong actors for the wrong activities and hopes the network will scale anyway.
 
-Saito fixes this by using cryptographic routing signatures to track the contribution of the nodes that do the critical work of running applications, propagating blocks, servicing users, and keeping fees flowing into the system. In Saito it is these activities that earn nodes the right to produce blocks and collect payments. And once fees go to these nodes instead of miners and stakers, two things happen at once:
+Saito fixes this by changing the form of work that the network measures and pays for -- cryptographic routing signatures are used to track the contribution of the nodes that do the critical work of servicing users and keeping fees flowing into the system. Those signatures are then leveraged to drive fees to the participants who collect them regardless of who produces the actual block. And with real economic activity suddenly determining who produces blocks and who gets paid, two things happen at once:
 
-• scalability rises as nodes invest to maximize fee-throughout
-• security rises as majoritarian attacks disappear
+• scalability rises as nodes compete to maximize fee-throughout
+• security rises as attacking the network gets more expensive
 
-Abstractly, what Saito does is reverse an economic problem that remains deeply misunderstood in the space. Incentives to extract wealth are replaced with incentives to contribute fees. Scale and security icrease simultaneously and reinforce each other. This is the foundation of Saito Consensus.
+Abstractly, what Saito does is reverse an economic problem that is foundational to every self-provisioning network. Incentives to extract wealth elsewhere are here replaced with incentives to contribute fees. Competition is replaced with cooperation. And scale and security increase simultaneously instead of competing with each other. This is the foundation of Saito Consensus.
 
 **Why Saito is Intellectually Challenging**
 
-Many of the limits accepted in existing blockchain designs come from long-standing assumptions in computer science and economics. Classic impossibility results assume that identities are free to create, that cheating has no economic cost, that networks cannot differentiate honest traffic from adversarial traffic, and that systems cannot force participants to make real trade-offs. Under those assumptions, large decentralized networks must either be slow, wasteful, or reliant on trusted intermediaries.
+To understand Saito fully it is necessary to understand both economics and computer science at a reasonable high level. The reason for this is that many of the limits accepted in existing blockchain designs come from long-standing assumptions in computer science and economics which are not obvious to those without experience in the field. Classic impossibility results assume that identities are free to create, that cheating has no economic cost, that networks cannot differentiate honest traffic from adversarial traffic, and that systems cannot force participants to make real trade-offs that will result in all attackers being worse off in equilibrium. Under those assumptions, large decentralized networks must either be slow, wasteful, or reliant on trusted intermediaries.
 
-Saito changes the economic structure. It makes Sybil behavior expensive, prices the actions attackers must take, and identifies the routing work that honest nodes perform. By turning these into enforceable economic constraints, Saito operates outside the conditions that make those impossibility results bind. The result is a permissionless network that rewards the work that matters, penalizes the work that threatens it, and remains scalable as demand grows.
+Saito changes the economic structure in ways that undermine these impossibility results. It makes Sybil behavior expensive, imposes an asymmetrically-expensive cost on the actions attackers must take to undermine consensus, and penalizes malicious behavior that is unmeasurable in other networks. By changing the underlying economic constraints that attackers face, Saito moves outside the space in which existing impossibility results bind. The result is a permissionless network that rewards the work that matters, penalizes the work that threatens it, and remains scalable as demand grows.
 
 This wiki exists to explain that architecture clearly and rigorously.
 
