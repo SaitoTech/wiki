@@ -2,7 +2,7 @@
 title: Compliance
 description: 
 published: true
-date: 2026-01-15T03:26:06.198Z
+date: 2026-01-15T03:35:59.070Z
 tags: 
 editor: markdown
 dateCreated: 2026-01-15T03:26:06.198Z
@@ -10,9 +10,9 @@ dateCreated: 2026-01-15T03:26:06.198Z
 
 # Legal Compliance and Content Policies
 
-Saito as a community strives to protect the right to free speech. Nonetheless, we believe . 
+Saito is a community-driven network, and we care deeply about protecting the freedom of users to speak, publish, and build. At the same time, operating a public network carries legal responsibilities. Our goal is to balance an open environment with the obligations that apply to any service hosting community-submitted material.
 
-In order, 
+In order to comply with applicable laws -- including the Digital Millennium Copyright Act (DMCA) and other content-related regulations -- we maintain a notice-and-takedown process and a repeat-infringer policy. These rules are not intended to limit expression. They exist to ensure that the network can remain open, interoperable, and safe for all who uses it.
 
 ## Notice and Takedown Policy
 
