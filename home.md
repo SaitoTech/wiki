@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2026-01-15T03:30:34.936Z
+date: 2026-01-15T03:43:48.583Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -46,4 +46,4 @@ This wiki exists to explain that architecture clearly and rigorously.
 
 **Want to help?** This wiki is a community-maintained knowledge base. We welcome assistance keeping our documentation updated, and improving the resources that exist here to help others understand why Saito matters. If you are interested in contributing to this wiki we have a page here on [how to contribute](/community/wiki).
 
-**Want to report a problem?** Saito is an open network, the applications and transaction archives are often served locally from server caches. We strive to be a model for building systems that respect user privacy, but do not condone the distribution or sharing of illegal content. If you run into materials that are strictly illegal under US law, please see our [takedown notice](/compliance), which governs our process for disabling or removing access to content in our own archives.
+**Report a problem?** Saito is an open network, the applications and transaction archives are often served locally from server caches. We strive to be a model for building systems that respect user privacy, but do not condone the distribution or sharing of illegal content. If you run into materials that are strictly illegal under US law, please see our [takedown notice](/compliance), which governs our process for disabling or removing access to content in our own archives.
