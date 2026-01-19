@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2026-01-19T03:32:25.358Z
+date: 2026-01-19T06:50:27.269Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -54,3 +54,28 @@ Congratulations! You can now open a browser and visit:
 > http://localhost:12101
 
 Ready to change the default set of modules on your machine? For detailed instructions on compiling the node.js stack refer to the [Compilation Guide](/install/compile). If you run into problems installing Saito on a remote machine, check the configuration changes needed for remote deployment in our [remote deployment guide](/install/deployment).
+
+
+## Development Setup
+
+### 1. Git clone repo
+```
+git clone https://github.com/saitotech/saito
+```
+
+### 2. Run dev setup script
+```
+cd <repo>/rust/scripts
+./dev_setup.sh
+```
+
+Provide any expected inputs and wait till the script completes. Script will install all the required software, compile the code and locally link the npm packages.
+
+### 3. Link local saito-js package
+
+```
+cd <repo>/node/
+npm install
+npm link saito-js
+npm run reset
+```
