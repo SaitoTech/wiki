@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2026-01-19T03:29:38.127Z
+date: 2026-01-19T03:31:33.167Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -19,7 +19,7 @@ This page assumes you want to run the NodeJS Saito server locally run or develop
 - Stack: node.js (v.16+), npm (v6+)
 - TypeScript
 
-You will need a machine with NodeJS and Git installed. If you are missing any of these tools we have dedicated pages to help you install them for [Linux](/install/linux), [Mac](/install/mac) and [Windows](/install/windows). The remainder of this pages assumes you have these packages installed and are comfortable using the command-line.
+If you are missing any of these tools we have dedicated pages to help you install them for [Linux](/install/linux), [Mac](/install/mac) and [Windows](/install/windows). The remainder of these instructions assumes you have these packages installed and are comfortable using the command-line.
 
 
 ### 1. Download Saito
@@ -53,6 +53,4 @@ Congratulations! You can now open a browser and visit:
 
 > http://localhost:12101
 
-Ready to change the default set of modules on your machine? For detailed instructions on compiling the node.js stack refer to the [Compilation Guide](/install/compile).
-
-**Note: that if you are installing Saito on a remote server and cannot access the server through localhost you will need to update your [server configuration file](/configuration/wallet) prior to running ```npm start```. We have a quick guide covering the configuration changes needed for remote deployment in this [deployment guide](/install/deploy).**
+Ready to change the default set of modules on your machine? For detailed instructions on compiling the node.js stack refer to the [Compilation Guide](/install/compile). If you run into problems installing Saito on a remote machine, check the configuration changes needed for remote deployment in our [remote deployment guide](/install/deployment).
