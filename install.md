@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2026-01-19T06:50:27.269Z
+date: 2026-01-19T12:28:10.828Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -77,5 +77,36 @@ Provide any expected inputs and wait till the script completes. Script will inst
 cd <repo>/node/
 npm install
 npm link saito-js
-npm run reset
+npm run compile
 ```
+
+Now the node js server can be started with the locally linked saito-js package.
+
+### A. Locally linking wasm projects manually
+
+#### building and linking saito-wasm project
+```
+cd <repo>/rust/saito-wasm
+npm install
+npm run build
+npm link # this will setup saito-wasm to be locally linked by other projects
+```
+
+#### building and linking saito-js project
+```
+cd <repo>/rust/saito-js
+npm install
+npm link saito-wasm # this is linking previously built saito-wasm into saito-js project
+npm run build 
+cd dist 
+npm link # this will setup saito-js to be locally linked by other projects
+```
+
+### B. Compiling new wasm code
+Once you do any rust changes, below is the procedure to compile wasm code. (Assuming saito-wasm and saito-js are locally linked)
+
+```
+cd <repo>/rust/saito-wasm
+npm run build
+cd <repo>/rust/saito-js
+npm run build
