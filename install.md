@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2026-01-19T12:30:01.161Z
+date: 2026-01-19T12:36:45.111Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -115,3 +115,14 @@ npm run build
 cd <repo>/rust/saito-js
 npm run build
 ```
+
+## Releasing new npms
+
+Once you test everything in the local environment. If you need to publish new npms with the changes, all you have to do is below steps.
+
+1. Increment the number in [repo]/rust/VERSION file. Make sure the incremented version number is not already used to publish an npm. (Check https://www.npmjs.com/~saitotech for latest npm versions)
+2. Push / merge changes to develop branch
+3. Create a PR from develop to master branch
+4. Wait till the PR is completed / green.
+5. Merge the PR.
+6. Now the Github actions will automatically run the CI process to publish the new npms. You can check the status in the https://github.com/SaitoTech/saito/actions page.
