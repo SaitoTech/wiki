@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2026-01-20T03:04:00.724Z
+date: 2026-01-20T11:32:04.258Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -157,6 +157,15 @@ cd <repo>/rust/saito-wasm
 npm run build
 cd <repo>/rust/saito-js
 npm run build
+```
+
+## C. Using the new wasm code in nodejs
+
+```
+cd <repo>/node/
+npm link saito-js
+npm run compile #or equivalent
+npm start
 ```
 
 ## Releasing new npms
