@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2026-01-19T12:53:32.712Z
+date: 2026-01-20T03:03:03.259Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -10,7 +10,7 @@ dateCreated: 2024-10-15T23:32:31.744Z
 
 # Installing Saito
 
-This page assumes you want to run the NodeJS Saito server locally run or develop applications like the Saito Arcade, Videocall, or RedSquare. If you want to run Saito on a remote machine, we have a [remote deployment guide](/install/deploy) that includes a script which automates entire setup process. The rest of this page assumes you are installing on a local machine.
+This page assumes you want to run a Saito server locally to run or develop applications like the Saito Arcade, Videocall, or RedSquare. If you want to run Saito on a remote machine, we have a [remote deployment guide](/install/deploy) that includes a script which automates entire setup process. The rest of this page assumes you are installing on a local machine.
 
 ### Installation Requirements:
 
