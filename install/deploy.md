@@ -2,23 +2,22 @@
 title: Deploy Saito Instance
 description: 
 published: true
-date: 2025-11-20T02:33:07.594Z
+date: 2026-01-22T04:07:30.260Z
 tags: installation
 editor: markdown
 dateCreated: 2023-02-23T07:15:16.260Z
 ---
 
-# Deploy Saito on a VPS or server - Ubuntu 22.04 (LTS) x64
+# Deploy Saito on a Public Server - Ubuntu 22.04 (LTS) x64
 
 This page provides a quick guide to deploying Saito on a VPS or server. It will walk you through the process of handling the common supplemental problems like getting an SSL cert and customizing your configuration files so you can access your Saito install remotely instead of through localhost.
 
-Before you start, be sure you've completed the [installation instructions](/install) for the standard Saito client and have successfully installed [Saito](https://github.com/saitotech/saito) on your own machine before continuing. The rest of this write-up assumes basic familiarity with the process of doing so.
-
 ## Quick Deploy Script
-Please read the below and the [Installation Guide](/install/) so you understand the steps undertaken, but if you just want to get a node running, use this:
-**[Quick Deploy Script for Ubuntu 24.04](https://gist.github.com/arpee/22cec55b8e74c09c2e17e5a42eead6cf)**.
+The quickest way to deploy a saito node is the **[Quick Deploy Script for Ubuntu 24.04](https://gist.github.com/arpee/22cec55b8e74c09c2e17e5a42eead6cf)**.
 
-Once you have run the script your node will be running and you can [configure it](/en/config/network) to run locally or [connect it to the Saito network](/en/config/network#joining-the-saito-network-running-a-production-node)
+*For manual installation follow [Installation Guide](/install/).*
+
+Once you have the Saito node installed you can [configure it](/en/config/network) for testing or [connect it to the Saito network](/en/config/network#joining-the-saito-network-running-a-production-node)
 
 ---
 
