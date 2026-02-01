@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2026-01-20T11:32:04.258Z
+date: 2026-02-01T13:05:20.576Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -63,10 +63,10 @@ Following are the steps to run a saito rust node.
 
 ### Step 1: Clone the Repository
 
-First, clone the Saito Rust workspace repository from GitHub using the following command:
+First, make sure you have a copy of the Saito repository. If you have not already done this:
 
 ```bash
-git clone https://github.com/saitotech/saito-rust-workspace 
+git clone https://github.com/saitotech/saito 
 ````
 
 ### Step 2: Initialize the Environment
@@ -77,7 +77,7 @@ Navigate to the cloned directory and run the bootstrap script to prepare your en
 Run the bootstrap_linux.sh script to prepare your Linux environment:
 
 ````bash
-cd saito-rust-workspace
+cd saito-rust
 bash scripts/bootstrap_linux.sh
 ````
 
@@ -85,7 +85,7 @@ bash scripts/bootstrap_linux.sh
 If you are on a macOS device, use the bootstrap_mac.sh script instead:
 
 ````bash
-cd saito-rust-workspace
+cd saito-rust
 bash scripts/bootstrap_mac.sh
 ````
 
