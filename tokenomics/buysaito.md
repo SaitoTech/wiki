@@ -2,13 +2,15 @@
 title: Buy Saito
 description: 
 published: true
-date: 2026-02-11T03:34:24.686Z
+date: 2026-02-11T03:36:32.039Z
 tags: 
 editor: markdown
 dateCreated: 2026-02-11T03:09:08.394Z
 ---
 
 # Buy Saito
+
+## Using the 'Buy Saito' flow:
 
 ##### Head to saito.io/buy
 ![screenshot_from_2026-02-11_14-15-28.png](/screenshot_from_2026-02-11_14-15-28.png)
