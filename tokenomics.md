@@ -2,7 +2,7 @@
 title: Tokenomics
 description: 
 published: true
-date: 2026-02-11T02:58:05.527Z
+date: 2026-02-11T03:02:13.653Z
 tags: getting started
 editor: markdown
 dateCreated: 2022-02-07T01:51:31.603Z
@@ -15,6 +15,15 @@ The Saito Network has 7bb SAITO tokens. The only way to get tokens is to purchas
 The easiest way to purchase Saito is through our on-chain store. It is also possible to purchase SAITO tokens at a discount by buying our ERC20 or BSC-wrapped tokens and [migrating your tokens](https://saito.io/migration) to mainnet at any time. Please note that this bridge is the only officially-supported way of migrating off-chain SAITO tokens to mainnet. If someone proactively contacts you and offers to assist it is a scam.
 
 ## Purchase SAITO
+
+### Native SAITO
+
+Native Saito can be [purchased directly on the platform](/tokenomics/buysaito).
+
+***TL:DR;  saito.io/buy***
+
+
+### Wrapped SAITO
 
 The most liquid cryptocurrency exchanges supporting the purchase of SAITO ERC20 tokens are:
 
