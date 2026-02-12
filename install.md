@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2026-02-12T13:11:10.423Z
+date: 2026-02-12T14:01:05.367Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -55,39 +55,35 @@ Congratulations! You can now open a browser and visit:
 
 Ready to change the default set of modules on your machine? For detailed instructions on compiling the node.js stack refer to the [Compilation Guide](/install/compile). If you run into problems installing Saito on a remote machine, check the configuration changes needed for remote deployment in our [remote deployment guide](/install/deployment).
 
-## Running a Saito Rust Node
 
-Saito Rust node is a rust application using the saito-core library to run a standalone saito node.
+## Rust Client and WASM Support
 
-Following are the steps to run a saito rust node.
+Saito includes a number of software packages coded in the Rust programming language and/or designed to compile into a WASM for use with the javascript server. If you are doing full-stack development that requires modifications to consensus you will require the following:
 
 ### Step 1: Clone the Repository
-
-First, make sure you have a copy of the Saito repository. If you have not already done this:
-
-```bash
-git clone https://github.com/saitotech/saito 
-````
-
-### Step 2: Initialize the Environment
 
 Navigate to the cloned directory and run the bootstrap script to prepare your environment. The script will work for Mac or Linux, auto-detecting the appropriate bootstrap script based on your environment. Select YES when asked if you want to "Build Project":
 
 ````bash
-cd scripts
-bash scripts/bootstrap.sh
+cd rust/scripts
+bash bootstrap.sh
 ````
 
-
-#### Step 3: Run the Application
-
-Finally, start the Saito application with Rust's cargo tool, enabling debug logging:
+If you want to run the Saito Rust client, you can now do so using the following, which enables debug logging:
 
 ````bash
 RUST_LOG=debug cargo run
-
 ````
 
+### Step 2: Compile WASM Package
+
+
+````bash
+cd saito-wasm
+cargo install wasm-pack
+npm install
+npm run build
+````
 
 ## Development Setup
 
