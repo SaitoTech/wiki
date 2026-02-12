@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2026-02-12T14:16:30.336Z
+date: 2026-02-12T14:20:16.595Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
@@ -136,7 +136,7 @@ npm run go
 
 ## Step 4: Finalization Registry Bug
 
-If you get a problem when compiling Saito-Lite-Rust, you may need to comment-out the following lines from the file ```/saito-js/lib/wasm_wrapper.ts```. You will then need to recompile saito-js by running ```npm run build``` in your saito-js directory as shown in Step 2 above:
+If you get a problem when compiling the Saito package in the node directory, you may need to comment-out the following lines from the file ```/saito-js/lib/wasm_wrapper.ts```. You will then need to recompile saito-js by running ```npm run build``` in your saito-js directory as shown in Step 2 above:
 
 ```
 export default class WasmWrapper<T> {
@@ -167,7 +167,7 @@ export default class WasmWrapper<T> {
 
 ## Step 5: Confirm Install Successful
 
-This step is completely optional, but if you're not sure that your machine is using your local copy of saito-js, you can check by looking for the initialize() function in the file ```/saito-rust-workspace/saito-wasm/src/saitowasm.rs``` and editing the call to info() somewhere around line 338 to print a custom message such as ```info!("initializing local copy of saito-wasm!");```. 
+This step is completely optional, but if you're not sure that your machine is using your local copy of saito-js, you can check by looking for the initialize() function in the file ```/node/saito-wasm/src/saitowasm.rs``` and editing the call to info() somewhere around line 338 to print a custom message such as ```info!("initializing local copy of saito-wasm!");```. 
 
 Repeat Steps 1-3 above and when you run Saito-Lite-Rust you should see your log message printed instead of the default.
 
