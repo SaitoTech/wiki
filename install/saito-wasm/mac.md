@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2026-02-12T14:07:53.575Z
+date: 2026-02-12T14:16:30.336Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
@@ -83,7 +83,7 @@ cargo install wasm-opt
 
 #### 1. navigate into saito-js directory
 ```
-cd saito-rust-workspace/saito-js
+cd saito-js
 ```
 
 #### 2. install  
@@ -116,7 +116,7 @@ npm link
 
 #### 1. navigate into Saito Lite (Rust) directory
 ``` 
-cd saito-lite-rust
+cd node
 ```
 
 #### 2. install
