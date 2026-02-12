@@ -2,7 +2,7 @@
 title: Connecting Saito Repositories locally for M1 | An installation Guide
 description: 
 published: true
-date: 2025-05-20T06:06:10.024Z
+date: 2026-02-12T14:07:53.575Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-20T20:31:08.392Z
@@ -42,7 +42,7 @@ export CC=/opt/homebrew/opt/llvm/bin/clang
 
 #### 3. navigate into saito-wasm directory
 ```
-cd saito-rust-workspace/saito-wasm
+cd saito-wasm
 ```
 
 #### 4. install wasm-pack: crucial tool for compiling Rust to WebAssembly
