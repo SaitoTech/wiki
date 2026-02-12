@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2026-02-01T13:05:20.576Z
+date: 2026-02-12T13:11:10.423Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -71,23 +71,13 @@ git clone https://github.com/saitotech/saito
 
 ### Step 2: Initialize the Environment
 
-Navigate to the cloned directory and run the bootstrap script to prepare your environment:
-
-**For Linux**
-Run the bootstrap_linux.sh script to prepare your Linux environment:
+Navigate to the cloned directory and run the bootstrap script to prepare your environment. The script will work for Mac or Linux, auto-detecting the appropriate bootstrap script based on your environment. Select YES when asked if you want to "Build Project":
 
 ````bash
-cd saito-rust
-bash scripts/bootstrap_linux.sh
+cd scripts
+bash scripts/bootstrap.sh
 ````
 
-**For macOS**
-If you are on a macOS device, use the bootstrap_mac.sh script instead:
-
-````bash
-cd saito-rust
-bash scripts/bootstrap_mac.sh
-````
 
 #### Step 3: Run the Application
 
