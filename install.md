@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2026-02-12T14:01:05.367Z
+date: 2026-02-12T14:07:18.318Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -77,6 +77,7 @@ RUST_LOG=debug cargo run
 
 ### Step 2: Compile WASM Package
 
+If you are using a Mac, please see our instructions on [installing WASM compiler for Mac](https://wiki.saito.io/install/saito-wasm/mac). Otherwise:
 
 ````bash
 cd saito-wasm
