@@ -2,7 +2,7 @@
 title: Introduction to Saito for Theorists
 description: 
 published: true
-date: 2025-11-26T14:59:32.190Z
+date: 2026-02-22T05:41:42.713Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T09:35:00.976Z
@@ -10,14 +10,11 @@ dateCreated: 2025-11-24T09:35:00.976Z
 
 # What is Saito
 
-This page is intended as a concise, discipline-neutral introduction to **Saito Consensus** for readers with training in mechanism design, economics, or distributed systems. It exists to provide a clean map of the intellectual claims, and an understanding of where Saito is and is not bound by standard impossibility results.
+This page is intended as a concise, discipline-neutral introduction to **Saito Consensus** for readers with training in mechanism design, economics, or distributed systems. It exists to provide a clean map of the intellectual space, and an understanding of where Saito is and is not bound by standard impossibility results in economics and computer science.
 
-We do this in four sections, offering: (1) a short description of what is theoretically new in Saito -- asymmetrically costly state transitions; (2) a brief review of the classical impossibility claims in economics and computer science that assert such asymmetry cannot exist; (3) a compact account of how Saito makes the solution nonetheless possible; and (4) a guide to the subpages that examine these specific results in more depth, showing where Saito relaxes their assumptions or avoids being bound by them entirely.
+## #1. What is New
 
-
-## #1. What is New (asymmetrical costs)
-
-Saito changes the economics of permissionless consensus by making **harmful state transitions more expensive to propose than honest ones**. Concretely, the protocol ties the cost of proposing a block to how efficiently a node has collected fees. Because more efficiently funded blocks cost less to extend, the network naturally converges on a longest chain built from these blocks.
+Saito changes the economics of permissionless consensus by making **adversarial state transitions more expensive to propose than honest ones in expectation**. The protocol does this by adjusting the cost of producing blocks based on how efficiently a node has collected fees from **other** participants. The network naturally converges to a longest chain built from such blocks.
 
 This creates a persistent cost asymmetry: to orphan an honest block, attackers must cover the efficiency gap between their own fee-collection work and that of the honest block they are trying to orphan. Doing so requires attackers to spend their own money to produce blocks and subject it to a payout lottery that returns value only in expectation, not deterministically.
 
