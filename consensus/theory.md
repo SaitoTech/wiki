@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2025-12-15T06:59:25.684Z
+date: 2026-02-22T05:39:23.942Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -12,15 +12,15 @@ dateCreated: 2025-11-23T15:28:21.939Z
 
 This section provides an organized overview of the theoretical foundations of Saito Consensus. It is intended for economists, mechanism designers, and computer scientists who wish to understand how routing-work fits into established academic frameworks and why classical impossibility results do not bind the mechanism.
 
-We recommend starting with our [high-level overview](/consensus/theory/intro), which explains what is new about Saito Consensus (hint: asymmetrical costs). The sections below then position Saito in the context of specific theoretical findings to show how it is possible for a decentralized mechanism like Saito to implement a welfare efficient social choice rule.
+We recommend starting with our [high-level overview](/consensus/theory/intro), which explains how it is possible for a decentralized mechanism like Saito to implement a welfare efficient social choice rule.
 
 **Core Saito Documents**
 
-- [Academic Introduction to Saito Consensus](/consensus/theory/intro)
-This page provides an overview of what is **new** about Saito Consensus -- the ability to design mechanisms with an **asymmetrical cost**. This page explains why this matters, shows directly what technical features in Saito enable the shift, and establish Saito Consensus as a new class of informationally distributed mechanism.
-
 - [Saito is an Indirect Mechanism](/consensus/theory/indirect-mechanism)
-Saito is a special kind of mechanism known in economics as an "indirect mechanism" -- a kind of mechanism that is not even in theory reducible to a direct mechanism under the Revelation Principle. This allows Saito to solve problems that other blockchain mechanisms cannot even solve in theory. This page explains why convertibility is impossible.
+Saito is a special kind of mechanism known in economics as an "non-revelation-equivalent indirect mechanism" -- a kind of indirect mechanism that is not reducible to a direct mechanism under the Revelation Principle. The same techniques that block convertibility are necessary for Saito to solve problems that other consensus mechanisms cannot solve in theory.
+
+- [Academic Introduction to Saito Consensus](/consensus/theory/intro)
+This page approaches Saito Consensus with a specific academic question -- how is it possible to design mechanisms with an **asymmetrical cost** of adversarial behavior. This page shows what technical features in Saito enable the shift, which -- by their absence in other mechanisms -- establish Saito Consensus as a new class of informationally distributed mechanism.
 
 - [Broadcast Strategy and Signalling Costs](/consensus/theory/signalling-costs)
 A brief explanation of how portfolio bids and routing payments create Broadcast Strategy as a new kind of primitive in mechanism design, one that allows Saito to avoid being bound by classical impossibility results in implementation theory.
