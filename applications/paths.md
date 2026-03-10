@@ -2,7 +2,7 @@
 title: Paths of Glory
 description: 
 published: true
-date: 2025-05-27T06:19:52.896Z
+date: 2026-03-10T22:04:29.989Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-27T05:50:50.112Z
@@ -14,7 +14,7 @@ dateCreated: 2025-05-27T05:50:50.112Z
 		<div id="download" class="toc-header" style="margin-top: 0px !important;display: grid;grid-template-columns: min-content 1fr;align-items: start;">
 			<div class="header-box-title" style="width: max-content; float: left; display: relative;"> 📦 Download</div>
 			<ul class="header-box-links" style="display: flex; gap: 3rem; padding-top: 0rem; margin-left: 1rem;">
-				<li style="margin-top: 0px;"><a href="https://wiki.saito.io/applications/mods/paths.saito" class="is-asset-link">Saito Module</a></li>
+				<li style="margin-top: 0px;"><a href="https://mods.saito.io/paths.saito" class="is-asset-link">Saito Module</a></li>
 				<li style="margin-top: 0px;"><a href="https://github.com/SaitoTech/saito/tree/master/node/mods/paths" class="">Source Code</a></li>
 				<li style="margin-top: 0px;"><a href="https://wiki.saito.io/applications/install" class="">Installation Guide</a></li>
 			</ul>
