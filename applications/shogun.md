@@ -2,7 +2,7 @@
 title: Shogun
 description: 
 published: true
-date: 2026-03-10T22:23:16.152Z
+date: 2026-03-10T22:26:33.052Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-29T20:07:40.722Z
@@ -21,10 +21,9 @@ dateCreated: 2023-01-29T20:07:40.722Z
 	</div>
 </div>
 
+# Shogun
 
 ![](/new_shogun.png)
-
-# Shogun
 
 In a game of Shogun, two to four players compete to gather the most victory points by strategically building a deck of cards. Each player starts with a small deck containing a few weak cards, with which they acquire more cards with different and more powerful abilities. Some provide more of the in-game currency; others let the player perform more actions or buy more cards per turn; others let them draw more cards, harm the other players, remove unwanted cards from their decks, or do other things. As players improve their decks, they also think about how to improve their scores; a powerful deck may be worth no victory points. The game has been compared to the "draft" gameplay style of collectible card games where players vie for the best deck from a common pool of cards.
 
