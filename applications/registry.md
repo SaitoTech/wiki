@@ -2,7 +2,7 @@
 title: Registry
 description: 
 published: true
-date: 2026-03-10T22:13:55.622Z
+date: 2026-03-10T22:15:14.993Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-20T06:34:04.856Z
@@ -13,7 +13,7 @@ dateCreated: 2025-05-20T06:34:04.856Z
 		<div id="download" class="toc-header" style="margin-top: 0px !important;display: grid;grid-template-columns: min-content 1fr;align-items: start;">
 			<div class="header-box-title" style="width: max-content; float: left; display: relative;"> 📦 Download</div>
 			<ul class="header-box-links" style="display: flex; gap: 3rem; padding-top: 0rem; margin-left: 1rem;">
-				<li style="margin-top: 0px;"><a href="hthttps://mods.saito.io/registry.saito" class="is-asset-link">Saito Module</a></li>
+				<li style="margin-top: 0px;"><a href="https://mods.saito.io/registry.saito" class="is-asset-link">Saito Module</a></li>
 				<li style="margin-top: 0px;"><a href="https://github.com/SaitoTech/saito/tree/master/node/mods/registry" class="">Source Code</a></li>
 				<li style="margin-top: 0px;"><a href="https://wiki.saito.io/applications/install" class="">Installation Guide</a></li>
 			</ul>
