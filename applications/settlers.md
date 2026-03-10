@@ -2,11 +2,25 @@
 title: Settlers of Saitoa
 description: 
 published: true
-date: 2025-07-29T21:45:13.083Z
+date: 2026-03-10T22:21:42.129Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-29T19:34:11.091Z
 ---
+
+<div style="display: block;border: 2px solid rgb(204, 204, 204);border-radius: 8px;padding: 0.5rem;background-color: rgb(249, 249, 249);opacity: 1;z-index: 99999;position: relative;margin-bottom: 1rem;max-width: max-content;padding-top: 1rem;padding-bottom: 1rem;padding-left: 1rem;padding-right: 1rem;">
+	<div class="header-box">
+		<div id="download" class="toc-header" style="margin-top: 0px !important;display: grid;grid-template-columns: min-content 1fr;align-items: start;">
+			<div class="header-box-title" style="width: max-content; float: left; display: relative;"> 📦 Download</div>
+			<ul class="header-box-links" style="display: flex; gap: 3rem; padding-top: 0rem; margin-left: 1rem;">
+				<li style="margin-top: 0px;"><a href="https://mods.saito.io/settlers.saito" class="is-asset-link">Saito Module</a></li>
+				<li style="margin-top: 0px;"><a href="https://github.com/SaitoTech/saito/tree/master/node/mods/settlers" class="">Source Code</a></li>
+				<li style="margin-top: 0px;"><a href="https://wiki.saito.io/applications/install" class="">Installation Guide</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
 
 ![](/settlers-wide.png)
 <!-- <img src="/settlers-wide.png" style="width: 600px;"/> -->
