@@ -2,7 +2,7 @@
 title: Moderation Tools
 description: 
 published: true
-date: 2026-03-10T22:00:16.694Z
+date: 2026-03-10T22:00:57.649Z
 tags: 
 editor: markdown
 dateCreated: 2025-07-28T11:53:49.645Z
@@ -14,7 +14,7 @@ dateCreated: 2025-07-28T11:53:49.645Z
 			<div class="header-box-title" style="width: max-content; float: left; display: relative;"> 📦 Download</div>
 			<ul class="header-box-links" style="display: flex; gap: 3rem; padding-top: 0rem; margin-left: 1rem;">
 				<li style="margin-top: 0px;"><a href="https://mods.saito.io/modtools.saito">Saito Module</a></li>
-				<li style="margin-top: 0px;"><a href="https://github.com/SaitoTech/saito/tree/master/node/mods/mahjong" class="">Source Code</a></li>
+				<li style="margin-top: 0px;"><a href="https://github.com/SaitoTech/saito/tree/master/node/mods/modtools" class="">Source Code</a></li>
 				<li style="margin-top: 0px;"><a href="https://wiki.saito.io/applications/install" class="">Installation Guide</a></li>
 			</ul>
 		</div>
