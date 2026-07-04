@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2026-07-04T13:34:12.077Z
+date: 2026-07-04T13:44:32.349Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -59,4 +59,4 @@ Ready to change the default set of modules on your machine? For detailed instruc
 
 The version of Saito that will be installed above includes the saito-js NPM package. This is a pre-compiled binary of the backend Rust code as a WASM object. This binary object is what handles consensus operations such as block and transaction validation and most network operations.
 
-If you want to modify this backend code as part of development, you should install. It is also easy to set this up, but it requires support for Rust to be installed, so we have a separate page with instructions on how to get Rust running on your machine and .
+If you want to modify this backend code as part of development, it is easy to set this up, but it requires support for Rust to be installed, so we have a separate page with [instructions on how to compile and link](/install/full) the Rust backend code on your machine.
