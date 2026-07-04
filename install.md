@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2026-07-04T10:40:56.832Z
+date: 2026-07-04T13:34:12.077Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -10,7 +10,7 @@ dateCreated: 2024-10-15T23:32:31.744Z
 
 # Installing Saito
 
-This page is for those interested in running a network node. If you are interested in installing Saito on a remove VPS, we suggest using our [remote deployment guide](/install/deploy) to automate server on new machines. If you are installing Saito on a local machine, we suggest the following instructions.
+This page is for those interested in running a Saito node. If you are interested in installing Saito on a remove VPS, we recommend using our [remote deployment guide](/install/deploy) to automate installment on new machines. To install Saito on a local machine, we suggest the following instructions.
 
 ### Machine Requirements:
 
@@ -19,8 +19,7 @@ This page is for those interested in running a network node. If you are interest
 - Stack: node.js (v.16+), npm (v6+)
 - TypeScript
 
-If you are missing any of these tools we have dedicated pages to help you install them for [Linux](/install/linux), [Mac](/install/mac) and [Windows](/install/windows). Otherwise, simply follow the instructions below...
-
+If you are missing any of these tools we have dedicated pages to help you install them for [Linux](/install/linux), [Mac](/install/mac) and [Windows](/install/windows).
 
 ### 1. Download Saito
 
@@ -58,110 +57,6 @@ Ready to change the default set of modules on your machine? For detailed instruc
 
 ## Rust Client and WASM Support
 
-Saito includes a number of software packages coded in the Rust programming language and/or designed to compile into a WASM for use with the javascript server. If you are doing full-stack development that requires modifications to consensus you will require the following:
+The version of Saito that will be installed above includes the saito-js NPM package. This is a pre-compiled binary of the backend Rust code as a WASM object. This binary object is what handles consensus operations such as block and transaction validation and most network operations.
 
-### Step 1: Clone the Repository
-
-Navigate to the cloned directory and run the bootstrap script to prepare your environment. The script will work for Mac or Linux, auto-detecting the appropriate bootstrap script based on your environment. Select YES when asked if you want to "Build Project":
-
-````bash
-cd rust/scripts
-bash bootstrap.sh
-````
-
-If you want to run the Saito Rust client, you can now do so using the following, which enables debug logging:
-
-````bash
-RUST_LOG=debug cargo run
-````
-
-### Step 2: Compile WASM Package
-
-If you are using a Mac, please see our instructions on [installing WASM compiler for Mac](https://wiki.saito.io/install/saito-wasm/mac). Otherwise:
-
-````bash
-cd saito-wasm
-cargo install wasm-pack
-npm install
-npm run build
-````
-
-## Development Setup
-
-### 1. Git clone repo
-```
-git clone https://github.com/saitotech/saito
-```
-
-### 2. Run dev setup script
-```
-cd <repo>/rust/scripts
-./dev_setup.sh
-```
-
-Provide any expected inputs and wait till the script completes. Script will install all the required software, compile the code and locally link the npm packages.
-
-### 3. Link local saito-js package
-
-```
-cd <repo>/node/
-npm install
-npm link saito-js
-npm run compile
-```
-
-Now the node js server can be started with the locally linked saito-js package.
-
-### A. Locally linking wasm projects manually
-
-#### building and linking saito-wasm project
-```
-cd <repo>/rust/saito-wasm
-npm install
-npm run build
-npm link # this will setup saito-wasm to be locally linked by other projects
-```
-
-#### building and linking saito-js project
-```
-cd <repo>/rust/saito-js
-npm install
-npm link saito-wasm # this is linking previously built saito-wasm into saito-js project
-npm run build 
-cd dist 
-npm link # this will setup saito-js to be locally linked by other projects
-```
-
-Now link the local saito-js as in aboe step 3.
-
-Local links will stay there until npm install is called. So you don't need to run `npm link saito-js` everytime you compile but only when you run npm install.
-
-### B. Compiling new wasm code
-Once you do any rust changes, below is the procedure to compile wasm code. (Assuming saito-wasm and saito-js are locally linked)
-
-```
-cd <repo>/rust/saito-wasm
-npm run build
-cd <repo>/rust/saito-js
-npm run build
-```
-
-## C. Using the new wasm code in nodejs
-
-```
-cd <repo>/node/
-npm link saito-js
-npm run compile #or equivalent
-npm start
-```
-
-## Releasing new npms
-
-Once you test everything in the local environment. If you need to publish new npms with the changes, all you have to do is below steps.
-
-1. Increment the number in [repo]/rust/VERSION file. Make sure the incremented version number is not already used to publish an npm. (Check https://www.npmjs.com/~saitotech for latest npm versions)
-2. Push / merge changes to develop branch
-3. Create a PR from develop to master branch
-4. Wait till the PR is completed / green.
-5. Merge the PR.
-6. Now the Github actions will automatically run the CI process to publish the new npms. You can check the status in the https://github.com/SaitoTech/saito/actions page.
+If you want to modify this backend code as part of development, you should install. It is also easy to set this up, but it requires support for Rust to be installed, so we have a separate page with instructions on how to get Rust running on your machine and .
