@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2026-02-12T14:07:18.318Z
+date: 2026-07-04T10:40:56.832Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -10,16 +10,16 @@ dateCreated: 2024-10-15T23:32:31.744Z
 
 # Installing Saito
 
-This page assumes you want to run a Saito server locally to run or develop applications like the Saito Arcade, Videocall, or RedSquare. If you want to run Saito on a remote machine, we have a [remote deployment guide](/install/deploy) that includes a script which automates entire setup process. The rest of this page assumes you are installing on a local machine.
+This page is for those interested in running a network node. If you are interested in installing Saito on a remove VPS, we suggest using our [remote deployment guide](/install/deploy) to automate server on new machines. If you are installing Saito on a local machine, we suggest the following instructions.
 
-### Installation Requirements:
+### Machine Requirements:
 
 - Machine with at least 4GB RAM.
 - Build tools: git, g++, make, python, tsc
 - Stack: node.js (v.16+), npm (v6+)
 - TypeScript
 
-If you are missing any of these tools we have dedicated pages to help you install them for [Linux](/install/linux), [Mac](/install/mac) and [Windows](/install/windows). The remainder of these instructions assumes you have these packages installed and are comfortable using the command-line.
+If you are missing any of these tools we have dedicated pages to help you install them for [Linux](/install/linux), [Mac](/install/mac) and [Windows](/install/windows). Otherwise, simply follow the instructions below...
 
 
 ### 1. Download Saito
