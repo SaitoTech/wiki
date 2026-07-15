@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2026-01-08T11:18:39.430Z
+date: 2026-07-15T07:49:59.477Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -10,7 +10,7 @@ dateCreated: 2022-12-21T01:40:41.364Z
 
 # Saito Applications
 
-Applications on Saito look and feel like traditional web apps, but run on top of the Saito API and unlock the power of distributed web3 architecture. Browse some of the many Saito applications you can install and start using today if you clone our repo, or <a href="#build">learn about making your own application</a>
+Applications on Saito look and feel like traditional web apps, but run atop the Saito network. This gives all users a unique cryptographic identity, a public and private keypair for use signing messages and creating and transfer assets. Here are some of the many Saito applications you can install and start using today, or <a href="#build">learn how to make your own application</a>
 
 <br />
 
