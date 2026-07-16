@@ -2,7 +2,7 @@
 title: Saito Wallet
 description: Information about holding native Saito
 published: true
-date: 2025-09-07T00:58:29.851Z
+date: 2026-07-16T08:18:25.431Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-29T00:06:48.906Z
@@ -23,7 +23,7 @@ The first time you run a [Saito Application](https://wiki.saito.io/applications)
 This wallet and its addresses are used repeatedly until your browser cache is purged or deleted. To avoid loss of funds, users who hold non-trivial balances should **backup** their wallet. This involves extracting your private information from the browser as a file you can use to restore it in the future.
 
 <div style="text-align: center;margin-top:1rem">
-<img src="/wallet-backup-p1.png" alt="Image 1" style="width:80%;">
+<img src="/wallet-backup-p1.png" alt="Image 1" style="width:30%;">
 </div>
 
 
@@ -36,8 +36,9 @@ The easiest way to backup your wallet is simply to copy the private-key somewher
 <br>
 
 <div style="text-align: center;with:100%">
-<img src="/wallet-backup-p2.png" alt="Image 1" style="width:49%;">
-<img src="/wallet-backup-p3.png" alt="Image 1" style="width:49%;">
+<img src="/wallet-backup-p2.png" alt="Image 1" style="width:36%;">
+  <br>
+<img src="/wallet-backup-p3.png" alt="Image 1" style="width:36%;">
 </div>
 
 ## <div id="native"> How to make a Cold Wallet?</div>
