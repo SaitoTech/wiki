@@ -2,7 +2,7 @@
 title: Refactor 2026
 description: 
 published: true
-date: 2026-07-17T10:50:49.486Z
+date: 2026-07-17T10:52:02.719Z
 tags: 
 editor: markdown
 dateCreated: 2026-07-15T02:24:59.189Z
@@ -39,7 +39,7 @@ List digital goods for sale, walk away from your computer, and let Saito handle 
 
 ## Everything Works Together
 
-Publish a blog post, create access keys, list them for sale, and let readers purchase access from inside the Saito Stack application. Throughout the Saito App Suite, Saito applications now share wallets, scripts, and marketplace integration in ways that feel truly seemless. This is decentralization as it is meant to be -- without the incoherence of multiple smart contracts and inconsistent standards. [learn more...](/en/refactor-2026/applications)
+Publish a blog post, create access keys, list them for sale, and let readers purchase access from inside the Saito Stack application. Throughout the Saito App Suite, Saito applications now share wallets, scripts, and marketplace integration in ways that feel truly seemless. This is decentralization as it is meant to be -- without the incoherence of multiple smart contracts and inconsistent standards. [learn more...](/en/refactor-2026/integration)
 
 ## Blockchain That Feels Like Software
 
