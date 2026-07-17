@@ -2,7 +2,7 @@
 title: Refactor 2026 - User Experience
 description: 
 published: true
-date: 2026-07-17T12:51:06.902Z
+date: 2026-07-17T13:04:40.243Z
 tags: 
 editor: markdown
 dateCreated: 2026-07-17T10:53:59.421Z
@@ -10,84 +10,40 @@ dateCreated: 2026-07-17T10:53:59.421Z
 
 # Blockchain That Feels Like Software
 
-For many people, the hardest part of using blockchain applications isn't understanding the technology—it's waiting for the technology to catch up.
+For many people, the hardest part of using a blockchain isn't sending a transaction but wondering what is happening in the "void" that follows after the transaction is broadcast.
 
-Transactions disappear into the network without explanation. Interfaces freeze while waiting for confirmations. Wallets suddenly update without warning. Users are left wondering whether anything is happening at all.
+In networks with this problem, transactions disappear without explanation. Interfaces freeze while waiting for confirmations. Wallets receive payments and NFTs silently and the users are left wondering whether they have done everythign correctly and anything is happening at all.
 
-Refactor 2026 redesigns the experience from the ground up. Applications communicate with users, explain what they're doing, and update continuously as the network progresses. Instead of exposing the mechanics of the blockchain, Saito lets people focus on the task they are trying to accomplish.
+Refactor 2026 includes upgrades that make these issues disappear. Applications have been upgraded to communicate with users after transactions have been broadcast, explain what is happening and how long users should wait, and track the blockchain continuously to update as soon as the network confirms the results. Applications no longer leave users guessing.
 
-## Live Feedback
+Whether users are publishing blog posts, creating NFTs, making purchases, or testing application scripts, the improvements below allow applications to explain what is happening instead of just asking users to wait and trust the process....
 
-Applications no longer leave users guessing.
+## A More Response Wallet
 
-When the network is processing a transaction, applications display progress, estimate when the next block will arrive, and update automatically as new information becomes available.
+- Rust broadcasts granular events on network/wallet updates
+- Pending and confirmed balances displayed separately
+- UI tracks balance changes throughout confirmation
+- Elimination of edge-cases created by JS data-caches
+- Similar updates on NFT transfers and more
 
-Whether you're publishing a blog post, creating an NFT, making a purchase, or transferring digital assets, the interface explains what is happening instead of simply asking users to wait.
+## UI Components
 
-# User Experience
-
-## Responsive Applications
-
-- Rust broadcasts events to enable granular updates
-- UI tracks transaction status throughout confirmation
-- Reduced duplication and complexity in JS layer
-
-## Guided Workflows
-
-- NFT creation integrated directly into publishing workflows.
-- Multi-step publishing workflow for access-controlled content.
+- NFT creation is really good now
+- Simplified asset transfer/receipt flows too
 - Progressive disclosure of advanced features.
-- Simplified asset creation flows.
-
-## Wallet Improvements
-
-- Pending and confirmed balances displayed separately.
-- Improved synchronization with blockchain state.
-- More responsive balance updates.
-- Native asset management integrated into the wallet.
-
-## NFT Management
-
-- Redesigned NFT management interface.
-- Support for creating, viewing, splitting, and merging NFTs.
-- Improved NFT creation overlays.
-- Pre-populated NFT creation from applications.
-
-## Shared UI Components
-
-- Standardized overlay framework.
-- Reusable interface components across applications.
-- Common navigation and layout system.
-- Shared asset management components.
+- Applications can "pre-populate" NFT creation UIs
+- Applications can "pre-populate" Store listings
 
 ## Application Interfaces
 
-- RedSquare interface redesign.
-- Explorer interface redesign.
-- Store interface redesign.
-- Stack publishing workflow redesign.
+- General CSS upgrade
+- RedSquare interface redesign
+- Explorer interface redesign
+- Store interface redesign
+- Stack publishing workflow redesign
+- Videocall interface redesign
+- CSS Themes distributed as native digital assets.
 
-## Themes
+The most noticable change across applications is a shift to "progressive workflows" where UI components monitor the state of the blockchain and notify users when actions are expected to be completed, and then update again once they are. This removes a lot of uncertainty that users naturally have when using a distributed application.
 
-- Default platform theme simplified.
-- Theme architecture prepared for downloadable themes.
-- Themes distributed as native digital assets.
-
-## Platform Polish
-
-- CSS cleanup across applications.
-- Consistent styling throughout the platform.
-- Responsive layout improvements.
-- Standardized application behavior.
-
-These combine into more "progressive workflows" where components take actions and monitor the state of the blockchain in real-time to notify users when actions are completed. "Distributed" no longer means the application cannot inform you when the next step is ready.
-
-The means the biggest change in Refactor 2026 isn't any individual feature -- although there are many -- but how the platform feels when you use it:
-
-* Applications are faster.
-
-* Interfaces are clearer.
-
-* Ownership is easier to understand.
-
-Applications walk users through how to create access keys and NFTs and how to use them. The act of using the network provides a tutorial on how to use the network. By the time users are ready for more advanced features, they already have an intuitive understanding of how Saito works.
+These changes mean the biggest change in Refactor 2026 isn't any individual feature -- but how the platform teaches you what is happening as you use it. Instead of asking users to understand NFTs, transactions, blocks and confirmations, the network provides a tutorial on them through casual updates. By the time users are ready for more advanced features, they already have an intuitive understanding of how blockchain works.
