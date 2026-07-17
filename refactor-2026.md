@@ -2,7 +2,7 @@
 title: Refactor 2026
 description: 
 published: true
-date: 2026-07-17T10:14:45.726Z
+date: 2026-07-17T10:17:16.504Z
 tags: 
 editor: markdown
 dateCreated: 2026-07-15T02:24:59.189Z
