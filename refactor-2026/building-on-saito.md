@@ -2,7 +2,7 @@
 title: Refactor 2026 - Building on Saito
 description: 
 published: true
-date: 2026-07-17T10:54:52.819Z
+date: 2026-07-17T13:20:53.685Z
 tags: 
 editor: markdown
 dateCreated: 2026-07-17T10:54:52.819Z
@@ -14,90 +14,106 @@ Refactor 2026 is more than a collection of new features—it's a new foundation 
 
 Instead of spending weeks integrating wallets, tokens, NFTs, marketplaces, scripting systems, and blockchain APIs, developers can begin building immediately on top of infrastructure that is already shared across the network.
 
-The result is less time building plumbing and more time building applications.
+## Core Architecture
 
-## A Unified Platform
+- Reorganized `saito-core` into clearer architectural boundaries, separating consensus functionality from peer-to-peer networking.
+- Consensus logic consolidated under `core/consensus`, with networking infrastructure consolidated under `core/network`.
+- Simplified repository structure to better reflect the architecture of the platform.
+- Removed legacy abstractions and duplicate code paths accumulated over multiple development cycles.
+- Standardized naming conventions across the Rust, WASM, and JavaScript layers to reduce cognitive overhead when moving between codebases.
+- Simplified startup flow throughout the platform so components initialize through a more consistent lifecycle.
 
-Every Saito application is built on the same core architecture.
+## Rust ↔ WASM ↔ JavaScript
 
-Wallets, digital assets, programmable ownership, marketplaces, networking, cryptography, consensus, and user interface components all expose consistent APIs that are available throughout the platform.
+- Significantly expanded the Rust ↔ WASM interface, exposing substantially more consensus functionality to JavaScript.
+- `app.core.*` now provides direct access to consensus functionality without requiring application-specific wrappers.
+- Reduced the amount of handwritten middleware required when exposing new Rust functionality.
+- Streamlined the Rust → WASM → `saito-js` development pipeline, reducing the feedback loop for exposing new consensus functionality to applications.
+- Simplified object translation between Rust and JavaScript.
+- Reduced serialization overhead across the WASM boundary.
+- Standardized interface patterns across exported Rust modules.
 
-Developers learn one system instead of a collection of unrelated modules.
+## Networking
 
-## Direct Access to the Consensus Engine
+- Redesigned peer ownership model so peer objects exist independently of handshake completion.
+- Peer handshake and blockchain synchronization now execute in parallel rather than sequentially.
+- Faster initial synchronization for newly connected peers.
+- Simplified peer lifecycle throughout the networking layer.
+- Peer message handling no longer depends on taking ownership of peer objects.
+- Reduced contention when multiple messages are processed simultaneously.
+- Internal peer identity separated from public keys through unique peer UIDs.
+- Cleaner separation between peer identity, cryptographic identity, and network connections.
+- Improved congestion-control infrastructure for managing peer traffic.
+- Added gatekeeper functionality to monitor peer behavior and message throughput in real time.
+- Foundation for future bandwidth management and DDoS mitigation policies.
 
-Refactor 2026 dramatically expands the Rust/WASM interface.
+## Event System
 
-Applications can interact directly with blocks, transactions, wallets, assets, networking, cryptography, and consensus objects through JavaScript without maintaining duplicate implementations across multiple languages.
+- Reworked event architecture throughout the platform.
+- Clearer distinction between internal messages and application events.
+- More granular wallet lifecycle events.
+- More granular blockchain synchronization events.
+- More granular NFT lifecycle events.
+- Applications can react to specific state changes rather than broad refresh events.
+- Reduced reliance on polling throughout the platform.
 
-As the Rust consensus engine gains new capabilities, those capabilities become immediately available to application developers.
+## Wallet & Assets
 
-## Build Once, Reuse Everywhere
+- Wallet updated to support the native digital asset system.
+- Native support for programmable NFTs.
+- NFT split and merge operations integrated into wallet workflows.
+- Improved wallet notifications for asset lifecycle events.
+- Better synchronization between wallet state and application interfaces.
 
-Applications inherit functionality from the platform rather than implementing it independently.
+## RustScript
 
-Create a new digital asset, and every application understands it.
+- Complete scripting engine moved from JavaScript into Rust.
+- Consensus and application scripting now share a single implementation.
+- Human-readable scripting language with structured internal representation.
+- Script Abstract Syntax Tree (AST) represented as JSON for editing and serialization.
+- Common parser shared between consensus validation and development tools.
+- Native Pay-to-Script-Hash (P2SH) support added to the consensus engine.
+- Extensible opcode architecture simplifies the addition of new scripting primitives.
+- Built-in facilities for importing, testing, and debugging scripts against live transactions.
 
-Build a marketplace listing, and every wallet can manage it.
+## Developer Workflow
 
-Write a programmable ownership script, and every application can enforce it.
+- Simplified project layout throughout the repository.
+- Configuration files consolidated into dedicated configuration directories.
+- Startup scripts consolidated into dedicated script directories.
+- Browser, server, and export builds now follow a more consistent application structure.
+- Reduced number of supported startup paths throughout the codebase.
+- Simplified local development workflow.
+- New local linking pipeline allows developers to build against locally compiled Rust libraries without publishing intermediary packages.
+- Improved automation for local development environment setup.
+- Faster iteration when modifying consensus code.
 
-Instead of solving the same problems repeatedly, developers build on infrastructure that already exists.
+## Performance
 
-## Modern Development Workflow
+- Reduced waiting on asynchronous operations throughout the networking layer.
+- Greater use of parallel execution where dependencies allow.
+- Less copying of objects between Rust and JavaScript.
+- Lower runtime memory usage.
+- Reduced synchronization bottlenecks.
+- Faster propagation of blockchain events to applications.
+- Faster peer synchronization.
+- Better scalability under heavy network load.
 
-Refactor 2026 simplifies the development experience from the first line of code.
+## User Interface Framework
 
-A cleaner project structure, improved APIs, reusable UI components, standardized events, and better documentation make it easier to understand how applications fit together.
+- Continued migration toward a consistent component model based around `render()`.
+- Shared overlay architecture reused across applications.
+- More reusable UI components throughout the platform.
+- Better separation between application logic and presentation.
 
-New projects require less boilerplate and fewer custom integrations, allowing developers to prototype ideas more quickly.
+## Documentation & Maintainability
 
-## Powerful Building Blocks
+- Cleaner internal APIs.
+- More consistent naming throughout the platform.
+- Reduced boilerplate when exposing consensus functionality.
+- Simplified extension points for new consensus features.
+- Improved code organization across all three layers (`saito-core`, `saito-wasm`, and `saito-js`).
+- Lower maintenance burden through removal of duplicated implementations.
 
-Applications have access to capabilities that would traditionally require significant engineering effort to recreate.
 
-These include:
-
-- Native digital assets
-- Programmable ownership with RustScript
-- Asynchronous marketplace infrastructure
-- Integrated wallets
-- Cryptographic identity
-- Peer-to-peer networking
-- Consensus-secured data
-- Cross-application asset compatibility
-- Shared user interface components
-
-Because these are platform features rather than application features, developers can focus on solving domain-specific problems instead of rebuilding infrastructure.
-
-## Designed for Growth
-
-One of the guiding principles behind Refactor 2026 is that new capabilities should strengthen the entire platform.
-
-When new asset types are introduced, every application can use them.
-
-When RustScript gains new functionality, every developer can build with it.
-
-When the wallet improves, every application benefits automatically.
-
-This shared architecture allows the platform to evolve without fragmenting into incompatible applications or competing standards.
-
-## Open Source by Design
-
-Every part of the Saito platform is open source and designed to be extended.
-
-Developers are free to study the implementation, contribute improvements, build new modules, or create entirely new applications on top of the network.
-
-Rather than locking innovation behind proprietary infrastructure, Refactor 2026 provides a common foundation that the entire community can build upon.
-
-## Build the Next Generation of Applications
-
-Saito combines the flexibility of modern web development with the guarantees of decentralized consensus.
-
-Applications can be written using familiar JavaScript while taking advantage of native digital assets, programmable ownership, decentralized networking, and direct access to the blockchain's consensus engine.
-
-Whether you're building games, financial applications, publishing platforms, marketplaces, collaboration tools, communication software, or something entirely new, Refactor 2026 gives you a platform where the difficult infrastructure has already been solved.
-
-Build your application.
-
-The network does the rest.
+Whether developers are building games, financial applications, or working to improve the scalability of consensus code, all of these changes simplify the development experience. Many of the improvements outlined elsewhere in this upgrade would not have been possible were it not for these changes improving the speed of development and easy of Rust <--> JS integration.
