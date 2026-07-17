@@ -2,7 +2,7 @@
 title: Refactor 2026
 description: 
 published: true
-date: 2026-07-17T10:52:02.719Z
+date: 2026-07-17T10:58:32.963Z
 tags: 
 editor: markdown
 dateCreated: 2026-07-15T02:24:59.189Z
@@ -10,11 +10,11 @@ dateCreated: 2026-07-15T02:24:59.189Z
 
 # Refactor 2026
 
-Saito RC1 (2026) is the largest update to the Saito platform since mainnet. It brings together months of work across the networking stack, consensus engine, wallet and user interface into a single, cohesive update. Beyond improving usability and bringing DeFi onto the network, this upgrade amplifies our existing app suite and shows exactly why Saito-class networks are a decisive step forward for .
+Saito RC1 (2026) is the largest update to the Saito platform since mainnet. It brings together months of work across the networking stack, consensus engine, wallet and user interface into a single, cohesive upgrade. Beyond improving usability and adding DeFi support to the network, this release improves the look-and-feel of our app suite and shows why Saito-class networks are a decisive step forward.
 
-You will notice Saito feels fundamentally different. NFTs are useful and behave consistently across applications. Scripts protect and transfer assets at the consensus layer. Applications combine with each other in exponentially powerful ways, and developers face a simpler, more expressive architecture. Whether you are creating digital assets, publishing content, playing games, building applications, or just having a video call, the experience is fresh.
+You will notice Saito feels fundamentally different. NFTs are prominent and useful and behave consistently across applications. Scripts protect and help transfer assets. Applications reference each other in more powerful ways, and developers face a simpler architecture. Whether you are creating digital assets, playing games, writing a blog post, building applications, posting on RedSquare or just having a video call, the experience is fresh.
 
-Refactor 2026 is not a roadmap or a preview of future ideas. It is a snapshot of what the Saito network supports today. Given the breadth of changes, this page introduces the major capabilities that define this release and fit together to make Saito a decentralized platform for building world-class applications that are difficult or impossible to reproduce on alternate blockchain architectures.
+Refactor 2026 is not a roadmap or a preview of future ideas. It is a snapshot of what the Saito network supports today. Given the breadth of changes, this page summarizes the major capabilities that define this release. For details on the changes in any specific category dig deeper by exploring the actual changes live with our latest release.
 
 
 ## A Streamlined Rust Pipeline
