@@ -2,7 +2,7 @@
 title: Refactor 2026 - Saito Store
 description: 
 published: true
-date: 2026-07-17T10:51:36.260Z
+date: 2026-07-17T11:56:15.933Z
 tags: 
 editor: markdown
 dateCreated: 2026-07-17T10:51:36.260Z
@@ -10,94 +10,50 @@ dateCreated: 2026-07-17T10:51:36.260Z
 
 # The Saito Store
 
-The Saito Store is a decentralized marketplace built directly into the network. Instead of treating buying and selling as something each application must implement independently, Refactor 2026 provides a common marketplace where any digital asset on Saito can be discovered, listed, purchased, and transferred securely.
+The Saito Store is a decentralized marketplace built directly into the network. List an item for sale, close your computer, and let the network handle the transaction whenever a buyer arrives. Ownership transfers automatically once triggered by the buyer. In the meantime, sellers can enjoy the beach.
 
-Whether you're selling software, game assets, subscriptions, digital collectibles, themes, access keys, or entirely new kinds of digital property, every Saito application can take advantage of the same marketplace infrastructure.
+The launch of the Saito Store makes buying and selling on Saito feel much closer to traditional online marketplaces while preserving the security guarantees of decentralized ownership and atomic execution on a distributed ledger. Some of the work done to achieve this under Refactor 2026 is listed below. Whether you're selling software, game assets, subscriptions, css themes, access keys, or other kinds of digital property, every Saito application can now take advantage of the ability to hook into assets that can be bought and sold.
 
-## Buy and Sell Without Being Online
 
-Most decentralized marketplaces require buyers and sellers to be online at the same time to complete a transaction.
+## Asynchronous Functionality
 
-The Saito Store removes that requirement.
+- Saito Store redesigned as asynchronous indexing-service
+- automatic compatibility with every NFT asset
+- use of Pay-to-Script-Hash (P2SH) to secure listed assets
+- sellers no longer transfer assets to server custody
+- Store no longer mediates sales, just observes on-chain payments
+- Sales valid whenever purchase conditions are satisfied.
+- Network coordinates sales without requiring server interaction.
 
-List an item for sale, close your computer, and let the network handle the transaction whenever a buyer arrives. Ownership transfers automatically once the conditions of the sale have been satisfied, allowing commerce to continue without requiring either party to remain connected.
+## Wallet and Application Integrations
 
-This makes buying and selling on Saito feel much closer to traditional online marketplaces while preserving the security guarantees of decentralized ownership.
+- direct integration with Stack publishing overlay
+- direct integration with NFT view overlay
+- open API on listing page to permit similar integration elsewhere
+- automatic ownership updates through events after purchases
 
-## Secure by Design
+## NFT Workflows
 
-Every listing is protected using Saito's programmable ownership system.
+- Create NFTs directly from publishing workflows.
+- Pre-populated NFT creation overlays.
+- Marketplace-ready NFT creation.
+- Improved NFT management interface.
+- Native support for programmable ownership.
+- intuitive UI for store management / url-sharing
 
-Instead of trusting a marketplace operator to hold assets or coordinate transactions, ownership is secured by the blockchain itself. Digital assets remain under cryptographic control until the conditions of the sale are fulfilled, after which ownership transfers automatically to the buyer.
+## User Interface
 
-This allows developers to build marketplaces without introducing trusted intermediaries or sacrificing user control over digital property.
+- UI/UX modelled on Taobao for digital/physical sales
+- UI/UX components designed for text-light listings
 
-## One Marketplace for Every Application
+## Architectural Shift
 
-The Store isn't tied to a single application.
+- The Store evolves from a standalone marketplace into shared platform infrastructure.
+- Applications inherit marketplace functionality instead of implementing buying and selling independently.
+- Commerce becomes a native capability of the Saito platform rather than a feature recreated by every application.
 
-Any Saito application can create listings, browse existing products, or complete purchases using the same marketplace infrastructure.
+Refactor 2026 treats decentralized commerce as a humdrum form of atomic exchange. Instead of asking developers to build marketplaces, payment systems, and escrow services, Saito provides these capabilities as part of the platform itself.
 
-A game can sell digital items.
-
-A publisher can sell access to premium content.
-
-Developers can distribute software licenses.
-
-Artists can sell digital collectibles.
-
-Communities can issue memberships.
-
-Because every application uses the same underlying asset system, users don't need separate wallets, separate marketplaces, or custom integrations for every project they use.
-
-## Every Asset Is Ready to Sell
-
-The Store automatically understands every native asset on the network.
-
-Applications don't need to write marketplace code for every new token or NFT they create.
-
-If an asset exists on Saito, it can be listed, transferred, and purchased through the Store using the same interface as every other asset.
-
-This dramatically reduces development effort while making digital assets immediately useful throughout the ecosystem.
-
-## More Than Digital Goods
-
-Although the Store is ideal for buying and selling digital products, its underlying marketplace infrastructure supports many different kinds of ownership.
-
-Developers can build applications around:
-
-- Software licenses
-- Premium subscriptions
-- Membership passes
-- Game items
-- NFTs
-- Access credentials
-- Event tickets
-- Collectibles
-- Digital services
-
-As new applications are built, the Store grows naturally alongside the rest of the ecosystem without requiring new marketplace infrastructure each time.
-
-## A Shared Economy
-
-Because every Saito application uses the same wallet, asset system, and marketplace, users participate in a single digital economy rather than a collection of isolated applications.
-
-Assets move naturally between applications.
-
-Purchases appear immediately in the user's wallet.
-
-Ownership can be verified anywhere on the network.
-
-Applications inherit marketplace functionality instead of rebuilding it from scratch.
-
-The result is a platform where commerce becomes another shared capability of the network rather than a feature implemented separately by every developer.
-
-## Commerce as Infrastructure
-
-Refactor 2026 treats decentralized commerce the same way it treats wallets, digital assets, and programmable ownership—as core infrastructure available to every application.
-
-Instead of asking developers to build marketplaces, payment systems, escrow services, and ownership verification independently, Saito provides these capabilities as part of the platform itself.
-
-Developers focus on creating products.
+Users can focus on creating NFTs, and list them for sale directly from their browser. Users can explore the listings that other users have put on-chain through the Saito Store or just by tracking what listings are published directly to the blockchain.
 
 The network handles the ownership, settlement, and exchange.
