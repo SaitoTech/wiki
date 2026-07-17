@@ -2,7 +2,7 @@
 title: Refactor 2026
 description: 
 published: true
-date: 2026-07-17T10:46:02.398Z
+date: 2026-07-17T10:48:20.834Z
 tags: 
 editor: markdown
 dateCreated: 2026-07-15T02:24:59.189Z
@@ -17,16 +17,15 @@ You will notice Saito feels fundamentally different. NFTs are useful and behave 
 Refactor 2026 is not a roadmap or a preview of future ideas. It is a snapshot of what the Saito network supports today. Given the breadth of changes, this page introduces the major capabilities that define this release and fit together to make Saito a decentralized platform for building world-class applications that are difficult or impossible to reproduce on alternate blockchain architectures.
 
 
-## A Faster, Simpler Platform
+## A Streamlined Rust Pipeline
 
 Efficiency gains in the Rust/WASM pipeline make Saito nodes faster and more scalable. Applications also feel more responsive as a result. Under the hood, these improvements allow developers to access almost any function that exists in the Rust layer as if it is coded in javascript, allowing new kinds of DeFi applications to be built that are not possible on EVMs → [learn more...](/en/refactor-2026/rust-pipeline)
 
 
-## Tokens, NFTs, and 
+## Assets on the Network
 
 Create your own tokens on Saito, and create and send NFTs as easily as ordinary payments, splitting and merging them or locking them into programmable scripts that support multisig and enforced royalty payments and more. Whether you're creating game assets, access keys, subscriptions, collectibles, or your own cryptocurrency, every asset on Saito works automatically in every Saito application without the need for custom smart contracts or application-specific integrations → [learn more...](/en/refactor-2026/rust-pipeline)
 
-**Learn more →** *Native Digital Assets*
 
 ## Decentralized Finance (DeFi) Support
 
