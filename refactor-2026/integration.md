@@ -2,7 +2,7 @@
 title: Refactor 2026 - Integration
 description: 
 published: true
-date: 2026-07-17T12:04:24.109Z
+date: 2026-07-17T12:14:45.232Z
 tags: 
 editor: markdown
 dateCreated: 2026-07-17T10:52:33.416Z
@@ -18,20 +18,21 @@ Saito applications are built on a common platform. They share the same wallet, t
 
 The result is a platform where applications become more valuable as new ones are added.
 
+## System Integration
+- granulad events tracking SAITO/NFT transfters
+- NFT creation overlays programmatically invokable
+- app.core.* heirarchy brings Rust functions into JS
 
-## Stack Integration
+## Applications
 
 - Publishing workflow integrated with NFT creation
 - Access Keys can be created directly during publication
 - Access Keys can be listed in the Store immediately after creation
-
-## Store Integration
-
 - Saito NFT Listings integrate with Store listing components
 - Store UI Components can be invokved by 3rd party apps
 - Shared NFT ownership/display components Store and Wallet
 
-## Short Links
+## Links and Sharing
 
 - Shortlink generation moved into `ModTemplate`.
 - Modules can generate shareable links through a common API.
@@ -39,12 +40,8 @@ The result is a platform where applications become more valuable as new ones are
 - Open Graph support integrated into the shared shortlink architecture.
 
 
-## More Than an Ecosystem
+Other blockchain ecosystems are mostly composed of isolated applications that have little in common. These applications run on private servers with off-chain databases and restricted user accounts. They read and write transactions to the chain and have little else in common.
 
-Many blockchain ecosystems are collections of independent applications that happen to share an underlying blockchain. Those applications are run by different developers on different servers and with private databases. Users must separately create accounts to create assets or list them.
+Saito is something different.
 
-Saito is becoming something different.
-
-Refactor 2026 continues our work building the network into a unified application platform where wallets, digital assets, marketplaces and other applications are allowed to work together from the beginning. Developers can provide applications that limit how their own code is used, but cannot prevent users from bypassing it and interacting directly with the assets listed on-chain.
-
-P2SH support and increasingly flexible core UI components make this form of integration much easier. Instead of developers preferring to stitch functionality together outside Saito, it is easier to bring external functionality into Saito and build on a foundation that already provides maximum utility.
+Refactor 2026 continues our work building the Saito network into a unified environment where wallets, digital assets and applications work together. Developers can provide applications that do not rely on existing components, but -- as in other open source ecosystems like Linux -- it is easier to integrate with other open source tools and benefit from existing network effects. 
