@@ -2,7 +2,7 @@
 title: Refactor 2026 - Integration
 description: 
 published: true
-date: 2026-07-17T12:14:45.232Z
+date: 2026-07-17T12:44:46.157Z
 tags: 
 editor: markdown
 dateCreated: 2026-07-17T10:52:33.416Z
