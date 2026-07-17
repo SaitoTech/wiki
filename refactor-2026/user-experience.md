@@ -2,7 +2,7 @@
 title: Refactor 2026 - User Experience
 description: 
 published: true
-date: 2026-07-17T10:53:59.421Z
+date: 2026-07-17T12:51:06.902Z
 tags: 
 editor: markdown
 dateCreated: 2026-07-17T10:53:59.421Z
@@ -24,60 +24,70 @@ When the network is processing a transaction, applications display progress, est
 
 Whether you're publishing a blog post, creating an NFT, making a purchase, or transferring digital assets, the interface explains what is happening instead of simply asking users to wait.
 
-## Faster, More Responsive Applications
+# User Experience
 
-Refactor 2026 improves performance throughout the platform.
+## Responsive Applications
 
-A streamlined Rust/WASM pipeline, more efficient event handling, and better communication between applications and the consensus engine reduce unnecessary work throughout the system.
+- Rust broadcasts events to enable granular updates
+- UI tracks transaction status throughout confirmation
+- Reduced duplication and complexity in JS layer
 
-The result is an interface that feels faster, reacts more quickly, and stays synchronized with the network without constant refreshes or polling.
+## Guided Workflows
 
-## Consistent Design
+- NFT creation integrated directly into publishing workflows.
+- Multi-step publishing workflow for access-controlled content.
+- Progressive disclosure of advanced features.
+- Simplified asset creation flows.
 
-Every Saito application now builds on the same collection of reusable interface components.
+## Wallet Improvements
 
-Wallets, overlays, navigation, forms, asset management, and marketplace interactions all share common design patterns that make applications feel familiar from the moment users open them.
+- Pending and confirmed balances displayed separately.
+- Improved synchronization with blockchain state.
+- More responsive balance updates.
+- Native asset management integrated into the wallet.
 
-Learning one Saito application makes the next one easier to use.
+## NFT Management
 
-## Better Digital Asset Management
+- Redesigned NFT management interface.
+- Support for creating, viewing, splitting, and merging NFTs.
+- Improved NFT creation overlays.
+- Pre-populated NFT creation from applications.
 
-Managing digital assets has become significantly simpler.
+## Shared UI Components
 
-Native support for tokens, NFTs, subscriptions, access keys, and other digital property is built directly into the wallet and shared across applications.
+- Standardized overlay framework.
+- Reusable interface components across applications.
+- Common navigation and layout system.
+- Shared asset management components.
 
-Users no longer need to learn different interfaces for every type of asset they own.
+## Application Interfaces
 
-## Progressive Workflows
+- RedSquare interface redesign.
+- Explorer interface redesign.
+- Store interface redesign.
+- Stack publishing workflow redesign.
 
-Complex blockchain operations are broken into simple, guided steps.
+## Themes
 
-Creating access-controlled content can automatically lead to creating an NFT.
+- Default platform theme simplified.
+- Theme architecture prepared for downloadable themes.
+- Themes distributed as native digital assets.
 
-Publishing a digital product can flow naturally into listing it on the Saito Store.
+## Platform Polish
 
-Applications introduce advanced capabilities only when they become relevant, allowing new users to get started quickly while still providing experienced users with powerful tools.
+- CSS cleanup across applications.
+- Consistent styling throughout the platform.
+- Responsive layout improvements.
+- Standardized application behavior.
 
-## Less Blockchain, More Application
+These combine into more "progressive workflows" where components take actions and monitor the state of the blockchain in real-time to notify users when actions are completed. "Distributed" no longer means the application cannot inform you when the next step is ready.
 
-One of the goals of Refactor 2026 is to make blockchain technology less visible.
+The means the biggest change in Refactor 2026 isn't any individual feature -- although there are many -- but how the platform feels when you use it:
 
-Users shouldn't need to understand consensus, transaction propagation, scripting, or asset standards in order to publish content, play games, collaborate with others, or buy and sell digital goods.
+* Applications are faster.
 
-The blockchain continues to provide security and ownership guarantees, but applications present those capabilities through familiar software experiences instead of blockchain-specific concepts.
+* Interfaces are clearer.
 
-## Designed for Everyday Use
+* Ownership is easier to understand.
 
-The biggest change in Refactor 2026 isn't any individual feature—it's how the platform feels.
-
-Applications are faster.
-
-Interfaces are clearer.
-
-Ownership is easier to understand.
-
-Digital assets move naturally between applications.
-
-The network communicates with users instead of expecting users to understand the network.
-
-The result is a blockchain platform that behaves less like experimental technology and more like software people can confidently use every day.
+Applications walk users through how to create access keys and NFTs and how to use them. The act of using the network provides a tutorial on how to use the network. By the time users are ready for more advanced features, they already have an intuitive understanding of how Saito works.
