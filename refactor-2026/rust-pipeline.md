@@ -2,7 +2,7 @@
 title: Refactor 2026 - Rust Pipeline
 description: 
 published: true
-date: 2026-07-17T11:04:21.113Z
+date: 2026-07-17T11:04:42.604Z
 tags: 
 editor: markdown
 dateCreated: 2026-07-17T10:45:19.381Z
@@ -16,7 +16,6 @@ The indirect result is a platform that feels more responsive. Applications load 
 
 ## Rust / WASM Architecture
 
-- Rust becomes the single source of truth for most consensus logic.
 - Significant expansion of the Rust ↔ WASM interface.
 - Generic object bridge between Rust and JavaScript instead of many hand-written wrappers.
 - Most Rust structs can now be exposed directly to JavaScript.
