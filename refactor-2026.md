@@ -2,7 +2,7 @@
 title: Refactor 2026
 description: 
 published: true
-date: 2026-07-17T09:35:25.293Z
+date: 2026-07-17T10:11:03.813Z
 tags: 
 editor: markdown
 dateCreated: 2026-07-15T02:24:59.189Z
@@ -20,54 +20,47 @@ Refactor 2026 is not a roadmap or a preview of future ideas. It is a snapshot of
 
 ## A Faster, Simpler Platform
 
-Saito's architecture has streamlined into a clean pipeline between a core Rust-based consensus layer, and external javascript-focused layers needed for browser applications. Developers benefit from a more consistent object model, a dramatically simpler API, richer event handling, improved networking performance, and a development workflow that allows new capabilities to move naturally through the entire stack.
+Efficiency gains in the Rust/WASM pipeline make Saito nodes faster and more scalable. Applications also feel more responsive as a result. Under the hood, these improvements allow developers to access almost any function that exists in the Rust layer as if it is coded in javascript, allowing new kinds of DeFi applications to be built that are not possible on EVMs → [learn more...](/en/refactor-2026/rust-pipeline)
 
-**Learn more →** *A Faster, Simpler Platform*
+---
 
+## Tokens, NFTs, and 
 
-
-## Native Digital Assets
-
-Digital assets are now first-class citizens throughout the platform. NFTs support fractional ownership, merging, and partial transfers, while native tokens integrate directly into the wallet and every Saito application. Assets behave consistently regardless of how they are created or where they are used.
+Create your own tokens on Saito, and create and send NFTs as easily as ordinary payments, splitting and merging them or locking them into programmable scripts that support multisig and enforced royalty payments and more. Whether you're creating game assets, access keys, subscriptions, collectibles, or your own cryptocurrency, every asset on Saito works automatically in every Saito application without the need for custom smart contracts or application-specific integrations → [learn more...](/en/refactor-2026/rust-pipeline)
 
 **Learn more →** *Native Digital Assets*
 
+---
+
+## Decentralized Finance (DeFi) Support
+
+Saito now supports DeFi applications. Even better, our RustScript programming language allows you to quickly and easy write scripts that specify who can spend assets, access network-protected content, claim rewards, or enjoy alumni benefits. And the same scripting language that powers P2SH applications can be used by applications, making ownership of NFTs something Saito Applications can require as a prerequisite for joining communicaties, connecting with friends, and more → [learn more...](/en/refactor-2026/rustscript)
+
+---
+
+## Buy and Sell Without Being Online
+
+List digital goods for sale, walk away from your computer, and let Saito handle the transaction whenever a buyer arrives. New applications like the Saito Store use programmable scripts to let buyers and sellers exchange assets securely without trusting a marketplace to hold their funds or NFTs. Themes, subscriptions, collectibles, applications, game assets, and more can be exchanged in secure atomic swaps that can execute anytime and from anywhere in the Saito ecosystem → [learn more...](/en/refactor-2026/saito-store)
 
 
-## Programmable Ownership
+---
 
-RustScript introduces a unified scripting engine that powers both applications and consensus. Scripts can protect assets, control access, and secure Pay-to-Script-Hash transactions using a visual editor designed to make programmable ownership accessible without sacrificing flexibility for advanced users.
+## Everything Works Together
 
-**Learn more →** *Programmable Ownership*
+Publish a blog post, create access keys, list them for sale, and let readers purchase access from inside the Saito Stack application. Throughout the Saito App Suite, Saito applications now share wallets, scripts, and marketplace integration in ways that feel truly seemless. This is decentralization as it is meant to be -- without the incoherence of multiple smart contracts and inconsistent standards. [learn more...](/en/refactor-2026/applications)
 
-
-
-## The Integrated Marketplace
-
-The Saito Store provides a marketplace for digital assets, applications, subscriptions, themes, and other programmable content. Listings remain under cryptographic control, transactions settle atomically, and applications integrate marketplace functionality directly into their workflows.
-
-**Learn more →** *The Integrated Marketplace*
-
-
-
-## Applications Working Together
-
-Applications now share common platform capabilities instead of implementing them independently. Publishing content, creating access keys, listing assets for sale, transferring ownership, and validating permissions all operate through a unified set of platform services that make the ecosystem feel connected and consistent.
-
-**Learn more →** *Applications Working Together*
-
-
+---
 
 ## A Better User Experience
 
-Refactor 2026 includes a comprehensive refresh of the user experience across the platform. Shared interface components, improved responsiveness, clearer transaction feedback, streamlined workflows, redesigned applications, and a simplified visual language make the network easier to understand while remaining faithful to its decentralized foundations.
+Every major application has been reviewed and refined to make the platform easier to understand and more enjoyable to use. Cleaner interfaces, improved navigation, clearer progress indicators, and faster updates help users understand what the network is doing without needing to understand how the blockchain works.
 
 **Learn more →** *A Better User Experience*
 
-
+---
 
 ## Building on Saito
 
-Developers benefit from cleaner APIs, reusable UI components, standardized application architecture, improved documentation, consistent naming conventions, and a platform that exposes powerful blockchain capabilities through intuitive abstractions. Building on Saito is now faster, simpler, and more predictable.
+Developers can spend less time connecting systems together and more time building applications. Shared interface components, consistent APIs, reusable workflows, and improved documentation make it easier to create software that integrates naturally with the rest of the Saito ecosystem.
 
 **Learn more →** *Building on Saito*
