@@ -2,7 +2,7 @@
 title: Refactor 2026
 description: 
 published: true
-date: 2026-07-17T10:48:20.834Z
+date: 2026-07-17T10:50:49.486Z
 tags: 
 editor: markdown
 dateCreated: 2026-07-15T02:24:59.189Z
@@ -29,7 +29,7 @@ Create your own tokens on Saito, and create and send NFTs as easily as ordinary 
 
 ## Decentralized Finance (DeFi) Support
 
-Saito now supports DeFi applications. Even better, our RustScript programming language allows you to quickly and easy write scripts that specify who can spend assets, access network-protected content, claim rewards, or enjoy alumni benefits. And the same scripting language that powers P2SH applications can be used by applications, making ownership of NFTs something Saito Applications can require as a prerequisite for joining communicaties, connecting with friends, and more → [learn more...](/en/refactor-2026/rustscript)
+Saito now supports DeFi applications. Even better, our RustScript programming language allows you to quickly and easy write scripts that specify who can spend assets, access network-protected content, claim rewards, or enjoy alumni benefits. And the same scripting language that powers P2SH applications can be used by applications, making ownership of NFTs something Saito Applications can require as a prerequisite for joining communicaties, connecting with friends, and more → [learn more...](/en/refactor-2026/decentralized-finance)
 
 
 ## Buy and Sell Without Being Online
