@@ -2,7 +2,7 @@
 title: Refactor 2026
 description: 
 published: true
-date: 2026-07-17T10:17:16.504Z
+date: 2026-07-17T10:27:40.925Z
 tags: 
 editor: markdown
 dateCreated: 2026-07-15T02:24:59.189Z
@@ -10,7 +10,7 @@ dateCreated: 2026-07-15T02:24:59.189Z
 
 # Refactor 2026
 
-Saito RC1 (2026) is the largest update to the Saito platform since mainnet. It brings together months of work across the networking stack, consensus engine, wallet and user interface, and application ecosystem into a single, cohesive platform. Beyond improving features, the work amplifies them and shows exactly why Saito-class networks mark a decisive step forward for.
+Saito RC1 (2026) is the largest update to the Saito platform since mainnet. It brings together months of work across the networking stack, consensus engine, wallet and user interface into a single, cohesive update. Beyond improving usability and bringing DeFi onto the network, this upgrade amplifies our existing app suite and shows exactly why Saito-class networks are a decisive step forward for .
 
 You will notice Saito feels fundamentally different. NFTs are useful and behave consistently across applications. Scripts protect and transfer assets at the consensus layer. Applications combine with each other in exponentially powerful ways, and developers face a simpler, more expressive architecture. Whether you are creating digital assets, publishing content, playing games, building applications, or just having a video call, the experience is fresh.
 
