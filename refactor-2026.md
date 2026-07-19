@@ -2,7 +2,7 @@
 title: Refactor 2026
 description: 
 published: true
-date: 2026-07-19T03:18:37.044Z
+date: 2026-07-19T03:41:07.899Z
 tags: 
 editor: markdown
 dateCreated: 2026-07-15T02:24:59.189Z
@@ -10,7 +10,9 @@ dateCreated: 2026-07-15T02:24:59.189Z
 
 # Refactor 2026
 
-**Saito RC1 (2026) is the largest update to the Saito platform since mainnet.** It brings together months of work across the networking stack, consensus engine, and user interface into a single, cohesive upgrade. Beyond improving usability and adding DeFi support to the network, this release brings Saito to a new level of usability.
+> Status: RC1
+
+**Saito Refactor (2026) is the largest update to the Saito platform since mainnet.** It brings together months of work across the networking stack, consensus engine, and user interface into a single, cohesive upgrade. Beyond improving usability and adding DeFi support to the network, this release brings Saito to a new level of usability.
 
 You will notice Saito feels different, not just faster and more polished: 
 * NFTs are prominent and behave consistently across applications
