@@ -2,7 +2,7 @@
 title: Refactor 2026 - Building on Saito
 description: 
 published: true
-date: 2026-07-17T13:20:53.685Z
+date: 2026-07-19T03:48:11.240Z
 tags: 
 editor: markdown
 dateCreated: 2026-07-17T10:54:52.819Z
@@ -10,7 +10,7 @@ dateCreated: 2026-07-17T10:54:52.819Z
 
 # Building on Saito
 
-Refactor 2026 is more than a collection of new features—it's a new foundation for application development. The platform has been redesigned to reduce complexity, eliminate duplication, and expose far more of the blockchain's capabilities directly to developers.
+Refactor 2026 is more than a collection of new features, it is a **new foundation for application development**. The platform has been redesigned to reduce complexity, eliminate duplication, and expose far more of the blockchain's capabilities directly to developers.
 
 Instead of spending weeks integrating wallets, tokens, NFTs, marketplaces, scripting systems, and blockchain APIs, developers can begin building immediately on top of infrastructure that is already shared across the network.
 
@@ -27,7 +27,7 @@ Instead of spending weeks integrating wallets, tokens, NFTs, marketplaces, scrip
 
 - Significantly expanded the Rust ↔ WASM interface, exposing substantially more consensus functionality to JavaScript.
 - `app.core.*` now provides direct access to consensus functionality without requiring application-specific wrappers.
-- Reduced the amount of handwritten middleware required when exposing new Rust functionality.
+- Reduced the amount of custom middleware required when exposing new Rust functionality.
 - Streamlined the Rust → WASM → `saito-js` development pipeline, reducing the feedback loop for exposing new consensus functionality to applications.
 - Simplified object translation between Rust and JavaScript.
 - Reduced serialization overhead across the WASM boundary.
