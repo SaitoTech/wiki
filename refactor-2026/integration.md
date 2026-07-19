@@ -2,7 +2,7 @@
 title: Refactor 2026 - Integration
 description: 
 published: true
-date: 2026-07-17T12:44:46.157Z
+date: 2026-07-19T03:54:19.532Z
 tags: 
 editor: markdown
 dateCreated: 2026-07-17T10:52:33.416Z
@@ -19,7 +19,7 @@ Saito applications are built on a common platform. They share the same wallet, t
 The result is a platform where applications become more valuable as new ones are added.
 
 ## System Integration
-- granulad events tracking SAITO/NFT transfters
+- granular events tracking SAITO/NFT transfters
 - NFT creation overlays programmatically invokable
 - app.core.* heirarchy brings Rust functions into JS
 
@@ -42,6 +42,6 @@ The result is a platform where applications become more valuable as new ones are
 
 Other blockchain ecosystems are mostly composed of isolated applications that have little in common. These applications run on private servers with off-chain databases and restricted user accounts. They read and write transactions to the chain and have little else in common.
 
-Saito is something different.
+The Saito stack is something different.
 
 Refactor 2026 continues our work building the Saito network into a unified environment where wallets, digital assets and applications work together. Developers can provide applications that do not rely on existing components, but -- as in other open source ecosystems like Linux -- it is easier to integrate with other open source tools and benefit from existing network effects. 
