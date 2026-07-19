@@ -2,7 +2,7 @@
 title: Refactor 2026
 description: 
 published: true
-date: 2026-07-17T13:26:16.739Z
+date: 2026-07-19T02:54:35.485Z
 tags: 
 editor: markdown
 dateCreated: 2026-07-15T02:24:59.189Z
@@ -12,9 +12,15 @@ dateCreated: 2026-07-15T02:24:59.189Z
 
 Saito RC1 (2026) is the largest update to the Saito platform since mainnet. It brings together months of work across the networking stack, consensus engine, and user interface into a single, cohesive upgrade. Beyond improving usability and adding DeFi support to the network, this release brings Saito to a new level of usability.
 
-You will notice Saito feels fundamentally different. NFTs are prominent and behave consistently across applications. Scripts define how assets can be transferred but show up represented as "objects" like Access Keys. Applications reference these objects in powerful ways, and developers face a simpler architecture. Whether users are creating digital assets, playing games, writing a blog post, building applications, posting on RedSquare or just having a video call, the experience is good.
+You will notice Saito feels different, not just faster and more polished: 
+* NFTs are prominent and behave consistently across applications. 
+* Scripts define how assets can be transferred but show up represented as "objects" like Access Keys. 
+* Applications reference these objects in powerful ways
+* User developers face a simpler architecture. 
 
-Refactor 2026 is not a roadmap or a preview of future ideas. It is a snapshot of what the Saito network supports today. Given the breadth of changes, this page summarizes the major capabilities in the upgrade. For more specific details on the changes made in any category we invite readers to consult the detailed change logs in each subsection below.
+Whether users are creating digital assets, playing games, writing a blog post, building applications, posting on RedSquare or just having a video call, the experience is good.
+
+This page is not a roadmap or a preview of future ideas. It is a snapshot of what the Saito network supports today. Given the breadth of changes, this page summarizes the major capabilities in the upgrade. For more specific details on the changes made in any category we invite readers to consult the detailed change logs in each subsection below.
 
 
 ## A Streamlined Rust Pipeline
