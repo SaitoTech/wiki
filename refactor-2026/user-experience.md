@@ -2,7 +2,7 @@
 title: Refactor 2026 - User Experience
 description: 
 published: true
-date: 2026-07-17T13:04:40.243Z
+date: 2026-07-19T03:51:36.102Z
 tags: 
 editor: markdown
 dateCreated: 2026-07-17T10:53:59.421Z
@@ -28,9 +28,9 @@ Whether users are publishing blog posts, creating NFTs, making purchases, or tes
 
 ## UI Components
 
-- NFT creation is really good now
-- Simplified asset transfer/receipt flows too
-- Progressive disclosure of advanced features.
+- NFT creation is slick
+- Simplified asset transfer/receipt flows
+- Progressive disclosure of advanced features
 - Applications can "pre-populate" NFT creation UIs
 - Applications can "pre-populate" Store listings
 
@@ -46,4 +46,4 @@ Whether users are publishing blog posts, creating NFTs, making purchases, or tes
 
 The most noticable change across applications is a shift to "progressive workflows" where UI components monitor the state of the blockchain and notify users when actions are expected to be completed, and then update again once they are. This removes a lot of uncertainty that users naturally have when using a distributed application.
 
-These changes mean the biggest change in Refactor 2026 isn't any individual feature -- but how the platform teaches you what is happening as you use it. Instead of asking users to understand NFTs, transactions, blocks and confirmations, the network provides a tutorial on them through casual updates. By the time users are ready for more advanced features, they already have an intuitive understanding of how blockchain works.
+These changes mean the biggest change in Refactor 2026 isn't any individual feature, the platform now teaches you what is happening as you use it. Instead of asking users to understand NFTs, transactions, blocks and confirmations, the network provides a tutorial on them through casual updates. By the time users are ready for more advanced features, they already have an intuitive understanding of how blockchain works.
