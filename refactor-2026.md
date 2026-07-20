@@ -2,7 +2,7 @@
 title: Refactor 2026
 description: 
 published: true
-date: 2026-07-20T04:42:46.283Z
+date: 2026-07-20T13:08:12.322Z
 tags: 
 editor: markdown
 dateCreated: 2026-07-15T02:24:59.189Z
@@ -10,7 +10,9 @@ dateCreated: 2026-07-15T02:24:59.189Z
 
 # Refactor 2026
 
-> Status: RC1
+> **Status: RC1 Target Release Date: August 3rd. 2026.**
+> *The Release Candidate is a feature complete release of the software for final public user and acceptance testing. If all tests are passed the candidate becomes the release version.*
+
 
 **Saito Refactor (2026) is the largest update to the Saito platform since mainnet.** It brings together months of work across the networking stack, consensus engine, and user interface into a single, cohesive upgrade. Beyond improving usability and adding DeFi support to the network, this release brings Saito to a new level of usability.
 
