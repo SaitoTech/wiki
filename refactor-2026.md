@@ -2,7 +2,7 @@
 title: Refactor 2026
 description: 
 published: true
-date: 2026-07-19T03:41:07.899Z
+date: 2026-07-20T04:42:46.283Z
 tags: 
 editor: markdown
 dateCreated: 2026-07-15T02:24:59.189Z
@@ -14,7 +14,7 @@ dateCreated: 2026-07-15T02:24:59.189Z
 
 **Saito Refactor (2026) is the largest update to the Saito platform since mainnet.** It brings together months of work across the networking stack, consensus engine, and user interface into a single, cohesive upgrade. Beyond improving usability and adding DeFi support to the network, this release brings Saito to a new level of usability.
 
-You will notice Saito feels different, not just faster and more polished: 
+You will notice Saito feels different, faster and more polished: 
 * NFTs are prominent and behave consistently across applications
 * Scripts define how assets can be transferred but show up represented as "objects" like Access Keys
 * Applications reference these objects in powerful ways
