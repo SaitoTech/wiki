@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2026-07-15T07:49:59.477Z
+date: 2026-07-24T17:44:53.465Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -348,6 +348,15 @@ Applications on Saito look and feel like traditional web apps, but run atop the 
         <img src="/img/stack.png" />
       </div>
       <div class="app_title">Stack</div>
+    </div>
+  </a>
+
+    <a href="/applications/store">
+    <div class="app_box">
+      <div class="app_img">
+        <img src="/img/store.png" />
+      </div>
+      <div class="app_title">Store</div>
     </div>
   </a>
   
