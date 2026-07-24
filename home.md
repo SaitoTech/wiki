@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2026-07-24T20:41:55.764Z
+date: 2026-07-24T21:20:19.962Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -15,7 +15,7 @@ dateCreated: 2021-11-09T07:50:58.627Z
 .cls-1{fill:rgb(247, 31, 61);}
 </style>
 
-Saito Wiki is the public repository for information about the Saito Network. It explains how Saito works, the economic and theoretical principles behind its design, and showcases the applications that run on the network today. Everything here exists to make the architecture transparent: what the network is doing, why it works, and how the difficult problems are solved.
+Saito Wiki is the public repository for information about the Saito Network and its growing suite of peer-to-peer applications. It explains how Saito works, what applications are available, and the economic and theoretical principles behind its revolutionary design. If you are new to Saito and want to see what makes it special, we recommend checking out the [Saito Applications](/en/applications).
 
 **Why Saito Matters**
 
