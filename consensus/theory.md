@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2026-08-08T03:39:04.329Z
+date: 2026-08-08T04:45:31.648Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -23,7 +23,7 @@ This page approaches Saito Consensus with a specific academic question -- how is
 - [Broadcast Strategy and Signalling Costs](/consensus/theory/signalling-costs)
 A brief explanation of how portfolio bids and routing payments create Broadcast Strategy as a new kind of primitive in mechanism design, one that allows Saito to avoid being bound by classical impossibility results in implementation theory.
 
-- [A Simple Proof of Sybil-Proof](https://github.com/SaitoTech/papers/tree/e32c51db6aae071a41b7e481d0f5ba6cd75ec12d/sybil) (Lancashire, Parris, 2023)
+- [A Simple Proof of Sybil-Proof](https://github.com/SaitoTech/papers/blob/a917c3690126f69ca14a76906b99d872ebdcea66/sybil/A_Simple_Proof_of_Sybil_%20Proof_Lancashire-Parris_2023.pdf) (Lancashire, Parris, 2023)
 This paper shows mathematical proof of sybil-proofness of Saito Consensus as a routing mechanism, and is also useful for containing Hurwicz' *formula* for the mechanism in five succinct bullet points on its first page.
 
 - [Saito Whitepaper](https://saito.io/saito-whitepaper.pdf) (Lancashire, Parris, 2018)
