@@ -2,30 +2,20 @@
 title: Introduction to Saito for Theorists
 description: 
 published: true
-date: 2026-02-22T05:41:42.713Z
+date: 2026-08-08T03:33:14.821Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T09:35:00.976Z
 ---
 
-# What is Saito
+# What is New
 
-This page is intended as a concise, discipline-neutral introduction to **Saito Consensus** for readers with training in mechanism design, economics, or distributed systems. It exists to provide a clean map of the intellectual space, and an understanding of where Saito is and is not bound by standard impossibility results in economics and computer science.
-
-## #1. What is New
-
-Saito changes the economics of permissionless consensus by making **adversarial state transitions more expensive to propose than honest ones in expectation**. The protocol does this by adjusting the cost of producing blocks based on how efficiently a node has collected fees from **other** participants. The network naturally converges to a longest chain built from such blocks.
-
-This creates a persistent cost asymmetry: to orphan an honest block, attackers must cover the efficiency gap between their own fee-collection work and that of the honest block they are trying to orphan. Doing so requires attackers to spend their own money to produce blocks and subject it to a payout lottery that returns value only in expectation, not deterministically.
-
-This single structural change shifts the set of profitable deviations and opens a class of implementable outcomes that are infeasible under symmetric-cost models such as standard POW and POS mechanisms. 
+Saito makes **adversarial state transitions more expensive to propose than honest ones** in expectation. This change eliminates what kinds of profitable deviations are possible and allows the mechanism to implement at least one social choice rule that is not feasible under symmetric-cost models such as standard POW and POS mechanisms. 
 
 
-## #2. Isn't that Impossible?
+## Impossibility Results
 
-Existing impossibility results in both distributed systems and economics rely on a set of background assumptions that are almost never questioned — including the assumption that **asymmetrically costly state transitions cannot be implemented in a permissionless setting.**
-
-Saito not only relaxes this assumption, but the technical changes that allow it to do so (the addition of cryptographically-signed routing paths to informationally decentralized mechanism) put it in direct tension with three additional assumptions that are also taken as axiomatic in much of the literature. These three assumptions are:
+Existing impossibility results in distributed systems appear to assert that this property is not achievable, however these results are based on assumptions that do not apply to Saito Consensus:
 
 - **Symmetric proposal costs:** most models treat the cost of proposing a block or state transition or publishing another equilibrium-affecting message as identical in expectation between adversarial and honest nodes.
 
@@ -33,24 +23,21 @@ Saito not only relaxes this assumption, but the technical changes that allow it 
 
 - **Exogenous Feasibility:** models assume that the feasibility and cost of proposing a state transition are fixed and independent of the topology or efficiency of the message-passing substrate.
 
-In computer science these assumptions underlie many standard results in distributed systems and mechanism design. Bracha–Toueg (1985) uses the assumption to assert maximum theoretical tolerance of distributed systems to adversraial actors, Dwork–Lynch–Stockmeyer (1988) uses it for partial synchrony assumptions in symmetric-cost models, while Babaioff et al. (2012) explicitly declare a topological impossibility claim in a paper on routing payouts.
+In computer science these assumptions underlie all standard impossibility results in distributed systems and mechanism design. Bracha–Toueg (1985) use this assumption to assert maximum theoretical tolerance of distributed systems to adversraial actors, Dwork–Lynch–Stockmeyer (1988) uses it for partial synchrony assumptions in symmetric-cost models, while Babaioff et al. (2012) explicitly prohibit strategic routing in a topological impossibility claim on routing payouts.
 
-In economics, the parallel assumption appears in the mainstream mechanism design literature. Beginning with Hurwicz (1972) and developed through Myerson, Maskin, and Holmström, the Revelation Principle is built on the premise that all messages are costless to send, and any mechanism that claims to implement an outcome must tolerate the existence of unverifiable and cost-free misreports.
+In economics, a parallel assumption appears in the mechanism design literature. Beginning with Hurwicz (1972) and developed through Myerson, Maskin, and Holmström, the Revelation Principle is built on the premise that all messages are costless to send, and any mechanism that claims to implement an outcome must tolerate the existence of unverifiable and cost-free misreports. These results do not apply to mechanisms in which communication is itself strategic.
 
-The impossibility results that follow in both fields flow directly from this assumption, and merit revisiting exactly because Saito relaxes (1) and (2) in a way that invalidates the reductive step used in their impossibility claims, allowing different implementability claims in Saito-class mechanisms.
+## Cryptographic Routing Signatures
 
-
-## #3. Technical Implementation
-
-What, precisely, is new about Saito-class mechanisms at the level of mechanism primitives and how do these primitives create the asymmetry introduced in Section #1 while relaxing the assumptions of the papers listed in Section #2?
+The specifical technical innovation in Saito that allows it to skirt these impossibility results is the introduction of cryptographic routing signatures, which turn what would otherwise be "cheap talk" reports into verifiable evidence that can be conditioned on by mechanisms.
 
 Three structural features stand out:
 
-1. **Routing Signatures and Observable Forwarding:** every transaction carries a cryptographically-verifiable record of its forwarding path. This makes the contribution of each node in the path observable in a way that is impossible in traditional permissionless systems. The mechanism can now condition both costs and rewards on verifiable contribution rather than unverifiable claims.
+1. **Routing Signatures and Observable Forwarding:** every transaction carries a cryptographically-verifiable record of its forwarding path which makes the contribution of each node in the path observable in a way that is impossible in blockchains without such signatures.
 
-2. **Diverging Routing-work Operators:** Each fee-bearing transaction is decomposed into position-weighted routing work. This single dataset can be evaluated through two valuation operators, which diverge as path-length grows, giving the mechanism a lever with which to impose higher costs lower rewards for nodes in inefficient or sybil-inflated routing paths.
+2. **Diverging Routing-work Operators:** Each fee-bearing transaction is decomposed into position-weighted routing work. This allows a single routing path to be evaluated through two valuation operators which diverge as path-length grows, giving the mechanism a lever with which to impose higher costs on inefficient nodes in sybil-inflated routing paths.
 
-3. **Topology Drives Feasibility.** Saito creates an endogenous, monotonic, mechanism-level ordering over routing paths that makes inefficient (or sybil-inflated) paths strictly dominated because unnecessary message-passing raises costs faster than they raise expected reward.
+3. **Topology Drives Feasibility.** Inefficient or sybil-inflated routing paths are strictly dominated because unnecessary message-passing raises costs faster than they raise expected rewards.
 
 Taken together, these primitives produce the asymmetrically costly state transitions described in Section #1. Proposal cost is tied directly to routing efficiency, while the chain-selection process favors blocks whose routing paths minimize inefficiency.
 
