@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2026-02-22T05:39:23.942Z
+date: 2026-08-08T03:39:04.329Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -10,16 +10,14 @@ dateCreated: 2025-11-23T15:28:21.939Z
 
 # Theory & Research
 
-This section provides an organized overview of the theoretical foundations of Saito Consensus. It is intended for economists, mechanism designers, and computer scientists who wish to understand how routing-work fits into established academic frameworks and why classical impossibility results do not bind the mechanism.
-
-We recommend starting with our [high-level overview](/consensus/theory/intro), which explains how it is possible for a decentralized mechanism like Saito to implement a welfare efficient social choice rule.
+This section provides an organized overview of the theoretical foundations of Saito Consensus. It is intended for economists, mechanism designers, and computer scientists who wish to understand how routing-work fits into established academic frameworks.
 
 **Core Saito Documents**
 
 - [Saito is an Indirect Mechanism](/consensus/theory/indirect-mechanism)
-Saito is a special kind of mechanism known in economics as an "non-revelation-equivalent indirect mechanism" -- a kind of indirect mechanism that is not reducible to a direct mechanism under the Revelation Principle. The same techniques that block convertibility are necessary for Saito to solve problems that other consensus mechanisms cannot solve in theory.
+Saito is a special kind of mechanism known in economics as an "non-revelation-equivalent mechanism" -- a kind of indirect mechanism that is not reducible to a direct mechanism under the Revelation Principle. The same factors that block reduction enable implementation -- the primary reason Saito is able to solve problems other consensus mechanisms cannot solve even in theory.
 
-- [Academic Introduction to Saito Consensus](/consensus/theory/intro)
+- [Asymmetrical Cost of Attack](/consensus/theory/intro)
 This page approaches Saito Consensus with a specific academic question -- how is it possible to design mechanisms with an **asymmetrical cost** of adversarial behavior. This page shows what technical features in Saito enable the shift, which -- by their absence in other mechanisms -- establish Saito Consensus as a new class of informationally distributed mechanism.
 
 - [Broadcast Strategy and Signalling Costs](/consensus/theory/signalling-costs)
