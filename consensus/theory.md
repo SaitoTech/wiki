@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2026-08-09T08:15:22.577Z
+date: 2026-08-09T08:25:03.756Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -14,18 +14,14 @@ This section provides an organized overview of the theoretical foundations of Sa
 
 **Core Saito Documents**
 
-- [Saito is an Indirect Mechanism](/consensus/theory/indirect-mechanism)
-Saito is a special kind of mechanism known in economics as an "non-revelation-equivalent mechanism" -- a kind of indirect mechanism that is not reducible to a direct mechanism under the Revelation Principle. The same factors that block reduction enable implementation -- the primary reason Saito is able to solve problems other consensus mechanisms cannot solve even in theory.
+- [Saito is a Non-Revelation Equivalent Mechanism](/consensus/theory/indirect-mechanism)
+Saito is a special kind of mechanism known in economics as an "non-revelation-equivalent mechanism" -- a kind of indirect mechanism that is not reducible to a direct mechanism under the Revelation Principle. This matters because the same factors that put Saito into this class enable it to solve problems other consensus mechanisms cannot address even in theory.
 
 - [A Simple Proof of Sybil-Proof](https://github.com/SaitoTech/papers/blob/a917c3690126f69ca14a76906b99d872ebdcea66/sybil/A_Simple_Proof_of_Sybil_%20Proof_Lancashire-Parris_2023.pdf) (Lancashire, Parris, 2023)
-This paper provides a statistical proof that Saito Consensus is a sybil-proof routing mechanism. This property matters as it makes it rational for all nodes to forward-propagate transactions. Switching into private broadcast always reduces the speed of inclusion in expectation.
+This paper provides a statistical proof that Saito Consensus is a sybil-proof routing mechanism. What this means is that Saito makes it rational for all nodes to forward-propagate transactions by default, and that colluding with other participants always reduces the speed of inclusion in expectation.
 
 - [Asymmetrical Cost of Attack](/consensus/theory/intro)
-This explains how the need for parties to shift into private-broadcast strategies allows Saito Consensus to create an **asymmetrical cost** for engaging in Byzantine behavior. This property is the new informational property guaranteed by routing mechanisms.
-
-- [Broadcast Strategy and Signalling Costs](/consensus/theory/signalling-costs)
-A brief explanation of how portfolio bids and routing payments create Broadcast Strategy as a new kind of primitive in mechanism design, one that allows Saito to avoid being bound by classical impossibility results in implementation theory.
-
+The fact that non-collusion behavior provides fastest inclusion (and highest security!) in expectation is key to how Saito Consensus creates an **asymmetrical cost** that punishes nodes which engage in Byzantine behavior. The page explains how sustaining this cost-of-attack possible, even when such nodes form the majority of the network.
 
 - [Saito Whitepaper](https://saito.io/saito-whitepaper.pdf) (Lancashire, Parris, 2018)
 original whitepaper, providing a brief explanation of the Tragedy of the Commons and Free Rider problems instantiate in most blockchains, and how routing work eliminates both problems on the incentive level, unleashing emergent scale and incentive compatibility.
@@ -33,17 +29,15 @@ original whitepaper, providing a brief explanation of the Tragedy of the Commons
 
 
 **Economics and Mechanism Design**
-- [Direct and Indirect Mechanisms in Implementation Theory](/consensus/theory/indirect-mechanisms)
-This page explains how mechanism design distinguishes between *messages* (cheap, unverifiable statements) and *actions* (costly or verifiable behaviors). Routing-work mechanisms expand the message space to include actions that carry real economic cost, breaking the symmetry assumptions that Hurwicz identified as central to classical impossibility results.
 
 - [Myerson–Satterthwaite & Green–Laffont Applicability](/consensus/theory/welfare-efficiency)
-This page examines the conditions required for implementing welfare-efficient equilibria in informationally decentralized mechanisms, focusing on the bilateral-trade (Myerson–Satterthwaite) and public-good (Green–Laffont) impossibility theorems. Routing-work mechanisms violate core assumptions—such as free deviations and type-report-only messages—and therefore fall outside the scope of these impossibility claims.
+This page examines the conditions required for implementing welfare-efficient equilibria in informationally decentralized mechanisms, focusing on the bilateral-trade (Myerson–Satterthwaite) and public-good (Green–Laffont) impossibility theorems. It shows routing-work mechanisms fall outside the scope of these impossibility claims.
 
-- [How Saito Implements a Welfare-Efficient Equilibrium](/consensus/theory/welfare-efficiency-ii)
+- [How Saito Implements Welfare-Efficient Equilibrium](/consensus/theory/welfare-efficiency-ii)
 This page explains how Saito achieves welfare efficiency using costly, action-based signals instead of type reports. Routing signatures create a filtered message space in which only welfare-increasing deviations are rational, allowing the mechanism to aggregate decentralized proposals into Pareto-efficient outcomes without violating classical impossibility results.
 
 - [Welfare-Improving Trade Lemmas (Combinatorial Auction Theory)](/consensus/theory/combinatorial-auctions)
-This page shows that the correct analytic lens for routing mechanisms is the combinatorial double-auction literature. It establishes that any profitable deviation corresponds to a missed welfare-improving trade, and that such trades require costly message-space expansion. As a result, routing-work mechanisms are incentive-aligned: only welfare-improving deviations are profitable.
+This page explains why routing mechanisms are best considered combinatorial double-auctions. It establishes that any profitable deviation corresponds to a missed welfare-improving trade, and that such trades require costly message-space expansion. As a result, routing-work mechanisms are incentive-aligned: only welfare-improving deviations are profitable.
 
 **Computer Science**
 
