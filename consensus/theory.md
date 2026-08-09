@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2026-08-08T04:45:31.648Z
+date: 2026-08-09T08:15:22.577Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -17,14 +17,15 @@ This section provides an organized overview of the theoretical foundations of Sa
 - [Saito is an Indirect Mechanism](/consensus/theory/indirect-mechanism)
 Saito is a special kind of mechanism known in economics as an "non-revelation-equivalent mechanism" -- a kind of indirect mechanism that is not reducible to a direct mechanism under the Revelation Principle. The same factors that block reduction enable implementation -- the primary reason Saito is able to solve problems other consensus mechanisms cannot solve even in theory.
 
+- [A Simple Proof of Sybil-Proof](https://github.com/SaitoTech/papers/blob/a917c3690126f69ca14a76906b99d872ebdcea66/sybil/A_Simple_Proof_of_Sybil_%20Proof_Lancashire-Parris_2023.pdf) (Lancashire, Parris, 2023)
+This paper provides a statistical proof that Saito Consensus is a sybil-proof routing mechanism. This property matters as it makes it rational for all nodes to forward-propagate transactions. Switching into private broadcast always reduces the speed of inclusion in expectation.
+
 - [Asymmetrical Cost of Attack](/consensus/theory/intro)
-This page approaches Saito Consensus with a specific academic question -- how is it possible to design mechanisms with an **asymmetrical cost** of adversarial behavior. This page shows what technical features in Saito enable the shift, which -- by their absence in other mechanisms -- establish Saito Consensus as a new class of informationally distributed mechanism.
+This explains how the need for parties to shift into private-broadcast strategies allows Saito Consensus to create an **asymmetrical cost** for engaging in Byzantine behavior. This property is the new informational property guaranteed by routing mechanisms.
 
 - [Broadcast Strategy and Signalling Costs](/consensus/theory/signalling-costs)
 A brief explanation of how portfolio bids and routing payments create Broadcast Strategy as a new kind of primitive in mechanism design, one that allows Saito to avoid being bound by classical impossibility results in implementation theory.
 
-- [A Simple Proof of Sybil-Proof](https://github.com/SaitoTech/papers/blob/a917c3690126f69ca14a76906b99d872ebdcea66/sybil/A_Simple_Proof_of_Sybil_%20Proof_Lancashire-Parris_2023.pdf) (Lancashire, Parris, 2023)
-This paper shows mathematical proof of sybil-proofness of Saito Consensus as a routing mechanism, and is also useful for containing Hurwicz' *formula* for the mechanism in five succinct bullet points on its first page.
 
 - [Saito Whitepaper](https://saito.io/saito-whitepaper.pdf) (Lancashire, Parris, 2018)
 original whitepaper, providing a brief explanation of the Tragedy of the Commons and Free Rider problems instantiate in most blockchains, and how routing work eliminates both problems on the incentive level, unleashing emergent scale and incentive compatibility.
