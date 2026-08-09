@@ -2,7 +2,7 @@
 title: Nintendo64 Emulation
 description: 
 published: true
-date: 2026-08-08T08:24:57.639Z
+date: 2026-08-09T05:24:47.221Z
 tags: 
 editor: markdown
 dateCreated: 2025-07-28T12:12:40.702Z
@@ -29,4 +29,4 @@ dateCreated: 2025-07-28T12:12:40.702Z
 
 The Saito NWASM module moves a Nintendo64 emulator in the browser, allowing players to play the classic Nintendo64 games they own inside any modern browser. From there games can be saved and loaded and the saved games traded across the network.
 
-By default, the module requires players to upload the ROMs that they legally own. The module supports the inclusion of ROMs in NFTs so that users who have purchased cartridges and created legal copies can transfer them to other network participants in a way that is legal and protected under US copyright law.
+By default, the module requires players to upload the ROMs that they legally own. The module supports the inclusion of ROMs in NFTs so that users who have purchased cartridges and created legal copies can securely handle them in a way that is legal and protected under US copyright law.
