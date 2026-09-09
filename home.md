@@ -2,7 +2,7 @@
 title: Welcome to the Saito Wiki
 description: Welcome to Saito Wiki
 published: true
-date: 2026-07-24T21:20:19.962Z
+date: 2026-09-09T05:50:52.791Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-09T07:50:58.627Z
@@ -40,7 +40,7 @@ This wiki exists to explain that architecture clearly and rigorously.
 
 **If you want to run a node or building applications** you can visit our *[node installationS](/install)* instructions** checkout examples of the *[applications](/applications)* that others are building, and see our list of *[tutorials](/tutorials)* for help getting started or building more complicated applications using the Saito SDK.
 
-**If you want to understand the theory**, our research section assumes familiarity with distributed systems, collective-action problems, and mechanism design. It explains *[how Saito Consensus works](/consensus)*, how it relates to existing work in *[economics and computer science](/consensus/theory)*, as well as mathematical proofs of network robustness to *[sybil attacks](/consensus/theory/sybil-attacks)* and other technical problems previously considered unsolvable in the space.
+**If you want to understand the theory**, our research section assumes familiarity with distributed systems, collective-action problems, and mechanism design. It explains *[how Saito Consensus works](/consensus)*, how it relates to existing work in *[economics and computer science](/consensus/theory)*, as well as mathematical proofs of network robustness to *[sybil attacks](https://github.com/SaitoTech/papers/blob/0e83f690da62260aa4cb14c29fa6bcac553bf586/sybil/A_Simple_Proof_of_Sybil_%20Proof_Lancashire-Parris_2023.pdf* and other technical problems previously considered unsolvable in the space.
 
 - - - - - 
 
