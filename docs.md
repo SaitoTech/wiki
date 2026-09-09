@@ -2,7 +2,7 @@
 title: Saito Documentation
 description: 
 published: true
-date: 2025-11-12T10:23:41.356Z
+date: 2026-09-09T09:16:20.679Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-29T21:33:20.620Z
@@ -25,7 +25,7 @@ General guideline and instructions for working with and creating Saito Modules. 
 ### [UI Components and Templates](/docs/ui-components) 
 Many Saito applications re-use the same UI components (Saito Overlay, Saito User, Saito Menu). This sections explains some of the UI Components that exists and how you can quickly and easily incorporate them in your own applications.
 
-### [CSS Design](/docs/saito-css)
+### [CSS Design](/docs/css)
 Want your application to "fit in" visually with the other applications in the Saito stack? This section of our docs explains the standard CSS classes that are available to ALL applications by default. Using these can save time and effort when polishing the look-and-feel of an application.
 
 ### [ZK-Proofs Support](/docs/zk-proofs)
