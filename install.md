@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2026-09-09T09:13:46.950Z
+date: 2026-09-09T09:13:57.881Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -12,7 +12,7 @@ dateCreated: 2024-10-15T23:32:31.744Z
 
 > Please follow [these instuctions](install/upgrade) to upgrade to the 2026 refactor code.
 
-This page is for those interested in running a Saito node. If you are interested in installing Saito on a remove VPS, we recommend using our [remote deployment guide](/install/deployment) to automate installment on new machines. To install Saito on a local machine, we suggest the following instructions.
+This page is for those interested in running a Saito node. If you are interested in installing Saito on a remove VPS, we recommend using our [remote deployment guide](/install/deploy) to automate installment on new machines. To install Saito on a local machine, we suggest the following instructions.
 
 ### Machine Requirements:
 
