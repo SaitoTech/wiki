@@ -2,7 +2,7 @@
 title: Saito and the Revelation Principle
 description: Why Saito is not convertible to a direct mechanism under the Revelation Principle
 published: true
-date: 2026-09-13T00:11:32.994Z
+date: 2026-09-13T00:12:12.839Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-15T09:14:18.734Z
@@ -81,7 +81,7 @@ In Saito users submit bids for a bundle of goods involving three main forms of i
  - speed-of-inclusion
  - collusion utility
 
-These three forms of utility are not quasilinear, can each be traded-off against another through a change in bidding or broadcast strategy. As such, participants technically need to reveal their "full preference maps" to any direct mechanism, covering any theoretically possible bundle of these three forms of utility.
+These three forms of utility are not quasilinear, and each can be traded-off against the others through a change in bidding or broadcast strategy. As such, participants technically need to reveal their "full preference maps" to any direct mechanism, covering any theoretically possible bundle of these three forms of utility.
 
 This problem combines with the fact that time is a continuously variable dimension to create an infinite number of combinations of utility, and the need for the mechanism to analyse and order them. Applying the Revelation Principle consequently require participants to report preference maps which are:
 
