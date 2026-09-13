@@ -2,7 +2,7 @@
 title: Saito and the Revelation Principle
 description: Why Saito is not convertible to a direct mechanism under the Revelation Principle
 published: true
-date: 2026-09-13T00:12:12.839Z
+date: 2026-09-13T00:22:28.435Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-15T09:14:18.734Z
