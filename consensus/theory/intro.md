@@ -2,7 +2,7 @@
 title: Introduction to Saito for Theorists
 description: 
 published: true
-date: 2026-08-08T03:33:14.821Z
+date: 2026-09-13T00:23:57.972Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T09:35:00.976Z
@@ -17,9 +17,9 @@ Saito makes **adversarial state transitions more expensive to propose than hones
 
 Existing impossibility results in distributed systems appear to assert that this property is not achievable, however these results are based on assumptions that do not apply to Saito Consensus:
 
-- **Symmetric proposal costs:** most models treat the cost of proposing a block or state transition or publishing another equilibrium-affecting message as identical in expectation between adversarial and honest nodes.
+- **Symmetric proposal costs:** models treat the cost of proposing a block or state transition or publishing another equilibrium-affecting message as identical in expectation between adversarial and honest nodes.
 
-- **Unobservable Contribution:** traditional models assume the mechanism cannot observe or verify which agents performed value-creating actions, and therefore cannot condition costs or rewards on those actions.
+- **Unobservable Contribution:** models assume the mechanism cannot observe or verify which agents performed value-creating actions, and therefore cannot condition costs or rewards on those actions.
 
 - **Exogenous Feasibility:** models assume that the feasibility and cost of proposing a state transition are fixed and independent of the topology or efficiency of the message-passing substrate.
 
