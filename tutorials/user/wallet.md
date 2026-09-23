@@ -2,7 +2,7 @@
 title: Saito Wallet
 description: Information about holding native Saito
 published: true
-date: 2026-07-16T08:18:25.431Z
+date: 2026-09-23T13:12:00.998Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-29T00:06:48.906Z
@@ -50,10 +50,4 @@ One difference users notice when using Saito for the first time is the lack of c
 Providing total control to users is an intentional design decision -- many PKI applications require the ability for the wallet to quickly sign and send data to peers. If users are required to input extra credentials for every digital signature, the usability of these applications would degrade significantly. 
 For this reason, we recommend those unfamiliar with Saito or unsure of the security of the applications they are installing not to keep large amounts of SAITO in a hot wallet. Cold wallets may be created as follows:
 
-A simple and easy cold wallet:
-
-<ol>
-  <li>Create a Saito Wallet and backup its private and public key.</li>
-  <li>Save the key somewhere safe.</li>
-  <li>Clear the browser cache. and use a separate, newly generated key for everyday use.</li>
-</ol>
+For larger amounts of SAITO create a cold wallet using the [Saito Cold Wallet Offline Tool.](tutorials/user/wallet/cold-wallet)
