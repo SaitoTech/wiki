@@ -2,7 +2,7 @@
 title: Installing Saito Applications
 description: 
 published: true
-date: 2026-09-25T05:56:29.655Z
+date: 2026-09-25T06:53:30.883Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-26T09:43:00.339Z
@@ -10,9 +10,9 @@ dateCreated: 2025-05-26T09:43:00.339Z
 
 # Installing Saito Applications
 
-There are two main ways to get Saito applications. The first is to visit the Saito Store and purchase any NFTs that contains a Saito Application. Once the NFT is in your wallet, you can enable the NFT and that will install the application. 
+Saito Applications are available on the Saito Store -- to install purchase any NFTs that contains an application. Once the NFT arrives in your wallet, you can enable the NFT to install the application. 
 
-The more manual way to download .saito files from the [applications](/applications) section of our wiki or from any other source. Once you have downloaded these files, block on the top-right hamburger menu in any Saito App and and select the "Add App" option in the applications section of the slide-in menu. Provide your .saito file and follow the instructions.
+A second way to get Saito Applications is download .saito files manually from the [applications](/applications) section of our Wiki. If you are installing an application from a third-party developer, they may also distributed applications in this fashion. Once you have these files, click on the "Add App" option in the slide-in menu, provide your .saito file and follow the instructions.
 
 If you are trying to install modules onto a server node, see our separate page for [server app-configuration](/config).
 
