@@ -2,27 +2,27 @@
 title: Here I Stand
 description: Here I Stand - Wars of the Reformation - Saito Edition
 published: true
-date: 2026-09-25T04:22:57.746Z
+date: 2026-09-25T04:24:51.785Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-22T11:35:40.239Z
 ---
 
-<div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;border:1px solid #d0d0d0;border-radius:8px;padding:0.75rem 1rem;background:#f8f8f8;margin-bottom:1rem;max-width:max-content;box-sizing:border-box;">
+<div>
 	<div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;">
 		<a href="https://mods.saito.io/his.saito"
 			class="is-asset-link"
-			style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.55rem 1rem;border-radius:6px;background:#ed1b2f;color:#fff;text-decoration:none;font-weight:600;line-height:1;white-space:nowrap;">
+			style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.55rem 1rem;border-radius:6px;background:#ed1b2f;color:#fff;text-decoration:none;font-weight:600;line-height:1;white-space:nowrap;border:1x solid #555">
 			<span>⬇</span>
 			<span>Download Module</span>
 		</a>
 		<a href="https://github.com/SaitoTech/saito/tree/master/node/mods/his"
-			style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.55rem 0.9rem;border:1px solid #ccc;border-radius:6px;background:#fff;color:#333;text-decoration:none;line-height:1;white-space:nowrap;">
+			style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.55rem 0.9rem;border:1px solid #ccc;border-radius:6px;background:#fff;color:#111;text-decoration:none;line-height:1;white-space:nowrap;border:1x solid #555">
 			<span>Source Code</span>
 			<span style="font-size:0.85em;">↗</span>
 		</a>
 		<a href="https://wiki.saito.io/applications/install"
-			style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.55rem 0.9rem;border:1px solid #ccc;border-radius:6px;background:#fff;color:#333;text-decoration:none;line-height:1;white-space:nowrap;">
+			style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.55rem 0.9rem;border:1px solid #ccc;border-radius:6px;background:#fff;color:#222;text-decoration:none;line-height:1;white-space:nowrap;">
 			<span>Installation Guide</span>
 			<span style="font-size:0.85em;">↗</span>
 		</a>
