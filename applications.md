@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2026-09-25T04:54:11.918Z
+date: 2026-09-25T04:56:00.165Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -169,7 +169,7 @@ Applications on Saito look and feel like traditional web apps, but run atop the 
   <a href="/applications/paths">
     <div class="app_box">
        <div class="app_img">
-         <img src="https://staging.saito.io/paths/img/arcade/arcade.jpg" />
+         <img src="https://saito.io/paths/img/arcade/arcade.jpg" />
        </div>
        <div class="app_title">Paths of Glory</div>
      </div>
