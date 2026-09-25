@@ -2,25 +2,32 @@
 title: Here I Stand
 description: Here I Stand - Wars of the Reformation - Saito Edition
 published: true
-date: 2026-03-09T15:00:09.790Z
+date: 2026-09-25T04:22:57.746Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-22T11:35:40.239Z
 ---
 
-<div style="display: block;border: 2px solid rgb(204, 204, 204);border-radius: 8px;padding: 0.5rem;background-color: rgb(249, 249, 249);opacity: 1;z-index: 99999;position: relative;margin-bottom: 1rem;max-width: max-content;padding-top: 1rem;padding-bottom: 1rem;padding-left: 1rem;padding-right: 1rem;">
-	<div class="header-box">
-		<div id="download" class="toc-header" style="margin-top: 0px !important;display: grid;grid-template-columns: min-content 1fr;align-items: start;">
-			<div class="header-box-title" style="width: max-content; float: left; display: relative;"> 📦 Download</div>
-			<ul class="header-box-links" style="display: flex; gap: 3rem; padding-top: 0rem; margin-left: 1rem;">
-				<li style="margin-top: 0px;"><a href="https://mods.saito.io/his.saito" class="is-asset-link">Saito Module</a></li>
-				<li style="margin-top: 0px;"><a href="https://github.com/SaitoTech/saito/tree/master/node/mods/his" class="">Source Code</a></li>
-				<li style="margin-top: 0px;"><a href="https://wiki.saito.io/applications/install" class="">Installation Guide</a></li>
-			</ul>
-		</div>
+<div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;border:1px solid #d0d0d0;border-radius:8px;padding:0.75rem 1rem;background:#f8f8f8;margin-bottom:1rem;max-width:max-content;box-sizing:border-box;">
+	<div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;">
+		<a href="https://mods.saito.io/his.saito"
+			class="is-asset-link"
+			style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.55rem 1rem;border-radius:6px;background:#ed1b2f;color:#fff;text-decoration:none;font-weight:600;line-height:1;white-space:nowrap;">
+			<span>⬇</span>
+			<span>Download Module</span>
+		</a>
+		<a href="https://github.com/SaitoTech/saito/tree/master/node/mods/his"
+			style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.55rem 0.9rem;border:1px solid #ccc;border-radius:6px;background:#fff;color:#333;text-decoration:none;line-height:1;white-space:nowrap;">
+			<span>Source Code</span>
+			<span style="font-size:0.85em;">↗</span>
+		</a>
+		<a href="https://wiki.saito.io/applications/install"
+			style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.55rem 0.9rem;border:1px solid #ccc;border-radius:6px;background:#fff;color:#333;text-decoration:none;line-height:1;white-space:nowrap;">
+			<span>Installation Guide</span>
+			<span style="font-size:0.85em;">↗</span>
+		</a>
 	</div>
 </div>
-
 
 # Here I Stand
 
