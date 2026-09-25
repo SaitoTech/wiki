@@ -2,27 +2,26 @@
 title: Here I Stand
 description: Here I Stand - Wars of the Reformation - Saito Edition
 published: true
-date: 2026-09-25T04:24:51.785Z
+date: 2026-09-25T04:28:06.867Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-22T11:35:40.239Z
 ---
 
-<div>
+<div style="margin-bottom:-1rem;margin-top:-0.5rem">
 	<div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;">
 		<a href="https://mods.saito.io/his.saito"
-			class="is-asset-link"
-			style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.55rem 1rem;border-radius:6px;background:#ed1b2f;color:#fff;text-decoration:none;font-weight:600;line-height:1;white-space:nowrap;border:1x solid #555">
+			class="is-asset-link dynmod-button">
 			<span>⬇</span>
 			<span>Download Module</span>
 		</a>
 		<a href="https://github.com/SaitoTech/saito/tree/master/node/mods/his"
-			style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.55rem 0.9rem;border:1px solid #ccc;border-radius:6px;background:#fff;color:#111;text-decoration:none;line-height:1;white-space:nowrap;border:1x solid #555">
+			class="dynmod-button">
 			<span>Source Code</span>
 			<span style="font-size:0.85em;">↗</span>
 		</a>
 		<a href="https://wiki.saito.io/applications/install"
-			style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.55rem 0.9rem;border:1px solid #ccc;border-radius:6px;background:#fff;color:#222;text-decoration:none;line-height:1;white-space:nowrap;">
+			class="dynmod-button">
 			<span>Installation Guide</span>
 			<span style="font-size:0.85em;">↗</span>
 		</a>
