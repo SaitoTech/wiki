@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2026-09-25T04:43:24.937Z
+date: 2026-09-25T04:54:11.918Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -369,15 +369,6 @@ Applications on Saito look and feel like traditional web apps, but run atop the 
          <img src="/video-call-woman.png" />
        </div>
        <div class="app_title">Video Calls</div>
-    </div>
-  </a>
-
-  <a href="/applications/wallet">
-    <div class="app_box">
-       <div class="app_img">
-         <img src="/img/wallet.png" />
-       </div>
-       <div class="app_title">Wallet</div>
     </div>
   </a>
   
