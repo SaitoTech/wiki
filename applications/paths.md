@@ -2,7 +2,7 @@
 title: Paths of Glory
 description: 
 published: true
-date: 2026-09-25T04:44:25.363Z
+date: 2026-09-25T04:47:46.657Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-27T05:50:50.112Z
