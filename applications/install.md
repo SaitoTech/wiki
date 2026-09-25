@@ -2,7 +2,7 @@
 title: Installing Saito Applications
 description: 
 published: true
-date: 2025-05-26T09:48:01.153Z
+date: 2026-09-25T05:56:29.655Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-26T09:43:00.339Z
@@ -10,23 +10,15 @@ dateCreated: 2025-05-26T09:43:00.339Z
 
 # Installing Saito Applications
 
-This page assumes you are a Saito user who wants to drag-and-drop a Saito module into your browser to install it, like any of the .saito files listed in our [applications](/applications) section. If you are trying to install modules onto a server node, see our separate page for [server app-configuration](/config).
+There are two main ways to get Saito applications. The first is to visit the Saito Store and purchase any NFTs that contains a Saito Application. Once the NFT is in your wallet, you can enable the NFT and that will install the application. 
 
-To install a DCM module, click on the top-right menu in any Saito application and click on the Account button below your wallet balance. On the popup overlay that appears, look for the "+" button that shows up on the right-hand side above your list of installed modules.
+The more manual way to download .saito files from the [applications](/applications) section of our wiki or from any other source. Once you have downloaded these files, block on the top-right hamburger menu in any Saito App and and select the "Add App" option in the applications section of the slide-in menu. Provide your .saito file and follow the instructions.
+
+If you are trying to install modules onto a server node, see our separate page for [server app-configuration](/config).
+
+Once you have modules installed, you can turn them on-and-off using your Admin settings page:
 
 <br />
 <img src="/compile-03.png" style="width:600px" />
 
-Click on that add button and you'll see another drag-and-drop target. Drag the application package (.saito file) that you previously compiled or downloaded into this window.
-
-<br />
-<img src="/compile-04.png" style="width:600px" />
-
-A popup will appear to confirm installation. This shows the name of the application and the publickey of the publisher who compiled it. Confirm that you want to install this application and click "Install" if so.
-
-<br />
-<img src="/compile-05.png" style="width:600px" />
-
-Your browser will unpack the application, save it in your browser and refresh. Once your browser reloads it will load the application you have just installed along with all other modules. You can now toggle it on-or-off like any other module.
-
-NOTE: locally-installed applications will persist in your browser even if you nuke your wallet for a new identity and public/private keypair. To remove an installed DCM module for good, click on the *Clear Local Cache* option that is at the top of the Account overlay, next to the buttons used to backup your wallet.
+What your browser is doing behind the scenes is unpacking the application, save it in your browser memory cache and installing it when it initializes. To fully remove these applications, you should backup your wallet and then *NUKE* your browser account, which will also clear your local application cache.
