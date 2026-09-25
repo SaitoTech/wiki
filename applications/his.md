@@ -2,13 +2,13 @@
 title: Here I Stand
 description: Here I Stand - Wars of the Reformation - Saito Edition
 published: true
-date: 2026-09-25T04:28:31.263Z
+date: 2026-09-25T04:29:23.076Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-22T11:35:40.239Z
 ---
 
-<div style="margin-bottom:-1rem;margin-top:-0.5rem">
+<div style="margin-top:-0.5rem">
 	<div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;">
 		<a href="https://mods.saito.io/his.saito"
 			class="is-asset-link dynmod-button">
