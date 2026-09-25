@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2026-08-12T09:37:38.968Z
+date: 2026-09-25T04:05:51.234Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -139,15 +139,6 @@ Applications on Saito look and feel like traditional web apps, but run atop the 
      </div>
   </a>
 
-  <a href="/applications/library">
-    <div class="app_box">
-       <div class="app_img">
-         <img src="/img/library.png" />
-       </div>
-       <div class="app_title">Library</div>
-     </div>
-  </a>
-  
   <a href="/applications/mahjong">
     <div class="app_box">
        <div class="app_img">
@@ -296,15 +287,7 @@ Applications on Saito look and feel like traditional web apps, but run atop the 
        <div class="app_title">Settlers</div>
     </div>
   </a>
-  
-  <a href="/applications/shogun">
-    <div class="app_box">
-       <div class="app_img">
-         <img src="/img/shogun.jpg" />
-       </div>
-       <div class="app_title">Shogun</div>
-    </div>
-  </a>
+ 
 
    <a href="/applications/sol">
     <div class="app_box">
