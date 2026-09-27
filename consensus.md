@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2026-09-27T05:29:55.508Z
+date: 2026-09-27T05:38:10.179Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -15,7 +15,7 @@ Readers with backgrounds in economics, distributed systems, and mechanism design
 
 ## A Quick Overview of Routing Work Mechanisms
 
-Adding routing signatures to transactions lets Saito separate **who gets to build a block** from **who gets paid for that block.** To see how this works, consider the case of a user sending a transaction into the network:
+Adding routing signatures to transactions lets Saito separate **who builds blocks** from **who gets paid for blocks.** To see how this works, consider the case of a user sending a transaction into the network:
 
 1. When users send transactions into the network, they attach cryptographic signatures to these transactions specifying the peer to which they are forwarding their transactions -- this is the **first hop** peer.
 2. Peers that receive these transactions can forward them to *their* peers, adding their own signatures in the process -- their recipients are the **second hop** peers. This process repeats hop-by-hop as these transactions spread across the network.
