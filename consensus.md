@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2026-09-27T05:22:08.640Z
+date: 2026-09-27T05:27:05.003Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -15,14 +15,14 @@ Readers with backgrounds in economics, distributed systems, and mechanism design
 
 ## A Quick Overview of Routing Work Mechanisms
 
-Adding routing signatures to transactions lets Saito separate **who gets to build a block** from **who gets paid for that block.** To understand how this is possible, start with the case of a user sending a transaction into the network:
+Adding routing signatures to transactions lets Saito separate **who gets to build a block** from **who gets paid for that block.** To see how this works, consider the case of a user sending a transaction into the network:
 
-1. When users send transactions into the network, they attach cryptographic signatures to their transactions naming the peer to which they are forwarding their transactions -- this is the **first hop** peer.
-2. Peers that receive these transactions can forward them to *their* peers, adding their own signatures in the process -- their recipients are the **second hop** peers. This process repeats step-by-step as these transactions spread across the network.
-3. Nodes which collect enough fee-paying transactions can earn the right to produce a block by proposing one in an ever-repeating falling-price or "Dutch Clock" auction. This auction picks the most efficient fee-collector each round as the block producer.
+1. When users send transactions into the network, they attach cryptographic signatures to these transactions specifying the peer to which they are forwarding their transactions -- this is the **first hop** peer.
+2. Peers that receive these transactions can forward them to *their* peers, adding their own signatures in the process -- their recipients are the **second hop** peers. This process repeats hop-by-hop as these transactions spread across the network.
+3. Nodes which collect enough fee-paying transactions can produce a block by proposing one in an ever-repeating falling-price or "Dutch Clock" auction. This auction picks the most efficient fee-collector each round as the block producer.
 4. No-one is paid when a block is produced: every fee in the block is **burned**. But a second competition begins which may *resurrect* these burned fees and distribute them to both the miners that run the payout lottery and the routing nodes that produce the blocks.
 
-Everything below is a closer look at steps 3–4.
+The result of this process is that the longest-chain consists of blocks proposed by the most efficient burners-of-fees. Saito is designed so that overcoming this disadvantage forces attackers to burn their own money. Details on how this works requires a closer look at steps 3–4.
 
 
 ## Routing Work and Block Production
