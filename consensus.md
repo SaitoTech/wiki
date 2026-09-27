@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2026-09-27T05:28:47.225Z
+date: 2026-09-27T05:29:55.508Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -52,9 +52,9 @@ First a winning transaction is chosen based on its share of fees-in-block. If a 
 
 Once a winning transaction is chosen, the lottery picks a node from its routing path. But this payout is biased against block producers -- who are always the deepest nodes in the routing paths. The same routing paths that are used to protect block production are examined to protect the payoffs. The chance of any node winning in a three-hop routing path are:
 
-- 57% chance to the 1st-hop node -- 10 / 17.5
-- 28.5% chance to the 2nd-hop node -- 5 / 17.5
-- 14.5% chance to the 3rd-hop node -- 2.5 / 17.5
+- ~57% chance to the 1st-hop node -- 10 / 17.5
+- ~28.5% chance to the 2nd-hop node -- 5 / 17.5
+- ~14.5% chance to the 3rd-hop node -- 2.5 / 17.5
 
 Like playing in a rigged Casino, this creates a game that is expensive to play with your own money but profitable to play with other people's fees. Making a block with your own funds always burns half of your fees. Adding fees from other people helps reduce that cost, but pulls more money away from you in the routing payout than it contributes in routing work.
 
