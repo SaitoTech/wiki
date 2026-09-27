@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2026-09-27T05:16:04.941Z
+date: 2026-09-27T05:22:08.640Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -19,7 +19,7 @@ Adding routing signatures to transactions lets Saito separate **who gets to buil
 
 1. When users send transactions into the network, they attach cryptographic signatures to their transactions naming the peer to which they are forwarding their transactions -- this is the **first hop** peer.
 2. Peers that receive these transactions can forward them to *their* peers, adding their own signatures in the process -- their recipients are the **second hop** peers. This process repeats step-by-step as these transactions spread across the network.
-3. Nodes which collect enough fee-paying transactions can earn the right to produce a block by proposing one in a ever-repeating falling-price or "Dutch Clock" auction. This auction picks the most efficient fee-collector each round as the block producer.
+3. Nodes which collect enough fee-paying transactions can earn the right to produce a block by proposing one in an ever-repeating falling-price or "Dutch Clock" auction. This auction picks the most efficient fee-collector each round as the block producer.
 4. No-one is paid when a block is produced: every fee in the block is **burned**. But a second competition begins which may *resurrect* these burned fees and distribute them to both the miners that run the payout lottery and the routing nodes that produce the blocks.
 
 Everything below is a closer look at steps 3–4.
@@ -36,7 +36,7 @@ But how much "routing work" does a block contain? That figure depends on the tot
 - 2.5 units to the 3rd-hop node
 - ...and so on
 
-The most efficient block producer is the one at the strateguc position in the network where incoming fees combine to push them over the threshold. And if no-one receives such a transaction, the price of producing a block falls until one of the nodes with existing transaction flow is eligible to produce a block. Eventually, the "richest" node will produce a block.
+The most efficient block producer is the one at the strategic position in the network where incoming fees combine to push them over the threshold. And if no-one receives such a transaction, the price of producing a block falls until one of the nodes with existing transaction flow is eligible to produce a block. Eventually, the "richest" node will produce a block.
 
 At that point, a block is produced and all of the fees in that block are burned. No-one is paid. The auction to produce the next block resets and the countdown to produce the block begins as more transactions flow into the network and the competition to produce blocks continues.
 
@@ -56,17 +56,17 @@ Once a winning transaction is chosen, the lottery picks a node from its routing 
 - 28.5% chance to the 2nd-hop node -- 5 / 17.5
 - 14.5% chance to the 3rd-hop node -- 2.5 / 17.5
 
-Like playing in a rigged Casino, this creates a game is that expensive to play with your own money but profitable to play with other people's fees. Making a block with your own funds always burns half of your fees. Adding fees from other people helps reduce that cost, but pulls more money away from you in the routing payout than it contributes in routing work.
+Like playing in a rigged Casino, this creates a game that is expensive to play with your own money but profitable to play with other people's fees. Making a block with your own funds always burns half of your fees. Adding fees from other people helps reduce that cost, but pulls more money away from you in the routing payout than it contributes in routing work.
 
 This elegant lottery is why Saito doesn't inherit 51%-attack economics. Nodes maximize profitability by taking turns to propose blocks, not by orphaning competitor blocks and struggling to replace them with blocks that require the attacker to burn their own money, or accept lower payouts than they could get simply by waiting their turn.
 
 ## Automatic Transaction Rebroadcasting (ATR)
 
-One of the benefits of having a blockchain that pays routing nodes is that the servers that connect to users and bear the real cost of running the network are the ones that are paid, not validators or miners who shirk those responsibilities to maximize their profitability. This makes the networks more suitable for big-data applications. But how can we prevent those crashing the blockchain?
+One of the benefits of Saito paying routing nodes is that the servers that bear the real cost of running the network are the ones that are paid, not validators or miners who can shirk those responsibilities to maximize their profitability. This makes Saito more suitable for big-data applications. But how can we prevent the blockchain from growing out-of-control as a result?
 
-Saito Consensus solves this using an elegant data-pruning mechanism known as Automatic Transaction Rebroadcasting. This mechanism divides the blockchain into fixed-length epochs. When a block ages out of the current epoch, its unspent outputs (UTXO) become unspendable and are moved **automatically** into the latest block. Any block that does not rebroadcast these transactions is invalid by consensus rules.
+Saito Consensus solves this with an elegant data-pruning mechanism known as Automatic Transaction Rebroadcasting (ATR). This mechanism divides the blockchain into fixed-length epochs. When a block ages out of the current epoch, its unspent outputs (UTXO) become unspendable but are moved **automatically** into the latest block by the block producer. Any block that does not include these transactions is considered invalid by consensus rules.
 
-ATR solves blockchain scaling in There are two major consequences:
+ATR allows Saito Consensus to do two things when rebroadcasting UTXO:
 
 - rebroadcast UTXO can be charged a fee
 - rebroadcast UTXO can be given a payout
@@ -83,11 +83,12 @@ Two consequences fall out of this:
 
 | Question | Bitcoin | Ethereum | Saito |
 |---|---|---|---|
-| Who controls the longest chain? | majority hash | majority stake | no-one |
-| Who builds blocks? | miners | stakers | anyone |
-| Who gets paid? | miners | stakers | miners and routing nodes |
-| 51% attack? | exists | exists | not found |
-| Permissionless | yes | no | yes |
+| who builds blocks? | miners | stakers | anyone |
+| who gets paid? | miners | stakers | miners & routers |
+| permissionless? | yes | no | yes |
+| 51% attack? | exists | exists | none |
+| sybil attack? | exists | exists | none |
+| incentive compatible? | no | no | yes |
 
 For implementation details and specific security mitigations, see the [implementation notes](https://wiki.saito.io/consensus/implementation-notes).
 
