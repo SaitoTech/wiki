@@ -2,7 +2,7 @@
 title: Saito Consensus - Implementation Details
 description: 
 published: true
-date: 2026-09-27T06:07:55.180Z
+date: 2026-09-27T06:08:14.851Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T13:09:17.825Z
@@ -148,11 +148,12 @@ ATR (§1.8) extends the same logic to storage: rather than treating permanence a
 
 ## 4. Source Papers
 
-- **Lancashire, D. — *Saito: A Big-Data Blockchain with Proof-of-Transactions* (2018).** The original whitepaper. Introduces the transient ledger, the burn fee, the golden ticket, and the paysplit-vote concept (§1.9 — confirm against current code before citing the vote mechanism as live).
-- **Lancashire, D. & Parris, — *[Sybil-resistance proof]* (`sybil.tex`).** A formal, checkable proof that propagation strictly dominates self-cloning/hoarding within the on-chain routing-work income structure, absent external side-payments. Does not model off-chain side-payments (§2.7) — don't cite it as resolving that separate question.
-- **`samuelson.tex`.** Frames the public/private broadcast choice as a Samuelson-style revealed-preference signal for the network's trust environment. Conceptual and argumentative rather than a formal equilibrium proof; treat accordingly (§2.7).
-- **"Beyond Hurwicz" (Lancashire, arXiv preprint, 2026).** A conceptual paper situating Saito against Hurwicz's 1972 incentive-compatibility impossibility result and the broader mechanism-design literature. Explicitly non-formal by its own appendix — useful for orientation on *why* the question matters, not as a substitute for checking the mechanism directly.
+## 4. Source Papers
 
+- **Lancashire, D. — *Saito: A Big-Data Blockchain with Proof-of-Transactions* (2018).** [Official whitepaper (PDF)](https://saito.io/saito-whitepaper.pdf) · [reference implementation](https://github.com/SaitoTech/saito-rust). Introduces the transient ledger, the burn fee, the golden ticket, and the paysplit-vote concept (§1.9 — confirm against current code before citing the vote mechanism as live).
+- **Lancashire, D. & Parris, — *[Sybil-resistance proof]* (`sybil.tex`).** [**link pending — confirm repo path**]. A formal, checkable proof that propagation strictly dominates self-cloning/hoarding within the on-chain routing-work income structure, absent external side-payments. Does not model off-chain side-payments (§2.7) — don't cite it as resolving that separate question.
+- **`samuelson.tex`.** [**link pending — confirm repo path**]. Frames the public/private broadcast choice as a Samuelson-style revealed-preference signal for the network's trust environment. Conceptual and argumentative rather than a formal equilibrium proof; treat accordingly (§2.7).
+- **"Beyond Hurwicz"** (Lancashire, arXiv preprint, 2026). [arXiv:2602.01790](https://arxiv.org/abs/2602.01790). A conceptual paper situating Saito against Hurwicz's 1972 incentive-compatibility impossibility result and the broader mechanism-design literature. Explicitly non-formal by its own appendix — useful for orientation on *why* the question matters, not as a substitute for checking the mechanism directly.
 ---
 
 ## 5. A Note for Future Readers (Human or AI)
