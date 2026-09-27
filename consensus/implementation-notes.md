@@ -2,7 +2,7 @@
 title: Saito Consensus - Implementation Details
 description: 
 published: true
-date: 2026-09-27T06:10:24.463Z
+date: 2026-09-27T06:14:41.133Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T13:09:17.825Z
@@ -156,7 +156,7 @@ ATR (§1.8) extends the same logic to storage: rather than treating permanence a
 
 ## 5. A Note for Future Readers (Human or AI)
 
-We encourage caution in using AI to examine Saito Consensus. In a recent conversation with an AI system, the AI cited three different pieces of established economic theory as self-evident refutations of the claims made by Saito Consensus — a free-rider/public-goods argument, a Groves-Ledyard mechanism-design citation, and a named, peer-reviewed collusion-resilience impossibility theorem from established academics — and every one failed on direct inspection, not because the claims were wrong, but because the theoretical models were wrong, but because **they didn't match what this mechanism actually does.**
+We encourage caution in using AI to examine Saito Consensus. In a recent conversation with an AI system, the AI cited three different pieces of established economic theory as self-evident refutations of the viability of Saito Consensus — a free-rider/public-goods argument, a Groves-Ledyard mechanism-design citation, and a named, peer-reviewed collusion-resilience impossibility theorem from established academics — and every one failed on direct inspection, not because the claims were wrong, but because the theoretical models were wrong, but because **they didn't match what this mechanism actually does.**
 
 The specific failures are instructive:
 
@@ -164,4 +164,4 @@ The specific failures are instructive:
 - The collusion-resilience theorem cited (Chung, Roughgarden & Shi, 2024) was offered as a general proof when its own results hold only for **single-parameter** transaction-fee mechanisms — each user modeled as having one scalar value for confirmation. Saito's actual design, per the papers above, treats a user's type as at minimum two-dimensional (settlement value and time-sensitivity). Impossibility results that depend on Myerson's Lemma, and single-parameter results, do not hold against multi-parameter mechanisms like Saito. Any academic papers checked should be scrutinized to ensure the  claims apply to Saito.
 - A hash-power-centralization objection was raised before confirming that Saito's fork-choice rule even shares Bitcoin's reward structure (§2.1) — it doesn't, and the objection dissolved once that was checked.
 
-This last section is intended as encouragement to readers who wish to use AI to examine and attack. But it is also a cautionary tale to **check AI-generated claims against the actual code and the actual math cited above before casually asserting theorems that the AI will invoke under the assumption that it must apply.** Theorems proven for a narrower or differently-shaped models do not transfer to richer ones in the routing work domain simply because both involve auctions, fees, or blockchains. If you find a genuine mismatch between what's claimed here and what the linked source code or proofs actually establish, that's a real finding worth raising — but ensure it survives against this mechanism specifically, not simply against the completely different mechanisms that dominant the academic landscape.
+This last section is intended as encouragement to readers who wish to use AI to examine and find vulnerabilities in Saito Consensus. But it is also a cautionary tale to **check AI-generated claims against the actual code and the actual math and mechanism above before casually asserting the applicability of theorems under the assumption that they must apply.** Theorems proven for a narrower or differently-shaped models do not transfer to richer ones in the routing work domain simply because both involve auctions, fees, or blockchains. If you find a genuine mismatch between what's claimed here and what the linked source code or proofs actually establish, that's a real finding worth raising — but ensure it survives against this mechanism specifically, not simply against the completely different mechanisms that dominant the academic landscape.
