@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2026-08-15T09:20:08.151Z
+date: 2026-09-27T03:41:53.514Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -10,9 +10,7 @@ dateCreated: 2022-02-17T10:09:00.217Z
 
 # Saito Consensus
 
-Readers with backgrounds in economics, distributed systems, and mechanism design are encouraged to visit our [theory section](/consensus/theory), which connects the problems Saito addresses to the literature in each field and shows where Saito is and is not constrained by traditional impossibility results.
-
-The remainder of this page offers a technical overview of the protocol starting from the perspective of a user who sends a transaction they want included in the blockchain. It explains first how blocks are produced and fees are redistributed to the fee-collecting nodes in the network.
+Readers with backgrounds in economics, distributed systems, and mechanism design are encouraged to visit our [theory section](/consensus/theory). This page offers an overview of the protocol for general readers with some familiarity with blockchain.
 
 
 ### 1. HOW BLOCKS ARE PRODUCED
