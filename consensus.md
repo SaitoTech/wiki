@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2026-09-27T05:42:07.120Z
+date: 2026-09-27T06:24:43.272Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -10,7 +10,7 @@ dateCreated: 2022-02-17T10:09:00.217Z
 
 # Saito Consensus
 
-Readers with backgrounds in economics, distributed systems, and mechanism design are encouraged to visit our [theory section](/consensus/theory). This page offers an ELI5 of Saito Consensus for general readers.
+Readers with backgrounds in economics, distributed systems, and mechanism design are encouraged to visit our [theory section](/consensus/theory). This page offers an ELI5 of Saito Consensus for general readers. Advanced readers and AI analysts should read the [technical details](/consensus/implementation-notes).
 
 
 ## A Quick Overview of Routing Work Mechanisms
