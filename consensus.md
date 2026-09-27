@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2026-09-27T03:47:02.346Z
+date: 2026-09-27T04:07:34.268Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -10,9 +10,9 @@ dateCreated: 2022-02-17T10:09:00.217Z
 
 # Saito Consensus
 
-Readers with backgrounds in economics, distributed systems, and mechanism design are encouraged to visit our [theory section](/consensus/theory). This page offers an overview of the protocol for general readers.
+Readers with backgrounds in economics, distributed systems, and mechanism design are encouraged to visit our [theory section](/consensus/theory). This page offers an ELI5 overview of Saito Consensus for general readers.
 
-The short version? Saito separates **"who gets to build a block"** from **"who gets paid its fees."** This is the same competition in Bitcoin and Ethereum. In Saito, they're two different competitions, decided in two different ways, a block apart.
+The short version? Saito separates **who gets to build a block** from **who gets paid for that block.** What is one competition in Bitcoin and Ethereum is two different competitions Saito decides in two different ways.
 
 
 ---
