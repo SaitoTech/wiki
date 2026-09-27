@@ -2,7 +2,7 @@
 title: Saito Consensus - Implementation Details
 description: 
 published: true
-date: 2026-09-27T06:08:14.851Z
+date: 2026-09-27T06:08:38.457Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T13:09:17.825Z
@@ -145,8 +145,6 @@ The other structurally unusual choice is funding security through **burn and par
 ATR (§1.8) extends the same logic to storage: rather than treating permanence as free once written, it prices ongoing storage as an ongoing rent, paid out of the same fee mechanism, funded by whoever wants the data kept rather than by the network's general security budget.
 
 ---
-
-## 4. Source Papers
 
 ## 4. Source Papers
 
