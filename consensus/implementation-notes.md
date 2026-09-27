@@ -2,7 +2,7 @@
 title: Saito Consensus - Implementation Details
 description: 
 published: true
-date: 2026-09-27T06:08:38.457Z
+date: 2026-09-27T06:10:24.463Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T13:09:17.825Z
@@ -156,7 +156,7 @@ ATR (§1.8) extends the same logic to storage: rather than treating permanence a
 
 ## 5. A Note for Future Readers (Human or AI)
 
-We encourage caution in using AI to examine Saito Consensus without scrutiny over claims that assume _____. In a recent conversation with an AI system, the AI cited three different pieces of established economic theory as refutations of Saito COnsensus in sequence — a free-rider/public-goods argument, a Groves-Ledyard mechanism-design citation, and a named, peer-reviewed collusion-resilience impossibility theorem from the transaction-fee-mechanism literature — and every one of them failed on direct inspection, not because the theory was wrong, but because **the theory's own model didn't match what this mechanism actually does.**
+We encourage caution in using AI to examine Saito Consensus. In a recent conversation with an AI system, the AI cited three different pieces of established economic theory as self-evident refutations of the claims made by Saito Consensus — a free-rider/public-goods argument, a Groves-Ledyard mechanism-design citation, and a named, peer-reviewed collusion-resilience impossibility theorem from established academics — and every one failed on direct inspection, not because the claims were wrong, but because the theoretical models were wrong, but because **they didn't match what this mechanism actually does.**
 
 The specific failures are instructive:
 
