@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2026-09-27T05:27:05.003Z
+date: 2026-09-27T05:28:47.225Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -66,12 +66,12 @@ One of the benefits of Saito paying routing nodes is that the servers that bear 
 
 Saito Consensus solves this with an elegant data-pruning mechanism known as Automatic Transaction Rebroadcasting (ATR). This mechanism divides the blockchain into fixed-length epochs. When a block ages out of the current epoch, its unspent outputs (UTXO) become unspendable but are moved **automatically** into the latest block by the block producer. Any block that does not include these transactions is considered invalid by consensus rules.
 
-ATR allows Saito Consensus to do two things when rebroadcasting UTXO:
+ATR takes also allows the following:
 
 - rebroadcast UTXO can be charged a fee
 - rebroadcast UTXO can be given a payout
 
-Two consequences fall out of this:
+This has two immediate consequences:
 
 - **ATR raises the cost of attacking the network** by pulling a portion of the block reward away from attackers and distributing them to the users in the network, and particularly any users who cannot spend their tokens because the network is censored or under attack.
 
@@ -83,7 +83,7 @@ Two consequences fall out of this:
 
 | Question | Bitcoin | Ethereum | Saito |
 |---|---|---|---|
-| who builds blocks? | miners | stakers | anyone |
+| who proposes blocks? | miners | stakers | anyone |
 | who gets paid? | miners | stakers | miners & routers |
 | permissionless? | yes | no | yes |
 | 51% attack? | exists | exists | none |
