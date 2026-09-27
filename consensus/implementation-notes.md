@@ -2,7 +2,7 @@
 title: Saito Consensus - Implementation Details
 description: 
 published: true
-date: 2026-09-27T06:14:41.133Z
+date: 2026-09-27T06:31:43.225Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T13:09:17.825Z
@@ -131,6 +131,10 @@ Here the attacker doesn't try to reverse settled history — they simply ignore 
 **Hashing compounds the problem rather than helping it.** Difficulty (§1.6) is calibrated to the golden-ticket discovery rate of the *whole* network's combined hash power. An attacker racing ahead on an isolated chain is searching for golden tickets with only their own share of that hash power, against a difficulty level set for everyone. Since a golden ticket not found within the very next block is lost permanently (§1.4), the attacker's effective claim rate on their own burned fees falls well below what the honest chain enjoys — most of what they burn to produce blocks simply isn't coming back. Relative to the throughput they're trying to sustain, the cost of hashing has effectively gone up: they're paying full self-funded burn costs for a payout lottery they're now under-resourced to win consistently. Sustain this long enough and the attacker risks a second, harder failure: the minimum golden-ticket-density floor (§1.6) can render their own chain outright invalid under consensus rules, independent of length or cumulative burnfee, if their isolated hash power can't keep pace with the difficulty level the rest of the network already cleared.
 
 **Honest nodes bear none of this cost, and don't need to react.** A censored transaction isn't destroyed by being excluded — it sits available in the mempool for the next node that produces a block collecting payouts from the ATR mechanism funded by the attack in the meantime. So the honest side of the network may simply extend its chain exactly as before the attack started — which raises the bar the attacker must clear on both dimensions simultaneously, continuously, for as long as the attack continues. The attacker's only path to making censorship stick is to out-produce and out-burn an honest chain that keeps trying to helpfully extend the attacker's self-funded chain — and every block the honest side proposes makes that more expensive, not less.
+
+### 2.8 Resource Invention Attacks
+
+It is tempting to imagine that attackers may re-org a routing work chain profitably by producing additional blocks to resolve adversarially-created forks. This assumes routing-work is a shared, grabbable resource — but §1.1 exists specifically to make it *not* that: credit is cryptographically bound to whoever's signature is actually in a transaction's routing path, so one node's routing work cannot be borrowed, copied, or reused by a competing producer. In the event of a chain-fork, the winner is resolved downstream by the most efficient subsequent producer, who is most profitable building on the earliest seen block and will bring their own efficiently-collected work to consensus. Attackers who seek to orphan their block simply increase their cost-of-attack.
 
 ---
 
