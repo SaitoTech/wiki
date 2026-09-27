@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2026-09-27T05:38:10.179Z
+date: 2026-09-27T05:39:16.261Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -90,5 +90,5 @@ This has two immediate consequences:
 | sybil attack? | exists | exists | none |
 | incentive compatible? | no | no | yes |
 
-For implementation details and specific security mitigations, see the [implementation notes](https://wiki.saito.io/consensus/implementation-notes).
+For a more complete description of how exactly Saito Consensus works, including details on the exact algorithms used for lottery payouts and difficult adjustment, see our page on [implementation details](https://wiki.saito.io/consensus/implementation-notes).
 
