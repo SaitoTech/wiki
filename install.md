@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2026-10-20T08:13:51.862Z
+date: 2026-10-20T08:39:10.209Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
