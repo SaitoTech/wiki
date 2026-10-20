@@ -2,7 +2,7 @@
 title: Saito Documentation
 description: 
 published: true
-date: 2026-09-09T09:16:20.679Z
+date: 2026-10-20T08:46:30.638Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-29T21:33:20.620Z
@@ -10,13 +10,18 @@ dateCreated: 2024-10-29T21:33:20.620Z
 
 # Saito Documentation
 
-This section of the Saito Wiki contains documentation and reference materials for developers. If you are interested in application development, we recommend that you start by visiting our [developer tutorials](/tutorials/dev). For a high-level view of how Saito functions, we also have an [architectural overview](/docs/architecture) of how the core Saito software works.
+The easiest way to develop on Saito is point your local AI at our development files [intended for AI agents](https://github.com/SaitoTech/saito/tree/prod/README):
 
-Our documentation below falls into two sections. The first covers materials useful to application developers and those building software or services atop the network. The second covers reference material useful for those building the core client or working on the underlying protocol.
+```/saito/README/```
 
-## Saito Applications
+The two subdirectories in this folder contain the files needed to understand *how Saito Consensus works* and *how to develop applications atop the platform*.
 
-Saito Applications (also known as modules) requires a conceptual shift. The server-client model melts away as applications run simultaneously on all nodes. The links in this section provide reference information on how to build these applications.
+If you run into problems with development please reach out to a member of the team. Saito is an open project. Project members are available to help with application development.
+
+
+## Manual Documentation
+
+Learning Saito development requires a conceptual shift if you want to do the work manually without AI assistance. The server-client model melts away as applications run simultaneously on all nodes. The links in this section provide reference information on how to build these applications.
 
 ### [General Conventions](/docs/modules)
 General guideline and instructions for working with and creating Saito Modules. This page focuses on what makes Saito modules truly web3 and different than what passes for "peer-to-peer" applications on other networks.
