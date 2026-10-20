@@ -2,91 +2,59 @@
 title: Configure Saito-lite-Rust
 description: Directory for information on the various configuration files which dictate how a Saito-lite-Rust client operates.
 published: true
-date: 2025-05-22T09:20:45.654Z
+date: 2026-10-20T08:38:51.699Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-20T04:13:39.150Z
 ---
 
-# Saito Configuration
+# Configure Saito
 
-After [installing](/install) Saito you will be ready to configure the server. This involves editing the two main configuration files used by the node:
+The easiest way to configure Saito is using the Admin module, which runs on all servers at ```/admin```. The first thing you will need to do is backup the wallet your browser has created to administer the server: 
 
-- `config/modules.config.js` specifies which modules run on the server (core) and which modules are compiled for any lite-clients that connect to the server (lite).
+![admin_set_access_key.png](/img/admin_set_access_key.png)
 
-- `config/options.conf` is the main configuration file, specifying the IP address on which the server runs and the ports it should open and the peers to which it should connect.  When you run Saito for the first time, this file is copied over into ```config/options``` which will contain your configuration options along with wallet information like the public and privatekey of your server -- you can backup your wallet anytime by backing up this file.
+When you click this button the wallet will download a backup of the wallet that your browser has created to admin the server. We recommend keeping a copy of this file in case you need to restore this account in a different browser in the future.
 
-Almost anything you want to configure for Saito can be accomplished by editing one of these two files.
+To change the set of modules installed on your server, visit the Modules section of the admin application:
 
-## Configuring Network
+![admin_configure_modules.png](/img/admin_configure_modules.png)
 
-```/config/options.conf``` is the template file used to configure your server. We have a dedicated page describing [how to configure this file](/config/network) to change your server settings. By default, this file will come pre-configured to start your Saito node on localhost at port 12101.
+Click on any application to toggle between running it on only on your server, providing it only to browsers, or running it on your server and providing it to browsers as well (recommended).
+
+Follow the instructions on the page after making any changes.
+
+## Manual Configuration
+
+To configure Saito manually, the two most important files you will need to customize are the following:
+
+- `config/modules.config.js` specifies which modules run on the server (core) and which modules run on lite-clients (lite). After making changes here run ```npm run nuke``` to re-compile the version of Saito intended for lite-clients..
+
+- `config/options.conf` holds your wallet keypair. When you run Saito for the first time, this file is copied over into ```config/options``` and a new keypair is generated for your server -- you can backup your wallet anytime by securing this file.
+
+- `config/options.conf` also holds your network settings. We have a dedicated page describing [how to configure this file](/config/network) to change your server settings. By default, Saito is pre-configured to start your Saito node on localhost at port 12101.
 
 
-## Configuring Applications
+## Restoring to Factory Defaults
 
-You may remember the instruction we ran to compile Saito during our initial [install](/install):
+Run the following command anytime to restore Saito to a clean default factory-fresh state and recompile the javascript offered to users based on any changes to your modules config file.
 
 ```
 npm run nuke
 ```
 
-In addition to restoring Saito to a *factory-fresh* condition, this command compiles a compressed version of the Saito which will include any modules listed in `modules.config.js` as available for lite-clients. This compressed file will be served to any browsers which connect to the server and request a copy of the software.
+If you wish to recompile without nuking your wallet:
 
-There are two primary compilation commands. 
-
-- `npm run nuke`
 - `npm run compile`
 
-The first time you run Saito you should run the more extreme `npm run nuke` command as it will reset the blockchain and offers a *hard reset* of sorts. It also *nukes* your wallet and restores it to a pristine state using the template config files stored in your `config` directory.
 
-Use `npm run compile` if you wish to change or update the applications supported and distributed on your server without resetting the blockchain or affecting the server wallet - better for [deployed](https://wiki.saito.io/en/tech/deployment) nodes connected to mainnet.
+## Advanced Options for Developers
 
-### Advanced Usage of the `compile` Script
-
-The `compile` script supports additional logging options, which can be specified using the `--loglevel` or `-l` flags. This feature allows you to set the desired log level for the compilation process.
-
-#### Usage:
-
-To set a specific log level, use one of the following commands:
-
-```bash
-npm run compile -- --loglevel=<level>
-```
-
-or 
-```
-npm run compile -- -l <level>
-```
-
-Where level can be one of the following:
-
-- error
-- warn
-- info
-- trace
-- debug
-
-For example, to set the log level to 'warn', you can use either:
-
-```
-npm run compile -- --loglevel=warn
-
-
-or
-
-npm run compile -- -l warn
-
-```
-
-### Javascript Client 'dev' Flag
 
 Both the `compile` and `nuke` scripts can be run with a `dev` flag:
 
-```
-npm run compile dev
-npm run nuke dev
-```
+* ```npm run compile dev```
+* ```npm run nuke dev```
 
 When this flag is used:
 
@@ -98,10 +66,14 @@ When this flag is used:
    being a concatentation of the source CSS). This makes CSS development
    slightly easier.
    
-The result is that many more files are downloaded by the client, but in-browser debugging is much easier. For further information on application and network configuration, see the following two pageS:
+The result is that many more files are downloaded by the client, but in-browser debugging is easier. For further help with application or network configuration, see:
 
 - [applications configuration](/config/applications)
 
 - [Network configuration](/config/network)
+
+
+
+
 
 
