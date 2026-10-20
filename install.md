@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2026-10-05T12:27:59.944Z
+date: 2026-10-20T08:13:42.604Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -10,9 +10,7 @@ dateCreated: 2024-10-15T23:32:31.744Z
 
 # Installing Saito
 
-> Please follow [these instuctions](/install/upgrade) to upgrade to the 2026 refactor code.
-
-This page is for those interested in running a Saito node. If you are interested in installing Saito on a remove VPS, we recommend using our [remote deployment guide](/install/deploy) to automate installment on new machines. To install Saito on a local machine, we suggest the following instructions.
+This page is for those interested in running a Saito node. If you are installing Saito on a remote VSP, we recommend using our [remote deployment script](/install/deploy) to automate installment. To install Saito on a local machine, we suggest the instructions below.
 
 ### Machine Requirements:
 
@@ -21,11 +19,11 @@ This page is for those interested in running a Saito node. If you are interested
 - Stack: node.js (v.16+), npm (v6+)
 - TypeScript
 
-If you are missing any of these tools we have dedicated pages to help you install them for [Linux](/install/linux), [Mac](/install/mac) and [Windows](/install/windows).
+Instructions for installing these tools are available for [Linux](/install/linux), [Mac](/install/mac) and [Windows](/install/windows).
 
 ### 1. Download Saito
 
-Clone the official Saito repository and move into the ```node``` sub-directory. Run ```npm install``` to download all of the packages you will need to run Saito, including a pre-compiled version of the Rust codebase.
+Download Saito from the official github repository. The server software is in the ```node``` sub-directory. Navigate into it and run ```npm install``` to install the supporting packages.
 
 ```
 git clone https://github.com/saitotech/saito
@@ -33,13 +31,10 @@ cd saito/node
 npm install
 ```
 
-**Note:** if ```npm install``` fails to install a module, you may need to install `python-is-python3` to work around the problem. On Ubuntu this can be done with ```sudo apt-get install python-is-python3```.
-
-
 
 ### 2) Compile Saito
 
-These instructions run a script that compiles Saito into a compressed javascript file that can be served to browsers and contains all of the modules your browsers will use. The second starts the server:
+Run the following scripts. The first compiles Saito into a compressed javascript file that contains all of the modules your browsers will use. The second starts the server:
 
 ```
 npm run nuke
@@ -50,15 +45,15 @@ After a few moments, you should see a large Saito ASCII logo appear on your scre
 
 ### 3) Visit Saito in your Browser
 
-Congratulations! You can now open a browser and visit:
+You can now open a browser and visit:
 
-> http://localhost:12101
+> http://localhost:12101/admin
 
-Ready to change the default set of modules on your machine? For detailed instructions on compiling the node.js stack refer to the [Compilation Guide](/install/compile). If you run into problems installing Saito on a remote machine, check the configuration changes needed for remote deployment in our [remote deployment guide](/install/deployment).
+Follow the instructions in your browser to configure your server.
 
 
-## Rust Client and WASM Support
+## Troubleshooting
 
-The version of Saito that will be installed above includes the saito-js NPM package. This is a pre-compiled binary of the backend Rust code as a WASM object. This binary object is what handles consensus operations such as block and transaction validation and most network operations.
+* if ```npm install``` fails to install a module, you may need to install `python-is-python3` to work around the problem. On Ubuntu this can be done with ```sudo apt-get install python-is-python3```.
 
-If you want to modify this backend code as part of development, it is easy to set this up, but it requires support for Rust to be installed, so we have a separate page with [instructions on how to compile and link](/install/full) the Rust backend code on your machine.
+* Saito is configured to use a pre-compiled version of the backend Rust software. If you wish to compile your own locally, we have a separate page with [instructions on how to compile and link](/install/full) the full Rust code on your machine.
