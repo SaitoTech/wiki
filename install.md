@@ -2,7 +2,7 @@
 title: Install
 description: 
 published: true
-date: 2026-10-20T08:39:10.209Z
+date: 2026-10-20T09:12:35.929Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-15T23:32:31.744Z
@@ -49,7 +49,7 @@ You can now open a browser and visit:
 
 > http://localhost:12101/admin
 
-Follow the instructions in your browser to configure your server.
+Follow the instructions in your browser to [configure](/config) your server.
 
 
 ## Troubleshooting
