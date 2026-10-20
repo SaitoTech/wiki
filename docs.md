@@ -2,21 +2,21 @@
 title: Saito Documentation
 description: 
 published: true
-date: 2026-10-20T08:46:30.638Z
+date: 2026-10-20T08:50:06.299Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-29T21:33:20.620Z
 ---
 
-# Saito Documentation
+# Development and Documentation
 
 The easiest way to develop on Saito is point your local AI at our development files [intended for AI agents](https://github.com/SaitoTech/saito/tree/prod/README):
 
 ```/saito/README/```
 
-The two subdirectories in this folder contain the files needed to understand *how Saito Consensus works* and *how to develop applications atop the platform*.
+The two subdirectories in this folder contain the files needed to understand *how Saito Consensus works* and *how to develop applications atop the platform*. Any modern AI should be able to consume these files and produce reasonable code based on your requirements.
 
-If you run into problems with development please reach out to a member of the team. Saito is an open project. Project members are available to help with application development.
+If you run into problems with development please reach out to a member of the team. Project members are happy to support with application development and we like to update the AI docs as we learn of problems that people run into, so don't be afraid to reach out by email at info@saito.io.
 
 
 ## Manual Documentation
