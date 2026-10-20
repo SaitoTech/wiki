@@ -2,7 +2,7 @@
 title: Saito Documentation
 description: 
 published: true
-date: 2026-10-20T08:50:45.573Z
+date: 2026-10-20T09:07:23.892Z
 tags: 
 editor: markdown
 dateCreated: 2024-10-29T21:33:20.620Z
@@ -10,7 +10,7 @@ dateCreated: 2024-10-29T21:33:20.620Z
 
 # Development and Documentation
 
-The easiest way to develop on Saito is point your local AI at our development files [intended for AI agents](https://github.com/SaitoTech/saito/tree/prod/README), which will be available locally at:
+The easiest way to develop on Saito is point your local AI at our [files for coding agents](https://github.com/SaitoTech/saito/tree/prod/README), installed locally at:
 
 ```/saito/README/```
 
