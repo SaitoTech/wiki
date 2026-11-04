@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards & API
 description: Programming Custom Cards for Twilight Struggle in the Saito Game ENgine
 published: true
-date: 2026-11-04T13:58:35.515Z
+date: 2026-11-04T14:00:41.215Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T08:53:25.750Z
@@ -19,7 +19,7 @@ This page introduces the basic programming model and shows how to create straigh
 
 Twilight Struggle runs on a queue that handles [instructions](/applications/twilight/api/queue) on a last-in-first-out basis. When players make moves they share instructions with each other. The underlying game engine keeps moves in sync, and players then execute the same moves in the same order without the need for a central server to manage the game.
 
-The queue operates on a **last-in, first-out (LIFO)** basis: the last instruction added is the first one executed. Programming cards in javascript mostly consists of learning how to add these instructions to the game queue. There are two ways of adding moves:
+Programming custom cards in javascript mostly consists of learning how to determine which player is active and then asking them to make a move and broadcast their moves to other players. There are two ways of adding moves:
 
 
 #### SHARED EXECUTION
@@ -103,9 +103,9 @@ The following example gives the US two victory points if it controls France. Oth
 
 ```js
 if (api.isControlled("us", "france")) {
-  api.enqueueMove("vp\tus\t2");
+  api.addToQueue("vp\tus\t2");
 } else {
-  api.enqueueMove("vp\tussr\t2");
+  api.addToQueue("vp\tussr\t2");
 }
 return 1;
 ```
