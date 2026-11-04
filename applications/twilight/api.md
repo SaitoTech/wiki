@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards & API
 description: Programming Custom Cards for Twilight Struggle in the Saito Game ENgine
 published: true
-date: 2026-11-04T10:25:16.581Z
+date: 2026-11-04T10:27:02.351Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T08:53:25.750Z
@@ -62,7 +62,28 @@ return 0;
 For help creating more advanced cards, we recommend our page on advanced card programming. This includes information on how to create permanent events, how to write cards that create new instructions which can be run on the queue and more.
 
 
-## 2. Basic QUEUE Api
+## 2. Essential Api Instructions
+
+The following functions are available to cards through the api.* object.
+
+| Function | Description |
+|---|---|
+| `api.isPlayer(faction)` | Returns `true` if the player executing the NFT belongs to the specified faction (`"us"` or `"ussr"`). |
+| `api.isControlled(faction, country)` | Returns `true` if the specified faction controls the country. |
+| `api.whoControls(country)` | Returns the faction that currently controls the specified country. |
+| `api.isEventActive(event)` | Returns `true` if the specified Twilight Struggle event is currently active. |
+| `api.playerSelectOption(options)` | Displays a selection menu in the HUD and asynchronously returns the ID of the option selected by the player. |
+| `api.playerSelectCountry(countries)` | Allows the player to select a country through the HUD and asynchronously returns the selected country. |
+| `api.addToQueue(instruction)` | Adds a validated native game instruction to the game queue. |
+| `api.endTurn()` | Submits the instructions accumulated by the NFT script for processing through the normal game queue. |
+| `api.updateStatus(message)` | Displays a status message to the player through the game interface. |
+
+## 2. Essential QUEUE Instructions
+
+
+
+
+
 
 ### Victory Points
 
