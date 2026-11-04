@@ -2,7 +2,7 @@
 title: Twilight Struggle - Advanced Programming Techniques
 description: 
 published: true
-date: 2026-11-04T12:21:40.168Z
+date: 2026-11-04T12:43:33.657Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T12:21:40.168Z
@@ -10,60 +10,48 @@ dateCreated: 2026-11-04T12:21:40.168Z
 
 # Advanced Programming Techniques for Twilight Struggle
 
-This guide is for people who already know the basics of writing a card script — `api`, `context`, `addToQueue`, and `endTurn` — and want to build richer events: choices, conditions, and cards that happen in more than one stage.
+This guide is for people who already know the basics of writing a custom Twilight Struggle. What it explains is how to build cards with richer events like Junta with choices and game changes that require more than one stage.
 
-You do not need to understand the game engine’s internals. You need a clear picture of how your code runs, when it can ask the player questions, and how one card can contain several separate pieces of code.
-
----
-
-## What you will learn
+In this document we teach:
 
 1. What multiple **code tabs** mean on one card
 2. Why a card like **Junta** needs more than one stage
 3. How the shared game **queue** connects those stages
-4. How to pass simple **arguments** into a later stage
+4. How to pass simple **arguments** from stage-to-stage
 5. How to read the board, check ongoing events, and offer player choices
 6. What works today, and what still needs engine support
 
----
 
-## One card can contain several code blocks
+## Cards with Multiple Code Blocks
 
-In the Card Generator, each **code tab** holds a separate chunk of JavaScript.
-
-Those chunks all belong to the **same card**. They are not separate cards. They are different stages of the same NFT object.
+In the Card Generator, cards have create additional **code tabs** that hold a separate chunk of javascript. Those chunks allow cards to create events that will fire at different stages -- with each stage informing the game of when and how to trigger the subsequent step.
 
 A useful mental model:
 
-> **One card can contain several code blocks. Each block can be invoked separately as an NFT event, using the card’s ID and the index of the code block to execute.**
+> **One card can contain several code blocks. Each block can be invoked separately as an event through the game queue. This is done by adding the NFT_EVENT instruction to the queue -- using it to tell the game engine which chunk of code to execute...**
 
 | Idea | Meaning |
 |---|---|
-| Card identity | The card’s NFT ID in the game (the id stored with the minted card) |
-| Code block | One JavaScript chunk on that card |
-| Code index | Which chunk to run: `0` is the first tab, `1` is the second, and so on |
+| card identity | The card’s unique id in the game |
+| code block | One JavaScript chunk on that card |
+| code index | Which chunk to run: `0` is the first tab, `1` is the second, and so on |
 
-When the card is played normally as an event, the game runs the **first** usable code block (index `0`).
+When a card is played normally as a event, the game runs the **first** usable code block (index `0`). That piece of code can schedule another block on the same card to run later on by adding an instruction to the queue that tells the game to execute it, providing:
 
-Later, the game can run another block on the same card by scheduling an NFT event that names:
-
-- the same card ID, and
+- the same card ID, but
 - a different code index
 
-The second block is still Junta. It is not a new card and not an unrelated event. It is simply the next stage of the same programmable card.
+This second code block is still part of the card. Separating the code logic into two sequences like this allows the board to update step-by-step so that by the time the second code block is executed, every player has an updated copy of the board that reflects the earlier decision.
 
----
 
-## Why Junta needs two stages
+## Example: Junta
 
-Native **Junta** is a good teaching example because it naturally splits into two decisions:
+**Junta** is a good example because it naturally splits into two decisions:
 
 1. Place 2 influence in Central or South America
-2. Then decide whether to use free operations for a **coup** or a **realignment** in that region
+2. Optionally choose to **coup** or **realign**
 
-The second decision should happen **after** the influence has been applied. The board the player sees when choosing coup or realignment should already include the new influence.
-
-That is why a programmable Junta wants two code tabs:
+The second decision must happen **after** the influence has been applied as the first can change the conditions under which the second operates. This is why a programmable version of the card needs two code blocks:
 
 **Code tab 1 — Place influence**
 
@@ -79,84 +67,31 @@ That is why a programmable Junta wants two code tabs:
 - Asks whether to coup or realign
 - Carries out that choice
 
-### The sequence in human terms
-
-1. The player plays Junta.
-2. The first code block asks where to place influence.
-3. The game processes that placement.
-4. The second code block executes.
-5. The second code block examines the updated board and asks whether to coup or realign.
-6. The game processes the selected action and completes the event.
-
-If both decisions lived in one uninterrupted script, the second choice would still be looking at the board from **before** the shared queue finished applying the placement for every player. Splitting the work into two stages lets the game finish stage 1’s board changes first.
-
 ---
 
-## How the queue connects the stages
+## Using the Game Queue
 
-Your card script does not edit the live game board by reaching into internal objects. It asks the game to do work by adding instructions, then submits them with `await api.endTurn()`.
+Imagine our default code chunk asks the active player to select a country to place influence, places that influence and then submits the move to all players using the instruction `api.endTurn()`. The influence will be placed and then the game will resume with the next player's turn.
 
-Those instructions go onto the shared **game queue**. Every player’s client processes the same queue in the same order. That is what keeps the game synchronized.
-
-To run another code block on the same card later, the first stage schedules an instruction with this shape:
+We can stop this by pushing this command onto the game queue at the start of the first code block. Once all of the subsequent commands have been processed, this instruction will tell the game engine to execute the second chunk of code:
 
 ```text
 NFT_EVENT	CARD_ID	CODE_INDEX	optional_arg_0	optional_arg_1	...
 ```
 
-For example, to run the second code tab on a card whose NFT ID is `my-junta-card`:
+For example, we might run the second code block on a card whose NFT ID is `my-junta-card` with:
 
 ```text
 NFT_EVENT	my-junta-card	1
 ```
 
-Or, if you also want to pass the chosen country into the second stage:
+We can also pass the country into the second stage as an argument:
 
 ```text
 NFT_EVENT	my-junta-card	1	cuba
 ```
 
-When the engine reaches that instruction, it:
-
-1. Finds the NFT object with that card ID
-2. Selects the code block at the requested index
-3. Prepares an `args` array for that invocation
-4. Runs that code block in the sandbox
-5. Removes the `NFT_EVENT` instruction itself as part of handling it
-
-Important points:
-
-- The second code block is **not** called as an ordinary JavaScript function by the first one.
-- It is scheduled as another piece of game work.
-- You do **not** need an extra instruction just to clear the NFT event. The engine removes it when it runs.
-- The first code block runs as the card’s initial event.
-- The second code block runs later as its own NFT event.
-
-### Queue order in plain language
-
-The shared queue usually works from the **end** of the list. The last instruction you add is the first one the game processes.
-
-So if you want the story to be:
-
-1. place influence
-2. run stage 2
-3. finish / resolve the card
-
-you generally add those instructions in **reverse** order:
-
-1. resolve
-2. NFT event for stage 2
-3. place
-
-That way, when the game works through the list, placement happens first, stage 2 happens next, and resolve happens last.
-
----
-
-## Passing arguments into a later stage
-
-When an NFT event runs a code block, the engine prepares a simple array called `args` for that invocation.
-
-Inside the script you can read:
+If you use this technique to pass arguments into code blocks, you can access them within the NFT object that contains the code chunk. Inside the script, you can access these arguments as folows:
 
 ```javascript
 args[0]
@@ -165,47 +100,24 @@ args[2]
 // ...
 ```
 
-Those values come from the optional fields after the code index in the instruction.
-
-Example:
+These instructions can be chained from code block to code block. For example, the second code block could in theory add another call to NFT_EVENT asking for yet a third code block associated with the card to run as follows:
 
 ```text
-NFT_EVENT	my-junta-card	1	cuba	coup
+NFT_EVENT	my-junta-card	2	cuba	coup
 ```
 
-gives the second code block:
+The gives the code in the THIRD code block:
 
 ```javascript
 args[0] // "cuba"
 args[1] // "coup"
 ```
 
-If no extra fields are provided, `args` is an empty array.
+If no arguments are provided, `args` is an empty array.
 
-This is a simple way to hand information from one stage to the next — for example, the country chosen in stage 1.
+## How about an Example:
 
-When the card is first played as a normal event, stage 1 usually has no special arguments. Arguments become useful when a later stage is invoked through `NFT_EVENT`.
-
----
-
-## Junta example: two code tabs
-
-The examples below are a **hypothetical programmable Junta**. They are inspired by the real card’s two-step decision, adapted to the programmable-card API.
-
-> **What works today, and what does not**
->
-> - Choosing a country and placing influence with `place` works.
-> - Asking the player a menu question works in the card’s initial event.
-> - Reading control / ongoing events works.
-> - NFT scripts **cannot currently enqueue** `NFT_EVENT`, so one code tab cannot yet schedule another from sandbox code.
-> - NFT scripts **cannot currently enqueue** coup, realignment, or free-ops instructions.
-> - When the engine does run an `NFT_EVENT`, it currently executes that code on every client. Interactive HUD choices in a later stage may need additional player-routing support before they behave like a normal card play.
->
-> The multi-stage structure below is the right authoring model. Lines that are not permitted yet are marked clearly. Do not treat those marked lines as working code today.
-
-Replace `YOUR_CARD_ID` with the card’s real NFT ID in the game.
-
-### Code tab 1 — Place influence
+### Code Block 1 — Ask Player to Place Influence
 
 ```javascript
 const cardId = "YOUR_CARD_ID";
@@ -220,51 +132,38 @@ const targets = [
 
 const country = await api.playerSelectCountry(targets);
 
-// Finish the card after later stages.
-api.addToQueue("resolve\t" + cardId);
+//
+// first instruction on the queue is the last to run...
+//
+// so we call our next code block first
+//
+api.addToQueue("NFT_EVENT\t" + cardId + "\t1\t" + country);
 
-// Intended: run code tab 2 after placement is processed.
-// Not available yet from NFT scripts:
-// api.addToQueue("NFT_EVENT\t" + cardId + "\t1\t" + country);
-
-// Place last so the shared queue processes placement first.
+//
+// and then add the influence to the selected country
+//
 api.addToQueue("place\t" + faction + "\t" + faction + "\t" + country + "\t2");
 
+//
+// broadcast the information to other players
+//
 await api.endTurn();
+
+//
+// don't forget to return 0
+//
 return 0;
 ```
 
-**What this stage is doing**
-
-1. Figures out whether the acting player is US or USSR
-2. Asks which Central / South American country to target
-3. Prepares to finish the card with `resolve`
-4. Would schedule code tab `1` and pass the chosen country as `args[0]`
-5. Places 2 influence in the chosen country
-6. Submits the turn and returns `0` so the queue can wait for that submission
-
-### Code tab 2 — Coup or realignment
+### Code Block 2 — Coup or realignment
 
 ```javascript
 const cardId = "YOUR_CARD_ID";
 const faction = context.game.player === 2 ? "us" : "ussr";
 const country = args[0];
 
-if (!country) {
-  api.addToQueue("NOTIFY\tJunta stage 2 is missing its target country");
-  await api.endTurn();
-  return 0;
-}
-
-const controller = api.whoControls(country);
-api.addToQueue(
-  "NOTIFY\tJunta reviews " + country +
-  (controller ? " (controlled by " + controller + ")" : " (uncontrolled)")
-);
-
 const choice = await api.playerSelectOption([
   { id: "coup", label: "Coup" },
-  { id: "realign", label: "Realignment" },
   { id: "skip", label: "Skip military action" }
 ]);
 
@@ -274,28 +173,14 @@ if (choice === "skip") {
   return 0;
 }
 
-// Intended: spend free ops on a coup or realignment in Central / South America.
-// Not available yet from NFT scripts:
-// api.addToQueue("ops\t" + faction + "\t" + cardId + "\t2");
-// or a dedicated coup / realign instruction, once permitted
-
 api.addToQueue(
-  "NOTIFY\tJunta would now " + choice +
+  "NOTIFY\tJunta triggers a  now " + choice +
   " in Central or South America (military follow-up not yet available to NFT cards)"
 );
 
 await api.endTurn();
 return 0;
 ```
-
-**What this stage is doing**
-
-1. Reads the country passed from stage 1 through `args[0]`
-2. Inspects the **current** board with `api.whoControls`
-3. Asks the player whether to coup, realign, or skip
-4. Reports the intended military follow-up
-
-Once NFT scripts can schedule `NFT_EVENT` and enqueue military instructions, this is the stage that should carry out the free coup / realignment after the influence is already on the board.
 
 ### A version you can experiment with today
 
