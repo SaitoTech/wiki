@@ -2,7 +2,7 @@
 title: Twilight Struggle API - Full Queue Instructions
 description: Custom Cards QUEUE API
 published: true
-date: 2026-11-04T10:49:02.675Z
+date: 2026-11-04T10:50:06.121Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T10:49:02.675Z
@@ -10,16 +10,7 @@ dateCreated: 2026-11-04T10:49:02.675Z
 
 # Twilight Struggle Queue Command Reference
 
-This document is the complete queue-instruction vocabulary for Twilight Struggle on the Saito Game Engine. It is intended for developers writing custom cards and NFT scripts that enqueue moves via `addMove` / `api.addToQueue`.
-
-## How the queue works
-
-- The game queue is a **stack**: the engine always processes the **last** entry first.
-- Each entry is a single string. Fields are separated by **tab** characters (`\t`).
-- `GameTemplate.runQueue()` first runs every registered **GameEngine** handler against the current instruction (`initializeQueueCommands` → `this.commands[]`).
-- If no engine handler removes or replaces that instruction, Twilight’s overridden `handleGameLoop()` processes **game-specific** instructions.
-- Return `0` from a handler pauses the queue (usually waiting for a player move). Return `1` continues.
-- Many interactive Twilight instructions **leave themselves** on the queue until a matching `resolve\t{token}` (or a later submitted move) clears them.
+This document is the complete queue-instruction vocabulary for Twilight Struggle on the Saito Game Engine. It is intended for developers writing custom cards and NFT scripts that enqueue moves via `addMove` / `api.addToQueue`. Note that some interactive Twilight instructions **leave themselves** on the queue until a matching `resolve\t{token}` (or a later submitted move) clears them.
 
 ## Conventions
 
