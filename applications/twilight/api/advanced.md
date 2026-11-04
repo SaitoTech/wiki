@@ -2,7 +2,7 @@
 title: Twilight Struggle - Advanced Programming Techniques
 description: 
 published: true
-date: 2026-11-04T13:11:13.585Z
+date: 2026-11-04T13:24:02.929Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T12:21:40.168Z
@@ -182,60 +182,38 @@ await api.endTurn();
 return 0;
 ```
 
-### A version you can experiment with today
 
-Until stage scheduling is permitted from NFT scripts, keep the teachable Junta decisions in **one** code tab. You will not get a true post-queue board refresh between the two choices, but you can still practice selection, placement, and branching:
+## Reading the Board / State
 
-```javascript
-const cardId = "YOUR_CARD_ID";
-const faction = context.game.player === 2 ? "us" : "ussr";
+Your script receives a read-only snapshot as `context.game`. Changing properties on `context.game` does nothing to the real game, but you can check the value of almost anything the game tracks:
 
-const country = await api.playerSelectCountry([
-  "cuba", "mexico", "panama", "nicaragua",
-  "venezuela", "brazil", "chile", "argentina"
-]);
+```
+// which turn is it?
+const turn = context.game.turn;
 
-const followUp = await api.playerSelectOption([
-  { id: "military", label: "Plan a free coup or realignment next" },
-  { id: "skip", label: "Influence only" }
-]);
+// which round of play is this?
+const round = context.game.round;
 
-api.addToQueue("resolve\t" + cardId);
-api.addToQueue(
-  "NOTIFY\tJunta places in " + country +
-  (followUp === "military"
-    ? " and wants a military follow-up"
-    : " only")
-);
-api.addToQueue("place\t" + faction + "\t" + faction + "\t" + country + "\t2");
+// how many victory points does each side have?
+const vp = context.game.vp;
 
-await api.endTurn();
-return 0;
+// what is the current DEFCON level?
+const defcon = context.game.defcon;
+
+// how much influence does Italy have?
+const influence = context.game.countries["italy"];
+
+// what events are active?
+const events = context.game.events;
 ```
 
-Use the two-tab design when you are learning the staging model. Use the single-tab version when you want something you can run with today’s permissions.
-
----
-
-## Reading the board before you act
-
-Your script receives a read-only snapshot as `context.game`.
-
-Changing properties on `context.game` does nothing to the real game. Treat it as information, not as a place to store results.
-
-Useful questions the API can answer directly:
+Functions exist to simplify the most common checks:
 
 ```javascript
 api.isControlled("us", "canada")   // 1 or 0
 api.whoControls("egypt")          // "us", "ussr", or ""
 api.isEventActive("reformer")     // 1 when that ongoing event is active
 ```
-
-### When would I need this?
-
-- Only place influence if a country is uncontrolled
-- Give a bonus if an ongoing event like Reformer is active
-- Tell the player something about the current board before they choose
 
 ### Simple example
 
@@ -244,30 +222,17 @@ const cardId = "YOUR_CARD_ID";
 const country = await api.playerSelectCountry(["egypt", "libya", "israel"]);
 
 if (api.whoControls(country) === "ussr") {
-  api.addToQueue("NOTIFY\tCannot place into USSR-controlled " + country);
+  api.addMove("NOTIFY\tCannot place into USSR-controlled " + country);
 } else if (api.isEventActive("reformer") == 1) {
-  api.addToQueue("place\tus\tus\t" + country + "\t1");
+  api.addMove("place\tus\tus\t" + country + "\t1");
 } else {
-  api.addToQueue("place\tus\tus\t" + country + "\t2");
+  api.addMove("place\tus\tus\t" + country + "\t2");
 }
 
-api.addToQueue("resolve\t" + cardId);
 await api.endTurn();
 return 0;
 ```
 
-### Knowing which side you are
-
-Prefer the seat number on the snapshot:
-
-```javascript
-const isUs = context.game.player === 2;
-const isUssr = context.game.player === 1;
-```
-
-In Twilight Struggle seating, player `1` is USSR and player `2` is US.
-
----
 
 ## Asking the player to choose
 
@@ -282,7 +247,7 @@ const option = await api.playerSelectOption([
 const country = await api.playerSelectCountry(["cuba", "mexico", "panama"]);
 ```
 
-These do **not** change the board by themselves. They only wait for a HUD choice, then your script decides which instructions to enqueue.
+These do **not** change the board by themselves. They offer whatever player is executing that javascript a menu and ask them to choose between the options, returning the value provided in the ```id``` field.
 
 ### When would I need this?
 
@@ -292,30 +257,17 @@ These do **not** change the board by themselves. They only wait for a HUD choice
 
 ### Pattern
 
-1. Ask the question with `await`
-2. Branch on the answer
-3. Queue the resulting moves
+1. identify the player that needs to respond
+2. use an if/else branch so only that player executes #3 and #4
+3. use the answer with api.addMove()
 4. Call `await api.endTurn()`
 5. `return 0`
 
-```javascript
-const cardId = "YOUR_CARD_ID";
-const choice = await api.playerSelectOption([
-  { id: "canada", label: "Canada" },
-  { id: "egypt", label: "Egypt" }
-]);
+--- 
 
-api.addToQueue("place\tus\tus\t" + choice + "\t2");
-api.addToQueue("resolve\t" + cardId);
-await api.endTurn();
-return 0;
-```
+## Permanent Effects / Events
 
----
-
-## Ongoing events and lasting effects
-
-Twilight keeps “this effect is still in play” markers that your script can read with:
+Twilight keeps “this effect is still in play” markers that your script can read:
 
 ```javascript
 api.isEventActive("nato")
@@ -325,115 +277,13 @@ api.isEventActive("reformer")
 
 ### What this lets you do
 
-Make a card behave differently depending on whether an earlier event is still active.
+Make a card behave differently depending on whether an earlier event is still active. If you need to set events or remove them, use the functions:
 
-### What you cannot do yet from NFT scripts
-
-There is no supported way for an NFT script to turn a custom lasting flag on or off. You can **read** existing event flags. You cannot currently create your own lasting marker from sandbox code.
-
-So:
-
-- Branching on Reformer / NATO / Marshall → yes
-- Inventing a new lasting “Global Initiative” flag from an NFT card → not available yet
-
----
-
-## Working with the queue
-
-### The basic habit
-
-Almost every finished card stage looks like this:
-
-```javascript
-api.addToQueue("place\tus\tus\tegypt\t2");
-api.addToQueue("resolve\tYOUR_CARD_ID");
-await api.endTurn();
-return 0;
+```
+api.setActiveEvent("my-custom-event")
+api.removeActiveEvent("my-custom-event");
 ```
 
-- `addToQueue` validates the instruction and records it for submission
-- `endTurn` sends those instructions into the shared game
-- `return 0` tells the queue processor to pause while that turn is handled
+## Troubleshooting
 
-### Instructions NFT scripts may use today
-
-- `place` — place influence
-- `resolve` — finish / clear the card’s event entry
-- `NOTIFY` / `notify` — show a message
-- `RESOLVE`
-- `ACKNOWLEDGE`
-
-If you try to add something else, `addToQueue` throws “not permitted”.
-
-### Why `place` feels immediate
-
-For `place`, the acting player’s influence is applied locally right away, then the same instruction is submitted so opponents update once. The format is:
-
-```text
-place	origin	faction	country	amount
-```
-
-You can write either faction in the origin field; the game rewrites origin to the acting player’s faction for you.
-
----
-
-## Common mistakes
-
-1. **Treating a title slug or printed card number as the NFT ID**  
-   The instruction needs the card’s real NFT ID in the game.
-
-2. **Confusing the card ID with the code index**  
-   The ID selects the card object. The index selects which code tab on that card to run.
-
-3. **Calling a second code tab as a normal JavaScript function**  
-   Opponents will not follow that. Later stages must be scheduled as game work.
-
-4. **Expecting unsupported commands to work**  
-   Coup, realignment, DEFCON, VP, space race, and custom lasting flags are not currently available through the NFT queue permissions.
-
-5. **Forgetting `resolve` after a normal card play**  
-   Most finished events should resolve the card they belong to.
-
-6. **Assuming a second code tab exists when only one tab has code**  
-   A single filled tab is stored as one script. Index `1` only exists when you actually created a second code tab.
-
-7. **Editing `context.game` and expecting the board to change**  
-   Use `addToQueue` for real game changes.
-
-8. **Returning the wrong value after player input**  
-   After `endTurn()`, return `0` so the queue can wait.
-
----
-
-## Quick status for card authors
-
-| Goal | Status for NFT card scripts |
-|---|---|
-| Several code tabs on one card | Supported in the Card Generator |
-| First tab runs on normal card play | Works |
-| Engine can run a later tab via `NFT_EVENT` | Supported by the engine |
-| NFT script can enqueue `NFT_EVENT` | Not available yet |
-| Pass `args[0]`, `args[1]`, … into a later stage | Supported when `NFT_EVENT` runs |
-| Place influence | Works |
-| Player menus / country selection | Works |
-| Read control and ongoing events | Works |
-| Create custom lasting flags | Not available yet |
-| Coup / realignment / free ops from NFT scripts | Not available yet |
-
----
-
-## Where to go next
-
-- Start with a one-tab card that places influence and resolves
-- Add a player choice
-- Add a condition based on control or an ongoing event
-- Study the Junta staging model when your card needs a decision **after** the board has changed
-- Keep unsupported military or lasting-effect ideas as design notes until those permissions exist
-
-The goal is not to memorize the engine. The goal is to recognize the pattern:
-
-**choose → inspect the board → queue allowed instructions → end the turn → return 0**
-
-and, for richer cards:
-
-**stage 1 changes the board → the queue continues → stage 2 decides based on the result**
+Saito is a community project. Many devs and players congregate around RedSquare. Feel welcome to post questions or suggestions there.
