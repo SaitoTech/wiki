@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards - Example Code
 description: 
 published: true
-date: 2026-11-04T14:10:51.790Z
+date: 2026-11-04T14:43:30.688Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T14:10:51.790Z
@@ -85,14 +85,10 @@ If John Paul II has been evented, US places 3 influence in Poland.
 
 ```javascript
 if (api.isEventActive("johnpaul") != 1) {
-  api.addToQueue("NOTIFY\tSolidarity does not trigger without John Paul II");
-  api.addToQueue("resolve\tYOUR_NFT_ID");
-  await api.endTurn();
   return 0;
 }
 
 api.addToQueue("place\tus\tus\tpoland\t3");
-api.addToQueue("resolve\tYOUR_NFT_ID");
 await api.endTurn();
 return 0;
 ```
@@ -120,7 +116,6 @@ for (let i = 0; i < list.length; i++) {
 
 if (!options.length) {
   api.addToQueue("NOTIFY\tIndependent Reds: nothing to match");
-  api.addToQueue("resolve\tYOUR_NFT_ID");
   await api.endTurn();
   return 0;
 }
