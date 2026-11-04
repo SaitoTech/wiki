@@ -2,7 +2,7 @@
 title: Twilight Struggle - Advanced Programming Techniques
 description: 
 published: true
-date: 2026-11-04T13:40:09.526Z
+date: 2026-11-04T13:55:33.514Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T12:21:40.168Z
@@ -122,7 +122,7 @@ If no arguments are provided, `args` is an empty array.
 ```javascript
 const cardId = "YOUR_CARD_ID";
 
-if (api.isPlayer(api.returnActivePlayer()) {
+if (api.isPlayer(api.returnEventingPlayer()) {
 
   const faction = context.game.player === 2 ? "us" : "ussr";
 
@@ -140,12 +140,12 @@ if (api.isPlayer(api.returnActivePlayer()) {
   //
   // so call the next code block first
   //
-  api.add("NFT_EVENT\t" + cardId + "\t1\t" + country);
+  api.addMove("NFT_EVENT\t" + cardId + "\t1\t" + country);
 
   //
   // then add the influence to the selected country
   //
-  api.addToQueue("place\t" + faction + "\t" + faction + "\t" + country + "\t2");
+  api.addMove("place\t" + faction + "\t" + faction + "\t" + country + "\t2");
 
   //
   // broadcast the information to other players
@@ -165,7 +165,7 @@ return 0;
 ```javascript
 const cardId = "YOUR_CARD_ID";
 
-if (api.isPlayer(api.returnActivePlayer()) {
+if (api.isPlayer(api.returnEventingPlayer()) {
 
   const faction = context.game.player === 2 ? "us" : "ussr";
   const country = args[0];
@@ -176,7 +176,7 @@ if (api.isPlayer(api.returnActivePlayer()) {
   ]);
 
   if (choice === "skip") {
-    api.addToQueue("NOTIFY\tJunta skips the free military action");
+    api.addMove("NOTIFY\tJunta skips the free military action");
     await api.endTurn();
     return 0;
   }
