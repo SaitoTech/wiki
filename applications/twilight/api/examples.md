@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards - Example Code
 description: 
 published: true
-date: 2026-11-04T14:43:30.688Z
+date: 2026-11-04T14:47:23.018Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T14:10:51.790Z
