@@ -2,7 +2,7 @@
 title: Twilight Struggle - Advanced Programming Techniques
 description: 
 published: true
-date: 2026-11-04T13:24:02.929Z
+date: 2026-11-04T13:37:11.735Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T12:21:40.168Z
@@ -219,17 +219,18 @@ api.isEventActive("reformer")     // 1 when that ongoing event is active
 
 ```javascript
 const cardId = "YOUR_CARD_ID";
-const country = await api.playerSelectCountry(["egypt", "libya", "israel"]);
+if (api.isPlayer(api.returnActivePlayer()) {
 
-if (api.whoControls(country) === "ussr") {
-  api.addMove("NOTIFY\tCannot place into USSR-controlled " + country);
-} else if (api.isEventActive("reformer") == 1) {
-  api.addMove("place\tus\tus\t" + country + "\t1");
-} else {
-  api.addMove("place\tus\tus\t" + country + "\t2");
+    const country = await api.playerSelectCountry(["egypt", "libya", "israel"]);
+
+    if (api.isEventActive("reformer") == 1) {
+        api.addMove("place\tus\tus\t" + country + "\t2");
+    } else {
+        api.addMove("place\tus\tus\t" + country + "\t1");
+    }
+
+    await api.endTurn();
 }
-
-await api.endTurn();
 return 0;
 ```
 
