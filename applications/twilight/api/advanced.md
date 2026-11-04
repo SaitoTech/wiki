@@ -2,7 +2,7 @@
 title: Twilight Struggle - Advanced Programming Techniques
 description: 
 published: true
-date: 2026-11-04T12:43:33.657Z
+date: 2026-11-04T13:11:13.585Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T12:21:40.168Z
@@ -133,14 +133,14 @@ const targets = [
 const country = await api.playerSelectCountry(targets);
 
 //
-// first instruction on the queue is the last to run...
+// first instruction added is last to run...
 //
-// so we call our next code block first
+// so call the next code block first
 //
-api.addToQueue("NFT_EVENT\t" + cardId + "\t1\t" + country);
+api.add("NFT_EVENT\t" + cardId + "\t1\t" + country);
 
 //
-// and then add the influence to the selected country
+// then add the influence to the selected country
 //
 api.addToQueue("place\t" + faction + "\t" + faction + "\t" + country + "\t2");
 
@@ -155,7 +155,7 @@ await api.endTurn();
 return 0;
 ```
 
-### Code Block 2 — Coup or realignment
+### Code Block 2 — Coup or Skip
 
 ```javascript
 const cardId = "YOUR_CARD_ID";
