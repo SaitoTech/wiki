@@ -1,0 +1,226 @@
+---
+title: Twilight Struggle API - Full Queue Instructions
+description: Custom Cards QUEUE API
+published: true
+date: 2026-11-04T10:49:02.675Z
+tags: 
+editor: markdown
+dateCreated: 2026-11-04T10:49:02.675Z
+---
+
+# Twilight Struggle Queue Command Reference
+
+This document is the complete queue-instruction vocabulary for Twilight Struggle on the Saito Game Engine. It is intended for developers writing custom cards and NFT scripts that enqueue moves via `addMove` / `api.addToQueue`.
+
+## How the queue works
+
+- The game queue is a **stack**: the engine always processes the **last** entry first.
+- Each entry is a single string. Fields are separated by **tab** characters (`\t`).
+- `GameTemplate.runQueue()` first runs every registered **GameEngine** handler against the current instruction (`initializeQueueCommands` → `this.commands[]`).
+- If no engine handler removes or replaces that instruction, Twilight’s overridden `handleGameLoop()` processes **game-specific** instructions.
+- Return `0` from a handler pauses the queue (usually waiting for a player move). Return `1` continues.
+- Many interactive Twilight instructions **leave themselves** on the queue until a matching `resolve\t{token}` (or a later submitted move) clears them.
+
+## Conventions
+
+| Concept | Values / notes |
+|---|---|
+| Faction id | `us` or `ussr` (lowercase strings) |
+| Player number | `1` = USSR, `2` = US, `0` = observer |
+| Origin on `place` / `remove` / `realign` | Acting faction that already applied the change locally; other clients apply when `origin` ≠ their local faction |
+| Card id | Stable card key string (e.g. `china`, `wargames`), not display name |
+| Country id | Country key used in `this.countries` / `game.countries` (e.g. `poland`) |
+| Region id | e.g. `europe`, `asia`, `mideast`, `seasia`, `africa`, `camerica`, `samerica` |
+
+**Case matters.** Twilight lowercase commands such as `resolve`, `deal`, `discard`, `play`, `setvar`, and `deckaddcards` are **not** the GameEngine commands `RESOLVE`, `DEAL`, `DISCARD`, `PLAY`, `SETVAR`, and `DECKADDCARDS`.
+
+---
+
+## Table 1: Twilight Struggle Game-Specific Queue Commands
+
+| Queue Instruction | Arguments and Format | Description |
+|---|---|---|
+| `player_turn_card_selected` | `player_turn_card_selected\t{us\|ussr}\t{card}` | On the matching client (US=player 2, USSR=player 1), runs `playerTurnCardSelected` for that card, then pauses the queue. |
+| `bgs` | `bgs` or `bgs\treset` | With `reset`, restores default battlegrounds; otherwise re-parses each country's `bg` flag as an integer (used after Kissinger SETVARs). |
+| `add_latewar_card_to_deck` | `add_latewar_card_to_deck\t{card}` | Adds the chosen optional Late-War card to the deck via `addTwilightCardToDeck`. |
+| `choose_latewar_optional_cards` | `choose_latewar_optional_cards\t{playerNum}` | Lets player 1/2 pick a Late-War optional card via overlay (rolls 4 candidates); others wait. |
+| `add_midwar_card_to_deck` | `add_midwar_card_to_deck\t{card}` | Adds the chosen optional Mid-War card to the deck. |
+| `choose_midwar_optional_cards` | `choose_midwar_optional_cards\t{playerNum}` | Same as late-war chooser but for Mid-War options. |
+| `init` | `init` | Initializes NFTs, assigns `game.player`, optionally reorders players for fixed US/USSR seating. |
+| `update_observers` | `update_observers\t{playerNum}` | Active player submits `observer_cards_update` with a JSON hand snapshot, then ends turn. |
+| `observer_cards_update` | `observer_cards_update\t{playerNum}\t{jsonHand}` | Intended to give observers the revealed hand; implementation stringifies `mv[2]` then iterates characters (likely broken). |
+| `revert` | `revert` | Calls `revertTurn()` to restore start-of-turn state/queue snapshot. |
+| `final_scoring` | `final_scoring` | Runs `finalScoring()` and stops the queue. |
+| `turn` | `turn` | Increments action-round counter, clears China-card eligibility, updates AR UI. |
+| `purge` | `purge\t{card}` | Cancels the event and removes the card from the next deal (Saito community deck tooling). |
+| `discard` | `discard\t{us\|ussr}\t{card}` | Discards `card` from hand into discards; special-cases China (passes facedown to opponent). |
+| `fyp_discard` | `fyp_discard\t{card}` | Puts `card` into the discard pile without removing from hand (Five Year Plan path). |
+| `undiscard` | `undiscard\t{card}` | Removes `card` from discards back into the live deck (or rebuilds from all-cards table). |
+| `wargames` | `wargames\t{us\|ussr}\t{0\|1}` | `0` = discard only; `1` applies Wargames concession VP and ends the game (late-war threshold differs). |
+| `card` | `card\t{us\|ussr}\t{card}` | If local faction matches, starts `playerTurn(card)`; pauses queue. No current push sites found (legacy). |
+| `hand` | `hand\t{playerNum}\t{card}` | Gives `card` to that player's hand locally and removes it from the other client's hand tracking. |
+| `grainsales` | `grainsales\tussr\t{card}` then `grainsales\tus\t{card}` | USSR offers a card to US for play-or-return; US return path re-hands the card to USSR. |
+| `stage` | `stage` [optional unused args] | No-op splice; never pushed in current sources (legacy). |
+| `clearcheclicktargets` | `clearcheclicktargets` | Clears Che coup highlight CSS classes after a second-target pick. |
+| `checoup` | `checoup\tussr\t{country}\t{ops}` | Resolves Che's first coup on `country` with `ops`; on success prompts USSR for a second coup target. |
+| `missileenvy` | `missileenvy\t{senderPlayerNum}\t{card}` | Receiver plays offered card for ops (opponent-owned) or event (own/neutral), then discards it. |
+| `quagmire` | `quagmire\t{us\|ussr}\t{discardedCard}` | Rolls to escape Quagmire/Bear Trap after discard; failure sets double-quagmire/beartrap flag. |
+| `tehran` | `tehran\tussr\t{keysNum}` (+ keys on queue) / `tehran\tus\t{discardCount}` (+ crypt entries) | Our Man in Tehran: USSR supplies deck keys; US chooses discards; US reply strips those crypt cards. |
+| `limit` | `limit\t{china\|coups\|spacerace\|realignments\|placement\|milops\|ignoredefcon}` or `limit\tregion\t{region}` | Enables temporary action restrictions for the current ops sequence. |
+| `flush` | `flush\tdiscards` | Clears the discard object (`discards` is the only implemented subtype). |
+| `latinamericandebtcrisis` | `latinamericandebtcrisis` | USSR doubles influence in up to two South American countries that already have USSR influence. |
+| `northsea` | `northsea` | Prompts US about an extra turn (North Sea Oil); both choices currently enqueue `play\t2`. |
+| `space` | `space\t{us\|ussr}\t{card}` | Attempts space race with `card` for that faction and discards it (except China). |
+| `unlimit` | `unlimit\t{china\|cmc\|coups\|spacerace\|realignments\|placement\|milops\|ignoredefcon\|region}` [`\t{country}` for `cmc`] | Clears the matching limit; `cmc` also clears Cuban Missile Crisis and may record removal country. |
+| `dynamic_deck_management` | `dynamic_deck_management` | Saito-deck only: runs `dynamicDeckManagement()` to add/remove cards. |
+| `display_new_optional_cards` | `display_new_optional_cards` | Saito-deck only: shows overlay of newly added optional cards, then clears the list. |
+| `pinochet` | `pinochet` | USSR removes 1 US influence from Central/South America (if any exists). |
+| `nixon_shock_play_card_or_hand_to_opponent` | `nixon_shock_play_card_or_hand_to_opponent\t{playerNum}\t{activeFaction}` | Drawn-card chooser: play (US only), keep, or hand to opponent. |
+| `chernobyl` | `chernobyl\t{region}` | Sets Chernobyl restricted region for USSR placements. |
+| `dice` | `dice\tburn\t{us\|ussr}` | Burns one shared die roll on the acting/observer client (sync entropy). |
+| `aldrichreveal` | `aldrichreveal` [`\tus` unused] | US reveals hand via `showhand` + NOTIFY (Ask Not / Aldrich paths). |
+| `aldrich` | `aldrich\tus\t{n}` (+ `n` card keys below) / `aldrich\tussr\t{card}` | US publishes hand keys; USSR picks one discard; USSR reply removes it from US hand. |
+| `cambridge` | `cambridge\t{regionOrScoringCard}[\t...]` | USSR places 1 OP in any country belonging to the listed region keys (from revealed US scoring cards). |
+| `teardownthiswall` | `teardownthiswall` | US may take a 3-OP Europe-restricted free coup/realign package (via `limit`/`ops`) or skip. |
+| `deal` | `deal\t{playerNum}` | That player computes cards needed (8/9 by round, China excluded) and queues engine `DEAL`. |
+| `reshuffle_and_insert_discards` | `reshuffle_and_insert_discards` | If draw pile is short, deals remaining cards then shuffles discards back (skips rounds 4/8 insert turns). |
+| `ops` | `ops\t{us\|ussr}\t{card}\t{ops}` [`\t{any}` to skip back button] | Plays ops for faction/card (modified by events); does **not** self-remove—cleared by `resolve\tops`. |
+| `milops` | `milops\t{us\|ussr}\t{amount}` | Adds military operations points for that faction. |
+| `vp` | `vp\t{us\|ussr}\t{points}` [`\t{delayFlag}`] | Awards VP; if `delayFlag==1`, banks into `vp_outstanding` instead of immediate board VP. |
+| `coup` | `coup\t{us\|ussr}\t{country}\t{ops}` [`\t{card}`] | Resolves a coup; awards milops unless limited; optional `card` affects ops modifiers. |
+| `realign` | `realign\t{us\|ussr}\t{country}` | Applies realignment on non-origin clients only (origin already applied locally). |
+| `defcon` | `defcon\tlower` or `defcon\traise` | Lowers DEFCON via `lowerDefcon()`, or raises by 1 (capped at 5). |
+| `move` | `move\t{us\|ussr}` | Sets `game.state.move` phasing flag (0=USSR, 1=US). No current push sites found (legacy). |
+| `event` | `event\t{us\|ussr}\t{card}` | Triggers `playEvent`; may remove/discard non-recurring cards; Flower Power headline can inject delayed VP. |
+| `stability` | `stability\t{faction}\t{country}\t{adj}` | Adds `adj` to country stability/control value. |
+| `place` | `place\t{originFaction}\t{influenceFaction}\t{country}\t{amount}` | Places influence on non-origin clients only (NFT policy forces `origin` to acting faction). |
+| `setvar` | See notes: `setvar\t{playerNum}\thold\t{json}` / `setvar\t{playerNum}\topponent_cards_in_hand\t{n}` / `setvar\tgame\tstate\tback_button_cancelled\t{0\|1}` | Twilight lowercase setter for hold-card lists, opponent hand size, and back-button cancel; other `setvar\tgame\tstate\tevents\t...` paths are spliced but not applied. |
+| `remove` | `remove\t{originFaction}\t{influenceFaction}\t{country}\t{amount}` | Removes influence on non-origin clients only. |
+| `resolve` | `resolve\t{token}` | Twilight-specific clear of the matching queued step (`event`/`ops`/`play`/`deal`/`headline`/`placement`/same-name instruction, etc.); also discards/removes matching card id. Distinct from engine `RESOLVE`. |
+| `clear` | `clear\theadline` | Clears headline state flags after headline resolution. |
+| `placement` | `placement\t{playerNum}` | Initial influence placement UI for that player; left on queue until `resolve\tplacement`. |
+| `placement_bonus` | `placement_bonus\t{playerNum}\t{bonusOps}` | US bonus initial placement of `bonusOps` influence; resolved via `resolve\tplacement_bonus`. |
+| `headline` | `headline` or `headline\t{stage}` [`\t{hash}\t{xor}\t{card}`] | Headline phase state machine (`headline1` default; later stages carry commitment data). |
+| `deckaddcards` | `deckaddcards\t{jsonCardsObject}` | Merges card defs from JSON into the live deck. No current push sites (engine has `DECKADDCARDS`). |
+| `round` | `round` | End/start-of-round controller: NORAD/extra turns/discards, `endRound`, queues turns/headline/deals/optional-card picks. |
+| `play` | `play\t{playerNum}` | Starts that player's action round (`playMove`); may interrupt for NORAD; left until `resolve\tplay`/`resolve\tturn`. |
+| `showhand` | `showhand\t{playerNum}\t{cardId cardId...}` | Shows space-separated hand cards to the opponent via overlay. |
+| `modal` | `modal\t{title}` [`\t{body}`] | Displays a modal dialog. |
+| `sharehandsize` | `sharehandsize\t{playerNum}` | That player publishes hold-card list + non-China hand count via `setvar`. |
+| `war` | `war\t{card}\t{winner}\t{die}\t{modifications}\t{player}\t{success}` | Renders the war overlay with the resolved war outcome (all args optional with defaults). |
+
+---
+
+## Table 2: GameEngine Queue Commands
+
+These instructions are provided by the base GameEngine and are available in Twilight Struggle whenever they appear on the queue. Engine handlers run **before** Twilight `handleGameLoop`.
+
+| Queue Instruction | Arguments and Format | Description |
+|---|---|---|
+| `SETVAR` | `SETVAR\t{key}\t{value}` \| `SETVAR\t{key}\t{subkey}\t{value}` \| `SETVAR\t{key}\t{a}\t{b}\t{value}` \| `SETVAR\t{key}\t{a}\t{b}\t{c}\t{value}` \| `SETVAR\tgame\t{...}` (optional depth) | Writes into `game_self.game` at 1–4 nested keys; numeric-looking leaf values are `parseInt`’d when `> 0`; if first key is `game`, that token is stripped and remaining path args are shifted. |
+| `SALERT / salert` | `SALERT\t{message}` | Shows a browser `salert` with `{message}`, then removes itself. |
+| `NOTIFY / notify` | `NOTIFY\t{message}` | Appends `{message}` to the game log via `updateLog`, then removes itself. |
+| `STATUS / status` | `STATUS\t{message}[\t{target}]` | Sets HUD/status text to `{message}` for target players (`{target}` defaults to `all`; otherwise treated as a player id/list), then removes itself. |
+| `LOAD` | `LOAD` | Recognized no-op (comment notes unsupported; does not splice itself). |
+| `SAVE` | `SAVE` | Saves a reloadable snapshot under `app.options.saves[game.id]`, logs a restore URL, and removes itself (skipped for PathsOfGlory). |
+| `HALTED` | `HALTED` | If confirms are still needed, updates status to waiting and pauses the queue (`return 0`); otherwise falls through without removing itself (cleared via `RESOLVE`). |
+| `ACKNOWLEDGE` | `ACKNOWLEDGE\t{notice}[\t{player}]` | Shows acknowledge UI with `{notice}`; optional `{player}` (1-based) restricts who must ack; others/observers clear and continue; acknowledging player pauses until confirm then splices. |
+| `SETTLE` | `SETTLE` | Removes itself and calls `queueGameStakeSettlement()` to enqueue stake SEND/RECEIVE flows. |
+| `GAMEOVER` | `GAMEOVER` | Marks the game over (`over=1`), shows game-over UI / site message, saves, clears itself, and pauses the queue. |
+| `ROUNDOVER` | `ROUNDOVER\t{winner_json}\t{reason}[\t{losers_json}]` | Parses JSON winner (and optional losers), and if local player is seat 1 broadcasts a `roundover` league/tx message; then removes itself. |
+| `OBSERVER` | `OBSERVER` | Legacy/obsolete observer toggle; currently only splices itself (body commented out). |
+| `PLAY` | `PLAY\t{players}` | `{players}` is `all` or a player id(/list); resets confirms if none pending, calls `playerTurn()` for matching unsettled players (else `nonPlayerTurn`), and pauses (`return 0`); does not splice itself. |
+| `RESETCONFIRMSNEEDED` | `RESETCONFIRMSNEEDED\t{players}` | `{players}` is `all`, a single id, or a JSON/array of ids; resets `confirms_needed` when none are pending (or waits if game halted), then removes itself. |
+| `RESOLVE` | `RESOLVE[\t{publickey}]` | Without key: removes itself and the previous queue entry (or clears queue). With `{publickey}`: clears that player’s confirm bit; when all confirms done, also clears a pending `HALTED` or the previous instruction; otherwise only removes the `RESOLVE`. |
+| `PRERESOLVE` | `PRERESOLVE\t{cmd}` | Inserts `{cmd}` immediately before the nearest older `RESOLVE` on the queue; does not remove the `PRERESOLVE` entry itself. |
+| `READY` | `READY` | Sets `initializing=0`, saves, removes itself; in non-browser/background pauses further processing after emitting ready UI. |
+| `SHUFFLE` | `SHUFFLE\t{deckidx}` | Calls `shuffleDeck({deckidx})` (1-based) and removes itself. |
+| `SHUFFLEDISCARDS` | `SHUFFLEDISCARDS\t{deckidx}` | Moves that deck’s discards into a new encrypted/shuffled deck rebuild sequence (`DECKBACKUP`…`SHUFFLE`) and removes itself. |
+| `LOGDECK` | `LOGDECK\t{deckidx}` | Logs the deck crypt contents for `{deckidx}`, then removes itself. |
+| `LOGHAND` | `LOGHAND\t{deckidx}` | Logs the hand for `{deckidx}`, then removes itself. |
+| `LOGPOOL` | `LOGPOOL\t{poolidx}` | Logs the pool hand for `{poolidx}`, then removes itself. |
+| `DISCARD` | `DISCARD\t{deckidx}\t{card}` | Removes `{card}` from that deck’s hand into `discards` (copying from `cards`), then removes itself. |
+| `RESOLVEDEAL` | `RESOLVEDEAL\t{deckidx}\t{recipient}\t{cards}` | Recipient decrypts/adds `{cards}` from crypt into hand; splices itself plus the prior entry (typically `DEAL`); purges spent keys/crypt once. |
+| `SIMPLEDEAL` | `SIMPLEDEAL\t{cards}\t{deckidx}\t{deck_json}` | Convenience: queues `DECK` + per-player `DECKXOR`/`DECKENCRYPT`/`DEAL` for `{cards}` each from JSON deck object, then removes itself. |
+| `DEAL` | `DEAL\t{deckidx}\t{recipient}\t{cards}` | Deals `{cards}` to `{recipient}`: async mode deals plaintext immediately; else queues `RESOLVEDEAL` (+ `REQUESTKEYS` from other players). Does not splice itself (cleared by `RESOLVEDEAL`). |
+| `SAFEDEAL` | `SAFEDEAL\t{deckidx}\t{recipient}\t{cards}` | Like deal, but if the crypt is short, reshuffles discards into the deck then deals remaining; removes itself and queues the needed `DEAL`/shuffle sequence. |
+| `PUSHONDECK` | `PUSHONDECK\t{deckidx}\t{cards_json}` | Queues backup/XOR/encrypt/restore-with-`push` so `{cards_json}` is added on top of deck `{deckidx}`; removes itself. |
+| `REQUESTKEYS` | `REQUESTKEYS\t{deckidx}\t{sender}\t{recipient}\t{cards}` | Only `{sender}` runs: broadcasts `ISSUEKEYS` plus `{cards}` key values and `RESOLVE`, then pauses; others wait (`return 0`). |
+| `ISSUEKEYS` | `ISSUEKEYS\t{deckidx}\t{sender}\t{recipient}\t{cards}\t{opponent_deck_length}` | Removes itself; `{recipient}` XOR-decodes the next `{cards}` crypt entries using the following `{cards}` key strings on the queue, then splices those keys. |
+| `SECUREROLL` | `SECUREROLL\t{player}\t{hash}\t{sig}` | Commit protocol for secure dice: verifies `{sig}` over `{hash}` for `{player}`, collects commits until all players (and initiator double-commit) are present, then sets `game.dice` and clears stacked `SECUREROLL`s. |
+| `SECUREROLL_END` | `SECUREROLL_END` | Resets `sroll` / `sroll_hash` / `sroll_done` state and removes itself (sentinel/end of a secure-roll region). |
+| `SIMULTANEOUS_PICK` | `SIMULTANEOUS_PICK\t{player}\t{hash_or_card}\t{sig}` | Commit/reveal simultaneous selection: verifies sigs, waits for all players’ three submissions, writes picks into `game.state.sp[]`, then clears stacked `SIMULTANEOUS_PICK`s. |
+| `DECKBACKUP` | `DECKBACKUP\t{deckidx}` | Snapshots deck `{deckidx}` (cards/crypt/keys/hand/fhand/discards/removed) into `old_*` fields and removes itself. |
+| `HANDBACKUP` | `HANDBACKUP[\t{deckidx}]` | Like backup but only preserves hand/fhand/discards/removed (crypt/keys cleared); `{deckidx}` optional, defaults to `1`. |
+| `DECKRESTORE` | `DECKRESTORE[\t{deckidx}[\tpush]]` | Restores `old_*` into deck `{deckidx}` (default `1`); optional third arg `push` appends restored crypt/hand on top, otherwise prepends underneath; clears `old_*` and removes itself. |
+| `DECKADDCARDS` | `DECKADDCARDS[\t{deckidx}[\t{cards_json}]]` | Parses optional JSON card map and merges missing keys into `deck[0].cards` (note: code always writes index `0` despite `{deckidx}`), then removes itself. |
+| `CARDS` | `CARDS\t{deckidx}\t{cryptLength}` (+ `{cryptLength}` prior queue strings) | Pops `{cryptLength}` following queue entries into `deck[deckidx-1].crypt` (non-observers only) after removing the `CARDS` instruction. |
+| `POOL` | `POOL\t{poolidx}` | Ensures pool `{poolidx}` exists, resets it, then removes itself. |
+| `SAFEPOOLDEAL` | `SAFEPOOLDEAL\t{deckidx}\t{cards}\t{poolidx}` | Queues `POOLDEAL`, or deal+`SHUFFLEDISCARDS`+remaining deal if crypt is short; removes itself. |
+| `POOLDEAL` | `POOLDEAL\t{deckidx}\t{cards}\t{poolidx}` | Convenience flop: queues `FLIPRESET` then per-player `FLIPCARD` for `{cards}` into `{poolidx}`; removes itself. |
+| `FLIPRESET` | `FLIPRESET\t{poolidx}` | Ensures pool exists; clears that pool’s crypt/keys and `decrypted` counter; removes itself. |
+| `FLIPCARD` | `FLIPCARD\t{deckidx}\t{cardnum}\t{poolidx}\t{playerid}` | Only `{playerid}` runs: broadcasts keys + `RESOLVEFLIP` (or uses `opponent_decks` if present); others wait. |
+| `RESOLVEFLIP` | `RESOLVEFLIP\t{deckidx}\t{cardnum}\t{poolidx}` | Consumes the next `{cardnum}` key strings to XOR-decode pool crypt; after all players’ key sets, hex-decodes into pool hand and trims deck crypt/keys. |
+| `OBSERVER_CHECKPOINT` | `OBSERVER_CHECKPOINT` | Removes itself; observers (`player==0`) halt/save for checkpoint; players continue. |
+| `DECKANDENCRYPT` | `DECKANDENCRYPT\t{deckidx}\t{players}\t{deck_json}` | Convenience: queues `DECK` + XOR/encrypt for each of `{players}` seats using `{deck_json}`; removes itself. |
+| `DECK` | `DECK\t{deckidx}\t{cards_json}` | Resets/creates deck `{deckidx}`, applies pending `to_add`/`to_remove`, sets `.cards` from JSON, builds plaintext hex crypt, removes itself. |
+| `DECKXOR` | `DECKXOR\t{deckidx}\t{playerid}` | Only `{playerid}`: XOR-blinds crypt with a local xor pad, generates keys, shuffles, broadcasts `CARDS`+crypt; others wait. Skipped entirely when `async_dealing==1`. |
+| `DECKFLUSH` | `DECKFLUSH\t{deckidx}[\tdiscards]` | Intended to clear discards when second arg is `discards`; implementation references undefined `qe` when splicing (see notes). |
+| `DECKENCRYPT` | `DECKENCRYPT\t{deckidx}\t{playerid}` | Only `{playerid}`: removes xor pad and re-encrypts crypt with per-card keys, broadcasts `CARDS`+crypt; others wait. Skipped when `async_dealing==1`. |
+| `null` | `null` | Removes a literal null/`"null"` queue head (no further args). |
+| `CRYPTOKEY` | `CRYPTOKEY\t{playerkey}\t{cryptokey}\t{confsig}` | If `{confsig}` verifies `{cryptokey}` under `{playerkey}`, stores `{cryptokey}` in `game.keys[]` for that Saito player; removes itself. |
+| `AVAILABLE_CRYPTOS` | `AVAILABLE_CRYPTOS\t{playerkey}\t{cryptos_json}` | Stores parsed crypto balances under `game.cryptos[{playerkey}]` and (for others) wallet assoc cache; removes itself. |
+| `REQUEST_AVAILABLE_CRYPTOS` | `REQUEST_AVAILABLE_CRYPTOS\t{player}` | Removes itself; designated `{player}` replies with `AVAILABLE_CRYPTOS` and pauses. |
+| `AVAILABLE_NFTS` | `AVAILABLE_NFTS\t{playerkey}\t{payload_json}` | Merges NFT `data` from payload array into matching `game.options.nfts[]` entries (or alerts/pauses on `{error:1}`); removes itself first. |
+| `REQUEST_AVAILABLE_NFTS` | `REQUEST_AVAILABLE_NFTS\t{player}` | Removes itself; designated player loads owned required NFTs from Archive and replies with `AVAILABLE_NFTS` (or error payload); pauses. |
+| `NFT_EVENT` | `NFT_EVENT\t{player}\t{nft_id}[\t{arg}...]` | Sets `options.nfts[id].args` from trailing args; designated `{player}` runs that NFT’s `data.code` via `executeJS` (array code may use first arg as index/name); intended to leave event for NFT to clear (e.g. via `RESOLVE`)—see notes. |
+| `SEND` | `SEND\t{sender}\t{receiver}\t{amount}\t{ts}\t{unique_hash}[\t{ticker}]` | Non-senders splice and continue; `{sender}` (Saito pubkey) opens crypto send auth and pays `{amount}` of `{ticker}` (default `game.crypto`) to receiver’s `game.keys` address, then splices on confirm. |
+| `RECEIVE` | `RECEIVE\t{sender}\t{receiver}\t{amount}\t{ts}\t{unique_hash}[\t{ticker}]` | Non-receivers splice and continue; `{receiver}` opens receive UI, calls `receivePayment` for `{amount}`/`{ticker}`, then splices on confirm. |
+
+---
+
+## Completeness verification
+
+### Counts
+
+| Inventory | Count |
+|---|---|
+| Twilight Struggle–specific commands (`handleGameLoop` `mv[0]` branches) | **68** |
+| GameEngine command families (`initializeQueueCommands` handlers; aliases share a row) | **59** |
+
+### Aliases and legacy names
+
+- Engine lowercase aliases: `salert`, `notify`, `status` (same behavior as uppercase).
+- Engine `OBSERVER` is obsolete (handler body commented out; instruction still splices).
+- `SIMULTANEOUS_PICK_END` appears only as an internal scan sentinel inside `SIMULTANEOUS_PICK`, not as a standalone handler.
+- Twilight lowercase `resolve` / `deal` / `discard` / `setvar` / `deckaddcards` / `play` coexist with distinct engine uppercase counterparts.
+- Twilight handlers with **no current enqueue sites** found in-module: `stage`, `card`, `move`, `update_observers`, `deckaddcards` (retained for compatibility).
+
+### Ambiguous or incomplete formats
+
+- Twilight `observer_cards_update`: hand payload handling appears incorrect (`JSON.stringify(mv[2])` then character iteration).
+- Twilight `setvar`: only `hold`, `opponent_cards_in_hand`, and `back_button_cancelled` shapes apply state; many historical `setvar\tgame\tstate\tevents\t...` pushes are spliced without effect (prefer engine `SETVAR` for nested `game.*` writes).
+- Twilight `northsea`: both HUD choices currently enqueue `play\t2`.
+- Twilight `ops` / `event` / `play` / `placement` / `placement_bonus` / `deal` / `headline` and several interactive card commands often remain on the queue until `resolve` or a follow-up move.
+- Engine `LOAD` is a recognized no-op and does not splice itself.
+- Engine `PRERESOLVE` inserts a command before the nearest older `RESOLVE` but does not remove itself.
+- Engine `DECKFLUSH` references undefined `qe` when splicing (implementation defect).
+- Engine `DECKADDCARDS` accepts a deck index argument but always mutates `deck[0]`.
+- Engine `NFT_EVENT`: comments describe leaving the instruction for the NFT to clear and calling `fail()` on validation errors; the current handler always splices first and references an undefined `fail` — treat as implementation-sensitive.
+- Engine `CARDS` / `ISSUEKEYS` / `RESOLVEFLIP` / `REQUESTKEYS` / Twilight `tehran` / `aldrich` consume **additional adjacent queue entries** (bare keys/cards), not only tab-separated fields on the command line.
+- Table-/one-player GameTemplate subclasses add extra commands (`EXITGAME`, `ADDPLAYER`, `REMOVEPLAYER`, `RESTARTGAME`, `PLAYERS`) that are **not** part of the base engine inventory used by Twilight.
+
+### Files and functions inspected
+
+- `node/mods/twilight/src/twilight-start.js` — `handleGameLoop()` (all Twilight `mv[0]` branches)
+- `node/mods/twilight/twilight.js` — concatenated runtime mirror of the same loop
+- `node/mods/twilight/src/twilight-end.js` — NFT `playEvent` integration (no additional queue dispatch)
+- `node/mods/twilight/lib/core/queue-policy.js` — NFT validation/normalization for `place` and `resolve`
+- `node/mods/twilight/lib/core/api.js` — NFT HUD helpers (no queue instruction definitions)
+- `node/mods/twilight/src/cards/**` — representative enqueue sites for argument formats
+- `node/lib/templates/gametemplate-src/gametemplate-queue.js` — `runQueue()`, `initializeQueueCommands()`
+- `node/lib/templates/gametemplate.js` — GameQueue mixin composition / NFT policy hooks
+- `node/lib/templates/gametemplate-src/gametemplate-web3.js` — constructs `SEND`/`RECEIVE` (no dispatch)
+- `node/lib/templates/gametemplate-src/gametemplate-nft-queue.js` — NFT `addToQueue` policy only
+
+Second-pass check: every `if (mv[0] ==/=== "...")` in Twilight `handleGameLoop` and every `gmv[0]` engine handler in `initializeQueueCommands` is represented in the tables above.
