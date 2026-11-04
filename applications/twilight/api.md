@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards & API
 description: Programming Custom Cards for Twilight Struggle in the Saito Game ENgine
 published: true
-date: 2026-11-04T08:53:25.750Z
+date: 2026-11-04T10:25:16.581Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T08:53:25.750Z
@@ -10,33 +10,61 @@ dateCreated: 2026-11-04T08:53:25.750Z
 
 # Twilight Struggle - Custom Cards
 
-The Twilight Struggle module on Saito supports custom cards. A custom card can do anything an ordinary card does: add or remove influence, award victory points, change DEFCON, and modify other aspects of the game. To get started building cards visit the [Saito TS Card Generator](https://saito.io/tscardgen) module or any other node running the software.
+The Twilight Struggle module supports custom cards. These cards can be programmed to do anything an ordinary card can: add or remove influence, award victory points, change DEFCON, and modify other aspects of the game.
 
 This page introduces the basic programming model and shows how to create straightforward custom card effects. More complicated programming patterns involving asynchronous combinations are covered in our advanced programming tutorial.
 
 
 ## 1. The Twilight Struggle Game Queue
 
-Twilight Struggle runs on a queue that manages game instructions. Players share instructions with each other that update the game queue and execute each instruction in the same order. The game stays in step as instructions are executed and removed from the queue one-by-one.
+Twilight Struggle runs on a queue that manages game instructions. When players make moves they share instructions with each other that are added to this queue. All playesr then execute the same moves in the same order while the game stays in sync as instructions are executed and removed from the queue.
 
-The queue operates on a **last-in, first-out (LIFO)** basis: the last instruction added is the first one executed. Programming cards in javascript mostly consists of learning how to add these instructions to the game queue. For example:
+The queue operates on a **last-in, first-out (LIFO)** basis: the last instruction added is the first one executed. Programming cards in javascript mostly consists of learning how to add these instructions to the game queue. There are two ways of adding moves:
 
+
+#### SHARED EXECUTION
 ```js
-api.addMove("vp\tus\t2");
-api.addMove("defcon\tlower");
+api.queueMove("vp\tus\t2");
+api.queueMove("defcon\tlower");
 return 1;
 ```
 
-The DEFCON instruction is added last, so it executes first. Order-of-execution matters when a card needs to perform several effects in a particular order. You must add the instructions in the reverse of the order in which you want them to execute.
+Use the function ```api.queueMove()``` when everyone running the javascript should take the same action. This adds moves to the game queue of everyone running the code and does not require any player to broadcast the moves. The final instruction (```return 1```) indicates that there is no need to wait for a player to broadcast instructions before the game queue can continue executing its next instruction.
 
-## 2. Important:
+#### CONDITIONAL EXECUTION
 
-When you are writing cards, you have to specify. Use "return 1" if you want the game to automatically continu
-The basic way to create a game effect is to add an instruction with `api.addMove()`.
+In some situations, only certain players may need to add instructions, or the code may ask some players to make choices which affect which instructions are added to the queue. In this case, add the ```api.addMove()``` command and then ```api.endTurn()``` to broadcast. The code should then ```return 0``` so that it halts until the move is received by all players. 
 
-Here are examples of some common instruction formats.
+```js
+if (api.isPlayer("us")) {
 
-### Add or subtract victory points
+  const choice = await api.playerSelectOption([
+    { id: "vp", label: "Increase US Victory Points by 1" },
+    { id: "defcon", label: "Raise DEFCON by 2" }
+  ]);
+
+  if (choice === "vp") {
+    api.addToQueue("vp\tus\t1");
+  } else if (choice === "defcon") {
+    api.addToQueue("defcon\traise");
+    api.addToQueue("defcon\traise");
+  }
+
+  api.endTurn();
+
+} else {
+  api.updateStatus("US is choosing a Custom Card option!");
+}
+
+return 0;
+  ```
+
+For help creating more advanced cards, we recommend our page on advanced card programming. This includes information on how to create permanent events, how to write cards that create new instructions which can be run on the queue and more.
+
+
+## 2. Basic QUEUE Api
+
+### Victory Points
 
 ```js
 // Give the US 2 victory points
@@ -49,7 +77,7 @@ api.addMove("vp\tussr\t3");
 api.addMove("vp\tus\t-1");
 ```
 
-### Change DEFCON
+### DEFCON
 
 ```js
 // Lower DEFCON
