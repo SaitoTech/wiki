@@ -2,7 +2,7 @@
 title: Twilight Struggle API - Full Queue Instructions
 description: Custom Cards QUEUE API
 published: true
-date: 2026-11-04T10:50:51.186Z
+date: 2026-11-04T10:53:13.407Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T10:49:02.675Z
@@ -16,12 +16,12 @@ This document is the complete queue-instruction vocabulary for Twilight Struggle
 
 | Concept | Values / notes |
 |---|---|
-| Faction id | `us` or `ussr` (lowercase strings) |
+| Faction id | `us` or `ussr`  |
 | Player number | `1` = USSR, `2` = US, `0` = observer |
 | Origin on `place` / `remove` / `realign` | Acting faction that already applied the change locally; other clients apply when `origin` ≠ their local faction |
-| Card id | Stable card key string (e.g. `china`, `wargames`), not display name |
-| Country id | Country key used in `this.countries` / `game.countries` (e.g. `poland`) |
-| Region id | e.g. `europe`, `asia`, `mideast`, `seasia`, `africa`, `camerica`, `samerica` |
+| Card id | Stable card id (`china`, `wargames`) |
+| Country | key in `game.countries` (`poland`) |
+| Region | `europe`, `asia`, `mideast`, `seasia`, `africa`, `camerica`, `samerica` |
 
 **Case matters.** Twilight lowercase commands such as `resolve`, `deal`, `discard`, `play`, `setvar`, and `deckaddcards` are **not** the GameEngine commands `RESOLVE`, `DEAL`, `DISCARD`, `PLAY`, `SETVAR`, and `DECKADDCARDS`.
 
@@ -159,59 +159,4 @@ These instructions are provided by the base GameEngine and are available in Twil
 | `DECKFLUSH` | `DECKFLUSH\t{deckidx}[\tdiscards]` | Intended to clear discards when second arg is `discards`; implementation references undefined `qe` when splicing (see notes). |
 | `DECKENCRYPT` | `DECKENCRYPT\t{deckidx}\t{playerid}` | Only `{playerid}`: removes xor pad and re-encrypts crypt with per-card keys, broadcasts `CARDS`+crypt; others wait. Skipped when `async_dealing==1`. |
 | `null` | `null` | Removes a literal null/`"null"` queue head (no further args). |
-| `CRYPTOKEY` | `CRYPTOKEY\t{playerkey}\t{cryptokey}\t{confsig}` | If `{confsig}` verifies `{cryptokey}` under `{playerkey}`, stores `{cryptokey}` in `game.keys[]` for that Saito player; removes itself. |
-| `AVAILABLE_CRYPTOS` | `AVAILABLE_CRYPTOS\t{playerkey}\t{cryptos_json}` | Stores parsed crypto balances under `game.cryptos[{playerkey}]` and (for others) wallet assoc cache; removes itself. |
-| `REQUEST_AVAILABLE_CRYPTOS` | `REQUEST_AVAILABLE_CRYPTOS\t{player}` | Removes itself; designated `{player}` replies with `AVAILABLE_CRYPTOS` and pauses. |
-| `AVAILABLE_NFTS` | `AVAILABLE_NFTS\t{playerkey}\t{payload_json}` | Merges NFT `data` from payload array into matching `game.options.nfts[]` entries (or alerts/pauses on `{error:1}`); removes itself first. |
-| `REQUEST_AVAILABLE_NFTS` | `REQUEST_AVAILABLE_NFTS\t{player}` | Removes itself; designated player loads owned required NFTs from Archive and replies with `AVAILABLE_NFTS` (or error payload); pauses. |
 | `NFT_EVENT` | `NFT_EVENT\t{player}\t{nft_id}[\t{arg}...]` | Sets `options.nfts[id].args` from trailing args; designated `{player}` runs that NFT’s `data.code` via `executeJS` (array code may use first arg as index/name); intended to leave event for NFT to clear (e.g. via `RESOLVE`)—see notes. |
-| `SEND` | `SEND\t{sender}\t{receiver}\t{amount}\t{ts}\t{unique_hash}[\t{ticker}]` | Non-senders splice and continue; `{sender}` (Saito pubkey) opens crypto send auth and pays `{amount}` of `{ticker}` (default `game.crypto`) to receiver’s `game.keys` address, then splices on confirm. |
-| `RECEIVE` | `RECEIVE\t{sender}\t{receiver}\t{amount}\t{ts}\t{unique_hash}[\t{ticker}]` | Non-receivers splice and continue; `{receiver}` opens receive UI, calls `receivePayment` for `{amount}`/`{ticker}`, then splices on confirm. |
-
----
-
-## Completeness verification
-
-### Counts
-
-| Inventory | Count |
-|---|---|
-| Twilight Struggle–specific commands (`handleGameLoop` `mv[0]` branches) | **68** |
-| GameEngine command families (`initializeQueueCommands` handlers; aliases share a row) | **59** |
-
-### Aliases and legacy names
-
-- Engine lowercase aliases: `salert`, `notify`, `status` (same behavior as uppercase).
-- Engine `OBSERVER` is obsolete (handler body commented out; instruction still splices).
-- `SIMULTANEOUS_PICK_END` appears only as an internal scan sentinel inside `SIMULTANEOUS_PICK`, not as a standalone handler.
-- Twilight lowercase `resolve` / `deal` / `discard` / `setvar` / `deckaddcards` / `play` coexist with distinct engine uppercase counterparts.
-- Twilight handlers with **no current enqueue sites** found in-module: `stage`, `card`, `move`, `update_observers`, `deckaddcards` (retained for compatibility).
-
-### Ambiguous or incomplete formats
-
-- Twilight `observer_cards_update`: hand payload handling appears incorrect (`JSON.stringify(mv[2])` then character iteration).
-- Twilight `setvar`: only `hold`, `opponent_cards_in_hand`, and `back_button_cancelled` shapes apply state; many historical `setvar\tgame\tstate\tevents\t...` pushes are spliced without effect (prefer engine `SETVAR` for nested `game.*` writes).
-- Twilight `northsea`: both HUD choices currently enqueue `play\t2`.
-- Twilight `ops` / `event` / `play` / `placement` / `placement_bonus` / `deal` / `headline` and several interactive card commands often remain on the queue until `resolve` or a follow-up move.
-- Engine `LOAD` is a recognized no-op and does not splice itself.
-- Engine `PRERESOLVE` inserts a command before the nearest older `RESOLVE` but does not remove itself.
-- Engine `DECKFLUSH` references undefined `qe` when splicing (implementation defect).
-- Engine `DECKADDCARDS` accepts a deck index argument but always mutates `deck[0]`.
-- Engine `NFT_EVENT`: comments describe leaving the instruction for the NFT to clear and calling `fail()` on validation errors; the current handler always splices first and references an undefined `fail` — treat as implementation-sensitive.
-- Engine `CARDS` / `ISSUEKEYS` / `RESOLVEFLIP` / `REQUESTKEYS` / Twilight `tehran` / `aldrich` consume **additional adjacent queue entries** (bare keys/cards), not only tab-separated fields on the command line.
-- Table-/one-player GameTemplate subclasses add extra commands (`EXITGAME`, `ADDPLAYER`, `REMOVEPLAYER`, `RESTARTGAME`, `PLAYERS`) that are **not** part of the base engine inventory used by Twilight.
-
-### Files and functions inspected
-
-- `node/mods/twilight/src/twilight-start.js` — `handleGameLoop()` (all Twilight `mv[0]` branches)
-- `node/mods/twilight/twilight.js` — concatenated runtime mirror of the same loop
-- `node/mods/twilight/src/twilight-end.js` — NFT `playEvent` integration (no additional queue dispatch)
-- `node/mods/twilight/lib/core/queue-policy.js` — NFT validation/normalization for `place` and `resolve`
-- `node/mods/twilight/lib/core/api.js` — NFT HUD helpers (no queue instruction definitions)
-- `node/mods/twilight/src/cards/**` — representative enqueue sites for argument formats
-- `node/lib/templates/gametemplate-src/gametemplate-queue.js` — `runQueue()`, `initializeQueueCommands()`
-- `node/lib/templates/gametemplate.js` — GameQueue mixin composition / NFT policy hooks
-- `node/lib/templates/gametemplate-src/gametemplate-web3.js` — constructs `SEND`/`RECEIVE` (no dispatch)
-- `node/lib/templates/gametemplate-src/gametemplate-nft-queue.js` — NFT `addToQueue` policy only
-
-Second-pass check: every `if (mv[0] ==/=== "...")` in Twilight `handleGameLoop` and every `gmv[0]` engine handler in `initializeQueueCommands` is represented in the tables above.
