@@ -2,7 +2,7 @@
 title: Twilight Struggle - Advanced Programming Techniques
 description: 
 published: true
-date: 2026-11-04T13:37:11.735Z
+date: 2026-11-04T13:40:09.526Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T12:21:40.168Z
@@ -121,36 +121,41 @@ If no arguments are provided, `args` is an empty array.
 
 ```javascript
 const cardId = "YOUR_CARD_ID";
-const faction = context.game.player === 2 ? "us" : "ussr";
 
-const targets = [
-  "mexico", "guatemala", "elsalvador", "honduras", "nicaragua",
-  "costarica", "panama", "cuba", "haiti", "dominicanrepublic",
-  "venezuela", "colombia", "ecuador", "peru", "chile",
-  "bolivia", "argentina", "paraguay", "uruguay", "brazil"
-];
+if (api.isPlayer(api.returnActivePlayer()) {
 
-const country = await api.playerSelectCountry(targets);
+  const faction = context.game.player === 2 ? "us" : "ussr";
+
+  const targets = [
+    "mexico", "guatemala", "elsalvador", "honduras", "nicaragua",
+    "costarica", "panama", "cuba", "haiti", "dominicanrepublic",
+    "venezuela", "colombia", "ecuador", "peru", "chile",
+    "bolivia", "argentina", "paraguay", "uruguay", "brazil"
+  ];
+
+  const country = await api.playerSelectCountry(targets);
+
+  //
+  // first instruction added is last to run...
+  //
+  // so call the next code block first
+  //
+  api.add("NFT_EVENT\t" + cardId + "\t1\t" + country);
+
+  //
+  // then add the influence to the selected country
+  //
+  api.addToQueue("place\t" + faction + "\t" + faction + "\t" + country + "\t2");
+
+  //
+  // broadcast the information to other players
+  //
+  await api.endTurn();
+
+}
 
 //
-// first instruction added is last to run...
-//
-// so call the next code block first
-//
-api.add("NFT_EVENT\t" + cardId + "\t1\t" + country);
-
-//
-// then add the influence to the selected country
-//
-api.addToQueue("place\t" + faction + "\t" + faction + "\t" + country + "\t2");
-
-//
-// broadcast the information to other players
-//
-await api.endTurn();
-
-//
-// don't forget to return 0
+// everyone waits to continue
 //
 return 0;
 ```
@@ -159,26 +164,28 @@ return 0;
 
 ```javascript
 const cardId = "YOUR_CARD_ID";
-const faction = context.game.player === 2 ? "us" : "ussr";
-const country = args[0];
 
-const choice = await api.playerSelectOption([
-  { id: "coup", label: "Coup" },
-  { id: "skip", label: "Skip military action" }
-]);
+if (api.isPlayer(api.returnActivePlayer()) {
 
-if (choice === "skip") {
-  api.addToQueue("NOTIFY\tJunta skips the free military action");
+  const faction = context.game.player === 2 ? "us" : "ussr";
+  const country = args[0];
+
+  const choice = await api.playerSelectOption([
+    { id: "coup", label: "Coup" },
+    { id: "skip", label: "Skip military action" }
+  ]);
+
+  if (choice === "skip") {
+    api.addToQueue("NOTIFY\tJunta skips the free military action");
+    await api.endTurn();
+    return 0;
+  }
+
+  api.addToQueue("NOTIFY\tJunta triggers a coup in " + country);
+
   await api.endTurn();
-  return 0;
 }
 
-api.addToQueue(
-  "NOTIFY\tJunta triggers a  now " + choice +
-  " in Central or South America (military follow-up not yet available to NFT cards)"
-);
-
-await api.endTurn();
 return 0;
 ```
 
@@ -219,6 +226,7 @@ api.isEventActive("reformer")     // 1 when that ongoing event is active
 
 ```javascript
 const cardId = "YOUR_CARD_ID";
+
 if (api.isPlayer(api.returnActivePlayer()) {
 
     const country = await api.playerSelectCountry(["egypt", "libya", "israel"]);
