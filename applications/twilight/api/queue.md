@@ -2,7 +2,7 @@
 title: Twilight Struggle API - Full Queue Instructions
 description: Custom Cards QUEUE API
 published: true
-date: 2026-11-04T10:50:06.121Z
+date: 2026-11-04T10:50:51.186Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T10:49:02.675Z
@@ -27,7 +27,7 @@ This document is the complete queue-instruction vocabulary for Twilight Struggle
 
 ---
 
-## Table 1: Twilight Struggle Game-Specific Queue Commands
+## Twilight Struggle Queue Commands
 
 | Queue Instruction | Arguments and Format | Description |
 |---|---|---|
@@ -102,7 +102,7 @@ This document is the complete queue-instruction vocabulary for Twilight Struggle
 
 ---
 
-## Table 2: GameEngine Queue Commands
+## Saito Game Engine Queue Commands
 
 These instructions are provided by the base GameEngine and are available in Twilight Struggle whenever they appear on the queue. Engine handlers run **before** Twilight `handleGameLoop`.
 
