@@ -2,7 +2,7 @@
 title: Twilight Struggle - Advanced Programming Techniques
 description: 
 published: true
-date: 2026-11-05T06:24:54.906Z
+date: 2026-11-05T06:35:59.615Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T12:21:40.168Z
@@ -160,11 +160,11 @@ if (api.isPlayer(api.returnEventingPlayer()) {
 return 0;
 ```
 
-A complete implementation of Junta would of course provide options for realignments. Most of the features that the game manipulates map to specific instructions that can be added to the game queue. You can find the full list in the code or on our page covering the queue.
+A complete implementation of Junta would of course provide options for realignments. Most of the features that the game manipulates map to specific instructions that can be added to the game queue. You can find the full list in the code or on our reference page for queue instructions.
 
 ## Reading the Board / State
 
-Your script receives a read-only snapshot as `context.game`. Changing properties on `context.game` does nothing to the real game, but you can check the value of almost anything the game tracks:
+Your script receives a read-only snapshot as `context.game`. Changing properties on `context.game` inside your script does nothing to the real game, but you can use it to check the current value of almost anything the game tracks. Examples include the following, but you can see our full list on the page documenting [queue instructions](/applications/twilight/api/queue):
 
 ```
 // which turn is it?
@@ -186,85 +186,49 @@ const influence = context.game.countries["italy"];
 const events = context.game.events;
 ```
 
-Functions exist to simplify the most common checks:
+A few simple functions also exist on the api.* object to simplify the most common checks:
 
 ```javascript
 api.isControlled("us", "canada")   // 1 or 0
-api.whoControls("egypt")          // "us", "ussr", or ""
-api.isEventActive("reformer")     // 1 when that ongoing event is active
+api.whoControls("egypt")           // "us", "ussr", or ""
+api.isEventActive("reformer")      // 1 when that ongoing event is active
 ```
+
+This last instruction can be used to check if other events have triggered, allowing cards to create permanent effects that other cards can check. Developers can create such permanent effects using `api.setEvent(cardname, active)` to turn events on or off, using 1 (turn on) 0 (turn off) as the second value.
+
 
 ### Simple example
 
 ```javascript
-const cardId = "YOUR_CARD_ID";
-
 if (api.isPlayer(api.returnActivePlayer()) {
-
-    const country = await api.playerSelectCountry(["egypt", "libya", "israel"]);
-
     if (api.isEventActive("reformer") == 1) {
-        api.addMove("place\tus\tus\t" + country + "\t2");
+      ...
     } else {
-        api.addMove("place\tus\tus\t" + country + "\t1");
+      ...
     }
-
     await api.endTurn();
 }
 return 0;
 ```
 
 
-## Asking the player to choose
+## Asking the Player to Choose:
 
-Two helpers are available for interactive cards:
+Two helpers are available for asking the players to take action. The first shows them a list of labelled options and asks them to select one. The value that is returned is the `id` of the choice selected.
 
 ```javascript
-const option = await api.playerSelectOption([
+let player_choice = await api.playerSelectOption([
   { id: "india", label: "India" },
   { id: "pakistan", label: "Pakistan" }
 ]);
-
-const country = await api.playerSelectCountry(["cuba", "mexico", "panama"]);
 ```
 
-These do **not** change the board by themselves. They offer whatever player is executing that javascript a menu and ask them to choose between the options, returning the value provided in the ```id``` field.
-
-### When would I need this?
-
-- The card text says “choose a country”
-- The player must pick between two branches
-- You want a menu before placing influence
-
-### Pattern
-
-1. identify the player that needs to respond
-2. use an if/else branch so only that player executes #3 and #4
-3. use the answer with api.addMove()
-4. Call `await api.endTurn()`
-5. `return 0`
-
---- 
-
-## Permanent Effects / Events
-
-Twilight keeps “this effect is still in play” markers that your script can read:
-
-```javascript
-api.isEventActive("nato")
-api.isEventActive("marshall")
-api.isEventActive("reformer")
-```
-
-### What this lets you do
-
-Make a card behave differently depending on whether an earlier event is still active. If you need to set events or remove them, use the functions:
+You can also ask players to click on the board to select a country:
 
 ```
-api.setActiveEvent("my-custom-event")
-api.removeActiveEvent("my-custom-event");
+let player_choice = await api.playerSelectCountry(["cuba", "mexico", "panama"]);
 ```
 
 ## Troubleshooting
 
-Saito is a community project. Many devs and players congregate around RedSquare. Feel welcome to post questions or suggestions there.
+Saito is a community project that evolves and adds features as players contribute and the underlying game engine develops. If you are interested in developing or adding new features, please feel welcome to get in touch.
