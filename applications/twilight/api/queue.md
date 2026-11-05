@@ -2,28 +2,10 @@
 title: Twilight Struggle API - Full Queue Instructions
 description: Custom Cards QUEUE API
 published: true
-date: 2026-11-05T06:37:18.201Z
+date: 2026-11-05T06:58:25.206Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T10:49:02.675Z
----
-
-# Twilight Struggle Queue Command Reference
-
-This document is the complete queue-instruction vocabulary for Twilight Struggle on the Saito Game Engine. It is intended for developers writing custom cards and NFT scripts that enqueue moves via `addMove` / `api.addToQueue`. Note that some interactive Twilight instructions **leave themselves** on the queue until a matching `resolve\t{token}` (or a later submitted move) clears them.
-
-## Conventions
-
-| Concept | Values / notes |
-|---|---|
-| Faction id | `us` or `ussr`  |
-| Player number | `1` = USSR, `2` = US, `0` = observer |
-| Card id | card id (`china`, `wargames`) |
-| Country | key in `game.countries` (`poland`) |
-| Region | `europe`, `asia`, `mideast`, `seasia`, `africa`, `camerica`, `samerica` |
-
-**Case matters.** Twilight lowercase commands such as `resolve`, `deal`, `discard`, `play`, `setvar`, and `deckaddcards` are **not** the GameEngine commands `RESOLVE`, `DEAL`, `DISCARD`, `PLAY`, `SETVAR`, and `DECKADDCARDS`.
-
 ---
 
 ## Twilight Struggle Queue Commands
@@ -83,7 +65,7 @@ This document is the complete queue-instruction vocabulary for Twilight Struggle
 | `move` | `move\t{us\|ussr}` | Sets `game.state.move` phasing flag (0=USSR, 1=US). No current push sites found (legacy). |
 | `event` | `event\t{us\|ussr}\t{card}` | Triggers `playEvent`; may remove/discard non-recurring cards; Flower Power headline can inject delayed VP. |
 | `stability` | `stability\t{faction}\t{country}\t{adj}` | Adds `adj` to country stability/control value. |
-| `place` | `place\t{originFaction}\t{influenceFaction}\t{country}\t{amount}` | Places influence on non-origin clients only (NFT policy forces `origin` to acting faction). |
+| `place` | `place\t{originFaction}\t{influenceFaction}\t{country}\t{amount}` | Places influence on non-origin clients only (origin client already applied locally). |
 | `setvar` | See notes: `setvar\t{playerNum}\thold\t{json}` / `setvar\t{playerNum}\topponent_cards_in_hand\t{n}` / `setvar\tgame\tstate\tback_button_cancelled\t{0\|1}` | Twilight lowercase setter for hold-card lists, opponent hand size, and back-button cancel; other `setvar\tgame\tstate\tevents\t...` paths are spliced but not applied. |
 | `remove` | `remove\t{originFaction}\t{influenceFaction}\t{country}\t{amount}` | Removes influence on non-origin clients only. |
 | `resolve` | `resolve\t{token}` | Twilight-specific clear of the matching queued step (`event`/`ops`/`play`/`deal`/`headline`/`placement`/same-name instruction, etc.); also discards/removes matching card id. Distinct from engine `RESOLVE`. |
@@ -158,4 +140,4 @@ These instructions are provided by the base GameEngine and are available in Twil
 | `DECKFLUSH` | `DECKFLUSH\t{deckidx}[\tdiscards]` | Intended to clear discards when second arg is `discards`; implementation references undefined `qe` when splicing (see notes). |
 | `DECKENCRYPT` | `DECKENCRYPT\t{deckidx}\t{playerid}` | Only `{playerid}`: removes xor pad and re-encrypts crypt with per-card keys, broadcasts `CARDS`+crypt; others wait. Skipped when `async_dealing==1`. |
 | `null` | `null` | Removes a literal null/`"null"` queue head (no further args). |
-| `NFT_EVENT` | `NFT_EVENT\t{player}\t{nft_id}[\t{arg}...]` | Sets `options.nfts[id].args` from trailing args; designated `{player}` runs that NFT’s `data.code` via `executeJS` (array code may use first arg as index/name); intended to leave event for NFT to clear (e.g. via `RESOLVE`)—see notes. |
+| `NFT_EVENT` | `NFT_EVENT\t{nft_id}\t{code_index}[\t{arg}...]` | Engine splices itself **before** running. Looks up `game.options.nfts` by app id, selects `data.code` by integer `{code_index}`, sets `nft.args` from trailing fields, and runs the script via `executeJS` on every browser client. Script `return 0` pauses the queue; otherwise the queue continues. Do **not** enqueue `resolve` to clear this instruction — it is already gone. |
