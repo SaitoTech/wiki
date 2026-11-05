@@ -2,7 +2,7 @@
 title: Twilight Struggle - Advanced Programming Techniques
 description: 
 published: true
-date: 2026-11-05T06:57:59.341Z
+date: 2026-11-05T07:25:27.947Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T12:21:40.168Z
@@ -10,7 +10,7 @@ dateCreated: 2026-11-04T12:21:40.168Z
 
 # Twilight Struggle Advanced Card Programming
 
-This guide explains how to build more advanced cards where players make changes to the board state and then act after those changes have been made. We need to use these techniques to implement cards like Junta where early choices affect which actions are available in later ones.
+This guide explains how to build more advanced cards where players make changes to the board state and then act after those changes have been made. We need to use these techniques to implement cards like Junta where early choices affect which actions are available in later ones. See also the pages on [queue commands](/applications/twilight/api/queue) and [example cards](/applications/twilight/api/examples).
 
 What you will find here:
 
