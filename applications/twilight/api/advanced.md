@@ -2,7 +2,7 @@
 title: Twilight Struggle - Advanced Programming Techniques
 description: 
 published: true
-date: 2026-11-05T06:35:59.615Z
+date: 2026-11-05T06:57:59.341Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T12:21:40.168Z
