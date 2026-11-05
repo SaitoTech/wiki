@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards - Example Code
 description: 
 published: true
-date: 2026-11-05T13:40:59.001Z
+date: 2026-11-05T13:44:57.628Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T14:10:51.790Z
@@ -181,22 +181,16 @@ return 0;
 
 ---
 
-### 10. Special Relationship — control check, event flag, country pick, VP
-
-**Demonstrates:** `isControlled`, `isEventActive`, `playerSelectCountry`, and `vp`.
+### 10. Special Relationship - checking events
 
 ```javascript
-// Based on Special Relationship.
-const faction = api.returnEventingPlayer();
-if (!api.isPlayer(faction)) {
+if (!api.isPlayer("us")) {
   return 0;
 }
 
 if (api.isControlled("us", "uk") != 1) {
-  api.addMove("NOTIFY\tSpecial Relationship: US does not control the UK");
-  api.addMove("resolve\tYOUR_NFT_ID");
-  api.endTurn();
-  return 0;
+  api.addToQueue("NOTIFY\tSpecial Relationship: US does not control the UK");
+  return 1;
 }
 
 const nato = api.isEventActive("nato") == 1;
@@ -217,7 +211,6 @@ api.addMove(
     country +
     (nato ? " and 2 VP (NATO)" : "")
 );
-api.addMove("resolve\tYOUR_NFT_ID");
 api.endTurn();
 return 0;
 ```
