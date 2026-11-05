@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards - Example Code
 description: 
 published: true
-date: 2026-11-05T12:35:03.718Z
+date: 2026-11-05T13:35:04.165Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T14:10:51.790Z
@@ -69,25 +69,16 @@ return 1;
 ### 4. Fidel — remove opponent influence, take control
 
 ```javascript
-const faction = api.returnEventingPlayer();
-if (!api.isPlayer(faction)) {
-  return 0;
-}
-
 const cuba = context.game.countries && context.game.countries.cuba;
 const us = cuba ? Number(cuba.us) || 0 : 0;
 const ussr = cuba ? Number(cuba.ussr) || 0 : 0;
 
 if (us > 0) {
   api.addMove("remove\tussr\tus\tcuba\t" + us);
+  
 }
-if (ussr < 3) {
-  api.addMove("place\tussr\tussr\tcuba\t" + (3 - ussr));
-}
-api.addMove("NOTIFY\tFidel: Cuba is now a USSR stronghold");
-api.addMove("resolve\tYOUR_NFT_ID");
-api.endTurn();
-return 0;
+api.addMove("place\tussr\tussr\tcuba\t" + (3 - ussr));
+return 1;
 ```
 
 ---
