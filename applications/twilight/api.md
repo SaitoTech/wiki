@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards & API
 description: Programming Custom Cards for Twilight Struggle in the Saito Game ENgine
 published: true
-date: 2026-11-05T05:53:42.709Z
+date: 2026-11-05T05:59:51.586Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T08:53:25.750Z
@@ -120,15 +120,35 @@ This demonstrates the central pattern used by straightforward cards with non-for
 Cards that require specific players to take action require forking execution where one of the players is invited to create and broadcast moves, while the second stops their queue and waits for their opponents move to arrive before they both continue.
 
 ```
-if (api.isPlayer("ussr")) {
+const countries = [
+  "burma",
+  "cambodia",
+  "indonesia",
+  "laos",
+  "malaysia",
+  "philippines",
+  "thailand",
+  "vietnam"
+];
 
+const eligible = countries.filter(country =>
+  api.isControlled("us", country)
+);
+
+if (eligible.length === 0) {
+  api.updateStatus("No Southeast Asian countries have US influence.");
+  return 1;
+}
+
+if (api.isPlayer("ussr")) {
   const country = await api.playerSelectCountry(
     "Select a Southeast Asian country to coup",
-    ["burma", "cambodia", "indonesia", "laos", "malaysia", "philippines", "thailand", "vietnam"]
+    eligible
   );
 
   api.addMove(`coup\tussr\t${country}`);
   api.endTurn();
+  return 0;
 }
 
 return 0;
