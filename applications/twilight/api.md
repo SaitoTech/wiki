@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards & API
 description: Programming Custom Cards for Twilight Struggle in the Saito Game ENgine
 published: true
-date: 2026-11-05T05:59:51.586Z
+date: 2026-11-05T06:01:58.064Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T08:53:25.750Z
@@ -12,7 +12,7 @@ dateCreated: 2026-11-04T08:53:25.750Z
 
 The Twilight Struggle module supports custom cards. These cards can be programmed to do anything an ordinary card can: add or remove influence, award victory points, change DEFCON, and modify other aspects of the game.
 
-This page introduces the basic programming model and shows how to create straightforward custom card effects. More advanced programming patterns are covered in our [advanced programming guide](/applications/twilight/api/advanced). Full examples in our page for [sample code for custom cards](/applications/twilight/api/examples).
+This page introduces the basic programming model, showing how to create simple cards that change the state of the board or ask players to make a choice that triggers a simple update. For cards that require more complicated forms of interactivity the techniques needed are covered in our page on more [advanced programming patterns](/applications/twilight/api/advanced). We also have a separate page with [examples for custom cards](/applications/twilight/api/examples).
 
 
 ## 1. The Twilight Struggle Game Queue
