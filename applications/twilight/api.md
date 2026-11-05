@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards & API
 description: Programming Custom Cards for Twilight Struggle in the Saito Game ENgine
 published: true
-date: 2026-11-04T14:00:41.215Z
+date: 2026-11-05T05:53:42.709Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T08:53:25.750Z
@@ -22,18 +22,18 @@ Twilight Struggle runs on a queue that handles [instructions](/applications/twil
 Programming custom cards in javascript mostly consists of learning how to determine which player is active and then asking them to make a move and broadcast their moves to other players. There are two ways of adding moves:
 
 
-#### SHARED EXECUTION
+#### AUTOMATIC CARDS
 ```js
-api.queueMove("vp\tus\t2");
-api.queueMove("defcon\tlower");
+api.addToQueue("vp\tus\t2");
+api.addToQueue("defcon\tlower");
 return 1;
 ```
 
-Use the function ```api.queueMove()``` when everyone running the javascript should take the same action. This adds moves to the game queue of everyone running the code and does not require any player to broadcast the moves. The final instruction (```return 1```) indicates that there is no need to wait for a player to broadcast instructions before the game queue can continue executing its next instruction.
+Use the function ```api.addToQueue()``` when everyone running the javascript should execute the same code. This adds instructions to the game queue that every player will execute. The final instruction (```return 1```) indicates that there is no need to halt the game and wait for another player to broadcast their own moves before the game can continue execution.
 
-#### CONDITIONAL EXECUTION
+#### PLAYER-DRIVEN EXECUTION
 
-In some situations, only certain players may need to add instructions, or the code may ask some players to make choices which affect which instructions are added to the queue. In this case, add the ```api.addMove()``` command and then ```api.endTurn()``` to broadcast. The code should then ```return 0``` so that it halts until the move is received by all players. 
+In some situations, cards may need players to make choices, and those choices may affect how the card updates the board or game state. In this case, we let that specific player use the ```api.addMove()``` command and then ```api.endTurn()``` to broadcast those moves to all players, at which point they are added to the queue. These cards should ```return 0``` so that the engine halts until the move is received by all players. 
 
 ```js
 if (api.isPlayer("us")) {
@@ -44,16 +44,16 @@ if (api.isPlayer("us")) {
   ]);
 
   if (choice === "vp") {
-    api.addToQueue("vp\tus\t1");
+    api.addMove("vp\tus\t1");
   } else if (choice === "defcon") {
-    api.addToQueue("defcon\traise");
-    api.addToQueue("defcon\traise");
+    api.addMove("defcon\traise");
+    api.addMove("defcon\traise");
   }
 
   api.endTurn();
 
 } else {
-  api.updateStatus("US is choosing a Custom Card option!");
+  api.updateStatus("US is playing a Custom Card!");
 }
 
 return 0;
@@ -99,7 +99,7 @@ For a full description of all commands that are currently supported see the full
 
 ## 4. More Examples and Sample Code
 
-The following example gives the US two victory points if it controls France. Otherwise, it gives the USSR two victory points.
+Please see our page filled with [example cards](/applications/twilight/api/examples) for practical suggestions on how to write custom cards. Put this code into the online card generator to create and share cards. The following example gives the US two victory points if it controls France. Otherwise, it gives the USSR two victory points.
 
 ```js
 if (api.isControlled("us", "france")) {
@@ -110,12 +110,35 @@ if (api.isControlled("us", "france")) {
 return 1;
 ```
 
-This demonstrates the central pattern used by straightforward custom cards:
+This demonstrates the central pattern used by straightforward cards with non-forking execution:
 
-1. Check the current game state.
-2. Use `if` and `else` to determine which effect should occur.
-3. Add the appropriate instructions to the queue.
-4. Submit the instructions.
+1. check the game state.
+2. use `if` and `else` to determine which effect should occur.
+3. add the appropriate instructions to the queue.
+4. `return 1` so the game continues immediately
 
-For more complicated examples, please see our advanced programming guide and list of working examples you can use out-of-the-box.
+Cards that require specific players to take action require forking execution where one of the players is invited to create and broadcast moves, while the second stops their queue and waits for their opponents move to arrive before they both continue.
 
+```
+if (api.isPlayer("ussr")) {
+
+  const country = await api.playerSelectCountry(
+    "Select a Southeast Asian country to coup",
+    ["burma", "cambodia", "indonesia", "laos", "malaysia", "philippines", "thailand", "vietnam"]
+  );
+
+  api.addMove(`coup\tussr\t${country}`);
+  api.endTurn();
+}
+
+return 0;
+```
+
+This demonstrates the central pattern used by simple cards that require only one player to make decisions:
+
+1. check the game state / collect valid options
+2. prompt a specific player to make a choice
+3. use `addMove(command)` and then `endTurn()` to broadcast their move
+4. `return 0` so all players wait for the move
+
+It is possible to write much more advanced cards where players make decisions that manipulate the board state and then make choices based on those conditions. To continue looking into how we can program these events, please see our page on [advanced card creation](/applications/twilight/api/advanced).
