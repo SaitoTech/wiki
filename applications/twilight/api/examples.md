@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards - Example Code
 description: 
 published: true
-date: 2026-11-05T13:35:04.165Z
+date: 2026-11-05T13:40:59.001Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T14:10:51.790Z
@@ -17,15 +17,9 @@ Working cookbook for Twilight Struggle programmable cards, arranged in order of 
 ### 1. Allende — place influence in one country
 
 ```javascript
-const faction = api.returnEventingPlayer();
-if (!api.isPlayer(faction)) {
-  return 0;
-}
-
 api.addMove("place\tussr\tussr\tchile\t2");
 api.addMove("NOTIFY\tUSSR places 2 in Chile");
-api.endTurn();
-return 0;
+return 1;
 ```
 
 ---
@@ -33,17 +27,11 @@ return 0;
 ### 2. Panama Canal — place in several countries
 
 ```javascript
-const faction = api.returnEventingPlayer();
-if (!api.isPlayer(faction)) {
-  return 0;
-}
-
 api.addMove("place\tus\tus\tpanama\t1");
 api.addMove("place\tus\tus\tvenezuela\t1");
 api.addMove("place\tus\tus\tcostarica\t1");
 api.addMove("NOTIFY\tPanama Canal: US places in Panama, Venezuela, and Costa Rica");
-api.endTurn();
-return 0;
+return 1;
 ```
 
 ---
@@ -86,19 +74,13 @@ return 1;
 ### 5. Duck and Cover — lower DEFCON and award VP
 
 ```javascript
-const faction = api.returnEventingPlayer();
-if (!api.isPlayer(faction)) {
-  return 0;
-}
-
 const defcon = Number(context.game.state && context.game.state.defcon) || 5;
-const vp = Math.max(0, 5 - (defcon - 1)); // after lowering one step
+const vp = Math.max(0, 5 - (defcon - 1));
 
-api.addMove("defcon\tlower");
-api.addMove("vp\tus\t" + vp);
-api.addMove("NOTIFY\tDuck and Cover: DEFCON falls, US gains " + vp + " VP");
-api.endTurn();
-return 0;
+api.addToQueue("defcon\tlower");
+api.addToQueue("vp\tus\t" + vp);
+api.addToQueue("NOTIFY\tDuck and Cover: DEFCON falls, US gains " + vp + " VP");
+return 1;
 ```
 
 ---
@@ -110,14 +92,12 @@ const state = context.game.state || {};
 const faction = api.returnEventingPlayer();
 const usTrack = Number(state.space_race_us) || 0;
 const ussrTrack = Number(state.space_race_ussr) || 0;
-const behind =
-  faction === "us" ? usTrack < ussrTrack : ussrTrack < usTrack;
+const behind = faction === "us" ? usTrack < ussrTrack : ussrTrack < usTrack;
 
 if (behind) {
   api.advanceSpaceRace(faction, true); // skip intermediate VP
   api.advanceSpaceRace(faction);
 }
-
 return 1;
 ```
 
@@ -130,10 +110,6 @@ return 1;
 ```javascript
 // Based on Arms Race.
 const faction = api.returnEventingPlayer();
-if (!api.isPlayer(faction)) {
-  return 0;
-}
-
 const state = context.game.state || {};
 const myOps = Number(faction === "us" ? state.milops_us : state.milops_ussr) || 0;
 const theirOps = Number(faction === "us" ? state.milops_ussr : state.milops_us) || 0;
@@ -148,56 +124,50 @@ if (myOps > theirOps) {
 }
 
 if (bonus > 0) {
-  api.addMove("vp\t" + faction + "\t" + bonus);
-  api.addMove("NOTIFY\tArms Race: " + faction.toUpperCase() + " gains " + bonus + " VP");
+  api.addToQueue("vp\t" + faction + "\t" + bonus);
+  api.addToQueue("NOTIFY\tArms Race: " + faction.toUpperCase() + " gains " + bonus + " VP");
 } else {
-  api.addMove("NOTIFY\tArms Race: no milops lead");
+  api.addToQueue("NOTIFY\tArms Race: no milops lead");
 }
 
-api.addMove("resolve\tYOUR_NFT_ID");
-api.endTurn();
-return 0;
+return 1;
 ```
 
 ---
 
-### 8. Side-aware branch — different effects for US and USSR
-
-**Demonstrates:** `api.returnEventingPlayer()` for dual-use events.
+### 8. Berlin Agreement - different effects for US and USSR
 
 ```javascript
-// Side-aware placement.
 const faction = api.returnEventingPlayer();
-if (!api.isPlayer(faction)) {
-  return 0;
-}
 
 if (faction === "us") {
-  api.addMove("place\tus\tus\twestgermany\t2");
-  api.addMove("NOTIFY\tUS path: 2 in West Germany");
+  api.addToQueue("place\tus\tus\twestgermany\t2");
+  api.addToQueue("NOTIFY\tUS path: 2 in West Germany");
 } else {
-  api.addMove("place\tussr\tussr\teastgermany\t2");
-  api.addMove("NOTIFY\tUSSR path: 2 in East Germany");
+  api.addToQueue("place\tussr\tussr\teastgermany\t2");
+  api.addToQueue("NOTIFY\tUSSR path: 2 in East Germany");
 }
 
-api.addMove("resolve\tYOUR_NFT_ID");
-api.endTurn();
-return 0;
+return 1;
 ```
 
 ---
 
-### 9. Pinochet — menu choice
-
-**Demonstrates:** `api.playerSelectOption`.
+### 9. Pinochet — let player select from menu
 
 ```javascript
-// Inspired by Pinochet.
+
+//
+// non-eventing player halts game queue
+//
 const faction = api.returnEventingPlayer();
 if (!api.isPlayer(faction)) {
   return 0;
 }
 
+//
+// eventing player continues
+//
 const choice = await api.playerSelectOption([
   { id: "chile", label: "2 Influence in Chile" },
   { id: "argentina", label: "2 Influence in Argentina" }
@@ -205,7 +175,6 @@ const choice = await api.playerSelectOption([
 
 api.addMove("place\tus\tus\t" + choice + "\t2");
 api.addMove("NOTIFY\tUS places 2 in " + choice);
-api.addMove("resolve\tYOUR_NFT_ID");
 api.endTurn();
 return 0;
 ```
