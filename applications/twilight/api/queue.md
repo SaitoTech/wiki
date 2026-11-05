@@ -2,7 +2,7 @@
 title: Twilight Struggle API - Full Queue Instructions
 description: Custom Cards QUEUE API
 published: true
-date: 2026-11-04T10:53:13.407Z
+date: 2026-11-05T06:37:18.201Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T10:49:02.675Z
@@ -18,8 +18,7 @@ This document is the complete queue-instruction vocabulary for Twilight Struggle
 |---|---|
 | Faction id | `us` or `ussr`  |
 | Player number | `1` = USSR, `2` = US, `0` = observer |
-| Origin on `place` / `remove` / `realign` | Acting faction that already applied the change locally; other clients apply when `origin` ≠ their local faction |
-| Card id | Stable card id (`china`, `wargames`) |
+| Card id | card id (`china`, `wargames`) |
 | Country | key in `game.countries` (`poland`) |
 | Region | `europe`, `asia`, `mideast`, `seasia`, `africa`, `camerica`, `samerica` |
 
