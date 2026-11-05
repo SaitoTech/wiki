@@ -2,46 +2,45 @@
 title: Twilight Struggle - Advanced Programming Techniques
 description: 
 published: true
-date: 2026-11-04T13:55:33.514Z
+date: 2026-11-05T06:24:54.906Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T12:21:40.168Z
 ---
 
-# Advanced Programming Techniques for Twilight Struggle
+# Twilight Struggle Advanced Card Programming
 
-This guide is for people who already know the basics of writing a custom Twilight Struggle. What it explains is how to build cards with richer events like Junta with choices and game changes that require more than one stage.
+This guide explains how to build more advanced cards where players make changes to the board state and then act after those changes have been made. We need to use these techniques to implement cards like Junta where early choices affect which actions are available in later ones.
 
-In this document we teach:
+What you will find here:
 
-1. What multiple **code tabs** mean on one card
-2. Why a card like **Junta** needs more than one stage
-3. How the shared game **queue** connects those stages
-4. How to pass simple **arguments** from stage-to-stage
-5. How to read the board, check ongoing events, and offer player choices
-6. What works today, and what still needs engine support
-
+1. Custom Cards can have multiple **code tabs** or **code boxes**
+2. Why a card like **Junta** needs more than one such tab/box
+3. Using the game **queue** to organize these in sequence
+4. Passing simple **arguments** from step-to-step
+5. More details on reading the board, checking ongoing events, and giving players interactive choices
 
 ## Cards with Multiple Code Blocks
 
-In the Card Generator, cards have create additional **code tabs** that hold a separate chunk of javascript. Those chunks allow cards to create events that will fire at different stages -- with each stage informing the game of when and how to trigger the subsequent step.
+In the Card Generator you can add additional **code tabs** that hold a separate chunk of javascript. The first tab contains the default code that will run when the event is fired. The other tabs are "events" that can be triggered by adding them to the game queue.
 
-A useful mental model:
+If you are creating a card { title: "Wargames II", number: 124 } and you create 3 additional tabs, you can schedule those tabs for execution by pushing them to the queue in your main tab:
 
-> **One card can contain several code blocks. Each block can be invoked separately as an event through the game queue. This is done by adding the NFT_EVENT instruction to the queue -- using it to tell the game engine which chunk of code to execute...**
+```
+if (isPlayer("us")) {
+  api.addMove("NFT_EVENT\twargames-ii\t3");
+  api.addMove("NFT_EVENT\twargames-ii\t2");
+  api.addMove("NFT_EVENT\twargames-ii\t1");
+  api.endTurn();
+}
+return 0;
+```
 
-| Idea | Meaning |
-|---|---|
-| card identity | The card’s unique id in the game |
-| code block | One JavaScript chunk on that card |
-| code index | Which chunk to run: `0` is the first tab, `1` is the second, and so on |
+This implementation exploits the built-in support Saito provides for NFTs. The NFT_EVENT code looks for the object in `this.game.options.nfts` that claims to have the id of `wargames-ii` and executes the codebox. Note that code boxes are indexed from 0, so the above code triggers the 2nd, then 3rd, then 4th codebox in turn.
+
+We can queue these events in the first box, or have them branch, with the second tab adding execution for the third if needed, etc. In the Twilight Struggle module, the ID of the card is the slug() of its title and a hyphen and then the card number provided. 
 
 When a card is played normally as a event, the game runs the **first** usable code block (index `0`). That piece of code can schedule another block on the same card to run later on by adding an instruction to the queue that tells the game to execute it, providing:
-
-- the same card ID, but
-- a different code index
-
-This second code block is still part of the card. Separating the code logic into two sequences like this allows the board to update step-by-step so that by the time the second code block is executed, every player has an updated copy of the board that reflects the earlier decision.
 
 
 ## Example: Junta
@@ -51,44 +50,30 @@ This second code block is still part of the card. Separating the code logic into
 1. Place 2 influence in Central or South America
 2. Optionally choose to **coup** or **realign**
 
-The second decision must happen **after** the influence has been applied as the first can change the conditions under which the second operates. This is why a programmable version of the card needs two code blocks:
+The second choice must happen **after** the influence has been applied as the first choice we give the player affects the set of eligible countries and the conditions under which the second operates. This is why a programmable version of the card needs two code blocks:
 
 **Code tab 1 — Place influence**
 
-- Runs when the card is played
-- Asks which country to target
-- Places influence there
-- Arranges for code tab 2 to run later
+- runs immediately when the card is evented
+- asks player to add 2 influence to target country
+- places influence there
+- and asks the game engine to execute the second code box
 
 **Code tab 2 — Coup or realignment**
 
-- Runs after the placement has been processed
-- Looks at the updated board
-- Asks whether to coup or realign
-- Carries out that choice
+- triggered after the game queue resumes
+- looks at the updated board, collects targets for action
+- asks the player what to do
+- add those instructions to the game queue
 
 ---
 
-## Using the Game Queue
+## Want to Pass Values between Stages?
 
-Imagine our default code chunk asks the active player to select a country to place influence, places that influence and then submits the move to all players using the instruction `api.endTurn()`. The influence will be placed and then the game will resume with the next player's turn.
-
-We can stop this by pushing this command onto the game queue at the start of the first code block. Once all of the subsequent commands have been processed, this instruction will tell the game engine to execute the second chunk of code:
+It is possible to send information between stages in two ways. The easiest is to add the information to the game queue when adding the instruction. This can be done by adding additional (tab-separated) arguments at the end of the queue command:
 
 ```text
-NFT_EVENT	CARD_ID	CODE_INDEX	optional_arg_0	optional_arg_1	...
-```
-
-For example, we might run the second code block on a card whose NFT ID is `my-junta-card` with:
-
-```text
-NFT_EVENT	my-junta-card	1
-```
-
-We can also pass the country into the second stage as an argument:
-
-```text
-NFT_EVENT	my-junta-card	1	cuba
+api.addmove(`NFT_EVENT\t${CARD_ID}\t${CODE_IDX}\t${ARG1}\t${ARG2}`);
 ```
 
 If you use this technique to pass arguments into code blocks, you can access them within the NFT object that contains the code chunk. Inside the script, you can access these arguments as folows:
@@ -100,27 +85,15 @@ args[2]
 // ...
 ```
 
-These instructions can be chained from code block to code block. For example, the second code block could in theory add another call to NFT_EVENT asking for yet a third code block associated with the card to run as follows:
-
-```text
-NFT_EVENT	my-junta-card	2	cuba	coup
-```
-
-The gives the code in the THIRD code block:
-
-```javascript
-args[0] // "cuba"
-args[1] // "coup"
-```
-
 If no arguments are provided, `args` is an empty array.
 
-## How about an Example:
+## Pracitcal Example:
 
-### Code Block 1 — Ask Player to Place Influence
+### Code Block 1 — Ask Eventing Player to Place Influence
+
 
 ```javascript
-const cardId = "YOUR_CARD_ID";
+const cardId = "junta-ii-150";
 
 if (api.isPlayer(api.returnEventingPlayer()) {
 
@@ -136,11 +109,9 @@ if (api.isPlayer(api.returnEventingPlayer()) {
   const country = await api.playerSelectCountry(targets);
 
   //
-  // first instruction added is last to run...
-  //
   // so call the next code block first
   //
-  api.addMove("NFT_EVENT\t" + cardId + "\t1\t" + country);
+  api.addMove("NFT_EVENT\t" + "junta-ii-150 + "\t1\t" + country);
 
   //
   // then add the influence to the selected country
@@ -160,10 +131,10 @@ if (api.isPlayer(api.returnEventingPlayer()) {
 return 0;
 ```
 
-### Code Block 2 — Coup or Skip
+### Code Block 2 — Picking Back Up
 
 ```javascript
-const cardId = "YOUR_CARD_ID";
+const cardId = "junta-ii-150";
 
 if (api.isPlayer(api.returnEventingPlayer()) {
 
@@ -189,6 +160,7 @@ if (api.isPlayer(api.returnEventingPlayer()) {
 return 0;
 ```
 
+A complete implementation of Junta would of course provide options for realignments. Most of the features that the game manipulates map to specific instructions that can be added to the game queue. You can find the full list in the code or on our page covering the queue.
 
 ## Reading the Board / State
 
