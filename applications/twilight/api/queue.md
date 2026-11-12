@@ -2,7 +2,7 @@
 title: Twilight Struggle API - Full Queue Instructions
 description: Custom Cards QUEUE API
 published: true
-date: 2026-11-12T17:18:20.612Z
+date: 2026-11-12T17:28:04.556Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T10:49:02.675Z
@@ -13,36 +13,31 @@ dateCreated: 2026-11-04T10:49:02.675Z
 
 | Instruction | Arguments and Format | Description |
 |---|---|---|
-| `bgs` | `bgs` or `bgs\treset` | With `reset`, restores default battlegrounds; otherwise re-parses each country's `bg` flag as an integer (used after Kissinger SETVARs). |
-| `revert` | `revert` | Calls `revertTurn()` to restore start-of-turn state/queue snapshot. |
-| `purge` | `purge\t{card}` | Cancels the event and removes the card from the next deal (Saito community deck tooling). |
-| `discard` | `discard\t{us|ussr}\t{card}` | Discards `card` from hand into discards; special-cases China (passes facedown to opponent). |
-| `undiscard` | `undiscard\t{card}` | Removes `card` from discards back into the live deck (or rebuilds from all-cards table). |
-| `card` | `card\t{us|ussr}\t{card}` | If local faction matches, starts `playerTurn(card)`; pauses queue. No current push sites found (legacy). |
-| `hand` | `hand\t{playerNum}\t{card}` | Gives `card` to that player's hand locally and removes it from the other client's hand tracking. |
-| `limit` | `limit\t{china|coups|spacerace|realignments|placement|milops|ignoredefcon}` or `limit\tregion\t{region}` | Enables temporary action restrictions for the current ops sequence. |
-| `flush` | `flush\tdiscards` | Clears the discard object (`discards` is the only implemented subtype). |
-| `space` | `space\t{us|ussr}\t{card}` | Attempts space race with `card` for that faction and discards it (except China). |
-| `unlimit` | `unlimit\t{china|cmc|coups|spacerace|realignments|placement|milops|ignoredefcon|region}` [`\t{country}` for `cmc`] | Clears the matching limit; `cmc` also clears Cuban Missile Crisis and may record removal country. |
-| `dice` | `dice\tburn\t{us|ussr}` | Burns one shared die roll on the acting/observer client (sync entropy). |
-| `deal` | `deal\t{playerNum}` | That player computes cards needed (8/9 by round, China excluded) and queues engine `DEAL`. |
-| `reshuffle_and_insert_discards` | `reshuffle_and_insert_discards` | If draw pile is short, deals remaining cards then shuffles discards back (skips rounds 4/8 insert turns). |
-| `ops` | `ops\t{us|ussr}\t{card}\t{ops}` [`\t{any}` to skip back button] | Plays ops for faction/card (modified by events); does **not** self-remove—cleared by `resolve\tops`. |
-| `milops` | `milops\t{us|ussr}\t{amount}` | Adds military operations points for that faction. |
-| `vp` | `vp\t{us|ussr}\t{points}` [`\t{delayFlag}`] | Awards VP; if `delayFlag==1`, banks into `vp_outstanding` instead of immediate board VP. |
-| `coup` | `coup\t{us|ussr}\t{country}\t{ops}` [`\t{card}`] | Resolves a coup; awards milops unless limited; optional `card` affects ops modifiers. |
+| `bgs` | `bgs` or `bgs\treset` | change the set of countries that are considered battlegrounds. use with `reset` to restore defaults. otherwise, parses each country's `bg` flag as an integer (used after Kissinger). |
+| `revert` | `revert` | restores start-of-turn state/snapshot. |
+| `purge` | `purge\t{card}` | cancels event and removes card from deck |
+| `discard` | `discard\t{us|ussr}\t{card}` | moves `card` from hand into discards; or sends China to opponent. |
+| `undiscard` | `undiscard\t{card}` | moves `card` from discards back into the live deck. |
+| `card` | `card\t{us|ussr}\t{card}` | specified player gets to play card. |
+| `hand` | `hand\t{playerNum}\t{card}` | hand `card` to specified player |
+| `limit` | `limit\t{china|coups|spacerace|realignments|placement|milops|ignoredefcon}` or `limit\tregion\t{region}` | adds restrictions on how ops can be spent. |
+| `unlimit` | `unlimit\t{china|cmc|coups|spacerace|realignments|placement|milops|ignoredefcon|region}` [`\t{country}` for `cmc`] | clears restrictions on how ops can be spent; `cmc` also clears Cuban Missile Crisis |
+| `space` | `space\t{us|ussr}\t{card}` | space race attempt by faction for `card` |
+| `dice` | `dice\tburn\t{us|ussr}` | burns one shared die roll on the acting/observer client (sync entropy). |
+| `ops` | `ops\t{us|ussr}\t{card}\t{ops}` [`\t{any}` to skip back button] | player plays ops |
+| `milops` | `milops\t{us|ussr}\t{amount}` | modifies faction milops |
+| `vp` | `vp\t{us|ussr}\t{points}` [`\t{delayFlag}`] | awards VP to faction. if `delayFlag==1` handled like WWBY |
+| `coup` | `coup\t{us|ussr}\t{country}\t{ops}` [`\t{card}`] | triggers coup in country with ops; awards milops unless limited; optional `card` affects ops modifiers. |
 | `realign` | `realign\t{us|ussr}\t{country}` | Applies realignment on non-origin clients only (origin already applied locally). |
-| `defcon` | `defcon\tlower` or `defcon\traise` | Lowers DEFCON via `lowerDefcon()`, or raises by 1 (capped at 5). |
-| `move` | `move\t{us|ussr}` | Sets `game.state.move` phasing flag (0=USSR, 1=US). No current push sites found (legacy). |
-| `event` | `event\t{us|ussr}\t{card}` | Triggers `playEvent`; may remove/discard non-recurring cards; Flower Power headline can inject delayed VP. |
+| `defcon` | `defcon\tlower` or `defcon\traise` | modifies DEFCON within 1-5 range |
+| `event` | `event\t{us|ussr}\t{card}` | triggers card event for specified player, will remove non-recurring cards. |
 | `stability` | `stability\t{faction}\t{country}\t{adj}` | Adds `adj` to country stability/control value. |
 | `place` | `place\t{originFaction}\t{influenceFaction}\t{country}\t{amount}` | Places influence on non-origin clients only (origin client already applied locally). |
-| `remove` | `remove\t{originFaction}\t{influenceFaction}\t{country}\t{amount}` | Removes influence on non-origin clients only. |
+| `remove` | `remove\t{originFaction}\t{influenceFaction}\t{country}\t{amount}` | removes influence on non-origin clients only. |
 | `resolve` | `resolve\t{token}` | Twilight-specific clear of the matching queued step (`event`/`ops`/`play`/`deal`/`headline`/`placement`/same-name instruction, etc.); also discards/removes matching card id. Distinct from engine `RESOLVE`. |
-| `round` | `round` | End/start-of-round controller: NORAD/extra turns/discards, `endRound`, queues turns/headline/deals/optional-card picks. |
-| `play` | `play\t{playerNum}` | Starts that player's action round (`playMove`); may interrupt for NORAD; left until `resolve\tplay`/`resolve\tturn`. |
-| `showhand` | `showhand\t{playerNum}\t{cardId cardId...}` | Shows space-separated hand cards to the opponent via overlay. |
-| `war` | `war\t{card}\t{winner}\t{die}\t{modifications}\t{player}\t{success}` | Renders the war overlay with the resolved war outcome (all args optional with defaults). |
+| `play` | `play\t{playerNum}` | triggers player turn on queue. |
+| `showhand` | `showhand\t{playerNum}\t{cardId cardId...}` | reveals hand to opponent via overlay. |
+| `war` | `war\t{card}\t{winner}\t{die}\t{modifications}\t{player}\t{success}` | renders the war overlay with the resolved outcome (all args optional). |
 
 | Full Queue Instruction | Arguments and Format | Description |
 |---|---|---|
