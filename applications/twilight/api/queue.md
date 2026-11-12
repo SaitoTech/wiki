@@ -2,7 +2,7 @@
 title: Twilight Struggle API - Full Queue Instructions
 description: Custom Cards QUEUE API
 published: true
-date: 2026-11-12T17:28:04.556Z
+date: 2026-11-12T17:29:02.961Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T10:49:02.675Z
@@ -38,6 +38,8 @@ dateCreated: 2026-11-04T10:49:02.675Z
 | `play` | `play\t{playerNum}` | triggers player turn on queue. |
 | `showhand` | `showhand\t{playerNum}\t{cardId cardId...}` | reveals hand to opponent via overlay. |
 | `war` | `war\t{card}\t{winner}\t{die}\t{modifications}\t{player}\t{success}` | renders the war overlay with the resolved outcome (all args optional). |
+
+---
 
 | Full Queue Instruction | Arguments and Format | Description |
 |---|---|---|
