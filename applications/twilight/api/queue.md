@@ -2,7 +2,7 @@
 title: Twilight Struggle API - Full Queue Instructions
 description: Custom Cards QUEUE API
 published: true
-date: 2026-11-12T17:29:02.961Z
+date: 2026-11-12T17:37:14.525Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T10:49:02.675Z
