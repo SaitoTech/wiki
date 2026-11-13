@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards - Example Code
 description: 
 published: true
-date: 2026-11-13T17:36:24.537Z
+date: 2026-11-13T17:36:58.025Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T14:10:51.790Z
@@ -17,8 +17,8 @@ The following examples show how to implement common actions and can be copy-and-
 ### 1. Allende
 
 ```javascript
-api.addMove("place\tussr\tussr\tchile\t2");
-api.addMove("NOTIFY\tUSSR places 2 in Chile");
+api.addToQueue("place\tussr\tussr\tchile\t2");
+api.addToQueue("NOTIFY\tUSSR places 2 in Chile");
 return 1;
 ```
 
@@ -48,9 +48,9 @@ const us = Number(context.game.countries.cuba.us) || 0;
 const ussr = Number(context.game.countries.cuba.ussr) || 0;
 
 if (us > 0) {
-  api.addMove("remove\tussr\tus\tcuba\t" + us);  
+  api.addToQueue("remove\tussr\tus\tcuba\t" + us);  
 }
-api.addMove("place\tussr\tussr\tcuba\t" + (3 - ussr));
+api.addToQueue("place\tussr\tussr\tcuba\t" + (3 - ussr));
 return 1;
 ```
 
