@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards - Example Code
 description: 
 published: true
-date: 2026-11-05T14:22:32.528Z
+date: 2026-11-13T14:56:05.018Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T14:10:51.790Z
@@ -24,24 +24,11 @@ return 1;
 
 ---
 
-### 2. Panama Canal — place in several countries
+### 2. US/Japan — read board state, place enough to control
 
 ```javascript
-api.addMove("place\tus\tus\tpanama\t1");
-api.addMove("place\tus\tus\tvenezuela\t1");
-api.addMove("place\tus\tus\tcostarica\t1");
-api.addMove("NOTIFY\tPanama Canal: US places in Panama, Venezuela, and Costa Rica");
-return 1;
-```
-
----
-
-### 3. US/Japan — read board state, place enough to control
-
-```javascript
-const japan = context.game.countries && context.game.countries.japan;
-const us = Number(japan.us) || 0;
-const ussr = Number(japan.ussr) || 0;
+const us = Number(context.game.countries.japan.us) || 0;
+const ussr = Number(context.game.countries.japan.ussr) || 0;
 const needed = ussr + 4 - us;
 
 if (needed > 0) {
@@ -54,16 +41,14 @@ return 1;
 
 ---
 
-### 4. Fidel — remove opponent influence, take control
+### 3. Fidel — remove opponent influence, add yours
 
 ```javascript
-const cuba = context.game.countries && context.game.countries.cuba;
-const us = cuba ? Number(cuba.us) || 0 : 0;
-const ussr = cuba ? Number(cuba.ussr) || 0 : 0;
+const us = Number(context.game.countries.cuba.us) || 0;
+const ussr = Number(context.game.countries.cuba.ussr) || 0;
 
 if (us > 0) {
-  api.addMove("remove\tussr\tus\tcuba\t" + us);
-  
+  api.addMove("remove\tussr\tus\tcuba\t" + us);  
 }
 api.addMove("place\tussr\tussr\tcuba\t" + (3 - ussr));
 return 1;
@@ -88,14 +73,13 @@ return 1;
 ### 6. One Small Step — advance the Space Race when behind
 
 ```javascript
-const state = context.game.state || {};
 const faction = api.returnEventingPlayer();
-const usTrack = Number(state.space_race_us) || 0;
-const ussrTrack = Number(state.space_race_ussr) || 0;
+const usTrack = Number(context.game.state.space_race_us) || 0;
+const ussrTrack = Number(context.game.state.space_race_ussr) || 0;
 const behind = faction === "us" ? usTrack < ussrTrack : ussrTrack < usTrack;
 
 if (behind) {
-  api.advanceSpaceRace(faction, true); // skip intermediate VP
+  api.advanceSpaceRace(faction, true); // skip bonus
   api.advanceSpaceRace(faction);
 }
 return 1;
