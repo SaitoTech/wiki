@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards - Example Code
 description: 
 published: true
-date: 2026-11-13T16:13:38.768Z
+date: 2026-11-13T16:16:31.573Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T14:10:51.790Z
@@ -275,7 +275,8 @@ return await api.asEventingPlayer(async () => {
   await api.playerPlaceInfluence(country, 2, player);
   await api.endTurn();
   return 0;
-});```
+});
+```
 
 The second picks up when the NFT_EVENT command specifying the second entry in the card's code array (1) is triggered.
 
