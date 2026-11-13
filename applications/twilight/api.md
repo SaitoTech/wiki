@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards & API
 description: Programming Custom Cards for Twilight Struggle in the Saito Game ENgine
 published: true
-date: 2026-11-13T17:15:59.220Z
+date: 2026-11-13T17:20:49.015Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T08:53:25.750Z
@@ -19,18 +19,16 @@ This page explains how to create simple cards. We start with simple examples bef
 
 Twilight Struggle runs a queue that processes [instructions](/applications/twilight/api/queue) on a last-in-first-out basis. When players make moves they share instructions with each other. The underlying game engine keeps these instructions in sync, and players then execute them in the same order without the need for a central server to manage the game.
 
-The simplest cards add instructions directly to the queue, as in the following, which increases US VP by 2 and then lowers defcon.
-
-
-#### AUTOMATIC EXECUTION
-
-The most important thing to remember is to:
+Because moves can be run by every player locally, or broadcast between players, the most important thing to remember when writing cards is:
 
 - use `api.addToQueue()` with `return 1`
 
 - use `api.addMove()` and `api.endTurn()` with `return 0`
 
-We can see the difference in our first example, below:
+`api.addToQueue()` is what we use for **automatic execution** while `api.addMove()` is used for **player-driven execution** where players need to make choice as part of the event. And remember that if you queue player moves with `api.addMove()` you have to broadcast then to others with `api.endTurn()`.
+
+#### AUTOMATIC EXECUTION
+
 
 ```js
 api.addToQueue("vp\tus\t2");
