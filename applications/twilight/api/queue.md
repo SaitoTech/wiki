@@ -2,7 +2,7 @@
 title: Twilight Struggle API - Full Queue Instructions
 description: Custom Cards QUEUE API
 published: true
-date: 2026-11-13T14:10:32.901Z
+date: 2026-11-13T14:14:11.859Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T10:49:02.675Z
@@ -41,7 +41,7 @@ Existing cards are all identified by a unique string, listed below. You can prog
 
 ### Queue
 
-Many game instructions can be added using `api.addMove()` or `api.addToQueue()`. Any changes triggered by these moves will only be processed when the move is received by all players. For cases where the board needs to update instantly in response to the player action (placing influence, removing influence, realignments) we recommend using the dedicated API functions (`api.playerPlaceInfluence()`, `api.playerRemoveInfluence()`, and `api.playerRealign()`).
+Many game instructions can be added using `api.addMove()` or `api.addToQueue()`. Any changes triggered by these moves will only be processed when the move is received by all players. For cases where the board needs to update instantly in response to the player action (placing influence, removing influence, realignments) we recommend using the dedicated API functions.
 
 | Instruction | Arguments and Format | Description |
 |---|---|---|
