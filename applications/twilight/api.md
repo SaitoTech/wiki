@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards & API
 description: Programming Custom Cards for Twilight Struggle in the Saito Game ENgine
 published: true
-date: 2026-11-13T17:32:43.162Z
+date: 2026-11-13T17:34:36.867Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T08:53:25.750Z
@@ -25,7 +25,7 @@ Because moves can be run by every player locally, or broadcast between players, 
 
 - use `api.addMove()` and `api.endTurn()` with `return 0`
 
-`api.addToQueue()` is what we use for **automatic execution** while `api.addMove()` is used for **player-driven execution** where players need to make choice as part of the event. And remember that if you queue player moves with `api.addMove()` you have to broadcast then to others with `api.endTurn()`.
+Use `api.addToQueue()` for cards where you don't need to ask any player to make a choice. Use `api.addMove()` for cards where one of the players needs to make the move while the other player waits.
 
 #### AUTOMATIC EXECUTION
 
