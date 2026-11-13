@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards - Example Code
 description: 
 published: true
-date: 2026-11-13T15:11:26.137Z
+date: 2026-11-13T15:30:35.318Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T14:10:51.790Z
@@ -155,7 +155,7 @@ return 0;
 
 ### 9. Destalinization
 
-```
+```javascript
 api.setEvent("destalinization_played", 1);
 
 const board = context.game.countries;
