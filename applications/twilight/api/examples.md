@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards - Example Code
 description: 
 published: true
-date: 2026-11-13T14:56:05.018Z
+date: 2026-11-13T15:10:08.515Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T14:10:51.790Z
@@ -10,11 +10,11 @@ dateCreated: 2026-11-04T14:10:51.790Z
 
 # Programmable Card Examples
 
-Working cookbook for Twilight Struggle programmable cards, arranged in order of complexity. When coding, remember to replace `YOUR_NFT_ID` with the card id available on the card greation coding page.
+The following examples show how to implement common actions and can be copy-and-pasted into the code section of the card generator and tested live. The examples are intended to start simple and get more complicated as they move along.
 
 ---
 
-### 1. Allende — place influence in one country
+### 1. Allende
 
 ```javascript
 api.addMove("place\tussr\tussr\tchile\t2");
@@ -24,7 +24,7 @@ return 1;
 
 ---
 
-### 2. US/Japan — read board state, place enough to control
+### 2. US/Japan Alliance
 
 ```javascript
 const us = Number(context.game.countries.japan.us) || 0;
@@ -41,7 +41,7 @@ return 1;
 
 ---
 
-### 3. Fidel — remove opponent influence, add yours
+### 3. Fidel
 
 ```javascript
 const us = Number(context.game.countries.cuba.us) || 0;
@@ -56,7 +56,7 @@ return 1;
 
 ---
 
-### 5. Duck and Cover — lower DEFCON and award VP
+### 5. Duck and Cover
 
 ```javascript
 const defcon = Number(context.game.state && context.game.state.defcon) || 5;
@@ -70,7 +70,7 @@ return 1;
 
 ---
 
-### 6. One Small Step — advance the Space Race when behind
+### 6. One Small Step
 
 ```javascript
 const faction = api.returnEventingPlayer();
@@ -87,17 +87,14 @@ return 1;
 
 ---
 
-### 7. Arms Race — award VP from milops leadership
-
-**Demonstrates:** reading milops / DEFCON, then `vp`.
+### 7. Arms Race
 
 ```javascript
-// Based on Arms Race.
 const faction = api.returnEventingPlayer();
 const state = context.game.state || {};
-const myOps = Number(faction === "us" ? state.milops_us : state.milops_ussr) || 0;
-const theirOps = Number(faction === "us" ? state.milops_ussr : state.milops_us) || 0;
-const defcon = Number(state.defcon) || 0;
+const myOps = Number(faction === "us" ? context.game.state.milops_us : context.game.state.milops_ussr) || 0;
+const theirOps = Number(faction === "us" ? context.game.state.milops_ussr : context.game.state.milops_us) || 0;
+const defcon = Number(context.game.state.defcon) || 0;
 
 let bonus = 0;
 if (myOps > theirOps) {
@@ -119,83 +116,127 @@ return 1;
 
 ---
 
-### 8. Berlin Agreement - different effects for US and USSR
-
-```javascript
-const faction = api.returnEventingPlayer();
-
-if (faction === "us") {
-  api.addToQueue("place\tus\tus\twestgermany\t2");
-  api.addToQueue("NOTIFY\tUS path: 2 in West Germany");
-} else {
-  api.addToQueue("place\tussr\tussr\teastgermany\t2");
-  api.addToQueue("NOTIFY\tUSSR path: 2 in East Germany");
-}
-
-return 1;
-```
-
----
-
-### 9. Pinochet — let player select from menu
+### 8. Muslim Revolution
 
 ```javascript
 
-//
-// non-eventing player halts game queue
-//
-const faction = api.returnEventingPlayer();
-if (!api.isPlayer(faction)) {
-  return 0;
+if (api.isEventActive("awacs")) {
+  return 1; 
 }
 
-//
-// eventing player continues
-//
-const choice = await api.playerSelectOption([
-  { id: "chile", label: "2 Influence in Chile" },
-  { id: "argentina", label: "2 Influence in Argentina" }
-]);
+const countries = ["sudan", "egypt", "libya", "syria", "iran", "iraq", "jordan", "saudiarabia"];
+const targets = countries.filter((id) => Number(context.game.countries[id].us) > 0);
 
-api.addMove("place\tus\tus\t" + choice + "\t2");
-api.addMove("NOTIFY\tUS places 2 in " + choice);
-api.endTurn();
-return 0;
-```
-
----
-
-### 10. Special Relationship - check NATO and offer placement
-
-```javascript
-if (!api.isPlayer("us")) {
-  return 0;
-}
-
-if (api.isControlled("us", "uk") != 1) {
-  api.addToQueue("NOTIFY\tSpecial Relationship: US does not control the UK");
+if (targets.length === 0) {
   return 1;
 }
 
-const nato = api.isEventActive("nato") == 1;
-const amount = nato ? 2 : 1;
-const candidates = nato
-  ? ["canada", "france", "italy", "westgermany", "benelux", "spain"]
-  : ["canada", "france", "norway", "benelux"];
+if (api.isPlayer("ussr")) {
 
-const country = await api.playerSelectCountry(candidates);
-api.addMove("place\tus\tus\t" + country + "\t" + amount);
-if (nato) {
-  api.addMove("vp\tus\t2");
+  const chosen = targets.length <= 2 ? targets.slice() : [];
+
+  while (chosen.length < Math.min(2, targets.length)) {
+    const remaining = targets.filter((id) => chosen.indexOf(id) === -1);
+    chosen.push(await api.playerSelectCountry(remaining));
+  }
+
+  for (let i = 0; i < chosen.length; i++) {
+    const country = chosen[i];
+    await api.playerRemoveInfluence(country, Number(board[country].us), "us");
+  }
+
+  await api.endTurn();
 }
-api.addMove(
-  "NOTIFY\tSpecial Relationship: +" +
-    amount +
-    " in " +
-    country +
-    (nato ? " and 2 VP (NATO)" : "")
-);
-api.endTurn();
+
 return 0;
 ```
 
+
+
+### 9. Destalinization
+
+```
+api.setEvent("destalinization_played", 1);
+
+const board = context.game.countries;
+const ussr = {};
+let available = 0;
+
+for (const id in board) {
+  const n = Number(board[id].ussr) || 0;
+  ussr[id] = n;
+  available += n;
+}
+
+const moves = Math.min(4, available);
+if (moves === 0) {
+  return 1;
+}
+
+if (api.isPlayer("ussr")) {
+
+  for (let n = 0; n < moves; n++) {
+    const options = Object.keys(ussr).filter((id) => ussr[id] > 0);
+    const country = await api.playerSelectCountry(options);
+    await api.playerRemoveInfluence(country, 1, "ussr");
+    ussr[country] -= 1;
+  }
+
+  const placed = {};
+  for (let n = 0; n < moves; n++) {
+    const options = Object.keys(board).filter((id) => {
+      return api.isControlled("us", id) != 1 && (placed[id] || 0) < 2;
+    });
+    const country = await api.playerSelectCountry(options);
+    await api.playerPlaceInfluence(country, 1, "ussr");
+    placed[country] = (placed[country] || 0) + 1;
+  }
+
+  await api.endTurn();
+
+}
+
+return 0;
+```
+
+---
+
+### 10. Star Wars
+
+```javascript
+const state = context.game.state;
+const cardId = state.eventing_card;
+
+if (state.space_race_us <= state.space_race_ussr) {
+  return 1;
+}
+
+api.setEvent("starwars", 1);
+
+const discards = (context.game.deck[0] && context.game.deck[0].discards) || {};
+const options = [];
+
+for (const id in discards) {
+  const card = discards[id];
+  if (!card || !card.name || card.scoring == 1) continue;
+  if (state.headline == 1 && id === "unintervention") continue;
+  // skip shuttle diplomacy in discards if active
+  if (state.events.shuttlediplomacy == 1 && id === "shuttle") continue;
+  options.push({ id: id, label: card.name });
+}
+
+if (options.length === 0) {
+  return 1;
+}
+
+if (api.isPlayer("us")) {
+  const chosen = await api.playerSelectOption(options);
+  const name = options.find((opt) => opt.id === chosen).label;
+  api.addMove("resolve\t" + cardId);
+  api.addMove("event\tus\t" + chosen);
+  api.addMove("NOTIFY\tUS retrieved " + name);
+  api.addMove("undiscard\t" + chosen);
+  await api.endTurn();
+};
+return 0;
+```
