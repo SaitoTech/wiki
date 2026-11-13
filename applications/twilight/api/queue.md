@@ -2,7 +2,7 @@
 title: Twilight Struggle API - Full Queue Instructions
 description: Custom Cards QUEUE API
 published: true
-date: 2026-11-13T15:16:39.624Z
+date: 2026-11-13T15:16:55.340Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T10:49:02.675Z
@@ -14,7 +14,7 @@ Players are identified as either `us` or `ussr`. A minority of cards may ask for
 
 ### Countries
 
-Countries are uniquely identified by a lowercase string:
+Countries are identified by a lowercase string:
 
 `canada`, `uk`, `benelux`, `france`, `italy`, `westgermany`, `eastgermany`, `poland`, `spain`, `greece`, `turkey`, `yugoslavia`, `bulgaria`, `romania`, `hungary`, `austria`, `czechoslovakia`, `denmark`, `norway`, `finland`, `sweden`, `libya`, `egypt`, `lebanon`, `syria`, `israel`, `iraq`, `iran`, `jordan`, `gulfstates`, `saudiarabia`, `afghanistan`, `pakistan`, `india`, `burma`, `laos`, `thailand`, `vietnam`, `malaysia`, `australia`, `indonesia`, `philippines`, `taiwan`, `japan`, `southkorea`, `northkorea`, `mexico`, `guatemala`, `elsalvador`, `honduras`, `nicaragua`, `costarica`, `panama`, `cuba`, `haiti`, `dominicanrepublic`, `venezuela`, `colombia`, `ecuador`, `peru`, `chile`, `bolivia`, `argentina`, `paraguay`, `uruguay`, `brazil`, `morocco`, `algeria`, `tunisia`, `westafricanstates`, `saharanstates`, `sudan`, `ivorycoast`, `nigeria`, `ethiopia`, `somalia`, `cameroon`, `zaire`, `kenya`, `angola`, `seafricanstates`, `zimbabwe`, `botswana`, `southafrica`
 
