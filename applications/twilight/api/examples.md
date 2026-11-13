@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards - Example Code
 description: 
 published: true
-date: 2026-11-13T16:16:53.636Z
+date: 2026-11-13T16:29:16.486Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T14:10:51.790Z
@@ -269,13 +269,20 @@ const countries = Object.keys(board).filter((id) => {
   return region === "camerica" || region === "samerica";
 });
 
-return await api.asEventingPlayer(async () => {
-  const country = await api.playerSelectCountry(countries);
-  api.addMove(["NFT_EVENT", NFT_CARD_ID, "1", player].join(tab));
-  await api.playerPlaceInfluence(country, 2, player);
-  await api.endTurn();
+
+
+const seat = context.game.player;
+const role = seat === 1 ? "ussr" : seat === 2 ? "us" : "";
+if (role !== context.game.state.eventing_player) {
   return 0;
-});
+}
+
+
+const country = await api.playerSelectCountry(countries);
+api.addMove(`NFT_EVENT\t${NFT_CARD_ID}\t1\t${player}`);
+await api.playerPlaceInfluence(country, 2, player);
+await api.endTurn();
+return 0;
 ```
 
 The second picks up when the NFT_EVENT command specifying the second entry in the card's code array (1) is triggered.
@@ -327,43 +334,48 @@ if (coupTargets.length === 0 && realignTargets.length === 0) {
   return 1;
 }
 
-return await api.asEventingPlayer(async () => {
-  const menu = [];
-  if (coupTargets.length > 0) menu.push({ id: "coup", label: "coup" });
-  if (realignTargets.length > 0) menu.push({ id: "realign", label: "realign" });
-  menu.push({ id: "skip", label: "skip" });
 
-  const choice = await api.playerSelectOption(menu);
+const seat = context.game.player;
+const role = seat === 1 ? "ussr" : seat === 2 ? "us" : "";
+if (role !== context.game.state.eventing_player) {
+  return 0;
+}
 
-  if (choice === "coup") {
-    const country = await api.playerSelectCountry(coupTargets);
-    api.addMove(["coup", player, country, "2"].join(tab));
-    await api.endTurn();
-    return;
-  }
 
-  if (choice === "realign") {
-    const tally = {};
-    for (let i = 0; i < realignTargets.length; i++) {
-      tally[realignTargets[i]] = Number(board[realignTargets[i]][enemy]) || 0;
-    }
-    for (let n = 0; n < 2; n++) {
-      const options = realignTargets.filter((id) => tally[id] > 0);
-      if (options.length === 0) break;
-      const country = await api.playerSelectCountry(options);
-      const result = await api.playerRealign(country, player);
-      if (result && result.removedFaction === enemy) {
-        tally[country] -= result.removed;
-      }
-    }
-    await api.endTurn();
-    return 0;
-  }
+const menu = [];
+if (coupTargets.length > 0) menu.push({ id: "coup", label: "coup" });
+if (realignTargets.length > 0) menu.push({ id: "realign", label: "realign" });
+menu.push({ id: "skip", label: "skip" });
 
-  api.addMove(["NOTIFY", player.toUpperCase() + " skips the Junta operations"].join(tab));
+const choice = await api.playerSelectOption(menu);
+
+if (choice === "coup") {
+  const country = await api.playerSelectCountry(coupTargets);
+  api.addMove(["coup", player, country, "2"].join(tab));
   await api.endTurn();
   return 0;
-});
-```
+}
 
+if (choice === "realign") {
+  const tally = {};
+  for (let i = 0; i < realignTargets.length; i++) {
+    tally[realignTargets[i]] = Number(board[realignTargets[i]][enemy]) || 0;
+  }
+  for (let n = 0; n < 2; n++) {
+    const options = realignTargets.filter((id) => tally[id] > 0);
+    if (options.length === 0) break;
+    const country = await api.playerSelectCountry(options);
+    const result = await api.playerRealign(country, player);
+    if (result && result.removedFaction === enemy) {
+      tally[country] -= result.removed;
+    }
+  }
+  await api.endTurn();
+  return 0;
+}
+
+api.addMove(["NOTIFY", player.toUpperCase() + " skips the Junta operations"].join(tab));
+await api.endTurn();
+return 0;
+```
 
