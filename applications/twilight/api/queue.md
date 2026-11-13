@@ -2,7 +2,7 @@
 title: Twilight Struggle API - Full Queue Instructions
 description: Custom Cards QUEUE API
 published: true
-date: 2026-11-12T17:37:51.907Z
+date: 2026-11-13T13:48:18.935Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T10:49:02.675Z
@@ -10,33 +10,61 @@ dateCreated: 2026-11-04T10:49:02.675Z
 
 ## Twilight Struggle Queue Commands
 
+Adding instructions to the game queue often requires 
+
+### Players
+
+Players are identified as either `us` or `ussr`. A minority of cards may ask for player numbers, in which case the us is `2` and the ussr is `1`. 
+
+### Countries
+
+Countries are uniquely identified by a lowercase string:
+
+`canada`, `uk`, `benelux`, `france`, `italy`, `westgermany`, `eastgermany`, `poland`, `spain`, `greece`, `turkey`, `yugoslavia`, `bulgaria`, `romania`, `hungary`, `austria`, `czechoslovakia`, `denmark`, `norway`, `finland`, `sweden`, `libya`, `egypt`, `lebanon`, `syria`, `israel`, `iraq`, `iran`, `jordan`, `gulfstates`, `saudiarabia`, `afghanistan`, `pakistan`, `india`, `burma`, `laos`, `thailand`, `vietnam`, `malaysia`, `australia`, `indonesia`, `philippines`, `taiwan`, `japan`, `southkorea`, `northkorea`, `mexico`, `guatemala`, `elsalvador`, `honduras`, `nicaragua`, `costarica`, `panama`, `cuba`, `haiti`, `dominicanrepublic`, `venezuela`, `colombia`, `ecuador`, `peru`, `chile`, `bolivia`, `argentina`, `paraguay`, `uruguay`, `brazil`, `morocco`, `algeria`, `tunisia`, `westafricanstates`, `saharanstates`, `sudan`, `ivorycoast`, `nigeria`, `ethiopia`, `somalia`, `cameroon`, `zaire`, `kenya`, `angola`, `seafricanstates`, `zimbabwe`, `botswana`, `southafrica`
+
+### Cards and Events
+
+For custom-created cards, the unique string will be the slug of the card plus its card number. If you create a card with the name `1968 Protests` and give it the number `154`, the game will import your card as `1968-protests-154`. You should supply that name when triggering the event through the `NFT_EVENT` queue command.
+
+Existing cards are all identified by a unique string, listed below. You can programmatically schedule these events for execution by adding the appropriate instruction to the game queue, such as  `api.addMove("event\t1\tmarshall")`.
+
+
+### Early War
+`asia`, `europe`, `mideast`, `duckandcover`, `fiveyearplan`, `socgov`, `fidel`, `vietnamrevolts`, `blockade`, `koreanwar`, `romanianab`, `arabisraeli`, `comecon`, `nasser`, `warsawpact`, `degaulle`, `naziscientist`, `truman`, `olympic`, `nato`, `indreds`, `marshall`, `indopaki`, `containment`, `cia`, `usjapan`, `suezcrisis`, `easteuropean`, `decolonization`, `redscare`, `unintervention`, `destalinization`, `nucleartestban`, `formosan`, `defectors`, `cambridge`, `specialrelation`, `norad`
+
+### Mid War
+`brushwar`, `camerica`, `seasia`, `armsrace`, `cubanmissile`, `nuclearsubs`, `quagmire`, `saltnegotiations`, `beartrap`, `summit`, `howilearned`, `junta`, `kitchendebates`, `missileenvy`, `wwby`, `brezhnev`, `portuguese`, `southafrican`, `allende`, `willybrandt`, `muslimrevolution`, `abmtreaty`, `culturalrev`, `flowerpower`, `u2`, `opec`, `lonegunman`, `colonial`, `panamacanal`, `campdavid`, `puppet`, `grainsales`, `johnpaul`, `deathsquads`, `oas`, `nixon`, `sadat`, `shuttle`, `voiceofamerica`, `liberation`, `ussuri`, `asknot`, `alliance`, `africa`, `onesmallstep`, `samerica`, `che`, `tehran`
+
+### Late War
+`iranianhostage`, `ironlady`, `reagan`, `starwars`, `northseaoil`, `reformer`, `marine`, `KAL007`, `glasnost`, `ortega`, `terrorism`, `irancontra`, `chernobyl`, `debtcrisis`, `teardown`, `evilempire`, `aldrichames`, `pershing`, `wargames`, `solidarity`, `iraniraq`, `yuri`, `awacs`
+
+
+### Queue
+
+For 
 
 | Instruction | Arguments and Format | Description |
 |---|---|---|
-| `bgs` | `bgs` or `bgs\treset` | change the set of countries that are considered battlegrounds. use with `reset` to restore defaults. otherwise, parses each country's `bg` flag as an integer (used after Kissinger). |
-| `revert` | `revert` | restores start-of-turn state/snapshot. |
 | `purge` | `purge\t{card}` | cancels event and removes card from deck |
-| `discard` | `discard\t{us|ussr}\t{card}` | moves `card` from hand into discards; or sends China to opponent. |
-| `undiscard` | `undiscard\t{card}` | moves `card` from discards back into the live deck. |
+| `discard` | `discard\t{us|ussr}\t{card}` | moves `card` from hand into discards |
+| `undiscard` | `undiscard\t{card}` | moves discarded `card` back into the live deck. |
 | `card` | `card\t{us|ussr}\t{card}` | specified player gets to play card. |
 | `hand` | `hand\t{playerNum}\t{card}` | hand `card` to specified player |
 | `limit` | `limit\t{china|coups|spacerace|realignments|placement|milops|ignoredefcon}` or `limit\tregion\t{region}` | adds restrictions on how ops can be spent. |
-| `unlimit` | `unlimit\t{china|cmc|coups|spacerace|realignments|placement|milops|ignoredefcon|region}` [`\t{country}` for `cmc`] | clears restrictions on how ops can be spent; `cmc` also clears Cuban Missile Crisis |
-| `space` | `space\t{us|ussr}\t{card}` | space race attempt by faction for `card` |
-| `dice` | `dice\tburn\t{us|ussr}` | burns one shared die roll on the acting/observer client (sync entropy). |
+| `unlimit` | `unlimit\t{china|cmc|coups|spacerace|realignments|placement|milops|ignoredefcon|region}` [`\t{country}` for `cmc`] | clears restrictions |
+| `space` | `space\t{us|ussr}\t{card}` | space race attempt using `card` |
+| `dice` | `dice\tburn\t{us|ussr}` | burns one die roll on the executing client |
 | `ops` | `ops\t{us|ussr}\t{card}\t{ops}` [`\t{any}` to skip back button] | player plays ops |
-| `milops` | `milops\t{us|ussr}\t{amount}` | modifies faction milops |
-| `vp` | `vp\t{us|ussr}\t{points}` [`\t{delayFlag}`] | awards VP to faction. if `delayFlag==1` handled like WWBY |
+| `milops` | `milops\t{us|ussr}\t{amount}` | faction gains/loses milops |
+| `vp` | `vp\t{us|ussr}\t{points}` [`\t{delayFlag}`] | awards VP to faction . if `delayFlag==1` handled like WWBY |
 | `coup` | `coup\t{us|ussr}\t{country}\t{ops}` [`\t{card}`] | triggers coup in country with ops; awards milops unless limited; optional `card` affects ops modifiers. |
 | `realign` | `realign\t{us|ussr}\t{country}` | Applies realignment on non-origin clients only (origin already applied locally). |
 | `defcon` | `defcon\tlower` or `defcon\traise` | modifies DEFCON within 1-5 range |
 | `event` | `event\t{us|ussr}\t{card}` | triggers card event for specified player, will remove non-recurring cards. |
 | `stability` | `stability\t{faction}\t{country}\t{adj}` | Adds `adj` to country stability/control value. |
-| `place` | `place\t{originFaction}\t{influenceFaction}\t{country}\t{amount}` | Places influence on non-origin clients only (origin client already applied locally). |
-| `remove` | `remove\t{originFaction}\t{influenceFaction}\t{country}\t{amount}` | removes influence on non-origin clients only. |
-| `resolve` | `resolve\t{token}` | Twilight-specific clear of the matching queued step (`event`/`ops`/`play`/`deal`/`headline`/`placement`/same-name instruction, etc.); also discards/removes matching card id. Distinct from engine `RESOLVE`. |
-| `play` | `play\t{playerNum}` | triggers player turn on queue. |
-| `showhand` | `showhand\t{playerNum}\t{cardId cardId...}` | reveals hand to opponent via overlay. |
+| `place` | `place\t{originFaction}\t{influenceFaction}\t{country}\t{amount}` | places influence on non-origin clients |
+| `remove` | `remove\t{originFaction}\t{influenceFaction}\t{country}\t{amount}` | removes influence on non-origin clients |
+| `play` | `play\t{playerNum}` | triggers player turn |
 | `war` | `war\t{card}\t{winner}\t{die}\t{modifications}\t{player}\t{success}` | renders the war overlay with the resolved outcome (all args optional). |
 
 ---
