@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards & API
 description: Programming Custom Cards for Twilight Struggle in the Saito Game ENgine
 published: true
-date: 2026-11-13T14:45:32.404Z
+date: 2026-11-13T17:13:46.828Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T08:53:25.750Z
@@ -30,6 +30,11 @@ return 1;
 ```
 
 Use the function ```api.addToQueue()``` when everyone running the javascript should execute the same code simultaneously. The final instruction (```return 1```) indicates there is no need to halt the game and wait for a player to broadcast their own moves before the game can continue execution.
+
+**IMPORTANT**
+- use `api.addToQueue()` with `return 1`
+- use `api.addMove()` and `api.endTurn()` with `return 0`;
+
 
 #### PLAYER-DRIVEN EXECUTION
 
