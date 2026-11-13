@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards - Example Code
 description: 
 published: true
-date: 2026-11-13T16:29:16.486Z
+date: 2026-11-13T17:36:24.537Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T14:10:51.790Z
@@ -279,7 +279,7 @@ if (role !== context.game.state.eventing_player) {
 
 
 const country = await api.playerSelectCountry(countries);
-api.addMove(`NFT_EVENT\t${NFT_CARD_ID}\t1\t${player}`);
+await api.addMove("NFT_EVENT\t"+NFT_CARD_ID+"\t1\t"+player);
 await api.playerPlaceInfluence(country, 2, player);
 await api.endTurn();
 return 0;
