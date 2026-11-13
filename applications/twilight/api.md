@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards & API
 description: Programming Custom Cards for Twilight Struggle in the Saito Game ENgine
 published: true
-date: 2026-11-13T17:13:46.828Z
+date: 2026-11-13T17:15:59.220Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T08:53:25.750Z
@@ -23,17 +23,25 @@ The simplest cards add instructions directly to the queue, as in the following, 
 
 
 #### AUTOMATIC EXECUTION
+
+The most important thing to remember is to:
+
+- use `api.addToQueue()` with `return 1`
+
+- use `api.addMove()` and `api.endTurn()` with `return 0`
+
+We can see the difference in our first example, below:
+
 ```js
 api.addToQueue("vp\tus\t2");
 api.addToQueue("defcon\tlower");
 return 1;
 ```
 
-Use the function ```api.addToQueue()``` when everyone running the javascript should execute the same code simultaneously. The final instruction (```return 1```) indicates there is no need to halt the game and wait for a player to broadcast their own moves before the game can continue execution.
+Here we use the function ```api.addToQueue()``` because everyone running the javascript executes the same thing. The final instruction (```return 1```) indicates there is no need to halt the game and wait for a player to broadcast their own moves before the game can continue execution.
 
-**IMPORTANT**
-- use `api.addToQueue()` with `return 1`
-- use `api.addMove()` and `api.endTurn()` with `return 0`;
+
+
 
 
 #### PLAYER-DRIVEN EXECUTION
