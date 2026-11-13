@@ -2,7 +2,7 @@
 title: Twilight Struggle API - Full Queue Instructions
 description: Custom Cards QUEUE API
 published: true
-date: 2026-11-13T15:16:55.340Z
+date: 2026-11-13T15:18:35.879Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T10:49:02.675Z
@@ -14,13 +14,11 @@ Players are identified as either `us` or `ussr`. A minority of cards may ask for
 
 ### Countries
 
-Countries are identified by a lowercase string:
-
 `canada`, `uk`, `benelux`, `france`, `italy`, `westgermany`, `eastgermany`, `poland`, `spain`, `greece`, `turkey`, `yugoslavia`, `bulgaria`, `romania`, `hungary`, `austria`, `czechoslovakia`, `denmark`, `norway`, `finland`, `sweden`, `libya`, `egypt`, `lebanon`, `syria`, `israel`, `iraq`, `iran`, `jordan`, `gulfstates`, `saudiarabia`, `afghanistan`, `pakistan`, `india`, `burma`, `laos`, `thailand`, `vietnam`, `malaysia`, `australia`, `indonesia`, `philippines`, `taiwan`, `japan`, `southkorea`, `northkorea`, `mexico`, `guatemala`, `elsalvador`, `honduras`, `nicaragua`, `costarica`, `panama`, `cuba`, `haiti`, `dominicanrepublic`, `venezuela`, `colombia`, `ecuador`, `peru`, `chile`, `bolivia`, `argentina`, `paraguay`, `uruguay`, `brazil`, `morocco`, `algeria`, `tunisia`, `westafricanstates`, `saharanstates`, `sudan`, `ivorycoast`, `nigeria`, `ethiopia`, `somalia`, `cameroon`, `zaire`, `kenya`, `angola`, `seafricanstates`, `zimbabwe`, `botswana`, `southafrica`
 
 ### Cards and Events
 
-For custom-created cards, the unique string will be the slug of the card plus its card number. If you create a card with the name `1968 Protests` and give it the number `154`, the game will import your card as `1968-protests-154`. You should supply that name when triggering the event through the `NFT_EVENT` queue command.
+For custom-created cards, the unique string will be the slug of the card plus its card number. If you create a card with the name `1968 Protests` and give it the number `154`, the game will identify your card as `1968-protests-154`. You will need to supply that ID to trigger your code using the `NFT_EVENT` queue command.
 
 Existing cards are all identified by a unique string, listed below. You can programmatically schedule these events for execution by adding the appropriate instruction to the game queue, such as  `api.addMove("event\t1\tmarshall")`.
 
