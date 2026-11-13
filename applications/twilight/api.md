@@ -2,7 +2,7 @@
 title: Twilight Struggle - Custom Cards & API
 description: Programming Custom Cards for Twilight Struggle in the Saito Game ENgine
 published: true
-date: 2026-11-13T17:20:49.015Z
+date: 2026-11-13T17:32:43.162Z
 tags: 
 editor: markdown
 dateCreated: 2026-11-04T08:53:25.750Z
