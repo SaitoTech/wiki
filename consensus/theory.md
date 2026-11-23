@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2026-09-13T00:07:53.079Z
+date: 2026-11-23T15:10:07.168Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -30,8 +30,6 @@ original whitepaper, providing a brief explanation of the Tragedy of the Commons
 - [Myerson–Satterthwaite & Green–Laffont Applicability](/consensus/theory/welfare-efficiency)
 This page examines the conditions required for implementing welfare-efficient equilibria in informationally decentralized mechanisms, focusing on the bilateral-trade (Myerson–Satterthwaite) and public-good (Green–Laffont) impossibility theorems. It shows routing-work mechanisms fall outside the scope of these impossibility claims.
 
-- [How Saito Implements Welfare-Efficient Equilibrium](/consensus/theory/welfare-efficiency-ii)
-This page explains how Saito achieves welfare efficiency using costly, action-based signals instead of type reports. Routing signatures create a filtered message space in which only welfare-increasing deviations are rational, allowing the mechanism to aggregate decentralized proposals into welfare-efficient outcomes without violating classical impossibility results.
 
 **Computer Science**
 
