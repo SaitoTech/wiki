@@ -2,7 +2,7 @@
 title: Theory and Research - Saito Consensus
 description: 
 published: true
-date: 2026-11-23T15:10:07.168Z
+date: 2026-11-23T15:12:50.603Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-23T15:28:21.939Z
@@ -43,15 +43,15 @@ This page examines the partial-synchrony model of DLS and its implications for c
 This page explains why routing work has properties of strong censorship-resistance that other mechanisms lack: attackers who censor transactions push the set of available work to competitors while reducing their own profitability proposing state transitions.
 
 - [Roughgarden, Shi and TFM Modelling Errors](/consensus/theory/transaction-fee-mechanisms)
-This page reviews the modeling assumptions used in the transaction-fee mechanism (TFM) literature and shows how inconsistencies between these models and the requirements of mechanism design prevent their results from generalizing into valid impossibility results that hold under standard implementation theory.
+This page reviews the modeling assumptions used in the transaction-fee mechanism (TFM) literature and shows how inconsistencies between these models and the requirements of mechanism design prevent their results from generalizing into impossibility results that hold under standard implementation theory.
 
 ## Final Note: what Saito does *not* claim
 
 A final comment To keep the academic case clean, we explicitly list limitations:
 
-- Saito does **not** prevent all re-organizations; it merely prevents *costless* reorganizations in expectation in equilibrium. 
+- Saito does **not** prevent all re-organizations; it merely prevents *costless* reorganizations in expectation in equilibrium: the mechanism's incentives make it irrational to attack, not impossible to attack.
 
-- Saito does **not** eliminate all co-ordination risks, it merely provides agents with the ability to model the cost-of-deviation of counterparties and develop rational strategies based on their own beliefs about counterparty motivations under Knightian uncertainty.
+- Saito does **not** eliminate co-ordination risks, it merely provides agents with the ability to model the cost-of-deviation of counterparties and develop rational strategies based on their own beliefs about counterparty motivations under Knightian uncertainty.
 
 - Physical-layer attacks (eclipse, long-term censorship at the ISP level) remain out of scope for the protocol; it merely addresses profitable economic and technical deviations within the mechanism.
 
