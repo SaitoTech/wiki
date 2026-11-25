@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2026-09-25T04:56:00.165Z
+date: 2026-11-25T01:52:57.629Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -251,6 +251,15 @@ Applications on Saito look and feel like traditional web apps, but run atop the 
     </div>
   </a>
   
+  <a href="/applications/saitosign">
+    <div class="app_box">
+      <div class="app_img">
+        <img src="/img/saitomania.jpg" />
+      </div>
+      <div class="app_title">SaitoSign</div>
+    </div>
+  </a>
+  
 
   <a href="/applications/scripting">
     <div class="app_box">
@@ -324,16 +333,7 @@ Applications on Saito look and feel like traditional web apps, but run atop the 
       <div class="app_title">Store</div>
     </div>
   </a>
-  
-   <a href="/applications/swarmcast">
-    <div class="app_box">
-      <div class="app_img">
-        <img src="/swarmcast-small.png" />
-      </div>
-      <div class="app_title">Swarmcast</div>
-    </div>
-  </a>
-  
+    
   <a href="/applications/twilight">
     <div class="app_box">
        <div class="app_img">
