@@ -2,7 +2,7 @@
 title: Saito Applications
 description: 
 published: true
-date: 2026-11-25T01:52:57.629Z
+date: 2026-11-25T02:16:20.394Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-21T01:40:41.364Z
@@ -254,7 +254,7 @@ Applications on Saito look and feel like traditional web apps, but run atop the 
   <a href="/applications/saitosign">
     <div class="app_box">
       <div class="app_img">
-        <img src="/img/saitomania.jpg" />
+        <img src="/img/saitosign.png" />
       </div>
       <div class="app_title">SaitoSign</div>
     </div>
