@@ -2,7 +2,7 @@
 title: Saito Consensus Mechanism
 description: Consensus Mechanism
 published: true
-date: 2026-09-27T07:04:22.045Z
+date: 2026-11-25T04:06:00.082Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-17T10:09:00.217Z
@@ -20,9 +20,9 @@ Adding routing signatures to transactions lets Saito separate **who builds block
 1. When users send transactions into the network, they attach cryptographic signatures to these transactions specifying the peer to which they are forwarding their transactions -- this is the **first hop** peer.
 2. Peers that receive these transactions can forward them to *their* peers, adding their own signatures in the process -- their recipients are the **second hop** peers. This process repeats hop-by-hop as these transactions spread across the network.
 3. Nodes which collect enough fee-paying transactions can produce a block by proposing one in an ever-repeating falling-price or "Dutch Clock" auction. This auction picks the most efficient fee-collector each round as the block producer.
-4. No-one is paid when a block is produced: every fee in the block is **burned**. But a second competition begins which may *resurrect* these burned fees and distribute them to both the miners that run the payout lottery and the routing nodes that produce the blocks.
+4. No-one is paid when a block is produced: every fee in the block is **burned**. But a second competition begins which may *resurrect* these burned fees and split them between the miners that run a hashing/payout lottery and the routing nodes that contributed to the previous block.
 
-The result of this process is that the longest-chain consists of blocks proposed by the most efficient burners-of-fees. Saito is designed so that overcoming this disadvantage forces attackers to burn their own money. Details on how this works requires a closer look at steps 3–4.
+The result of this process is that the longest-chain consists of blocks proposed by the most efficient burners-of-fees. Saito is designed so that overcoming this disadvantage forces attackers to burn their own money or include deep-hop transactions that pull rewards away from the attacker. Details on how this works requires a closer look at steps 3–4.
 
 
 ## Routing Work and Block Production
